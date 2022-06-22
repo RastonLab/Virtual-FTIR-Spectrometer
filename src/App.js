@@ -1,6 +1,8 @@
 import logo from './logo.svg';
 import './App.css';
 import MenuBar from './Components/MenuBar';
+import ElementToggle from './Components/ElementToggle'
+import './Components/ElementToggle.css'
 
 function App() {
   return (
@@ -24,6 +26,7 @@ function App() {
           Learn React
         </a>
       </header>
+      <ElementToggle />
     </div>
   );
 }
