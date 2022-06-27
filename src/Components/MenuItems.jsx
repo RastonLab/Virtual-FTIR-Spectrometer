@@ -9,7 +9,7 @@ const MenuItems = ({items}) => {
         <li className="menu-items">
             {items.submenu ? (
                 <>
-                    <button type="button" aria-haspopup="menu"
+                    <button style={{color:dropdown ? 'hsl(30,88%,69%)' : 'white'}} type="button" aria-haspopup="menu"
                     onClick={() => setDropdown((prev) => !prev)}>
                         {items.label}
                     </button>
