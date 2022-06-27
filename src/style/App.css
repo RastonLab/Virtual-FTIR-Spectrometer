@@ -14,14 +14,14 @@
 }
 
 .App-header {
-  background-color: #282c34;
-  min-height: 200vh;
+  background-color: white;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
+  color: black;
 }
 
 .App-link {
@@ -37,6 +37,16 @@
   }
 }
 
+@font-face {
+  font-family: 'Montserrat';
+  src: url(./fonts/Montserrat-VariableFont_wght.ttf);
+}
+
+@font-face {
+  font-family: 'Roboto';
+  src: url(./fonts/Roboto-Regular.ttf);
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -44,12 +54,11 @@
 }
 
 body {
-  font-family: sans-serif;
+  font-family: 'Roboto', sans-serif;
 }
 
 header {
   height: 58px;
-  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.07), 0 1px 2px 0 rgba(0, 0, 0, 0.05);
   color: #212529;
 }
 
@@ -62,7 +71,10 @@ header {
   padding: 0 20px;
   height: 58px;
   position: fixed;
-  background-color:#61dafb;
+  /* background-color:#61dafb; */
+  background-color:#1d2022;
+  color: white;
+  z-index: 1;
 }
 
 .logo {
@@ -70,6 +82,7 @@ header {
   font-size: 25px;
   color: inherit;
   margin-right: 20px;
+  font-family: 'Montserrat';
 }
 
 .menus {
@@ -108,7 +121,7 @@ header {
 
 .menu-items a:hover,
 .menu-items button:hover {
-  background-color:#9ff1ff;
+  background-color:#2b3032;
 }
 
 .dropdown {
@@ -122,7 +135,7 @@ header {
   min-width: 10rem;
   padding: 0.5rem 0;
   list-style: none;
-  background-color:#61dafb;
+  background-color:#1d2022;
   border-radius: 0.5rem;
   display: none;
 }

@@ -1,0 +1,7 @@
+.svg {
+    pointer-events: none;
+}
+
+g {
+    pointer-events: all;
+}

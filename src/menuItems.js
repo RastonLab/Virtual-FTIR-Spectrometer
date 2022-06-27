@@ -41,7 +41,7 @@ export const menuItems = [
         label: 'Window',
         submenu: [
             {
-                label:'Insturment'
+                label:'Instrument'
             },
             {
                 label:'Spectrum'
