@@ -4,8 +4,6 @@ export const menuItems = [
         submenu: [
             {
                 label:'Open',
-                link: 'https://code.visualstudio.com/shortcuts/keyboard-shortcuts-windows.pdf',
-                target: "_blank"
             },
             {
                 label:'Save As'
@@ -19,7 +17,8 @@ export const menuItems = [
         label: 'Collect',
         submenu: [
             {
-                label:'Experimental Setup'
+                label:'Experimental Setup',
+                link:'/Experimental-Setup'
             },
             {
                 label:'Aquire Background Sample'
@@ -41,7 +40,8 @@ export const menuItems = [
         label: 'Window',
         submenu: [
             {
-                label:'Instrument'
+                label:'Instrument',
+                link:'/'
             },
             {
                 label:'Spectrum'
