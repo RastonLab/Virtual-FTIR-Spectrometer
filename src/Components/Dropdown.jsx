@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Dropdown = ({submenus, dropdown}) => {
 
@@ -7,7 +8,8 @@ const Dropdown = ({submenus, dropdown}) => {
             {submenus.map((submenu, index) => {
                 return (
                 <li key={index} className="menu-items">
-                <a target={submenu.target ?? ''} href={`${submenu.link ?? '/#'}`}>{submenu.label}</a>
+                {/* <a target={submenu.target ?? ''} href={`${submenu.link ?? '/#'}`}>{submenu.label}</a> */}
+                <Link to={submenu.link ?? ''} >{submenu.label}</Link>
                 </li>);
             })}
         </ul>
