@@ -3,6 +3,7 @@ import './style/App.css';
 import MenuBar from './Components/MenuBar';
 
 function App() {
+
   return (
     <div className="App">
       <MenuBar />
