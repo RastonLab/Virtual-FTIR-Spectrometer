@@ -143,19 +143,3 @@ header {
 .dropdown.show {
   display: block;
 }
-
-/* .arrow::after {
-  content: "";
-  display: inline-block;
-  margin-left: 0.28em;
-  vertical-align: 0.09em;
-  border-top: 0.42em solid;
-  border-right: 0.32em solid transparent;
-  border-left: 0.32em solid transparent;
-} */
-
-/* .dropdown .dropdown-submenu {
-  position: absolute;
-  left: 100%;
-  top: -7px;
-} */

@@ -1,14 +1,14 @@
-import { Dialog, DialogTitle, Button } from "@mui/material";
+import { Dialog, DialogTitle } from "@mui/material";
 import { useState } from "react";
 
-export default function Popup({title, text}) {
+export default function Popup({label, title, text}) {
 
     const [open, setOpen] = useState(false);
 
     return(
         <div>
-            <Button onClick={() => {setOpen(true)}} >Click</Button>
-            <Dialog onClose={() => {setOpen(false)}} open={open}>
+            <button className="popup-button" onClick={() => {setOpen(true)}} >{label}</button>
+            <Dialog className="popup" onClose={() => {setOpen(false)}} open={open}>
                 <DialogTitle>{title}</DialogTitle>
                 <p>{text}</p>
             </Dialog>

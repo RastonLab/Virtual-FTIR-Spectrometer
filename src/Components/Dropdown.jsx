@@ -10,13 +10,13 @@ const Dropdown = ({submenus, dropdown}) => {
                     if (submenu.button){
                         return(
                             <li key={index} className="menu-items">
-                                <Popup title={submenu.title} text={submenu.text} />
+                                <Popup label={submenu.label} title={submenu.title} text={submenu.text} />
                             </li>
                         );
                     } else {
                         return (
                             <li key={index} className="menu-items">
-                            <Link to={submenu.link ?? ''} >{submenu.label}</Link>
+                                <Link to={submenu.link ?? ''} >{submenu.label}</Link>
                             </li>
                         );
                     }
