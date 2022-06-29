@@ -1,8 +1,8 @@
 {
-  "name": "ftir",
+  "name": "virtual-ftir-spectrometer",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://vanfossen.github.io/Virtual-FTIR-Spectrometer/",
+  "homepage": "https://rastonlab.github.io/Virtual-FTIR-Spectrometer/",
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.4",
     "@testing-library/react": "^13.3.0",
