@@ -1,8 +1,8 @@
 import logo from './logo.svg';
 import './style/App.css';
 import MenuBar from './Components/MenuBar';
-import ElementToggle from './Components/ElementToggle'
-import './Components/ElementToggle.css'
+// import ElementToggle from './Components/ElementToggle'
+// import './Components/ElementToggle.css'
 import {ReactComponent as RLLogo} from './RastonLab-Logo-Full-Rainbow-Draft.svg';
 
 function App() {
@@ -28,7 +28,6 @@ function App() {
           Learn React
         </a>
       </header>
-      <ElementToggle />
     </div>
   );
 }
