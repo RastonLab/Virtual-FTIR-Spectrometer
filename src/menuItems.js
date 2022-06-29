@@ -6,10 +6,10 @@ export const menuItems = [
                 label:'Open',
             },
             {
-                label:'Save As'
+                label:'Save As',
             },
             {
-                label:'Print'
+                label:'Print',
             }
         ]
     },
@@ -18,13 +18,13 @@ export const menuItems = [
         submenu: [
             {
                 label:'Experimental Setup',
-                link:'/Experimental-Setup'
+                link:'/Experimental-Setup',
             },
             {
-                label:'Aquire Background Sample'
+                label:'Aquire Background Sample',
             },
             {
-                label:'Stop Aquisition'
+                label:'Stop Aquisition',
             }
         ]
     },
@@ -32,7 +32,7 @@ export const menuItems = [
         label: 'Analyze',
         submenu: [
             {
-                label:'Find Peaks'
+                label:'Find Peaks',
             },
         ]
     },
@@ -41,10 +41,10 @@ export const menuItems = [
         submenu: [
             {
                 label:'Instrument',
-                link:'/'
+                link:'/',
             },
             {
-                label:'Spectrum'
+                label:'Spectrum',
             }
         ]
     },
@@ -52,13 +52,16 @@ export const menuItems = [
         label: 'Help',
         submenu: [
             {
-                label:'Tutorial'
+                label:'Tutorial',
             },
             {
-                label:'Usage'
+                label:'Usage',
             },
             {
-                label:'About'
+                label:'About',
+                button: true,
+                title: 'About The FTIR',
+                text: <p>Insert Lorum ipsum text<br/></p>
             }
         ]
     }
