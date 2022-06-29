@@ -8,13 +8,14 @@ import App from './App';
 import ExperimentalSetup from './Components/routes/ExperimentalSetup';
 
 
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<App />} />
-        <Route path="Experimental-Setup" element={<ExperimentalSetup />} />
+        <Route path="/Experimental-Setup" element={<ExperimentalSetup />} />
       </Routes>
     </BrowserRouter>
   </React.StrictMode>

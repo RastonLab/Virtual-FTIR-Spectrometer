@@ -4,12 +4,15 @@ export const menuItems = [
         submenu: [
             {
                 label:'Open',
+                button: false
             },
             {
-                label:'Save As'
+                label:'Save As',
+                button: false
             },
             {
-                label:'Print'
+                label:'Print',
+                button: false
             }
         ]
     },
@@ -18,13 +21,16 @@ export const menuItems = [
         submenu: [
             {
                 label:'Experimental Setup',
-                link:'/Experimental-Setup'
+                link:'/Experimental-Setup',
+                button: false
             },
             {
-                label:'Aquire Background Sample'
+                label:'Aquire Background Sample',
+                button: false
             },
             {
-                label:'Stop Aquisition'
+                label:'Stop Aquisition',
+                button: false
             }
         ]
     },
@@ -32,7 +38,8 @@ export const menuItems = [
         label: 'Analyze',
         submenu: [
             {
-                label:'Find Peaks'
+                label:'Find Peaks',
+                button: false
             },
         ]
     },
@@ -41,10 +48,12 @@ export const menuItems = [
         submenu: [
             {
                 label:'Instrument',
-                link:'/'
+                link:'/',
+                button: false
             },
             {
-                label:'Spectrum'
+                label:'Spectrum',
+                button: false
             }
         ]
     },
@@ -52,13 +61,17 @@ export const menuItems = [
         label: 'Help',
         submenu: [
             {
-                label:'Tutorial'
+                label:'Tutorial',
+                button: false
             },
             {
-                label:'Usage'
+                label:'Usage',
             },
             {
-                label:'About'
+                label:'About',
+                button: true,
+                title: 'About The FTIR',
+                text: 'Insert Lorum ipsum text'
             }
         ]
     }
