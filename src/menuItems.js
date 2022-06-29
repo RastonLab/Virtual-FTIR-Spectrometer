@@ -61,7 +61,7 @@ export const menuItems = [
                 label:'About',
                 button: true,
                 title: 'About The FTIR',
-                text: 'Insert Lorum ipsum text'
+                text: <p>Insert Lorum ipsum text<br/></p>
             }
         ]
     }
