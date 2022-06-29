@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import {ReactComponent as ElementOne} from './svgs/ElementOne.svg'
 import {ReactComponent as ElementTwo} from './svgs/ElementTwo.svg'
+import './ElementToggle.css';
 
 export default function ElementToggle() {
 
