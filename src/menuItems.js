@@ -41,7 +41,7 @@ export const menuItems = [
         submenu: [
             {
                 label:'Instrument',
-                link:'/',
+                link:'/Virtual-FTIR-Spectrometer',
             },
             {
                 label:'Spectrum',
