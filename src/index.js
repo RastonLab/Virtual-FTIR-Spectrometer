@@ -14,7 +14,7 @@ root.render(
   <React.StrictMode>
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<App />} />
+        <Route path="Virtual-FTIR-Spectrometer/" element={<App />} />
         <Route path="/Experimental-Setup" element={<ExperimentalSetup />} />
       </Routes>
     </BrowserRouter>
