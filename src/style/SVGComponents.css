@@ -1,0 +1,23 @@
+.component, .svg  {
+  pointer-events: none;
+}
+
+.svg {
+    /* position: absolute; to get the svg to lay on top of each other */
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+}
+
+path {
+  pointer-events: all;
+}
+
+.example-image {
+    align-self: center;
+    width: 70%;
+    height: 30%;
+    
+}
+

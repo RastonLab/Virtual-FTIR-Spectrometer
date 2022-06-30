@@ -28,14 +28,14 @@ export const menuItems = [
             }
         ]
     },
-    {
-        label: 'Analyze',
-        submenu: [
-            {
-                label:'Find Peaks',
-            },
-        ]
-    },
+    // {
+    //     label: 'Analyze',
+    //     submenu: [
+    //         {
+    //             label:'Find Peaks',
+    //         },
+    //     ]
+    // },
     {
         label: 'Window',
         submenu: [
