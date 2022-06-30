@@ -1,8 +1,8 @@
 import React, { useState } from "react";
-import { ftirParts } from "./SVGLibrary";
+import { ftirParts, toolTips } from "./SVGLibrary";
 import { Dialog } from "@mui/material";
 import '../style/SVGComponents.css';
-// import Tooltip from "./Tooltip";
+import '../style/Popup.css';
 
 export default function SVGComponent({part, click}) { // Style is the intial stroke
     const [toggled, setToggled] = useState(false);
@@ -15,10 +15,11 @@ export default function SVGComponent({part, click}) { // Style is the intial str
 
     return (
         <div className="component">
-            <Component className='svg' onClick={click ?? handleClick} />
+            <Component viewBox="0 0 -10 0" className='svg' onClick={click ?? handleClick} />
             <Dialog className="popup" onClose={handleClick} open={toggled}>
-                <h2>thing</h2>
-                {/* <p>{text}</p> */}
+                <h2>{toolTips[part].title}</h2>
+                <Component viewBox="-8 0 100 100" className='example-image' />
+                <p>{toolTips[part].text}</p>
             </Dialog>
         </div>
         );
