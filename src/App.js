@@ -8,7 +8,7 @@ function App() {
     <div className="App">
       <MenuBar />
       <div className='ftir-display'>
-        <SVGComponent part='ftir' click={() => {}} />
+        <SVGComponent part='ftir' />
       </div>
     </div>
   );

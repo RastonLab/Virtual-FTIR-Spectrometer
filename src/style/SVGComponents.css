@@ -1,0 +1,7 @@
+.component, .svg  {
+  pointer-events: none;
+}
+
+path {
+  pointer-events: all;
+}
