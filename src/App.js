@@ -8,7 +8,18 @@ function App() {
     <div className="App">
       <MenuBar />
 \      <div className='ftir-display'>
-        <SVGComponent part='ftir' />
+        <SVGComponent part='sourcebox' />
+        <SVGComponent part='aperturewheel' />
+        <SVGComponent part='flatrotatablemirror' />
+        <SVGComponent part='globar' />
+        <SVGComponent part='parabolicmirror' />
+        <SVGComponent part='tungsten' />
+        <SVGComponent part='detectionchamber' />
+        <SVGComponent part='cdflatrotatablemirror' />
+        <SVGComponent part='samplecompartment' />
+        <SVGComponent part='mct' />
+        <SVGComponent part='lnsb' />
+        <SVGComponent part='cdflatrotatablemirror2' />
       </div>
     </div>
   );
