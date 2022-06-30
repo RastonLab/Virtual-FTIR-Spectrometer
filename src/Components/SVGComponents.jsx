@@ -11,15 +11,7 @@ export default function SVGComponent({part, style, click}) { // Style is the int
 
     const Component = ftirParts[part];
 
-    return (<div>
-                <Component className='svg' onClick={click ?? handleClick} />
-                {/* <Tooltip 
-                    header={toolTips[part].header}
-                    text={toolTips[part].text}
-                    visible={toolTips[part]?.visible ?? toggled}
-                /> */}
-            </div>
-    );
+    return (<Component className='svg' onClick={click ?? handleClick} />);
     // SVG File Prep: put them through SVGOMG to strip any inkscape specific tags that would break React
     // In the SVG files, you must remove the stroke and stroke-height of the element you want outlined and you must remove the  height and width from the very first line to get the SVG to use the viewbox and scale properly
 }

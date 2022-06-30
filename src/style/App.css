@@ -143,3 +143,13 @@ header {
 .dropdown.show {
   display: block;
 }
+
+/* FTIR Style */
+.ftir-display {
+  height: 90%;
+  width: 90%;
+  margin: 10px 5%;
+  background-color: aquamarine;
+  top: 70px;
+  position: fixed;
+}
