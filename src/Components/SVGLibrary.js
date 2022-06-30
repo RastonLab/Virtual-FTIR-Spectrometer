@@ -10,7 +10,13 @@ import {ReactComponent as CDFlatRotatableMirrorSVG} from './svgs/dc-flat-rotatab
 import {ReactComponent as MCTSVG} from './svgs/MCT.svg';
 import {ReactComponent as LNSBSVG} from './svgs/lnsb.svg';
 import {ReactComponent as CDFlatRotatableMirror2SVG} from './svgs/cd-flat-rotatable-mirror-2.svg';
-
+import {ReactComponent as FixedCornerCubeSVG} from './svgs/fixed-corner-cube.svg';
+import {ReactComponent as FixedMirrorSVG} from './svgs/fixed-mirror.svg';
+import {ReactComponent as LaserSVG} from './svgs/laser.svg';
+import {ReactComponent as MovableCornerCubeSVG} from './svgs/movable-corner-cube.svg';
+import {ReactComponent as ParabolicMirrorHoleSVG} from './svgs/parabolic-mirror-w-hole.svg';
+import {ReactComponent as ParabolicMirrorHole2SVG} from './svgs/parabolic-mirror-w-hole-2.svg';
+import {ReactComponent as LaserbeamsSVG} from './svgs/laserbeams.svg';
 
 export const ftirParts = {
     'sourcebox': SourceBoxSVG,
@@ -24,7 +30,14 @@ export const ftirParts = {
     'samplecompartment': SampleCompartmentSVG,
     'mct': MCTSVG,
     'lnsb': LNSBSVG,
-    'cdflatrotatablemirror2': CDFlatRotatableMirror2SVG
+    'cdflatrotatablemirror2': CDFlatRotatableMirror2SVG,
+    'fixedcornercube': FixedCornerCubeSVG,
+    'fixedmirror': FixedMirrorSVG,
+    'laser': LaserSVG,
+    'movablecornercube': MovableCornerCubeSVG,
+    'parabolicmirrorhole': ParabolicMirrorHoleSVG,
+    'parabolicmirrorhole2': ParabolicMirrorHole2SVG,
+    'laserbeams': LaserbeamsSVG
 }
 
 export const toolTips = {
@@ -73,6 +86,34 @@ export const toolTips = {
         text: 'Once again, insert Lorum ipsum'
     },
     'cdflatrotatablemirror2': {
+        title: 'FTIR',
+        text: 'Once again, insert Lorum ipsum'
+    },
+    'fixedcornercube': {
+        title: 'FTIR',
+        text: 'Once again, insert Lorum ipsum'
+    },
+    'fixedmirror': {
+        title: 'FTIR',
+        text: 'Once again, insert Lorum ipsum'
+    },
+    'laser': {
+        title: 'FTIR',
+        text: 'Once again, insert Lorum ipsum'
+    },
+    'movablecornercube': {
+        title: 'FTIR',
+        text: 'Once again, insert Lorum ipsum'
+    },
+    'parabolicmirrorhole': {
+        title: 'FTIR',
+        text: 'Once again, insert Lorum ipsum'
+    },
+    'parabolicmirrorhole2': {
+        title: 'FTIR',
+        text: 'Once again, insert Lorum ipsum'
+    },
+    'laserbeams': {
         title: 'FTIR',
         text: 'Once again, insert Lorum ipsum'
     }

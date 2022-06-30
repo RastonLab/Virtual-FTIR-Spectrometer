@@ -18,7 +18,7 @@ export default function SVGComponent({part, click}) { // Style is the intial str
             <Component viewBox="-100 -100 1000 1500" className='svg' onClick={click ?? handleClick} />
             <Dialog className="popup" onClose={handleClick} open={toggled}>
                 <h2>{toolTips[part].title}</h2>
-                <Component viewBox="-8 0 100 100" className='example-image' />
+                <Component hight='200' width='400' viewBox="-8 0 100 100" className='example-image' />
                 <p>{toolTips[part].text}</p>
             </Dialog>
         </div>
