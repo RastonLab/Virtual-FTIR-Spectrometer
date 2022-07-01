@@ -1,17 +1,15 @@
 .component {
-  /* pointer-events: none; */
+  pointer-events: none;
 }
 
 .svg {
     position: absolute;
     top: 0;
     left: 0;
-    /* width: 100%; */
-    pointer-events: all;
 }
 
 path {
-  /* pointer-events: all; */
+  pointer-events: all;
 }
 
 .example-image {
