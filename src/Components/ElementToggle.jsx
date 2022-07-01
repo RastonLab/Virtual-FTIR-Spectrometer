@@ -18,6 +18,6 @@ export default function ElementToggle() {
     const Component = renderedElement;
 
     return (
-        <Component className='svg' onClick={onClick} />
+        <Component className='toggle-svg' onClick={onClick} />
     );
 }

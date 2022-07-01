@@ -19,11 +19,11 @@ export default function SVGComponent({part, click}) { // Style is the intial str
 
     return (
         <div className="component">
-            <Component viewBox="-100 -100 1000 1500" className='svg' onClick={click ?? handleClick} />
+            <Component viewBox="-75 0 418 211" className='svg' onClick={click ?? handleClick} />
             <Dialog className="popup" onClose={handleClick} open={toggled}>
                 <h2>{toolTips[part].title}</h2>
-                {/* <Component hight='200' width='400' viewBox={viewBox(part)} className='example-image' id={`${part}-tooltip`} /> */}
                 <img src={ttImgSrc[part]} id={`${part}-example-image`} className='example-image' alt=""/>
+                {/* ^^ do this part in the library??? */}
                 <p>{toolTips[part].text}</p>
             </Dialog>
         </div>

@@ -1,17 +1,17 @@
-.component, .svg  {
-  pointer-events: none;
+.component {
+  /* pointer-events: none; */
 }
 
 .svg {
     position: absolute;
     top: 0;
     left: 0;
-    height: inherit;
-    width: inherit;
+    /* width: 100%; */
+    pointer-events: all;
 }
 
 path {
-  pointer-events: all;
+  /* pointer-events: all; */
 }
 
 .example-image {
