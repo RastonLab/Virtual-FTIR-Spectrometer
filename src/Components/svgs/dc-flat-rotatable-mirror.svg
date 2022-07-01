@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <filter style="color-interpolation-filters:sRGB" id="i" x="-.022" y="-.774" width="1.045" height="2.547">
+      <feGaussianBlur stdDeviation="1.951"/>
+    </filter>
+    <filter style="color-interpolation-filters:sRGB" id="h" x="-.042" y="-.708" width="1.083" height="2.416">
+      <feGaussianBlur stdDeviation="1.785"/>
+    </filter>
+    <filter style="color-interpolation-filters:sRGB" id="g" x="-.08" y="-.628" width="1.16" height="2.255">
+      <feGaussianBlur stdDeviation="1.582"/>
+    </filter>
+    <filter style="color-interpolation-filters:sRGB" id="d" x="-.025" y="-.621" width="1.05" height="2.241">
+      <feGaussianBlur stdDeviation="1.565"/>
+    </filter>
+    <filter style="color-interpolation-filters:sRGB" id="e" x="-1.025" y="-.078" width="3.05" height="1.156">
+      <feGaussianBlur stdDeviation=".312"/>
+    </filter>
+    <filter style="color-interpolation-filters:sRGB" id="f" x="-1.111" y="-.084" width="3.221" height="1.168">
+      <feGaussianBlur stdDeviation=".338"/>
+    </filter>
+    <filter style="color-interpolation-filters:sRGB" id="b" x="-1.282" y="-.028" width="3.565" height="1.056">
+      <feGaussianBlur stdDeviation=".559"/>
+    </filter>
+    <filter style="color-interpolation-filters:sRGB" id="c" x="-1.469" y="-.027" width="3.938" height="1.055">
+      <feGaussianBlur stdDeviation=".827"/>
+    </filter>
+    <clipPath clipPathUnits="userSpaceOnUse" id="k">
+      <path style="fill:red;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:.264583" d="M2.692 20.87v50.663h50.776a1.54 1.54 0 0 1 .24-.487c.243-.347.529-.66.818-.97l.038-.21c.032-.094-.002-.298.096-.283.093.015.186.035.279.058.164-.168.345-.345.473-.443.14-.164.311-.285.52-.286.01 0 .022.003.033.004.105-.026.21-.058.312-.062a.397.397 0 0 1 .144.02c.153.052.274.113.37.182a.768.768 0 0 1 .325-.028c.602.064.834.482 1.006.919a.545.545 0 0 1 .72.139 1.69 1.69 0 0 1-.02-.187v-.002a.386.386 0 0 1 .002-.156c.026-.427.25-.782.81-.653.01-.01.02-.02.032-.028.118-.486.416-.719.701-.72.369-.002.716.381.628 1.1l-.016.13c.133-.012.268-.02.4-.04.199.135.336.286.442.448a.716.716 0 0 1 .271-.132 16.5 16.5 0 0 1-.26-2.225c-.03-.682.298-1.022.64-1.022.344 0 .702.34.737 1.022.025.514.084 1.025.163 1.533.172-.037.476.032 1.026.243a.13.13 0 0 1 .075.03l.048.018c.187.073.036.4.048.6l.003.074c.077.017.151.04.22.067.013.005.281.81.33.958.048.14.074.27.083.389h11.56V20.87Zm58.806 49.697c-.01 0-.023 0-.026.006l-.013.024.044-.02.002-.008-.007-.002zm-5.825.89-.059.035.003.041h.06l-.004-.075z"/>
+    </clipPath>
+    <clipPath clipPathUnits="userSpaceOnUse" id="l">
+      <path style="fill:maroon;fill-opacity:1;stroke:none;stroke-width:.698373;stroke-linecap:square;stroke-dasharray:none;stroke-opacity:1;paint-order:markers stroke fill" transform="matrix(.79603 .60526 -.63003 .77657 0 0)" d="M55.468-4.252h25.373v15.046H55.468z"/>
+    </clipPath>
+    <clipPath clipPathUnits="userSpaceOnUse" id="j">
+      <rect style="fill:green;fill-opacity:1;stroke:none;stroke-width:1.68615;stroke-linecap:square;paint-order:markers stroke fill" width="40.042" height="26.417" x="106.843" y="22.446" ry="0" transform="matrix(.8046 .59382 -.46562 .88498 0 0)"/>
+    </clipPath>
+    <clipPath clipPathUnits="userSpaceOnUse" id="a">
+      <path style="fill:gray;fill-opacity:1;stroke:none;stroke-width:1.33244;stroke-linecap:square;stroke-opacity:1;paint-order:markers stroke fill" class="powerclip" d="M149.23 157.238h121.548V236.8H149.23Zm-8.853 25.586v21.936h35.938v-21.936z"/>
+    </clipPath>
+  </defs>
+  <g style="display:inline">
+    <rect style="display:inline;fill:green;fill-opacity:1;stroke:none;stroke-width:1.17777;stroke-linecap:square;stroke-opacity:1;paint-order:markers stroke fill" width="22.061" height="4.124" x="75.966" y="305.207" ry="0" transform="rotate(-35.833 -33.622 -6.271)"/>
+  </g>
+</svg>

@@ -147,9 +147,9 @@ header {
 /* FTIR Style */
 
 .ftir-display {
-  height: 90%;
-  width: 90%;
-  margin: 10px 5%;
+  height: 80%;
+  width: 80%;
+  margin: 1% 10%;
   top: 70px;
   position: fixed;
   pointer-events: none;

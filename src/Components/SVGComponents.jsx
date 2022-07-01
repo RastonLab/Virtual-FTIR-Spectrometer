@@ -1,8 +1,9 @@
 import React, { useState } from "react";
-import { ftirParts, toolTips } from "./SVGLibrary";
+import { ftirParts, toolTips, ttImgSrc} from "./SVGLibrary";
 import { Dialog } from "@mui/material";
 import '../style/SVGComponents.css';
 import '../style/Popup.css';
+
 
 export default function SVGComponent({part, click}) { // Style is the intial stroke
     const [toggled, setToggled] = useState(false);
@@ -11,14 +12,18 @@ export default function SVGComponent({part, click}) { // Style is the intial str
         setToggled(!toggled)
     }
 
+    // const bbox = ftirParts[part].getBBox();
+    // const viewBox = [bbox.x, bbox.y, bbox.width, bbox.height].join(" ");
+
     const Component = ftirParts[part];
 
     return (
         <div className="component">
-            <Component viewBox="0 0 -10 0" className='svg' onClick={click ?? handleClick} />
+            <Component viewBox="-75 0 418 211" className='svg' onClick={click ?? handleClick} />
             <Dialog className="popup" onClose={handleClick} open={toggled}>
                 <h2>{toolTips[part].title}</h2>
-                <Component viewBox="-8 0 100 100" className='example-image' />
+                <img src={ttImgSrc[part]} id={`${part}-example-image`} className='example-image' alt=""/>
+                {/* ^^ do this part in the library??? */}
                 <p>{toolTips[part].text}</p>
             </Dialog>
         </div>
