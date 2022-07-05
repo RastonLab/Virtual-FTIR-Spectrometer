@@ -151,7 +151,5 @@ header {
   width: 80%;
   margin: 1% 10%;
   top: 70px;
-  position: fixed;
-  pointer-events: none;
-  border: #1d2022 2px solid;
+  position: absolute;
 }

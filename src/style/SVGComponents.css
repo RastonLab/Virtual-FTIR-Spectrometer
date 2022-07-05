@@ -6,6 +6,8 @@
     position: absolute;
     top: 0;
     left: 0;
+    pointer-events: none;
+    border: #1d2022 2px solid;
 }
 
 g {

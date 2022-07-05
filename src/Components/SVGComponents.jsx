@@ -16,10 +16,10 @@ export default function SVGComponent({part, click}) { // Style is the intial str
     // const viewBox = [bbox.x, bbox.y, bbox.width, bbox.height].join(" ");
 
     const Component = ftirParts[part];
-
+    
     return (
         <div className="component">
-            <Component viewBox="-75 0 418 211" className='svg' onClick={click ?? handleClick} />
+            <Component viewBox="-75 -0.5 418 212" className='svg' onClick={click ?? handleClick} />
             <Dialog className="popup" onClose={handleClick} open={toggled}>
                 <h2>{toolTips[part].title}</h2>
                 <img src={ttImgSrc[part]} id={`${part}-example-image`} className='example-image' alt=""/>
