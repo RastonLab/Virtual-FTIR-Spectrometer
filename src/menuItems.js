@@ -18,7 +18,7 @@ export const menuItems = [
         submenu: [
             {
                 label:'Experimental Setup',
-                link:'/Virtual-FTIR-Spectrometer/Experimental-Setup',
+                link:'/Experimental-Setup',
             },
             {
                 label:'Aquire Background Sample',
@@ -41,7 +41,7 @@ export const menuItems = [
         submenu: [
             {
                 label:'Instrument',
-                link:'/Virtual-FTIR-Spectrometer',
+                link:'/',
             },
             {
                 label:'Spectrum',

@@ -12,10 +12,10 @@ import ExperimentalSetup from './Components/routes/ExperimentalSetup';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <BrowserRouter>
+    <BrowserRouter basename='/Virtual-FTIR-Spectrometer'>
       <Routes>
-        <Route path="Virtual-FTIR-Spectrometer/" element={<App />} />
-        <Route path="/Virtual-FTIR-Spectrometer/Experimental-Setup" element={<ExperimentalSetup />} />
+        <Route path="/" element={<App />} />
+        <Route path="/Experimental-Setup" element={<ExperimentalSetup />} />
       </Routes>
     </BrowserRouter>
   </React.StrictMode>
