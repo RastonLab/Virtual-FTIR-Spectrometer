@@ -38,3 +38,23 @@ function CaF2() {
     const finalData = exportData();
     return finalData;
 }
+
+function ZnSe() {
+    return;
+}
+
+function sapphire() {
+    const originalData = loadData();
+    let newData = [];
+
+    for(let i = 0; i < originalData.length; i++) {
+        let datapoint = (new Big(11.9544)).div(originalData[i]);
+        datapoint = datapoint.pow(-12.07226);
+        datapoint = (datapoint.plus(1)).pow(6903.57039);
+        datapoint = (new Big(0.78928)).div(datapoint);
+        newData.push(datapoint);
+    }
+
+    const finalData = exportData();
+    return finalData;
+}
