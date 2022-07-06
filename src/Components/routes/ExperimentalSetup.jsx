@@ -8,9 +8,9 @@ import Form from "../Form";
 import Spinner from "../Spinner";
 import Error from "../Error";
 
-import ChartJS from "../graphs/ChartJS";
+// import ChartJS from "../graphs/ChartJS";
 // import Dygraphs from "../graphs/Dygraphs";
-
+import Plotly from "../graphs/Plotly";
 
 export default function ExperimentalSetup() {
     const [data, setData] = useState("");
@@ -60,7 +60,8 @@ export default function ExperimentalSetup() {
                 {error && <Error />}
         
                 {/* {!loading && <Dygraphs data={data} />} */}
-                {!loading && <ChartJS data={data} />}
+                {/* {!loading && <ChartJS data={data} />} */}
+                {!loading && <Plotly data={data} params={params} />}
             </div>
         </div>
         );
