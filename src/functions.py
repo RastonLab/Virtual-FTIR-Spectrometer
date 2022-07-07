@@ -49,3 +49,14 @@ def sapphire():
     
     finalData = __exportData()
     return finalData
+
+def AR_ZnSe():
+    originalData = __loadData()
+    newData = []
+
+    for x in originalData:
+        datapoint = (0.82609) / ((1 + ((34.63971 / x) ** -8.56269)) ** 186.34792) + -0.47 / (0.55* math.sqrt(math.pi / (4 * math.log(2)))) * math.exp(-4 * math.log(2) * ((x - 1.47) ** 2) / (0.55 ** 2)) + -0.03456 / (0.4 * math.sqrt(math.pi / (4 * math.log(2)))) * math.exp(-4 * math.log(2) * ((x - 2.88) ** 2) / (0.4 ** 2)) + -0.009 / (0.3 * math.sqrt(math.pi / (4 * math.log(2)))) * math.exp(-4 * math.log(2) * ((x - 6.16) ** 2) / (0.3 ** 2)) + -0.09 / (1 * math.sqrt(math.pi / (4 * math.log(2)))) * math.exp(-4 * math.log(2) * ((x - 16.2) ** 2) / (1 ** 2)) + -0.08 / (1 * math.sqrt(math.pi / (4 * math.log(2)))) * math.exp(-4 * math.log(2) * ((x - 17.4) ** 2) / (1 ** 2)) + 1.12 / (8 * math.sqrt(math.pi/(4 * math.log(2)))) * math.exp(-4 * math.log(2) * ((x - 9.5) ** 2) / (8 ** 2)) + 0.11546 / (2 * math.sqrt(math.pi / (4 * math.log(2)))) * math.exp(-4 * math.log(2) * ((x - 4.9) ** 2) / (2 ** 2)) + 0.21751 / (2 * math.sqrt(math.pi / (4 * math.log(2)))) * math.exp(-4 * math.log(2) * ((x - 2.6) ** 2) / (2 ** 2)) + -0.05 / (0.07 * math.sqrt(math.pi / (4 * math.log(2)))) * math.exp(-4 * math.log(2) * ((x - 0.8) ** 2) / (0.07 ** 2))
+        newData.append(datapoint)
+    
+    finalData = __exportData()
+    return finalData
