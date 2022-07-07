@@ -14,3 +14,15 @@ def KBr():
     
     finalData = __exportData()
     return finalData
+
+def CaF2():
+    originalData = __loadData()
+    newData = []
+
+    for x in originalData:
+        datapoint = (0.93091) / (1 + (11.12929/ x ) ** -12.43933 ) ** 4.32574
+        newData.append(datapoint)
+    
+    finalData = __exportData()
+    return finalData
+
