@@ -73,3 +73,15 @@ def AR_CaF2():
     
     finalData = __exportData()
     return finalData
+
+def lnSb():
+    originalData = __loadData()
+    newData = []
+
+    for x in originalData:
+        datapoint = 1.97163E11 * (1 / (1 + math.exp( -(x - 5.3939) / 1.6624))) * (1 - 1 / (1 + math.exp( -(x - 5.3939) / 0.11925))) + (3.3 * (10 ** 10)) / (2.44977 * math.sqrt(math.pi / (4 * math.log(2)))) * math.exp(-4 * math.log(2) * ((x - 5) ** 2) / (2.44977 ** 2))
+        
+        newData.append(datapoint)
+    
+    finalData = __exportData()
+    return finalData
