@@ -1,0 +1,31 @@
+<svg width="85mm" height="85mm" viewBox="0 0 85 85" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="b">
+      <stop style="stop-color:#9705ff;stop-opacity:1" offset=".12"/>
+      <stop style="stop-color:#33f;stop-opacity:1" offset=".24"/>
+      <stop style="stop-color:#1bc4e9;stop-opacity:1" offset=".38"/>
+      <stop style="stop-color:#99f53d;stop-opacity:1" offset=".5"/>
+      <stop style="stop-color:#ff3;stop-opacity:1" offset=".64"/>
+      <stop style="stop-color:#f93;stop-opacity:1" offset=".78"/>
+      <stop style="stop-color:#f33;stop-opacity:1" offset=".9"/>
+    </linearGradient>
+    <linearGradient id="a">
+      <stop style="stop-color:#b3f;stop-opacity:1" offset=".1"/>
+      <stop style="stop-color:#33f;stop-opacity:1" offset=".27"/>
+      <stop style="stop-color:#9f3;stop-opacity:1" offset=".446"/>
+      <stop style="stop-color:#ff3;stop-opacity:1" offset=".605"/>
+      <stop style="stop-color:#f93;stop-opacity:1" offset=".771"/>
+      <stop style="stop-color:#f33;stop-opacity:1" offset=".929"/>
+    </linearGradient>
+    <linearGradient xlink:href="#a" id="d" x1="59.543" y1="97.141" x2="110.75" y2="97.481" gradientUnits="userSpaceOnUse" gradientTransform="matrix(1 0 0 1.06304 -221.404 -58.9)"/>
+    <linearGradient xlink:href="#a" id="c" gradientUnits="userSpaceOnUse" x1="59.543" y1="97.141" x2="141.543" y2="97.141" gradientTransform="matrix(.9986 0 0 1.05676 -219.862 -148.479)"/>
+    <linearGradient xlink:href="#b" id="e" x1="50.016" y1="89.284" x2="135.016" y2="89.284" gradientUnits="userSpaceOnUse" gradientTransform="translate(-215.845 -62.22) scale(.98266)"/>
+    <path id="f" d="M334.209 478.556h137.845v198.965H334.209z"/>
+    <path id="g" d="M334.209 478.556h137.845v198.965H334.209z"/>
+  </defs>
+  <g transform="translate(-50.527 -46.444)">
+    <circle style="display:inline;fill:url(#e);fill-opacity:1;stroke:#000;stroke-width:1.47399;stroke-dasharray:none;stroke-opacity:1" cx="-124.933" cy="25.517" transform="rotate(-124.483)" r="41.763"/>
+    <text xml:space="preserve" transform="matrix(.2937 0 0 .25711 -6.743 -43.235)" style="font-style:italic;font-variant:normal;font-weight:400;font-stretch:normal;font-size:170.845px;font-family:'Franklin Gothic Medium';-inkscape-font-specification:'Franklin Gothic Medium, Italic';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;white-space:pre;shape-inside:url(#f);display:inline;fill:#000;fill-opacity:1;fill-rule:nonzero"><tspan x="334.209" y="634.302">L</tspan></text>
+    <text xml:space="preserve" transform="matrix(.282 0 0 .28944 -30.77 -86.792)" style="font-style:normal;font-variant:normal;font-weight:400;font-stretch:normal;font-size:142.433px;font-family:Magneto;-inkscape-font-specification:'Magneto, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;white-space:pre;shape-inside:url(#g);display:inline;fill:#000;fill-opacity:1;fill-rule:nonzero"><tspan x="334.209" y="609.932">R</tspan></text>
+  </g>
+</svg>
