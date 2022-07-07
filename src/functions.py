@@ -26,3 +26,16 @@ def CaF2():
     finalData = __exportData()
     return finalData
 
+def ZnSe():
+    return
+
+def sapphire():
+    originalData = __loadData()
+    newData = []
+
+    for x in originalData:
+        datapoint = (0.78928) / (1 + (11.9544/ x) ** -12.07226 ) ** 6903.57039
+        newData.append(datapoint)
+    
+    finalData = __exportData()
+    return finalData
