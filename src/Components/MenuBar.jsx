@@ -10,7 +10,7 @@ export default function MenuBar() {
     return (
         <div className="nav-area">
             <RLLogo className='logo' width={'58'} viewBox='-10 -158 100 400'/> 
-            <Link className='logo' to='/Virtual-FTIR-Spectrometer' >The Raston Lab: FTIR</Link>
+            <Link className='logo' to='/' >The Raston Lab: FTIR</Link>
             <nav>
                 <ul className="menus">
                     {menuItems.map((menu, index) => {
