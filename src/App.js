@@ -7,7 +7,7 @@ function App() {
   return (
     <div className="App">
       <MenuBar />
-\      <div className='ftir-display'>
+      <div className='ftir-display'>
         <SVGComponent part='laserbeams' click={() => {}} />
         <SVGComponent part='sourcebox' click={() => {}} />
         <SVGComponent part='aperturewheel' />
