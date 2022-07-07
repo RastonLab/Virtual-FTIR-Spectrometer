@@ -80,7 +80,18 @@ def lnSb():
 
     for x in originalData:
         datapoint = 1.97163E11 * (1 / (1 + math.exp( -(x - 5.3939) / 1.6624))) * (1 - 1 / (1 + math.exp( -(x - 5.3939) / 0.11925))) + (3.3 * (10 ** 10)) / (2.44977 * math.sqrt(math.pi / (4 * math.log(2)))) * math.exp(-4 * math.log(2) * ((x - 5) ** 2) / (2.44977 ** 2))
-        
+
+        newData.append(datapoint)
+    
+    finalData = __exportData()
+    return finalData
+
+def MCT():
+    originalData = __loadData()
+    newData = []
+
+    for x in originalData:
+        datapoint = 1.98748E9 + 2.10252E10 * (1 / (1 + math.exp( -(x - 20.15819) / 5.73688))) * (1 - 1 / (1 + math.exp( -(x - 20.15819) / 1.11659))) + 1.3E9 / (2 * math.sqrt(math.pi / (4 * math.log(2)))) * math.exp(-4 * math.log(2) * ((x - 18.6) ** 2) / (2 ** 2))
         newData.append(datapoint)
     
     finalData = __exportData()
