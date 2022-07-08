@@ -29,8 +29,6 @@ function Input({ params, setParams }) {
       <Molecule params={params} setParams={setParams} />
 
       <MoleFraction params={params} setParams={setParams} />
-
-      <button onClick={methodDoesNotExist}>Break the world</button>;
     </div>
   );
 }
