@@ -18,22 +18,22 @@ import {ReactComponent as ParabolicMirrorHoleSVG} from './svgs/parabolic-mirror-
 import {ReactComponent as ParabolicMirrorHole2SVG} from './svgs/parabolic-mirror-w-hole-2.svg';
 import {ReactComponent as LaserbeamsSVG} from './svgs/laserbeams.svg';
 
-import wheel from './svgs/aperture-wheel.svg';
-import frm from './svgs/flat-rotatable-mirror.svg';
-import globar from './svgs/globar.svg';
-import pm from './svgs/parabolic-mirror.svg';
-import tungsten from './svgs/tungsten.svg';
-import sample from './svgs/sample-compartment.svg';
-import dcfrm from './svgs/dc-flat-rotatable-mirror.svg';
-import MCT from './svgs/MCT.svg';
-import lnsb from './svgs/lnsb.svg';
-import cdfrm2 from './svgs/cd-flat-rotatable-mirror-2.svg';
-import fc from './svgs/fixed-corner-cube.svg';
-import fm from './svgs/fixed-mirror.svg';
-import laser from './svgs/laser.svg';
-import mc from './svgs/movable-corner-cube.svg';
-import pmh from './svgs/parabolic-mirror-w-hole.svg';
-import pmh2 from './svgs/parabolic-mirror-w-hole-2.svg';
+import wheel from './tooltip-svgs/aperture-wheel.svg';
+import frm from './tooltip-svgs/flat-rotatable-mirror-1.svg';
+import globar from './tooltip-svgs/globar.svg';
+import pm from './tooltip-svgs/parabolic-mirror.svg';
+import tungsten from './tooltip-svgs/tungsten.svg';
+import sample from './tooltip-svgs/sample-compartment.svg';
+import dcfrm from './tooltip-svgs/flat-rotatable-mirror-2.svg';
+import MCT from './tooltip-svgs/mct.svg';
+import lnsb from './tooltip-svgs/insb.svg';
+import cdfrm2 from './tooltip-svgs/flat-rotatable-mirror-3.svg';
+import fc from './tooltip-svgs/fixed-corner-cube.svg';
+import fm from './tooltip-svgs/fixed-mirror.svg';
+import laser from './tooltip-svgs/laser.svg';
+import mc from './tooltip-svgs/movable-corner-cube.svg';
+import pmh from './tooltip-svgs/parabolic-mirror-w-hole-1.svg';
+import pmh2 from './tooltip-svgs/parabolic-mirror-w-hole-2.svg';
 
 export const ftirParts = {
     'sourcebox': SourceBoxSVG,
