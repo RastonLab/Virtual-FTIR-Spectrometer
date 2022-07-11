@@ -157,11 +157,12 @@ def MCT(inputFile):
     newData = dict()
 
     for x in originalData:
-        x = float(x)
-        datapoint = (1.98748 * (10 ** 9)) + (2.10252 * (10 ** 10)) * (1 / (1 + math.exp( -(x - 20.15819) / 5.73688))) * (1 - 1 / (1 + math.exp( -(x - 20.15819) / 1.11659))) + (1.3 * (10 ** 9)) / (2 * math.sqrt(math.pi / (4 * math.log(2)))) * math.exp(-4 * math.log(2) * ((x - 18.6) ** 2) / (2 ** 2))
+        y = float(originalData[x])
+        datapoint = (1.98748 * (10 ** 9)) + (2.10252 * (10 ** 10)) * (1 / (1 + math.eyp( -(y - 20.15819) / 5.73688))) * (1 - 1 / (1 + math.eyp( -(y - 20.15819) / 1.11659))) + (1.3 * (10 ** 9)) / (2 * math.sqrt(math.pi / (4 * math.log(2)))) * math.eyp(-4 * math.log(2) * ((y - 18.6) ** 2) / (2 ** 2))
         newData[x] = datapoint
-    
-    return __exportData(newData)
+   
+    __exportData(newData)
+    return 
 
 if __name__ == "__main__":
     KBr("src/globar-1900-2300.csv")
