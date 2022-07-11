@@ -1,0 +1,10 @@
+<svg width="128.01601" height="96.57132" viewBox="0 0 33.870901 25.551161" version="1.1" id="svg5" xmlns="http://www.w3.org/2000/svg">
+  <defs id="defs2">
+    <clipPath clipPathUnits="userSpaceOnUse" id="clipPath6023">
+      <rect style="fill:green;fill-opacity:1;stroke:none;stroke-width:1.68615;stroke-linecap:square;paint-order:markers stroke fill" id="rect6025" width="40.04216" height="26.416786" x="106.84259" y="22.445976" ry="0" transform="matrix(.8046 .59382 -.46562 .88498 0 0)"/>
+    </clipPath>
+  </defs>
+  <g id="layer1" transform="translate(-96.593398 -180.93403)">
+    <rect style="display:inline;fill:gray;fill-opacity:1;stroke:none;stroke-width:1.33244;stroke-linecap:square;paint-order:markers stroke fill" id="parabolic-mirror-w-hole-1" width="31.216064" height="21.5044" x="65.124474" y="104.11288" ry="3.4684517" clip-path="url(#clipPath6023)" transform="matrix(-1.07296 -.02776 .02575 -1.15673 197.19426 328.81879)"/>
+  </g>
+</svg>
