@@ -17,10 +17,6 @@ export const menuItems = [
         label: 'Collect',
         submenu: [
             {
-                label:'Experimental Setup',
-                link:'/Experimental-Setup',
-            },
-            {
                 label:'Aquire Background Sample',
             },
             {
@@ -39,6 +35,10 @@ export const menuItems = [
     {
         label: 'Window',
         submenu: [
+            {
+                label:'Experimental Setup',
+                link:'/Experimental-Setup',
+            },
             {
                 label:'Instrument',
                 link:'/',
