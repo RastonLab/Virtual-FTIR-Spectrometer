@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/Virtual-FTIR-Spectrometer/static/css/main.9dd15c8c.css",
-    "main.js": "/Virtual-FTIR-Spectrometer/static/js/main.a793733a.js",
+    "main.css": "/Virtual-FTIR-Spectrometer/static/css/main.886215ba.css",
+    "main.js": "/Virtual-FTIR-Spectrometer/static/js/main.14d018c2.js",
     "static/media/Montserrat-VariableFont_wght.ttf": "/Virtual-FTIR-Spectrometer/static/media/Montserrat-VariableFont_wght.3068cdb43142f5625baf.ttf",
     "static/media/Roboto-Regular.ttf": "/Virtual-FTIR-Spectrometer/static/media/Roboto-Regular.fc2b5060f7accec5cf74.ttf",
     "static/media/laserbeams.svg": "/Virtual-FTIR-Spectrometer/static/media/laserbeams.dfc11a86e62252632918a4ccef73a141.svg",
@@ -31,11 +31,11 @@
     "static/media/flat-rotatable-mirror-2.svg": "/Virtual-FTIR-Spectrometer/static/media/flat-rotatable-mirror-2.b9c6295d6845c313bcca78c0f83d6a64.svg",
     "static/media/insb.svg": "/Virtual-FTIR-Spectrometer/static/media/insb.be2f7ec1a5b7f4a4e8c7895893070a41.svg",
     "static/media/mct.svg": "/Virtual-FTIR-Spectrometer/static/media/mct.27fa7b010a4365aec4c848d7773bf571.svg",
-    "main.9dd15c8c.css.map": "/Virtual-FTIR-Spectrometer/static/css/main.9dd15c8c.css.map",
-    "main.a793733a.js.map": "/Virtual-FTIR-Spectrometer/static/js/main.a793733a.js.map"
+    "main.886215ba.css.map": "/Virtual-FTIR-Spectrometer/static/css/main.886215ba.css.map",
+    "main.14d018c2.js.map": "/Virtual-FTIR-Spectrometer/static/js/main.14d018c2.js.map"
   },
   "entrypoints": [
-    "static/css/main.9dd15c8c.css",
-    "static/js/main.a793733a.js"
+    "static/css/main.886215ba.css",
+    "static/js/main.14d018c2.js"
   ]
 }
