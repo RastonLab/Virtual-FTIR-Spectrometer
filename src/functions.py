@@ -1,15 +1,15 @@
 import math
-# import matplotlib.pyplot as plt
-# import numpy as np
+from warnings import catch_warnings
 
 def __loadData(inputFile):
 
-    file = open(inputFile, 'r')
+    try:
+        file = open(inputFile, 'r')
 
     # File not found
-    # May need corrections
-    if not file:
-        return "File not found"
+    except:
+        print("File not found")
+        return
 
     data = dict()
 
@@ -28,44 +28,42 @@ def __exportData(data):
     file = open("outputDataC.csv", 'w')
 
     for key in data:
-        line = f'{key} {data[key]}\n' #key + " " + data[key] + "\n"
+        line = f'{key} {data[key]}\n'
         file.write(line)
 
-    return 
+    return True
 
 def KBr(inputFile):
     data = __loadData(inputFile)
 
-    if data == "File not found":
-        return data
+    if data == None:
+        return False
 
     for x in data:
         x = float(x)
         datapoint = (0.92267) / (1 + (25.66477 / x) ** -12.35159) ** 0.17344
         data[x] = datapoint
     
-    __exportData(data)
-    return
+    return __exportData(data)
 
 def CaF2(inputFile):
     data = __loadData(inputFile)
 
-    if data == "File not found":
-        return data
+    if data == None:
+        return False
 
     for x in data:
         y = float(data[x])
         datapoint = (0.93091) / (1 + (11.12929/ y ) ** -12.43933 ) ** 4.32574
         data[x] = datapoint
     
-    __exportData(data)
-    return 
+    return __exportData(data)
 
 def ZnSe(inputFile):
     data = __loadData(inputFile)
 
-    if data == "File not found":
-        return data
+    if data == None:
+        return False
 
     for x in data:
         y = float(data[x])
@@ -73,28 +71,26 @@ def ZnSe(inputFile):
 
         data[x] = datapoint
 
-    __exportData(data)
-    return 
+    return __exportData(data)
 
 def sapphire(inputFile):
     data = __loadData(inputFile)
 
-    if data == "File not found":
-        return data
+    if data == None:
+        return False
 
     for x in data:
         y = float(data[x])
         datapoint = (0.78928) / (1 + (11.9544/ y) ** -12.07226 ) ** 6903.57039
         data[x] = datapoint
     
-    __exportData(data)
-    return 
+    return __exportData(data)
 
 def AR_ZnSe(inputFile):
     data = __loadData(inputFile)
 
-    if data == "File not found":
-        return data
+    if data == None:
+        return False
 
     for x in data:
         y = float(data[x])
@@ -102,28 +98,26 @@ def AR_ZnSe(inputFile):
 
         data[x] = datapoint
     
-    __exportData(data)
-    return 
+    return __exportData(data)
 
 def AR_CaF2(inputFile):
     data = __loadData(inputFile)
 
-    if data == "File not found":
-        return data
+    if data == None:
+        return False
 
     for x in data:
         y = float(data[x])
         datapoint = (0.9795) / ((1 + ((18.77617/ y ) ** -6.94246) ) ** 91.98745) + -0.06 / (0.08 * math.sqrt(math.pi /(4 * math.log(2)))) * math.exp(-4 * math.log(2) * (( y - 0.76) ** 2) / (0.08 ** 2))+-0.06 / (0.2 * math.sqrt(math.pi /(4 * math.log(2)))) * math.exp(-4 * math.log(2) * ( y -1.06) ** 2/0.20 ** 2) + -0.6 / (3.0 * math.sqrt(math.pi /(4 * math.log(2)))) * math.exp(-4 * math.log(2) * (( y -4.85) ** 2) / (3.0 ** 2)) + -0.35 / (1.0 * math.sqrt(math.pi /(4 * math.log(2)))) * math.exp(-4 * math.log(2) * (( y - 9.40) ** 2) / (1.00 ** 2)) + 0.05 / (0.8 * math.sqrt(math.pi / (4 * math.log(2)))) * math.exp(-4 * math.log(2) * (( y - 2.60) ** 2) / (0.8 ** 2)) + 0.04 / (0.5 * math.sqrt(math.pi / (4 * math.log(2)))) * math.exp(-4 * math.log(2) * (( y - 7.75) ** 2) / (0.50 ** 2)) + -0.01 / (0.6 * math.sqrt(math.pi / (4 * math.log(2)))) * math.exp(-4 * math.log(2) * (( y - 6.55) ** 2) / (0.6 ** 2)) + 0.01 / (0.5 * math.sqrt(math.pi /(4 * math.log(2)))) * math.exp(-4 * math.log(2) * (( y - 1.82) ** 2) / (0.5 ** 2))
         data[x] = datapoint
     
-    __exportData(data)
-    return 
+    return __exportData(data)
 
 def InSb(inputFile):
     data = __loadData(inputFile)
 
-    if data == "File not found":
-        return data
+    if data == None:
+        return False
 
     for x in data:
         y = float(data[x])
@@ -131,22 +125,17 @@ def InSb(inputFile):
 
         data[x] = datapoint
     
-    __exportData(data)
-    return
+    return __exportData(data)
 
 def MCT(inputFile):
     data = __loadData(inputFile)
 
-    if data == "File not found":
-        return data
+    if data == None:
+        return False
 
     for x in data:
         y = float(data[x])
         datapoint = (1.98748 * (10 ** 9)) + (2.10252 * (10 ** 10)) * (1 / (1 + math.exp( -(y - 20.15819) / 5.73688))) * (1 - 1 / (1 + math.exp( -(y - 20.15819) / 1.11659))) + (1.3 * (10 ** 9)) / (2 * math.sqrt(math.pi / (4 * math.log(2)))) * math.exp(-4 * math.log(2) * ((y - 18.6) ** 2) / (2 ** 2))
         data[x] = datapoint
    
-    __exportData(data)
-    return 
-
-if __name__ == "__main__":
-    AR_CaF2("src/tungsten-1900-2300.csv")
+    return __exportData(data)
