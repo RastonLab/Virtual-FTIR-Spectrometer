@@ -10,7 +10,6 @@ import Pressure from "./inputs/Pressure";
 import Tgas from "./inputs/Tgas";
 import Print from "./Print";
 
-
 function Input({ params, setParams }) {
   return (
     <div id="fourm">
