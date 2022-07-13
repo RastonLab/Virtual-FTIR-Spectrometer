@@ -1,4 +1,5 @@
 #%%
+from decimal import Decimal
 import matplotlib.pyplot as plt
 import numpy as np
 
@@ -77,7 +78,6 @@ def ZnSe(inputFile):
 
     return __exportData(data, "StepC.csv")
 
-#TODO Numerical Result out of range
 def sapphire(inputFile):
     data = __loadData(inputFile)
 
@@ -85,8 +85,8 @@ def sapphire(inputFile):
         return False
 
     for x in data:
-        datapoint = (0.78928) / (1 + (11.9544/ x) ** -12.07226 ) ** 6903.57039
-        data[x] = datapoint
+        datapoint =Decimal(0.78928) / Decimal(1 + (11.9544 / (x / 1000)) ** -12.07226 ) ** (Decimal(6903.57039))
+        data[x] = datapoint * data[x]
     
     return __exportData(data, "StepC.csv")
 
@@ -99,7 +99,7 @@ def AR_ZnSe(inputFile):
 
     for x in data:
         x_um = x / 1000
-        datapoint = (0.82609) / ((1 + ((34.63971 / x) ** -8.56269)) ** 186.34792) + -0.47 / (0.55* math.sqrt(math.pi  / (4 * math.log(2)))) * math.exp(-4 * math.log(2) * ((x_um- 1.47) ** 2) / (0.55 ** 2)) + -0.03456 / (0.4 * math.sqrt(math.pi  / (4 * math.log(2)))) * math.exp(-4 * math.log(2) * ((x_um- 2.88) ** 2) / (0.4 ** 2)) + -0.009 / (0.3 * math.sqrt(math.pi  / (4 * math.log(2)))) * math.exp(-4 * math.log(2) * ((x_um- 6.16) ** 2) / (0.3 ** 2)) + -0.09 / (1 * math.sqrt(math.pi  / (4 * math.log(2)))) * math.exp(-4 * math.log(2) * ((x_um- 16.2) ** 2) / (1 ** 2)) + -0.08 / (1 * math.sqrt(math.pi  / (4 * math.log(2)))) * math.exp(-4 * math.log(2) * ((x_um- 17.4) ** 2) / (1 ** 2)) + 1.12 / (8 * math.sqrt(math.pi /(4 * math.log(2)))) * math.exp(-4 * math.log(2) * ((x_um- 9.5) ** 2) / (8 ** 2)) + 0.11546 / (2 * math.sqrt(math.pi  / (4 * math.log(2)))) * math.exp(-4 * math.log(2) * ((x_um- 4.9) ** 2) / (2 ** 2)) + 0.21751 / (2 * math.sqrt(math.pi  / (4 * math.log(2)))) * math.exp(-4 * math.log(2) * ((x_um- 2.6) ** 2) / (2 ** 2)) + -0.05 / (0.07 * math.sqrt(math.pi  / (4 * math.log(2)))) * math.exp(-4 * math.log(2) * ((x_um- 0.8) ** 2) / (0.07 ** 2))
+        datapoint = Decimal(0.82609) / (Decimal(1 + ((34.63971 / x) ** -8.56269)) ** Decimal(186.34792)) + Decimal(-0.47) / Decimal(0.55 * math.sqrt(math.pi  / (4 * math.log(2)))) * Decimal(math.exp(-4 * math.log(2) * ((x_um- 1.47) ** 2) / (0.55 ** 2))) + Decimal(-0.03456) / Decimal(0.4 * math.sqrt(math.pi  / (4 * math.log(2)))) * Decimal(math.exp(-4 * math.log(2) * ((x_um- 2.88) ** 2) / (0.4 ** 2))) + Decimal(-0.009) / Decimal(0.3 * math.sqrt(math.pi  / (4 * math.log(2)))) * Decimal(math.exp(-4 * math.log(2) * ((x_um- 6.16) ** 2) / (0.3 ** 2))) + Decimal(-0.09) / Decimal(1 * math.sqrt(math.pi  / (4 * math.log(2)))) * Decimal(math.exp(-4 * math.log(2) * ((x_um- 16.2) ** 2) / (1 ** 2))) + Decimal(-0.08) / Decimal(1 * math.sqrt(math.pi  / (4 * math.log(2)))) * Decimal(math.exp(-4 * math.log(2) * ((x_um- 17.4) ** 2) / (1 ** 2))) + Decimal(1.12) / Decimal(8 * math.sqrt(math.pi /(4 * math.log(2)))) * Decimal(math.exp(-4 * math.log(2) * ((x_um- 9.5) ** 2) / (8 ** 2))) + Decimal(0.11546) / Decimal(2 * math.sqrt(math.pi  / (4 * math.log(2)))) * Decimal(math.exp(-4 * math.log(2) * ((x_um- 4.9) ** 2) / (2 ** 2))) + Decimal(0.21751) / Decimal(2 * math.sqrt(math.pi  / (4 * math.log(2)))) * Decimal(math.exp(-4 * math.log(2) * ((x_um- 2.6) ** 2) / (2 ** 2))) + Decimal(-0.05) / Decimal(0.07 * math.sqrt(math.pi  / (4 * math.log(2)))) * Decimal(math.exp(-4 * math.log(2) * ((x_um- 0.8) ** 2) / (0.07 ** 2)))
 
         data[x] = datapoint
     
@@ -164,7 +164,7 @@ def sPlank(data, temp):
 
 if __name__=="__main__":
     sPlank("calc_spectrum-full-nm.csv", 1700)
-    AR_CaF2("StepB.csv")
+    AR_ZnSe("StepB.csv")
     InSb("StepC.csv")
     
     dataB = __loadData("StepB.csv")
@@ -190,7 +190,7 @@ if __name__=="__main__":
         Dys.append(float(dataD[key]))
 
     # plt.plot(np.array(xs), np.array(ys), color = 'hotpink')
-    # plt.plot(np.array(Cxs), np.array(Cys), 'cyan')
-    plt.plot(np.array(Dxs), np.array(Dys), color = 'purple')
+    plt.plot(np.array(Cxs), np.array(Cys), 'blue')
+    # plt.plot(np.array(Dxs), np.array(Dys), color = 'purple')
 
     plt.show()
