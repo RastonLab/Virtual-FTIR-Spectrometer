@@ -1,6 +1,11 @@
+#%%
+import matplotlib.pyplot as plt
+import numpy as np
+
 import math
 from warnings import catch_warnings
 
+#%%
 def __loadData(inputFile):
 
     try:
@@ -8,7 +13,7 @@ def __loadData(inputFile):
 
     # File not found
     except:
-        print("File not found")
+        print(f'File not found: {inputFile}')
         return
 
     data = dict()
@@ -30,7 +35,7 @@ def __exportData(data, fileName):
     for key in data:
         line = f'{key} {data[key]}\n'
         file.write(line)
-
+    
     file.close()
     
     return True
@@ -42,7 +47,7 @@ def KBr(inputFile):
         return False
 
     for x in data:
-        datapoint = (0.92267) / (1 + (25.66477 / x) ** -12.35159) ** 0.17344
+        datapoint = (0.92267) / (1 + (25.66477 / (x / 1000)) ** -12.35159) ** 0.17344
         data[x] = datapoint * data[x]
     
     return __exportData(data, "StepC.csv")
@@ -54,7 +59,7 @@ def CaF2(inputFile):
         return False
 
     for x in data:
-        datapoint = (0.93091) / (1 + (11.12929/ x ) ** -12.43933 ) ** 4.32574
+        datapoint = (0.93091) / (1 + (11.12929/ (x / 1000)) ** -12.43933 ) ** 4.32574
         data[x] = datapoint * data[x]
     
     return __exportData(data, "StepC.csv")
@@ -66,12 +71,13 @@ def ZnSe(inputFile):
         return False
 
     for x in data:
-        datapoint = (0.71015) / ((1 + (20.99353 / x) ** -19.31355 ) ** 1.44348) + -0.13265 / (2.25051 * math.sqrt(math.pi /(4 * math.log(2)))) * math.exp(-4 * math.log(2) * ((x - 16.75) ** 2) / (2.25051 ** 2))
-
+        x_um = x / 1000
+        datapoint = (0.71015) / ((1 + (20.99353 / x_um) ** -19.31355 ) ** 1.44348) + -0.13265 / (2.25051 * math.sqrt(math.pi /(4 * math.log(2)))) * math.exp(-4 * math.log(2) * ((x_um - 16.75) ** 2) / (2.25051 ** 2))
         data[x] = datapoint * data[x]
 
     return __exportData(data, "StepC.csv")
 
+#TODO Numerical Result out of range
 def sapphire(inputFile):
     data = __loadData(inputFile)
 
@@ -80,10 +86,11 @@ def sapphire(inputFile):
 
     for x in data:
         datapoint = (0.78928) / (1 + (11.9544/ x) ** -12.07226 ) ** 6903.57039
-        data[x] = datapoint * data[x]
+        data[x] = datapoint
     
     return __exportData(data, "StepC.csv")
 
+#TODO Numerical Result Out of rage
 def AR_ZnSe(inputFile):
     data = __loadData(inputFile)
 
@@ -91,9 +98,10 @@ def AR_ZnSe(inputFile):
         return False
 
     for x in data:
-        datapoint = (0.82609) / ((1 + ((34.63971 / x) ** -8.56269)) ** 186.34792) + -0.47 / (0.55* math.sqrt(math.pi  / (4 * math.log(2)))) * math.exp(-4 * math.log(2) * ((x - 1.47) ** 2) / (0.55 ** 2)) + -0.03456 / (0.4 * math.sqrt(math.pi  / (4 * math.log(2)))) * math.exp(-4 * math.log(2) * ((x - 2.88) ** 2) / (0.4 ** 2)) + -0.009 / (0.3 * math.sqrt(math.pi  / (4 * math.log(2)))) * math.exp(-4 * math.log(2) * ((x - 6.16) ** 2) / (0.3 ** 2)) + -0.09 / (1 * math.sqrt(math.pi  / (4 * math.log(2)))) * math.exp(-4 * math.log(2) * ((x - 16.2) ** 2) / (1 ** 2)) + -0.08 / (1 * math.sqrt(math.pi  / (4 * math.log(2)))) * math.exp(-4 * math.log(2) * ((x - 17.4) ** 2) / (1 ** 2)) + 1.12 / (8 * math.sqrt(math.pi /(4 * math.log(2)))) * math.exp(-4 * math.log(2) * ((x - 9.5) ** 2) / (8 ** 2)) + 0.11546 / (2 * math.sqrt(math.pi  / (4 * math.log(2)))) * math.exp(-4 * math.log(2) * ((x - 4.9) ** 2) / (2 ** 2)) + 0.21751 / (2 * math.sqrt(math.pi  / (4 * math.log(2)))) * math.exp(-4 * math.log(2) * ((x - 2.6) ** 2) / (2 ** 2)) + -0.05 / (0.07 * math.sqrt(math.pi  / (4 * math.log(2)))) * math.exp(-4 * math.log(2) * ((x - 0.8) ** 2) / (0.07 ** 2))
+        x_um = x / 1000
+        datapoint = (0.82609) / ((1 + ((34.63971 / x) ** -8.56269)) ** 186.34792) + -0.47 / (0.55* math.sqrt(math.pi  / (4 * math.log(2)))) * math.exp(-4 * math.log(2) * ((x_um- 1.47) ** 2) / (0.55 ** 2)) + -0.03456 / (0.4 * math.sqrt(math.pi  / (4 * math.log(2)))) * math.exp(-4 * math.log(2) * ((x_um- 2.88) ** 2) / (0.4 ** 2)) + -0.009 / (0.3 * math.sqrt(math.pi  / (4 * math.log(2)))) * math.exp(-4 * math.log(2) * ((x_um- 6.16) ** 2) / (0.3 ** 2)) + -0.09 / (1 * math.sqrt(math.pi  / (4 * math.log(2)))) * math.exp(-4 * math.log(2) * ((x_um- 16.2) ** 2) / (1 ** 2)) + -0.08 / (1 * math.sqrt(math.pi  / (4 * math.log(2)))) * math.exp(-4 * math.log(2) * ((x_um- 17.4) ** 2) / (1 ** 2)) + 1.12 / (8 * math.sqrt(math.pi /(4 * math.log(2)))) * math.exp(-4 * math.log(2) * ((x_um- 9.5) ** 2) / (8 ** 2)) + 0.11546 / (2 * math.sqrt(math.pi  / (4 * math.log(2)))) * math.exp(-4 * math.log(2) * ((x_um- 4.9) ** 2) / (2 ** 2)) + 0.21751 / (2 * math.sqrt(math.pi  / (4 * math.log(2)))) * math.exp(-4 * math.log(2) * ((x_um- 2.6) ** 2) / (2 ** 2)) + -0.05 / (0.07 * math.sqrt(math.pi  / (4 * math.log(2)))) * math.exp(-4 * math.log(2) * ((x_um- 0.8) ** 2) / (0.07 ** 2))
 
-        data[x] = datapoint * data[x]
+        data[x] = datapoint
     
     return __exportData(data, "StepC.csv")
 
@@ -104,7 +112,8 @@ def AR_CaF2(inputFile):
         return False
 
     for x in data:
-        datapoint = (0.9795) / ((1 + ((18.77617/ x ) ** -6.94246) ) ** 91.98745) + -0.06 / (0.08 * math.sqrt(math.pi /(4 * math.log(2)))) * math.exp(-4 * math.log(2) * (( x - 0.76) ** 2) / (0.08 ** 2))+-0.06 / (0.2 * math.sqrt(math.pi /(4 * math.log(2)))) * math.exp(-4 * math.log(2) * ( x -1.06) ** 2/0.20 ** 2) + -0.6 / (3.0 * math.sqrt(math.pi /(4 * math.log(2)))) * math.exp(-4 * math.log(2) * (( x -4.85) ** 2) / (3.0 ** 2)) + -0.35 / (1.0 * math.sqrt(math.pi /(4 * math.log(2)))) * math.exp(-4 * math.log(2) * (( x - 9.40) ** 2) / (1.00 ** 2)) + 0.05 / (0.8 * math.sqrt(math.pi / (4 * math.log(2)))) * math.exp(-4 * math.log(2) * (( x - 2.60) ** 2) / (0.8 ** 2)) + 0.04 / (0.5 * math.sqrt(math.pi / (4 * math.log(2)))) * math.exp(-4 * math.log(2) * (( x - 7.75) ** 2) / (0.50 ** 2)) + -0.01 / (0.6 * math.sqrt(math.pi / (4 * math.log(2)))) * math.exp(-4 * math.log(2) * (( x - 6.55) ** 2) / (0.6 ** 2)) + 0.01 / (0.5 * math.sqrt(math.pi /(4 * math.log(2)))) * math.exp(-4 * math.log(2) * (( x - 1.82) ** 2) / (0.5 ** 2))
+        x_um = x / 1000
+        datapoint = (0.9795) / ((1 + ((18.77617/ x_um) ** -6.94246) ) ** 91.98745) + -0.06 / (0.08 * math.sqrt(math.pi /(4 * math.log(2)))) * math.exp(-4 * math.log(2) * (( x_um- 0.76) ** 2) / (0.08 ** 2))+-0.06 / (0.2 * math.sqrt(math.pi /(4 * math.log(2)))) * math.exp(-4 * math.log(2) * ( x_um-1.06) ** 2/0.20 ** 2) + -0.6 / (3.0 * math.sqrt(math.pi /(4 * math.log(2)))) * math.exp(-4 * math.log(2) * (( x_um-4.85) ** 2) / (3.0 ** 2)) + -0.35 / (1.0 * math.sqrt(math.pi /(4 * math.log(2)))) * math.exp(-4 * math.log(2) * (( x_um- 9.40) ** 2) / (1.00 ** 2)) + 0.05 / (0.8 * math.sqrt(math.pi / (4 * math.log(2)))) * math.exp(-4 * math.log(2) * (( x_um- 2.60) ** 2) / (0.8 ** 2)) + 0.04 / (0.5 * math.sqrt(math.pi / (4 * math.log(2)))) * math.exp(-4 * math.log(2) * (( x_um- 7.75) ** 2) / (0.50 ** 2)) + -0.01 / (0.6 * math.sqrt(math.pi / (4 * math.log(2)))) * math.exp(-4 * math.log(2) * (( x_um- 6.55) ** 2) / (0.6 ** 2)) + 0.01 / (0.5 * math.sqrt(math.pi /(4 * math.log(2)))) * math.exp(-4 * math.log(2) * (( x_um- 1.82) ** 2) / (0.5 ** 2))
         data[x] = datapoint * data[x]
     
     return __exportData(data, "StepC.csv")
@@ -117,7 +126,6 @@ def InSb(inputFile):
 
     for x in data:
         datapoint = 1.97163E11 * (1 / (1 + math.exp( -(x - 5.3939) / 1.6624))) * (1 - 1 / (1 + math.exp( -(x - 5.3939) / 0.11925))) + (3.3e10) / (2.44977 * math.sqrt(math.pi / (4 * math.log(2)))) * math.exp(-4 * math.log(2) * ((x - 5) ** 2) / (2.44977 ** 2))
-
         data[x] = datapoint * data[x]
     
     return __exportData(data, "StepD.csv")
@@ -153,6 +161,34 @@ def sPlank(data, temp):
     return __exportData(spectrum, "StepB.csv")
 
 if __name__=="__main__":
-    sPlank("calc_spectrum-800-5000-nm.csv", 1700)
-    KBr("StepB.csv")
-    InSb("StepC.csv")
+    sPlank("calc_spectrum-full-nm.csv", 1700)
+    AR_CaF2("StepB.csv")
+    MCT("StepC.csv")
+    
+    dataB = __loadData("StepB.csv")
+    dataC = __loadData("StepC.csv")
+    dataD = __loadData("StepD.csv")
+        
+    xs = []
+    ys = []
+    for key in dataB:
+        xs.append(float(key))
+        ys.append(float(dataB[key]))
+
+    Cxs = []
+    Cys = []
+    for key in dataC:
+        Cxs.append(float(key))
+        Cys.append(float(dataC[key]))
+        
+    Dxs = []
+    Dys = []
+    for key in dataD:
+        Dxs.append(float(key))
+        Dys.append(float(dataD[key]))
+
+    # plt.plot(np.array(xs), np.array(ys), color = 'hotpink')
+    plt.plot(np.array(Cxs), np.array(Cys), 'cyan')
+    # plt.plot(np.array(Dxs), np.array(Dys), color = 'purple')s
+
+    plt.show()
