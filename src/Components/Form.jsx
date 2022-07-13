@@ -8,6 +8,7 @@ import MoleFraction from "./inputs/MoleFraction";
 import PathLength from "./inputs/PathLength";
 import Pressure from "./inputs/Pressure";
 import Tgas from "./inputs/Tgas";
+import Print from "./Print";
 
 function Input({ params, setParams }) {
   return (
@@ -29,6 +30,8 @@ function Input({ params, setParams }) {
       <Molecule params={params} setParams={setParams} />
 
       <MoleFraction params={params} setParams={setParams} />
+
+      <Print params={params} setParams={setParams} />
     </div>
   );
 }
