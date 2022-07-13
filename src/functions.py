@@ -125,7 +125,8 @@ def InSb(inputFile):
         return False
 
     for x in data:
-        datapoint = 1.97163E11 * (1 / (1 + math.exp( -(x - 5.3939) / 1.6624))) * (1 - 1 / (1 + math.exp( -(x - 5.3939) / 0.11925))) + (3.3e10) / (2.44977 * math.sqrt(math.pi / (4 * math.log(2)))) * math.exp(-4 * math.log(2) * ((x - 5) ** 2) / (2.44977 ** 2))
+        x_um = x /1000
+        datapoint = 1.97163E11 * (1 / (1 + math.exp( -(x_um- 5.3939) / 1.6624))) * (1 - 1 / (1 + math.exp( -(x_um- 5.3939) / 0.11925))) + (3.3e10) / (2.44977 * math.sqrt(math.pi / (4 * math.log(2)))) * math.exp(-4 * math.log(2) * ((x_um- 5) ** 2) / (2.44977 ** 2))
         data[x] = datapoint * data[x]
     
     return __exportData(data, "StepD.csv")
@@ -137,7 +138,8 @@ def MCT(inputFile):
         return False
 
     for x in data:
-        datapoint = (1.98748 * (10 ** 9)) + (2.10252 * (10 ** 10)) * (1 / (1 + math.exp( -(x - 20.15819) / 5.73688))) * (1 - 1 / (1 + math.exp( -(x - 20.15819) / 1.11659))) + (1.3 * (10 ** 9)) / (2 * math.sqrt(math.pi / (4 * math.log(2)))) * math.exp(-4 * math.log(2) * ((x - 18.6) ** 2) / (2 ** 2))
+        x_um = x / 1000
+        datapoint = (1.98748 * (10 ** 9)) + (2.10252 * (10 ** 10)) * (1 / (1 + math.exp( -(x_um - 20.15819) / 5.73688))) * (1 - 1 / (1 + math.exp( -(x_um - 20.15819) / 1.11659))) + (1.3 * (10 ** 9)) / (2 * math.sqrt(math.pi / (4 * math.log(2)))) * math.exp(-4 * math.log(2) * ((x_um - 18.6) ** 2) / (2 ** 2))
         data[x] = datapoint * data[x]
    
     return __exportData(data, "StepD.csv")
@@ -163,7 +165,7 @@ def sPlank(data, temp):
 if __name__=="__main__":
     sPlank("calc_spectrum-full-nm.csv", 1700)
     AR_CaF2("StepB.csv")
-    MCT("StepC.csv")
+    InSb("StepC.csv")
     
     dataB = __loadData("StepB.csv")
     dataC = __loadData("StepC.csv")
@@ -188,7 +190,7 @@ if __name__=="__main__":
         Dys.append(float(dataD[key]))
 
     # plt.plot(np.array(xs), np.array(ys), color = 'hotpink')
-    plt.plot(np.array(Cxs), np.array(Cys), 'cyan')
-    # plt.plot(np.array(Dxs), np.array(Dys), color = 'purple')s
+    # plt.plot(np.array(Cxs), np.array(Cys), 'cyan')
+    plt.plot(np.array(Dxs), np.array(Dys), color = 'purple')
 
     plt.show()
