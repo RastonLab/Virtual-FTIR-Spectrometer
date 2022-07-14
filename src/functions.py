@@ -17,7 +17,7 @@ def __loadData(inputFile):
         print(f'File not found: {inputFile}')
         return
 
-    data = dict()
+    data = {}
 
     for line in file:
         if "#" not in line:
@@ -86,23 +86,25 @@ def sapphire(inputFile):
 
     for x in data:
         datapoint =Decimal(0.78928) / Decimal(1 + (11.9544 / (x / 1000)) ** -12.07226 ) ** (Decimal(6903.57039))
-        data[x] = datapoint * data[x]
+        data[x] = datapoint * Decimal(data[x])
     
     return __exportData(data, "StepC.csv")
 
-#TODO Numerical Result Out of rage
+#TODO Interpolate
 def AR_ZnSe(inputFile):
     data = __loadData(inputFile)
 
     if data == None:
         return False
 
+    data2 = {}
+
     for x in data:
         x_um = x / 1000
-        datapoint = Decimal(0.82609) / (Decimal(1 + ((34.63971 / x) ** -8.56269)) ** Decimal(186.34792)) + Decimal(-0.47) / Decimal(0.55 * math.sqrt(math.pi  / (4 * math.log(2)))) * Decimal(math.exp(-4 * math.log(2) * ((x_um- 1.47) ** 2) / (0.55 ** 2))) + Decimal(-0.03456) / Decimal(0.4 * math.sqrt(math.pi  / (4 * math.log(2)))) * Decimal(math.exp(-4 * math.log(2) * ((x_um- 2.88) ** 2) / (0.4 ** 2))) + Decimal(-0.009) / Decimal(0.3 * math.sqrt(math.pi  / (4 * math.log(2)))) * Decimal(math.exp(-4 * math.log(2) * ((x_um- 6.16) ** 2) / (0.3 ** 2))) + Decimal(-0.09) / Decimal(1 * math.sqrt(math.pi  / (4 * math.log(2)))) * Decimal(math.exp(-4 * math.log(2) * ((x_um- 16.2) ** 2) / (1 ** 2))) + Decimal(-0.08) / Decimal(1 * math.sqrt(math.pi  / (4 * math.log(2)))) * Decimal(math.exp(-4 * math.log(2) * ((x_um- 17.4) ** 2) / (1 ** 2))) + Decimal(1.12) / Decimal(8 * math.sqrt(math.pi /(4 * math.log(2)))) * Decimal(math.exp(-4 * math.log(2) * ((x_um- 9.5) ** 2) / (8 ** 2))) + Decimal(0.11546) / Decimal(2 * math.sqrt(math.pi  / (4 * math.log(2)))) * Decimal(math.exp(-4 * math.log(2) * ((x_um- 4.9) ** 2) / (2 ** 2))) + Decimal(0.21751) / Decimal(2 * math.sqrt(math.pi  / (4 * math.log(2)))) * Decimal(math.exp(-4 * math.log(2) * ((x_um- 2.6) ** 2) / (2 ** 2))) + Decimal(-0.05) / Decimal(0.07 * math.sqrt(math.pi  / (4 * math.log(2)))) * Decimal(math.exp(-4 * math.log(2) * ((x_um- 0.8) ** 2) / (0.07 ** 2)))
+        datapoint = Decimal(0.82609) / (Decimal(1 + ((34.63971 / x_um) ** -8.56269)) ** Decimal(186.34792)) + Decimal(-0.47) / Decimal(0.55 * math.sqrt(math.pi  / (4 * math.log(2)))) * Decimal(math.exp(-4 * math.log(2) * ((x_um- 1.47) ** 2) / (0.55 ** 2))) + Decimal(-0.03456) / Decimal(0.4 * math.sqrt(math.pi  / (4 * math.log(2)))) * Decimal(math.exp(-4 * math.log(2) * ((x_um- 2.88) ** 2) / (0.4 ** 2))) + Decimal(-0.009) / Decimal(0.3 * math.sqrt(math.pi  / (4 * math.log(2)))) * Decimal(math.exp(-4 * math.log(2) * ((x_um- 6.16) ** 2) / (0.3 ** 2))) +Decimal(-0.09) / Decimal(1 * math.sqrt(math.pi  / (4 * math.log(2)))) * Decimal(math.exp(-4 * math.log(2) * ((x_um - 16.2) ** 2) / (1 ** 2))) + Decimal(-0.08) / Decimal(1 * math.sqrt(math.pi  / (4 * math.log(2)))) * Decimal(math.exp(-4 * math.log(2) * ((x_um- 17.4) ** 2) / (1 ** 2))) + Decimal(1.12) / Decimal(8 * math.sqrt(math.pi /(4 * math.log(2)))) * Decimal(math.exp(-4 * math.log(2) * ((x_um- 9.5) ** 2) / (8 ** 2))) + Decimal(0.11546) / Decimal(2 * math.sqrt(math.pi  / (4 * math.log(2)))) * Decimal(math.exp(-4 * math.log(2) * ((x_um- 4.9) ** 2) / (2 ** 2))) + Decimal(0.21751) / Decimal(2 * math.sqrt(math.pi  / (4 * math.log(2)))) * Decimal(math.exp(-4 * math.log(2) * ((x_um- 2.6) ** 2) / (2 ** 2))) + Decimal(-0.05) / Decimal(0.07 * math.sqrt(math.pi  / (4 * math.log(2)))) * Decimal(math.exp(-4 * math.log(2) * ((x_um- 0.8) ** 2) / (0.07 ** 2)))
 
         data[x] = datapoint
-    
+
     return __exportData(data, "StepC.csv")
 
 def AR_CaF2(inputFile):
@@ -166,8 +168,10 @@ if __name__=="__main__":
     sPlank("calc_spectrum-full-nm.csv", 1700)
     AR_ZnSe("StepB.csv")
     InSb("StepC.csv")
+
+    print(Decimal(1.1) + Decimal(2.2))
     
-    dataB = __loadData("StepB.csv")
+    dataB = __loadData("data2.csv")
     dataC = __loadData("StepC.csv")
     dataD = __loadData("StepD.csv")
         
