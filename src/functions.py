@@ -1,12 +1,7 @@
-#%%
-from decimal import Decimal
-import matplotlib.pyplot as plt
-import numpy as np
-
 import math
+import decimal as Decimal
 from warnings import catch_warnings
 
-#%%
 def __loadData(inputFile):
 
     try:
@@ -85,25 +80,23 @@ def sapphire(inputFile):
         return False
 
     for x in data:
+        # Gets accurate graph with numpy float128 but throws runtime overflow error
         datapoint =Decimal(0.78928) / Decimal(1 + (11.9544 / (x / 1000)) ** -12.07226 ) ** (Decimal(6903.57039))
         data[x] = datapoint * Decimal(data[x])
     
     return __exportData(data, "StepC.csv")
 
-#TODO Interpolate
 def AR_ZnSe(inputFile):
     data = __loadData(inputFile)
 
     if data == None:
         return False
 
-    data2 = {}
-
     for x in data:
         x_um = x / 1000
-        datapoint = Decimal(0.82609) / (Decimal(1 + ((34.63971 / x_um) ** -8.56269)) ** Decimal(186.34792)) + Decimal(-0.47) / Decimal(0.55 * math.sqrt(math.pi  / (4 * math.log(2)))) * Decimal(math.exp(-4 * math.log(2) * ((x_um- 1.47) ** 2) / (0.55 ** 2))) + Decimal(-0.03456) / Decimal(0.4 * math.sqrt(math.pi  / (4 * math.log(2)))) * Decimal(math.exp(-4 * math.log(2) * ((x_um- 2.88) ** 2) / (0.4 ** 2))) + Decimal(-0.009) / Decimal(0.3 * math.sqrt(math.pi  / (4 * math.log(2)))) * Decimal(math.exp(-4 * math.log(2) * ((x_um- 6.16) ** 2) / (0.3 ** 2))) +Decimal(-0.09) / Decimal(1 * math.sqrt(math.pi  / (4 * math.log(2)))) * Decimal(math.exp(-4 * math.log(2) * ((x_um - 16.2) ** 2) / (1 ** 2))) + Decimal(-0.08) / Decimal(1 * math.sqrt(math.pi  / (4 * math.log(2)))) * Decimal(math.exp(-4 * math.log(2) * ((x_um- 17.4) ** 2) / (1 ** 2))) + Decimal(1.12) / Decimal(8 * math.sqrt(math.pi /(4 * math.log(2)))) * Decimal(math.exp(-4 * math.log(2) * ((x_um- 9.5) ** 2) / (8 ** 2))) + Decimal(0.11546) / Decimal(2 * math.sqrt(math.pi  / (4 * math.log(2)))) * Decimal(math.exp(-4 * math.log(2) * ((x_um- 4.9) ** 2) / (2 ** 2))) + Decimal(0.21751) / Decimal(2 * math.sqrt(math.pi  / (4 * math.log(2)))) * Decimal(math.exp(-4 * math.log(2) * ((x_um- 2.6) ** 2) / (2 ** 2))) + Decimal(-0.05) / Decimal(0.07 * math.sqrt(math.pi  / (4 * math.log(2)))) * Decimal(math.exp(-4 * math.log(2) * ((x_um- 0.8) ** 2) / (0.07 ** 2)))
+        datapoint = (0.82609) / ((1 + ((34.63971 / x_um) ** -8.56269)) ** 186.34792) + -0.47 / (0.55* math.sqrt(math.pi / (4 * math.log(2)))) * math.exp(-4 * math.log(2) * ((x_um- 1.47) ** 2) / (0.55 ** 2)) + -0.03456 / (0.4 * math.sqrt(math.pi / (4 * math.log(2)))) * math.exp(-4 * math.log(2) * ((x_um- 2.88) ** 2) / (0.4 ** 2)) + -0.009 / (0.3 * math.sqrt(math.pi / (4 * math.log(2)))) * math.exp(-4 * math.log(2) * ((x_um- 6.16) ** 2) / (0.3 ** 2)) + -0.09 / (1 * math.sqrt(math.pi / (4 * math.log(2)))) * math.exp(-4 * math.log(2) * ((x_um- 16.2) ** 2) / (1 ** 2)) + -0.08 / (1 * math.sqrt(math.pi / (4 * math.log(2)))) * math.exp(-4 * math.log(2) * ((x_um- 17.4) ** 2) / (1 ** 2)) + 1.12 / (8 * math.sqrt(math.pi /(4 * math.log(2)))) * math.exp(-4 * math.log(2) * ((x_um- 9.5) ** 2) / (8 ** 2)) + 0.11546 / (2 * math.sqrt(math.pi / (4 * math.log(2)))) * math.exp(-4 * math.log(2) * ((x_um- 4.9) ** 2) / (2 ** 2)) + 0.21751 / (2 * math.sqrt(math.pi / (4 * math.log(2)))) * math.exp(-4 * math.log(2) * ((x_um- 2.6) ** 2) / (2 ** 2)) + -0.05 / (0.07 * math.sqrt(math.pi / (4 * math.log(2)))) * math.exp(-4 * math.log(2) * ((x_um- 0.8) ** 2) / (0.07 ** 2))
 
-        data[x] = datapoint
+        data[x] = datapoint * data[x]
 
     return __exportData(data, "StepC.csv")
 
@@ -163,38 +156,3 @@ def sPlank(data, temp):
         spectrum[x] = spectrum[x] * p
 
     return __exportData(spectrum, "StepB.csv")
-
-if __name__=="__main__":
-    sPlank("calc_spectrum-full-nm.csv", 1700)
-    AR_ZnSe("StepB.csv")
-    InSb("StepC.csv")
-
-    print(Decimal(1.1) + Decimal(2.2))
-    
-    dataB = __loadData("data2.csv")
-    dataC = __loadData("StepC.csv")
-    dataD = __loadData("StepD.csv")
-        
-    xs = []
-    ys = []
-    for key in dataB:
-        xs.append(float(key))
-        ys.append(float(dataB[key]))
-
-    Cxs = []
-    Cys = []
-    for key in dataC:
-        Cxs.append(float(key))
-        Cys.append(float(dataC[key]))
-        
-    Dxs = []
-    Dys = []
-    for key in dataD:
-        Dxs.append(float(key))
-        Dys.append(float(dataD[key]))
-
-    # plt.plot(np.array(xs), np.array(ys), color = 'hotpink')
-    plt.plot(np.array(Cxs), np.array(Cys), 'blue')
-    # plt.plot(np.array(Dxs), np.array(Dys), color = 'purple')
-
-    plt.show()
