@@ -1,13 +1,8 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8">
-    <title>FTIR - 404!</title>
-
-    <link rel="stylesheet" href="404.css" />
-    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
-
+    <meta charset="utf-8" />
+    <title>Single Page Apps for GitHub Pages</title>
     <script type="text/javascript">
       // Single Page Apps for GitHub Pages
       // MIT License
@@ -31,23 +26,25 @@
 
       var l = window.location;
       l.replace(
-        l.protocol + '//' + l.hostname + (l.port ? ':' + l.port : '') +
-        l.pathname.split('/').slice(0, 1 + pathSegmentsToKeep).join('/') + '/?/' +
-        l.pathname.slice(1).split('/').slice(pathSegmentsToKeep).join('/').replace(/&/g, '~and~') +
-        (l.search ? '&' + l.search.slice(1).replace(/&/g, '~and~') : '') +
-        l.hash
+        l.protocol +
+          "//" +
+          l.hostname +
+          (l.port ? ":" + l.port : "") +
+          l.pathname
+            .split("/")
+            .slice(0, 1 + pathSegmentsToKeep)
+            .join("/") +
+          "/?/" +
+          l.pathname
+            .slice(1)
+            .split("/")
+            .slice(pathSegmentsToKeep)
+            .join("/")
+            .replace(/&/g, "~and~") +
+          (l.search ? "&" + l.search.slice(1).replace(/&/g, "~and~") : "") +
+          l.hash
       );
-
     </script>
   </head>
-
-  <body>
-    <h1>Oh no!</h1>
-
-    <p>It seems like the page you were trying to get to does not exist</p>
-
-    <a href="/Virtual-FTIR-Spectrometer">Click here to go back to the main page!</a>
-
-    <img src="./RastonLab-Logo-Full-Rainbow-Draft.svg" />
-  </body>
+  <body></body>
 </html>
