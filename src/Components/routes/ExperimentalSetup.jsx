@@ -1,6 +1,5 @@
 import MenuBar from "../MenuBar";
 import "../../style/ExperimentalSetup.css";
-// import ElementToggle from '../ElementToggle';
 
 import { useState } from "react";
 import Fetch from "../Fetch";
@@ -8,9 +7,7 @@ import Form from "../Form";
 import Spinner from "../Spinner";
 import Error from "../Error";
 
-// import ChartJS from "../graphs/ChartJS";
-// import Dygraphs from "../graphs/Dygraphs";
-import Plotly from "../graphs/Plotly";
+import Plotly from "../Plotly";
 
 export default function ExperimentalSetup() {
   const [data, setData] = useState("");
@@ -59,8 +56,6 @@ export default function ExperimentalSetup() {
         {loading && <Spinner />}
         {error && <Error />}
 
-        {/* {!loading && <Dygraphs data={data} />} */}
-        {/* {!loading && <ChartJS data={data} />} */}
         {!loading && <Plotly data={data} params={params} />}
       </div>
     </div>
