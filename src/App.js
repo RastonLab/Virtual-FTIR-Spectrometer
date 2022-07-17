@@ -1,35 +1,19 @@
-import './style/App.css';
-import MenuBar from './Components/MenuBar';
-import SVGComponent from './Components/SVGComponents';
+import React from "react";
+import { Outlet, Link } from "react-router-dom";
 
-function App() {
-
+export default function App() {
   return (
-    <div className="App">
-      <MenuBar />
-      <div className='ftir-display'>
-        <SVGComponent part='laserbeams' click={() => {}} />
-        <SVGComponent part='sourcebox' click={() => {}} />
-        <SVGComponent part='aperturewheel' />
-        <SVGComponent part='flatrotatablemirror' />
-        <SVGComponent part='globar' />
-        <SVGComponent part='parabolicmirror' />
-        <SVGComponent part='tungsten' />
-        <SVGComponent part='detectionchamber' click={() => {}} />
-        <SVGComponent part='cdflatrotatablemirror' />
-        <SVGComponent part='samplecompartment' />
-        <SVGComponent part='mct' />
-        <SVGComponent part='lnsb' />
-        <SVGComponent part='cdflatrotatablemirror2' />
-        <SVGComponent part='fixedcornercube' />
-        <SVGComponent part='fixedmirror' />
-        <SVGComponent part='laser' />
-        <SVGComponent part='movablecornercube' />
-        <SVGComponent part='parabolicmirrorhole' />
-        <SVGComponent part='parabolicmirrorhole2' />
-      </div>
+    <div>
+      <h1>Raston Router and Redux</h1>
+      <nav style={{ borderBottom: "solid 1px", paddingBottom: "1rem" }}>
+        <Link to="/instrument" style={{ padding: "10px" }}>
+          Instrument
+        </Link>
+        <Link to="/setup" style={{ padding: "10px" }}>
+          Setup
+        </Link>
+      </nav>
+      <Outlet />
     </div>
   );
 }
-
-export default App;

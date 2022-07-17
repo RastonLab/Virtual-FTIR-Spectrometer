@@ -1,13 +1,12 @@
-import MenuBar from "../MenuBar";
-import "../../style/ExperimentalSetup.css";
+import "../style/ExperimentalSetup.css";
 
 import { useState } from "react";
-import Fetch from "../Fetch";
-import Form from "../Form";
-import Spinner from "../Spinner";
-import Error from "../Error";
+import Fetch from "../Components/Fetch";
+import Form from "../Components/Form";
+import Spinner from "../Components/Spinner";
+import Error from "../Components/Error";
 
-import Plotly from "../Plotly";
+import Plotly from "../Components/Plotly";
 
 export default function ExperimentalSetup() {
   const [data, setData] = useState("");
@@ -44,7 +43,6 @@ export default function ExperimentalSetup() {
 
   return (
     <div className="App">
-      <MenuBar />
       <div className="experiment-setup">
         <Form params={params} setParams={setParams} />
         <Fetch
