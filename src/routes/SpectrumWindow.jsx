@@ -6,7 +6,7 @@ import Plotly from "../components/Plotly";
 
 import "../style/SpectrumWindow.css";
 
-function SpectrumWindow() {
+export default function SpectrumWindow() {
   const storedData = useSelector((state) => state.data);
 
   return (
@@ -20,5 +20,3 @@ function SpectrumWindow() {
     </div>
   );
 }
-
-export default SpectrumWindow;
