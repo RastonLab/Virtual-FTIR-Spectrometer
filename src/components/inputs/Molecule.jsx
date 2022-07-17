@@ -1,13 +1,13 @@
 import React from "react";
 
-function Molecule({ params, setParams }) {
+function Molecule({ val, setter }) {
   return (
     <div className="input">
       <label htmlFor="molecule">HITRAN 2020 Molecule</label>
       <select
         id="molecule"
-        defaultValue={params.molecule}
-        onClick={(e) => setParams({ ...params, molecule: e.target.value })}
+        defaultValue={val}
+        onChange={(e) => setter(e.target.value)}
       >
         <option value="CO">CO</option>
       </select>

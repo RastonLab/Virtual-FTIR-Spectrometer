@@ -1,23 +1,19 @@
 import React from "react";
 
-function MinWave({ params, setParams }) {
+function Mode({ val, setter }) {
   return (
     <div className="input">
-      <label htmlFor="min-wave">
-        Wavenumber MIN range (cm<sup>-1</sup>)
-      </label>
-      <input
-        id="min-wave"
-        type="number"
-        defaultValue={params.min_wavenumber_range}
-        min={500}
-        max={10000}
-        onChange={(e) =>
-          setParams({ ...params, min_wavenumber_range: e.target.value })
-        }
-      ></input>
+      <label htmlFor="mode">Mode</label>
+      <select
+        id="mode"
+        defaultValue={val}
+        onChange={(e) => setter(e.target.value)}
+      >
+        <option value="absorbance">Absorbance</option>
+        <option value="transmittance_noslit">Transmittance</option>
+      </select>
     </div>
   );
 }
 
-export default MinWave;
+export default Mode;

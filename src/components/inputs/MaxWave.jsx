@@ -1,6 +1,6 @@
 import React from "react";
 
-function MaxWave({ params, setParams }) {
+function MaxWave({ val, setter }) {
   return (
     <div className="input">
       <label htmlFor="max-wave">
@@ -9,12 +9,10 @@ function MaxWave({ params, setParams }) {
       <input
         id="max-wave"
         type="number"
-        defaultValue={params.max_wavenumber_range}
+        defaultValue={val}
         min={500}
         max={10000}
-        onChange={(e) =>
-          setParams({ ...params, max_wavenumber_range: e.target.value })
-        }
+        onChange={(e) => setter(e.target.value)}
       ></input>
     </div>
   );
