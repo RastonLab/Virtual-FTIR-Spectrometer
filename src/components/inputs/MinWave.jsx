@@ -1,19 +1,21 @@
 import React from "react";
 
-function Mode({ val, setter }) {
+function MinWave({ val, setter }) {
   return (
     <div className="input">
-      <label htmlFor="mode">Mode</label>
-      <select
-        id="mode"
+      <label htmlFor="min-wave">
+        Wavenumber MIN range (cm<sup>-1</sup>)
+      </label>
+      <input
+        id="min-wave"
+        type="number"
         defaultValue={val}
+        min={500}
+        max={10000}
         onChange={(e) => setter(e.target.value)}
-      >
-        <option value="absorbance">Absorbance</option>
-        <option value="transmittance_noslit">Transmittance</option>
-      </select>
+      ></input>
     </div>
   );
 }
 
-export default Mode;
+export default MinWave;
