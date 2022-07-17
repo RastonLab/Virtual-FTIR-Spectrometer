@@ -1,6 +1,6 @@
 import React from "react";
 
-function Database({ val, setter }) {
+export default function Database({ val, setter }) {
   return (
     <div className="input">
       <label htmlFor="database">Database</label>
@@ -15,5 +15,3 @@ function Database({ val, setter }) {
     </div>
   );
 }
-
-export default Database;

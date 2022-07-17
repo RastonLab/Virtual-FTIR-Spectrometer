@@ -1,6 +1,6 @@
 import React from "react";
 
-function Tgas({ val, setter }) {
+export default function Tgas({ val, setter }) {
   return (
     <div className="input">
       <label htmlFor="tgas">Tgas (K)</label>
@@ -13,5 +13,3 @@ function Tgas({ val, setter }) {
     </div>
   );
 }
-
-export default Tgas;

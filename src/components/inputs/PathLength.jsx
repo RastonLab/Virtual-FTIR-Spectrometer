@@ -1,6 +1,6 @@
 import React from "react";
 
-function PathLength({ val, setter }) {
+export default function PathLength({ val, setter }) {
   return (
     <div className="input">
       <label htmlFor="path-length">Path length (cm)</label>
@@ -13,5 +13,3 @@ function PathLength({ val, setter }) {
     </div>
   );
 }
-
-export default PathLength;

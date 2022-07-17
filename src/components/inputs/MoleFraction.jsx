@@ -1,6 +1,6 @@
 import React from "react";
 
-function MoleFraction({ val, setter }) {
+export default function MoleFraction({ val, setter }) {
   return (
     <div className="input">
       <label htmlFor="mole-fraction">Mole Fraction</label>
@@ -13,5 +13,3 @@ function MoleFraction({ val, setter }) {
     </div>
   );
 }
-
-export default MoleFraction;

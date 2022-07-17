@@ -1,6 +1,6 @@
 import React from "react";
 
-function Pressure({ val, setter }) {
+export default function Pressure({ val, setter }) {
   return (
     <div className="input">
       <label htmlFor="pressure">Pressure (Bar)</label>
@@ -13,5 +13,3 @@ function Pressure({ val, setter }) {
     </div>
   );
 }
-
-export default Pressure;

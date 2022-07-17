@@ -1,8 +1,9 @@
 import React from "react";
-import Plot from "react-plotly.js";
 import { useSelector } from "react-redux";
 
-function Plotly() {
+import Plot from "react-plotly.js";
+
+export default function Plotly() {
   const data = useSelector((state) => state.data);
 
   const params = useSelector((state) => state.params);
@@ -87,5 +88,3 @@ function Plotly() {
     return <div></div>;
   }
 }
-
-export default Plotly;

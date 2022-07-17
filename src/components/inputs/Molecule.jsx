@@ -1,6 +1,6 @@
 import React from "react";
 
-function Molecule({ val, setter }) {
+export default function Molecule({ val, setter }) {
   return (
     <div className="input">
       <label htmlFor="molecule">HITRAN 2020 Molecule</label>
@@ -14,5 +14,3 @@ function Molecule({ val, setter }) {
     </div>
   );
 }
-
-export default Molecule;

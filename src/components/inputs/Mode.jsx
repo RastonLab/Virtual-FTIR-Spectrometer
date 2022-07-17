@@ -1,6 +1,6 @@
 import React from "react";
 
-function Mode({ val, setter }) {
+export default function Mode({ val, setter }) {
   return (
     <div className="input">
       <label htmlFor="mode">Mode</label>
@@ -15,5 +15,3 @@ function Mode({ val, setter }) {
     </div>
   );
 }
-
-export default Mode;

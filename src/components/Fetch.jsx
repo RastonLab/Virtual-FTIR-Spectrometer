@@ -1,6 +1,6 @@
 import React from "react";
-
 import { useDispatch } from "react-redux";
+
 import {
   hideError,
   hideProgress,
@@ -10,7 +10,7 @@ import {
   storeParams,
 } from "../actions";
 
-function Fetch({ params }) {
+export default function Fetch({ params }) {
   const dispatch = useDispatch();
 
   async function fetchRadis() {
@@ -62,5 +62,3 @@ function Fetch({ params }) {
     </button>
   );
 }
-
-export default Fetch;
