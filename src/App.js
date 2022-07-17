@@ -2,7 +2,7 @@ import React from "react";
 import { Outlet, Link } from "react-router-dom";
 
 import { menuItems } from "./menuItems";
-import MenuItems from "./Components/MenuItems";
+import MenuItems from "./components/MenuItems";
 
 import { ReactComponent as RLLogo } from "./RastonLab-Logo-Full-Rainbow-Draft.svg";
 

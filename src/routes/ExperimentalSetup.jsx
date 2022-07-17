@@ -1,12 +1,12 @@
 import "../style/ExperimentalSetup.css";
 
 import { useState } from "react";
-import Fetch from "../Components/Fetch";
-import Form from "../Components/Form";
-import Spinner from "../Components/Spinner";
-import Error from "../Components/Error";
+import Fetch from "../components/Fetch";
+import Form from "../components/Form";
+import Spinner from "../components/Spinner";
+import Error from "../components/Error";
 
-import Plotly from "../Components/Plotly";
+import Plotly from "../components/Plotly";
 
 export default function ExperimentalSetup() {
   const [data, setData] = useState("");

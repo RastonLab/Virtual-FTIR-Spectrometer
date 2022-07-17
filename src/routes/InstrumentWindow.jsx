@@ -1,5 +1,5 @@
 import "../style/App.css";
-import SVGComponent from "../Components/SVGComponents";
+import SVGComponent from "../components/SVGComponents";
 
 function InstrumentWindow() {
   return (
