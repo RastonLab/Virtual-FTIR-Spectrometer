@@ -8,7 +8,7 @@ import InstrumentWindow from "./routes/InstrumentWindow";
 import ExperimentalSetup from "./routes/ExperimentalSetup";
 
 import "./style/index.css";
-import store from "./store";
+import store from "./redux/store";
 
 // -------------------- sentry.io tracking --------------------
 import * as Sentry from "@sentry/react";

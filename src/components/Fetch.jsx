@@ -8,7 +8,7 @@ import {
   showProgress,
   storeData,
   storeParams,
-} from "../actions";
+} from "../redux/actions";
 
 export default function Fetch({ params }) {
   const dispatch = useDispatch();
