@@ -18,7 +18,9 @@ import PathLength from "../components/inputs/PathLength";
 import Molecule from "../components/inputs/Molecule";
 import MoleFraction from "../components/inputs/MoleFraction";
 
-export default function Input() {
+import "../style/ExperimentalSetup.css";
+
+export default function ExperimentalSetup() {
   const storedParams = useSelector((state) => state.params);
   const progress = useSelector((state) => state.isProgressing);
   const error = useSelector((state) => state.isError);
@@ -48,8 +50,8 @@ export default function Input() {
   const [simulate_slit] = useState(storedParams.simulate_slit);
 
   return (
-    <div className="App">
-      <div id="fourm">
+    <div id="experimental-setup">
+      <div id="form">
         <Database val={database} setter={setDatabase} />
 
         <Mode val={mode} setter={setMode} />
