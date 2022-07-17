@@ -6,6 +6,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import App from "./App";
 import InstrumentWindow from "./routes/InstrumentWindow";
 import ExperimentalSetup from "./routes/ExperimentalSetup";
+import SpectrumWindow from "./routes/SpectrumWindow";
 
 import "./style/index.css";
 import store from "./redux/store";
@@ -33,6 +34,7 @@ root.render(
           <Route path="/" element={<App />}>
             <Route path="instrument" element={<InstrumentWindow />} />
             <Route path="experimental-setup" element={<ExperimentalSetup />} />
+            <Route path="spectrum" element={<SpectrumWindow />} />
           </Route>
         </Routes>
       </BrowserRouter>

@@ -45,6 +45,7 @@ export const menuItems = [
             },
             {
                 label:'Spectrum',
+                link:'/spectrum',
             }
         ]
     },
