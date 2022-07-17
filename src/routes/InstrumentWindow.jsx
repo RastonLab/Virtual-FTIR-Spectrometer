@@ -5,7 +5,7 @@ import "../style/InstrumentWindow.css";
 
 function InstrumentWindow() {
   return (
-    <div className="instrument-window">
+    <div id="instrument-window">
       <SVGComponent part="laserbeams" click={() => {}} />
       <SVGComponent part="sourcebox" click={() => {}} />
       <SVGComponent part="aperturewheel" />
