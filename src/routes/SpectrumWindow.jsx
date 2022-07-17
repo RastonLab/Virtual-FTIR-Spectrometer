@@ -7,11 +7,11 @@ import Plotly from "../components/Plotly";
 import "../style/SpectrumWindow.css";
 
 function SpectrumWindow() {
-  const data = useSelector((state) => state.data);
+  const storedData = useSelector((state) => state.data);
 
   return (
     <div id="spectrum-window">
-      {data ? (
+      {storedData ? (
         <Plotly />
       ) : (
         <p>Please generate a spectrum and return here</p>
