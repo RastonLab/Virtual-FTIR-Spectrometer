@@ -1,7 +1,12 @@
 import React from "react";
+import { useSelector } from "react-redux";
+
 import Plot from "react-plotly.js";
 
-function Plotly({ data, params }) {
+export default function Plotly() {
+  const data = useSelector((state) => state.data);
+
+  const params = useSelector((state) => state.params);
   const addSubscriptsToMolecule = (molecule) => {
     const subscripts = "₁₂₃₄₅₆₇₈₉".split("");
     return molecule
@@ -83,5 +88,3 @@ function Plotly({ data, params }) {
     return <div></div>;
   }
 }
-
-export default Plotly;

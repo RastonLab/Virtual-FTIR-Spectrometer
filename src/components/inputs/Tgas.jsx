@@ -1,17 +1,15 @@
 import React from "react";
 
-function Tgas({ params, setParams }) {
+export default function Tgas({ val, setter }) {
   return (
     <div className="input">
       <label htmlFor="tgas">Tgas (K)</label>
       <input
         id="tgas"
         type="number"
-        defaultValue={params.tgas}
-        onChange={(e) => setParams({ ...params, tgas: e.target.value })}
+        defaultValue={val}
+        onChange={(e) => setter(e.target.value)}
       ></input>
     </div>
   );
 }
-
-export default Tgas;

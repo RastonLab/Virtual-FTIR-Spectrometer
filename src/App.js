@@ -1,35 +1,30 @@
-import './style/App.css';
-import MenuBar from './Components/MenuBar';
-import SVGComponent from './Components/SVGComponents';
+import React from "react";
+import { Outlet, Link } from "react-router-dom";
 
-function App() {
+import { menuItems } from "./dictionaries/menuItems";
+import MenuItems from "./components/menu/MenuItems";
 
+import "./style/App.css";
+import { ReactComponent as RLLogo } from "./RastonLab-Logo-Full-Rainbow-Draft.svg";
+
+export default function App() {
   return (
-    <div className="App">
-      <MenuBar />
-      <div className='ftir-display'>
-        <SVGComponent part='laserbeams' click={() => {}} />
-        <SVGComponent part='sourcebox' click={() => {}} />
-        <SVGComponent part='aperturewheel' />
-        <SVGComponent part='flatrotatablemirror' />
-        <SVGComponent part='globar' />
-        <SVGComponent part='parabolicmirror' />
-        <SVGComponent part='tungsten' />
-        <SVGComponent part='detectionchamber' click={() => {}} />
-        <SVGComponent part='cdflatrotatablemirror' />
-        <SVGComponent part='samplecompartment' />
-        <SVGComponent part='mct' />
-        <SVGComponent part='lnsb' />
-        <SVGComponent part='cdflatrotatablemirror2' />
-        <SVGComponent part='fixedcornercube' />
-        <SVGComponent part='fixedmirror' />
-        <SVGComponent part='laser' />
-        <SVGComponent part='movablecornercube' />
-        <SVGComponent part='parabolicmirrorhole' />
-        <SVGComponent part='parabolicmirrorhole2' />
+    <div>
+      <div className="nav-area">
+        <RLLogo className="logo" width={"58"} viewBox="-10 -158 100 400" />
+        <Link className="logo" to="/">
+          The Raston Lab: FTIR
+        </Link>
+
+        <nav>
+          <ul className="menus">
+            {menuItems.map((menu, index) => {
+              return <MenuItems items={menu} key={index} />;
+            })}
+          </ul>
+        </nav>
       </div>
+      <Outlet />
     </div>
   );
 }
-
-export default App;

@@ -1,13 +1,13 @@
 import React from "react";
 
-function Database({ params, setParams }) {
+export default function Database({ val, setter }) {
   return (
     <div className="input">
       <label htmlFor="database">Database</label>
       <select
         id="database"
-        defaultValue={params.database}
-        onChange={(e) => setParams({ ...params, database: e.target.value })}
+        defaultValue={val}
+        onChange={(e) => setter(e.target.value)}
       >
         <option value="hitran">HITRAN</option>
         <option value="geisa">GEISA</option>
@@ -15,5 +15,3 @@ function Database({ params, setParams }) {
     </div>
   );
 }
-
-export default Database;

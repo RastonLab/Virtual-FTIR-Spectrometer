@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import Popup from "./Popup.jsx";
+import Popup from "../Popup";
 
 const Dropdown = ({ submenus, dropdown }) => {
   return (
