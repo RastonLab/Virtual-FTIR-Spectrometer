@@ -1,0 +1,5 @@
+/* ---------- spectrum-window ---------- */
+#spectrum-window {
+  display: flex;
+  justify-content: center;
+}
