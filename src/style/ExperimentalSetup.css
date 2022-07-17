@@ -53,7 +53,7 @@
 }
 
 /* ---------- button ---------- */
-button {
+#button {
   margin: 10px;
   padding: 8px 12px;
 
@@ -67,7 +67,7 @@ button {
   background-color: #212529;
 }
 
-button:hover {
+#button:hover {
   background: linear-gradient(90deg, red, orange, yellow, green, blue, purple);
 }
 
