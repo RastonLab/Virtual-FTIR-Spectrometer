@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { ftirParts, toolTips, ttImgSrc} from "./SVGLibrary";
+import { ftirParts, toolTips, ttImgSrc} from "../dictionaries/SVGLibrary";
 import { Dialog } from "@mui/material";
 import '../style/SVGComponents.css';
 import '../style/Popup.css';
