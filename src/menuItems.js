@@ -37,11 +37,11 @@ export const menuItems = [
         submenu: [
             {
                 label:'Experimental Setup',
-                link:'/Experimental-Setup',
+                link:'/experimental-setup',
             },
             {
                 label:'Instrument',
-                link:'/',
+                link:'/instrument',
             },
             {
                 label:'Spectrum',

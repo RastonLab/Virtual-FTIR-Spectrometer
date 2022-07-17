@@ -29,7 +29,7 @@ root.render(
       <Routes>
         <Route path="/" element={<App />}>
           <Route path="instrument" element={<InstrumentWindow />} />
-          <Route path="setup" element={<ExperimentalSetup />} />
+          <Route path="experimental-setup" element={<ExperimentalSetup />} />
         </Route>
       </Routes>
     </BrowserRouter>

@@ -1,60 +1,28 @@
-.App {
-  text-align: center;
-}
-
-/* .App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: white;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: black;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-} */
-
-@font-face {
-  font-family: 'Montserrat';
-  src: url(./fonts/Montserrat-VariableFont_wght.ttf);
-}
-
-@font-face {
-  font-family: 'Roboto';
-  src: url(./fonts/Roboto-Regular.ttf);
-}
-
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+
+/* ---------- App ---------- */
+.App {
+  display: flex;
+  flex-direction: column;
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src: url(./fonts/Montserrat-VariableFont_wght.ttf);
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url(./fonts/Roboto-Regular.ttf);
+}
+
 body {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 
 header {
@@ -65,14 +33,11 @@ header {
 .nav-area {
   display: flex;
   align-items: center;
-  /* max-width: 1200px; */
   width: 100%;
   margin: 0 auto;
   padding: 0 20px;
   height: 58px;
-  position: fixed;
-  /* background-color:#61dafb; */
-  background-color:#1d2022;
+  background-color: #1d2022;
   color: white;
   z-index: 1;
 }
@@ -82,13 +47,12 @@ header {
   font-size: 25px;
   color: inherit;
   margin-right: 20px;
-  font-family: 'Montserrat';
+  font-family: "Montserrat";
 }
 
 .menus {
   display: flex;
   list-style: none;
-
 }
 
 .menu-items {
@@ -121,7 +85,7 @@ header {
 
 .menu-items a:hover,
 .menu-items button:hover {
-  background-color:#2b3032;
+  background-color: #2b3032;
 }
 
 .dropdown {
@@ -135,7 +99,7 @@ header {
   min-width: 10rem;
   padding: 0.5rem 0;
   list-style: none;
-  background-color:#1d2022;
+  background-color: #1d2022;
   border-radius: 0.5rem;
   display: none;
 }

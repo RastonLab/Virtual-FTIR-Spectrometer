@@ -1,18 +1,28 @@
 import React from "react";
 import { Outlet, Link } from "react-router-dom";
 
+import { menuItems } from "./menuItems";
+import MenuItems from "./Components/MenuItems";
+
+import { ReactComponent as RLLogo } from "./RastonLab-Logo-Full-Rainbow-Draft.svg";
+
 export default function App() {
   return (
     <div>
-      <h1>Raston Router and Redux</h1>
-      <nav style={{ borderBottom: "solid 1px", paddingBottom: "1rem" }}>
-        <Link to="/instrument" style={{ padding: "10px" }}>
-          Instrument
+      <div className="nav-area">
+        <RLLogo className="logo" width={"58"} viewBox="-10 -158 100 400" />
+        <Link className="logo" to="/">
+          The Raston Lab: FTIR
         </Link>
-        <Link to="/setup" style={{ padding: "10px" }}>
-          Setup
-        </Link>
-      </nav>
+
+        <nav>
+          <ul className="menus">
+            {menuItems.map((menu, index) => {
+              return <MenuItems items={menu} key={index} />;
+            })}
+          </ul>
+        </nav>
+      </div>
       <Outlet />
     </div>
   );
