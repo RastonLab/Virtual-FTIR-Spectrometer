@@ -1,8 +1,15 @@
+/* ---------- fonts ---------- */
+@font-face {
+  font-family: "Roboto";
+  src: url(./fonts/Roboto-Regular.ttf);
+}
+
 /* ---------- experimental-setup ---------- */
 #experimental-setup {
   display: flex;
   flex-direction: column;
   align-items: center;
+  font-family: "Roboto";
 }
 
 /* ---------- form ---------- */
