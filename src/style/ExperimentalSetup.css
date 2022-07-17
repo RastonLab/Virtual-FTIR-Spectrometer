@@ -68,6 +68,7 @@
 }
 
 #button:hover {
+  background-color: #002ead;
   background: linear-gradient(90deg, red, orange, yellow, green, blue, purple);
 }
 
