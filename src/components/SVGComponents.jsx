@@ -1,9 +1,7 @@
 import React, { useState } from "react";
 import { ftirParts, toolTips, ttImgSrc} from "../dictionaries/SVGLibrary";
 import { Dialog } from "@mui/material";
-import '../style/SVGComponents.css';
-import '../style/Popup.css';
-
+import '../style/App.css';
 
 export default function SVGComponent({part, click}) { // Style is the intial stroke
     const [toggled, setToggled] = useState(false);

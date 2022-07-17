@@ -1,3 +1,4 @@
+/* ---------- fonts ---------- */
 @font-face {
   font-family: "Montserrat";
   src: url(./fonts/Montserrat-VariableFont_wght.ttf);
@@ -8,6 +9,7 @@
   src: url(./fonts/Roboto-Regular.ttf);
 }
 
+/* ---------- general ---------- */
 * {
   margin: 0;
   padding: 0;
@@ -18,7 +20,7 @@ body {
   font-family: "Roboto", sans-serif;
 }
 
-/* ---------- App ---------- */
+/* ---------- app ---------- */
 .App {
   display: flex;
   flex-direction: column;
@@ -83,6 +85,7 @@ body {
   background-color: #2b3032;
 }
 
+/* ---------- dropdown ---------- */
 .dropdown {
   position: absolute;
   right: 0;
@@ -103,12 +106,44 @@ body {
   display: block;
 }
 
-/* FTIR Style */
+/* ---------- popup ---------- */
+.popup h2 {
+  font-family: "Mont";
+  text-align: center;
+  padding: 20px 0;
+  text-decoration: underline;
+}
 
-.ftir-display {
+.popup p {
+  font-family: "Roboto";
+  pointer-events: none;
+  padding: 0 3%;
+}
+
+.MuiPaper-root {
+  width: 100%;
   height: 80%;
-  width: 80%;
-  margin: 1% 10%;
-  top: 70px;
+}
+
+/* ---------- svg components ---------- */
+.component {
+  pointer-events: none;
+}
+
+.svg {
   position: absolute;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  border: #1d2022 2px solid;
+}
+
+g {
+  pointer-events: all;
+}
+
+.example-image {
+  align-self: center;
+  width: 70%;
+  height: 30%;
 }

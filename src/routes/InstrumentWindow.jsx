@@ -1,9 +1,11 @@
-import "../style/App.css";
+import React from "react";
 import SVGComponent from "../components/SVGComponents";
+
+import "../style/InstrumentWindow.css";
 
 function InstrumentWindow() {
   return (
-    <div className="ftir-display">
+    <div className="instrument-window">
       <SVGComponent part="laserbeams" click={() => {}} />
       <SVGComponent part="sourcebox" click={() => {}} />
       <SVGComponent part="aperturewheel" />

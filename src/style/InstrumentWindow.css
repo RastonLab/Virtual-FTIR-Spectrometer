@@ -1,0 +1,8 @@
+/* ---------- instrument-window ---------- */
+.instrument-window {
+  height: 80%;
+  width: 80%;
+  margin: 1% 10%;
+  top: 70px;
+  position: absolute;
+}

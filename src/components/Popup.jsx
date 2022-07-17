@@ -1,6 +1,7 @@
-import { Dialog } from "@mui/material";
 import { useState } from "react";
-import '../style/Popup.css';
+import { Dialog } from "@mui/material";
+
+import '../style/App.css';
 
 export default function Popup({label, title, text}) {
 

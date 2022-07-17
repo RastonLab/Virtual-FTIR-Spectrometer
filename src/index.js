@@ -7,7 +7,7 @@ import App from "./App";
 import InstrumentWindow from "./routes/InstrumentWindow";
 import ExperimentalSetup from "./routes/ExperimentalSetup";
 
-import "./index.css";
+import "./style/index.css";
 import store from "./store";
 
 // -------------------- sentry.io tracking --------------------
