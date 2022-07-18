@@ -14,6 +14,7 @@ import store from "./redux/store";
 // -------------------- sentry.io tracking --------------------
 import * as Sentry from "@sentry/react";
 import { BrowserTracing } from "@sentry/tracing";
+import NotFound from "./components/NotFound";
 Sentry.init({
   dsn: "https://e7a614a92d3f4f929ae8e3de0fcebff7@o1310725.ingest.sentry.io/6558449",
   integrations: [new BrowserTracing()],
@@ -35,6 +36,7 @@ root.render(
             <Route path="instrument" element={<InstrumentWindow />} />
             <Route path="experimental-setup" element={<ExperimentalSetup />} />
             <Route path="spectrum" element={<SpectrumWindow />} />
+            <Route path="*" element={<NotFound />} />
           </Route>
         </Routes>
       </BrowserRouter>
