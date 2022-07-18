@@ -1,14 +1,19 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import './index.css';
+import React from "react";
+import ReactDOM from "react-dom/client";
+import { Provider } from "react-redux";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
+import App from "./App";
+import InstrumentWindow from "./routes/InstrumentWindow";
+import ExperimentalSetup from "./routes/ExperimentalSetup";
+import SpectrumWindow from "./routes/SpectrumWindow";
+
+import "./style/index.css";
+import store from "./redux/store";
+
+// -------------------- sentry.io tracking --------------------
 import * as Sentry from "@sentry/react";
 import { BrowserTracing } from "@sentry/tracing";
-
-import App from './App';
-import ExperimentalSetup from './Components/routes/ExperimentalSetup';
-
 Sentry.init({
   dsn: "https://e7a614a92d3f4f929ae8e3de0fcebff7@o1310725.ingest.sentry.io/6558449",
   integrations: [new BrowserTracing()],
@@ -19,15 +24,20 @@ Sentry.init({
   tracesSampleRate: 1.0,
 });
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+// -------------------- react router --------------------
+const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <BrowserRouter basename='/Virtual-FTIR-Spectrometer'>
-      <Routes>
-        <Route path="/" element={<App />} />
-        <Route path="/Experimental-Setup" element={<ExperimentalSetup />} />
-      </Routes>
-    </BrowserRouter>
+    <Provider store={store}>
+      <BrowserRouter basename="/Virtual-FTIR-Spectrometer">
+        <Routes>
+          <Route path="/" element={<App />}>
+            <Route path="instrument" element={<InstrumentWindow />} />
+            <Route path="experimental-setup" element={<ExperimentalSetup />} />
+            <Route path="spectrum" element={<SpectrumWindow />} />
+          </Route>
+        </Routes>
+      </BrowserRouter>
+    </Provider>
   </React.StrictMode>
 );
-

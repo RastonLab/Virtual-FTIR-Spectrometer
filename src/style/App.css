@@ -1,78 +1,36 @@
-.App {
-  text-align: center;
-}
-
-/* .App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: white;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: black;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-} */
-
+/* ---------- fonts ---------- */
 @font-face {
-  font-family: 'Montserrat';
+  font-family: "Montserrat";
   src: url(./fonts/Montserrat-VariableFont_wght.ttf);
 }
 
 @font-face {
-  font-family: 'Roboto';
+  font-family: "Roboto";
   src: url(./fonts/Roboto-Regular.ttf);
 }
 
+/* ---------- general ---------- */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-body {
-  font-family: 'Roboto', sans-serif;
+/* ---------- app ---------- */
+.App {
+  display: flex;
+  flex-direction: column;
 }
 
-header {
-  height: 58px;
-  color: #212529;
-}
-
+/* ---------- navigation / menu bar ---------- */
 .nav-area {
   display: flex;
   align-items: center;
-  /* max-width: 1200px; */
   width: 100%;
   margin: 0 auto;
   padding: 0 20px;
   height: 58px;
-  position: fixed;
-  /* background-color:#61dafb; */
-  background-color:#1d2022;
+  background-color: #1d2022;
   color: white;
   z-index: 1;
 }
@@ -82,13 +40,12 @@ header {
   font-size: 25px;
   color: inherit;
   margin-right: 20px;
-  font-family: 'Montserrat';
+  font-family: "Montserrat";
 }
 
 .menus {
   display: flex;
   list-style: none;
-
 }
 
 .menu-items {
@@ -121,9 +78,10 @@ header {
 
 .menu-items a:hover,
 .menu-items button:hover {
-  background-color:#2b3032;
+  background-color: #2b3032;
 }
 
+/* ---------- dropdown ---------- */
 .dropdown {
   position: absolute;
   right: 0;
@@ -131,11 +89,11 @@ header {
   box-shadow: 0 10px 15px -3px rgba(46, 41, 51, 0.08),
     0 4px 6px -2px rgba(71, 63, 79, 0.16);
   font-size: 0.875rem;
-  z-index: 9999;
+  z-index: 2;
   min-width: 10rem;
   padding: 0.5rem 0;
   list-style: none;
-  background-color:#1d2022;
+  background-color: #1d2022;
   border-radius: 0.5rem;
   display: none;
 }
@@ -144,12 +102,44 @@ header {
   display: block;
 }
 
-/* FTIR Style */
+/* ---------- popup ---------- */
+.popup h2 {
+  font-family: "Mont";
+  text-align: center;
+  padding: 20px 0;
+  text-decoration: underline;
+}
 
-.ftir-display {
+.popup p {
+  font-family: "Roboto";
+  pointer-events: none;
+  padding: 0 3%;
+}
+
+.MuiPaper-root {
+  width: 100%;
   height: 80%;
-  width: 80%;
-  margin: 1% 10%;
-  top: 70px;
+}
+
+/* ---------- svg components ---------- */
+.component {
+  pointer-events: none;
+}
+
+.svg {
   position: absolute;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  border: #1d2022 2px solid;
+}
+
+g {
+  pointer-events: all;
+}
+
+.example-image {
+  align-self: center;
+  width: 70%;
+  height: 30%;
 }
