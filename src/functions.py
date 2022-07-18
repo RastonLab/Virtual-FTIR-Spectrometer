@@ -3,8 +3,9 @@ import math, sys
 from decimal import Decimal
 from radis import calc_spectrum
 from warnings import catch_warnings
-import numpy as np #NOTE for testing
-import matplotlib.pyplot as plt #NOTE for testing
+#NOTE for graphing
+import numpy as np 
+import matplotlib.pyplot as plt
 
 # function presents error and usage to user, then quits
 def __error(error_text):
@@ -149,7 +150,7 @@ def __MCT(data):
     return data
 
 
-def __sPlank(spectrum, temp):
+def __sPlanck(spectrum, temp):
     H = 6.62606957e-34
     C = 2.99792458e8
     K_B = 1.3806488e-23
@@ -163,7 +164,8 @@ def __sPlank(spectrum, temp):
         spectrum[x] = spectrum[x] * p
 
     return spectrum
-
+#%%
+#NOTE: Change back to process_spectrum???
 # def process_spectrum():
 if __name__=="__main__":
 
@@ -172,12 +174,20 @@ if __name__=="__main__":
         __error("  not enought command line arguments")
 
     # create variables from args
-    source = sys.argv[1] #NOTE Commented for testing
-    min_wavenum = int(sys.argv[2])
-    max_wavenum = int(sys.argv[3])
-    beamsplitter = sys.argv[4]
-    cell_window = sys.argv[5]
-    detector = sys.argv[6]
+    # source = sys.argv[1]
+    # min_wavenum = int(sys.argv[2])
+    # max_wavenum = int(sys.argv[3])
+    # beamsplitter = sys.argv[4]
+    # cell_window = sys.argv[5]
+    # detector = sys.argv[6]
+
+    #NOTE for graphing
+    source = 't'
+    min_wavenum = 4150
+    max_wavenum = 4350
+    beamsplitter = 'AR_ZnSe'
+    cell_window = 'KBr'
+    detector = 'MCT'
 
     # check if source is correct (t or g)
     if (source != 't') and (source != 'g'):
@@ -236,7 +246,7 @@ if __name__=="__main__":
                     wunit='nm',
                     molecule='CO',
                     isotope='1,2,3',
-                    pressure=0.0001,   # Bar
+                    pressure=0.01,   # Bar
                     Tgas=294.15,       # K
                     path_length=10,    # cm
                     wstep=0.5,         # cm^-1
@@ -252,7 +262,7 @@ if __name__=="__main__":
     # ----- b.) blackbody spectrum of source -----
     spectrum = __loadData('calc_spectrum-%s-%s'%(min_wavelen, max_wavelen))
     
-    spectrum = __sPlank(spectrum, source_temp)
+    spectrum = __sPlanck(spectrum, source_temp)
 
     # ----- c.) transmission spectrum of windows/beamsplitter -----
     
@@ -265,9 +275,12 @@ if __name__=="__main__":
     # Cell Windows
     if cell_window == "KBr":
         spectrum = __KBr(spectrum)
+        spectrum = __KBr(spectrum)
     elif cell_window == "CaF2":
         spectrum = __CaF2(spectrum)
+        spectrum = __CaF2(spectrum)
     elif cell_window == "ZnSe":
+        spectrum = __ZnSe(spectrum)
         spectrum = __ZnSe(spectrum)
 
     # ----- d.) detector response spectrum -----
