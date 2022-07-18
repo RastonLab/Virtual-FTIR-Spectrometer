@@ -80,68 +80,68 @@ export const toolTips = {
     'sourcebox': {},
     'aperturewheel': {
         title: 'Aperture Wheel',
-        text: 'Once again, insert Lorum ipsum'
+        text: 'This is a black wheel with apertures (holes) of different sizes. Smaller apertures allow for higher resolution at a cost of increased attenuation (blocking) of radiation.'
     },
     'flatrotatablemirror': {
         title: 'Flat Rotatable Mirror',
-        text: 'Once again, insert Lorum ipsum'
+        text: 'Gold plated flat rotatable mirror that reflects radiation from the source to the parabolic mirror.'
     },
     'globar': {
         title: 'Globar',
-        text: 'Once again, insert Lorum ipsum'
+        text: "Globar heating element which produces radiation at a temperature of 1700 K. Its spectrum is very well approximated by Planck's law. Radiation is produced by passing a relatively large current through the material, which is silicon carbide (SiC). Note, the word “globar” is a portmanteau word which blends together “glow” and “bar”."
     },
     'parabolicmirror': {
         title: 'Parabolic Mirror',
-        text: 'Once again, insert Lorum ipsum'
+        text: 'Gold plated parabolic mirror that focuses reflected radiation at the aperture wheel.'
     },
     'tungsten': {
         title: 'Tungsten',
-        text: 'Once again, insert Lorum ipsum'
+        text: 'Tungsten lamp which produces radiation at a temperature of 3100 K. Its spectrum is well approximated by Planck’s law. Radiation is produced by passing a current through a tungsten (W) filament, which is in an evacuated bulb.'
     },
     'detectionchamber': {},
     'cdflatrotatablemirror': {
         title: 'Flat Rotatable Mirror',
-        text: 'Once again, insert Lorum ipsum'
+        text: 'Gold plated flat rotatable mirror that reflects radiation from the parabolic mirror onto one of the detectors.'
     },
     'samplecompartment': {
         title: 'Sample Compartment',
-        text: 'Once again, insert Lorum ipsum'
+        text: 'This is a pyrex sample cell that has two valves for controlling gas flow into (right) and out from (right) it. There are uncoated salt windows on either end which can be either zinc selenide (ZnSe), which has good transmittance in the far-to-mid-infrared region (in particular, below 1100 cm-1), or calcium fluoride (CaF2), which has good transmittance in the mid-to-near-infrared region.'
     },
     'mct': {
         title: 'MCT',
-        text: 'Once again, insert Lorum ipsum'
+        text: 'Liquid nitrogen cooled Mercury-Cadmium-Telluride (MCT) detector with a sapphire window. This is a semiconductor detector that utilizes a photoelectric-like effect in order to convert light into electricity. The output current is proportional to the infrared intensity. It is more sensitive than InSb in the far-infrared region (below ~1500 cm-1).'
     },
     'lnsb': {
-        title: 'LNSB',
-        text: 'Once again, insert Lorum ipsum'
+        title: 'INSB',
+        text: 'Liquid nitrogen cooled Indium Antimonide (InSb) detector with a sapphire window. This is a semiconductor detector that utilizes a photoelectric-like effect in order to convert light into electricity. The output current is proportional to the infrared intensity. It is more sensitive than MCT in the mid- and near-infrared regions (above ~1500 cm-1).'
     },
     'cdflatrotatablemirror2': {
         title: 'Flat Rotatable Mirror',
-        text: 'Once again, insert Lorum ipsum'
+        text: 'Gold plated flat rotatable mirror that reflects radiation from the parabolic mirror onto one of the detectors.'
     },
     'fixedcornercube': {
         title: 'Fixed Cornder Cube',
-        text: 'Once again, insert Lorum ipsum'
+        text: 'Gold coated corner-cube. This component reflects back a return beam that is parallel to the incident beam.'
     },
     'fixedmirror': {
         title: 'Fixed Mirror',
-        text: 'Once again, insert Lorum ipsum'
+        text: 'Gold coated flat mirror.'
     },
     'laser': {
         title: 'Laser',
-        text: 'Once again, insert Lorum ipsum'
+        text: 'Helium-neon (HeNe) laser. This is a source of coherent, monochromatic light, with a wavelength of 632.8 nm.'
     },
     'movablecornercube': {
         title: 'Movable Corner Cube',
-        text: 'Once again, insert Lorum ipsum'
+        text: 'Gold coated movable corner-cube. This component reflects back a return beam that is parallel to the incident beam and moves a distance that is inversely proportional to the resolution.'
     },
     'parabolicmirrorhole': {
         title: 'Parabolic Mirror with Hole',
-        text: 'Once again, insert Lorum ipsum'
+        text: 'Gold plated parabolic mirror with centered hole for the laser beam to pass through.'
     },
     'parabolicmirrorhole2': {
         title: 'Parabolic Mirror with Hole',
-        text: 'Once again, insert Lorum ipsum'
+        text: 'Gold plated parabolic mirror with centered hole for superposition of laser and “source” beams.'
     },
     'laserbeams': {}
 }
