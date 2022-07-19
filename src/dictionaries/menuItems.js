@@ -42,6 +42,10 @@ export const menuItems = [
         link: "/experimental-setup",
       },
       {
+        label: "Experimental Setup 2",
+        link: "/experiment2",
+      },
+      {
         label: "Instrument",
         link: "/instrument",
       },
