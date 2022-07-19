@@ -21,7 +21,7 @@ import NumOfScans from "../components/inputs/NumOfScans";
 import Beamsplitter from "../components/inputs/Beamsplitter";
 import CellWindows from "../components/inputs/CellWindows";
 import Detector from "../components/inputs/Detector";
-import Source from "../components/inputs/Detector";
+import Source from "../components/inputs/Source";
 import ZeroFillling from "../components/inputs/ZeroFilling";
 
 import "../style/ExperimentalSetup.css";
