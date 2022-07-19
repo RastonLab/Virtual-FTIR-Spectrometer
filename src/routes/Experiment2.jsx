@@ -11,6 +11,7 @@ import Plotly from "../components/Plotly";
 // import Mode from "../components/inputs/Mode";
 import MaxWave from "../components/inputs/MaxWave";
 import MinWave from "../components/inputs/MinWave";
+import Wavenumber from "../components/inputs/Wavenumber";
 import Tgas from "../components/inputs/Tgas";
 import Pressure from "../components/inputs/Pressure";
 import PathLength from "../components/inputs/PathLength";
@@ -42,6 +43,7 @@ export default function ExperimentalSetup() {
   const [max_wavenumber_range, setMax_wavenumber_range] = useState(
     storedParams.max_wavenumber_range
   );
+//   const [wavenumbers, setWavenumbers] = useState([400, 12500]);
   const [tgas, setTgas] = useState(storedParams.tgas);
   const [pressure, setPressure] = useState(storedParams.pressure);
   const [path_length, setPath_length] = useState(storedParams.path_length);
@@ -70,6 +72,8 @@ export default function ExperimentalSetup() {
         {/* <MinWave val={min_wavenumber_range} setter={setMin_wavenumber_range} />
 
         <MaxWave val={max_wavenumber_range} setter={setMax_wavenumber_range} /> */}
+
+        <Wavenumber min={min_wavenumber_range} max={max_wavenumber_range} setMin={setMin_wavenumber_range} setMax={setMax_wavenumber_range} />
 
         <Tgas val={tgas} setter={setTgas} />
 
@@ -115,7 +119,7 @@ export default function ExperimentalSetup() {
           tvib,
         }}
       />
-
+    
       {progress && <div id="spinner" />}
 
       {error && (
