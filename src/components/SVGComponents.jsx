@@ -14,9 +14,6 @@ export default function SVGComponent({ part, click }) {
     setToggled(!toggled);
   };
 
-  // const bbox = ftirParts[part].getBBox();
-  // const viewBox = [bbox.x, bbox.y, bbox.width, bbox.height].join(" ");
-
   const Component = ftirParts[part];
 
   return (

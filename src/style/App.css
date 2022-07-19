@@ -120,26 +120,3 @@
   width: 100%;
   height: 80%;
 }
-
-/* ---------- svg components ---------- */
-.component {
-  pointer-events: none;
-}
-
-.svg {
-  position: absolute;
-  top: 0;
-  left: 0;
-  pointer-events: none;
-  border: #1d2022 2px solid;
-}
-
-g {
-  pointer-events: all;
-}
-
-.example-image {
-  align-self: center;
-  width: 70%;
-  height: 30%;
-}
