@@ -6,10 +6,10 @@ function CellWin ({ params, setParams }) {
       <label htmlFor="CellWindow">CellWindow</label>
       <select
         id="CellWindow"
-        defaultValue={params.database}
-        onChange={(e) => setParams({ ...params, database: e.target.value })}
+        defaultValue={params}
+        onChange={(e) => setParams(e.target.value )}
       >
-        <option value="KBr">KBr</option>
+        <option value="ZnSe">ZnSe</option>
         <option value="Caf2">CaF2</option>
       </select>
     </div>

@@ -7,8 +7,8 @@ import Fetch from "../components/Fetch";
 import Plotly from "../components/Plotly";
 
 // inputs
-import Database from "../components/inputs/Database";
-import Mode from "../components/inputs/Mode";
+// import Database from "../components/inputs/Database";
+// import Mode from "../components/inputs/Mode";
 import MaxWave from "../components/inputs/MaxWave";
 import MinWave from "../components/inputs/MinWave";
 import Tgas from "../components/inputs/Tgas";
@@ -16,6 +16,13 @@ import Pressure from "../components/inputs/Pressure";
 import PathLength from "../components/inputs/PathLength";
 import Molecule from "../components/inputs/Molecule";
 import MoleFraction from "../components/inputs/MoleFraction";
+import Resolution from "../components/inputs/Resolution";
+import NumOfScans from "../components/inputs/NumOfScans";
+import Beamsplitter from "../components/inputs/Beamsplitter";
+import CellWindows from "../components/inputs/CellWindows";
+import Detector from "../components/inputs/Detector";
+import Source from "../components/inputs/Detector";
+import ZeroFillling from "../components/inputs/ZeroFilling";
 
 import "../style/ExperimentalSetup.css";
 
@@ -25,8 +32,10 @@ export default function ExperimentalSetup() {
   const error = useSelector((state) => state.isError);
 
   // values set by user
-  const [database, setDatabase] = useState(storedParams.database);
-  const [mode, setMode] = useState(storedParams.mode);
+//   const [database, setDatabase] = useState(storedParams.database);
+  const database = "HITRAN";
+//   const [mode, setMode] = useState(storedParams.mode);
+  const mode = "transmittance_noslit";
   const [min_wavenumber_range, setMin_wavenumber_range] = useState(
     storedParams.min_wavenumber_range
   );
@@ -42,6 +51,13 @@ export default function ExperimentalSetup() {
       mole_fraction: storedParams.species[0].mole_fraction,
     },
   ]);
+  const [resolution, setResolution] = useState(storedParams.resolution);
+  const [scanNum, setScanNum] = useState(storedParams.scanNum);
+  const [beamspiltter, setBeamsplitter] = useState(storedParams.beamspiltter);
+  const [cellWindow, setCellWindow] = useState(storedParams.cell_window);
+  const [detector, setDetector] = useState(storedParams.detector);
+  const [source, setSource] = useState(storedParams.source);
+  const [zeroFilling, setZeroFilling] = useState(storedParams.zero_filling);
 
   // values not set by user, but needed for Radis App
   const [tvib] = useState(storedParams.tvib);
@@ -68,7 +84,19 @@ export default function ExperimentalSetup() {
           setter={setSpecies.mole_fraction}
         />
 
-        
+        <Resolution params={resolution} setParams={setResolution} />
+
+        <NumOfScans params={scanNum} setParams={setScanNum} />
+
+        <Beamsplitter params={beamspiltter} setParams={setBeamsplitter} />
+
+        <CellWindows params={cellWindow} setParams={setCellWindow} />
+
+        <Detector params={detector} setParams={setDetector} />
+
+        <Source params={source} setParams={setSource} />
+
+        <ZeroFillling params={zeroFilling} setParams={setZeroFilling} />
 
       </div>
 

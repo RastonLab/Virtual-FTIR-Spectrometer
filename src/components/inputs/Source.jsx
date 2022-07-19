@@ -6,8 +6,8 @@ function Source ({ params, setParams }) {
       <label htmlFor="Source">Source</label>
       <select
         id="Source"
-        defaultValue={params.database}
-        onChange={(e) => setParams({ ...params, database: e.target.value })}
+        defaultValue={params}
+        onChange={(e) => setParams(e.target.value )}
       >
         <option value="Tungsten">Tungsten</option>
         <option value="Globar">Globar</option>

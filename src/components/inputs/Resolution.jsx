@@ -1,6 +1,6 @@
 import React from "react";
 
-function Database({ params, setParams }) {
+function Resolution({ params, setParams }) {
   return (
     <div className="input">
       <label htmlFor="Resolution">Resolution</label>
@@ -19,4 +19,4 @@ function Database({ params, setParams }) {
   );
 }
 
-export default Database;
+export default Resolution;

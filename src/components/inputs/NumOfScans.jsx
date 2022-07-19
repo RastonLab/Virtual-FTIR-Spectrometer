@@ -9,11 +9,11 @@ function NumOfScans({ params, setParams }) {
       <input
         id="NumOfScans"
         type="number"
-        defaultValue={1}
+        defaultValue={params}
         min={1}
         max={1000}
         onChange={(e) =>
-          setParams({ ...params, min_wavelength_range: e.target.value })
+          setParams(e.target.value)
         }
       ></input>
     </div>

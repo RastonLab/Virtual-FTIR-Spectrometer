@@ -7,15 +7,16 @@
 /* ---------- experimental-setup ---------- */
 #experimental-setup {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
+  justify-content: center;
   font-family: "Roboto";
 }
 
 /* ---------- form ---------- */
 #form {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
   flex-wrap: wrap;
 }
@@ -63,6 +64,7 @@
 #button {
   margin: 10px;
   padding: 8px 12px;
+  height: auto;
 
   border-radius: 0.5rem;
   border-style: none;

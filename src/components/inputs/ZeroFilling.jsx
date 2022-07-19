@@ -6,8 +6,8 @@ function ZeroFilling ({ params, setParams }) {
       <label htmlFor="ZeroFilling">Zero Filling</label>
       <select
         id="Zero Filling"
-        defaultValue={params.database}
-        onChange={(e) => setParams({ ...params, database: e.target.value })}
+        defaultValue={params}
+        onChange={(e) => setParams(e.target.value)}
       >
         <option value="0">0</option>
         <option value="1">1</option>

@@ -6,8 +6,8 @@ function Detector ({ params, setParams }) {
       <label htmlFor="Detector">Detector</label>
       <select
         id="Detector"
-        defaultValue={params.database}
-        onChange={(e) => setParams({ ...params, database: e.target.value })}
+        defaultValue={params}
+        onChange={(e) => setParams(e.target.value )}
       >
         <option value="MCT">MCT</option>
         <option value="InSb">InSb</option>

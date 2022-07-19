@@ -6,8 +6,8 @@ function Beamsplitter({ params, setParams }) {
       <label htmlFor="Beamsplitter">Beamsplitter</label>
       <select
         id="molecule"
-        defaultValue={params.molecule}
-        onClick={(e) => setParams({ ...params, molecule: e.target.value })}
+        defaultValue={params}
+        onClick={(e) => setParams(e.target.value )}
       >
         <option value="ZnSe">ZnSe</option>
         <option value="CaF2">CaF2</option>
