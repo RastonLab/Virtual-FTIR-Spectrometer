@@ -1,17 +1,20 @@
 import React from "react";
+import { FormControlLabel, Switch } from "@mui/material";
+
 
 function CellWin ({ params, setParams }) {
   return (
     <div className="input">
-      <label htmlFor="CellWindow">CellWindow</label>
-      <select
-        id="CellWindow"
-        defaultValue={params}
-        onChange={(e) => setParams(e.target.value )}
-      >
-        <option value="ZnSe">ZnSe</option>
-        <option value="Caf2">CaF2</option>
-      </select>
+      <label>Cell Window</label>
+      <FormControlLabel
+        control={
+          <Switch 
+          color="secondary"
+          onClick={() => {params === "ZnSe" ? setParams("CaF2") : setParams("ZnSe")}}
+          />
+        }
+        label={params} 
+      />
     </div>
   );
 }

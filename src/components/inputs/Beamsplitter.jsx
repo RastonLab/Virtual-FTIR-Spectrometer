@@ -1,17 +1,19 @@
+import { FormControlLabel, Switch } from "@mui/material";
 import React from "react";
 
 function Beamsplitter({ params, setParams }) {
   return (
     <div className="input">
-      <label htmlFor="Beamsplitter">Beamsplitter</label>
-      <select
-        id="molecule"
-        defaultValue={params}
-        onClick={(e) => setParams(e.target.value )}
-      >
-        <option value="ZnSe">AR_ZnSe</option>
-        <option value="CaF2">AR_CaF2</option>
-      </select>
+      <label>Beamsplitter</label>
+      <FormControlLabel
+        control={
+          <Switch 
+          color="secondary"
+          onClick={() => {params === "AR_ZnSe" ? setParams("AR_CaF2") : setParams("AR_ZnSe")}}
+          />
+        }
+        label={params} 
+      />
     </div>
   );
 }

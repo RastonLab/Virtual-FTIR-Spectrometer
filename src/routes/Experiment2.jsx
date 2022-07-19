@@ -54,8 +54,8 @@ export default function ExperimentalSetup() {
     },
   ]);
   const [resolution, setResolution] = useState(storedParams.resolution);
-  const [scanNum, setScanNum] = useState(storedParams.scanNum);
-  const [beamspiltter, setBeamsplitter] = useState(storedParams.beamspiltter);
+  const [scanNum, setScanNum] = useState(storedParams.scan_num);
+  const [beamspiltter, setBeamsplitter] = useState(storedParams.beamsplitter);
   const [cellWindow, setCellWindow] = useState(storedParams.cell_window);
   const [detector, setDetector] = useState(storedParams.detector);
   const [source, setSource] = useState(storedParams.source);
