@@ -7,14 +7,15 @@ import App from "./App";
 import InstrumentWindow from "./routes/InstrumentWindow";
 import ExperimentalSetup from "./routes/ExperimentalSetup";
 import SpectrumWindow from "./routes/SpectrumWindow";
+import NotFound from "./components/NotFound";
+import LandingPage from "./routes/LandingPage";
 
-import "./style/index.css";
+import "./index.css";
 import store from "./redux/store";
 
 // -------------------- sentry.io tracking --------------------
 import * as Sentry from "@sentry/react";
 import { BrowserTracing } from "@sentry/tracing";
-import NotFound from "./components/NotFound";
 Sentry.init({
   dsn: "https://e7a614a92d3f4f929ae8e3de0fcebff7@o1310725.ingest.sentry.io/6558449",
   integrations: [new BrowserTracing()],
@@ -33,6 +34,7 @@ root.render(
       <BrowserRouter basename="/Virtual-FTIR-Spectrometer">
         <Routes>
           <Route path="/" element={<App />}>
+            <Route index element={<LandingPage />} />
             <Route path="instrument" element={<InstrumentWindow />} />
             <Route path="experimental-setup" element={<ExperimentalSetup />} />
             <Route path="spectrum" element={<SpectrumWindow />} />
