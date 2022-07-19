@@ -51,11 +51,9 @@ export default function ExperimentalSetup() {
   return (
     <div id="experimental-setup">
       <div id="form">
-        <Mode val={mode} setter={setMode} />
+        {/* <MinWave val={min_wavenumber_range} setter={setMin_wavenumber_range} />
 
-        <MinWave val={min_wavenumber_range} setter={setMin_wavenumber_range} />
-
-        <MaxWave val={max_wavenumber_range} setter={setMax_wavenumber_range} />
+        <MaxWave val={max_wavenumber_range} setter={setMax_wavenumber_range} /> */}
 
         <Tgas val={tgas} setter={setTgas} />
 
@@ -69,6 +67,9 @@ export default function ExperimentalSetup() {
           val={species[0].mole_fraction}
           setter={setSpecies.mole_fraction}
         />
+
+        
+
       </div>
 
       <Fetch
