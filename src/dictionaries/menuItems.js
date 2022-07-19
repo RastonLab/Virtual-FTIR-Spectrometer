@@ -1,3 +1,4 @@
+import { Save } from "../redux/save";
 export const menuItems = [
   {
     label: "File",
@@ -7,6 +8,7 @@ export const menuItems = [
       },
       {
         label: "Save As",
+        action: Save
       },
       {
         label: "Print",

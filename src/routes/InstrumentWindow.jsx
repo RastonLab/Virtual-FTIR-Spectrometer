@@ -1,38 +1,38 @@
 import React from "react";
+import {ReactComponent as Main} from "../components/svgs/ftir-main.svg"
+import { Dialog } from "@mui/material";
+import { imgSource, toolTips } from "../dictionaries/SVGLibrary";
+import { useState } from "react";
 
-import SVGComponent from "../components/SVGComponents";
-import Electronics from "../components/Electronics";
 
 import "../style/InstrumentWindow.css";
 
 function InstrumentWindow() {
+
+  const [toggled, setToggled] = useState(false);
+  const [element, setElement] = useState(null);
+
+  const handleClick = (event) => {
+    setToggled(!toggled);
+
+    if (event.target.parentElement.id === "instrument-window") {
+      setElement(null);
+    } else {
+      setElement(event.target.parentElement.id);
+    }
+  };
+
   return (
     <div id="instrument-window">
-      <div id="instument">
-        <SVGComponent part="laserbeams" click={() => {}} />
-        <SVGComponent part="sourcebox" click={() => {}} />
-        <SVGComponent part="aperturewheel" />
-        <SVGComponent part="flatrotatablemirror" />
-        <SVGComponent part="globar" />
-        <SVGComponent part="parabolicmirror" />
-        <SVGComponent part="tungsten" />
-        <SVGComponent part="detectionchamber" click={() => {}} />
-        <SVGComponent part="cdflatrotatablemirror" />
-        <SVGComponent part="samplecompartment" />
-        <SVGComponent part="mct" />
-        <SVGComponent part="lnsb" />
-        <SVGComponent part="cdflatrotatablemirror2" />
-        <SVGComponent part="fixedcornercube" />
-        <SVGComponent part="fixedmirror" />
-        <SVGComponent part="laser" />
-        <SVGComponent part="movablecornercube" />
-        <SVGComponent part="parabolicmirrorhole" />
-        <SVGComponent part="parabolicmirrorhole2" />
-      </div>
+      <Main id="main" onClick={handleClick} />
 
-      <div id="table">
-        <Electronics />
-      </div>
+      {element && (
+        <Dialog className="popup" onClose={handleClick} open={toggled}>
+          <h2>{toolTips[element].title}</h2>
+          <img src={imgSource[element]} className="example-image" alt="" />
+          <p>{toolTips[element].text}</p>
+        </Dialog>
+      )}
     </div>
   );
 }
