@@ -94,8 +94,10 @@ def __sapphire(data):
 
     for x in data:
         # Gets accurate graph with numpy float128 but throws runtime overflow error
-        datapoint = Decimal(0.78928) / Decimal(1 + (11.9544 / (x / 1000)) ** -12.07226 ) ** (Decimal(6903.57039))
-        data[x] = datapoint * Decimal(data[x])
+        # datapoint = Decimal(0.78928) / Decimal(1 + (11.9544 / (x / 1000)) ** -12.07226 ) ** (Decimal(6903.57039))
+        datapoint = np.float128(0.78928) / np.float128(1 + (11.9544 / (x / 1000)) ** -12.07226 ) ** (np.float128(6903.57039))
+        dp2 = datapoint * np.float128(data[x])
+        data[x] = dp2
     
     return data
 
@@ -133,7 +135,7 @@ def __InSb(data):
     for x in data:
         x_um = x /1000
         datapoint = 1.97163E11 * (1 / (1 + math.exp( -(x_um- 5.3939) / 1.6624))) * (1 - 1 / (1 + math.exp( -(x_um- 5.3939) / 0.11925))) + (3.3e10) / (2.44977 * math.sqrt(math.pi / (4 * math.log(2)))) * math.exp(-4 * math.log(2) * ((x_um- 5) ** 2) / (2.44977 ** 2))
-        data[x] = Decimal(datapoint) * data[x]
+        data[x] = datapoint * data[x]
     
     return data
 
@@ -145,7 +147,7 @@ def __MCT(data):
     for x in data:
         x_um = x / 1000
         datapoint = (1.98748 * (10 ** 9)) + (2.10252 * (10 ** 10)) * (1 / (1 + math.exp( -(x_um - 20.15819) / 5.73688))) * (1 - 1 / (1 + math.exp( -(x_um - 20.15819) / 1.11659))) + (1.3 * (10 ** 9)) / (2 * math.sqrt(math.pi / (4 * math.log(2)))) * math.exp(-4 * math.log(2) * ((x_um - 18.6) ** 2) / (2 ** 2))
-        data[x] = Decimal(datapoint) * data[x]
+        data[x] = datapoint * data[x]
    
     return data
 
@@ -170,8 +172,8 @@ def __sPlanck(spectrum, temp):
 if __name__=="__main__":
 
     # check number of args
-    if len(sys.argv) < 7:
-        __error("  not enought command line arguments")
+    # if len(sys.argv) < 7:
+    #     __error("  not enought command line arguments")
 
     # create variables from args
     # source = sys.argv[1]
@@ -183,10 +185,10 @@ if __name__=="__main__":
 
     #NOTE for graphing
     source = 't'
-    min_wavenum = 4150
-    max_wavenum = 4350
+    min_wavenum = 7000
+    max_wavenum = 12500
     beamsplitter = 'AR_ZnSe'
-    cell_window = 'KBr'
+    cell_window = 'CaF2'
     detector = 'MCT'
 
     # check if source is correct (t or g)
@@ -229,8 +231,8 @@ if __name__=="__main__":
             __error(" given beamsplitter option is not a vaild option\n Valid Options:  AR_ZnSe  AR_CaF2")
 
     # check if cell_window is vaild
-    if cell_window != "KBr" and cell_window != "CaF2" and cell_window != "ZnSe":
-            __error(" given cell window option is not a vaild option\n Valid Options:  KBr  CaF2  ZnSe")
+    if cell_window != "CaF2" and cell_window != "ZnSe":
+            __error(" given cell window option is not a vaild option\n Valid Options:  CaF2  ZnSe")
 
     # check if detector is vaild
     if detector != "MCT" and detector != "InSb":
@@ -273,10 +275,7 @@ if __name__=="__main__":
         spectrum = __AR_CaF2(spectrum)
 
     # Cell Windows
-    if cell_window == "KBr":
-        spectrum = __KBr(spectrum)
-        spectrum = __KBr(spectrum)
-    elif cell_window == "CaF2":
+    if cell_window == "CaF2":
         spectrum = __CaF2(spectrum)
         spectrum = __CaF2(spectrum)
     elif cell_window == "ZnSe":
@@ -284,11 +283,13 @@ if __name__=="__main__":
         spectrum = __ZnSe(spectrum)
 
     # ----- d.) detector response spectrum -----
-    spectrum = __sapphire(spectrum)
+
 
     if detector == "MCT":
+        spectrum = __ZnSe(spectrum)
         spectrum = __MCT(spectrum)
     elif detector == "InSb":
+        spectrum = __sapphire(spectrum)
         spectrum = __InSb(spectrum)
 
     __exportData(spectrum, 'calc_spectrum-%s-%s-processed'%(min_wavelen, max_wavelen))
