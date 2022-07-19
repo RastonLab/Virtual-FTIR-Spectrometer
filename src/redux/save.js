@@ -16,5 +16,4 @@ export const Save = () => {
     const blob = new Blob(new Array([newData]), {type : 'application/csv'})
     // FileSaver.saveAs(blob, `${params.min_wavenumber_range}-${params.max_wavenumber_range}-spectrum.csv`)
     FileSaver.saveAs(blob, "test.csv")
-    // NOTE Chome automatically blocks multiple downloads and will only download the first call unless that feature is disabled
-}
+}   
