@@ -43,7 +43,7 @@ export default function ExperimentalSetup() {
   const [max_wavenumber_range, setMax_wavenumber_range] = useState(
     storedParams.max_wavenumber_range
   );
-//   const [wavenumbers, setWavenumbers] = useState([400, 12500]);
+  const [wavenumbers, setWavenumbers] = useState([400, 12500]);
   const [tgas, setTgas] = useState(storedParams.tgas);
   const [pressure, setPressure] = useState(storedParams.pressure);
   const [path_length, setPath_length] = useState(storedParams.path_length);
@@ -73,7 +73,9 @@ export default function ExperimentalSetup() {
 
         <MaxWave val={max_wavenumber_range} setter={setMax_wavenumber_range} /> */}
 
-        <Wavenumber min={min_wavenumber_range} max={max_wavenumber_range} setMin={setMin_wavenumber_range} setMax={setMax_wavenumber_range} />
+        {/* <Wavenumber min={min_wavenumber_range} max={max_wavenumber_range} setMin={setMin_wavenumber_range} setMax={setMax_wavenumber_range} /> */}
+
+        <Wavenumber />
 
         <Tgas val={tgas} setter={setTgas} />
 

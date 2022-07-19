@@ -9,8 +9,8 @@ function Beamsplitter({ params, setParams }) {
         defaultValue={params}
         onClick={(e) => setParams(e.target.value )}
       >
-        <option value="ZnSe">ZnSe</option>
-        <option value="CaF2">CaF2</option>
+        <option value="ZnSe">AR_ZnSe</option>
+        <option value="CaF2">AR_CaF2</option>
       </select>
     </div>
   );
