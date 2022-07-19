@@ -73,9 +73,9 @@ export default function ExperimentalSetup() {
 
         <MaxWave val={max_wavenumber_range} setter={setMax_wavenumber_range} /> */}
 
-        {/* <Wavenumber min={min_wavenumber_range} max={max_wavenumber_range} setMin={setMin_wavenumber_range} setMax={setMax_wavenumber_range} /> */}
+        <Wavenumber min={min_wavenumber_range} max={max_wavenumber_range} waves={wavenumbers} setMin={setMin_wavenumber_range} setMax={setMax_wavenumber_range} />
 
-        <Wavenumber />
+        {/* <Wavenumber /> */}
 
         <Tgas val={tgas} setter={setTgas} />
 
