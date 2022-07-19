@@ -1,0 +1,19 @@
+#not-found {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#not-found h1 {
+  font-size: 6em;
+  font-family: "Roboto";
+  color: black;
+  margin: 0.5em 0;
+}
+
+#not-found p {
+  font-size: 2em;
+  font-family: "Montserrat";
+  color: black;
+}

@@ -1,8 +1,68 @@
 /* ---------- instrument-window ---------- */
 #instrument-window {
+  display: flex;
+}
+
+#instument {
+  display: flex;
   height: 80%;
   width: 80%;
   margin: 1% 10%;
   top: 70px;
   position: absolute;
+}
+
+/* ---------- svg components ---------- */
+.component {
+  pointer-events: none;
+}
+
+.svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  border: #1d2022 2px solid;
+}
+
+g {
+  pointer-events: all;
+}
+
+.example-image {
+  align-self: center;
+  width: 70%;
+  height: 30%;
+}
+
+/* ---------- electronics ---------- */
+.electronics {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  border: 1px solid black;
+  padding: 5px;
+  margin: 5px;
+}
+
+.electronics-top {
+  display: grid;
+  grid-template-columns: auto auto;
+  text-align: center;
+}
+
+.electronics-bottom {
+  display: grid;
+  grid-template-columns: auto auto;
+  text-align: center;
+}
+
+.grid {
+  margin: 5px;
+}
+
+input {
+  display: flex;
+  flex-direction: row;
 }

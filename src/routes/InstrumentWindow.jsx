@@ -4,6 +4,7 @@ import { Dialog } from "@mui/material";
 import { imgSource, toolTips } from "../dictionaries/SVGLibrary";
 import { useState } from "react";
 
+
 import "../style/InstrumentWindow.css";
 
 function InstrumentWindow() {
