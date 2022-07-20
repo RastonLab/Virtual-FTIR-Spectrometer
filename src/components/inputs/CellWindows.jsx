@@ -11,6 +11,7 @@ function CellWin ({ params, setParams }) {
         control={
           <Switch 
           color="secondary"
+          checked={params === "CaF2"}
           onClick={() => {params === "ZnSe" ? setParams("CaF2") : setParams("ZnSe")}}
           />
         }

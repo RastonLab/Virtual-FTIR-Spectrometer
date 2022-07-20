@@ -11,6 +11,7 @@ function Detector ({ params, setParams }) {
         control={
           <Switch 
           color="secondary"
+          checked={params === "InSb"}
           onClick={() => {params === "MCT" ? setParams("InSb") : setParams("MCT")}}
           />
         }

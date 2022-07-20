@@ -11,6 +11,7 @@ function Source ({ params, setParams }) {
         control={
           <Switch 
           color="secondary"
+          checked={params === "Tungsten"}
           onClick={() => {params === "Globar" ? setParams("Tungsten") : setParams("Globar")}}
           />
         }

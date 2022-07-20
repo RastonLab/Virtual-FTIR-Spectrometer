@@ -10,6 +10,7 @@ function Beamsplitter({ params, setParams }) {
         control={
           <Switch 
           color="secondary"
+          checked={params === "AR_CaF2"}
           onClick={() => {params === "AR_ZnSe" ? setParams("AR_CaF2") : setParams("AR_ZnSe")}}
           />
         }
