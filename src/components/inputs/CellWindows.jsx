@@ -1,5 +1,5 @@
 import React from "react";
-import { FormControlLabel, Switch } from "@mui/material";
+import { CustomSwitch } from "./CustomSwitch";
 
 
 function CellWin ({ params, setParams }) {
@@ -7,15 +7,11 @@ function CellWin ({ params, setParams }) {
     <div className="input switch">
       <label className="switch-label">Cell Window</label>
       <label>ZnSe</label>
-      <FormControlLabel
-        control={
-          <Switch 
-          color="secondary"
-          checked={params === "CaF2"}
-          onClick={() => {params === "ZnSe" ? setParams("CaF2") : setParams("ZnSe")}}
-          />
-        }
-      />
+        <CustomSwitch 
+        color="secondary"
+        checked={params === "CaF2"}
+        onClick={() => {params === "ZnSe" ? setParams("CaF2") : setParams("ZnSe")}}
+        />
       <label>CaF<sub>2</sub></label>
     </div>
   );

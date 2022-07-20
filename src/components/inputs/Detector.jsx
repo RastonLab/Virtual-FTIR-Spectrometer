@@ -1,5 +1,5 @@
 import React from "react";
-import { FormControlLabel, Switch } from "@mui/material";
+import { CustomSwitch } from "./CustomSwitch";
 
 
 function Detector ({ params, setParams }) {
@@ -7,15 +7,11 @@ function Detector ({ params, setParams }) {
     <div className="input switch">
       <label className="switch-label">Detector</label>
       <label>MCT</label>
-      <FormControlLabel
-        control={
-          <Switch 
-          color="secondary"
-          checked={params === "InSb"}
-          onClick={() => {params === "MCT" ? setParams("InSb") : setParams("MCT")}}
-          />
-        }
-      />
+        <CustomSwitch 
+        color="secondary"
+        checked={params === "InSb"}
+        onClick={() => {params === "MCT" ? setParams("InSb") : setParams("MCT")}}
+        />
       <label>InSb</label>
     </div>
   );
