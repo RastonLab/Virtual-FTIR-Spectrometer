@@ -27,6 +27,7 @@ export default function Pressure({ val, setter }) {
         value={val}
         size="small"
         onChange={(e) => setter(e.target.value)}
+        onBlur={handleBlur}
         inputProps={{
           step: 0.0001,
           min: 0,

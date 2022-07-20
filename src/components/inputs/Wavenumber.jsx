@@ -15,6 +15,17 @@ export default function Wavenumber(min, max, setMin, setMax) {
         setWavenumbers([low, high])
     }   
 
+    const handleBlur = () => {
+        if (wavenumbers[0] < 400) {
+            setMin(400)
+        } else if (wavenumbers[0] > wavenumbers[1]) {
+            setMin(wavenumbers[1])
+        } else if (wavenumbers[1] > 12500) {
+            setMax(125000)
+        }
+        setWavenumbers([Number(min), Number(max)])
+    }
+
     return (
         <div className="input">
             <label>Wavenumber cm<sup>-1</sup></label>
@@ -32,7 +43,7 @@ export default function Wavenumber(min, max, setMin, setMax) {
             <Input
                 value={wavenumbers[0]}
                 onChange={(e) => handleInputChange(Number(e.target.value), wavenumbers[1])}
-                onBlur={() => {}}
+                onBlur={handleBlur}
                 min={400}
                 max={wavenumbers[1]}
             />
@@ -40,7 +51,7 @@ export default function Wavenumber(min, max, setMin, setMax) {
             <Input
                 value={wavenumbers[1]}
                 onChange={(e) => handleInputChange(wavenumbers[0], Number(e.target.value))}
-                onBlur={() => {}}
+                onBlur={handleBlur}
                 min={wavenumbers[0]}
                 max={12500}
                 
