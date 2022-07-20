@@ -69,11 +69,10 @@ export default function ExperimentalSetup() {
   return (
     <div id="experimental-setup">
       <div id="form">
-        {/* <MinWave val={min_wavenumber_range} setter={setMin_wavenumber_range} />
-
-        <MaxWave val={max_wavenumber_range} setter={setMax_wavenumber_range} /> */}
 
         <Wavenumber min={min_wavenumber_range} max={max_wavenumber_range} setMin={setMin_wavenumber_range} setMax={setMax_wavenumber_range} />
+
+        <NumOfScans params={scanNum} setParams={setScanNum} />
 
         <Pressure val={pressure} setter={setPressure} />
 
@@ -81,7 +80,7 @@ export default function ExperimentalSetup() {
 
         <Resolution params={resolution} setParams={setResolution} />
 
-        <NumOfScans params={scanNum} setParams={setScanNum} />
+        <ZeroFillling params={zeroFilling} setParams={setZeroFilling} />
 
         <Beamsplitter params={beamspiltter} setParams={setBeamsplitter} />
 
@@ -90,8 +89,6 @@ export default function ExperimentalSetup() {
         <Detector params={detector} setParams={setDetector} />
 
         <Source params={source} setParams={setSource} />
-
-        <ZeroFillling params={zeroFilling} setParams={setZeroFilling} />
 
       </div>
 
