@@ -4,8 +4,9 @@ import { FormControlLabel, Switch } from "@mui/material";
 
 function CellWin ({ params, setParams }) {
   return (
-    <div className="input">
-      <label>Cell Window</label>
+    <div className="input switch">
+      <label className="switch-label">Cell Window</label>
+      <label>ZnSe</label>
       <FormControlLabel
         control={
           <Switch 
@@ -13,8 +14,8 @@ function CellWin ({ params, setParams }) {
           onClick={() => {params === "ZnSe" ? setParams("CaF2") : setParams("ZnSe")}}
           />
         }
-        label={params} 
       />
+      <label>CaF<sub>2</sub></label>
     </div>
   );
 }

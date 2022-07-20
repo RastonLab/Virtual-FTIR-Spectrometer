@@ -69,27 +69,28 @@ export default function ExperimentalSetup() {
   return (
     <div id="experimental-setup">
       <div id="form">
+        <div className="col">
+            <Wavenumber min={min_wavenumber_range} max={max_wavenumber_range} setMin={setMin_wavenumber_range} setMax={setMax_wavenumber_range} />
 
-        <Wavenumber min={min_wavenumber_range} max={max_wavenumber_range} setMin={setMin_wavenumber_range} setMax={setMax_wavenumber_range} />
+            <NumOfScans params={scanNum} setParams={setScanNum} />
 
-        <NumOfScans params={scanNum} setParams={setScanNum} />
+            <Pressure val={pressure} setter={setPressure} />
 
-        <Pressure val={pressure} setter={setPressure} />
+            <Molecule val={species[0].molecule} setter={setSpecies.molecule} />
 
-        <Molecule val={species[0].molecule} setter={setSpecies.molecule} />
+            <Resolution params={resolution} setParams={setResolution} />
 
-        <Resolution params={resolution} setParams={setResolution} />
+            <ZeroFillling params={zeroFilling} setParams={setZeroFilling} />
+        </div>
+        <div className="col">
+            <Beamsplitter className="switch" params={beamspiltter} setParams={setBeamsplitter} />
 
-        <ZeroFillling params={zeroFilling} setParams={setZeroFilling} />
+            <CellWindows className="switch" params={cellWindow} setParams={setCellWindow} />
 
-        <Beamsplitter params={beamspiltter} setParams={setBeamsplitter} />
+            <Detector className="switch" params={detector} setParams={setDetector} />
 
-        <CellWindows params={cellWindow} setParams={setCellWindow} />
-
-        <Detector params={detector} setParams={setDetector} />
-
-        <Source params={source} setParams={setSource} />
-
+            <Source className="switch" params={source} setParams={setSource} />
+        </div>
       </div>
 
       <Fetch

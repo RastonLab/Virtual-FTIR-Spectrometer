@@ -4,8 +4,9 @@ import { FormControlLabel, Switch } from "@mui/material";
 
 function Source ({ params, setParams }) {
   return (
-    <div className="input">
-      <label>Source</label>
+    <div className="input switch">
+      <label className="switch-label">Source</label>
+      <label>Globar</label>
       <FormControlLabel
         control={
           <Switch 
@@ -13,8 +14,8 @@ function Source ({ params, setParams }) {
           onClick={() => {params === "Globar" ? setParams("Tungsten") : setParams("Globar")}}
           />
         }
-        label={params} 
       />
+      <label>Tungsten</label>
     </div>
   );
 }

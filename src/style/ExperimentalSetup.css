@@ -16,9 +16,33 @@
 /* ---------- form ---------- */
 #form {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: center;
   flex-wrap: wrap;
+}
+
+.col {
+  padding: 2rem 2rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.switch {
+  display: flex;
+  flex-direction: row !important;
+  align-items: center;
+  justify-content: center;
+}
+
+.switch label {
+  text-align: center;
+  margin: 0 !important;
+  width: 100px;
+  justify-content: center;
+}
+
+.switch-label {
+  text-align: left !important;
 }
 
 .input {

@@ -4,9 +4,9 @@ import React from "react";
 function Beamsplitter({ params, setParams }) {
   return (
     <div className="input switch">
-      <label>Beamsplitter</label>
-      <label className="switch-labels">AR_ZnSe</label>
-      <FormControlLabel className="switch-labels"
+      <label className="switch-label">Beamsplitter</label>
+      <label>AR_ZnSe</label>
+      <FormControlLabel
         control={
           <Switch 
           color="secondary"
@@ -14,7 +14,7 @@ function Beamsplitter({ params, setParams }) {
           />
         }
       />
-      <label className="switch-labels">AR_CaF2</label>
+      <label>AR_CaF2</label>
     </div>
   );
 }
