@@ -90,24 +90,26 @@ export default function ExperimentalSetup() {
             <Detector className="switch" params={detector} setParams={setDetector} />
 
             <Source className="switch" params={source} setParams={setSource} />
+            <div className="fetch-zone">
+            <Fetch
+                params={{
+                database,
+                max_wavenumber_range,
+                min_wavenumber_range,
+                mode,
+                path_length,
+                pressure,
+                simulate_slit,
+                species,
+                tgas,
+                trot,
+                tvib,
+                }}
+            />
+            </div>
         </div>
       </div>
 
-      <Fetch
-        params={{
-          database,
-          max_wavenumber_range,
-          min_wavenumber_range,
-          mode,
-          path_length,
-          pressure,
-          simulate_slit,
-          species,
-          tgas,
-          trot,
-          tvib,
-        }}
-      />
     
       {progress && <div id="spinner" />}
 

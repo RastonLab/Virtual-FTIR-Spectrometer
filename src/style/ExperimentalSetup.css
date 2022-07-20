@@ -27,6 +27,11 @@
   flex-direction: column;
 }
 
+.fetch-zone {
+  margin: auto;
+}
+
+/* -------- Switch Style -------- */
 .switch {
   display: flex;
   flex-direction: row !important;
