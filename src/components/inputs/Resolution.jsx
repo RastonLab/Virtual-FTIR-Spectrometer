@@ -1,4 +1,4 @@
-import { MenuItem, Select, InputLabel} from "@mui/material";
+import { MenuItem, Select } from "@mui/material";
 import React from "react";
 
 function Resolution({ params, setParams }) {

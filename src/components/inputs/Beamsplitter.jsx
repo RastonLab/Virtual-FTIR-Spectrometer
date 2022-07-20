@@ -3,17 +3,18 @@ import React from "react";
 
 function Beamsplitter({ params, setParams }) {
   return (
-    <div className="input">
+    <div className="input switch">
       <label>Beamsplitter</label>
-      <FormControlLabel
+      <label className="switch-labels">AR_ZnSe</label>
+      <FormControlLabel className="switch-labels"
         control={
           <Switch 
           color="secondary"
           onClick={() => {params === "AR_ZnSe" ? setParams("AR_CaF2") : setParams("AR_ZnSe")}}
           />
         }
-        label={params} 
       />
+      <label className="switch-labels">AR_CaF2</label>
     </div>
   );
 }

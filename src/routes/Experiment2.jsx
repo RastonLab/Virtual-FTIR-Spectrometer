@@ -9,14 +9,14 @@ import Plotly from "../components/Plotly";
 // inputs
 // import Database from "../components/inputs/Database";
 // import Mode from "../components/inputs/Mode";
-import MaxWave from "../components/inputs/MaxWave";
-import MinWave from "../components/inputs/MinWave";
+// import MaxWave from "../components/inputs/MaxWave";
+// import MinWave from "../components/inputs/MinWave";
 import Wavenumber from "../components/inputs/Wavenumber";
-import Tgas from "../components/inputs/Tgas";
+// import Tgas from "../components/inputs/Tgas";
 import Pressure from "../components/inputs/Pressure";
-import PathLength from "../components/inputs/PathLength";
+// import PathLength from "../components/inputs/PathLength";
 import Molecule from "../components/inputs/Molecule";
-import MoleFraction from "../components/inputs/MoleFraction";
+// import MoleFraction from "../components/inputs/MoleFraction";
 import Resolution from "../components/inputs/Resolution";
 import NumOfScans from "../components/inputs/NumOfScans";
 import Beamsplitter from "../components/inputs/Beamsplitter";
@@ -43,7 +43,7 @@ export default function ExperimentalSetup() {
   const [max_wavenumber_range, setMax_wavenumber_range] = useState(
     storedParams.max_wavenumber_range
   );
-  const [wavenumbers, setWavenumbers] = useState([400, 12500]);
+//   const [wavenumbers, setWavenumbers] = useState([400, 12500]);
   const [tgas, setTgas] = useState(storedParams.tgas);
   const [pressure, setPressure] = useState(storedParams.pressure);
   const [path_length, setPath_length] = useState(storedParams.path_length);
@@ -73,22 +73,11 @@ export default function ExperimentalSetup() {
 
         <MaxWave val={max_wavenumber_range} setter={setMax_wavenumber_range} /> */}
 
-        <Wavenumber min={min_wavenumber_range} max={max_wavenumber_range} waves={wavenumbers} setMin={setMin_wavenumber_range} setMax={setMax_wavenumber_range} />
-
-        {/* <Wavenumber /> */}
-
-        <Tgas val={tgas} setter={setTgas} />
+        <Wavenumber min={min_wavenumber_range} max={max_wavenumber_range} setMin={setMin_wavenumber_range} setMax={setMax_wavenumber_range} />
 
         <Pressure val={pressure} setter={setPressure} />
 
-        <PathLength val={path_length} setter={setPath_length} />
-
         <Molecule val={species[0].molecule} setter={setSpecies.molecule} />
-
-        <MoleFraction
-          val={species[0].mole_fraction}
-          setter={setSpecies.mole_fraction}
-        />
 
         <Resolution params={resolution} setParams={setResolution} />
 
