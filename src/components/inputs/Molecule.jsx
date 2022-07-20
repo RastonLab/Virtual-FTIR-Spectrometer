@@ -50,7 +50,7 @@ export default function Molecule({ val, setter }) {
         <MenuItem value="NO">NO</MenuItem>
         <MenuItem value="NO+">NO+</MenuItem>
         <MenuItem value="NO2">NO<sub>2</sub></MenuItem>
-        <MenuItem value="O"></MenuItem>
+        <MenuItem value="O">O</MenuItem>
         <MenuItem value="O2">O<sub>2</sub></MenuItem>
         <MenuItem value="O3">O<sub>3</sub></MenuItem>
         <MenuItem value="OCS">OCS</MenuItem>
