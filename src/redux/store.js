@@ -5,7 +5,7 @@ import { Action } from "./actions";
 
 const initialState = {
   params: {
-    species: [{ molecule: "CO", mole_fraction: 1 }],
+    species: [{ molecule: "CO2", mole_fraction: 1 }],
     min_wavenumber_range: 1900,
     max_wavenumber_range: 2300,
     tgas: 294.15,
