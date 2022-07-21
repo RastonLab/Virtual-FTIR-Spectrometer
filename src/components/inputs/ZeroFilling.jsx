@@ -7,7 +7,7 @@ function ZeroFilling ({ params, setParams }) {
       <label htmlFor="ZeroFilling">Zero Filling</label>
       <Select
         id="Zero Filling"
-        defaultValue={params}
+        value={params}
         onChange={(e) => setParams(e.target.value)}
       >        
         <MenuItem value="0">0</MenuItem>

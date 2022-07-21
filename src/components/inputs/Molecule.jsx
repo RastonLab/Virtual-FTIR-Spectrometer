@@ -7,7 +7,7 @@ export default function Molecule({ val, setter }) {
       <label htmlFor="molecule">HITRAN 2020 Molecule</label>
       <Select
         id="molecule"
-        defaultValue={val}
+        value={val}
         onChange={(e) => setter(e.target.value)}
       >
         <MenuItem value="C2H2">C<sub>2</sub>H<sub>2</sub></MenuItem>
