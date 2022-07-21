@@ -1,13 +1,17 @@
 import { Save } from "../redux/save";
+import { Open } from "../redux/open";
 export const menuItems = [
   {
     label: "File",
     submenu: [
       {
         label: "Open",
+        button: true,
+        title: "Please Select a File", 
+        text: <Open />
       },
       {
-        label: "Save As",
+        label: "Save",
         action: Save
       },
       {
@@ -72,6 +76,7 @@ export const menuItems = [
           <p>
             Insert Lorum ipsum text
             <br />
+            Format test
           </p>
         ),
       },
