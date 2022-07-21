@@ -1,5 +1,5 @@
 import { styled } from "@mui/material";
-import { purple, pink, blue } from "@mui/material/colors";
+import { pink, blue } from "@mui/material/colors";
 import { Switch } from "@mui/material";
 
 export const CustomSwitch = styled(Switch)(({ theme }) => ({
