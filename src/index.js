@@ -6,6 +6,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import App from "./App";
 import InstrumentWindow from "./routes/InstrumentWindow";
 import ExperimentalSetup from "./routes/ExperimentalSetup";
+import Experiment2 from "./routes/Experiment2";
 import SpectrumWindow from "./routes/SpectrumWindow";
 import NotFound from "./components/NotFound";
 import LandingPage from "./routes/LandingPage";
@@ -37,6 +38,7 @@ root.render(
             <Route index element={<LandingPage />} />
             <Route path="instrument" element={<InstrumentWindow />} />
             <Route path="experimental-setup" element={<ExperimentalSetup />} />
+            <Route path="experiment2" element={<Experiment2 />} />
             <Route path="spectrum" element={<SpectrumWindow />} />
             <Route path="*" element={<NotFound />} />
           </Route>
