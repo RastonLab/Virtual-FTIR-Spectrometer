@@ -25,7 +25,7 @@ export default function Popup({ label, title, text }) {
         open={open}
       >
         <h2>{title}</h2>
-        <p>{text}</p>
+        {text}
       </Dialog>
     </div>
   );
