@@ -22,7 +22,7 @@ const initialState = {
     cell_window: "CaF2",
     detector: "InSb",
     source: "Globar",
-    zero_filling: "0"
+    zero_filling: "0",
   },
 
   data: null,

@@ -7,7 +7,7 @@ export default function MaxWave({ val, setter }) {
         Wavenumber MAX range (cm<sup>-1</sup>)
       </label>
       <input
-        id="max-wave"
+        id="max-wav e"
         type="number"
         defaultValue={val}
         min={400}

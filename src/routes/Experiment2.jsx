@@ -7,16 +7,9 @@ import Fetch from "../components/Fetch";
 import Plotly from "../components/Plotly";
 
 // inputs
-// import Database from "../components/inputs/Database";
-// import Mode from "../components/inputs/Mode";
-// import MaxWave from "../components/inputs/MaxWave";
-// import MinWave from "../components/inputs/MinWave";
 import Wavenumber from "../components/inputs/Wavenumber";
-// import Tgas from "../components/inputs/Tgas";
 import Pressure from "../components/inputs/Pressure";
-// import PathLength from "../components/inputs/PathLength";
 import Molecule from "../components/inputs/Molecule";
-// import MoleFraction from "../components/inputs/MoleFraction";
 import Resolution from "../components/inputs/Resolution";
 import NumOfScans from "../components/inputs/NumOfScans";
 import Beamsplitter from "../components/inputs/Beamsplitter";
@@ -44,9 +37,9 @@ export default function ExperimentalSetup() {
     storedParams.max_wavenumber_range
   );
 //   const [wavenumbers, setWavenumbers] = useState([400, 12500]);
-  const [tgas, setTgas] = useState(storedParams.tgas);
+  const [tgas] = useState(storedParams.tgas);
   const [pressure, setPressure] = useState(storedParams.pressure);
-  const [path_length, setPath_length] = useState(storedParams.path_length);
+  const [path_length] = useState(storedParams.path_length);
   const [species, setSpecies] = useState([
     {
       molecule: storedParams.species[0].molecule,

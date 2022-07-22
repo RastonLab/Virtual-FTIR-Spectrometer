@@ -6,10 +6,12 @@ function Beamsplitter({ params, setParams }) {
     <div className="input switch">
       <label className="switch-label">Beamsplitter</label>
       <label>AR_ZnSe</label>
-        <CustomSwitch 
+      <CustomSwitch
         checked={params === "AR_CaF2"}
-        onClick={() => {params === "AR_ZnSe" ? setParams("AR_CaF2") : setParams("AR_ZnSe")}}
-        />
+        onClick={() => {
+          params === "AR_ZnSe" ? setParams("AR_CaF2") : setParams("AR_ZnSe");
+        }}
+      />
       <label>AR_CaF2</label>
     </div>
   );

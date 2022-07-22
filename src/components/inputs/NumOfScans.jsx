@@ -1,8 +1,7 @@
-import { Input, Slider } from "@mui/material";
+import { Input } from "@mui/material";
 import React from "react";
 
 function NumOfScans({ params, setParams }) {
-
   const handleBlur = () => {
     if (params < 0) {
       setParams(0);
@@ -13,34 +12,19 @@ function NumOfScans({ params, setParams }) {
 
   return (
     <div className="input">
-      <label htmlFor="Range">
-        Number Of Scans
-      </label>
-      {/* <Slider
-        id="NumOfScans"
-        type="number"
-        defaultValue={params}
-        min={1}
-        max={1024}
-        step={1}
-        onChange={(e) =>
-          setParams(e.target.value)
-        }
-      /> */}
+      <label htmlFor="Range">Number Of Scans</label>
       <Input
-      value={params}
-      onChange={(e) =>
-        setParams(e.target.value)
-      }      
-      onBlur={handleBlur}
-      inputProps={{
-        step: 1,
-        min: 0,
-        max: 1024,
-        type: 'number',
-        'aria-labelledby': 'input-slider',
-      }}
-    />
+        value={params}
+        onChange={(e) => setParams(e.target.value)}
+        onBlur={handleBlur}
+        inputProps={{
+          step: 1,
+          min: 0,
+          max: 1024,
+          type: "number",
+          "aria-labelledby": "input-slider",
+        }}
+      />
     </div>
   );
 }

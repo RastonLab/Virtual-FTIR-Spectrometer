@@ -7,12 +7,12 @@ export const menuItems = [
       {
         label: "Open",
         button: true,
-        title: "Please Select a File", 
-        text: <Open />
+        title: "Please Select a File",
+        text: <Open />,
       },
       {
         label: "Save",
-        action: Save
+        action: Save,
       },
       {
         label: "Print",
