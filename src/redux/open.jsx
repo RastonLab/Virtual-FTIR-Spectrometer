@@ -5,28 +5,20 @@ import "../style/Open.css";
 
 export const Open = () => {
     
-    const [selectedFile, setSelectedFile] = useState();
-    const [isSelected, setIsSelected] = useState(false);
     const [data, setData] = useState();
 
     const filereader = new FileReader();
 
     const changeHandler = (event) => {
-		setSelectedFile(event.target.files[0]);
-		setIsSelected(true);
-	};
-
-	const handleSubmission = (event) => {
-        event.preventDefault();
-        console.log(data);
-
-        if(isSelected) {
+        if(event.target.files[0]) {
             filereader.onload = function (e) {
                 setData(e.target.result);
             };
-            filereader.readAsText(selectedFile);
+            filereader.readAsText(event.target.files[0]);
         }
-        console.log(data);
+	};
+
+	const handleSubmission = (event) => {
 
     }
 
