@@ -12,7 +12,7 @@ export default function MaxWave({ val, setter }) {
         defaultValue={val}
         min={400}
         max={12500}
-        onChange={(e) => setter(e.target.value)}
+        onChange={(e) => setter(Number(e.target.value))}
       ></input>
     </div>
   );

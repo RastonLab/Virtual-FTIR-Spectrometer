@@ -1,14 +1,12 @@
 import React from "react";
-import {ReactComponent as Main} from "../components/svgs/ftir-main.svg"
+import { ReactComponent as Main } from "../components/svgs/ftir-main.svg";
 import { Dialog } from "@mui/material";
 import { imgSource, toolTips } from "../dictionaries/SVGLibrary";
 import { useState } from "react";
 
-
 import "../style/InstrumentWindow.css";
 
 function InstrumentWindow() {
-
   const [toggled, setToggled] = useState(false);
   const [element, setElement] = useState(null);
 

@@ -22,7 +22,35 @@ const initialState = {
     cell_window: "CaF2",
     detector: "InSb",
     source: "Globar",
-    zero_filling: "0"
+    zero_filling: "0",
+  },
+
+  // params: {
+  //   min_wave: 1900,
+  //   max_wave: 2300,
+  //   molecule: "CO",
+  //   pressure: 1,
+  //   resolution: 1,
+  //   num_scan: 1,
+  //   zero_fill: 0,
+  //   source: "Tungsten",
+  //   beamsplitter: "AR_ZnSe",
+  //   cell_window: "ZnSe",
+  //   detector: "InSb",
+  // },
+
+  params2: {
+    min_wave: 1900,
+    max_wave: 2300,
+    molecule: "CO",
+    pressure: 0.001,
+    resolution: 1,
+    num_scan: 1,
+    zero_fill: 0,
+    source: "Tungsten",
+    beamsplitter: "AR_ZnSe",
+    cell_window: "CaF2",
+    detector: "MCT",
   },
 
   data: null,

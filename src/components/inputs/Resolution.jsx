@@ -1,14 +1,11 @@
 import { MenuItem, Select } from "@mui/material";
 import React from "react";
 
-function Resolution({ params, setParams }) {
+export default function Resolution({ params, setParams }) {
   return (
     <div className="input">
       <label htmlFor="Resolution">Resolution</label>
-      <Select
-      value={params}
-      onChange={(e) => setParams(e.target.value)}
-      >
+      <Select value={params} onChange={(e) => setParams(e.target.value)}>
         <MenuItem value="1">1</MenuItem>
         <MenuItem value="0.5">0.5</MenuItem>
         <MenuItem value="0.25">0.25</MenuItem>
@@ -18,5 +15,3 @@ function Resolution({ params, setParams }) {
     </div>
   );
 }
-
-export default Resolution;

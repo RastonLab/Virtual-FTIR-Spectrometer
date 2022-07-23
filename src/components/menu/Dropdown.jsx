@@ -19,7 +19,9 @@ const Dropdown = ({ submenus, dropdown }) => {
         } else {
           return (
             <li key={index} className="menu-items">
-              <Link to={submenu.link ?? "#"} onClick={submenu.action}>{submenu.label}</Link>
+              <Link to={submenu.link ?? "#"} onClick={submenu.action}>
+                {submenu.label}
+              </Link>
             </li>
           );
         }
