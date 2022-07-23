@@ -4,7 +4,7 @@ import React from "react";
 export default function Molecule({ val, setter }) {
   return (
     <div className="input">
-      <label htmlFor="molecule">HITRAN 2020 Molecule</label>
+      <label htmlFor="molecule">Molecule</label>
       <Select
         id="molecule"
         value={val}

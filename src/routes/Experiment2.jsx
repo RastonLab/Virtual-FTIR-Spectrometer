@@ -1,13 +1,13 @@
 import React, { useState } from "react";
 import { useSelector } from "react-redux";
-import { Outlet } from "react-router-dom";
 
 // additional components
-import Fetch from "../components/Fetch";
-import Plotly from "../components/Plotly";
+import Fetch2 from "../components/Fetch2";
+import Plotly2 from "../components/Plotly2";
 
 // inputs
-import Wavenumber from "../components/inputs/Wavenumber";
+import MinWave from "../components/inputs/MinWave";
+import MaxWave from "../components/inputs/MaxWave";
 import Pressure from "../components/inputs/Pressure";
 import Molecule from "../components/inputs/Molecule";
 import Resolution from "../components/inputs/Resolution";
@@ -18,93 +18,86 @@ import Detector from "../components/inputs/Detector";
 import Source from "../components/inputs/Source";
 import ZeroFillling from "../components/inputs/ZeroFilling";
 
-import "../style/ExperimentalSetup.css";
+import "../style/App.css";
 
-export default function ExperimentalSetup() {
-  const storedParams = useSelector((state) => state.params);
+
+export default function Experiment2() {
+  const storedParams = useSelector((state) => state.params2);
   const progress = useSelector((state) => state.isProgressing);
   const error = useSelector((state) => state.isError);
 
   // values set by user
-//   const [database, setDatabase] = useState(storedParams.database);
-  const database = "HITRAN";
-//   const [mode, setMode] = useState(storedParams.mode);
-  const mode = "transmittance_noslit";
-  const [min_wavenumber_range, setMin_wavenumber_range] = useState(
-    storedParams.min_wavenumber_range
-  );
-  const [max_wavenumber_range, setMax_wavenumber_range] = useState(
-    storedParams.max_wavenumber_range
-  );
-//   const [wavenumbers, setWavenumbers] = useState([400, 12500]);
-  const [tgas] = useState(storedParams.tgas);
+  const [minWave, setMinWave] = useState(storedParams.min_wave);
+  const [maxWave, setMaxWave] = useState(storedParams.max_wave);
+  const [molecule, setMolecule] = useState(storedParams.molecule);
   const [pressure, setPressure] = useState(storedParams.pressure);
-  const [path_length] = useState(storedParams.path_length);
-  const [species, setSpecies] = useState([
-    {
-      molecule: storedParams.species[0].molecule,
-      mole_fraction: storedParams.species[0].mole_fraction,
-    },
-  ]);
   const [resolution, setResolution] = useState(storedParams.resolution);
-  const [scanNum, setScanNum] = useState(storedParams.scan_num);
-  const [beamspiltter, setBeamsplitter] = useState(storedParams.beamsplitter);
+  const [numScan, setNumScan] = useState(storedParams.num_scan);
+  const [zeroFill, setZeroFill] = useState(storedParams.zero_fill);
+  const [source, setSource] = useState(storedParams.source);
+  const [beamsplitter, setBeamsplitter] = useState(storedParams.beamsplitter);
   const [cellWindow, setCellWindow] = useState(storedParams.cell_window);
   const [detector, setDetector] = useState(storedParams.detector);
-  const [source, setSource] = useState(storedParams.source);
-  const [zeroFilling, setZeroFilling] = useState(storedParams.zero_filling);
-
-  // values not set by user, but needed for Radis App
-  const [tvib] = useState(storedParams.tvib);
-  const [trot] = useState(storedParams.trot);
-  const [simulate_slit] = useState(storedParams.simulate_slit);
 
   return (
-    <div id="experimental-setup">
+    <div className="experimental-setup">
       <div id="form">
         <div className="col">
-            <Wavenumber min={min_wavenumber_range} max={max_wavenumber_range} setMin={setMin_wavenumber_range} setMax={setMax_wavenumber_range} />
+          <MinWave val={minWave} setter={setMinWave} />
 
-            <NumOfScans params={scanNum} setParams={setScanNum} />
+          <MaxWave val={maxWave} setter={setMaxWave} />
 
-            <Pressure val={pressure} setter={setPressure} />
+          <Molecule val={molecule} setter={setMolecule} />
 
-            <Molecule val={species[0].molecule} setter={setSpecies.molecule} />
+          <Pressure val={pressure} setter={setPressure} />
 
-            <Resolution params={resolution} setParams={setResolution} />
+          <Resolution params={resolution} setParams={setResolution} />
 
-            <ZeroFillling params={zeroFilling} setParams={setZeroFilling} />
+          <NumOfScans params={numScan} setParams={setNumScan} />
+
+          <ZeroFillling params={zeroFill} setParams={setZeroFill} />
         </div>
         <div className="col">
-            <Beamsplitter className="switch" params={beamspiltter} setParams={setBeamsplitter} />
+          <Source className="switch" params={source} setParams={setSource} />
 
-            <CellWindows className="switch" params={cellWindow} setParams={setCellWindow} />
+          <Beamsplitter
+            className="switch"
+            params={beamsplitter}
+            setParams={setBeamsplitter}
+          />
 
-            <Detector className="switch" params={detector} setParams={setDetector} />
+          <CellWindows
+            className="switch"
+            params={cellWindow}
+            setParams={setCellWindow}
+          />
 
-            <Source className="switch" params={source} setParams={setSource} />
-            
-            <div className="fetch-zone">
-                <Fetch
-                    params={{
-                    database,
-                    max_wavenumber_range,
-                    min_wavenumber_range,
-                    mode,
-                    path_length,
-                    pressure,
-                    simulate_slit,
-                    species,
-                    tgas,
-                    trot,
-                    tvib,
-                    }}
-                />
-            </div>
+          <Detector
+            className="switch"
+            params={detector}
+            setParams={setDetector}
+          />
+
+          <div className="fetch-zone">
+            <Fetch2
+              params={{
+                minWave,
+                maxWave,
+                molecule,
+                pressure,
+                resolution,
+                numScan,
+                zeroFill,
+                source,
+                beamsplitter,
+                cellWindow,
+                detector,
+              }}
+            />
+          </div>
         </div>
       </div>
 
-    
       {progress && <div id="spinner" />}
 
       {error && (
@@ -113,8 +106,7 @@ export default function ExperimentalSetup() {
         </div>
       )}
 
-      {!progress && <Plotly />}
-      <Outlet />
+      {!progress && <Plotly2 />}
     </div>
   );
 }

@@ -1,7 +1,7 @@
 import { CustomSwitch } from "./CustomSwitch";
 import React from "react";
 
-function Beamsplitter({ params, setParams }) {
+export default function Beamsplitter({ params, setParams }) {
   return (
     <div className="input switch">
       <label className="switch-label">Beamsplitter</label>
@@ -16,5 +16,3 @@ function Beamsplitter({ params, setParams }) {
     </div>
   );
 }
-
-export default Beamsplitter;

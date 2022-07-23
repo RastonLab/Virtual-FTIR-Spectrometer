@@ -45,7 +45,6 @@ export default function Fetch({ params }) {
       });
 
       if (response.ok) {
-        // console.log(JSON.parse(await response.text()))
         dispatch(storeData(JSON.parse(await response.text())));
         dispatch(hideProgress());
       } else {

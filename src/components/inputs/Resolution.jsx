@@ -1,7 +1,7 @@
 import { MenuItem, Select } from "@mui/material";
 import React from "react";
 
-function Resolution({ params, setParams }) {
+export default function Resolution({ params, setParams }) {
   return (
     <div className="input">
       <label htmlFor="Resolution">Resolution</label>
@@ -15,5 +15,3 @@ function Resolution({ params, setParams }) {
     </div>
   );
 }
-
-export default Resolution;

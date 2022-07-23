@@ -1,7 +1,7 @@
 import React from "react";
 import { CustomSwitch } from "./CustomSwitch";
 
-function Source({ params, setParams }) {
+export default function Source({ params, setParams }) {
   return (
     <div className="input switch">
       <label className="switch-label">Source</label>
@@ -17,5 +17,3 @@ function Source({ params, setParams }) {
     </div>
   );
 }
-
-export default Source;

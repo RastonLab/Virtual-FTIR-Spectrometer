@@ -1,7 +1,7 @@
 import React from "react";
 import { CustomSwitch } from "./CustomSwitch";
 
-function Detector({ params, setParams }) {
+export default function Detector({ params, setParams }) {
   return (
     <div className="input switch">
       <label className="switch-label">Detector</label>
@@ -17,5 +17,3 @@ function Detector({ params, setParams }) {
     </div>
   );
 }
-
-export default Detector;

@@ -13,10 +13,19 @@ export default function Pressure({ val, setter }) {
   return (
     <div className="input">
       <label htmlFor="pressure">Pressure (Bar)</label>
+      {/* <Slider
+        id="pressure"
+        type="number"
+        defaultValue={val}
+        step={0.0001}
+        min={0}
+        max={10}
+        onChange={(e) => setter(e.target.value)}
+      /> */}
       <Input
         value={val}
         size="small"
-        onChange={(e) => setter(e.target.value)}
+        onChange={(e) => setter(Number(e.target.value))}
         onBlur={handleBlur}
         inputProps={{
           step: 0.0001,
