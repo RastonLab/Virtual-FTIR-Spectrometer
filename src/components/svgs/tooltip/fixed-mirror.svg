@@ -1,5 +1,18 @@
-<svg width="70.637199" height="72.631355" viewBox="0 0 18.689425 19.217046" version="1.1" id="svg5" xmlns="http://www.w3.org/2000/svg">
-  <g id="layer1" transform="translate(-123.09632 -87.16791)">
-    <path style="fill:gray;fill-opacity:1;stroke:none;stroke-width:.85756;stroke-linecap:square;paint-order:markers stroke fill" id="fixed-mirror" transform="matrix(.7186 .69543 -.5532 .83305 -2e-8 1.2e-7)" d="M155.10078-24.84111h23.086193v3.7958958H155.10078z"/>
+<svg viewBox="0 0 58.034331 58.811118" version="1.1" id="svg6714" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg">
+  <defs id="defs6711">
+    <linearGradient id="linearGradient10026">
+      <stop style="stop-color:#484848;stop-opacity:1" offset="0" id="stop10022"/>
+      <stop style="stop-color:#333;stop-opacity:1" offset=".2" id="stop10030"/>
+      <stop style="stop-color:#676767;stop-opacity:1" offset=".40000001" id="stop10032"/>
+      <stop style="stop-color:#7b7b7b;stop-opacity:1" offset=".60000002" id="stop10034"/>
+      <stop style="stop-color:#4a4a4a;stop-opacity:1" offset=".80000001" id="stop10036"/>
+      <stop style="stop-color:#000;stop-opacity:1" offset="1" id="stop10024"/>
+    </linearGradient>
+    <linearGradient xlink:href="#linearGradient10026" id="linearGradient45340" gradientUnits="userSpaceOnUse" gradientTransform="matrix(.80626 0 0 .7818 -644.71357 61.117248)" x1="145.96878" y1="63.453781" x2="230.23941" y2="63.453781"/>
+  </defs>
+  <g id="layer1" transform="translate(-393.93264 -232.87906)">
+    <g id="fixed-mirror">
+      <path style="fill:url(#linearGradient45340);fill-opacity:1;stroke:#f7c400;stroke-width:1.67273;stroke-linecap:square;stroke-opacity:1;paint-order:markers stroke fill" id="rect10254" transform="matrix(-.7117 -.70249 .65068 -.75935 0 0)" d="M-527.0246 105.03921h67.944145v11.372651H-527.0246z"/>
+    </g>
   </g>
 </svg>

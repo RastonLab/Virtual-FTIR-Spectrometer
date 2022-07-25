@@ -1,0 +1,39 @@
+<svg width="315.50604" height="286.33072" viewBox="0 0 83.477636 75.758338" version="1.1" id="svg63856" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg">
+  <defs id="defs63853">
+    <linearGradient id="linearGradient28209">
+      <stop style="stop-color:#c27300;stop-opacity:1" offset="0" id="stop28205"/>
+      <stop style="stop-color:#dca400;stop-opacity:1" offset=".25" id="stop28213"/>
+      <stop style="stop-color:#ff6c00;stop-opacity:1" offset=".5" id="stop28215"/>
+      <stop style="stop-color:#cc9500;stop-opacity:1" offset=".75" id="stop28217"/>
+      <stop style="stop-color:#673300;stop-opacity:1" offset="1" id="stop28207"/>
+    </linearGradient>
+    <linearGradient id="linearGradient28161">
+      <stop style="stop-color:#d2d500;stop-opacity:1" offset="0" id="stop28159"/>
+    </linearGradient>
+    <linearGradient id="linearGradient65554">
+      <stop style="stop-color:#000;stop-opacity:1" offset="0" id="stop65550"/>
+      <stop style="stop-color:#575757;stop-opacity:1" offset=".25" id="stop65558"/>
+      <stop style="stop-color:#606060;stop-opacity:1" offset=".5" id="stop65560"/>
+      <stop style="stop-color:#383838;stop-opacity:1" offset=".75" id="stop65562"/>
+      <stop style="stop-color:#000;stop-opacity:1" offset="1" id="stop65552"/>
+    </linearGradient>
+    <linearGradient id="linearGradient64789">
+      <stop style="stop-color:#5a0000;stop-opacity:1" offset="0" id="stop64785"/>
+      <stop style="stop-color:#840000;stop-opacity:1" offset=".2" id="stop64793"/>
+      <stop style="stop-color:#a00;stop-opacity:1" offset=".40000001" id="stop64795"/>
+      <stop style="stop-color:#ad0000;stop-opacity:1" offset=".60000002" id="stop64797"/>
+      <stop style="stop-color:#9d0000;stop-opacity:1" offset=".79923636" id="stop64799"/>
+      <stop style="stop-color:#300;stop-opacity:1" offset="1" id="stop64787"/>
+    </linearGradient>
+    <linearGradient xlink:href="#linearGradient64789" id="linearGradient64791" x1="26.863319" y1="79.185043" x2="110.34096" y2="79.185043" gradientUnits="userSpaceOnUse"/>
+    <linearGradient xlink:href="#linearGradient65554" id="linearGradient65556" x1="26.863319" y1="79.185043" x2="110.34096" y2="79.185043" gradientUnits="userSpaceOnUse"/>
+    <linearGradient xlink:href="#linearGradient28209" id="linearGradient28211" x1="40.80592" y1="78.936035" x2="96.149345" y2="78.936035" gradientUnits="userSpaceOnUse"/>
+    <color-profile name="Lightness-Decrease" xlink:href="file:///Library/ColorSync/Profiles/Lightness%20Decrease.icc" id="color-profile183"/>
+  </defs>
+  <g id="layer1" transform="translate(-26.863319 -41.305878)">
+    <rect style="fill:url(#linearGradient64791);fill-opacity:1;stroke:url(#linearGradient65556);stroke-width:15;stroke-linecap:square;stroke-dasharray:none;paint-order:markers stroke fill" id="rect64392" width="68.477638" height="60.758339" x="34.363319" y="48.805878" ry="12.699491"/>
+    <ellipse style="fill:url(#linearGradient28211);fill-opacity:1;stroke:#000;stroke-width:18.9514;stroke-dasharray:none;stroke-opacity:1;paint-order:markers stroke fill" id="path24340" cx="68.477631" cy="78.936035" rx="18.196011" ry="17.69799"/>
+    <ellipse style="fill:#000;fill-opacity:1;stroke:none;stroke-width:17.5224;stroke-dasharray:none;stroke-opacity:1;paint-order:markers stroke fill" id="path29759" cx="42.082623" cy="55.902649" rx="3.4861343" ry="3.1126194"/>
+    <ellipse style="fill:#000;fill-opacity:1;stroke:none;stroke-width:17.5224;stroke-dasharray:none;stroke-opacity:1;paint-order:markers stroke fill" id="ellipse30695" cx="94.374634" cy="55.902649" rx="3.4861343" ry="3.1126194"/>
+  </g>
+</svg>

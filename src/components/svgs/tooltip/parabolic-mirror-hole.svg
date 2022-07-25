@@ -1,4 +1,4 @@
-<svg viewBox="0 0 24.013352 26.753329" version="1.1" id="svg862" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg">
+<svg width="90.759125" height="101.11494" viewBox="0 0 24.013352 26.753329" version="1.1" id="svg862" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg">
   <defs id="defs859">
     <linearGradient id="linearGradient2031">
       <stop style="stop-color:#373737;stop-opacity:1" offset="0" id="stop2027"/>
@@ -26,5 +26,6 @@
     <path id="rect1055" clip-path="url(#clipPath1171)" style="fill:url(#linearGradient2033);fill-opacity:1;stroke-width:1.33244;stroke-linecap:square;paint-order:markers stroke fill" d="m21.117835 56.734364 23.796935-.000257-.000283-19.384104-.01912-.000173a11.898411 2.4427199.51698 0 0 .0153-.09237 11.898411 2.4427199.51698 0 0-11.875973-2.550005 11.898411 2.4427199.51698 0 0-11.919538 2.335292 11.898411 2.4427199.51698 0 0 .09129.30676l-.08889.000232z" transform="matrix(-.99996 .01211 -.00902 -1.34244 68.411586 107.81228)"/>
     <ellipse style="fill:#ff0;stroke-width:1.5658;stroke-linecap:square;paint-order:markers stroke fill" id="path1228" cx="56.073605" cy="12.477081" rx="14.608712" ry="6.5063558" transform="matrix(.7679 .64057 -.64385 .76515 0 0)"/>
     <ellipse style="fill:url(#linearGradient1358);fill-opacity:1;stroke-width:1.5658;stroke-linecap:square;paint-order:markers stroke fill" id="ellipse1290" cx="56.073605" cy="12.477081" rx="14.608712" ry="6.5063558" transform="matrix(.7679 .64057 -.64385 .76515 0 0)"/>
+    <ellipse style="fill:#000;stroke-width:.71451;stroke-linecap:square;paint-order:markers stroke fill" id="path2068" cx="58.248886" cy="25.092552" rx=".70749629" ry=".56528312" transform="matrix(.88652 .4627 -.65737 .75357 0 0)"/>
   </g>
 </svg>

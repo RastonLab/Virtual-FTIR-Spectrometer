@@ -1,5 +1,26 @@
-<svg width="156.62877" height="81.041748" viewBox="0 0 41.441361 21.442296" version="1.1" id="svg5" xmlns="http://www.w3.org/2000/svg">
-  <g id="layer1" transform="translate(-178.35423 -184.77991)">
-    <rect style="display:inline;fill:gray;fill-opacity:1;stroke:none;stroke-width:1.33244;stroke-linecap:square;stroke-opacity:1;paint-order:markers stroke fill" id="sample-compartment" width="41.44136" height="21.442295" x="178.35423" y="184.77991" ry=".80717897"/>
+<svg viewBox="0 0 124.92475 76.183036" version="1.1" id="svg6714" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg">
+  <defs id="defs6711">
+    <linearGradient id="linearGradient32967">
+      <stop style="stop-color:#2b2b2b;stop-opacity:1" offset="0" id="stop32963"/>
+      <stop style="stop-color:#5b5b5b;stop-opacity:1" offset=".24530831" id="stop32971"/>
+      <stop style="stop-color:#9c9c9c;stop-opacity:1" offset=".49765414" id="stop32975"/>
+      <stop style="stop-color:#4e4e4e;stop-opacity:1" offset=".75" id="stop32973"/>
+      <stop style="stop-color:#3a3a3a;stop-opacity:1" offset="1" id="stop32965"/>
+    </linearGradient>
+    <linearGradient xlink:href="#linearGradient32967" id="linearGradient32969" x1="326.34528" y1="-188.95346" x2="326.34528" y2="-102.39491" gradientUnits="userSpaceOnUse" gradientTransform="matrix(.59052 0 0 .37122 359.53082 534.22191)"/>
+    <linearGradient xlink:href="#linearGradient32967" id="linearGradient32979" gradientUnits="userSpaceOnUse" gradientTransform="matrix(.59052 0 0 .37122 463.51784 534.22191)" x1="326.34528" y1="-188.95346" x2="326.34528" y2="-102.39491"/>
+  </defs>
+  <g id="layer1" transform="translate(-542.12808 -448.73327)">
+    <g id="sample-compartment">
+      <path style="display:inline;fill:none;fill-opacity:1;stroke:#000;stroke-width:3.95508;stroke-linecap:square;stroke-dasharray:none;stroke-opacity:1;paint-order:markers stroke fill" id="rect7077" d="M550.68958 457.52939h107.45049v50.809959H550.68958z"/>
+      <path style="fill:#000;fill-opacity:1;stroke:#000;stroke-width:3.61288;stroke-linecap:square;stroke-dasharray:none;stroke-opacity:1;paint-order:markers stroke fill" id="rect16683" d="M625.3941 509.97607h10.250202v13.133787H625.3941z"/>
+      <path style="fill:#000;fill-opacity:1;stroke:#000;stroke-width:3.61288;stroke-linecap:square;stroke-dasharray:none;stroke-opacity:1;paint-order:markers stroke fill" id="rect10709" d="M570.18964 509.97607h10.250202v13.133787H570.18964z"/>
+      <rect style="fill:url(#linearGradient32969);fill-opacity:1;stroke:#0047af;stroke-width:3.22849;stroke-dasharray:none;stroke-opacity:1;paint-order:markers stroke fill" id="rect32961" width="10.453889" height="32.46722" x="546.78931" y="464.24542" ry=".84326214"/>
+      <rect style="display:inline;fill:url(#linearGradient32979);fill-opacity:1;stroke:#0047af;stroke-width:3.22849;stroke-dasharray:none;stroke-opacity:1;paint-order:markers stroke fill" id="rect32977" width="10.453889" height="32.46722" x="650.77637" y="464.24542" ry=".84326214"/>
+      <rect style="fill:#009ee0;fill-opacity:1;stroke:#000;stroke-width:4.15627;stroke-linecap:square;stroke-dasharray:none;stroke-opacity:1;paint-order:markers stroke fill" id="rect8256-0" width="17.936167" height="11.160557" x="544.20654" y="450.8114" ry="1.8277973"/>
+      <rect style="fill:#009ee0;fill-opacity:1;stroke:#000;stroke-width:4.20966;stroke-linecap:square;stroke-dasharray:none;stroke-opacity:1;paint-order:markers stroke fill" id="rect10251" width="18.48822" height="11.107299" x="544.23291" y="499.22946" ry="1.8190751"/>
+      <rect style="fill:#009ee0;fill-opacity:1;stroke:#000;stroke-width:4.15627;stroke-linecap:square;stroke-dasharray:none;stroke-opacity:1;paint-order:markers stroke fill" id="rect10253" width="17.936167" height="11.160557" x="645.82855" y="450.8114" ry="1.8277973"/>
+      <rect style="fill:#009ee0;fill-opacity:1;stroke:#000;stroke-width:4.20966;stroke-linecap:square;stroke-dasharray:none;stroke-opacity:1;paint-order:markers stroke fill" id="rect10255" width="18.48822" height="11.107299" x="646.45978" y="499.22946" ry="1.8190751"/>
+    </g>
   </g>
 </svg>

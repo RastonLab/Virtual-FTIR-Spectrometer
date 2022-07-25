@@ -1,5 +1,18 @@
-<svg width="78.17836" height="157.69475" viewBox="0 0 20.684691 41.723402" version="1.1" id="svg5" xmlns="http://www.w3.org/2000/svg">
-  <g id="layer1" transform="translate(-218.40469 -77.556358)">
-    <path id="movable-corner-cube" style="display:inline;fill:gray;fill-opacity:1;stroke:none;stroke-width:.808527;stroke-linecap:square;paint-order:markers stroke fill" d="m239.08938 99.111953-17.90251-21.555595-2.78218 3.39964 15.31013 18.434385-14.18004 16.731597 2.59142 3.15778 16.85926-19.893037-.0606-.0738z"/>
+<svg viewBox="0 0 87.590659 141.71717" version="1.1" id="svg6714" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg">
+  <defs id="defs6711">
+    <linearGradient id="linearGradient48984">
+      <stop style="stop-color:#3d3d3d;stop-opacity:1" offset="0" id="stop48980"/>
+      <stop style="stop-color:#5b5b5b;stop-opacity:1" offset=".2" id="stop48988"/>
+      <stop style="stop-color:#2d2d2d;stop-opacity:1" offset=".40000001" id="stop48990"/>
+      <stop style="stop-color:#383838;stop-opacity:1" offset=".60000002" id="stop48992"/>
+      <stop style="stop-color:#5d5d5d;stop-opacity:1" offset=".80000001" id="stop48994"/>
+      <stop style="stop-color:#575757;stop-opacity:1" offset="1" id="stop48982"/>
+    </linearGradient>
+    <linearGradient xlink:href="#linearGradient48984" id="linearGradient2933" gradientUnits="userSpaceOnUse" gradientTransform="matrix(0 -.92798 -1.56899 0 764.4694 638.26382)" x1="304.20673" y1="103.94676" x2="452.36444" y2="103.94676"/>
+  </defs>
+  <g id="layer1" transform="translate(-557.57784 -216.41963)">
+    <g id="movable-corner-cube">
+      <path id="path2931" style="fill:url(#linearGradient2933);fill-opacity:1;stroke:#f7c400;stroke-width:2.95728;stroke-linecap:square;stroke-dasharray:none;stroke-opacity:1;paint-order:markers stroke fill" d="m643.06748 280.54476-67.10416 75.42172-12.10638-12.44742 57.38711-62.53501-61.55501-51.46375 9.70412-11.04098 73.18539 61.18784-.22657.25823z"/>
+    </g>
   </g>
 </svg>
