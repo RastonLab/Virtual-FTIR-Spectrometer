@@ -38,6 +38,8 @@ export const Open = () => {
 
             xData.push(Number(x));
             yData.push(Number(y));
+        } else {
+            // TODO Add param parsing
         }
 
         rawData = rawData.substring(index + 1);
