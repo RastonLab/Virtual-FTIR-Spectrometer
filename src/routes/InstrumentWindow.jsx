@@ -13,7 +13,12 @@ export default function InstrumentWindow() {
   const handleClick = (event) => {
     setToggled(!toggled);
 
-    if (event.target.parentElement.id === "instrument-window") {
+    console.log(event.target.parentElement.id);
+
+    if (
+      event.target.parentElement.id === "instrument-window" ||
+      event.target.parentElement.id === "ftir"
+    ) {
       setElement(null);
     } else {
       setElement(event.target.parentElement.id);
