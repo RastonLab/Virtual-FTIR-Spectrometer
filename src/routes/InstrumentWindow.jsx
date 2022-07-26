@@ -8,20 +8,15 @@ import "../style/InstrumentWindow.css";
 
 export default function InstrumentWindow() {
   const [toggled, setToggled] = useState(false);
-  const [element, setElement] = useState(null);
+  const [element, setElement] = useState();
 
   const handleClick = (event) => {
-    setToggled(!toggled);
-
-    console.log(event.target.parentElement.id);
-
     if (
-      event.target.parentElement.id === "instrument-window" ||
-      event.target.parentElement.id === "ftir"
+      event.target.parentElement.id !== "instrument-window" &&
+      event.target.parentElement.id !== "ftir"
     ) {
-      setElement(null);
-    } else {
       setElement(event.target.parentElement.id);
+      setToggled(!toggled);
     }
   };
 
