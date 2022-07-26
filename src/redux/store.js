@@ -66,7 +66,7 @@ function reducer(state, action) {
     case Action.StoreParams:
       return {
         ...state,
-        params: action.payload,
+        params2: action.payload,
       };
 
     // ---------- graph data (Plotly) ----------
