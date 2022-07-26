@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useDispatch } from "react-redux";
-import { storeData } from "./actions";
+import { storeData, storeParams } from "./actions";
 
 import "../style/Open.css";
 
@@ -39,9 +39,17 @@ export const Open = () => {
             xData.push(Number(x));
             yData.push(Number(y));
         } else {
-            // TODO Add param parsing
+            const parameters = [];
+            while (line.indexOf(':') > 0) {
+                let paramStart = line.indexOf(':') + 2; // The Additional 2 accounts for the colon inself and the following space
+                line = line.substring(paramStart);
+                let paramEnd = line.indexOf(' ');
+                let param = line.substring(0, paramEnd);
+                line = line.substring(paramEnd + 1);
+                parameters.push(param);
+            }
+            dispatch(storeParams({min_wave: parameters[0], max_wave: parameters[1], molecule: parameters[2], pressure: parameters[3], resolution: parameters[4], num_scan: parameters[5], zero_fill: parameters[6], source: parameters[7], beamsplitter: parameters[8], cell_windows: parameters[9], detector: parameters[10]}));
         }
-
         rawData = rawData.substring(index + 1);
     }
 
