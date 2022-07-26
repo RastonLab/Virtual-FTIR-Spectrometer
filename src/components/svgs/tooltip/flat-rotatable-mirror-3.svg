@@ -1,5 +1,18 @@
-<svg width="70.166565" height="33.587437" viewBox="0 0 18.564903 8.8866758" version="1.1" id="svg5" xmlns="http://www.w3.org/2000/svg">
-  <g id="layer1" transform="translate(-239.48083 -168.06909)">
-    <path style="display:inline;fill:green;fill-opacity:1;stroke:none;stroke-width:1.30913;stroke-linecap:square;stroke-opacity:1;paint-order:markers stroke fill" id="flat-rotatable-mirror-3" transform="matrix(.90423 .42705 -.89063 .45472 -2e-8 1.2e-7)" d="M328.47812 61.118885h17.099136v3.4844792H328.47812z"/>
+<svg viewBox="0 0 65.862886 49.012052" version="1.1" id="svg6714" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg">
+  <defs id="defs6711">
+    <linearGradient id="linearGradient10026">
+      <stop style="stop-color:#484848;stop-opacity:1" offset="0" id="stop10022"/>
+      <stop style="stop-color:#333;stop-opacity:1" offset=".2" id="stop10030"/>
+      <stop style="stop-color:#676767;stop-opacity:1" offset=".40000001" id="stop10032"/>
+      <stop style="stop-color:#7b7b7b;stop-opacity:1" offset=".60000002" id="stop10034"/>
+      <stop style="stop-color:#4a4a4a;stop-opacity:1" offset=".80000001" id="stop10036"/>
+      <stop style="stop-color:#000;stop-opacity:1" offset="1" id="stop10024"/>
+    </linearGradient>
+    <linearGradient xlink:href="#linearGradient10026" id="linearGradient51110" gradientUnits="userSpaceOnUse" gradientTransform="matrix(.80626 0 0 .7818 -438.68678 -862.1369)" x1="145.96878" y1="63.453781" x2="230.23941" y2="63.453781"/>
+  </defs>
+  <g id="layer1" transform="translate(-703.78789 -457.82599)">
+    <g id="flat-rotatable-mirror-3">
+      <path style="fill:url(#linearGradient51110);fill-opacity:1;stroke:#fec900;stroke-width:1.67273;stroke-linecap:square;stroke-opacity:1;paint-order:markers stroke fill" id="rect51108" transform="matrix(-.8312 .55598 -.61308 -.79002 0 0)" d="M-320.99777-818.21497h67.944145v11.372651h-67.944145z"/>
+    </g>
   </g>
 </svg>

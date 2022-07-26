@@ -1,15 +1,12 @@
 /* ---------- instrument-window ---------- */
 #instrument-window {
   display: flex;
+  justify-content: center;
 }
 
 #instument {
-  display: flex;
-  height: 80%;
-  width: 80%;
-  margin: 1% 10%;
-  top: 70px;
-  position: absolute;
+  height: auto;
+  width: 55%;
 }
 
 /* ---------- svg components ---------- */
