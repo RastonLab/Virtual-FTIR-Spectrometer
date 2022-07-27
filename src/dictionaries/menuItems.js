@@ -1,5 +1,6 @@
 import { Save } from "../redux/save";
 import { Open } from "../redux/open";
+import { Print } from "../components/Print";
 export const menuItems = [
   {
     label: "File",
@@ -16,6 +17,7 @@ export const menuItems = [
       },
       {
         label: "Print",
+        action: Print
       },
     ],
   },
