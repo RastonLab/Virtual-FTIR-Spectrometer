@@ -3,6 +3,11 @@ import FileSaver from "file-saver";
 
 export const Save = () => {
   const state = store.getState();
+
+  if (state.data === null) {
+    return;
+  }
+
   const params = state.params2;
   const xVals = state.data.data.x;
   const yVals = state.data.data.y;

@@ -47,14 +47,14 @@ export default function Experiment2() {
           <MinWave val={minWave} setter={setMinWave} />
 
           <MaxWave val={maxWave} setter={setMaxWave} />
+          
+          <Pressure val={pressure} setter={setPressure} />
+
+          <NumOfScans params={numScan} setParams={setNumScan} />
 
           <Molecule val={molecule} setter={setMolecule} />
 
-          <Pressure val={pressure} setter={setPressure} />
-
           <Resolution params={resolution} setParams={setResolution} />
-
-          <NumOfScans params={numScan} setParams={setNumScan} />
 
           <ZeroFillling params={zeroFill} setParams={setZeroFill} />
         </div>
