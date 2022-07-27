@@ -23,7 +23,7 @@ export default function Plotly() {
               },
             ]}
             layout={{
-              width: 800,
+              width: 750,
               height: 600,
               title: "Spectrum",
               font: { family: "Roboto", color: "#000" },

@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useDispatch } from "react-redux";
-import { storeData, storeParams } from "./actions";
+import { hideError, storeData, storeParams } from "./actions";
 
 import "../style/Open.css";
 
@@ -53,8 +53,8 @@ export const Open = () => {
         rawData = rawData.substring(index + 1);
     }
 
-    // NOTE: May need to adjust wavelength params to have properly ranged graph
     dispatch(storeData({data: {x: xData, y: yData}}));
+    dispatch(hideError());
     toggleSucess(true);
   };
 

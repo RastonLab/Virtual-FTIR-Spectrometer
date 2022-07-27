@@ -18,7 +18,8 @@ import Detector from "../components/inputs/Detector";
 import Source from "../components/inputs/Source";
 import ZeroFillling from "../components/inputs/ZeroFilling";
 
-import "../style/App.css";
+// import "../style/App.css";
+import "../style/ExperimentalSetup.css";
 
 
 export default function Experiment2() {
@@ -40,7 +41,7 @@ export default function Experiment2() {
   const [detector, setDetector] = useState(storedParams.detector);
 
   return (
-    <div className="experimental-setup">
+    <div id="experimental-setup">
       <div id="form">
         <div className="col">
           <MinWave val={minWave} setter={setMinWave} />
@@ -97,16 +98,17 @@ export default function Experiment2() {
           </div>
         </div>
       </div>
+      <div id="graph-and-error">
+        {progress && <div id="spinner" />}
 
-      {progress && <div id="spinner" />}
+        {error && (
+          <div id="error">
+            <p style={{ fontSize: 30 }}>⚠ Error reaching out to Radis App ⚠</p>
+          </div>
+        )}
 
-      {error && (
-        <div id="error">
-          <p style={{ fontSize: 30 }}>⚠ Error reaching out to Radis App ⚠</p>
-        </div>
-      )}
-
-      {!progress && <Plotly2 />}
+        {!progress && <Plotly2 />}
+      </div>
     </div>
   );
 }
