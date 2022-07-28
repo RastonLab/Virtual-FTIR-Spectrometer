@@ -13,7 +13,7 @@ export const Save = () => {
   const yVals = state.data.data.y;
 
   // TODO Add params to first line
-  let data = `# Min Wavenumber: ${params.min_wave} Max Wavenumber: ${params.max_wave} Molecule: ${params.molecule} Pressure: ${params.pressure} Resolution: ${params.pressure} Number of Scans: ${params.num_scan} Zero Fill: ${params.zero_fill} Source: ${params.source} Beamsplitter: ${params.beamsplitter} Cell Window: ${params.cell_window} Detector: ${params.detector} \n`;
+  let data = `# Min Wavenumber: ${params.minWave} Max Wavenumber: ${params.maxWave} Molecule: ${params.molecule} Pressure: ${params.pressure} Resolution: ${params.pressure} Number of Scans: ${params.numScan} Zero Fill: ${params.zeroFill} Source: ${params.source} Beamsplitter: ${params.beamsplitter} Cell Window: ${params.cellWindow} Detector: ${params.detector} \n`;
 
   for(let i = 0; i < xVals.length; i++) {
 
@@ -22,5 +22,5 @@ export const Save = () => {
 
 
   const blob = new Blob(new Array([data]), { type: "application/csv" });
-  FileSaver.saveAs(blob, `${params.min_wave}-${params.max_wave}-spectrum.csv`)
+  FileSaver.saveAs(blob, `${params.minWave}-${params.maxWave}-spectrum.csv`)
 };
