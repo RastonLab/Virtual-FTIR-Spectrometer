@@ -1,9 +1,5 @@
-// export function Print() {
-//   return window.print();
-// }
-
-import { forwardRef, React, useRef, useState } from "react";
-import ReactToPrint, { useReactToPrint } from "react-to-print";
+import { React, useRef } from "react";
+import { useReactToPrint } from "react-to-print";
 
 import {Experiment2} from "../routes/Experiment2";
 
@@ -18,7 +14,9 @@ export default function Print() {
   return(
     <div>
       <button className="button" onClick={handlePrint}>Click</button>
-      <Experiment2 ref={componentRef} />
+      <div style={{display: "none"}}>
+        <Experiment2 ref={componentRef} />
+      </div>
     </div>
   );
 
