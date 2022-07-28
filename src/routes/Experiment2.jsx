@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { forwardRef, useState } from "react";
 import { useSelector } from "react-redux";
 
 // additional components
@@ -22,7 +22,7 @@ import ZeroFillling from "../components/inputs/ZeroFilling";
 import "../style/ExperimentalSetup.css";
 
 
-export default function Experiment2() {
+export const Experiment2 = forwardRef((props, ref) => {
   const storedParams = useSelector((state) => state.params2);
   const progress = useSelector((state) => state.isProgressing);
   const error = useSelector((state) => state.isError);
@@ -41,7 +41,7 @@ export default function Experiment2() {
   const [detector, setDetector] = useState(storedParams.detector);
 
   return (
-    <div id="experimental-setup">
+    <div ref={ref} id="experimental-setup">
       <div id="form">
         <div className="col">
           <MinWave val={minWave} setter={setMinWave} />
@@ -111,4 +111,4 @@ export default function Experiment2() {
       </div>
     </div>
   );
-}
+})
