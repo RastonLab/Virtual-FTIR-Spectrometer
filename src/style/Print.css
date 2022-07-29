@@ -27,14 +27,14 @@ h3 {
     flex-direction: column;
 }
 
-.row {
+.print-row {
     align-items: center;
     justify-content: center;
     margin-top: 10%;
 
 }
 
-.button {
+.print-button {
     max-width: 90px;
     align-self: center;
     justify-content: center;
