@@ -48,7 +48,7 @@ export const Open = () => {
                 line = line.substring(paramEnd + 1);
                 parameters.push(param);
             }
-            dispatch(storeParams({min_wave: parameters[0], max_wave: parameters[1], molecule: parameters[2], pressure: parameters[3], resolution: parameters[4], num_scan: parameters[5], zero_fill: parameters[6], source: parameters[7], beamsplitter: parameters[8], cell_window: parameters[9], detector: parameters[10]}));
+            dispatch(storeParams({minWave: parameters[0], maxWave: parameters[1], molecule: parameters[2], pressure: parameters[3], resolution: parameters[4], numScan: parameters[5], zeroFill: parameters[6], source: parameters[7], beamsplitter: parameters[8], cellWindow: parameters[9], detector: parameters[10]}));
         }
         rawData = rawData.substring(index + 1);
     }

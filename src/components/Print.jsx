@@ -24,7 +24,7 @@ export default function Print() {
       <h1>Print</h1>
       <h3>Would you like to print</h3>
       <div className="flex">
-      <FormControl className="row">
+      <FormControl className="print-row">
           <RadioGroup
             aria-labelledby="print-selection"
             defaultValue="female"
@@ -39,7 +39,7 @@ export default function Print() {
           </RadioGroup>
         </FormControl>
 
-        <button className="button row" onClick={handlePrint}>Print</button>
+        <button className="print-button button print-row" onClick={handlePrint}>Print</button>
       </div>
       <div style={{display: "none"}}>
         {printOptions === "graph" && <Plotly ref={componentRef} />}

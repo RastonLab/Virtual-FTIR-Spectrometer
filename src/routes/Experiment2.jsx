@@ -28,16 +28,16 @@ export const Experiment2 = forwardRef((props, ref) => {
   const error = useSelector((state) => state.isError);
 
   // values set by user
-  const [minWave, setMinWave] = useState(storedParams.min_wave);
-  const [maxWave, setMaxWave] = useState(storedParams.max_wave);
+  const [minWave, setMinWave] = useState(storedParams.minWave);
+  const [maxWave, setMaxWave] = useState(storedParams.maxWave);
   const [molecule, setMolecule] = useState(storedParams.molecule);
   const [pressure, setPressure] = useState(storedParams.pressure);
   const [resolution, setResolution] = useState(storedParams.resolution);
-  const [numScan, setNumScan] = useState(storedParams.num_scan);
-  const [zeroFill, setZeroFill] = useState(storedParams.zero_fill);
+  const [numScan, setNumScan] = useState(storedParams.numScan);
+  const [zeroFill, setZeroFill] = useState(storedParams.zeroFill);
   const [source, setSource] = useState(storedParams.source);
   const [beamsplitter, setBeamsplitter] = useState(storedParams.beamsplitter);
-  const [cellWindow, setCellWindow] = useState(storedParams.cell_window);
+  const [cellWindow, setCellWindow] = useState(storedParams.cellWindow);
   const [detector, setDetector] = useState(storedParams.detector);
 
   return (
