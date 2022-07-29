@@ -3,7 +3,7 @@ import { useSelector } from "react-redux";
 
 // additional components
 import Fetch2 from "../components/Fetch2";
-import Plotly2 from "../components/Plotly2";
+import {Plotly} from "../components/Plotly2";
 
 // inputs
 import MinWave from "../components/inputs/MinWave";
@@ -107,7 +107,7 @@ export const Experiment2 = forwardRef((props, ref) => {
           </div>
         )}
 
-        {!progress && <Plotly2 />}
+        {!progress && <Plotly />}
       </div>
     </div>
   );

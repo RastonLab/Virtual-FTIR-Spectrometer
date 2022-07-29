@@ -1,9 +1,9 @@
-import React from "react";
+import React, { forwardRef } from "react";
 import { useSelector } from "react-redux";
 
 import Plot from "react-plotly.js";
 
-export default function Plotly() {
+export const Plotly = forwardRef((props, ref) => {
   const data = useSelector((state) => state.data);
   const params = useSelector((state) => state.params);
 
@@ -13,6 +13,7 @@ export default function Plotly() {
       <>
         {
           <Plot
+            ref={ref}
             className="Plot"
             data={[
               {
@@ -52,4 +53,4 @@ export default function Plotly() {
   } else {
     return <div></div>;
   }
-}
+})
