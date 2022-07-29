@@ -1,0 +1,41 @@
+/* ---------- fonts ---------- */
+@font-face {
+    font-family: "Montserrat";
+    src: url(./fonts/Montserrat-VariableFont_wght.ttf);
+  }
+  
+  @font-face {
+    font-family: "Roboto";
+    src: url(./fonts/Roboto-Regular.ttf);
+  }
+
+h1 {
+    font-family: "Montserrat" !important;
+    text-align: center;
+    text-decoration: underline;
+}
+
+h3 {
+    font-family: "Roboto";
+    text-align: center;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+.flex {
+    display: flex;
+    flex-direction: column;
+}
+
+.row {
+    align-items: center;
+    justify-content: center;
+    margin-top: 10%;
+
+}
+
+.button {
+    max-width: 90px;
+    align-self: center;
+    justify-content: center;
+}

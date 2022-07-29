@@ -4,7 +4,7 @@ import { RadioGroup, FormControl, FormControlLabel, Radio } from "@mui/material"
 
 import {Experiment2} from "../routes/Experiment2";
 import {Plotly} from "./Plotly2";
-import "../style/App.css";
+import "../style/Print.css";
 
 export default function Print() {
 
@@ -23,23 +23,24 @@ export default function Print() {
     <div>
       <h1>Print</h1>
       <h3>Would you like to print</h3>
-      <FormControl>
-        <RadioGroup
-          aria-labelledby="print-selection"
-          defaultValue="female"
-          name="radio-buttons-group"
-          row
-          value={printOptions}
-          onChange={onSelect}
-        >
-          <FormControlLabel value="graph" control={<Radio />} label="Just the Graph" />
-          {/* <FormControlLabel value="input" control={<Radio />} label="Just the Inputs" /> */}
-          <FormControlLabel value="both" control={<Radio />} label="Both the Graph and Inputs" />
-        </RadioGroup>
-      </FormControl>
+      <div className="flex">
+      <FormControl className="row">
+          <RadioGroup
+            aria-labelledby="print-selection"
+            defaultValue="female"
+            name="radio-buttons-group"
+            row
+            value={printOptions}
+            onChange={onSelect}
+          >
+            <FormControlLabel value="graph" control={<Radio />} label="Just the Graph" />
+            {/* <FormControlLabel value="input" control={<Radio />} label="Just the Inputs" /> */}
+            <FormControlLabel value="both" control={<Radio />} label="Both the Graph and Inputs" />
+          </RadioGroup>
+        </FormControl>
 
-      <button className="button" onClick={handlePrint}>Click</button>
-
+        <button className="button row" onClick={handlePrint}>Print</button>
+      </div>
       <div style={{display: "none"}}>
         {printOptions === "graph" && <Plotly ref={componentRef} />}
         
