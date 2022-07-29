@@ -45,12 +45,12 @@ export const menuItems = [
   {
     label: "Window",
     submenu: [
+      // {
+      //   label: "Experimental Setup",
+      //   link: "/experimental-setup",
+      // },
       {
         label: "Experimental Setup",
-        link: "/experimental-setup",
-      },
-      {
-        label: "Experimental Setup 2",
         link: "/experiment2",
       },
       {
