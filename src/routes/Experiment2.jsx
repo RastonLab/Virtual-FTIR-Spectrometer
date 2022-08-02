@@ -1,9 +1,9 @@
-import React, { useState } from "react";
+import React, { forwardRef, useState } from "react";
 import { useSelector } from "react-redux";
 
 // additional components
 import Fetch2 from "../components/Fetch2";
-import Plotly2 from "../components/Plotly2";
+import {Plotly} from "../components/Plotly2";
 
 // inputs
 import MinWave from "../components/inputs/MinWave";
@@ -18,42 +18,43 @@ import Detector from "../components/inputs/Detector";
 import Source from "../components/inputs/Source";
 import ZeroFillling from "../components/inputs/ZeroFilling";
 
-import "../style/App.css";
+// import "../style/App.css";
+import "../style/ExperimentalSetup.css";
 
 
-export default function Experiment2() {
+export const Experiment2 = forwardRef((props, ref) => {
   const storedParams = useSelector((state) => state.params2);
   const progress = useSelector((state) => state.isProgressing);
   const error = useSelector((state) => state.isError);
 
   // values set by user
-  const [minWave, setMinWave] = useState(storedParams.min_wave);
-  const [maxWave, setMaxWave] = useState(storedParams.max_wave);
+  const [minWave, setMinWave] = useState(storedParams.minWave);
+  const [maxWave, setMaxWave] = useState(storedParams.maxWave);
   const [molecule, setMolecule] = useState(storedParams.molecule);
   const [pressure, setPressure] = useState(storedParams.pressure);
   const [resolution, setResolution] = useState(storedParams.resolution);
-  const [numScan, setNumScan] = useState(storedParams.num_scan);
-  const [zeroFill, setZeroFill] = useState(storedParams.zero_fill);
+  const [numScan, setNumScan] = useState(storedParams.numScan);
+  const [zeroFill, setZeroFill] = useState(storedParams.zeroFill);
   const [source, setSource] = useState(storedParams.source);
   const [beamsplitter, setBeamsplitter] = useState(storedParams.beamsplitter);
-  const [cellWindow, setCellWindow] = useState(storedParams.cell_window);
+  const [cellWindow, setCellWindow] = useState(storedParams.cellWindow);
   const [detector, setDetector] = useState(storedParams.detector);
 
   return (
-    <div className="experimental-setup">
+    <div ref={ref} id="experimental-setup">
       <div id="form">
         <div className="col">
           <MinWave val={minWave} setter={setMinWave} />
 
           <MaxWave val={maxWave} setter={setMaxWave} />
+          
+          <Pressure val={pressure} setter={setPressure} />
+
+          <NumOfScans params={numScan} setParams={setNumScan} />
 
           <Molecule val={molecule} setter={setMolecule} />
 
-          <Pressure val={pressure} setter={setPressure} />
-
           <Resolution params={resolution} setParams={setResolution} />
-
-          <NumOfScans params={numScan} setParams={setNumScan} />
 
           <ZeroFillling params={zeroFill} setParams={setZeroFill} />
         </div>
@@ -97,16 +98,17 @@ export default function Experiment2() {
           </div>
         </div>
       </div>
+      <div id="graph-and-error">
+        {progress && <div id="spinner" />}
 
-      {progress && <div id="spinner" />}
+        {error && (
+          <div id="error">
+            <p style={{ fontSize: 30 }}>⚠ Error reaching out to Radis App ⚠</p>
+          </div>
+        )}
 
-      {error && (
-        <div id="error">
-          <p style={{ fontSize: 30 }}>⚠ Error reaching out to Radis App ⚠</p>
-        </div>
-      )}
-
-      {!progress && <Plotly2 />}
+        {!progress && <Plotly />}
+      </div>
     </div>
   );
-}
+})

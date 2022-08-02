@@ -40,16 +40,16 @@ const initialState = {
   // },
 
   params2: {
-    min_wave: 1900,
-    max_wave: 2300,
+    minWave: 1900,
+    maxWave: 2300,
     molecule: "CO",
     pressure: 0.001,
     resolution: 1,
-    num_scan: 1,
-    zero_fill: 0,
+    numScan: 1,
+    zeroFill: 0,
     source: "Tungsten",
     beamsplitter: "AR_ZnSe",
-    cell_window: "CaF2",
+    cellWindow: "CaF2",
     detector: "MCT",
   },
 

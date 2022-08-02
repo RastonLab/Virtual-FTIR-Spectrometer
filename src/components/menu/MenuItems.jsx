@@ -20,8 +20,16 @@ const MenuItems = ({ items }) => {
     };
   }, [dropdown]);
 
+  const onMouseEnter = () => {
+    window.innerWidth > 960 && setDropdown(true);
+   };
+   
+   const onMouseLeave = () => {
+    window.innerWidth > 960 && setDropdown(false);
+   };
+
   return (
-    <li className="menu-items" ref={ref}>
+    <li className="menu-items" ref={ref} onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave} >
       {items.submenu ? (
         <>
           <button

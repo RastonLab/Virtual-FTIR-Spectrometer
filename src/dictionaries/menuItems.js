@@ -1,5 +1,6 @@
 import { Save } from "../redux/save";
 import { Open } from "../redux/open";
+import  Print  from "../components/Print";
 export const menuItems = [
   {
     label: "File",
@@ -16,6 +17,9 @@ export const menuItems = [
       },
       {
         label: "Print",
+        button: true,
+        title: "",
+        text: <Print />
       },
     ],
   },
@@ -41,12 +45,12 @@ export const menuItems = [
   {
     label: "Window",
     submenu: [
+      // {
+      //   label: "Experimental Setup",
+      //   link: "/experimental-setup",
+      // },
       {
         label: "Experimental Setup",
-        link: "/experimental-setup",
-      },
-      {
-        label: "Experimental Setup 2",
         link: "/experiment2",
       },
       {
