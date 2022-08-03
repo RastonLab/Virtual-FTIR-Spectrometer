@@ -13,13 +13,7 @@ import {
 export default function Fetch({ params }) {
   const dispatch = useDispatch();
 
-  async function fetchRadis() {
-    dispatch(storeParams(params));
-
-    dispatch(hideError());
-    dispatch(showProgress());
-
-    // -------------------- Start of error checking --------------------
+  function checkParams(params) {
     console.log("----- check if wavenumbers are correct -----");
     if (400 > params.minWave > 12500 || 400 > params.maxWave > 12500) {
       console.log(
@@ -194,8 +188,15 @@ export default function Fetch({ params }) {
         "  detector is not valid. provided detector: " + params.detector
       );
     }
+  }
 
-    // -------------------- End of error checking --------------------
+  async function fetchRadis() {
+    dispatch(storeParams(params));
+
+    dispatch(hideError());
+    dispatch(showProgress());
+
+    checkParams(params);
 
     // https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch
     let response;
