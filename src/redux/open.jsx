@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useDispatch } from "react-redux";
-import { hideError, storeData, storeParams } from "./actions";
+import { setError, storeData, storeParams } from "./actions";
 
 import "../style/Open.css";
 
@@ -54,7 +54,7 @@ export const Open = () => {
     }
 
     dispatch(storeData({data: {x: xData, y: yData}}));
-    dispatch(hideError());
+    dispatch(setError({active: false}));
     toggleSucess(true);
   };
 

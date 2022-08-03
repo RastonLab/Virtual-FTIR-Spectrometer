@@ -23,9 +23,9 @@ import "../style/ExperimentalSetup.css";
 
 
 export const Experiment2 = forwardRef((props, ref) => {
-  const storedParams = useSelector((state) => state.params2);
-  const progress = useSelector((state) => state.isProgressing);
-  const error = useSelector((state) => state.isError);
+  const storedParams = useSelector((state) => state.params);
+  const progress = useSelector((state) => state.progress);
+  const error = useSelector((state) => state.error);
 
   // values set by user
   const [minWave, setMinWave] = useState(storedParams.minWave);
@@ -101,9 +101,10 @@ export const Experiment2 = forwardRef((props, ref) => {
       <div id="graph-and-error">
         {progress && <div id="spinner" />}
 
-        {error && (
+        {/* ⚠ Error reaching out to Radis App ⚠ */}
+        {error.active && (
           <div id="error">
-            <p style={{ fontSize: 30 }}>⚠ Error reaching out to Radis App ⚠</p>
+            <p style={{ fontSize: 30 }}>{error.text}</p>
           </div>
         )}
 
