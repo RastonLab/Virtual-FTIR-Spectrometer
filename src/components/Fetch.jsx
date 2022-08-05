@@ -201,9 +201,14 @@ export default function Fetch({ params }) {
     try {
       response = await fetch("http://44.203.44.133:8000/post_json", {
         method: "POST",
+        mode: "no-cors",
+        cache: "no-cache",
+        credentials: "same-origin",
         headers: {
           "Content-Type": "application/json",
         },
+        redirect: "follow",
+        referrerPolicy: "no-referrer",
         body: JSON.stringify({
           minWave: params.minWave,
           maxWave: params.maxWave,
