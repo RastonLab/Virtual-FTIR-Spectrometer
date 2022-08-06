@@ -19,7 +19,6 @@ export default function InstrumentWindow() {
       setElement(event.target.parentElement.id);
       setToggled(!toggled);
     }
-    console.log(event.target.parentElement.id);
   };
 
   return (
