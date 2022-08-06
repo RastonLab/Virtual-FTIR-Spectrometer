@@ -1,4 +1,4 @@
-<svg viewBox="0 0 24.013352 26.753329" version="1.1" id="svg862" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg">
+<svg version="1.1" id="svg862" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 300">
   <defs id="defs859">
     <linearGradient id="linearGradient2031">
       <stop style="stop-color:#373737;stop-opacity:1" offset="0" id="stop2027"/>
@@ -16,15 +16,14 @@
       <stop style="stop-color:#ffd21b;stop-opacity:1" offset=".80000001" id="stop2008"/>
       <stop style="stop-color:#c7b400;stop-opacity:1" offset="1" id="stop1354"/>
     </linearGradient>
-    <linearGradient xlink:href="#linearGradient1356" id="linearGradient1358" x1="41.523964" y1="12.1969" x2="70.721779" y2="12.262855" gradientUnits="userSpaceOnUse"/>
+    <linearGradient xlink:href="#linearGradient1356" id="linearGradient1358" x1="41.523964" y1="12.1969" x2="70.721779" y2="12.262855" gradientUnits="userSpaceOnUse" gradientTransform="matrix(11.23815 0 0 11.218 -399.0709 -131.92023)"/>
     <linearGradient xlink:href="#linearGradient2031" id="linearGradient2033" x1="44.810623" y1="39.62693" x2="21.334713" y2="38.886826" gradientUnits="userSpaceOnUse"/>
     <clipPath clipPathUnits="userSpaceOnUse" id="clipPath1171">
       <path style="fill:red;stroke-width:1.84739;stroke-linecap:square;paint-order:markers stroke fill" id="rect1173" transform="matrix(.92 .3919 -.39508 .91865 0 0)" d="M31.821415 15.462275h32.391418v15.597071H31.821415z"/>
     </clipPath>
   </defs>
-  <g id="layer1" transform="translate(-22.986739 -34.866333)">
-    <path id="rect1055" clip-path="url(#clipPath1171)" style="fill:url(#linearGradient2033);fill-opacity:1;stroke-width:1.33244;stroke-linecap:square;paint-order:markers stroke fill" d="m21.117835 56.734364 23.796935-.000257-.000283-19.384104-.01912-.000173a11.898411 2.4427199.51698 0 0 .0153-.09237 11.898411 2.4427199.51698 0 0-11.875973-2.550005 11.898411 2.4427199.51698 0 0-11.919538 2.335292 11.898411 2.4427199.51698 0 0 .09129.30676l-.08889.000232z" transform="matrix(-.99996 .01211 -.00902 -1.34244 68.411586 107.81228)"/>
-    <ellipse style="fill:#ff0;stroke-width:1.5658;stroke-linecap:square;paint-order:markers stroke fill" id="path1228" cx="56.073605" cy="12.477081" rx="14.608712" ry="6.5063558" transform="matrix(.7679 .64057 -.64385 .76515 0 0)"/>
-    <ellipse style="fill:url(#linearGradient1358);fill-opacity:1;stroke-width:1.5658;stroke-linecap:square;paint-order:markers stroke fill" id="ellipse1290" cx="56.073605" cy="12.477081" rx="14.608712" ry="6.5063558" transform="matrix(.7679 .64057 -.64385 .76515 0 0)"/>
+  <g id="parabolic-mirror" transform="translate(-22.986739 -34.866333)">
+    <path id="rect1055" clip-path="url(#clipPath1171)" style="fill:url(#linearGradient2033);fill-opacity:1;stroke-width:1.33244;stroke-linecap:square;paint-order:markers stroke fill" d="m21.117835 56.734364 23.796935-.000257-.0019-19.475833-.01749.09156c.0079-.03074.01305-.06154.0153-.09237.01224-1.349038-5.304846-2.490722-11.875973-2.550005-6.570925-.05924-11.907435.986294-11.919538 2.335292-.000799.102275.02969.20473.09129.30676l-.08622-.295467z" transform="matrix(-11.15502 .13513 -.10065 -14.97559 545.11418 850.16704)"/>
+    <ellipse style="fill:url(#linearGradient1358);fill-opacity:1;stroke-width:17.5809;stroke-linecap:square;paint-order:markers stroke fill" id="ellipse1290" cx="231.09288" cy="8.0476208" rx="164.17494" ry="72.988274" transform="matrix(.77112 .6367 -.6477 .76189 0 0)"/>
   </g>
 </svg>
