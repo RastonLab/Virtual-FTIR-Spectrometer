@@ -196,10 +196,12 @@ export default function Fetch({ params }) {
 
     checkParams(params);
 
+    // possibly remove JSON.stringify
     // https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch
     let response;
     try {
-      response = await fetch("http://44.203.44.133:8000/post_json", {
+      // response = await fetch("http://ec2-44-203-44-133.compute-1.amazonaws.com/post_json", {
+      response = await fetch("http://localhost:5000/post_json", {
         method: "POST",
         mode: "no-cors",
         cache: "no-cache",
@@ -223,42 +225,21 @@ export default function Fetch({ params }) {
           detector: params.detector,
         }),
       });
-
-      // response = await fetch("http://localhost:5000/post_json", {
-      //   method: "POST",
-      //   mode: "cors",
-      //   cache: "no-cache",
-      //   credentials: "same-origin",
-      //   headers: {
-      //     "Content-Type": "application/json",
-      //   },
-      //   redirect: "follow",
-      //   referrerPolicy: "no-referrer",
-      //   body: JSON.stringify({
-      //     minWave: params.minWave,
-      //     maxWave: params.maxWave,
-      //     molecule: params.molecule,
-      //     pressure: params.pressure,
-      //     resolution: params.resolution,
-      //     numScan: params.numScan,
-      //     zeroFill: params.zeroFill,
-      //     source: params.source,
-      //     beamsplitter: params.beamsplitter,
-      //     cellWindow: params.cellWindow,
-      //     detector: params.detector,
-      //   }),
-      // });
+      console.log("after await fetch");
 
       if (response.ok) {
         const data = await response.text();
         dispatch(storeData(JSON.parse(data)));
         dispatch(setProgress(false));
       } else {
+        console.log(response);
+        let body = await response.json();
+        console.log(body);
         dispatch(setProgress(false));
         dispatch(setError({ active: true, text: "Error 1" }));
       }
     } catch (error) {
-      // console.log(error);
+      console.log(error);
       dispatch(setProgress(false));
       dispatch(setError({ active: true, text: "Error 2" }));
     }
