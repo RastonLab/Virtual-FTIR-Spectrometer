@@ -196,36 +196,64 @@ export default function Fetch({ params }) {
 
     checkParams(params);
 
-    // possibly remove JSON.stringify
     // https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch
     let response;
+    // try {
+    //   // response = await fetch("http://ec2-44-203-44-133.compute-1.amazonaws.com/post_json", {
+    //   response = await fetch("http://localhost:5000/post_json", {
+    //     method: "POST",
+    //     mode: "no-cors",
+    //     cache: "no-cache",
+    //     credentials: "same-origin",
+    //     headers: {
+    //       "Content-Type": "application/json",
+    //     },
+    //     redirect: "follow",
+    //     referrerPolicy: "no-referrer",
+    //     body: JSON.stringify({
+    //       minWave: params.minWave,
+    //       maxWave: params.maxWave,
+    //       molecule: params.molecule,
+    //       pressure: params.pressure,
+    //       resolution: params.resolution,
+    //       numScan: params.numScan,
+    //       zeroFill: params.zeroFill,
+    //       source: params.source,
+    //       beamsplitter: params.beamsplitter,
+    //       cellWindow: params.cellWindow,
+    //       detector: params.detector,
+    //     }),
+    //   });
+
     try {
-      // response = await fetch("http://ec2-44-203-44-133.compute-1.amazonaws.com/post_json", {
-      response = await fetch("http://localhost:5000/post_json", {
-        method: "POST",
-        mode: "no-cors",
-        cache: "no-cache",
-        credentials: "same-origin",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        redirect: "follow",
-        referrerPolicy: "no-referrer",
-        body: JSON.stringify({
-          minWave: params.minWave,
-          maxWave: params.maxWave,
-          molecule: params.molecule,
-          pressure: params.pressure,
-          resolution: params.resolution,
-          numScan: params.numScan,
-          zeroFill: params.zeroFill,
-          source: params.source,
-          beamsplitter: params.beamsplitter,
-          cellWindow: params.cellWindow,
-          detector: params.detector,
-        }),
-      });
-      console.log("after await fetch");
+      response = await fetch(
+        "http://ec2-44-203-44-133.compute-1.amazonaws.com/post_json",
+        {
+          headers: {
+            accept: "*/*",
+            "accept-language": "en-US,en;q=0.9",
+            "cache-control": "max-age=0",
+            "content-type": "text/plain;charset=UTF-8",
+          },
+          referrerPolicy: "no-referrer",
+          body: JSON.stringify({
+            minWave: params.minWave,
+            maxWave: params.maxWave,
+            molecule: params.molecule,
+            pressure: params.pressure,
+            resolution: params.resolution,
+            numScan: params.numScan,
+            zeroFill: params.zeroFill,
+            source: params.source,
+            beamsplitter: params.beamsplitter,
+            cellWindow: params.cellWindow,
+            detector: params.detector,
+          }),
+          method: "POST",
+          mode: "cors",
+          credentials: "omit",
+        }
+      );
 
       if (response.ok) {
         const data = await response.text();
