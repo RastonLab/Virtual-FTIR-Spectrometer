@@ -3,11 +3,9 @@ export const Action = Object.freeze({
 
   StoreData: "StoreData",
 
-  ShowProgress: "ShowProgress",
-  HideProgress: "HideProgress",
+  SetProgress: "SetProgress",
 
-  ShowError: "ShowError",
-  HideError: "HideError",
+  SetError: "SetError",
 });
 
 // -------------------- calc_spectrum parameters --------------------
@@ -21,17 +19,11 @@ export function storeData(data) {
 }
 
 // -------------------- progress spinner --------------------
-export function showProgress(progress) {
-  return { type: Action.ShowProgress, payload: progress };
-}
-export function hideProgress(progress) {
-  return { type: Action.HideProgress, payload: progress };
+export function setProgress(progress) {
+  return { type: Action.SetProgress, payload: progress };
 }
 
 // -------------------- error text --------------------
-export function showError(error) {
-  return { type: Action.ShowError, payload: error };
-}
-export function hideError(error) {
-  return { type: Action.HideError, payload: error };
+export function setError(error) {
+  return { type: Action.SetError, payload: error };
 }

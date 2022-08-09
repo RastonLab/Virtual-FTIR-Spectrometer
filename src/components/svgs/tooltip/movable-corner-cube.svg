@@ -1,5 +1,6 @@
-<svg viewBox="0 0 87.590659 141.71717" version="1.1" id="svg6714" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg">
+<svg version="1.1" id="svg6714" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 185.42 300">
   <defs id="defs6711">
+    <linearGradient xlink:href="#linearGradient48984" id="linearGradient2933" gradientUnits="userSpaceOnUse" gradientTransform="matrix(0 -.92798 -1.56899 0 958.48819 709.8929)" x1="304.20673" y1="103.94676" x2="452.36444" y2="103.94676"/>
     <linearGradient id="linearGradient48984">
       <stop style="stop-color:#3d3d3d;stop-opacity:1" offset="0" id="stop48980"/>
       <stop style="stop-color:#5b5b5b;stop-opacity:1" offset=".2" id="stop48988"/>
@@ -8,11 +9,10 @@
       <stop style="stop-color:#5d5d5d;stop-opacity:1" offset=".80000001" id="stop48994"/>
       <stop style="stop-color:#575757;stop-opacity:1" offset="1" id="stop48982"/>
     </linearGradient>
-    <linearGradient xlink:href="#linearGradient48984" id="linearGradient2933" gradientUnits="userSpaceOnUse" gradientTransform="matrix(0 -.92798 -1.56899 0 764.4694 638.26382)" x1="304.20673" y1="103.94676" x2="452.36444" y2="103.94676"/>
+    <linearGradient xlink:href="#linearGradient48984" id="linearGradient4118" gradientUnits="userSpaceOnUse" gradientTransform="matrix(0 -.94968 -1.61437 0 963.88508 718.11067)" x1="304.20673" y1="103.94676" x2="452.36444" y2="103.94676"/>
   </defs>
-  <g id="layer1" transform="translate(-557.57784 -216.41963)">
-    <g id="movable-corner-cube">
-      <path id="path2931" style="fill:url(#linearGradient2933);fill-opacity:1;stroke:#f7c400;stroke-width:2.95728;stroke-linecap:square;stroke-dasharray:none;stroke-opacity:1;paint-order:markers stroke fill" d="m643.06748 280.54476-67.10416 75.42172-12.10638-12.44742 57.38711-62.53501-61.55501-51.46375 9.70412-11.04098 73.18539 61.18784-.22657.25823z"/>
-    </g>
+  <g id="movable-corner-cube" transform="translate(-1591.0492 -609.76813) scale(2.11689)">
+    <path id="path2931" style="fill:url(#linearGradient2933);fill-opacity:1;stroke:#f7c400;stroke-width:2.95728;stroke-linecap:square;stroke-dasharray:none;stroke-opacity:1;paint-order:markers stroke fill" d="m837.08627 352.17384-67.10416 75.42172-12.10638-12.44742 57.38711-62.53501-61.55501-51.46375 9.70412-11.04098 73.18539 61.18784-.22657.25823z"/>
+    <path id="path4116" style="fill:url(#linearGradient4118);fill-opacity:1;stroke:none;stroke-width:3.03462;stroke-linecap:square;stroke-dasharray:none;stroke-opacity:1;paint-order:markers stroke fill" d="m838.9717 352.02515-69.04512 77.18571-12.45655-12.73854 59.04701-63.9976-63.33547-52.6674 9.98481-11.29921 75.30225 62.61892-.23313.26427z"/>
   </g>
 </svg>

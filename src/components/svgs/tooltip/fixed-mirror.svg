@@ -1,5 +1,6 @@
-<svg viewBox="0 0 58.034331 58.811118" version="1.1" id="svg6714" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg">
+<svg version="1.1" id="svg6714" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 279.15125">
   <defs id="defs6711">
+    <linearGradient xlink:href="#linearGradient10026" id="linearGradient45340" gradientUnits="userSpaceOnUse" gradientTransform="matrix(.80626 0 0 .7818 -755.58518 30.542612)" x1="145.96878" y1="63.453781" x2="230.23941" y2="63.453781"/>
     <linearGradient id="linearGradient10026">
       <stop style="stop-color:#484848;stop-opacity:1" offset="0" id="stop10022"/>
       <stop style="stop-color:#333;stop-opacity:1" offset=".2" id="stop10030"/>
@@ -8,11 +9,10 @@
       <stop style="stop-color:#4a4a4a;stop-opacity:1" offset=".80000001" id="stop10036"/>
       <stop style="stop-color:#000;stop-opacity:1" offset="1" id="stop10024"/>
     </linearGradient>
-    <linearGradient xlink:href="#linearGradient10026" id="linearGradient45340" gradientUnits="userSpaceOnUse" gradientTransform="matrix(.80626 0 0 .7818 -644.71357 61.117248)" x1="145.96878" y1="63.453781" x2="230.23941" y2="63.453781"/>
+    <linearGradient xlink:href="#linearGradient10026" id="linearGradient4522" gradientUnits="userSpaceOnUse" gradientTransform="matrix(.82486 0 0 .80276 -760.10018 33.88851)" x1="145.96878" y1="63.453781" x2="230.23941" y2="63.453781"/>
   </defs>
-  <g id="layer1" transform="translate(-393.93264 -232.87906)">
-    <g id="fixed-mirror">
-      <path style="fill:url(#linearGradient45340);fill-opacity:1;stroke:#f7c400;stroke-width:1.67273;stroke-linecap:square;stroke-opacity:1;paint-order:markers stroke fill" id="rect10254" transform="matrix(-.7117 -.70249 .65068 -.75935 0 0)" d="M-527.0246 105.03921h67.944145v11.372651H-527.0246z"/>
-    </g>
+  <g id="fixed-mirror" transform="translate(-2353.9174 -1509.744) scale(4.96707)">
+    <path style="fill:url(#linearGradient45340);fill-opacity:1;stroke:#f7c400;stroke-width:1.67273;stroke-linecap:square;stroke-opacity:1;paint-order:markers stroke fill" id="rect45338" transform="matrix(-.75494 -.6558 .60106 -.7992 0 0)" d="M-637.89624 74.464577h67.944145v11.372651h-67.944145z"/>
+    <path style="fill:url(#linearGradient4522);fill-opacity:1;stroke:none;stroke-width:1.71444;stroke-linecap:square;stroke-opacity:1;paint-order:markers stroke fill" id="rect4520" transform="matrix(-.74923 -.6623 .59434 -.80421 0 0)" d="M-639.69586 78.987816h69.511787v11.677498h-69.511787z"/>
   </g>
 </svg>
