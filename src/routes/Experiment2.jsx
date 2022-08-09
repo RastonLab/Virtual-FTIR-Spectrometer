@@ -2,7 +2,7 @@ import React, { forwardRef, useState } from "react";
 import { useSelector } from "react-redux";
 
 // additional components
-import Fetch2 from "../components/Fetch2";
+import Fetch from "../components/Fetch";
 import {Plotly} from "../components/Plotly2";
 
 // inputs
@@ -23,9 +23,9 @@ import "../style/ExperimentalSetup.css";
 
 
 export const Experiment2 = forwardRef((props, ref) => {
-  const storedParams = useSelector((state) => state.params2);
-  const progress = useSelector((state) => state.isProgressing);
-  const error = useSelector((state) => state.isError);
+  const storedParams = useSelector((state) => state.params);
+  const progress = useSelector((state) => state.progress);
+  const error = useSelector((state) => state.error);
 
   // values set by user
   const [minWave, setMinWave] = useState(storedParams.minWave);
@@ -80,7 +80,7 @@ export const Experiment2 = forwardRef((props, ref) => {
           />
 
           <div className="fetch-zone">
-            <Fetch2
+            <Fetch
               params={{
                 minWave,
                 maxWave,
@@ -101,13 +101,13 @@ export const Experiment2 = forwardRef((props, ref) => {
       <div id="graph-and-error">
         {progress && <div id="spinner" />}
 
-        {error && (
+        {error.active && (
           <div id="error">
-            <p style={{ fontSize: 30 }}>⚠ Error reaching out to Radis App ⚠</p>
+            <p style={{ fontSize: 30 }}>{error.text}</p>
           </div>
         )}
 
-        {!progress && <Plotly />}
+        {!progress && !error.active && <Plotly />}
       </div>
     </div>
   );

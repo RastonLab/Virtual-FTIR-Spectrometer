@@ -9,8 +9,8 @@ export const Save = () => {
   }
 
   const params = state.params2;
-  const xVals = state.data.data.x;
-  const yVals = state.data.data.y;
+  const xVals = state.data.x;
+  const yVals = state.data.y;
 
   // TODO Add params to first line
   let data = `# Min Wavenumber: ${params.minWave} Max Wavenumber: ${params.maxWave} Molecule: ${params.molecule} Pressure: ${params.pressure} Resolution: ${params.resolution} Number of Scans: ${params.numScan} Zero Fill: ${params.zeroFill} Source: ${params.source} Beamsplitter: ${params.beamsplitter} Cell Window: ${params.cellWindow} Detector: ${params.detector} \n`;

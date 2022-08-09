@@ -17,7 +17,7 @@ export default function Molecule({ val, setter }) {
           C<sub>2</sub>H<sub>4</sub>
         </MenuItem>
         <MenuItem value="C2H6">
-          C<sub>2</sub>H<sub>4</sub>
+          C<sub>2</sub>H<sub>6</sub>
         </MenuItem>
         <MenuItem value="C2N2">
           C<sub>2</sub>N<sub>2</sub>
