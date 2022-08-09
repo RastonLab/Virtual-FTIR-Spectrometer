@@ -2,7 +2,7 @@ import React from "react";
 import { useState } from "react";
 import { Dialog } from "@mui/material";
 import { ReactComponent as Main } from "../components/svgs/ftir-main.svg";
-import { imgSource, toolTips } from "../dictionaries/SVGLibrary";
+import { toolTips } from "../dictionaries/SVGLibrary";
 
 import "../style/InstrumentWindow.css";
 
@@ -13,6 +13,7 @@ export default function InstrumentWindow() {
   const handleClick = (event) => {
     if (
       event.target.parentElement.id !== "instrument-window" &&
+      event.target.parentElement.id !== "instrument" &&
       event.target.parentElement.id !== "ftir"
     ) {
       setElement(event.target.parentElement.id);
@@ -22,12 +23,12 @@ export default function InstrumentWindow() {
 
   return (
     <div id="instrument-window">
-      <Main id="instument" onClick={handleClick} />
+      <Main id="instrument" onClick={handleClick} />
 
       {element && (
         <Dialog className="popup" onClose={handleClick} open={toggled}>
           <h2>{toolTips[element].title}</h2>
-          <img src={imgSource[element]} className="example-image" alt="" />
+          <img src={toolTips[element].image} className="example-image" alt="" />
           <p>{toolTips[element].text}</p>
         </Dialog>
       )}

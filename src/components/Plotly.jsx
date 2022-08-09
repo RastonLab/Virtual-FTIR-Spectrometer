@@ -39,8 +39,8 @@ export default function Plotly() {
             className="Plot"
             data={[
               {
-                x: data.data.x,
-                y: data.data.y,
+                x: data.x,
+                y: data.y,
                 type: "scatter",
                 marker: { color: "#f50057" },
               },

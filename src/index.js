@@ -6,7 +6,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import App from "./App";
 import InstrumentWindow from "./routes/InstrumentWindow";
 import ExperimentalSetup from "./routes/ExperimentalSetup";
-import {Experiment2} from "./routes/Experiment2";
+import { Experiment2 } from "./routes/Experiment2";
 import SpectrumWindow from "./routes/SpectrumWindow";
 import NotFound from "./components/NotFound";
 import LandingPage from "./routes/LandingPage";
