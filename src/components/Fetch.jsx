@@ -198,36 +198,10 @@ export default function Fetch({ params }) {
 
     // https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch
     let response;
-    // try {
-    //   // response = await fetch("http://ec2-44-203-44-133.compute-1.amazonaws.com/post_json", {
-    //   response = await fetch("http://localhost:5000/post_json", {
-    //     method: "POST",
-    //     mode: "no-cors",
-    //     cache: "no-cache",
-    //     credentials: "same-origin",
-    //     headers: {
-    //       "Content-Type": "application/json",
-    //     },
-    //     redirect: "follow",
-    //     referrerPolicy: "no-referrer",
-    //     body: JSON.stringify({
-    //       minWave: params.minWave,
-    //       maxWave: params.maxWave,
-    //       molecule: params.molecule,
-    //       pressure: params.pressure,
-    //       resolution: params.resolution,
-    //       numScan: params.numScan,
-    //       zeroFill: params.zeroFill,
-    //       source: params.source,
-    //       beamsplitter: params.beamsplitter,
-    //       cellWindow: params.cellWindow,
-    //       detector: params.detector,
-    //     }),
-    //   });
-
     try {
       response = await fetch(
-        "http://ec2-44-203-44-133.compute-1.amazonaws.com/post_json",
+        "http://localhost:5000/post_json",
+        // "http://ec2-44-203-44-133.compute-1.amazonaws.com/post_json",
         {
           headers: {
             accept: "*/*",
@@ -255,21 +229,20 @@ export default function Fetch({ params }) {
         }
       );
 
-      if (response.ok) {
-        const data = await response.text();
-        dispatch(storeData(JSON.parse(data)));
+      const data = await response.json();
+      if (data.success) {
+        // console.log(data);
+        dispatch(storeData(data));
         dispatch(setProgress(false));
       } else {
-        console.log(response);
-        let body = await response.json();
-        console.log(body);
+        // console.log(data);
         dispatch(setProgress(false));
-        dispatch(setError({ active: true, text: "Error 1" }));
+        dispatch(setError({ active: true, text: String(data.text) }));
       }
     } catch (error) {
-      console.log(error);
+      // console.log(error);
       dispatch(setProgress(false));
-      dispatch(setError({ active: true, text: "Error 2" }));
+      dispatch(setError({ active: true, text: "Uncaught error" }));
     }
   }
 

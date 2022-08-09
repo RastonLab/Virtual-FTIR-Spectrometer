@@ -101,14 +101,13 @@ export const Experiment2 = forwardRef((props, ref) => {
       <div id="graph-and-error">
         {progress && <div id="spinner" />}
 
-        {/* ⚠ Error reaching out to Radis App ⚠ */}
         {error.active && (
           <div id="error">
             <p style={{ fontSize: 30 }}>{error.text}</p>
           </div>
         )}
 
-        {!progress && <Plotly />}
+        {!progress && !error.active && <Plotly />}
       </div>
     </div>
   );
