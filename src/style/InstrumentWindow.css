@@ -47,15 +47,27 @@ g {
   flex-direction: column;
   align-items: center;
 
-  border: 1px solid black;
+  color: white;
+  background-color: #1d2022;
+  border: 5px solid goldenrod;
   padding: 5px;
   margin: 10px;
+}
+
+.electronics h2 {
+  font-family: "Montserrat";
+  color: goldenrod;
+}
+
+.electronics label {
+  font-family: "Roboto";
 }
 
 .electronics-top {
   display: grid;
   grid-template-columns: auto auto;
   text-align: center;
+  padding-bottom: 20px;
 }
 
 .electronics-bottom {
@@ -72,4 +84,6 @@ input {
   display: flex;
   flex-direction: row;
   text-align: center;
+  font-family: "Montserrat";
+  font-weight: 700;
 }

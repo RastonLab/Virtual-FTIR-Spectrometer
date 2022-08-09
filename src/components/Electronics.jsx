@@ -40,7 +40,7 @@ export default function Electronics() {
         </div>
       </div>
 
-      <h3>Readouts</h3>
+      <h2>Readouts</h2>
 
       <div className="electronics-bottom">
         <div className="grid">
