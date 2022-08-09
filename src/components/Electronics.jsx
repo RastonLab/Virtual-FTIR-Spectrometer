@@ -14,28 +14,28 @@ export default function Electronics() {
         <div className="grid">
           <label>
             Source
-            <input value={storedParams.source} />
+            <input value={storedParams.source} readOnly />
           </label>
         </div>
 
         <div className="grid">
           <label>
             Beamsplitter
-            <input value={storedParams.beamsplitter} />
+            <input value={storedParams.beamsplitter} readOnly />
           </label>
         </div>
 
         <div className="grid">
           <label>
             Gas
-            <input value="294.15" />
+            <input value="294.15" readOnly />
           </label>
         </div>
 
         <div className="grid">
           <label>
             Detector
-            <input value={storedParams.detector} />
+            <input value={storedParams.detector} readOnly />
           </label>
         </div>
       </div>
@@ -53,21 +53,21 @@ export default function Electronics() {
         <div className="grid">
           <label>
             Number of Scans
-            <input value={storedParams.numScan} />
+            <input value={storedParams.numScan} readOnly />
           </label>
         </div>
 
         <div className="grid">
           <label>
             Range
-            <input value={`${storedParams.minWave} - ${storedParams.maxWave} cm`} />
+            <input value={`${storedParams.minWave} - ${storedParams.maxWave} cm`} readOnly />
           </label>
         </div>
 
         <div className="grid">
           <label>
             Resolution
-            <input value={`${storedParams.resolution} cm`} />
+            <input value={`${storedParams.resolution} cm`} readOnly />
           </label>
         </div>
       </div>
