@@ -5,6 +5,8 @@ import { ReactComponent as Main } from "../components/svgs/ftir-main.svg";
 import { imgSource, toolTips } from "../dictionaries/SVGLibrary";
 
 import "../style/InstrumentWindow.css";
+import Electronics from "../components/Electronics";
+import { Plotly } from "../components/Plotly2";
 
 export default function InstrumentWindow() {
   const [toggled, setToggled] = useState(false);
@@ -22,7 +24,11 @@ export default function InstrumentWindow() {
 
   return (
     <div id="instrument-window">
-      <Main id="instument" onClick={handleClick} />
+      <div id="readout">
+        <Electronics />
+        <Plotly id="graph" />
+      </div>
+      <Main id="instrument" onClick={handleClick} />
 
       {element && (
         <Dialog className="popup" onClose={handleClick} open={toggled}>

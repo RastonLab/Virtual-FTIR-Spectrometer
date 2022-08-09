@@ -4,9 +4,16 @@
   justify-content: center;
 }
 
-#instument {
+#instrument {
   height: auto;
   width: 55%;
+  margin: 10px;
+}
+
+#readout {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
 }
 
 /* ---------- svg components ---------- */
@@ -40,7 +47,7 @@ g {
 
   border: 1px solid black;
   padding: 5px;
-  margin: 5px;
+  margin: 10px;
 }
 
 .electronics-top {
@@ -62,4 +69,5 @@ g {
 input {
   display: flex;
   flex-direction: row;
+  text-align: center;
 }
