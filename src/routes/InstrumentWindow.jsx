@@ -26,7 +26,7 @@ export default function InstrumentWindow() {
     <div id="instrument-window">
       <div id="readout">
         <Electronics />
-        <Plotly id="graph" />
+        <Plotly />
       </div>
       <Main id="instrument" onClick={handleClick} />
 

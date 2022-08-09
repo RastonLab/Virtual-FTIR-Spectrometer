@@ -5,14 +5,16 @@
 }
 
 #instrument {
-  height: auto;
+  height: 90vh;
   width: 55%;
-  margin: 10px;
+  padding: 10px;
 }
 
 #readout {
   display: flex;
   flex-direction: column;
+  width: auto;
+  height: 92vh;
   flex-grow: 1;
 }
 
