@@ -200,8 +200,8 @@ export default function Fetch({ params }) {
     let response;
     try {
       response = await fetch(
-        // "http://localhost:5000/post_json",
-        "http://ec2-44-203-44-133.compute-1.amazonaws.com/post_json",
+        "http://localhost:5000/post_json",
+        // "http://ec2-44-203-44-133.compute-1.amazonaws.com/post_json",
         {
           headers: {
             accept: "*/*",
