@@ -3,7 +3,7 @@ import { useSelector } from "react-redux";
 
 export default function Electronics() {
 
-  const storedParams = useSelector((state) => state.params2);
+  const storedParams = useSelector((state) => state.params);
 
 
   return (
