@@ -2,7 +2,7 @@ import React from "react";
 import { useSelector } from "react-redux";
 import { Outlet } from "react-router-dom";
 
-import Plotly from "../components/Plotly";
+import { Plotly } from "../components/Plotly";
 
 import "../style/SpectrumWindow.css";
 

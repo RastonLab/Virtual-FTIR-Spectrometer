@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Input, Slider } from "@mui/material";
 
 export default function Wavenumber(min, max, setMin, setMax) {
-  const [wavenumbers, setWavenumbers] = useState([4000, 9000]); //NOTE Issues bringing in defualt val from Experiment2
+  const [wavenumbers, setWavenumbers] = useState([4000, 9000]); //NOTE Issues bringing in default val from ExperimentalSetup
 
   const handleSliderChange = (e) => {
     // setWavenumbers(e.target.value) //
