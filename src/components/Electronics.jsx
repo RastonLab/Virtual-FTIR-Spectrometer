@@ -2,9 +2,7 @@ import React from "react";
 import { useSelector } from "react-redux";
 
 export default function Electronics() {
-
-  const storedParams = useSelector((state) => state.params2);
-
+  const storedParams = useSelector((state) => state.params);
 
   return (
     <div className="electronics">
@@ -46,7 +44,7 @@ export default function Electronics() {
         <div className="grid">
           <label>
             OPD
-            <input></input>
+            <input value={storedParams.resolution} readOnly></input>
           </label>
         </div>
 
@@ -60,7 +58,10 @@ export default function Electronics() {
         <div className="grid">
           <label>
             Range
-            <input value={`${storedParams.minWave} - ${storedParams.maxWave} cm`} readOnly />
+            <input
+              value={`${storedParams.minWave} - ${storedParams.maxWave} cm`}
+              readOnly
+            />
           </label>
         </div>
 
