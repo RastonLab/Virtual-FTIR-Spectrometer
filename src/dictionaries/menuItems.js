@@ -1,6 +1,6 @@
 import { Save } from "../redux/save";
 import { Open } from "../redux/open";
-import  Print  from "../components/Print";
+import Print from "../components/Print";
 export const menuItems = [
   {
     label: "File",
@@ -19,7 +19,7 @@ export const menuItems = [
         label: "Print",
         button: true,
         title: "",
-        text: <Print />
+        text: <Print />,
       },
     ],
   },
@@ -27,10 +27,10 @@ export const menuItems = [
     label: "Collect",
     submenu: [
       {
-        label: "Aquire Background Sample",
+        label: "Acquire Background Sample",
       },
       {
-        label: "Stop Aquisition",
+        label: "Stop Acquisition",
       },
     ],
   },
@@ -45,13 +45,9 @@ export const menuItems = [
   {
     label: "Window",
     submenu: [
-      // {
-      //   label: "Experimental Setup",
-      //   link: "/experimental-setup",
-      // },
       {
         label: "Experimental Setup",
-        link: "/experiment2",
+        link: "/experimental-setup",
       },
       {
         label: "Instrument",
@@ -78,7 +74,7 @@ export const menuItems = [
         title: "About The FTIR",
         text: (
           <p>
-            Insert Lorum ipsum text
+            Insert Lorem ipsum text
             <br />
             Format test
           </p>

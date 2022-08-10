@@ -1,34 +1,11 @@
-import React from "react";
+import React, { forwardRef } from "react";
 import { useSelector } from "react-redux";
 
 import Plot from "react-plotly.js";
 
-export default function Plotly() {
+export const Plotly = forwardRef((props, ref) => {
   const data = useSelector((state) => state.data);
-
   const params = useSelector((state) => state.params);
-  const addSubscriptsToMolecule = (molecule) => {
-    const subscripts = "₁₂₃₄₅₆₇₈₉".split("");
-    return molecule
-      .split("")
-      .map((char) =>
-        /^\d+$/.test(char) ? subscripts[parseInt(char) - 1] : char
-      )
-      .join("");
-  };
-
-  let modeLabel = "",
-    units = "";
-  if (params.mode === "absorbance") {
-    modeLabel = "Absorbance";
-    units = "-ln(I/I0)";
-  } else if (params.mode === "transmittance_noslit") {
-    modeLabel = "Transmittance";
-  } else if (params.mode === "radiance_noslit") {
-    modeLabel = "Radiance";
-  } else {
-    throw new Error("Invalid mode");
-  }
 
   if (data) {
     // https://github.com/suzil/radis-app/blob/main/frontend/src/components/CalcSpectrumPlot.tsx
@@ -36,6 +13,7 @@ export default function Plotly() {
       <>
         {
           <Plot
+            ref={ref}
             className="Plot"
             data={[
               {
@@ -46,25 +24,13 @@ export default function Plotly() {
               },
             ]}
             layout={{
-              width: 800,
+              width: 750,
               height: 600,
-              title: `Spectrum for ${params.species
-                .map(({ molecule, mole_fraction }) => {
-                  const moleculeWithSubscripts = addSubscriptsToMolecule(
-                    molecule || ""
-                  );
-                  return `${moleculeWithSubscripts} (χ${moleculeWithSubscripts.sub()} = ${Number(
-                    mole_fraction
-                  )})`;
-                })
-                .join(", ")}`,
+              title: "Spectrum",
               font: { family: "Roboto", color: "#000" },
               xaxis: {
-                range: [
-                  params.min_wavenumber_range,
-                  params.max_wavenumber_range,
-                ],
-                title: { text: "Wavenumber (cm⁻¹)" },
+                range: [10000000 / params.maxWave, 10000000 / params.minWave],
+                title: { text: "Wavelength (nm)" },
                 rangeslider: {
                   autorange: true,
                   yaxis: { rangemode: "auto" },
@@ -74,7 +40,7 @@ export default function Plotly() {
               yaxis: {
                 autorange: true,
                 title: {
-                  text: `${modeLabel}${units.length ? " (" + units + ")" : ""}`,
+                  text: "transmittance_noslit",
                 },
                 type: "linear",
                 fixedrange: false,
@@ -87,4 +53,4 @@ export default function Plotly() {
   } else {
     return <div></div>;
   }
-}
+});
