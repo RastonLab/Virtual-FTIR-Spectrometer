@@ -12,7 +12,14 @@ export default function Electronics() {
         <div className="grid">
           <label>
             Source
-            <input value={storedParams.source} readOnly />
+            <input
+              value={
+                storedParams.source === 1700
+                  ? "Globar (1700K)"
+                  : "Tungsten (3100K)"
+              }
+              readOnly
+            />
           </label>
         </div>
 
@@ -59,7 +66,7 @@ export default function Electronics() {
           <label>
             Range
             <input
-              value={`${storedParams.minWave} - ${storedParams.maxWave} cm`}
+              value={`${storedParams.minWave} - ${storedParams.maxWave} cm^-1`} // FIXME - find better way to superscript
               readOnly
             />
           </label>
