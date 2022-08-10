@@ -1,6 +1,11 @@
 import React from "react";
+import { useSelector } from "react-redux";
 
 export default function Electronics() {
+
+  const storedParams = useSelector((state) => state.params2);
+
+
   return (
     <div className="electronics">
       <h2>Electronics</h2>
@@ -9,33 +14,33 @@ export default function Electronics() {
         <div className="grid">
           <label>
             Source
-            <input></input>
+            <input value={storedParams.source} readOnly />
           </label>
         </div>
 
         <div className="grid">
           <label>
             Beamsplitter
-            <input></input>
+            <input value={storedParams.beamsplitter} readOnly />
           </label>
         </div>
 
         <div className="grid">
           <label>
             Gas
-            <input></input>
+            <input value="294.15" readOnly />
           </label>
         </div>
 
         <div className="grid">
           <label>
             Detector
-            <input></input>
+            <input value={storedParams.detector} readOnly />
           </label>
         </div>
       </div>
 
-      <h3>Readouts</h3>
+      <h2>Readouts</h2>
 
       <div className="electronics-bottom">
         <div className="grid">
@@ -48,21 +53,21 @@ export default function Electronics() {
         <div className="grid">
           <label>
             Number of Scans
-            <input></input>
+            <input value={storedParams.numScan} readOnly />
           </label>
         </div>
 
         <div className="grid">
           <label>
             Range
-            <input></input>
+            <input value={`${storedParams.minWave} - ${storedParams.maxWave} cm`} readOnly />
           </label>
         </div>
 
         <div className="grid">
           <label>
             Resolution
-            <input></input>
+            <input value={`${storedParams.resolution} cm`} readOnly />
           </label>
         </div>
       </div>
