@@ -53,7 +53,7 @@ export const Open = () => {
         rawData = rawData.substring(index + 1);
     }
 
-    dispatch(storeData({data: {x: xData, y: yData}}));
+    dispatch(storeData({x: xData, y: yData}));
     dispatch(setError({active: false}));
     toggleSucess(true);
   };

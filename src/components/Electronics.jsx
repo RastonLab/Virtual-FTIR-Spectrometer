@@ -2,9 +2,13 @@ import React from "react";
 import { useSelector } from "react-redux";
 
 export default function Electronics() {
+<<<<<<< HEAD
 
   const storedParams = useSelector((state) => state.params);
 
+=======
+  const storedParams = useSelector((state) => state.params);
+>>>>>>> 091c29c085aa6fcf74fe1c49a8f92b0117a35b31
 
   return (
     <div className="electronics">
@@ -14,7 +18,14 @@ export default function Electronics() {
         <div className="grid">
           <label>
             Source
-            <input value={storedParams.source} readOnly />
+            <input
+              value={
+                storedParams.source === 1700
+                  ? "Globar (1700K)"
+                  : "Tungsten (3100K)"
+              }
+              readOnly
+            />
           </label>
         </div>
 
@@ -46,7 +57,7 @@ export default function Electronics() {
         <div className="grid">
           <label>
             OPD
-            <input></input>
+            <input value={storedParams.resolution} readOnly></input>
           </label>
         </div>
 
@@ -60,7 +71,10 @@ export default function Electronics() {
         <div className="grid">
           <label>
             Range
-            <input value={`${storedParams.minWave} - ${storedParams.maxWave} cm`} readOnly />
+            <input
+              value={`${storedParams.minWave} - ${storedParams.maxWave} cm^-1`} // FIXME - find better way to superscript
+              readOnly
+            />
           </label>
         </div>
 

@@ -6,7 +6,7 @@ import { toolTips } from "../dictionaries/SVGLibrary";
 
 import "../style/InstrumentWindow.css";
 import Electronics from "../components/Electronics";
-import { Plotly } from "../components/Plotly2";
+import { Plotly } from "../components/Plotly";
 
 export default function InstrumentWindow() {
   const [toggled, setToggled] = useState(false);

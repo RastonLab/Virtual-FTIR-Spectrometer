@@ -12,7 +12,7 @@ const initialState = {
     resolution: 1,
     numScan: 1,
     zeroFill: 0,
-    source: "Tungsten",
+    source: 3100,
     beamsplitter: "AR_ZnSe",
     cellWindow: "CaF2",
     detector: "MCT",

@@ -146,11 +146,7 @@ export default function Fetch({ params }) {
     }
 
     // console.log("----- check if source is correct -----");
-    if (params.source === "Globar") {
-      params.source = 1700;
-      // console.log("  good!");
-    } else if (params.source === "Tungsten") {
-      params.source = 3100;
+    if (params.source === 1700 || params.source === 3100) {
       // console.log("  good!");
     } else {
       console.log("  source is not valid. provided source: " + params.source);

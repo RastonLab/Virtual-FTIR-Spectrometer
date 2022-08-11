@@ -8,7 +8,7 @@ export const Save = () => {
     return;
   }
 
-  const params = state.params2;
+  const params = state.params;
   const xVals = state.data.x;
   const yVals = state.data.y;
 

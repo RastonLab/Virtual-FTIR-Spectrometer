@@ -8,9 +8,9 @@ export default function Source({ params, setParams }) {
       <label>Globar</label>
       <CustomSwitch
         color="secondary"
-        checked={params === "Tungsten"}
+        checked={params === 3100}
         onClick={() => {
-          params === "Globar" ? setParams("Tungsten") : setParams("Globar");
+          params === 1700 ? setParams(3100) : setParams(1700);
         }}
       />
       <label>Tungsten</label>
