@@ -3,6 +3,7 @@ import { useSelector } from "react-redux";
 
 // additional components
 import Fetch from "../components/Fetch";
+import GenerateBackground from "../components/GenerateBackground";
 import { Plotly } from "../components/Plotly";
 
 // inputs
@@ -94,6 +95,7 @@ const ExperimentalSetup = (props, ref) => {
                 detector,
               }}
             />
+            <GenerateBackground params={{minWave, maxWave}} />
           </div>
         </div>
       </div>
