@@ -2,13 +2,8 @@ import React from "react";
 import { useSelector } from "react-redux";
 
 export default function Electronics() {
-<<<<<<< HEAD
 
   const storedParams = useSelector((state) => state.params);
-
-=======
-  const storedParams = useSelector((state) => state.params);
->>>>>>> 091c29c085aa6fcf74fe1c49a8f92b0117a35b31
 
   return (
     <div className="electronics">
