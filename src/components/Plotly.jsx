@@ -14,7 +14,7 @@ export const Plotly = forwardRef((props, ref) => {
         {
           <Plot
             ref={ref}
-            className="Plot"
+            className="plotly"
             data={[
               {
                 x: data.x,
@@ -24,9 +24,7 @@ export const Plotly = forwardRef((props, ref) => {
               },
             ]}
             layout={{
-              width: 750,
-              height: 600,
-              title: "Spectrum",
+              title: "Processed Spectrum",
               font: { family: "Roboto", color: "#000" },
               xaxis: {
                 range: [10000000 / params.maxWave, 10000000 / params.minWave],
@@ -40,12 +38,15 @@ export const Plotly = forwardRef((props, ref) => {
               yaxis: {
                 autorange: true,
                 title: {
-                  text: "transmittance_noslit",
+                  text: "Transmittance",
                 },
                 type: "linear",
                 fixedrange: false,
               },
             }}
+            // https://community.plotly.com/t/react-plotly-responsive-chart-not-working/47547
+            useResizeHandler={true}
+            style={{ width: "100%", height: "90vh" }} // TODO --> move to dedicated file
           />
         }
       </>
