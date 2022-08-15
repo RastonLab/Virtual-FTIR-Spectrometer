@@ -123,6 +123,10 @@
 /* ---------- Responsiveness ---------- */
 
 @media only screen and (max-width: 1200px){
+  #form {
+    max-width: 100%;
+  }
+
   #experimental-setup {
     flex-direction: column;
   }
