@@ -14,8 +14,21 @@
   display: flex;
   flex-direction: column;
   width: auto;
-  height: 92vh;
   flex-grow: 1;
+}
+
+@media only screen and (max-width: 1200px) {
+  #instrument-window {
+    flex-direction: column;
+  }
+
+  #readout {
+    flex-direction: row;
+  }
+
+  #instrument {
+    width: 100%;
+  }
 }
 
 /* ---------- svg components ---------- */
