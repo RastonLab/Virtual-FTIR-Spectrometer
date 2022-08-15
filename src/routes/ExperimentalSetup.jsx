@@ -18,8 +18,7 @@ import Detector from "../components/inputs/Detector";
 import Source from "../components/inputs/Source";
 import ZeroFillling from "../components/inputs/ZeroFilling";
 
-// import "../style/App.css";
-import "../style/ExperimentalSetup.css";
+import "../style/routes/ExperimentalSetup.css";
 
 const ExperimentalSetup = (props, ref) => {
   const storedParams = useSelector((state) => state.params);
