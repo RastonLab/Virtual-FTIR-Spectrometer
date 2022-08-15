@@ -12,9 +12,15 @@
   width: auto;
 }
 
+.electronics-group {
+  flex-grow: 1;
+}
+
 .electronics h2 {
   font-family: "Montserrat";
   color: goldenrod;
+  text-decoration: underline;
+  text-align: center;
 }
 
 .electronics label {
@@ -26,12 +32,16 @@
   grid-template-columns: auto auto;
   text-align: center;
   padding-bottom: 20px;
+  flex-grow: 1;
+
 }
 
 .electronics-bottom {
   display: grid;
   grid-template-columns: auto auto;
   text-align: center;
+  flex-grow: 1;
+
 }
 
 .grid {
