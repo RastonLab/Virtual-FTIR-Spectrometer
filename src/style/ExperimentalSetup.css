@@ -13,12 +13,17 @@
   font-family: "Roboto";
 }
 
+@media only screen and (max-width: 1200px){
+  #experimental-setup {
+    flex-direction: column;
+  }
+}
+
 /* ---------- form ---------- */
 #form {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  /* flex-wrap: wrap; */
 }
 
 .col {
@@ -29,6 +34,8 @@
 
 .fetch-zone {
   margin: auto;
+  width: 75%;
+  justify-content: center;
 }
 
 /* -------- Switch Style -------- */
