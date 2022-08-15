@@ -4,7 +4,7 @@ import { Outlet } from "react-router-dom";
 
 import { Plotly } from "../components/Plotly";
 
-import "../style/SpectrumWindow.css";
+import "../style/routes/SpectrumWindow.css";
 
 export default function SpectrumWindow() {
   const storedData = useSelector((state) => state.data);

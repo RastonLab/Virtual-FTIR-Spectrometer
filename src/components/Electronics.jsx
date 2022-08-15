@@ -1,6 +1,8 @@
 import React from "react";
 import { useSelector } from "react-redux";
 
+import "../style/components/Electronics.css"
+
 export default function Electronics() {
 
   const storedParams = useSelector((state) => state.params);

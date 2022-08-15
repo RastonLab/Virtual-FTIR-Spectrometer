@@ -5,7 +5,7 @@ import { menuItems } from "./dictionaries/menuItems";
 import MenuItems from "./components/menu/MenuItems";
 
 import "./style/App.css";
-import { ReactComponent as RLLogo } from "./RastonLab-Logo-Full-Rainbow-Draft.svg";
+import { ReactComponent as RLLogo } from "./components/svgs/RastonLabLogo.svg";
 
 export default function App() {
   return (

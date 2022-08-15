@@ -1,6 +1,8 @@
 import React, { useState, useEffect, useRef } from "react";
 import Dropdown from "./Dropdown";
 
+import "../../style/components/menu/MenuItems.css"
+
 const MenuItems = ({ items }) => {
   const [dropdown, setDropdown] = useState(false);
   let ref = useRef();

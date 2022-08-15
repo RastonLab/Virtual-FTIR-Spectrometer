@@ -4,7 +4,7 @@ import { Dialog } from "@mui/material";
 import { ReactComponent as Main } from "../components/svgs/ftir-main.svg";
 import { toolTips } from "../dictionaries/SVGLibrary";
 
-import "../style/InstrumentWindow.css";
+import "../style/routes/InstrumentWindow.css";
 import Electronics from "../components/Electronics";
 import { Plotly } from "../components/Plotly";
 

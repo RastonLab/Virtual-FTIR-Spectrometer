@@ -1,0 +1,5 @@
+/* https://community.plotly.com/t/react-plotly-responsive-chart-not-working/47547 */
+.plotly {
+  width: 100%;
+  height: 90vh;
+}
