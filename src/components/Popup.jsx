@@ -2,7 +2,7 @@ import React, { useState } from "react";
 
 import { Dialog } from "@mui/material";
 
-import "../style/App.css";
+import "../style/components/Popup.css";
 
 export default function Popup({ label, title, text }) {
   const [open, setOpen] = useState(false);

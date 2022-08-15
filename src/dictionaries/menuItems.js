@@ -1,5 +1,5 @@
 import { Save } from "../redux/save";
-import { Open } from "../redux/open";
+import { Open } from "../components/Open";
 import Print from "../components/Print";
 export const menuItems = [
   {

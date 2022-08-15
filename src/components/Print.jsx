@@ -9,7 +9,7 @@ import {
 
 import ExperimentalSetup from "../routes/ExperimentalSetup";
 import { Plotly } from "./Plotly";
-import "../style/Print.css";
+import "../style/components/Print.css";
 
 export default function Print() {
   const componentRef = useRef();

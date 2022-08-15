@@ -1,8 +1,8 @@
 import { useState } from "react";
 import { useDispatch } from "react-redux";
-import { setError, storeData, storeParams } from "./actions";
+import { setError, storeData, storeParams } from "../redux/actions";
 
-import "../style/Open.css";
+import "../style/components/Open.css";
 
 // https://dev.to/pankod/how-to-import-csv-file-with-react-4pj2
 
