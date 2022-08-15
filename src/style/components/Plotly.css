@@ -4,9 +4,3 @@
   height: auto;
   overflow-x:auto !important;
 }
-
-/* @media only screen and (max-width: 1200px) {
-  .plotly {
-    width: 100%;
-  }
-} */
