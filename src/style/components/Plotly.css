@@ -1,5 +1,12 @@
 /* https://community.plotly.com/t/react-plotly-responsive-chart-not-working/47547 */
 .plotly {
   width: 100%;
-  height: 90vh;
+  height: auto;
+  overflow-x:auto !important;
 }
+
+/* @media only screen and (max-width: 1200px) {
+  .plotly {
+    width: 100%;
+  }
+} */
