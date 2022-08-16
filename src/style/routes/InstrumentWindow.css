@@ -24,7 +24,7 @@
   }
 
   #readout {
-    flex-direction: row;
+    flex-direction: column;
     max-width: 100%;
   }
 
