@@ -244,7 +244,7 @@ export default function Fetch({ params }) {
 
   return (
     <button id="button" onClick={fetchRadis}>
-      Perform Fetch Request
+      Generate Spectrum
     </button>
   );
 }
