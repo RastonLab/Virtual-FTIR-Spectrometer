@@ -13,11 +13,13 @@
   font-family: "Roboto";
 }
 
+
 /* ---------- form ---------- */
 #form {
   display: flex;
   flex-direction: row;
   justify-content: center;
+  max-width: 50%;
 }
 
 .col {
@@ -34,6 +36,7 @@
   display: flex;
   justify-content: center;
   flex-grow: 1;
+  overflow-x: auto;
 }
 
 /* -------- Switch Style -------- */
@@ -113,4 +116,36 @@
 #button:hover {
   background-color: #002ead;
   background: linear-gradient(90deg, red, orange, yellow, green, blue, purple);
+}
+
+/* ---------- Responsiveness ---------- */
+
+@media only screen and (max-width: 1200px){
+  #form {
+    max-width: 100%;
+  }
+
+  #experimental-setup {
+    flex-direction: column;
+  }
+
+  #graph-and-error {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 700px){
+  #form {
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .fetch-zone{
+    height: 100px;
+  }
+
+  #button {
+    margin-top: 40px;
+    margin-left: 0;
+  }
 }

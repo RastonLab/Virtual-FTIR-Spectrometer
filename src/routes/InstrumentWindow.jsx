@@ -5,6 +5,7 @@ import { ReactComponent as Main } from "../components/svgs/ftir-main.svg";
 import { toolTips } from "../dictionaries/SVGLibrary";
 
 import "../style/routes/InstrumentWindow.css";
+import "../style/components/Electronics.css";
 import Electronics from "../components/Electronics";
 import { Plotly } from "../components/Plotly";
 
