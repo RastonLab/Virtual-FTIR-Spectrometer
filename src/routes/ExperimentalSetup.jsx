@@ -3,7 +3,6 @@ import { useSelector } from "react-redux";
 
 // additional components
 import Fetch from "../components/Fetch";
-import GenerateBackground from "../components/GenerateBackground";
 import { Plotly } from "../components/Plotly";
 
 // inputs
@@ -93,8 +92,11 @@ const ExperimentalSetup = (props, ref) => {
                 cellWindow,
                 detector,
               }}
+              fetchURL={"http://localhost:5000/post_json"}
+              // fetchURL={"http://ec2-44-203-44-133.compute-1.amazonaws.com/post_json"}
+              buttonText={"Generate Spectrum"}
             />
-            <GenerateBackground
+            <Fetch
               params={{
                 minWave,
                 maxWave,
@@ -108,6 +110,9 @@ const ExperimentalSetup = (props, ref) => {
                 cellWindow,
                 detector,
               }}
+              fetchURL={"http://localhost:5000/fetch_background"}
+              // fetchURL={"http://ec2-44-203-44-133.compute-1.amazonaws.com/fetch_background"}
+              buttonText={"Generate Background Sample"}
             />
           </div>
         </div>
