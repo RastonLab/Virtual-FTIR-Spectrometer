@@ -94,7 +94,21 @@ const ExperimentalSetup = (props, ref) => {
                 detector,
               }}
             />
-            <GenerateBackground params={{minWave, maxWave}} />
+            <GenerateBackground
+              params={{
+                minWave,
+                maxWave,
+                molecule,
+                pressure,
+                resolution,
+                numScan,
+                zeroFill,
+                source,
+                beamsplitter,
+                cellWindow,
+                detector,
+              }}
+            />
           </div>
         </div>
       </div>

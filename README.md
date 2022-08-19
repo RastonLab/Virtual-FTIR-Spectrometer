@@ -20,7 +20,7 @@ The first line of parameters will look like this:
 # Min Wavenumber: 1900 Max Wavenumber: 2300 Molecule: CO Pressure: 0.001 Resolution: 1 Number of Scans: 1 Zero Fill: 0 Source: 3100 Beamsplitter: AR_ZnSe Cell Window: CaF2 Detector: MCT
 ```
 
-The following lines will contain datapoints like:
+The following excerpt is an example of what datapoints look like:
 
 ```
 5261.723152266546 0.0008834386851116477
@@ -28,7 +28,6 @@ The following lines will contain datapoints like:
 5259.055273581491 0.0008805861620592779
 5257.722348512898 0.0008855626861862154
 5256.390098941579 0.0008759330608779286
-...
 ```
 
 ### Save
@@ -43,9 +42,15 @@ The `print` menu item allows users to print just a graph of the data points or b
 
 ## Collect
 
+TODO
+
 ### Acquire Background Sample
 
+TODO
+
 ### Stop Acquisition
+
+TODO
 
 ## Window
 
@@ -67,11 +72,19 @@ The `spectrum` menu item allows users to view a full page graph on the spectrome
 
 ## Help
 
+TODO
+
 ### Tutorial
+
+TODO
 
 ### Usage
 
+TODO
+
 ### About
+
+TODO
 
 # Running locally
 
@@ -87,10 +100,18 @@ The virtual spectrometer is made up of two programs.
 
 ## Front-end
 
+TODO
+
 ## Back-end
+
+TODO
 
 # Architecture
 
 ## GitHub Pages
 
+The front-end of this project is hosted using [GitHub Pages](https://pages.github.com/). This allows us to have automatic updates to the live website after commits and pull requests are made to the central repository. These updates are automatically handled using [GitHub Actions](https://github.com/features/actions). Specifically, [GitHub Pages Deploy Action](https://github.com/JamesIves/github-pages-deploy-action) by James Ives. A simplified tutorial of this can be found on the [Raston Lab Wiki](https://github.com/RastonLab/.github/wiki/Tutorials#how-to-setup-a-github-action-to-host-a-react-application-on-github-pages)!
+
 ## EC2
+
+The back-end of this project is hosted using [Amazon Web Services Elastic Compute Cloud (EC2)](https://aws.amazon.com/ec2/). EC2 is a service that allows customers to rent virtual computers. We utilize this service by renting a Ubuntu system that hosts our [Flask web service](flask.palletsprojects.com) using [gunicorn](https://gunicorn.org/) and [NGINX](https://www.nginx.com/). A simplified tutorial of our EC2 setup can be found on the [Raston Lab Wiki](https://github.com/RastonLab/.github/wiki/AWS-EC2-Flask-Application-Setup)!
