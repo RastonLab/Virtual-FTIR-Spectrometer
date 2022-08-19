@@ -5,10 +5,11 @@ import {
   setProgress,
   setError,
   storeData,
+  storeBackgroundData,
   storeParams,
 } from "../redux/actions";
 
-export default function Fetch({ params, fetchURL, buttonText }) {
+export default function Fetch({ type, params, fetchURL, buttonText }) {
   const dispatch = useDispatch();
 
   function checkParams(params) {
@@ -224,7 +225,11 @@ export default function Fetch({ params, fetchURL, buttonText }) {
       const data = await response.json();
       if (data.success) {
         // console.log(data);
-        dispatch(storeData(data));
+        if (type === "processed") {
+          dispatch(storeData(data));
+        } else if (type === "background") {
+          dispatch(storeBackgroundData(data));
+        }
         dispatch(setProgress(false));
       } else {
         // console.log(data);

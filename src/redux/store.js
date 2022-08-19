@@ -20,6 +20,8 @@ const initialState = {
 
   data: null,
 
+  backgroundData: null,
+
   progress: false,
 
   error: {
@@ -42,6 +44,13 @@ function reducer(state, action) {
       return {
         ...state,
         data: action.payload,
+      };
+
+    // ---------- store background sample data ----------
+    case Action.StoreBackgroundData:
+      return {
+        ...state,
+        backgroundData: action.payload,
       };
 
     // ---------- spinning progress wheel ----------

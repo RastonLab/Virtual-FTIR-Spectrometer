@@ -7,7 +7,7 @@ import { toolTips } from "../dictionaries/SVGLibrary";
 import "../style/routes/InstrumentWindow.css";
 import "../style/components/Electronics.css";
 import Electronics from "../components/Electronics";
-import { Plotly } from "../components/Plotly";
+import { ProcessedPlotly } from "../components/ProcessedPlotly";
 
 export default function InstrumentWindow() {
   const [toggled, setToggled] = useState(false);
@@ -28,7 +28,7 @@ export default function InstrumentWindow() {
     <div id="instrument-window">
       <div id="readout">
         <Electronics />
-        <Plotly />
+        <ProcessedPlotly />
       </div>
       <Main id="instrument" onClick={handleClick} />
 

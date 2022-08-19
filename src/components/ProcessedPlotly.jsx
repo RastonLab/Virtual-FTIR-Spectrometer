@@ -4,7 +4,7 @@ import { useSelector } from "react-redux";
 import Plot from "react-plotly.js";
 import "../style/components/Plotly.css";
 
-export const Plotly = forwardRef((props, ref) => {
+export const ProcessedPlotly = forwardRef((props, ref) => {
   const data = useSelector((state) => state.data);
   const params = useSelector((state) => state.params);
 

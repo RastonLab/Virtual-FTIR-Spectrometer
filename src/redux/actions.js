@@ -3,6 +3,8 @@ export const Action = Object.freeze({
 
   StoreData: "StoreData",
 
+  StoreBackgroundData: "StoreBackgroundData",
+
   SetProgress: "SetProgress",
 
   SetError: "SetError",
@@ -16,6 +18,11 @@ export function storeParams(params) {
 // -------------------- graph data (Plotly) --------------------
 export function storeData(data) {
   return { type: Action.StoreData, payload: data };
+}
+
+// -------------------- store background sample data --------------------
+export function storeBackgroundData(backgroundData) {
+  return { type: Action.StoreBackgroundData, payload: backgroundData };
 }
 
 // -------------------- progress spinner --------------------

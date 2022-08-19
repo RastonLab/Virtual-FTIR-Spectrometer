@@ -3,7 +3,7 @@ import { useSelector } from "react-redux";
 
 // additional components
 import Fetch from "../components/Fetch";
-import { Plotly } from "../components/Plotly";
+import { ProcessedPlotly } from "../components/ProcessedPlotly";
 
 // inputs
 import MinWave from "../components/inputs/MinWave";
@@ -79,6 +79,7 @@ const ExperimentalSetup = (props, ref) => {
 
           <div className="fetch-zone">
             <Fetch
+              type="processed"
               params={{
                 minWave,
                 maxWave,
@@ -92,11 +93,12 @@ const ExperimentalSetup = (props, ref) => {
                 cellWindow,
                 detector,
               }}
-              fetchURL={"http://localhost:5000/post_json"}
-              // fetchURL={"http://ec2-44-203-44-133.compute-1.amazonaws.com/post_json"}
-              buttonText={"Generate Spectrum"}
+              fetchURL="http://localhost:5000/post_json"
+              // fetchURL="http://ec2-44-203-44-133.compute-1.amazonaws.com/post_json"
+              buttonText="Generate Spectrum"
             />
             <Fetch
+              type="background"
               params={{
                 minWave,
                 maxWave,
@@ -126,7 +128,7 @@ const ExperimentalSetup = (props, ref) => {
           </div>
         )}
 
-        {!progress && !error.active && <Plotly />}
+        {!progress && !error.active && <ProcessedPlotly />}
       </div>
     </div>
   );

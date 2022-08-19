@@ -8,7 +8,7 @@ import {
 } from "@mui/material";
 
 import ExperimentalSetup from "../routes/ExperimentalSetup";
-import { Plotly } from "./Plotly";
+import { ProcessedPlotly } from "./ProcessedPlotly";
 import "../style/components/Print.css";
 
 export default function Print() {
@@ -56,7 +56,7 @@ export default function Print() {
         </button>
       </div>
       <div style={{ display: "none" }}>
-        {printOptions === "graph" && <Plotly ref={componentRef} />}
+        {printOptions === "graph" && <ProcessedPlotly ref={componentRef} />}
 
         {printOptions === "both" && <ExperimentalSetup ref={componentRef} />}
       </div>
