@@ -26,10 +26,15 @@ export default function InstrumentWindow() {
 
   return (
     <div id="instrument-window">
-      <div id="readout">
-        <Electronics />
-        <ProcessedPlotly />
+      <div id="instrument-accessories">
+        <div id="readout">
+          <Electronics />
+        </div>
+        <div id="spectrum">
+          <ProcessedPlotly />
+        </div>
       </div>
+
       <Main id="instrument" onClick={handleClick} />
 
       {element && (
