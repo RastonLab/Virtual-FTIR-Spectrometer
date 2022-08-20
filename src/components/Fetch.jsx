@@ -4,11 +4,12 @@ import { useDispatch } from "react-redux";
 import {
   setProgress,
   setError,
-  storeData,
+  storeProcessedData,
+  storeBackgroundData,
   storeParams,
 } from "../redux/actions";
 
-export default function Fetch({ params }) {
+export default function Fetch({ type, params, fetchURL, buttonText }) {
   const dispatch = useDispatch();
 
   function checkParams(params) {
@@ -195,40 +196,40 @@ export default function Fetch({ params }) {
     // https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch
     let response;
     try {
-      response = await fetch(
-        "http://localhost:5000/post_json",
-        // "http://ec2-44-203-44-133.compute-1.amazonaws.com/post_json",
-        {
-          headers: {
-            accept: "*/*",
-            "accept-language": "en-US,en;q=0.9",
-            "cache-control": "max-age=0",
-            "content-type": "text/plain;charset=UTF-8",
-          },
-          referrerPolicy: "no-referrer",
-          body: JSON.stringify({
-            minWave: params.minWave,
-            maxWave: params.maxWave,
-            molecule: params.molecule,
-            pressure: params.pressure,
-            resolution: params.resolution,
-            numScan: params.numScan,
-            zeroFill: params.zeroFill,
-            source: params.source,
-            beamsplitter: params.beamsplitter,
-            cellWindow: params.cellWindow,
-            detector: params.detector,
-          }),
-          method: "POST",
-          mode: "cors",
-          credentials: "omit",
-        }
-      );
+      response = await fetch(fetchURL, {
+        headers: {
+          accept: "*/*",
+          "accept-language": "en-US,en;q=0.9",
+          "cache-control": "max-age=0",
+          "content-type": "text/plain;charset=UTF-8",
+        },
+        referrerPolicy: "no-referrer",
+        body: JSON.stringify({
+          minWave: params.minWave,
+          maxWave: params.maxWave,
+          molecule: params.molecule,
+          pressure: params.pressure,
+          resolution: params.resolution,
+          numScan: params.numScan,
+          zeroFill: params.zeroFill,
+          source: params.source,
+          beamsplitter: params.beamsplitter,
+          cellWindow: params.cellWindow,
+          detector: params.detector,
+        }),
+        method: "POST",
+        mode: "cors",
+        credentials: "omit",
+      });
 
       const data = await response.json();
       if (data.success) {
         // console.log(data);
-        dispatch(storeData(data));
+        if (type === "processed") {
+          dispatch(storeProcessedData(data));
+        } else if (type === "background") {
+          dispatch(storeBackgroundData(data));
+        }
         dispatch(setProgress(false));
       } else {
         // console.log(data);
@@ -244,7 +245,7 @@ export default function Fetch({ params }) {
 
   return (
     <button id="button" onClick={fetchRadis}>
-      Generate Spectrum
+      {buttonText}
     </button>
   );
 }

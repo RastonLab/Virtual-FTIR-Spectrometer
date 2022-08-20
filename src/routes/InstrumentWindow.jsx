@@ -1,5 +1,5 @@
-import React from "react";
-import { useState } from "react";
+import React, { useState } from "react";
+import { useSelector } from "react-redux";
 import { Dialog } from "@mui/material";
 import { ReactComponent as Main } from "../components/svgs/ftir-main.svg";
 import { toolTips } from "../dictionaries/SVGLibrary";
@@ -7,9 +7,10 @@ import { toolTips } from "../dictionaries/SVGLibrary";
 import "../style/routes/InstrumentWindow.css";
 import "../style/components/Electronics.css";
 import Electronics from "../components/Electronics";
-import { Plotly } from "../components/Plotly";
+import { ProcessedPlotly } from "../components/ProcessedPlotly";
 
 export default function InstrumentWindow() {
+  const storedProcessedData = useSelector((state) => state.processedData);
   const [toggled, setToggled] = useState(false);
   const [element, setElement] = useState();
 
@@ -26,10 +27,19 @@ export default function InstrumentWindow() {
 
   return (
     <div id="instrument-window">
-      <div id="readout">
-        <Electronics />
-        <Plotly />
+      <div id="instrument-accessories">
+        <div id="readout">
+          <Electronics />
+        </div>
+        <div id="spectrum">
+          {storedProcessedData ? (
+            <ProcessedPlotly />
+          ) : (
+            <p>Please generate a processed spectrum and return here</p>
+          )}
+        </div>
       </div>
+
       <Main id="instrument" onClick={handleClick} />
 
       {element && (
