@@ -1,5 +1,5 @@
-import React from "react";
-import { useState } from "react";
+import React, { useState } from "react";
+import { useSelector } from "react-redux";
 import { Dialog } from "@mui/material";
 import { ReactComponent as Main } from "../components/svgs/ftir-main.svg";
 import { toolTips } from "../dictionaries/SVGLibrary";
@@ -10,6 +10,7 @@ import Electronics from "../components/Electronics";
 import { ProcessedPlotly } from "../components/ProcessedPlotly";
 
 export default function InstrumentWindow() {
+  const storedData = useSelector((state) => state.data);
   const [toggled, setToggled] = useState(false);
   const [element, setElement] = useState();
 
@@ -31,7 +32,11 @@ export default function InstrumentWindow() {
           <Electronics />
         </div>
         <div id="spectrum">
-          <ProcessedPlotly />
+          {storedData ? (
+            <ProcessedPlotly />
+          ) : (
+            <p>Please generate a processed spectrum and return here</p>
+          )}
         </div>
       </div>
 
