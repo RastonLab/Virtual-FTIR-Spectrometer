@@ -1,7 +1,7 @@
 export const Action = Object.freeze({
   StoreParams: "StoreParams",
 
-  StoreData: "StoreData",
+  StoreProcessedData: "StoreProcessedData",
 
   StoreBackgroundData: "StoreBackgroundData",
 
@@ -15,9 +15,9 @@ export function storeParams(params) {
   return { type: Action.StoreParams, payload: params };
 }
 
-// -------------------- graph data (Plotly) --------------------
-export function storeData(data) {
-  return { type: Action.StoreData, payload: data };
+// -------------------- store processed data --------------------
+export function storeProcessedData(processedData) {
+  return { type: Action.StoreProcessedData, payload: processedData };
 }
 
 // -------------------- store background sample data --------------------

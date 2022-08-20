@@ -4,7 +4,7 @@ import { useDispatch } from "react-redux";
 import {
   setProgress,
   setError,
-  storeData,
+  storeProcessedData,
   storeBackgroundData,
   storeParams,
 } from "../redux/actions";
@@ -226,7 +226,7 @@ export default function Fetch({ type, params, fetchURL, buttonText }) {
       if (data.success) {
         // console.log(data);
         if (type === "processed") {
-          dispatch(storeData(data));
+          dispatch(storeProcessedData(data));
         } else if (type === "background") {
           dispatch(storeBackgroundData(data));
         }

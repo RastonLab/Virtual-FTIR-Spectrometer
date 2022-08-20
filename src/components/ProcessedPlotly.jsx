@@ -5,10 +5,10 @@ import Plot from "react-plotly.js";
 import "../style/components/Plotly.css";
 
 export const ProcessedPlotly = forwardRef((props, ref) => {
-  const data = useSelector((state) => state.data);
+  const processedData = useSelector((state) => state.processedData);
   const params = useSelector((state) => state.params);
 
-  if (data) {
+  if (processedData) {
     // https://github.com/suzil/radis-app/blob/main/frontend/src/components/CalcSpectrumPlot.tsx
     return (
       <>
@@ -18,8 +18,8 @@ export const ProcessedPlotly = forwardRef((props, ref) => {
             className="plotly"
             data={[
               {
-                x: data.x,
-                y: data.y,
+                x: processedData.x,
+                y: processedData.y,
                 type: "scatter",
                 marker: { color: "#f50057" },
               },

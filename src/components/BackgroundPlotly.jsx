@@ -5,10 +5,10 @@ import Plot from "react-plotly.js";
 import "../style/components/Plotly.css";
 
 export default function BackgroundPlotly() {
-  const data = useSelector((state) => state.backgroundData);
+  const backgroundData = useSelector((state) => state.backgroundData);
   const params = useSelector((state) => state.params);
 
-  if (data) {
+  if (backgroundData) {
     // https://github.com/suzil/radis-app/blob/main/frontend/src/components/CalcSpectrumPlot.tsx
     return (
       <>
@@ -17,8 +17,8 @@ export default function BackgroundPlotly() {
             className="plotly"
             data={[
               {
-                x: data.x,
-                y: data.y,
+                x: backgroundData.x,
+                y: backgroundData.y,
                 type: "scatter",
                 marker: { color: "#f50057" },
               },

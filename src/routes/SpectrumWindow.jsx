@@ -8,13 +8,13 @@ import BackgroundPlotly from "../components/BackgroundPlotly";
 import "../style/routes/SpectrumWindow.css";
 
 export default function SpectrumWindow() {
-  const storedData = useSelector((state) => state.data);
+  const storedProcessedData = useSelector((state) => state.processedData);
   const storedBackgroundData = useSelector((state) => state.backgroundData);
 
   return (
     <div id="spectrum-window">
       <div id="spectrum">
-        {storedData ? (
+        {storedProcessedData ? (
           <ProcessedPlotly />
         ) : (
           <p>Please generate a processed spectrum and return here</p>
