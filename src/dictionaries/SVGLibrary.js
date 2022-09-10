@@ -2,14 +2,10 @@ import apd from "../components/svgs/tooltip/apd.svg";
 import aperture from "../components/svgs/tooltip/aperture-wheel.svg";
 import fcc from "../components/svgs/tooltip/fixed-corner-cube.svg";
 import fm from "../components/svgs/tooltip/fixed-mirror.svg";
-import frm from "../components/svgs/tooltip/flat-rotatable-mirror-1.svg";
-import cdfrm from "../components/svgs/tooltip/flat-rotatable-mirror-2.svg";
-import dcfrm from "../components/svgs/tooltip/flat-rotatable-mirror-3.svg";
 import globar from "../components/svgs/tooltip/globar.svg"
 import insb from "../components/svgs/tooltip/insb.svg"
 import laser from "../components/svgs/tooltip/laser.svg";
 import lecture from "../components/svgs/tooltip/lecture.svg";
-import mcc from "../components/svgs/tooltip/movable-corner-cube.svg";
 import mtc from "../components/svgs/tooltip/mtc.svg"
 import pm from "../components/svgs/tooltip/parabolic-mirror.svg";
 import pmh from "../components/svgs/tooltip/parabolic-mirror-hole.svg";
@@ -39,17 +35,12 @@ export const toolTips = {
     text: "Gold coated flat mirror.",
   },
   "flat-rotatable-mirror-1": {
-    image: frm,
+    image: fm,
     title: "Flat Rotatable Mirror",
     text: "Gold plated flat rotatable mirror that reflects radiation from the source to the parabolic mirror.",
   },
   "flat-rotatable-mirror-2": {
-    image: cdfrm,
-    title: "Flat Rotatable Mirror",
-    text: "Gold plated flat rotatable mirror that reflects radiation from the source to the parabolic mirror.",
-  },
-  "flat-rotatable-mirror-3": {
-    image: dcfrm,
+    image: fm,
     title: "Flat Rotatable Mirror",
     text: "Gold plated flat rotatable mirror that reflects radiation from the source to the parabolic mirror.",
   },
@@ -79,11 +70,16 @@ export const toolTips = {
     text: "Liquid nitrogen cooled Mercury-Cadmium-Telluride (MCT) detector with a sapphire window. This is a semiconductor detector that utilizes a photoelectric-like effect in order to convert light into electricity. The output current is proportional to the infrared intensity. It is more sensitive than InSb in the far-infrared region (below ~1500 cm-1).",
   },
   "movable-corner-cube": {
-    image: mcc,
+    image: fcc,
     title: "Movable Corner Cube",
     text: "Gold coated movable corner-cube. This component reflects back a return beam that is parallel to the incident beam and moves a distance that is inversely proportional to the resolution.",
   },
-  "parabolic-mirror": {
+  "parabolic-mirror-1": {
+    image: pm,
+    title: "Parabolic Mirror",
+    text: "Gold plated parabolic mirror that focuses reflected radiation onto the detector.",
+  },
+  "parabolic-mirror-2": {
     image: pm,
     title: "Parabolic Mirror",
     text: "Gold plated parabolic mirror that focuses reflected radiation onto the detector.",
