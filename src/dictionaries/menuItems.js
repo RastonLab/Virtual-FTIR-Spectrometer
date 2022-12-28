@@ -23,17 +23,17 @@ export const menuItems = [
       },
     ],
   },
-  {
-    label: "Collect",
-    submenu: [
-      {
-        label: "Acquire Background Sample",
-      },
-      {
-        label: "Stop Acquisition",
-      },
-    ],
-  },
+  // {
+  //   label: "Collect",
+  //   submenu: [
+  //     {
+  //       label: "Acquire Background Sample",
+  //     },
+  //     {
+  //       label: "Stop Acquisition",
+  //     },
+  //   ],
+  // },
   // {
   //     label: 'Analyze',
   //     submenu: [
