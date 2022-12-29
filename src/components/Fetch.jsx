@@ -197,13 +197,10 @@ export default function Fetch({ type, params, fetchURL, buttonText }) {
     let response;
     try {
       response = await fetch(fetchURL, {
+        method: "POST",
         headers: {
-          accept: "*/*",
-          "accept-language": "en-US,en;q=0.9",
-          "cache-control": "max-age=0",
-          "content-type": "text/plain;charset=UTF-8",
+          "content-type": "application/json",
         },
-        referrerPolicy: "no-referrer",
         body: JSON.stringify({
           minWave: params.minWave,
           maxWave: params.maxWave,
@@ -217,9 +214,6 @@ export default function Fetch({ type, params, fetchURL, buttonText }) {
           cellWindow: params.cellWindow,
           detector: params.detector,
         }),
-        method: "POST",
-        mode: "cors",
-        credentials: "omit",
       });
 
       const data = await response.json();
