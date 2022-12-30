@@ -10,6 +10,7 @@ export const Save = () => {
 
   const params = state.params;
   const xVals = state.processedData;
+  console.log(xVals);
   // const yVals = state.processedData.y;
 
 
