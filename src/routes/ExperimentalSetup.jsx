@@ -95,7 +95,7 @@ const ExperimentalSetup = (props, ref) => {
               }}
               // fetchURL={"http://localhost:5000/post_json"}
               fetchURL={"https://ftir.rastonlab.org/post_json"}
-              buttonText="Generate Spectrum"
+              buttonText="Generate Processed Spectrum"
             />
             <Fetch
               type="background"
