@@ -1,6 +1,7 @@
-import { Input } from "@mui/material";
 import React from "react";
+import { Input } from "@mui/material";
 
+// this input component sets the number of times the spectrum generation function runs
 export default function NumOfScans({ params, setParams }) {
   const handleBlur = () => {
     if (params < 0) {
