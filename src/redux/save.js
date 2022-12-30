@@ -9,16 +9,15 @@ export const Save = () => {
   }
 
   const params = state.params;
-  const yVals = state.processedData.y;
-  console.log("just fine\n");
-  const xVals = state.processedData.x;
+  const xVals = state.processedData;
+  // const yVals = state.processedData.y;
 
 
   let data = `# Min Wavenumber: ${params.minWave} Max Wavenumber: ${params.maxWave} Molecule: ${params.molecule} Pressure: ${params.pressure} Resolution: ${params.resolution} Number of Scans: ${params.numScan} Zero Fill: ${params.zeroFill} Source: ${params.source} Beamsplitter: ${params.beamsplitter} Cell Window: ${params.cellWindow} Detector: ${params.detector} \n`;
 
   for(let i = 0; i < xVals.length; i++) {
 
-    data += `${xVals[i]} ${yVals[i]}\n`
+    data += `${xVals[i]}\n`
   }
 
 
