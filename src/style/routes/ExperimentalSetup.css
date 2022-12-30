@@ -134,7 +134,6 @@
   #graph-and-error {
     width: 100%;
   }
-<<<<<<< HEAD
 
   #button {
     margin-left: 25%;
@@ -142,21 +141,12 @@
 }
 
 @media only screen and (max-width: 700px){
-=======
-}
-
-@media only screen and (max-width: 700px) {
->>>>>>> 939fa5f4e9a364a27d02abe0c082c50d68ee8524
   #form {
     flex-direction: column;
     justify-content: center;
   }
 
-<<<<<<< HEAD
-  .fetch-zone{
-=======
   .fetch-zone {
->>>>>>> 939fa5f4e9a364a27d02abe0c082c50d68ee8524
     height: 100px;
   }
 
@@ -164,8 +154,5 @@
     margin-top: 40px;
     margin-left: 0;
   }
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> 939fa5f4e9a364a27d02abe0c082c50d68ee8524
+
