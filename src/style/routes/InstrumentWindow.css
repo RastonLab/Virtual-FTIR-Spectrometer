@@ -1,21 +1,27 @@
 /* ---------- instrument-window ---------- */
 #instrument-window {
   display: flex;
-  justify-content: center;
 }
 
-#instrument {
-  height: 90vh;
-  width: 55%;
-  padding: 10px;
+#instrument-accessories {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
 }
 
 #readout {
   display: flex;
   flex-direction: column;
-  width: auto;
-  max-width: 50%;
+}
+
+#spectrum {
+  display: flex;
+  flex-direction: column;
   flex-grow: 1;
+}
+
+#instrument {
+  height: 94vh;
 }
 
 @media only screen and (max-width: 1200px) {

@@ -1,5 +1,13 @@
 /* ---------- spectrum-window ---------- */
 #spectrum-window {
   display: flex;
+  flex-direction: column;
+}
+
+#spectrum {
+  display: flex;
   justify-content: center;
+  align-items: center;
+
+  height: 47vh;
 }

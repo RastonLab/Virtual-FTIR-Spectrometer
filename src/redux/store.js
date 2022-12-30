@@ -18,7 +18,9 @@ const initialState = {
     detector: "MCT",
   },
 
-  data: null,
+  processedData: null,
+
+  backgroundData: null,
 
   progress: false,
 
@@ -37,11 +39,18 @@ function reducer(state, action) {
         params: action.payload,
       };
 
-    // ---------- graph data (Plotly) ----------
-    case Action.StoreData:
+    // ---------- store processed data ----------
+    case Action.StoreProcessedData:
       return {
         ...state,
-        data: action.payload,
+        processedData: action.payload,
+      };
+
+    // ---------- store background sample data ----------
+    case Action.StoreBackgroundData:
+      return {
+        ...state,
+        backgroundData: action.payload,
       };
 
     // ---------- spinning progress wheel ----------
