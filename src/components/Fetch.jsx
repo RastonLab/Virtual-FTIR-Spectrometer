@@ -42,8 +42,6 @@ export default function Fetch({ type, params, fetchURL, buttonText }) {
           "  provided max: " +
           params.maxWave
       );
-    } else {
-      // console.log("  good!");
     }
 
     // console.log("----- check if the molecule is correct -----");
@@ -99,7 +97,6 @@ export default function Fetch({ type, params, fetchURL, buttonText }) {
       "SO3",
     ];
     if (validMolecules.includes(params.molecule)) {
-      // console.log("  good!");
     } else {
       console.log(
         "  molecule is not valid. provided molecule: " + params.molecule
@@ -108,7 +105,6 @@ export default function Fetch({ type, params, fetchURL, buttonText }) {
 
     // console.log("----- check if the pressure is correct -----");
     if (0.0001 <= params.pressure <= 10) {
-      // console.log("  good!");
     } else {
       console.log(
         "  pressure is out of range (0.0001 - 10). provided pressure: " +
@@ -119,7 +115,6 @@ export default function Fetch({ type, params, fetchURL, buttonText }) {
     // console.log("----- check if the resolution is correct -----");
     const validResolution = [1, 0.5, 0.25, 0.125, 0.0625];
     if (validResolution.includes(params.resolution)) {
-      // console.log("  good!");
     } else {
       console.log(
         "  resolution is not valid. provided resolution: " + params.resolution
@@ -128,7 +123,6 @@ export default function Fetch({ type, params, fetchURL, buttonText }) {
 
     // console.log("----- check if the number of scans is correct -----");
     if (1 <= params.numScan <= 1024) {
-      // console.log("  good!");
     } else {
       console.log(
         "  number of scans is out of range (1 - 1024). provided number of scans: " +
@@ -139,7 +133,6 @@ export default function Fetch({ type, params, fetchURL, buttonText }) {
     // console.log("----- check if the zero fill is correct -----");
     const validFill = [0, 1, 2];
     if (validFill.includes(params.zeroFill)) {
-      // console.log("  good!");
     } else {
       console.log(
         "  zero fill is not valid. provided zero fill: " + params.zeroFill
@@ -148,7 +141,6 @@ export default function Fetch({ type, params, fetchURL, buttonText }) {
 
     // console.log("----- check if source is correct -----");
     if (params.source === 1700 || params.source === 3100) {
-      // console.log("  good!");
     } else {
       console.log("  source is not valid. provided source: " + params.source);
     }
@@ -158,7 +150,6 @@ export default function Fetch({ type, params, fetchURL, buttonText }) {
       params.beamsplitter === "AR_CaF2" ||
       params.beamsplitter === "AR_ZnSe"
     ) {
-      // console.log("  good!");
     } else {
       console.log(
         "  beamsplitter is not valid. provided beamsplitter: " +
@@ -168,7 +159,6 @@ export default function Fetch({ type, params, fetchURL, buttonText }) {
 
     // console.log("----- check if cell window is correct -----");
     if (params.cellWindow === "ZnSe" || params.cellWindow === "CaF2") {
-      // console.log("  good!");
     } else {
       console.log(
         "  cell window is not valid. provided cell window: " + params.cellWindow
@@ -177,7 +167,6 @@ export default function Fetch({ type, params, fetchURL, buttonText }) {
 
     // console.log("----- check if detector is correct -----");
     if (params.detector === "InSb" || params.detector === "MCT") {
-      // console.log("  good!");
     } else {
       console.log(
         "  detector is not valid. provided detector: " + params.detector
@@ -218,7 +207,6 @@ export default function Fetch({ type, params, fetchURL, buttonText }) {
 
       const data = await response.json();
       if (data.success) {
-        // console.log(data);
         if (type === "processed") {
           dispatch(storeProcessedData(data));
         } else if (type === "background") {
@@ -226,12 +214,10 @@ export default function Fetch({ type, params, fetchURL, buttonText }) {
         }
         dispatch(setProgress(false));
       } else {
-        // console.log(data);
         dispatch(setProgress(false));
         dispatch(setError({ active: true, text: String(data.text) }));
       }
     } catch (error) {
-      // console.log(error);
       dispatch(setProgress(false));
       dispatch(setError({ active: true, text: "Uncaught error" }));
     }
