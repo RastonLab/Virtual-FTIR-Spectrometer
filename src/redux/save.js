@@ -10,7 +10,7 @@ export const Save = () => {
 
   const params = state.params;
   const yVals = state.data.y;
-  log("just fine\n");
+  console.log("just fine\n");
   const xVals = state.data.x;
 
 
