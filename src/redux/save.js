@@ -12,7 +12,7 @@ export const Save = () => {
   const pData = state.processedData;
   const bgData = state.backgroundData;
 
-  if (pData != null) {
+
 
     let data = `# Min Wavenumber: ${params.minWave} Max Wavenumber: ${params.maxWave} Molecule: ${params.molecule} Pressure: ${params.pressure} Resolution: ${params.resolution} Number of Scans: ${params.numScan} Zero Fill: ${params.zeroFill} Source: ${params.source} Beamsplitter: ${params.beamsplitter} Cell Window: ${params.cellWindow} Detector: ${params.detector} \n`;
 
@@ -24,7 +24,7 @@ export const Save = () => {
   
     const blob = new Blob(new Array([data]), { type: "application/csv" });
     FileSaver.saveAs(blob, `${params.minWave}-${params.maxWave}-spectrum.csv`)
-  }
+  
 
   if (bgData != null) {
 
