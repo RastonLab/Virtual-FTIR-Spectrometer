@@ -1,7 +1,9 @@
 import React from "react";
 
+// style
 import "../style/components/NotFound.css";
 
+// this component is used to display 404 page not found errors
 export default function NotFound() {
   return (
     <div id="not-found">

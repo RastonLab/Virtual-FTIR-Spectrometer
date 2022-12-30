@@ -1,9 +1,13 @@
 import React from "react";
 import { useSelector } from "react-redux";
 
+// components
 import Plot from "react-plotly.js";
+
+// style
 import "../style/components/Plotly.css";
 
+// this component uses the plotly library to graph background sample data
 export default function BackgroundPlotly() {
   const backgroundData = useSelector((state) => state.backgroundData);
   const params = useSelector((state) => state.params);

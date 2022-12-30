@@ -1,7 +1,7 @@
 import React, { forwardRef, useState } from "react";
 import { useSelector } from "react-redux";
 
-// additional components
+// components
 import Fetch from "../components/Fetch";
 import { ProcessedPlotly } from "../components/ProcessedPlotly";
 
@@ -18,6 +18,7 @@ import Detector from "../components/inputs/Detector";
 import Source from "../components/inputs/Source";
 import ZeroFillling from "../components/inputs/ZeroFilling";
 
+// style
 import "../style/routes/ExperimentalSetup.css";
 
 const ExperimentalSetup = (props, ref) => {

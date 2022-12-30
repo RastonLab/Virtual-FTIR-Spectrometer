@@ -2,10 +2,11 @@ import { useState } from "react";
 import { useDispatch } from "react-redux";
 import { setError, storeProcessedData, storeParams } from "../redux/actions";
 
+// style
 import "../style/components/Open.css";
 
-// https://dev.to/pankod/how-to-import-csv-file-with-react-4pj2
-
+// this component is used to open a CSV file of X and Y coordinates
+//   https://dev.to/pankod/how-to-import-csv-file-with-react-4pj2
 export const Open = () => {
   const [data, setData] = useState();
   const dispatch = useDispatch();

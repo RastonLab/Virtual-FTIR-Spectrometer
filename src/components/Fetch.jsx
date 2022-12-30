@@ -1,6 +1,5 @@
 import React from "react";
 import { useDispatch } from "react-redux";
-
 import {
   setProgress,
   setError,
@@ -9,6 +8,7 @@ import {
   storeParams,
 } from "../redux/actions";
 
+// this component reaches out to the flask server with user parameters and receives X and Y coordinates to graph
 export default function Fetch({ type, params, fetchURL, buttonText }) {
   const dispatch = useDispatch();
 
@@ -175,14 +175,17 @@ export default function Fetch({ type, params, fetchURL, buttonText }) {
   }
 
   async function fetchRadis() {
+    // store the current user parameters
     dispatch(storeParams(params));
 
+    // remove any errors (if existing) and start a progress spinner
     dispatch(setError({ active: false }));
     dispatch(setProgress(true));
 
+    // validate the user parameters
     checkParams(params);
 
-    // https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch
+    // send a POST request to the flask server
     let response;
     try {
       response = await fetch(fetchURL, {
@@ -206,7 +209,9 @@ export default function Fetch({ type, params, fetchURL, buttonText }) {
       });
 
       const data = await response.json();
+
       if (data.success) {
+        // if successful, determine where to store returned data
         if (type === "processed") {
           dispatch(storeProcessedData(data));
         } else if (type === "background") {
@@ -214,10 +219,12 @@ export default function Fetch({ type, params, fetchURL, buttonText }) {
         }
         dispatch(setProgress(false));
       } else {
+        // if unsuccessful, display error message
         dispatch(setProgress(false));
         dispatch(setError({ active: true, text: String(data.text) }));
       }
     } catch (error) {
+      // if error occurs, display error message
       dispatch(setProgress(false));
       dispatch(setError({ active: true, text: "Uncaught error" }));
     }
