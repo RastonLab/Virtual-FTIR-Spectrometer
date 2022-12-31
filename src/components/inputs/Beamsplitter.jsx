@@ -1,6 +1,7 @@
-import { CustomSwitch } from "./CustomSwitch";
 import React from "react";
+import { CustomSwitch } from "./CustomSwitch";
 
+// this input component sets the beamsplitter to 'AR_ZnSe' or 'AR_CaF2'
 export default function Beamsplitter({ params, setParams }) {
   return (
     <div className="input switch">
@@ -12,7 +13,9 @@ export default function Beamsplitter({ params, setParams }) {
           params === "AR_ZnSe" ? setParams("AR_CaF2") : setParams("AR_ZnSe");
         }}
       />
-      <label>AR_CaF2</label>
+      <label>
+        AR_CaF<sub>2</sub>
+      </label>
     </div>
   );
 }

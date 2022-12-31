@@ -32,14 +32,14 @@ const initialState = {
 
 function reducer(state, action) {
   switch (action.type) {
-    // ---------- calc_spectrum parameters ----------
+    // ---------- experimental setup parameters ----------
     case Action.StoreParams:
       return {
         ...state,
         params: action.payload,
       };
 
-    // ---------- store processed data ----------
+    // ---------- store processed spectrum data ----------
     case Action.StoreProcessedData:
       return {
         ...state,

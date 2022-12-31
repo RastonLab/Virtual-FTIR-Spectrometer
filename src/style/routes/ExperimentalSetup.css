@@ -27,7 +27,6 @@
   flex-direction: column;
 }
 
-
 .fetch-zone {
   display: flex;
   flex-direction: column;
@@ -116,8 +115,15 @@
 }
 
 #button:hover {
+  cursor: pointer;
   background-color: #002ead;
   background: linear-gradient(90deg, red, orange, yellow, green, blue, purple);
+}
+
+#button:hover:disabled {
+  cursor: not-allowed;
+  background-color: #212529;
+  background: #212529;
 }
 
 /* ---------- Responsiveness ---------- */

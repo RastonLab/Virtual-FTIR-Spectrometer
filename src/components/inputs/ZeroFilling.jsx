@@ -1,6 +1,7 @@
-import { MenuItem, Select } from "@mui/material";
 import React from "react";
+import { MenuItem, Select } from "@mui/material";
 
+// this input component sets the zero filling to zero, one, or two
 export default function ZeroFilling({ params, setParams }) {
   return (
     <div className="input">

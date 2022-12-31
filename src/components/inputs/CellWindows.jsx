@@ -1,6 +1,7 @@
 import React from "react";
 import { CustomSwitch } from "./CustomSwitch";
 
+// this input component sets the cell window to 'ZnSe' or 'CaF2'
 export default function CellWin({ params, setParams }) {
   return (
     <div className="input switch">

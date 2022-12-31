@@ -2,6 +2,7 @@ import { styled } from "@mui/material";
 import { pink, blue } from "@mui/material/colors";
 import { Switch } from "@mui/material";
 
+// this is the switch that operates the 'source', 'beamsplitter', 'cell window', and 'detector'
 export const CustomSwitch = styled(Switch)(({ theme }) => ({
   "& .MuiSwitch-switchBase": {
     "&.Mui-checked": {

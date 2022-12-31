@@ -1,10 +1,11 @@
 import React from "react";
 import { useSelector } from "react-redux";
 
-import "../style/components/Electronics.css"
+// style
+import "../style/components/Electronics.css";
 
+// this component displays user selected parameters in a condensed fashion
 export default function Electronics() {
-
   const storedParams = useSelector((state) => state.params);
 
   return (
@@ -87,6 +88,5 @@ export default function Electronics() {
         </div>
       </div>
     </div>
-
   );
 }
