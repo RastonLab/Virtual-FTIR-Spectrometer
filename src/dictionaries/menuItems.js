@@ -93,6 +93,47 @@ export const menuItems = [
             <p>
               The <strong>spectrum</strong> menu item allows users to view a full page graph on the spectrometers output.
             </p>
+
+            <h2>File</h2>
+            <p>
+              The <strong>File</strong> menu allows the user to import and export data with the web application.
+            </p>
+
+            <h3>Open</h3>
+            <p>
+              The <strong>open</strong> menu item allows users to upload and open a <strong>.CSV</strong> file to the web application. This allows the user to upload parameters, as well as data points that will be displayed to the user in <strong>spectrum</strong> window.
+
+              The first line of parameters will look like this:
+
+              <blockquote>
+                # Min Wavenumber: 1900 Max Wavenumber: 2300 Molecule: CO Pressure: 0.001 Resolution: 1 Number of Scans: 1 Zero Fill: 0 Source: 3100 Beamsplitter: AR_ZnSe Cell Window: CaF2 Detector: MCT
+              </blockquote>
+
+              The following excerpt is an example of what datapoints look like:
+
+              <blockquote>
+                5261.723152266546 0.0008834386851116477
+                5260.388874661239 0.0008841243897027239
+                5259.055273581491 0.0008805861620592779
+                5257.722348512898 0.0008855626861862154
+                5256.390098941579 0.0008759330608779286
+              </blockquote>
+            </p>
+
+            <h3>Save</h3>
+            <p>
+              The <strong>save</strong> menu item allows users to save a <strong>.CSV</strong> file from the web application. This file holds the users selected parameters, as well as the data points that were displayed to the user in the <strong>spectrum</strong> window.
+
+              These files are named like: <strong>[min-wavenumber]-[max-wavenumber]-spectrum.csv</strong>
+
+              If the user generated a background sample, that data will also be saved. These files are named like: <strong>[min-wavenumber]-[max-wavenumber]-background-spectrum.csv</strong>
+            </p>
+
+            <h3>Print</h3>
+            <p>
+              The <strong>print</strong> menu item allows users to print just a graph of the data points or both the graph and user parameters. Once the user selects the items they want printed, the browsers print preview will be displayed to the user.
+            </p>
+
           </div>),
       },
       {
