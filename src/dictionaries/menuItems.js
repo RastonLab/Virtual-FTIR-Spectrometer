@@ -84,7 +84,7 @@ export const menuItems = [
 
             <h3>Instrument</h3>
             <p>
-              The <strong>instrument</strong> menu item allows users to view and interact with a top-down view of the virtual instrument. The interactive instrument is made up of many images that when clicked, display a popup to the user. The popup contains a more detailed image as well as a description of the selected component.<br/>
+              The <strong>instrument</strong> menu item allows users to view and interact with a top-down view of the virtual instrument. The interactive instrument is made up of many images that when clicked, display a popup to the user. The popup contains a more detailed image as well as a description of the selected component.<br/><br/>
               
               This menu item also displays some of the user selected parameters in a display titled <strong>Electronics</strong> and <strong>Readouts</strong>. The user is unable to change the parameters from the <strong>instrument</strong> window. Parameters must be changed in the <strong>experimental setup</strong> menu item.
             </p>
@@ -101,15 +101,15 @@ export const menuItems = [
 
             <h3>Open</h3>
             <p>
-              The <strong>open</strong> menu item allows users to upload and open a <strong>.CSV</strong> file to the web application. This allows the user to upload parameters, as well as data points that will be displayed to the user in <strong>spectrum</strong> window.
+              The <strong>open</strong> menu item allows users to upload and open a <strong>.CSV</strong> file to the web application. This allows the user to upload parameters, as well as data points that will be displayed to the user in <strong>spectrum</strong> window.<br/><br/>
 
-              The first line of parameters will look like this:
+              The first line of parameters will look like this:<br/><br/>
 
               <blockquote>
                 # Min Wavenumber: 1900 Max Wavenumber: 2300 Molecule: CO Pressure: 0.001 Resolution: 1 Number of Scans: 1 Zero Fill: 0 Source: 3100 Beamsplitter: AR_ZnSe Cell Window: CaF2 Detector: MCT
-              </blockquote>
+              </blockquote><br/><br/>
 
-              The following excerpt is an example of what datapoints look like:
+              The following excerpt is an example of what datapoints look like:<br/><br/>
 
               <blockquote>
                 5261.723152266546 0.0008834386851116477
@@ -117,21 +117,21 @@ export const menuItems = [
                 5259.055273581491 0.0008805861620592779
                 5257.722348512898 0.0008855626861862154
                 5256.390098941579 0.0008759330608779286
-              </blockquote>
+              </blockquote><br/><br/>
             </p>
 
             <h3>Save</h3>
             <p>
-              The <strong>save</strong> menu item allows users to save a <strong>.CSV</strong> file from the web application. This file holds the users selected parameters, as well as the data points that were displayed to the user in the <strong>spectrum</strong> window.
+              The <strong>save</strong> menu item allows users to save a <strong>.CSV</strong> file from the web application. This file holds the users selected parameters, as well as the data points that were displayed to the user in the <strong>spectrum</strong> window.<br/><br/>
 
-              These files are named like: <strong>[min-wavenumber]-[max-wavenumber]-spectrum.csv</strong>
+              These files are named like: <strong>[min-wavenumber]-[max-wavenumber]-spectrum.csv</strong><br/><br/>
 
-              If the user generated a background sample, that data will also be saved. These files are named like: <strong>[min-wavenumber]-[max-wavenumber]-background-spectrum.csv</strong>
+              If the user generated a background sample, that data will also be saved. These files are named like: <strong>[min-wavenumber]-[max-wavenumber]-background-spectrum.csv</strong><br/><br/>
             </p>
 
             <h3>Print</h3>
             <p>
-              The <strong>print</strong> menu item allows users to print just a graph of the data points or both the graph and user parameters. Once the user selects the items they want printed, the browsers print preview will be displayed to the user.
+              The <strong>print</strong> menu item allows users to print just a graph of the data points or both the graph and user parameters. Once the user selects the items they want printed, the browsers print preview will be displayed to the user.<br/><br/>
             </p>
 
           </div>),
