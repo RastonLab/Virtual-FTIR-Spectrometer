@@ -2,7 +2,6 @@ import { Save } from "../redux/save";
 import { Open } from "../components/Open";
 import Print from "../components/Print";
 import Fetch from "../components/Fetch";
-import initialState from "../redux/store";
 
 export const menuItems = [
   {
