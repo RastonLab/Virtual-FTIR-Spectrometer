@@ -112,11 +112,11 @@ export const menuItems = [
               The following excerpt is an example of what datapoints look like:<br/><br/>
 
               <blockquote>
-                5261.723152266546 0.0008834386851116477
-                5260.388874661239 0.0008841243897027239
-                5259.055273581491 0.0008805861620592779
-                5257.722348512898 0.0008855626861862154
-                5256.390098941579 0.0008759330608779286
+                5261.723152266546,0.0008834386851116477<br/>
+                5260.388874661239,0.0008841243897027239<br/>
+                5259.055273581491,0.0008805861620592779<br/>
+                5257.722348512898,0.0008855626861862154<br/>
+                5256.390098941579,0.0008759330608779286<br/>
               </blockquote><br/><br/>
             </p>
 
@@ -131,7 +131,7 @@ export const menuItems = [
 
             <h3>Print</h3>
             <p>
-              The <strong>print</strong> menu item allows users to print just a graph of the data points or both the graph and user parameters. Once the user selects the items they want printed, the browsers print preview will be displayed to the user.<br/><br/>
+              The <strong>print</strong> menu item allows users to print just a graph of the data points or both the graph and user parameters. Once the user selects the items they want printed, the browsers print preview will be displayed to the user.<br/><br/><br/>
             </p>
 
           </div>),
