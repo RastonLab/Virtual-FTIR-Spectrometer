@@ -18,7 +18,7 @@ export const Save = () => {
 
   for(let i = 0; i < xVals.length; i++) {
     console.log(`${xVals[i]}\n`)
-    data += `${xVals[i]}\n`
+    data += `${xVals.x[i]}\n`
   }
 
 
