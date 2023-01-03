@@ -140,9 +140,13 @@
   #graph-and-error {
     width: 100%;
   }
+
+  #button {
+    margin-left: 25%;
+  }
 }
 
-@media only screen and (max-width: 700px) {
+@media only screen and (max-width: 700px){
   #form {
     flex-direction: column;
     justify-content: center;
@@ -157,3 +161,4 @@
     margin-left: 0;
   }
 }
+
