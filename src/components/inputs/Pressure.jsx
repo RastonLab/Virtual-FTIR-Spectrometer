@@ -1,6 +1,7 @@
-import { Input } from "@mui/material";
 import React from "react";
+import { Input } from "@mui/material";
 
+// this input component sets the pressure from 0 to 10 Bar
 export default function Pressure({ val, setter }) {
   const handleBlur = () => {
     if (val < 0) {

@@ -1,6 +1,7 @@
-import { Input } from "@mui/material";
 import React from "react";
+import { Input } from "@mui/material";
 
+// this input component sets the minimum wavenumber to a value from 400 to 12500
 export default function MinWave({ val, setter }) {
   return (
     <div className="input">

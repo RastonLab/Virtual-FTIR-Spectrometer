@@ -1,7 +1,7 @@
 import React, { forwardRef, useState } from "react";
 import { useSelector } from "react-redux";
 
-// additional components
+// components
 import Fetch from "../components/Fetch";
 import { ProcessedPlotly } from "../components/ProcessedPlotly";
 
@@ -18,6 +18,7 @@ import Detector from "../components/inputs/Detector";
 import Source from "../components/inputs/Source";
 import ZeroFillling from "../components/inputs/ZeroFilling";
 
+// style
 import "../style/routes/ExperimentalSetup.css";
 
 const ExperimentalSetup = (props, ref) => {
@@ -93,9 +94,9 @@ const ExperimentalSetup = (props, ref) => {
                 cellWindow,
                 detector,
               }}
-              fetchURL="http://localhost:5000/post_json"
-              // fetchURL="http://ec2-44-203-44-133.compute-1.amazonaws.com/post_json"
-              buttonText="Generate Spectrum"
+              // fetchURL={"http://localhost:5000/post_json"}
+              fetchURL={"https://ftir.rastonlab.org/post_json"}
+              buttonText="Generate Processed Spectrum"
             />
             <Fetch
               type="background"
@@ -112,8 +113,8 @@ const ExperimentalSetup = (props, ref) => {
                 cellWindow,
                 detector,
               }}
-              fetchURL={"http://localhost:5000/fetch_background"}
-              // fetchURL={"http://ec2-44-203-44-133.compute-1.amazonaws.com/fetch_background"}
+              // fetchURL={"http://localhost:5000/fetch_background"}
+              fetchURL={"https://ftir.rastonlab.org/fetch_background"}
               buttonText={"Generate Background Sample"}
             />
           </div>

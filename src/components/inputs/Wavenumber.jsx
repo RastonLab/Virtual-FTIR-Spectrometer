@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Input, Slider } from "@mui/material";
 
+// NOTE currently unused. designed to be a slider instead of using minwave and maxwave
 export default function Wavenumber(min, max, setMin, setMax) {
   const [wavenumbers, setWavenumbers] = useState([4000, 9000]); //NOTE Issues bringing in default val from ExperimentalSetup
 

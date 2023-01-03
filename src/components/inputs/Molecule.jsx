@@ -1,6 +1,7 @@
-import { MenuItem, Select } from "@mui/material";
 import React from "react";
+import { MenuItem, Select } from "@mui/material";
 
+// this input component sets the molecule to a pre-approved selection
 export default function Molecule({ val, setter }) {
   return (
     <div className="input">
