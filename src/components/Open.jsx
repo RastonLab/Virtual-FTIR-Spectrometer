@@ -32,9 +32,9 @@ export const Open = () => {
       let line = rawData.substring(0, index);
 
       if (line.charAt(0) !== "#") {
-        let space = line.indexOf(" ");
-        let x = line.substring(0, space);
-        let y = line.substring(space);
+        let comma = line.indexOf(",");
+        let x = line.substring(0, comma);
+        let y = line.substring(comma);
 
         xData.push(Number(x));
         yData.push(Number(y));
