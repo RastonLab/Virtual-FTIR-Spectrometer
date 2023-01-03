@@ -9,7 +9,7 @@ export const Save = () => {
   }
 
   const params = state.params;
-  const xVals = state.processedData;
+  const xVals = state.processedData.x;
   console.log(xVals);
   // const yVals = state.processedData.y;
 
@@ -17,8 +17,8 @@ export const Save = () => {
   let data = `# Min Wavenumber: ${params.minWave} Max Wavenumber: ${params.maxWave} Molecule: ${params.molecule} Pressure: ${params.pressure} Resolution: ${params.resolution} Number of Scans: ${params.numScan} Zero Fill: ${params.zeroFill} Source: ${params.source} Beamsplitter: ${params.beamsplitter} Cell Window: ${params.cellWindow} Detector: ${params.detector} \n`;
 
   for(let i = 0; i < xVals.length; i++) {
-    console.log(`${xVals.x[i]}\n`)
-    data += `${xVals.x[i]}\n`
+    console.log(`${xVals[i]}\n`)
+    data += `${xVals[i]}\n`
   }
 
 
