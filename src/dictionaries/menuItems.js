@@ -2,6 +2,7 @@ import { Save } from "../redux/save";
 import { Open } from "../components/Open";
 import Print from "../components/Print";
 import Fetch from "../components/Fetch";
+import initialState from "../redux/store";
 
 export const menuItems = [
   {
@@ -29,10 +30,25 @@ export const menuItems = [
     label: "Collect",
     submenu: [
       {
-        label: "Acquire Background Sample",
-        button: true,
-        title: "",
-        text: <Fetch />
+          label: <Fetch
+          type="background"
+          // params={{
+          //   state.minWave,
+          //   state.maxWave,
+          //   state.molecule,
+          //   state.pressure,
+          //   state.resolution,
+          //   state.numScan,
+          //   state.zeroFill,
+          //   state.source,
+          //   state.beamsplitter,
+          //   state.cellWindow,
+          //   state.detector,
+          // }}
+          // fetchURL={"http://localhost:5000/fetch_background"}
+          fetchURL={"https://ftir.rastonlab.org/fetch_background"}
+          buttonText={"Generate Background Sample"}
+        />
       },
       // {
       //   label: "Stop Acquisition",
@@ -64,27 +80,27 @@ export const menuItems = [
       },
     ],
   },
-  {
-    label: "Help",
-    submenu: [
-      {
-        label: "Tutorial",
-      },
-      {
-        label: "Usage",
-      },
-      {
-        label: "About",
-        button: true,
-        title: "About The FTIR",
-        text: (
-          <p>
-            Insert Lorem ipsum text
-            <br />
-            Format test
-          </p>
-        ),
-      },
-    ],
-  },
+  // {
+  //   label: "Help",
+  //   submenu: [
+  //     {
+  //       label: "Tutorial",
+  //     },
+  //     {
+  //       label: "Usage",
+  //     },
+  //     {
+  //       label: "About",
+  //       button: true,
+  //       title: "About The FTIR",
+  //       text: (
+  //         <p>
+  //           Insert Lorem ipsum text
+  //           <br />
+  //           Format test
+  //         </p>
+  //       ),
+  //     },
+  //   ],
+  // },
 ];
