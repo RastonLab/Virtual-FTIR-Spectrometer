@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useDispatch } from "react-redux";
-import { setError, storeProcessedData, storeParams } from "../redux/actions";
+import { setError, storeProcessedData, storeParams, storeBackgroundData } from "../redux/actions";
 
 // style
 import "../style/components/Open.css";
@@ -9,6 +9,7 @@ import "../style/components/Open.css";
 //   https://dev.to/pankod/how-to-import-csv-file-with-react-4pj2
 export const Open = () => {
   const [data, setData] = useState();
+  const [filename, setFilename] = useState();
   const dispatch = useDispatch();
   const filereader = new FileReader();
   const [sucess, toggleSucess] = useState(false);
@@ -18,6 +19,8 @@ export const Open = () => {
       filereader.onload = function (e) {
         setData(e.target.result);
       };
+      setFilename(event.target.files[0].name);
+      console.log(filename);
       filereader.readAsText(event.target.files[0]);
     }
   };
@@ -67,7 +70,12 @@ export const Open = () => {
       rawData = rawData.substring(index + 1);
     }
 
-    dispatch(storeProcessedData({ x: xData, y: yData }));
+    if (filename.includes("background")){
+      dispatch(storeBackgroundData({ x: xData, y: yData}));
+    } else {
+      dispatch(storeProcessedData({ x: xData, y: yData }));
+    }
+
     dispatch(setError({ active: false }));
     toggleSucess(true);
   };
