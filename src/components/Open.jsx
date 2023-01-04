@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useDispatch } from "react-redux";
-import { setError, storeProcessedData, storeParams, storeBackgroundData } from "../redux/actions";
+import { setError, storeProcessedData, storeBackgroundData } from "../redux/actions";
 
 // style
 import "../style/components/Open.css";
