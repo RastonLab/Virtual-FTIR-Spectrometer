@@ -34,7 +34,7 @@ export const Open = () => {
       if (line.charAt(0) !== "#") {
         let comma = line.indexOf(",");
         let x = line.substring(0, comma);
-        let y = line.substring(comma);
+        let y = line.substring(comma + 1);
 
         xData.push(Number(x));
         yData.push(Number(y));
