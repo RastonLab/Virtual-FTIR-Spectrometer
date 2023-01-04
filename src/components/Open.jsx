@@ -68,8 +68,6 @@ export const Open = () => {
       }
       rawData = rawData.substring(index + 1);
     }
-    console.log(filename);
-
 
     if (filename.includes("background")){
       dispatch(storeBackgroundData({ x: xData, y: yData}));
