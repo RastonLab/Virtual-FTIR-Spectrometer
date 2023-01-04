@@ -21,7 +21,6 @@ export const Open = () => {
         setFilename(event.target.files[0].name);
       };
       filereader.readAsText(event.target.files[0]);
-      console.log(filename);
     }
   };
 
@@ -69,6 +68,8 @@ export const Open = () => {
       }
       rawData = rawData.substring(index + 1);
     }
+    console.log(filename);
+
 
     if (filename.includes("background")){
       dispatch(storeBackgroundData({ x: xData, y: yData}));
@@ -87,7 +88,7 @@ export const Open = () => {
           Select a File
           <input type="file" name="file" onChange={changeHandler} />
         </label>
-        <h1>{sucess && "Upload Sucessful!"}</h1>
+        <h2>{sucess && "Upload Sucessful!"}</h2>
         <button className="button" onClick={handleSubmission}>
           Upload
         </button>
