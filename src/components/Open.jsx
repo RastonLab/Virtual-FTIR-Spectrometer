@@ -18,10 +18,10 @@ export const Open = () => {
     if (event.target.files[0]) {
       filereader.onload = function (e) {
         setData(e.target.result);
+        setFilename(event.target.files[0].name);
       };
-      setFilename(event.target.files[0].name);
-      console.log(filename);
       filereader.readAsText(event.target.files[0]);
+      console.log(filename);
     }
   };
 
