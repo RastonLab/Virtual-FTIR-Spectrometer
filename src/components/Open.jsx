@@ -50,6 +50,11 @@ export const Open = () => {
           line = line.substring(paramEnd + 1);
           parameters.push(param);
         }
+
+        for (let i = 0; i < parameters.length; i++){
+          console.log(parameters[i]);
+        }
+
         dispatch(
           storeParams({
             minWave: parameters[0],
@@ -68,8 +73,6 @@ export const Open = () => {
       }
       rawData = rawData.substring(index + 1);
     }
-    console.log(filename);
-
 
     if (filename.includes("background")){
       dispatch(storeBackgroundData({ x: xData, y: yData}));
