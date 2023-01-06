@@ -60,19 +60,19 @@ export default function SpectrumWindow() {
       </Box>
       <TabPanel value={tabValue} index={0}>
         Processed Spectrum
-        {storedProcessedData ? (
+        {/* {storedProcessedData ? (
           <ProcessedPlotly />
         ) : (
           <p>Please generate a processed spectrum and return here</p>
-        )}
+        )} */}
       </TabPanel>
       <TabPanel value={tabValue} index={1}>
         Background Spectrum
-        {storedBackgroundData ? (
+        {/* {storedBackgroundData ? (
             <BackgroundPlotly />
           ) : (
             <p>Please generate a background spectrum and return here</p>
-          )}
+          )} */}
       </TabPanel>
     </Box>
   );
