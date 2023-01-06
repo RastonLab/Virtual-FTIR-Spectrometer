@@ -10,7 +10,7 @@ import "../style/routes/SpectrumWindow.css";
 import Box from '@mui/material/Box';
 import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
-import TabPanel from "@mui/lab/TabPanel";
+import TabPanel from '@mui/lab/TabPanel';
 
 export default function SpectrumWindow() {
   const storedProcessedData = useSelector((state) => state.processedData);
