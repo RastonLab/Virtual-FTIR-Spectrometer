@@ -1,6 +1,6 @@
 import React from "react";
 import { useSelector } from "react-redux";
-// import { Outlet } from "react-router-dom";
+import { Outlet } from "react-router-dom";
 
 import { ProcessedPlotly } from "../components/ProcessedPlotly";
 import BackgroundPlotly from "../components/BackgroundPlotly";
@@ -46,7 +46,7 @@ export default function SpectrumWindow() {
   return (
     <Box>
       <Box sx={{ borederBottom: 1, borderColor: 'divider' }}>
-        <Tabs value={tabValue} onChange={handleChange} aria-label="Spectrum Window Selection">
+        <Tabs value={tabValue} onClick={handleChange} aria-label="Spectrum Window Selection">
           <Tab label="Processed Spectrum" /> {/*TODO Check aria labels */}
           <Tab label="Background Spectrum" />
           <Tab label="Both Spectra" disabled />
@@ -66,6 +66,7 @@ export default function SpectrumWindow() {
             <p>Please generate a background spectrum and return here</p>
           )}
       </TabPanel>
+      <Outlet />
     </Box>
   );
 
