@@ -40,8 +40,8 @@ export default function SpectrumWindow() {
   const [tabValue, setValue] = React.useState(0);
 
   const handleChange = (newValue) => {
-    console.log(newValue);
-    setValue(newValue);
+    console.log(newValue.value);
+    setValue(newValue.value);
   };
 
   return (
