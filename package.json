@@ -6,7 +6,8 @@
   "dependencies": {
     "@emotion/react": "^11.10.5",
     "@emotion/styled": "^11.10.5",
-    "@mui/material": "^5.11.1",
+    "@mui/material": "^5.11.3",
+    "@mui/styled-engine-sc": "^5.11.0",
     "@sentry/react": "^7.28.0",
     "@sentry/tracing": "^7.28.0",
     "eslint-config-react-app": "^7.0.1",
@@ -19,7 +20,8 @@
     "react-scripts": "^5.0.1",
     "react-to-print": "^2.14.10",
     "redux": "^4.2.0",
-    "redux-thunk": "^2.4.2"
+    "redux-thunk": "^2.4.2",
+    "styled-components": "^5.3.6"
   },
   "scripts": {
     "start": "react-scripts start",
