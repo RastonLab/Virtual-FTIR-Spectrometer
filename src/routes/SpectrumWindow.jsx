@@ -54,8 +54,8 @@ const StyledTab = styled((props) => (
   <Tab disableRipple {...props} />
 ))(({ theme }) => ({
   // textTransform: 'none',
-  // fontWeight: theme.typography.fontWeightRegular,
-  // fontSize: theme.typography.pxToRem(15),
+  fontWeight: '700',
+  fontSize: '2 rem',
   // marginRight: theme.spacing(1),
   // color: 'rgba(255, 255, 255, 0.7)',
   '&.Mui-selected': {
@@ -78,7 +78,7 @@ export default function SpectrumWindow() {
   return (
     <Box>
       <Box sx={{ borederBottom: 1, borderColor: 'divider' }}>
-        <StyledTabs value={tabValue} onChange={handleChange} aria-label="Spectrum Window Selection">
+        <StyledTabs value={tabValue} onChange={handleChange} centered selectionFollowsFocus aria-label="Spectrum Window Selection">
           <StyledTab label="Processed Spectrum" /> {/*TODO Check aria labels */}
           <StyledTab label="Background Spectrum" />
           <StyledTab label="Both Spectra" />
