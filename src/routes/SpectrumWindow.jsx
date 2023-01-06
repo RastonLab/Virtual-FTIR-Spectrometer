@@ -25,7 +25,7 @@ function TabPanel(props) {
     >
       {value === index && (
         <Box sx={{ p: 3 }}>
-          <div id="spectrum">{children}</div>
+          <div>{children}</div>
         </Box>
       )}
     </div>
@@ -85,30 +85,39 @@ export default function SpectrumWindow() {
         </StyledTabs>
       </Box>
       <TabPanel value={tabValue} index={0}>
-        {storedProcessedData ? (
-          <ProcessedPlotly />
-        ) : (
-          <p>Please generate a Processed Spectrum and return here</p>
-        )}
+        <div id="spectrum">
+          {storedProcessedData ? (
+            <ProcessedPlotly />
+          ) : (
+            <p>Please generate a Processed Spectrum and return here</p>
+          )}
+        </div>
       </TabPanel>
       <TabPanel value={tabValue} index={1}>
-        {storedBackgroundData ? (
+        <div id="spectrum">
+          {storedBackgroundData ? (
+              <BackgroundPlotly />
+            ) : (
+              <p>Please generate a Background Spectrum and return here</p>
+            )}
+        </div>
+      </TabPanel>
+      <TabPanel value={tabValue} index={2}>
+        <div id="spectrum">
+          {storedProcessedData ? (
+            <ProcessedPlotly />
+          ) : (
+            <p>Please generate a Processed Spectrum and return here</p>
+          )}
+        </div>
+
+        <div id="spectrum">
+          {storedBackgroundData ? (
             <BackgroundPlotly />
           ) : (
             <p>Please generate a Background Spectrum and return here</p>
           )}
-      </TabPanel>
-      <TabPanel value={tabValue} index={2}>
-        {storedProcessedData ? (
-          <ProcessedPlotly />
-        ) : (
-          <p>Please generate a Processed Spectrum and return here</p>
-        )}
-        {storedBackgroundData ? (
-          <BackgroundPlotly />
-        ) : (
-          <p>Please generate a Background Spectrum and return here</p>
-        )}
+        </div>
       </TabPanel>
       <Outlet />
     </Box>
