@@ -10,6 +10,7 @@ import "../style/routes/SpectrumWindow.css";
 import Box from '@mui/material/Box';
 import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
+import { styled } from '@mui/material/styles';
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
