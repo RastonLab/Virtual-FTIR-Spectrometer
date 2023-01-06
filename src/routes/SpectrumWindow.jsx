@@ -59,6 +59,7 @@ export default function SpectrumWindow() {
         </Tabs>
       </Box>
       <TabPanel value={tabValue} index={0}>
+        Processed Spectrum
         {storedProcessedData ? (
           <ProcessedPlotly />
         ) : (
@@ -66,6 +67,7 @@ export default function SpectrumWindow() {
         )}
       </TabPanel>
       <TabPanel value={tabValue} index={1}>
+        Background Spectrum
         {storedBackgroundData ? (
             <BackgroundPlotly />
           ) : (
