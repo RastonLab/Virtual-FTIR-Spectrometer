@@ -10,7 +10,8 @@ import "../style/routes/SpectrumWindow.css";
 import Box from '@mui/material/Box';
 import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
-import TabPanel from '@mui/lab/TabPanel';
+// import TabPanel from '@mui/lab/TabPanel';
+import { TabPanelUnstyled } from "@mui/base";
 
 export default function SpectrumWindow() {
   const storedProcessedData = useSelector((state) => state.processedData);
@@ -30,20 +31,20 @@ export default function SpectrumWindow() {
           <Tab label="Both Spectra" disabled />
         </Tabs>
       </Box>
-      <TabPanel value={tabValue} index={0}>
+      <TabPanelUnstyled value={tabValue} index={0}>
         {storedProcessedData ? (
           <ProcessedPlotly />
         ) : (
           <p>Please generate a processed spectrum and return here</p>
         )}
-      </TabPanel>
-      <TabPanel value={tabValue} index={1}>
+      </TabPanelUnstyled>
+      <TabPanelUnstyled value={tabValue} index={1}>
         {storedBackgroundData ? (
             <BackgroundPlotly />
           ) : (
             <p>Please generate a background spectrum and return here</p>
           )}
-      </TabPanel>
+      </TabPanelUnstyled>
     </Box>
   );
 
