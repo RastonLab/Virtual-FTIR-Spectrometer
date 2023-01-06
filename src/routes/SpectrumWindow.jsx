@@ -10,9 +10,6 @@ import "../style/routes/SpectrumWindow.css";
 import Box from '@mui/material/Box';
 import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
-// import Typography from '@mui/material/Typography';
-// import TabPanel from '@mui/lab/TabPanel';
-// import { TabPanelUnstyled } from "@mui/base";
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -40,9 +37,7 @@ export default function SpectrumWindow() {
   const [tabValue, setValue] = React.useState(0);
 
   const handleChange = (event, newValue) => {
-    console.log(newValue);
     setValue(newValue);
-    console.log(tabValue);
   };
 
   return (
@@ -51,45 +46,36 @@ export default function SpectrumWindow() {
         <Tabs value={tabValue} onChange={handleChange} aria-label="Spectrum Window Selection">
           <Tab label="Processed Spectrum" /> {/*TODO Check aria labels */}
           <Tab label="Background Spectrum" />
-          <Tab label="Both Spectra" disabled />
+          <Tab label="Both Spectra" />
         </Tabs>
       </Box>
       <TabPanel value={tabValue} index={0}>
         {storedProcessedData ? (
           <ProcessedPlotly />
         ) : (
-          <p>Please generate a processed spectrum and return here</p>
+          <p>Please generate a Processed Spectrum and return here</p>
         )}
       </TabPanel>
       <TabPanel value={tabValue} index={1}>
         {storedBackgroundData ? (
             <BackgroundPlotly />
           ) : (
-            <p>Please generate a background spectrum and return here</p>
+            <p>Please generate a Background Spectrum and return here</p>
           )}
+      </TabPanel>
+      <TabPanel value={tabValue} index={2}>
+        {storedProcessedData ? (
+          <ProcessedPlotly />
+        ) : (
+          <p>Please generate a Processed Spectrum and return here</p>
+        )}
+        {storedBackgroundData ? (
+          <BackgroundPlotly />
+        ) : (
+          <p>Please generate a Background Spectrum and return here</p>
+        )}
       </TabPanel>
       <Outlet />
     </Box>
   );
-
-  // return (
-  //   <div id="spectrum-window">
-  //     <div id="spectrum">
-  //       {storedProcessedData ? (
-  //         <ProcessedPlotly />
-  //       ) : (
-  //         <p>Please generate a processed spectrum and return here</p>
-  //       )}
-  //     </div>
-
-  //     <div id="spectrum">
-        // {storedBackgroundData ? (
-        //   <BackgroundPlotly />
-        // ) : (
-        //   <p>Please generate a background spectrum and return here</p>
-        // )}
-  //     </div>
-  //     <Outlet />
-  //   </div>
-  // );
 }
