@@ -10,15 +10,9 @@ import "../style/routes/SpectrumWindow.css";
 import Box from '@mui/material/Box';
 import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
-import Typography from '@mui/material/Typography';
+// import Typography from '@mui/material/Typography';
 // import TabPanel from '@mui/lab/TabPanel';
 // import { TabPanelUnstyled } from "@mui/base";
-
-// interface TabPanelProps {
-//   children?: React.ReactNode;
-//   index: number;
-//   value: number;
-// }
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -33,7 +27,7 @@ function TabPanel(props) {
     >
       {value === index && (
         <Box sx={{ p: 3 }}>
-          <Typography>{children}</Typography>
+          <div>{children}</div>
         </Box>
       )}
     </div>
@@ -59,20 +53,18 @@ export default function SpectrumWindow() {
         </Tabs>
       </Box>
       <TabPanel value={tabValue} index={0}>
-        Processed Spectrum
-        {/* {storedProcessedData ? (
+        {storedProcessedData ? (
           <ProcessedPlotly />
         ) : (
           <p>Please generate a processed spectrum and return here</p>
-        )} */}
+        )}
       </TabPanel>
       <TabPanel value={tabValue} index={1}>
-        Background Spectrum
-        {/* {storedBackgroundData ? (
+        {storedBackgroundData ? (
             <BackgroundPlotly />
           ) : (
             <p>Please generate a background spectrum and return here</p>
-          )} */}
+          )}
       </TabPanel>
     </Box>
   );
