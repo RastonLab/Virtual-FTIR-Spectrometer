@@ -43,7 +43,7 @@ export default function SpectrumWindow() {
   return (
     <Box>
       <Box sx={{ borederBottom: 1, borderColor: 'divider' }}>
-        <Tabs value={tabValue} onChange={handleChange} textColor="hsl(30,88%,69%)" indicatorColor="hsl(30,88%,69%)" aria-label="Spectrum Window Selection">
+        <Tabs value={tabValue} onChange={handleChange} aria-label="Spectrum Window Selection">
           <Tab label="Processed Spectrum" /> {/*TODO Check aria labels */}
           <Tab label="Background Spectrum" />
           <Tab label="Both Spectra" />
