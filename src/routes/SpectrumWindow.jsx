@@ -39,9 +39,10 @@ export default function SpectrumWindow() {
   const storedBackgroundData = useSelector((state) => state.backgroundData);
   const [tabValue, setValue] = React.useState(0);
 
-  const handleChange = (newValue) => {
-    console.log(newValue.value);
-    setValue(newValue.value);
+  const handleChange = (event, newValue) => {
+    console.log(newValue);
+    setValue(newValue);
+    console.log(tabValue);
   };
 
   return (
