@@ -31,6 +31,37 @@ function TabPanel(props) {
   );
 }
 
+const StyledTabs = styled((props) => (
+  <Tabs
+    {...props}
+    TabIndicatorProps={{ children: <span className="MuiTabs-indicatorSpan" /> }}
+  />
+  ))({
+    '& .MuiTabs-indicator': {
+      // display: 'flex',
+      // justifyContent: 'center',
+      // backgroundColor: 'transparent',
+      color: '#f6b06a'
+    }
+  }
+);
+
+const StyledTab = styled((props) => (
+  <Tab disableRipple {...props} />
+))(({ theme }) => ({
+  // textTransform: 'none',
+  // fontWeight: theme.typography.fontWeightRegular,
+  // fontSize: theme.typography.pxToRem(15),
+  // marginRight: theme.spacing(1),
+  // color: 'rgba(255, 255, 255, 0.7)',
+  '&.Mui-selected': {
+    color: '#f6b06a',
+  },
+  // '&.Mui-focusVisible': {
+  //   backgroundColor: '#f6b06a',
+  // },
+}));
+
 export default function SpectrumWindow() {
   const storedProcessedData = useSelector((state) => state.processedData);
   const storedBackgroundData = useSelector((state) => state.backgroundData);
@@ -43,11 +74,11 @@ export default function SpectrumWindow() {
   return (
     <Box>
       <Box sx={{ borederBottom: 1, borderColor: 'divider' }}>
-        <Tabs value={tabValue} onChange={handleChange} aria-label="Spectrum Window Selection">
-          <Tab label="Processed Spectrum" /> {/*TODO Check aria labels */}
-          <Tab label="Background Spectrum" />
-          <Tab label="Both Spectra" />
-        </Tabs>
+        <StyledTabs value={tabValue} onChange={handleChange} aria-label="Spectrum Window Selection">
+          <StyledTab label="Processed Spectrum" /> {/*TODO Check aria labels */}
+          <StyledTab label="Background Spectrum" />
+          <StyledTab label="Both Spectra" />
+        </StyledTabs>
       </Box>
       <TabPanel value={tabValue} index={0}>
         {storedProcessedData ? (
