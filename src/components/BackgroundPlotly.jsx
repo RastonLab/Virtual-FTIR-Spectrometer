@@ -32,7 +32,7 @@ export default function BackgroundPlotly() {
               font: { family: "Roboto", color: "#000" },
               xaxis: {
                 range: [params.minWave, params.maxWave],
-                title: { text: "Wavelength (cm⁻¹)" },
+                title: { text: "Wavenumber (cm⁻¹)" },
                 rangeslider: {
                   autorange: true,
                   yaxis: { rangemode: "auto" },
