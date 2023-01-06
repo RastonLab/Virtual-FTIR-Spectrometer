@@ -32,8 +32,8 @@ export const ProcessedPlotly = forwardRef((props, ref) => {
               title: "Processed Spectrum",
               font: { family: "Roboto", color: "#000" },
               xaxis: {
-                range: [10000000 / params.maxWave, 10000000 / params.minWave],
-                title: { text: "Wavelength (nm)" },
+                range: [params.minWave, params.maxWave],
+                title: { text: "Wavelength (cm⁻¹)" },
                 rangeslider: {
                   autorange: true,
                   yaxis: { rangemode: "auto" },

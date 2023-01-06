@@ -11,7 +11,7 @@ export default function App() {
   return (
     <div>
       <div className="nav-area">
-        <RLLogo className="logo" width={"58"} viewBox="-10 -158 100 400" />
+        <RLLogo className="logo" width={55} height={55} viewBox="0 0 85 85" />
         <Link className="logo" to="/">
           The Raston Lab: FTIR
         </Link>
