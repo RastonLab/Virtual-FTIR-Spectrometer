@@ -40,13 +40,14 @@ export default function SpectrumWindow() {
   const [tabValue, setValue] = React.useState(0);
 
   const handleChange = (newValue) => {
+    console.log(newValue);
     setValue(newValue);
   };
 
   return (
     <Box>
       <Box sx={{ borederBottom: 1, borderColor: 'divider' }}>
-        <Tabs value={tabValue} onClick={handleChange} aria-label="Spectrum Window Selection">
+        <Tabs value={tabValue} onChange={handleChange} aria-label="Spectrum Window Selection">
           <Tab label="Processed Spectrum" /> {/*TODO Check aria labels */}
           <Tab label="Background Spectrum" />
           <Tab label="Both Spectra" disabled />
