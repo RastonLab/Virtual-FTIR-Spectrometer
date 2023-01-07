@@ -94,8 +94,8 @@ const ExperimentalSetup = (props, ref) => {
                 cellWindow,
                 detector,
               }}
-              // fetchURL={"http://localhost:5000/spectra"}
-              fetchURL={"https://ftir.rastonlab.org/spectra"}
+              // fetchURL={"http://localhost:5000/spectrum"}
+              fetchURL={"https://ftir.rastonlab.org/spectrum"}
               buttonText="Generate Processed Spectrum"
             />
             <Fetch

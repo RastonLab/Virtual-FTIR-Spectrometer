@@ -33,7 +33,7 @@ export const ProcessedPlotly = forwardRef((props, ref) => {
               font: { family: "Roboto", color: "#000" },
               xaxis: {
                 range: [params.minWave, params.maxWave],
-                title: { text: "Wavelength (cm⁻¹)" },
+                title: { text: "Wavenumber (cm⁻¹)" },
                 rangeslider: {
                   autorange: true,
                   yaxis: { rangemode: "auto" },
