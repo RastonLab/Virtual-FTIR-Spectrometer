@@ -4,6 +4,8 @@ import { Outlet } from "react-router-dom";
 
 import { ProcessedPlotly } from "../components/ProcessedPlotly";
 import BackgroundPlotly from "../components/BackgroundPlotly";
+import { TransmittancePlotly } from "../components/TransmittancePlotly";
+import { AbsorbancePlotly } from "../components/AbsorbancePlotly";
 
 import "../style/routes/SpectrumWindow.css";
 
@@ -84,20 +86,26 @@ export default function SpectrumWindow() {
           selectionFollowsFocus
           aria-label="Spectrum Window Selection"
         >
-          <StyledTab label="Processed Spectrum" /> {/*TODO Check aria labels */}
+          <StyledTab label="Sample Spectrum" /> {/*TODO Check aria labels */}
           <StyledTab label="Background Spectrum" />
-          <StyledTab label="Both Spectra" />
+          <StyledTab label="Transmittance Spectrum" />
+          <StyledTab label="Absorbance Spectrum" />
+          <StyledTab label="All Spectra" />
         </StyledTabs>
       </Box>
+
+      {/* Sample Spectrum */}
       <TabPanel value={tabValue} index={0}>
         <div id="spectrum">
           {storedSpectrumData ? (
             <ProcessedPlotly />
           ) : (
-            <p>Please generate a Processed Spectrum and return here</p>
+            <p>Please generate a Sample Spectrum and return here</p>
           )}
         </div>
       </TabPanel>
+
+      {/* Background Spectrum */}
       <TabPanel value={tabValue} index={1}>
         <div id="spectrum">
           {storedBackgroundData ? (
@@ -107,7 +115,31 @@ export default function SpectrumWindow() {
           )}
         </div>
       </TabPanel>
+
+      {/* Transmittance Spectrum */}
       <TabPanel value={tabValue} index={2}>
+        <div id="spectrum">
+            {storedBackgroundData && storedSpectrumData ? (
+              <TransmittancePlotly />
+            ) : (
+              <p>Please generate both a Sample Spectrum and a Background Spectrum and return here</p>
+            )}
+        </div>
+      </TabPanel>
+
+      {/* Absorbance Spectrum */}
+      <TabPanel value={tabValue} index={3}>
+        <div>
+          {storedBackgroundData && storedSpectrumData ? (
+              <AbsorbancePlotly />
+            ) : (
+              <p>Please generate both a Sample Spectrum and a Background Spectrum and return here</p>
+            )}
+        </div>
+      </TabPanel>
+
+      {/* All Spectra */}
+      <TabPanel value={tabValue} index={4}>
         <div id="spectrum">
           {storedSpectrumData ? (
             <ProcessedPlotly />
@@ -121,6 +153,22 @@ export default function SpectrumWindow() {
             <BackgroundPlotly />
           ) : (
             <p>Please generate a Background Spectrum and return here</p>
+          )}
+        </div>
+
+        <div id="spectrum">
+            {storedBackgroundData && storedSpectrumData ? (
+              <TransmittancePlotly />
+            ) : (
+              <p>Please generate both a Sample Spectrum and a Background Spectrum and return here</p>
+            )}
+        </div>
+
+        <div>
+        {storedBackgroundData && storedSpectrumData ? (
+            <AbsorbancePlotly />
+          ) : (
+            <p>Please generate both a Sample Spectrum and a Background Spectrum and return here</p>
           )}
         </div>
       </TabPanel>

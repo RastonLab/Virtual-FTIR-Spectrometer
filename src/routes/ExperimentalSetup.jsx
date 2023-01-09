@@ -4,6 +4,7 @@ import { useSelector } from "react-redux";
 // components
 import Fetch from "../components/Fetch";
 import { ProcessedPlotly } from "../components/ProcessedPlotly";
+import BackgroundPlotly from "../components/BackgroundPlotly";
 
 // inputs
 import MinWave from "../components/inputs/MinWave";
@@ -20,11 +21,13 @@ import ZeroFillling from "../components/inputs/ZeroFilling";
 
 // style
 import "../style/routes/ExperimentalSetup.css";
+import { FlagOps } from "../redux/store";
 
 const ExperimentalSetup = (props, ref) => {
   const storedParams = useSelector((state) => state.params);
   const progress = useSelector((state) => state.progress);
   const error = useSelector((state) => state.error);
+  const lastGenerated = useSelector((state) => state.lastGenerated);
 
   // values set by user
   const [minWave, setMinWave] = useState(storedParams.minWave);
@@ -129,7 +132,9 @@ const ExperimentalSetup = (props, ref) => {
           </div>
         )}
 
-        {!progress && !error.active && <ProcessedPlotly />}
+        {!progress && !error.active && lastGenerated === FlagOps.Processed && <ProcessedPlotly />}
+
+        {!progress && !error.active && lastGenerated === FlagOps.Background && <BackgroundPlotly />}
       </div>
     </div>
   );

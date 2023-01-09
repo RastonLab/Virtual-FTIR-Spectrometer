@@ -8,6 +8,8 @@ export const Action = Object.freeze({
   SetProgress: "SetProgress",
 
   SetError: "SetError",
+
+  SetFlag: "SetFlag",
 });
 
 // -------------------- calc_spectrum parameters --------------------
@@ -33,4 +35,9 @@ export function setProgress(progress) {
 // -------------------- error text --------------------
 export function setError(error) {
   return { type: Action.SetError, payload: error };
+}
+
+// -------------------- flag ----------------------
+export function setFlag(flag) {
+  return { type: Action.SetFlag, payload: flag };
 }
