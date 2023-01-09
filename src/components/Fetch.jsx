@@ -6,7 +6,9 @@ import {
   storeSpectrumData,
   storeBackgroundData,
   storeParams,
+  setFlag,
 } from "../redux/actions";
+import { FlagOps } from "../redux/store";
 
 // this component reaches out to the flask server with user parameters and receives X and Y coordinates to graph
 export default function Fetch({ type, params, fetchURL, buttonText }) {
@@ -174,9 +176,11 @@ export default function Fetch({ type, params, fetchURL, buttonText }) {
             switch (type) {
               case "spectrum":
                 dispatch(storeSpectrumData(data));
+                dispatch(setFlag(FlagOps.Processed));
                 break;
               case "background":
                 dispatch(storeBackgroundData(data));
+                dispatch(setFlag(FlagOps.Background));
                 break;
               default:
                 console.log("not processed or background");

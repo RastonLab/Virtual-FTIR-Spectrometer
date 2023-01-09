@@ -1,4 +1,4 @@
-import React from "react";
+import React, { forwardRef } from "react";
 import { useSelector } from "react-redux";
 
 // components
@@ -7,28 +7,37 @@ import Plot from "react-plotly.js";
 // style
 import "../style/components/Plotly.css";
 
-// this component uses the plotly library to graph background sample data
-export default function BackgroundPlotly() {
+// this component uses the plotly library to graph processed spectrum data
+export const TransmittancePlotly = forwardRef((props, ref) => {
+  const spectrumData = useSelector((state) => state.spectrumData);
   const backgroundData = useSelector((state) => state.backgroundData);
   const params = useSelector((state) => state.params);
 
-  if (backgroundData) {
+//   const newX = spectrumData.x / backgroundData.x;
+  const newY = [spectrumData.x.length];
+
+  for (let i = 0; i < spectrumData.x.length; i++) {
+    newY[i] = spectrumData.y[i] / backgroundData.y[i];
+  }
+
+  if (spectrumData) {
     // https://github.com/suzil/radis-app/blob/main/frontend/src/components/CalcSpectrumPlot.tsx
     return (
       <>
         {
           <Plot
+            ref={ref}
             className="plotly"
             data={[
               {
-                x: backgroundData.x,
-                y: backgroundData.y,
+                x: spectrumData.x,
+                y: newY,
                 type: "scatter",
                 marker: { color: "#f50057" },
               },
             ]}
             layout={{
-              title: "Background Spectrum",
+              title: "Transmittance Spectrum",
               font: { family: "Roboto", color: "#000" },
               xaxis: {
                 range: [params.minWave, params.maxWave],
@@ -57,4 +66,4 @@ export default function BackgroundPlotly() {
   } else {
     return <div></div>;
   }
-}
+});
