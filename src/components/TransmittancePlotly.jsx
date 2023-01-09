@@ -20,6 +20,8 @@ export const TransmittancePlotly = forwardRef((props, ref) => {
     newY[i] = spectrumData.y[i] / backgroundData.y[i];
   }
 
+  console.log(newY);
+
   if (spectrumData) {
     // https://github.com/suzil/radis-app/blob/main/frontend/src/components/CalcSpectrumPlot.tsx
     return (
