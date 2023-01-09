@@ -9,10 +9,10 @@ import "../style/components/Plotly.css";
 
 // this component uses the plotly library to graph processed spectrum data
 export const ProcessedPlotly = forwardRef((props, ref) => {
-  const processedData = useSelector((state) => state.processedData);
+  const spectrumData = useSelector((state) => state.spectrumData);
   const params = useSelector((state) => state.params);
 
-  if (processedData) {
+  if (spectrumData) {
     // https://github.com/suzil/radis-app/blob/main/frontend/src/components/CalcSpectrumPlot.tsx
     return (
       <>
@@ -22,8 +22,8 @@ export const ProcessedPlotly = forwardRef((props, ref) => {
             className="plotly"
             data={[
               {
-                x: processedData.x,
-                y: processedData.y,
+                x: spectrumData.x,
+                y: spectrumData.y,
                 type: "scatter",
                 marker: { color: "#f50057" },
               },

@@ -3,7 +3,7 @@ import { useSelector, useDispatch } from "react-redux";
 import {
   setProgress,
   setError,
-  storeProcessedData,
+  storeSpectrumData,
   storeBackgroundData,
   storeParams,
 } from "../redux/actions";
@@ -126,7 +126,7 @@ export default function Fetch({ type, params, fetchURL, buttonText }) {
     return false;
   }
 
-  async function fetchRadis() {
+  const fetchLinode = async () => {
     // store the current user parameters
     dispatch(storeParams(params));
 
@@ -137,16 +137,15 @@ export default function Fetch({ type, params, fetchURL, buttonText }) {
     // validate the user parameters
     let errorMessage = checkParams(params);
 
+    // error occurred in checkParams, display error message to user
     if (errorMessage) {
-      // error occurred in checkParams, display error message to user
       dispatch(setProgress(false));
       dispatch(setError({ active: true, text: String(errorMessage) }));
-      return;
-    } else {
-      // send a POST request to the flask server
-      let response;
+    }
+    // checkParam succeeded, send request to api
+    else {
       try {
-        response = await fetch(fetchURL, {
+        const response = await fetch(fetchURL, {
           method: "POST",
           headers: {
             "content-type": "application/json",
@@ -166,30 +165,62 @@ export default function Fetch({ type, params, fetchURL, buttonText }) {
           }),
         });
 
-        const data = await response.json();
-        if (data.success) {
-          // if successful, determine where to store returned data
-          if (type === "processed") {
-            dispatch(storeProcessedData(data));
-          } else if (type === "background") {
-            dispatch(storeBackgroundData(data));
+        // connection was successful
+        if (response.ok) {
+          const data = await response.json();
+
+          // determine where to store received data
+          if (data.success) {
+            switch (type) {
+              case "spectrum":
+                dispatch(storeSpectrumData(data));
+                break;
+              case "background":
+                dispatch(storeBackgroundData(data));
+                break;
+              default:
+                console.log("not processed or background");
+                break;
+            }
+            dispatch(setProgress(false));
           }
+          // display error message
+          else {
+            dispatch(setProgress(false));
+            dispatch(setError({ active: true, text: String(data.text) }));
+          }
+        }
+        // connection was unsuccessful
+        else {
           dispatch(setProgress(false));
-        } else {
-          // if unsuccessful, display error message
-          dispatch(setProgress(false));
-          dispatch(setError({ active: true, text: String(data.text) }));
+          dispatch(
+            setError({
+              active: true,
+              text: `server response code: ${response.status}`,
+            })
+          );
         }
       } catch (error) {
-        // if error occurs, display error message
+        // error occurred when reaching out to server
+        let errorMessage = null;
+
+        switch (error.message) {
+          case "Failed to fetch":
+            errorMessage = "client is unable to reach server";
+            break;
+          default:
+            errorMessage = "unhandled error";
+            console.log(error);
+            break;
+        }
         dispatch(setProgress(false));
-        dispatch(setError({ active: true, text: "Uncaught error" }));
+        dispatch(setError({ active: true, text: errorMessage }));
       }
     }
-  }
+  };
 
   return (
-    <button id="button" disabled={progress} onClick={fetchRadis}>
+    <button id="button" disabled={progress} onClick={fetchLinode}>
       {buttonText}
     </button>
   );

@@ -18,7 +18,7 @@ const initialState = {
     detector: "MCT",
   },
 
-  processedData: null,
+  spectrumData: null,
 
   backgroundData: null,
 
@@ -40,10 +40,10 @@ function reducer(state, action) {
       };
 
     // ---------- store processed spectrum data ----------
-    case Action.StoreProcessedData:
+    case Action.StoreSpectrumData:
       return {
         ...state,
-        processedData: action.payload,
+        spectrumData: action.payload,
       };
 
     // ---------- store background sample data ----------

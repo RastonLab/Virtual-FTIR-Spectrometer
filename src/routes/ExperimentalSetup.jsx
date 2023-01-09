@@ -80,7 +80,7 @@ const ExperimentalSetup = (props, ref) => {
 
           <div className="fetch-zone">
             <Fetch
-              type="processed"
+              type="spectrum"
               params={{
                 minWave,
                 maxWave,
