@@ -7,6 +7,7 @@ import {
   storeBackgroundData,
   storeParams,
 } from "../redux/actions";
+import { FlagOps } from "../redux/store";
 
 // this component reaches out to the flask server with user parameters and receives X and Y coordinates to graph
 export default function Fetch({ type, params, fetchURL, buttonText }) {
@@ -171,8 +172,10 @@ export default function Fetch({ type, params, fetchURL, buttonText }) {
           // if successful, determine where to store returned data
           if (type === "processed") {
             dispatch(storeProcessedData(data));
+            dispatch(setFlag(FlagOps.Processed));
           } else if (type === "background") {
             dispatch(storeBackgroundData(data));
+            dispatch(setFlag(FlagOps.Background));
           }
           dispatch(setProgress(false));
         } else {

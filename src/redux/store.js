@@ -3,6 +3,12 @@ import thunk from "redux-thunk";
 
 import { Action } from "./actions";
 
+export const FlagOps = {
+  NoData: -1,
+  Processed: 0,
+  Background: 1
+}
+
 const initialState = {
   params: {
     minWave: 1900,
@@ -28,6 +34,8 @@ const initialState = {
     active: false,
     text: "",
   },
+
+  lastGenerated: NoData,
 };
 
 function reducer(state, action) {
@@ -66,7 +74,11 @@ function reducer(state, action) {
         ...state,
         error: action.payload,
       };
-
+    case Action.SetFlag:
+      return {
+        ...state,
+        lastGenerated: action.payload
+      };
     default:
       return state;
   }
