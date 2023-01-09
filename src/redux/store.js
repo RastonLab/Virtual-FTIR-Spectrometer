@@ -35,7 +35,7 @@ const initialState = {
     text: "",
   },
 
-  lastGenerated: NoData,
+  lastGenerated: FlagOps.NoData,
 };
 
 function reducer(state, action) {

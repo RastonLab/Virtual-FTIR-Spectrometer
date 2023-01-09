@@ -6,6 +6,7 @@ import {
   storeProcessedData,
   storeBackgroundData,
   storeParams,
+  setFlag,
 } from "../redux/actions";
 import { FlagOps } from "../redux/store";
 

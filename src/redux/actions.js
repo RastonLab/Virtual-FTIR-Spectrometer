@@ -39,5 +39,5 @@ export function setError(error) {
 
 // -------------------- flag ----------------------
 export function setFlag(flag) {
-  return { type: Action.SetFlag, payload: flag};
+  return { type: Action.SetFlag, payload: flag };
 }
