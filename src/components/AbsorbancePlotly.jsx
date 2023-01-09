@@ -17,7 +17,7 @@ export const AbsorbancePlotly = forwardRef((props, ref) => {
   const newY = [spectrumData.x.length];
 
   for (let i = 0; i < spectrumData.x.length; i++) {
-    newY[i] = -1 * log(spectrumData.y[i] / backgroundData.y[i]);
+    newY[i] = -1 * Math.log(spectrumData.y[i] / backgroundData.y[i]);
   }
 
   if (spectrumData) {
