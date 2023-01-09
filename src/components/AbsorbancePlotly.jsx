@@ -37,7 +37,7 @@ export const AbsorbancePlotly = forwardRef((props, ref) => {
               },
             ]}
             layout={{
-              title: "Transmittance Spectrum",
+              title: "Absorbance Spectrum",
               font: { family: "Roboto", color: "#000" },
               xaxis: {
                 range: [params.minWave, params.maxWave],
@@ -51,7 +51,7 @@ export const AbsorbancePlotly = forwardRef((props, ref) => {
               yaxis: {
                 autorange: true,
                 title: {
-                  text: "Transmittance",
+                  text: "Signal",
                 },
                 type: "linear",
                 fixedrange: false,

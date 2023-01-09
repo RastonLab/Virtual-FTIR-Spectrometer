@@ -42,7 +42,7 @@ export default function BackgroundPlotly() {
               yaxis: {
                 autorange: true,
                 title: {
-                  text: "Transmittance",
+                  text: "Signal",
                 },
                 type: "linear",
                 fixedrange: false,

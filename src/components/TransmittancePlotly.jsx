@@ -51,7 +51,7 @@ export const TransmittancePlotly = forwardRef((props, ref) => {
               yaxis: {
                 autorange: true,
                 title: {
-                  text: "Transmittance",
+                  text: "Signal",
                 },
                 type: "linear",
                 fixedrange: false,

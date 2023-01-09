@@ -90,7 +90,7 @@ export default function SpectrumWindow() {
           <StyledTab label="Background Spectrum" />
           <StyledTab label="Transmittance Spectrum" />
           <StyledTab label="Absorbance Spectrum" />
-          <StyledTab label="Both Spectra" />
+          <StyledTab label="All Spectra" />
         </StyledTabs>
       </Box>
 
@@ -124,7 +124,7 @@ export default function SpectrumWindow() {
             ) : (
               <p>Please generate both a Sample Spectrum and a Background Spectrum and return here</p>
             )}
-          </div>
+        </div>
       </TabPanel>
 
       {/* Absorbance Spectrum */}
@@ -135,7 +135,7 @@ export default function SpectrumWindow() {
             ) : (
               <p>Please generate both a Sample Spectrum and a Background Spectrum and return here</p>
             )}
-          </div>
+        </div>
       </TabPanel>
 
       {/* All Spectra */}
@@ -153,6 +153,22 @@ export default function SpectrumWindow() {
             <BackgroundPlotly />
           ) : (
             <p>Please generate a Background Spectrum and return here</p>
+          )}
+        </div>
+
+        <div id="spectrum">
+            {storedBackgroundData && storedSpectrumData ? (
+              <TransmittancePlotly />
+            ) : (
+              <p>Please generate both a Sample Spectrum and a Background Spectrum and return here</p>
+            )}
+        </div>
+
+        <div>
+        {storedBackgroundData && storedSpectrumData ? (
+            <AbsorbancePlotly />
+          ) : (
+            <p>Please generate both a Sample Spectrum and a Background Spectrum and return here</p>
           )}
         </div>
       </TabPanel>
