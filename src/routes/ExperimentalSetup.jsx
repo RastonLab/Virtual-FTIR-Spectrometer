@@ -4,7 +4,7 @@ import { useSelector } from "react-redux";
 // components
 import Fetch from "../components/Fetch";
 import { ProcessedPlotly } from "../components/ProcessedPlotly";
-import { BackgroundPlotly } from "../components/BackgroundPlotly";
+import BackgroundPlotly from "../components/BackgroundPlotly";
 
 // inputs
 import MinWave from "../components/inputs/MinWave";
