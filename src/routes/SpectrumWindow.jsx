@@ -89,6 +89,7 @@ export default function SpectrumWindow() {
           <StyledTab label="Sample Spectrum" /> {/*TODO Check aria labels */}
           <StyledTab label="Background Spectrum" />
           <StyledTab label="Transmittance Spectrum" />
+          <StyledTab label="Absorbance Spectrum" />
           <StyledTab label="Both Spectra" />
         </StyledTabs>
       </Box>
