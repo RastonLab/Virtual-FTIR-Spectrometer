@@ -13,8 +13,12 @@ export const TransmittancePlotly = forwardRef((props, ref) => {
   const backgroundData = useSelector((state) => state.backgroundData);
   const params = useSelector((state) => state.params);
 
-  const newX = spectrumData.x / backgroundData.x;
-  const newY = spectrumData.y / backgroundData.y;
+//   const newX = spectrumData.x / backgroundData.x;
+  const newY = [spectrumData.x.length];
+
+  for (let i = 0; i < spectrumData.x.length; i++) {
+    newY[i] = spectrumData.y[i] / backgroundData.y[i];
+  }
 
   if (spectrumData) {
     // https://github.com/suzil/radis-app/blob/main/frontend/src/components/CalcSpectrumPlot.tsx
@@ -26,7 +30,7 @@ export const TransmittancePlotly = forwardRef((props, ref) => {
             className="plotly"
             data={[
               {
-                x: newX,
+                x: spectrumData.x,
                 y: newY,
                 type: "scatter",
                 marker: { color: "#f50057" },
