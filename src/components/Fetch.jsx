@@ -165,10 +165,10 @@ export default function Fetch({ type, params, fetchURL, buttonText }) {
           }),
         });
 
+        const data = await response.json();
+
         // connection was successful
         if (response.ok) {
-          const data = await response.json();
-
           // determine where to store received data
           if (data.success) {
             switch (type) {
@@ -193,12 +193,7 @@ export default function Fetch({ type, params, fetchURL, buttonText }) {
         // connection was unsuccessful
         else {
           dispatch(setProgress(false));
-          dispatch(
-            setError({
-              active: true,
-              text: `server response code: ${response.status}`,
-            })
-          );
+          dispatch(setError({ active: true, text: String(data.text) }));
         }
       } catch (error) {
         // error occurred when reaching out to server
