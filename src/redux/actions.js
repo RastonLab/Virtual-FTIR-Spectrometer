@@ -1,7 +1,7 @@
 export const Action = Object.freeze({
   StoreParams: "StoreParams",
 
-  StoreProcessedData: "StoreProcessedData",
+  StoreSpectrumData: "StoreSpectrumData",
 
   StoreBackgroundData: "StoreBackgroundData",
 
@@ -17,9 +17,9 @@ export function storeParams(params) {
   return { type: Action.StoreParams, payload: params };
 }
 
-// -------------------- store processed data --------------------
-export function storeProcessedData(processedData) {
-  return { type: Action.StoreProcessedData, payload: processedData };
+// -------------------- store processed spectrum data --------------------
+export function storeSpectrumData(spectrumData) {
+  return { type: Action.StoreSpectrumData, payload: spectrumData };
 }
 
 // -------------------- store background sample data --------------------

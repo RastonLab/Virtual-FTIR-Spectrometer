@@ -10,7 +10,7 @@ import Electronics from "../components/Electronics";
 import { ProcessedPlotly } from "../components/ProcessedPlotly";
 
 export default function InstrumentWindow() {
-  const storedProcessedData = useSelector((state) => state.processedData);
+  const storedSpectrumData = useSelector((state) => state.spectrumData);
   const [toggled, setToggled] = useState(false);
   const [element, setElement] = useState();
 
@@ -32,7 +32,7 @@ export default function InstrumentWindow() {
           <Electronics />
         </div>
         <div id="spectrum">
-          {storedProcessedData ? (
+          {storedSpectrumData ? (
             <ProcessedPlotly />
           ) : (
             <p>Please generate a processed spectrum and return here</p>
