@@ -115,7 +115,7 @@ export default function SpectrumWindow() {
       </TabPanel>
 
       {/* Transmittance Spectrum */}
-      <TabPanel index={2}>
+      <TabPanel value={tabValue} index={2}>
         <div id="spectrum">
             {storedBackgroundData && storedSpectrumData ? (
               <TransmittancePlotly />
