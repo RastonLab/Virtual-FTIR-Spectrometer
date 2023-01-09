@@ -5,6 +5,7 @@ import { Outlet } from "react-router-dom";
 import { ProcessedPlotly } from "../components/ProcessedPlotly";
 import BackgroundPlotly from "../components/BackgroundPlotly";
 import { TransmittancePlotly } from "../components/TransmittancePlotly";
+import { AbsorbancePlotly } from "../components/AbsorbancePlotly";
 
 import "../style/routes/SpectrumWindow.css";
 
@@ -125,8 +126,19 @@ export default function SpectrumWindow() {
           </div>
       </TabPanel>
 
-      {/* All Spectra */}
+      {/* Absorbance Spectrum */}
       <TabPanel value={tabValue} index={3}>
+        <div>
+          {storedBackgroundData && storedSpectrumData ? (
+              <AbsorbancePlotly />
+            ) : (
+              <p>Please generate both a Sample Spectrum and a Background Spectrum and return here</p>
+            )}
+          </div>
+      </TabPanel>
+
+      {/* All Spectra */}
+      <TabPanel value={tabValue} index={4}>
         <div id="spectrum">
           {storedSpectrumData ? (
             <ProcessedPlotly />

@@ -8,7 +8,7 @@ import Plot from "react-plotly.js";
 import "../style/components/Plotly.css";
 
 // this component uses the plotly library to graph processed spectrum data
-export const TransmittancePlotly = forwardRef((props, ref) => {
+export const AbsorbancePlotly = forwardRef((props, ref) => {
   const spectrumData = useSelector((state) => state.spectrumData);
   const backgroundData = useSelector((state) => state.backgroundData);
   const params = useSelector((state) => state.params);
@@ -17,7 +17,7 @@ export const TransmittancePlotly = forwardRef((props, ref) => {
   const newY = [spectrumData.x.length];
 
   for (let i = 0; i < spectrumData.x.length; i++) {
-    newY[i] = spectrumData.y[i] / backgroundData.y[i];
+    newY[i] = -1 * log(spectrumData.y[i] / backgroundData.y[i]);
   }
 
   if (spectrumData) {
