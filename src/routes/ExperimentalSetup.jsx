@@ -47,6 +47,8 @@ const ExperimentalSetup = (props, ref) => {
   const [oldPressure, setOldPressure] = useState();
 
   const changePressure = () => {
+    airVac ? setAirVac(false) : setAirVac(true);
+
     if (airVac) {
       setOldPressure(pressure);
       setPressure(1.01325 - pressure);
