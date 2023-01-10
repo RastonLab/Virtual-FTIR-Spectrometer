@@ -98,7 +98,7 @@ const ExperimentalSetup = (props, ref) => {
                 detector,
               }}
               // fetchURL={"http://localhost:5000/spectrum"}
-              fetchURL={"http://api.ftir.rastonlab.org/"}
+              fetchURL={"https://api.ftir.rastonlab.org/spectrum"}
               buttonText="Generate Processed Spectrum"
             />
             <Fetch
@@ -117,7 +117,7 @@ const ExperimentalSetup = (props, ref) => {
                 detector,
               }}
               // fetchURL={"http://localhost:5000/background"}
-              fetchURL={"http://api.ftir.rastonlab.org/"}
+              fetchURL={"https://api.ftir.rastonlab.org/background"}
               buttonText={"Generate Background Sample"}
             />
           </div>
@@ -132,9 +132,13 @@ const ExperimentalSetup = (props, ref) => {
           </div>
         )}
 
-        {!progress && !error.active && lastGenerated === FlagOps.Processed && <ProcessedPlotly />}
+        {!progress && !error.active && lastGenerated === FlagOps.Processed && (
+          <ProcessedPlotly />
+        )}
 
-        {!progress && !error.active && lastGenerated === FlagOps.Background && <BackgroundPlotly />}
+        {!progress && !error.active && lastGenerated === FlagOps.Background && (
+          <BackgroundPlotly />
+        )}
       </div>
     </div>
   );
