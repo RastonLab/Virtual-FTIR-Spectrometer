@@ -90,7 +90,9 @@ const ExperimentalSetup = (props, ref) => {
             setParams={setAirVac}
           />
 
-          {airVac && <p>hello</p>}
+          {airVac ? setPressure(pressure - 1.01325) : setPressure(pressure)}
+
+          <p>{pressure}</p>
 
           <div className="fetch-zone">
             <Fetch
