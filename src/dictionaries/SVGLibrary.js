@@ -51,8 +51,8 @@ export const toolTips = {
   },
   insb: {
     image: insb,
-    title: "INSB",
-    text: "Helium-neon (HeNe) laser. This is a source of coherent, monochromatic light, with a wavelength of 632.8 nm.",
+    title: "InSb",
+    text: "Liquid nitrogen cooled Indium Antimonide (InSb) detector with a sapphire window. This is a semiconductor detector that utilizes a photoelectric-like effect in order to convert light into electricity. The output current is proportional to the infrared intensity. It is more sensitive than MCT in the mid- and near-infrared regions (above ~1500 cm-1).",
   },
   laser: {
     image: laser,
