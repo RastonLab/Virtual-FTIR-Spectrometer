@@ -82,14 +82,14 @@ export default function SpectrumWindow() {
         <StyledTabs
           value={tabValue}
           onChange={handleChange}
-          centered
           selectionFollowsFocus
           variant="scrollable"
           scrollButtons
-          allowScrollBittonsMobile
+          allowScrollButtonsMobile
+          centered
           aria-label="Spectrum Window Selection"
         >
-          <StyledTab label="Sample Spectrum" /> {/*TODO Check aria labels */}
+          <StyledTab label="Sample Spectrum" />
           <StyledTab label="Background Spectrum" />
           <StyledTab label="Transmittance Spectrum" />
           <StyledTab label="Absorbance Spectrum" />
