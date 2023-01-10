@@ -49,6 +49,9 @@ const StyledTabs = styled((props) => (
   "& .css-ttwr4n": {
     backgroundColor: "#f6b06a",
   },
+  "& .css-k008qs": {
+    justifyContent: "center",
+  }
 });
 
 const StyledTab = styled((props) => <Tab disableRipple {...props} />)(
@@ -87,7 +90,6 @@ export default function SpectrumWindow() {
           scrollButtons
           allowScrollButtonsMobile
           aria-label="Spectrum Window Selection"
-          sx={{justifyContent: "center"}}
         >
           <StyledTab label="Sample Spectrum" />
           <StyledTab label="Background Spectrum" />
