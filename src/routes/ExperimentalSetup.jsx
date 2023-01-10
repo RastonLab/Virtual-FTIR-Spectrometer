@@ -47,8 +47,6 @@ const ExperimentalSetup = (props, ref) => {
   const [oldPressure, setOldPressure] = useState();
 
   const changePressure = () => {
-    airVac ? setAirVac(false) : setAirVac(true);
-
     if (airVac) {
       setOldPressure(pressure);
       setPressure(1.01325 - pressure);
@@ -100,7 +98,7 @@ const ExperimentalSetup = (props, ref) => {
             className="switch"
             params={airVac}
             setParams={setAirVac}
-            onChange={changePressure}
+            onClick={changePressure}
           />
 
           <p>{pressure}</p>

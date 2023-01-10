@@ -11,9 +11,9 @@ export default function AirVac({ params, setParams }) {
       <CustomSwitch
         color="secondary"
         checked={params}
-        // onClick={() => {
-        //   params === false ? setParams(true) : setParams(false); // air is true
-        // }}
+        onClick={() => {
+          params === false ? setParams(true) : setParams(false); // air is true
+        }}
       />
       <label>Air</label>
     </div>
