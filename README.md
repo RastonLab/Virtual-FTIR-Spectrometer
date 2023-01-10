@@ -2,7 +2,7 @@
 
 This web application is intended to provide users with an overview of the anatomy of a Fourier Transform InfraRed (FTIR) spectrometer. The application also allows users to experiment with the spectrometer's parameters and observing its graphed output.
 
-The web application is accessible at: https://rastonlab.github.io/Virtual-FTIR-Spectrometer/
+The web application is accessible at: https://rastonlab.github.io/Virtual-FTIR-Spectrometer/ or https://ftir.rastonlab.org/
 
 # Usage
 
