@@ -78,7 +78,7 @@ export default function SpectrumWindow() {
 
   return (
     <Box>
-      <Box sx={{ borederBottom: 1, borderColor: "divider", justifyContent: "center" }}>
+      <Box sx={{ borederBottom: 1, borderColor: "divider" }}>
         <StyledTabs
           value={tabValue}
           onChange={handleChange}
@@ -87,6 +87,7 @@ export default function SpectrumWindow() {
           scrollButtons
           allowScrollButtonsMobile
           aria-label="Spectrum Window Selection"
+          sx={{justifyContent: "center"}}
         >
           <StyledTab label="Sample Spectrum" />
           <StyledTab label="Background Spectrum" />
