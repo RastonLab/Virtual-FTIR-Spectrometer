@@ -19,7 +19,6 @@ export const AbsorbancePlotly = forwardRef((props, ref) => {
   for (let i = 0; i < spectrumData.x.length; i++) {
     newY[i] = -1 * Math.log(spectrumData.y[i] / backgroundData.y[i]);
   }
-  const str = `${newY[0]}`;
 
   if (spectrumData) {
     // https://github.com/suzil/radis-app/blob/main/frontend/src/components/CalcSpectrumPlot.tsx
@@ -38,7 +37,7 @@ export const AbsorbancePlotly = forwardRef((props, ref) => {
               },
             ]}
             layout={{
-              title: "Absorbance Spectrum" + str,
+              title: "Absorbance Spectrum",
               font: { family: "Roboto", color: "#000" },
               xaxis: {
                 range: [params.minWave, params.maxWave],
