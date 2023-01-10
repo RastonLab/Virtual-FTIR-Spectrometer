@@ -17,6 +17,7 @@ export default function AirVac({ params, setParams, pressure, setPressure }) {
             setPressure(oldPressure);
         }
         console.log(pressure);
+        console.log(oldPressure);
     }
 
   return (
