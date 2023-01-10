@@ -49,9 +49,9 @@ const StyledTabs = styled((props) => (
   "& .css-ttwr4n": {
     backgroundColor: "#f6b06a",
   },
-  "& .css-k008qs": {
-    justifyContent: "center",
-  }
+  // "& .css-k008qs": {
+  //   justifyContent: "center",
+  // }
 });
 
 const StyledTab = styled((props) => <Tab disableRipple {...props} />)(
@@ -81,7 +81,7 @@ export default function SpectrumWindow() {
 
   return (
     <Box>
-      <Box sx={{ borederBottom: 1, borderColor: "divider" }}>
+      <Box sx={{ borederBottom: 1, borderColor: "divider", maxWidth: "1000" }}>
         <StyledTabs
           value={tabValue}
           onChange={handleChange}
