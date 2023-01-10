@@ -22,6 +22,7 @@ import ZeroFillling from "../components/inputs/ZeroFilling";
 // style
 import "../style/routes/ExperimentalSetup.css";
 import { FlagOps } from "../redux/store";
+import AirVac from "../components/inputs/AirVac";
 
 const ExperimentalSetup = (props, ref) => {
   const storedParams = useSelector((state) => state.params);
@@ -41,6 +42,8 @@ const ExperimentalSetup = (props, ref) => {
   const [beamsplitter, setBeamsplitter] = useState(storedParams.beamsplitter);
   const [cellWindow, setCellWindow] = useState(storedParams.cellWindow);
   const [detector, setDetector] = useState(storedParams.detector);
+
+  const [airVac, setAirVac] = useState(false);
 
   return (
     <div ref={ref} id="experimental-setup">
@@ -80,6 +83,14 @@ const ExperimentalSetup = (props, ref) => {
             params={detector}
             setParams={setDetector}
           />
+
+          <AirVac
+            className="switch"
+            params={airVac}
+            setParams={setAirVac}
+          />
+
+          {airVac && <p>hello</p>}
 
           <div className="fetch-zone">
             <Fetch
