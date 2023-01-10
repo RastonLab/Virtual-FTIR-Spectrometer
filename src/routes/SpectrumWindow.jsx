@@ -81,7 +81,7 @@ export default function SpectrumWindow() {
 
   return (
     <Box>
-      <Box sx={{ borederBottom: 1, borderColor: "divider", maxWidth: "1000" }}>
+      <Box sx={{ borederBottom: 1, borderColor: "divider"}}>
         <StyledTabs
           value={tabValue}
           onChange={handleChange}
