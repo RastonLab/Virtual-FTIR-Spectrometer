@@ -49,6 +49,9 @@ const StyledTabs = styled((props) => (
   "& .css-ttwr4n": {
     backgroundColor: "#f6b06a",
   },
+  // "& .css-k008qs": {
+  //   justifyContent: "center",
+  // }
 });
 
 const StyledTab = styled((props) => <Tab disableRipple {...props} />)(
@@ -78,15 +81,17 @@ export default function SpectrumWindow() {
 
   return (
     <Box>
-      <Box sx={{ borederBottom: 1, borderColor: "divider" }}>
+      <Box sx={{ borederBottom: 1, borderColor: "divider"}}>
         <StyledTabs
           value={tabValue}
           onChange={handleChange}
-          centered
           selectionFollowsFocus
+          variant="scrollable"
+          scrollButtons
+          allowScrollButtonsMobile
           aria-label="Spectrum Window Selection"
         >
-          <StyledTab label="Sample Spectrum" /> {/*TODO Check aria labels */}
+          <StyledTab label="Sample Spectrum" />
           <StyledTab label="Background Spectrum" />
           <StyledTab label="Transmittance Spectrum" />
           <StyledTab label="Absorbance Spectrum" />
@@ -129,7 +134,7 @@ export default function SpectrumWindow() {
 
       {/* Absorbance Spectrum */}
       <TabPanel value={tabValue} index={3}>
-        <div>
+        <div id="spectrum">
           {storedBackgroundData && storedSpectrumData ? (
               <AbsorbancePlotly />
             ) : (
@@ -164,7 +169,7 @@ export default function SpectrumWindow() {
             )}
         </div>
 
-        <div>
+        <div id="spectrum">
         {storedBackgroundData && storedSpectrumData ? (
             <AbsorbancePlotly />
           ) : (
