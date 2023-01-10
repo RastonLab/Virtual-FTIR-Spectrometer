@@ -84,6 +84,9 @@ export default function SpectrumWindow() {
           onChange={handleChange}
           centered
           selectionFollowsFocus
+          variant="scrollable"
+          scrollButtons
+          allowScrollBittonsMobile
           aria-label="Spectrum Window Selection"
         >
           <StyledTab label="Sample Spectrum" /> {/*TODO Check aria labels */}
@@ -129,7 +132,7 @@ export default function SpectrumWindow() {
 
       {/* Absorbance Spectrum */}
       <TabPanel value={tabValue} index={3}>
-        <div>
+        <div id="spectrum">
           {storedBackgroundData && storedSpectrumData ? (
               <AbsorbancePlotly />
             ) : (
@@ -164,7 +167,7 @@ export default function SpectrumWindow() {
             )}
         </div>
 
-        <div>
+        <div id="spectrum">
         {storedBackgroundData && storedSpectrumData ? (
             <AbsorbancePlotly />
           ) : (
