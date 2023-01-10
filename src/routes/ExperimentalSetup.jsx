@@ -47,12 +47,14 @@ const ExperimentalSetup = (props, ref) => {
   const [oldPressure, setOldPressure] = useState();
 
   const changePressure = () => {
+    console.log(pressure);
     if (airVac) {
       setOldPressure(pressure);
       setPressure(1.01325 - pressure);
     } else {
       setPressure(oldPressure);
     }
+    console.log(pressure);
   }
 
   return (
@@ -100,8 +102,6 @@ const ExperimentalSetup = (props, ref) => {
             setParams={setAirVac}
             onClick={changePressure}
           />
-
-          <p>{pressure}</p>
 
           <div className="fetch-zone">
             <Fetch
