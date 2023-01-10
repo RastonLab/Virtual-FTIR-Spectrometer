@@ -100,8 +100,9 @@ const ExperimentalSetup = (props, ref) => {
             className="switch"
             params={airVac}
             setParams={setAirVac}
-            onBlur={changePressure}
           />
+
+          {airVac && changePressure()}
 
           <div className="fetch-zone">
             <Fetch
