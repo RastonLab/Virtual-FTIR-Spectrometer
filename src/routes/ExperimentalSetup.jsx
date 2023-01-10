@@ -44,6 +44,16 @@ const ExperimentalSetup = (props, ref) => {
   const [detector, setDetector] = useState(storedParams.detector);
 
   const [airVac, setAirVac] = useState(false);
+  const [oldPressure, setOldPressure] = useState();
+
+  const changePressure = () => {
+    if (airVac) {
+      setOldPressure(pressure);
+      setPressure(1.01325 - pressure);
+    } else {
+      setPressure(oldPressure);
+    }
+  }
 
   return (
     <div ref={ref} id="experimental-setup">
@@ -88,9 +98,8 @@ const ExperimentalSetup = (props, ref) => {
             className="switch"
             params={airVac}
             setParams={setAirVac}
+            onChange={changePressure}
           />
-
-          {airVac ? setPressure(pressure - 1.01325) : setPressure(pressure)}
 
           <p>{pressure}</p>
 
