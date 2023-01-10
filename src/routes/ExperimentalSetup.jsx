@@ -44,18 +44,17 @@ const ExperimentalSetup = (props, ref) => {
   const [detector, setDetector] = useState(storedParams.detector);
 
   const [airVac, setAirVac] = useState(false);
-  const [oldPressure, setOldPressure] = useState();
 
-  const changePressure = () => {
-    console.log(pressure);
-    if (airVac) {
-      setOldPressure(pressure);
-      setPressure(1.01325 - pressure);
-    } else {
-      setPressure(oldPressure);
-    }
-    console.log(pressure);
-  }
+  // const changePressure = () => {
+  //   console.log(pressure);
+  //   if (airVac) {
+  //     setOldPressure(pressure);
+  //     setPressure(1.01325 - pressure);
+  //   } else {
+  //     setPressure(oldPressure);
+  //   }
+  //   console.log(pressure);
+  // }
 
   return (
     <div ref={ref} id="experimental-setup">
@@ -100,9 +99,9 @@ const ExperimentalSetup = (props, ref) => {
             className="switch"
             params={airVac}
             setParams={setAirVac}
+            pressure={pressure}
+            setPressure={setPressure}
           />
-
-          {airVac && changePressure()}
 
           <div className="fetch-zone">
             <Fetch
