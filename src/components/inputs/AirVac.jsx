@@ -11,11 +11,14 @@ export default function AirVac({ params, setParams, pressure, setPressure }) {
         console.log(params);
         params ? setParams(false) : setParams(true); // air is true
 
-        // Changes pressure, but vac and air are getting swapped
-        // Also, changes the value stored in the input
+        // To store a copy of user changed pressure values
+        if (pressure !== oldPressure && pressure !== (1.01325 - pressure)) {
+            setOldPressure(pressure);
+        }
+
         console.log(params);
         console.log(pressure);
-        if (!params) {
+        if (!params) { // Not sure why there has to be a not here, but otherwise it gets vacuum and air backwards
             setOldPressure(pressure);
             setPressure(1.01325 - pressure);
         } else {
