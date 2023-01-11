@@ -14,6 +14,7 @@ export default function AirVac({ params, setParams, pressure, setPressure }) {
         // To store a copy of user changed pressure values
         if (oldPressure !== pressure && pressure !== (1.01325 - oldPressure)) {
             if (!params) {
+                console.log("here");
                 setOldPressure(1.0325 - oldPressure);
             } else {
                 setOldPressure(pressure);
