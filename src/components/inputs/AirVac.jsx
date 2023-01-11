@@ -1,6 +1,5 @@
 import React from "react";
 import { CustomSwitch } from "./CustomSwitch";
-import { useState } from "react";
 
 // this input component sets the source temperature to globar (1700 K) or tungsten (3100 K)
 export default function AirVac({ params, setParams, /*pressure, setPressure */}) {
