@@ -2,23 +2,23 @@ import React, { useState } from "react";
 import { Input } from "@mui/material";
 
 // this input component sets the pressure from 0 to 10 Bar
-export default function Pressure({/* val,*/ setter }) {
+export default function Pressure({ val, setter }) {
 
-  const [displayVal, setDisplayVal] = useState(0.001);
+  // const [displayVal, setDisplayVal] = useState(0.001);
 
   const handleBlur = () => {
     if (displayVal < 0) {
-      setDisplayVal(0);
+      // setDisplayVal(0);
       setter(0);
     } else if (displayVal > 10) {
-      setDisplayVal(10);
+      // setDisplayVal(10);
       setter(10);
     }
   };
 
   const handleChange = (e) => {
     setter(Number(e.target.value));
-    setDisplayVal(Number(e.target.value));
+    // setDisplayVal(Number(e.target.value));
   }
 
   return (
@@ -34,7 +34,7 @@ export default function Pressure({/* val,*/ setter }) {
         onChange={(e) => setter(e.target.value)}
       /> */}
       <Input
-        value={displayVal}
+        value={val}
         size="small"
         onChange={handleChange}
         onBlur={handleBlur}

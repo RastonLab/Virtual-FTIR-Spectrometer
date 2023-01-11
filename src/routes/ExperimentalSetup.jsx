@@ -99,8 +99,6 @@ const ExperimentalSetup = (props, ref) => {
             className="switch"
             params={airVac}
             setParams={setAirVac}
-            pressure={pressure}
-            setPressure={setPressure}
           />
 
           <div className="fetch-zone">
@@ -122,6 +120,7 @@ const ExperimentalSetup = (props, ref) => {
               // fetchURL={"http://localhost:5000/spectrum"}
               fetchURL={"https://api.ftir.rastonlab.org/spectrum"}
               buttonText="Generate Processed Spectrum"
+              isAir={airVac}
             />
             <Fetch
               type="background"
@@ -141,6 +140,7 @@ const ExperimentalSetup = (props, ref) => {
               // fetchURL={"http://localhost:5000/background"}
               fetchURL={"https://api.ftir.rastonlab.org/background"}
               buttonText={"Generate Background Sample"}
+              isAir={airVac}
             />
           </div>
         </div>
