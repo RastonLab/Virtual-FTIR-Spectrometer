@@ -8,10 +8,12 @@ export default function AirVac({ params, setParams, pressure, setPressure }) {
     const [oldPressure, setOldPressure] = useState(pressure);
 
     const changePressure = () => {
+        console.log(params);
         params ? setParams(false) : setParams(true); // air is true
 
         // Changes pressure, but vac and air are getting swapped
         // Also, changes the value stored in the input
+        console.log(params);
         console.log(pressure);
         if (params) {
             setOldPressure(pressure);
