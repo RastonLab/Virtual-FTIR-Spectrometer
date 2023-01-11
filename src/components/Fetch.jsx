@@ -142,6 +142,9 @@ export default function Fetch({ type, params, fetchURL, buttonText, isAir }) {
     let pressure = params.pressure;
     if (isAir) {
       pressure = 1.01325 - pressure;
+      if (pressure <= 0) {
+        pressure = 0.0001 
+      }
     }
     console.log(pressure);
     // error occurred in checkParams, display error message to user

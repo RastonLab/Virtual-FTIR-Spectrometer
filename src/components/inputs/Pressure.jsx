@@ -5,8 +5,8 @@ import { Input } from "@mui/material";
 export default function Pressure({ val, setter }) {
 
   const handleBlur = () => {
-    if (val < 0) {
-      setter(0);
+    if (val < 0.0001) {
+      setter(0.0001);
     } else if (val > 10) {
       setter(10);
     }
@@ -31,7 +31,7 @@ export default function Pressure({ val, setter }) {
         onBlur={handleBlur}
         inputProps={{
           step: 0.0001,
-          min: 0,
+          min: 0.0001,
           max: 10,
           type: "number",
           "aria-labelledby": "input-slider",
