@@ -7,10 +7,10 @@ export default function Pressure({ val, setter }) {
   // const [displayVal, setDisplayVal] = useState(0.001);
 
   const handleBlur = () => {
-    if (displayVal < 0) {
+    if (val < 0) {
       // setDisplayVal(0);
       setter(0);
-    } else if (displayVal > 10) {
+    } else if (val > 10) {
       // setDisplayVal(10);
       setter(10);
     }
