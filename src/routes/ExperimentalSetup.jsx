@@ -22,6 +22,7 @@ import ZeroFillling from "../components/inputs/ZeroFilling";
 // style
 import "../style/routes/ExperimentalSetup.css";
 import { FlagOps } from "../redux/store";
+import AirVac from "../components/inputs/AirVac";
 
 const ExperimentalSetup = (props, ref) => {
   const storedParams = useSelector((state) => state.params);
@@ -41,6 +42,8 @@ const ExperimentalSetup = (props, ref) => {
   const [beamsplitter, setBeamsplitter] = useState(storedParams.beamsplitter);
   const [cellWindow, setCellWindow] = useState(storedParams.cellWindow);
   const [detector, setDetector] = useState(storedParams.detector);
+
+  const [airVac, setAirVac] = useState(false);
 
   return (
     <div ref={ref} id="experimental-setup">
@@ -81,6 +84,12 @@ const ExperimentalSetup = (props, ref) => {
             setParams={setDetector}
           />
 
+          <AirVac
+            className="switch"
+            params={airVac}
+            setParams={setAirVac}
+          />
+
           <div className="fetch-zone">
             <Fetch
               type="spectrum"
@@ -100,6 +109,7 @@ const ExperimentalSetup = (props, ref) => {
               // fetchURL={"http://localhost:5000/spectrum"}
               fetchURL={"https://api.ftir.rastonlab.org/spectrum"}
               buttonText="Generate Processed Spectrum"
+              isAir={airVac}
             />
             <Fetch
               type="background"
@@ -119,6 +129,7 @@ const ExperimentalSetup = (props, ref) => {
               // fetchURL={"http://localhost:5000/background"}
               fetchURL={"https://api.ftir.rastonlab.org/background"}
               buttonText={"Generate Background Sample"}
+              isAir={airVac}
             />
           </div>
         </div>
