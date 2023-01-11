@@ -45,17 +45,6 @@ const ExperimentalSetup = (props, ref) => {
 
   const [airVac, setAirVac] = useState(false);
 
-  // const changePressure = () => {
-  //   console.log(pressure);
-  //   if (airVac) {
-  //     setOldPressure(pressure);
-  //     setPressure(1.01325 - pressure);
-  //   } else {
-  //     setPressure(oldPressure);
-  //   }
-  //   console.log(pressure);
-  // }
-
   return (
     <div ref={ref} id="experimental-setup">
       <div id="form">
