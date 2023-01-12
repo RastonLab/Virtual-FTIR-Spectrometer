@@ -1,7 +1,7 @@
 import React from "react";
 import { CustomSwitch } from "./CustomSwitch";
 
-export default function AirVac({ params, setParams}) {
+export default function AirVac({ params, setParams, pressure, setPressure }) {
 
   return (
     <div className="input switch">
@@ -10,7 +10,7 @@ export default function AirVac({ params, setParams}) {
       <CustomSwitch
         color="secondary"
         checked={params}
-        onClick={() => params ? setParams(false) : setParams(true)} // air is true
+        onClick={(e) => params ? setParams(false) : setParams(true)} // air is true
       />
       <label>Air</label>
     </div>
