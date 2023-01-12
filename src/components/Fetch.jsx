@@ -146,7 +146,7 @@ export default function Fetch({ type, params, fetchURL, buttonText }) {
     //     pressure = 0.0001 
     //   }
     // }
-    console.log(pressure);
+    console.log(params.pressure);
     // error occurred in checkParams, display error message to user
     if (errorMessage) {
       dispatch(setProgress(false));
