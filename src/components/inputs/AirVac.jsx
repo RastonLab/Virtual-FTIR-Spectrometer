@@ -8,7 +8,8 @@ export default function AirVac({ params, setParams, pressure, setPressure }) {
   const onClick = (e) => {
     params ? setParams(false) : setParams(true)
 
-    if (params) {
+    // For some reason the not has to be there or it gets things backwards
+    if (!params) {
       setStoredPressure(pressure);
       setPressure(1.0325);
     } else {
