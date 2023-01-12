@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { CustomSwitch } from "./CustomSwitch";
 
 export default function AirVac({ params, setParams, pressure, setPressure }) {
