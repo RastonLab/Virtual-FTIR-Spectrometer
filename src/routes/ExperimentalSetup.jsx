@@ -53,7 +53,9 @@ const ExperimentalSetup = (props, ref) => {
 
           <MaxWave val={maxWave} setter={setMaxWave} />
 
-          <Pressure val={pressure} setter={setPressure} />
+          {!airVac && <Pressure val={pressure} setter={setPressure} />}
+
+          {airVac && <Pressure val={1.0325} setter={setPressure} />}
 
           <NumOfScans params={numScan} setParams={setNumScan} />
 
@@ -109,7 +111,6 @@ const ExperimentalSetup = (props, ref) => {
               // fetchURL={"http://localhost:5000/spectrum"}
               fetchURL={"https://api.ftir.rastonlab.org/spectrum"}
               buttonText="Generate Processed Spectrum"
-              isAir={airVac}
             />
             <Fetch
               type="background"
@@ -129,7 +130,6 @@ const ExperimentalSetup = (props, ref) => {
               // fetchURL={"http://localhost:5000/background"}
               fetchURL={"https://api.ftir.rastonlab.org/background"}
               buttonText={"Generate Background Sample"}
-              isAir={airVac}
             />
           </div>
         </div>
