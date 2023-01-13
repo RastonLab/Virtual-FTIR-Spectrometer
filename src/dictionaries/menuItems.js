@@ -91,7 +91,7 @@ export const menuItems = [
 
             <h3>Spectrum</h3>
             <p>
-              The <strong>spectrum</strong> menu item allows users to view a full page graph on the spectrometers output.
+              The <strong>spectrum</strong> menu item allows users to view a full page graph on the spectrometers output. There are five tabs that will show various spectra. The <strong>Sample Spectrum</strong> shows the sample that the user generated or loaded from a file. The <strong>Background Spectrum</strong> shows the background spectrum that the user generated or loaded in from a file. The <strong>Transmittance Spectrum</strong> shows the trasmittance of the sample. This is calculated by dividing the sample data by the background data. The <strong>Absorbance Spectrum</strong> shows the absorbance of the sample. This is calculated by finding the negative log base 10 of the sample data divided by the background data. The final tab, <strong>All Spectra</strong>, shows separate graphs of all four spectra.
             </p>
 
             <h2>File</h2>
