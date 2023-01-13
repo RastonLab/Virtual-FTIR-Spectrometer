@@ -53,9 +53,7 @@ const ExperimentalSetup = (props, ref) => {
 
           <MaxWave val={maxWave} setter={setMaxWave} />
 
-          {!airVac && <Pressure val={pressure} setter={setPressure} />}
-
-          {airVac && <Pressure val={1.0325} setter={setPressure} />}
+          <Pressure val={pressure} setter={setPressure} />
 
           <NumOfScans params={numScan} setParams={setNumScan} />
 
