@@ -23,7 +23,7 @@ import AirVac from "../components/inputs/AirVac";
 
 // style
 import "../style/routes/ExperimentalSetup.css";
-import { Drawer } from "@mui/material";
+import { Button, Drawer } from "@mui/material";
 
 const ExperimentalSetup = (props, ref) => {
   const storedParams = useSelector((state) => state.params);
@@ -141,6 +141,7 @@ const ExperimentalSetup = (props, ref) => {
           </div>
         </div>
       </Drawer>
+      <Button onClick={openDrawer ? setOpenDrawer(false) : setOpenDrawer(true)}>Open Drawer</Button>
       <div id="graph-and-error">
         {progress && <div id="spinner" />}
 
