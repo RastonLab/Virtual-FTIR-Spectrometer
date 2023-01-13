@@ -50,7 +50,7 @@ const ExperimentalSetup = (props, ref) => {
 
   return (
     <div ref={ref} id="experimental-setup">
-      <Drawer variant="persistent" anchor="left" open={openDrawer}>
+      {/* <Drawer variant="persistent" anchor="left" open={openDrawer}> */}
         <div id="form">
           <div className="col">
             <MinWave val={minWave} setter={setMinWave} />
@@ -140,7 +140,7 @@ const ExperimentalSetup = (props, ref) => {
             </div>
           </div>
         </div>
-      </Drawer>
+      {/* </Drawer> */}
       <Button onClick={openDrawer ? setOpenDrawer(false) : setOpenDrawer(true)}>Open Drawer</Button>
       <div id="graph-and-error">
         {progress && <div id="spinner" />}
