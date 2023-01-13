@@ -1,6 +1,6 @@
 import React, { forwardRef, useState } from "react";
 import { useSelector } from "react-redux";
-import { FlagOps } from "../redux/store";
+// import { FlagOps } from "../redux/store";
 
 // components
 import Fetch from "../components/Fetch";
@@ -23,13 +23,13 @@ import AirVac from "../components/inputs/AirVac";
 
 // style
 import "../style/routes/ExperimentalSetup.css";
-import { /*Button,*/ Drawer } from "@mui/material";
+// import { /*Button,*/ Drawer } from "@mui/material";
 
 const ExperimentalSetup = (props, ref) => {
   const storedParams = useSelector((state) => state.params);
   const progress = useSelector((state) => state.progress);
   const error = useSelector((state) => state.error);
-  const lastGenerated = useSelector((state) => state.lastGenerated);
+  // const lastGenerated = useSelector((state) => state.lastGenerated);
 
   // values set by user
   const [minWave, setMinWave] = useState(storedParams.minWave);
@@ -50,7 +50,7 @@ const ExperimentalSetup = (props, ref) => {
 
   return (
     <div ref={ref} id="experimental-setup">
-      <Drawer variant="persistent" anchor="left" open={true}>
+      {/* <Drawer variant="persistent" anchor="left" open={true}> */}
         <div id="form">
           <div className="col">
             <MinWave val={minWave} setter={setMinWave} />
@@ -140,7 +140,7 @@ const ExperimentalSetup = (props, ref) => {
             </div>
           </div>
         </div>
-      </Drawer>
+      {/* </Drawer> */}
       {/* <Button onClick={openDrawer ? setOpenDrawer(false) : setOpenDrawer(true)}>Open Drawer</Button> */}
       <div id="graph-and-error">
         {progress && <div id="spinner" />}
@@ -151,11 +151,11 @@ const ExperimentalSetup = (props, ref) => {
           </div>
         )}
 
-        {!progress && !error.active && lastGenerated === FlagOps.Processed && (
+        {!progress && !error.active && {/*lastGenerated === FlagOps.Processed*/} && (
           <ProcessedPlotly />
         )}
 
-        {!progress && !error.active && lastGenerated === FlagOps.Background && (
+        {!progress && !error.active && {/*lastGenerated === FlagOps.Background && */} (
           <BackgroundPlotly />
         )}
       </div>
