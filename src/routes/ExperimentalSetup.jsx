@@ -141,7 +141,7 @@ const ExperimentalSetup = (props, ref) => {
           </div>
         </div>
       </Drawer>
-      <Button onClick={openDrawer ? setOpenDrawer(false) : setOpenDrawer(true)}>Open Drawer</Button>
+      {/* <Button onClick={openDrawer ? setOpenDrawer(false) : setOpenDrawer(true)}>Open Drawer</Button> */}
       <div id="graph-and-error">
         {progress && <div id="spinner" />}
 
