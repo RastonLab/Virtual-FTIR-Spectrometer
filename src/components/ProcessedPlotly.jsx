@@ -48,7 +48,7 @@ export const ProcessedPlotly = forwardRef((props, ref) => {
                 type: "linear",
                 fixedrange: false,
               },
-              height: "90vh"
+              height: 500
             }}
             // https://community.plotly.com/t/react-plotly-responsive-chart-not-working/47547
             useResizeHandler={true}
