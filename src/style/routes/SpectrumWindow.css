@@ -8,6 +8,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-
-  height: 47vh;
+  min-height: 100vh;
+  /* height: 47vh; */
 }
