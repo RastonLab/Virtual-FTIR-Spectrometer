@@ -2,7 +2,7 @@
   "name": "virtual-ftir-spectrometer",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://brennaser.github.io/Virtual-FTIR-Spectrometer/",
+  "homepage": "https://ftir.rastonlab.org",
   "dependencies": {
     "@emotion/react": "^11.10.5",
     "@emotion/styled": "^11.10.5",
