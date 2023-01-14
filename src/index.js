@@ -18,7 +18,7 @@ const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
     <Provider store={store}>
-      <BrowserRouter basename="/Virtual-FTIR-Spectrometer/">
+      <BrowserRouter basename="/Virtual-FTIR-Spectrometer">
         <Routes>
           <Route path="/" element={<App />}>
             <Route index element={<LandingPage />} />
