@@ -50,98 +50,95 @@ const ExperimentalSetup = (props, ref) => {
 
   return (
     <div ref={ref} id="experimental-setup">
-      {/* <Drawer variant="persistent" anchor="left" open={true}> */}
-        <div id="form">
-          <div className="col">
-            <MinWave val={minWave} setter={setMinWave} />
+      <div id="form">
+        <div className="col">
+          <MinWave val={minWave} setter={setMinWave} />
 
-            <MaxWave val={maxWave} setter={setMaxWave} />
+          <MaxWave val={maxWave} setter={setMaxWave} />
 
-            <Pressure val={pressure} setter={setPressure} />
+          <Pressure val={pressure} setter={setPressure} />
 
-            <NumOfScans params={numScan} setParams={setNumScan} />
+          <NumOfScans params={numScan} setParams={setNumScan} />
 
-            <Molecule val={molecule} setter={setMolecule} />
+          <Molecule val={molecule} setter={setMolecule} />
 
-            <Resolution params={resolution} setParams={setResolution} />
+          <Resolution params={resolution} setParams={setResolution} />
 
-            <ZeroFillling params={zeroFill} setParams={setZeroFill} />
-          </div>
-          <div className="col">
-            <Source className="switch" params={source} setParams={setSource} />
+          <ZeroFillling params={zeroFill} setParams={setZeroFill} />
+        </div>
+        <div className="col">
+          <Source className="switch" params={source} setParams={setSource} />
 
-            <Beamsplitter
-              className="switch"
-              params={beamsplitter}
-              setParams={setBeamsplitter}
+          <Beamsplitter
+            className="switch"
+            params={beamsplitter}
+            setParams={setBeamsplitter}
+          />
+
+          <CellWindows
+            className="switch"
+            params={cellWindow}
+            setParams={setCellWindow}
+          />
+
+          <Detector
+            className="switch"
+            params={detector}
+            setParams={setDetector}
+          />
+
+          <AirVac
+            className="switch"
+            params={airVac}
+            setParams={setAirVac}
+            pressure={pressure}
+            setPressure={setPressure}
+          />
+
+          <div className="fetch-zone">
+            <Fetch
+              type="spectrum"
+              params={{
+                minWave,
+                maxWave,
+                molecule,
+                pressure,
+                resolution,
+                numScan,
+                zeroFill,
+                source,
+                beamsplitter,
+                cellWindow,
+                detector,
+              }}
+              // fetchURL={"http://localhost:5000/spectrum"}
+              fetchURL={"https://api.ftir.rastonlab.org/spectrum"}
+              buttonText="Generate Processed Spectrum"
+              isAir={airVac}
             />
-
-            <CellWindows
-              className="switch"
-              params={cellWindow}
-              setParams={setCellWindow}
+            <Fetch
+              type="background"
+              params={{
+                minWave,
+                maxWave,
+                molecule,
+                pressure,
+                resolution,
+                numScan,
+                zeroFill,
+                source,
+                beamsplitter,
+                cellWindow,
+                detector,
+              }}
+              // fetchURL={"http://localhost:5000/background"}
+              fetchURL={"https://api.ftir.rastonlab.org/background"}
+              buttonText={"Generate Background Sample"}
+              isAir={airVac}
             />
-
-            <Detector
-              className="switch"
-              params={detector}
-              setParams={setDetector}
-            />
-
-            <AirVac
-              className="switch"
-              params={airVac}
-              setParams={setAirVac}
-              pressure={pressure}
-              setPressure={setPressure}
-            />
-
-            <div className="fetch-zone">
-              <Fetch
-                type="spectrum"
-                params={{
-                  minWave,
-                  maxWave,
-                  molecule,
-                  pressure,
-                  resolution,
-                  numScan,
-                  zeroFill,
-                  source,
-                  beamsplitter,
-                  cellWindow,
-                  detector,
-                }}
-                // fetchURL={"http://localhost:5000/spectrum"}
-                fetchURL={"https://api.ftir.rastonlab.org/spectrum"}
-                buttonText="Generate Processed Spectrum"
-                isAir={airVac}
-              />
-              <Fetch
-                type="background"
-                params={{
-                  minWave,
-                  maxWave,
-                  molecule,
-                  pressure,
-                  resolution,
-                  numScan,
-                  zeroFill,
-                  source,
-                  beamsplitter,
-                  cellWindow,
-                  detector,
-                }}
-                // fetchURL={"http://localhost:5000/background"}
-                fetchURL={"https://api.ftir.rastonlab.org/background"}
-                buttonText={"Generate Background Sample"}
-                isAir={airVac}
-              />
-            </div>
           </div>
         </div>
-      {/* </Drawer> */}
-      {/* <Button onClick={openDrawer ? setOpenDrawer(false) : setOpenDrawer(true)}>Open Drawer</Button> */}
+      </div>
       <div id="graph-and-error">
         {progress && <div id="spinner" />}
 
