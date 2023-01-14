@@ -151,11 +151,11 @@ const ExperimentalSetup = (props, ref) => {
           </div>
         )}
 
-        {!progress && !error.active && {/*lastGenerated === FlagOps.Processed*/} && (
+        {!progress && !error.active && (
           <ProcessedPlotly />
         )}
 
-        {!progress && !error.active && {/*lastGenerated === FlagOps.Background && */} (
+        {!progress && !error.active && (
           <BackgroundPlotly />
         )}
       </div>
