@@ -139,7 +139,7 @@ const ExperimentalSetup = (props, ref) => {
           </div>
         </div>
       </div>
-      <div id="graph-and-error">
+      <div id="graph-and-error" className="col">
         {progress && <div id="spinner" />}
 
         {error.active && (
