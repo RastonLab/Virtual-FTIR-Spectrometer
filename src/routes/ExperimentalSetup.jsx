@@ -1,5 +1,6 @@
 import React, { forwardRef, useState } from "react";
 import { useSelector } from "react-redux";
+// import { FlagOps } from "../redux/store";
 
 // components
 import Fetch from "../components/Fetch";
@@ -18,16 +19,17 @@ import CellWindows from "../components/inputs/CellWindows";
 import Detector from "../components/inputs/Detector";
 import Source from "../components/inputs/Source";
 import ZeroFillling from "../components/inputs/ZeroFilling";
+import AirVac from "../components/inputs/AirVac";
 
 // style
 import "../style/routes/ExperimentalSetup.css";
-import { FlagOps } from "../redux/store";
+// import { /*Button,*/ Drawer } from "@mui/material";
 
 const ExperimentalSetup = (props, ref) => {
   const storedParams = useSelector((state) => state.params);
   const progress = useSelector((state) => state.progress);
   const error = useSelector((state) => state.error);
-  const lastGenerated = useSelector((state) => state.lastGenerated);
+  // const lastGenerated = useSelector((state) => state.lastGenerated);
 
   // values set by user
   const [minWave, setMinWave] = useState(storedParams.minWave);
@@ -41,6 +43,10 @@ const ExperimentalSetup = (props, ref) => {
   const [beamsplitter, setBeamsplitter] = useState(storedParams.beamsplitter);
   const [cellWindow, setCellWindow] = useState(storedParams.cellWindow);
   const [detector, setDetector] = useState(storedParams.detector);
+
+  const [airVac, setAirVac] = useState(false);
+
+  // const [openDrawer, setOpenDrawer] = useState(true);
 
   return (
     <div ref={ref} id="experimental-setup">
@@ -81,6 +87,14 @@ const ExperimentalSetup = (props, ref) => {
             setParams={setDetector}
           />
 
+          <AirVac
+            className="switch"
+            params={airVac}
+            setParams={setAirVac}
+            pressure={pressure}
+            setPressure={setPressure}
+          />
+
           <div className="fetch-zone">
             <Fetch
               type="spectrum"
@@ -100,6 +114,7 @@ const ExperimentalSetup = (props, ref) => {
               // fetchURL={"http://localhost:5000/spectrum"}
               fetchURL={"https://api.ftir.rastonlab.org/spectrum"}
               buttonText="Generate Processed Spectrum"
+              isAir={airVac}
             />
             <Fetch
               type="background"
@@ -119,11 +134,12 @@ const ExperimentalSetup = (props, ref) => {
               // fetchURL={"http://localhost:5000/background"}
               fetchURL={"https://api.ftir.rastonlab.org/background"}
               buttonText={"Generate Background Sample"}
+              isAir={airVac}
             />
           </div>
         </div>
       </div>
-      <div id="graph-and-error">
+      <div id="graph-and-error" className="col">
         {progress && <div id="spinner" />}
 
         {error.active && (
@@ -132,11 +148,11 @@ const ExperimentalSetup = (props, ref) => {
           </div>
         )}
 
-        {!progress && !error.active && lastGenerated === FlagOps.Processed && (
+        {!progress && !error.active && (
           <ProcessedPlotly />
         )}
 
-        {!progress && !error.active && lastGenerated === FlagOps.Background && (
+        {!progress && !error.active && (
           <BackgroundPlotly />
         )}
       </div>
