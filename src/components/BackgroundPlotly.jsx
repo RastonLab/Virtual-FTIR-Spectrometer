@@ -46,6 +46,8 @@ export default function BackgroundPlotly() {
                 },
                 type: "linear",
                 fixedrange: false,
+                // https://community.plotly.com/t/how-to-hide-axis-ticktexts-but-remain-axis-tilte/10839/2
+                showticklabels: false,
               },
             }}
             // https://community.plotly.com/t/react-plotly-responsive-chart-not-working/47547

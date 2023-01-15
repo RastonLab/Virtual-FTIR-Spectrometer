@@ -148,13 +148,9 @@ const ExperimentalSetup = (props, ref) => {
           </div>
         )}
 
-        {!progress && !error.active && (
-          <ProcessedPlotly />
-        )}
+        {!progress && !error.active && <ProcessedPlotly />}
 
-        {!progress && !error.active && (
-          <BackgroundPlotly />
-        )}
+        {!progress && !error.active && <BackgroundPlotly />}
       </div>
     </div>
   );
