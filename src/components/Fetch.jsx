@@ -93,8 +93,8 @@ export default function Fetch({ type, params, fetchURL, buttonText, isAir }) {
     }
 
     // check if the number of scans is correct
-    if (params.numScan < 1 || params.numScan > 1024) {
-      return "number of scans is out of range (1 - 1024)";
+    if (params.numScan < 1 || params.numScan > 30000) {
+      return "number of scans is out of range (1 - 30000)";
     }
 
     // check if the zero fill is correct

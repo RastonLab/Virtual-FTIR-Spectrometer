@@ -4,10 +4,10 @@ import { Input } from "@mui/material";
 // this input component sets the number of times the spectrum generation function runs
 export default function NumOfScans({ params, setParams }) {
   const handleBlur = () => {
-    if (params < 0) {
-      setParams(0);
-    } else if (params > 1024) {
-      setParams(1024);
+    if (params < 1) {
+      setParams(1);
+    } else if (params > 30000) {
+      setParams(30000);
     }
   };
 
@@ -31,8 +31,8 @@ export default function NumOfScans({ params, setParams }) {
         onBlur={handleBlur}
         inputProps={{
           step: 1,
-          min: 0,
-          max: 1024,
+          min: 1,
+          max: 30000,
           type: "number",
           "aria-labelledby": "input-slider",
         }}
