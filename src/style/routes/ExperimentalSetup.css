@@ -19,6 +19,7 @@
   flex-direction: row;
   justify-content: center;
   max-width: 50%;
+  align-self: start;
 }
 
 .col {
@@ -38,6 +39,8 @@
   justify-content: center;
   flex-grow: 1;
   overflow-x: auto;
+  align-items: center;
+  padding: 0;
 }
 
 /* -------- Switch Style -------- */

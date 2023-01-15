@@ -1,5 +1,6 @@
 import React, { forwardRef, useState } from "react";
 import { useSelector } from "react-redux";
+// import { FlagOps } from "../redux/store";
 
 // components
 import Fetch from "../components/Fetch";
@@ -18,17 +19,17 @@ import CellWindows from "../components/inputs/CellWindows";
 import Detector from "../components/inputs/Detector";
 import Source from "../components/inputs/Source";
 import ZeroFillling from "../components/inputs/ZeroFilling";
+import AirVac from "../components/inputs/AirVac";
 
 // style
 import "../style/routes/ExperimentalSetup.css";
-import { FlagOps } from "../redux/store";
-import AirVac from "../components/inputs/AirVac";
+// import { /*Button,*/ Drawer } from "@mui/material";
 
 const ExperimentalSetup = (props, ref) => {
   const storedParams = useSelector((state) => state.params);
   const progress = useSelector((state) => state.progress);
   const error = useSelector((state) => state.error);
-  const lastGenerated = useSelector((state) => state.lastGenerated);
+  // const lastGenerated = useSelector((state) => state.lastGenerated);
 
   // values set by user
   const [minWave, setMinWave] = useState(storedParams.minWave);
@@ -45,6 +46,8 @@ const ExperimentalSetup = (props, ref) => {
 
   const [airVac, setAirVac] = useState(false);
 
+  // const [openDrawer, setOpenDrawer] = useState(true);
+
   return (
     <div ref={ref} id="experimental-setup">
       <div id="form">
@@ -53,9 +56,7 @@ const ExperimentalSetup = (props, ref) => {
 
           <MaxWave val={maxWave} setter={setMaxWave} />
 
-          {!airVac && <Pressure val={pressure} setter={setPressure} />}
-
-          {airVac && <Pressure val={1.0325} setter={setPressure} />}
+          <Pressure val={pressure} setter={setPressure} />
 
           <NumOfScans params={numScan} setParams={setNumScan} />
 
@@ -138,7 +139,7 @@ const ExperimentalSetup = (props, ref) => {
           </div>
         </div>
       </div>
-      <div id="graph-and-error">
+      <div id="graph-and-error" className="col">
         {progress && <div id="spinner" />}
 
         {error.active && (
@@ -147,11 +148,11 @@ const ExperimentalSetup = (props, ref) => {
           </div>
         )}
 
-        {!progress && !error.active && lastGenerated === FlagOps.Processed && (
+        {!progress && !error.active && (
           <ProcessedPlotly />
         )}
 
-        {!progress && !error.active && lastGenerated === FlagOps.Background && (
+        {!progress && !error.active && (
           <BackgroundPlotly />
         )}
       </div>
