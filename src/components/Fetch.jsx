@@ -147,7 +147,7 @@ export default function Fetch({ type, params, fetchURL, buttonText, isAir }) {
     //   mole = params.pressure / air_pressure
     // }
 
-    console.log(pressure);
+    // console.log(pressure);
     // error occurred in checkParams, display error message to user
     if (errorMessage) {
       dispatch(setProgress(false));
@@ -156,6 +156,7 @@ export default function Fetch({ type, params, fetchURL, buttonText, isAir }) {
     // checkParam succeeded, send request to api
     else {
       try {
+        console.log("start try")
         const response = await fetch(fetchURL, {
           method: "POST",
           headers: {
@@ -177,11 +178,13 @@ export default function Fetch({ type, params, fetchURL, buttonText, isAir }) {
         });
 
         const data = await response.json();
-
+        console.log("after sending")
         // connection was successful
         if (response.ok) {
+          console.log("response ok/connected")
           // determine where to store received data
           if (data.success) {
+            console.log("success")
             switch (type) {
               case "spectrum":
                 dispatch(storeSpectrumData(data));
@@ -199,15 +202,18 @@ export default function Fetch({ type, params, fetchURL, buttonText, isAir }) {
           }
           // display error message
           else {
+            console.log("not sucess")
             dispatch(setProgress(false));
             dispatch(setError({ active: true, text: String(data.text) }));
           }
         }
         // connection was unsuccessful
         else {
+          console.log("did not connect")
           dispatch(setProgress(false));
           dispatch(setError({ active: true, text: String(data.text) }));
         }
+        console.log("made it through!")
       } catch (error) {
         // error occurred when reaching out to server
         let errorMessage = null;
