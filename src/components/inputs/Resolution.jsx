@@ -15,6 +15,8 @@ export default function Resolution({ params, setParams }) {
         <MenuItem value="0.25">0.25</MenuItem>
         <MenuItem value="0.125">0.125</MenuItem>
         <MenuItem value="0.0625">0.0625</MenuItem>
+        <MenuItem value="0.03125">0.03125</MenuItem>
+        <MenuItem value="0.015625">0.015625</MenuItem>
       </Select>
     </div>
   );
