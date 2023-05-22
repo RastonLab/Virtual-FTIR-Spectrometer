@@ -88,7 +88,7 @@ export default function Fetch({ type, params, fetchURL, buttonText, isAir }) {
     }
 
     // check if the resolution is correct
-    if (![1, 0.5, 0.25, 0.125, 0.0625].includes(params.resolution)) {
+    if (![1, 0.5, 0.25, 0.125, 0.0625, 0.03125, 0.015625].includes(params.resolution)) {
       return "resolution is not valid (1, 0.5, 0.25, 0.125, 0.0625)";
     }
 
@@ -140,11 +140,12 @@ export default function Fetch({ type, params, fetchURL, buttonText, isAir }) {
     let errorMessage = checkParams(params);
 
     let pressure = params.pressure;
+    // let mole = 0
 
-    if (isAir) {
-      const air_pressure = 1.01325
-      mole = params.pressure / air_pressure
-    }
+    // if (isAir) {
+    //   const air_pressure = 1.01325
+    //   mole = params.pressure / air_pressure
+    // }
 
     console.log(pressure);
     // error occurred in checkParams, display error message to user
