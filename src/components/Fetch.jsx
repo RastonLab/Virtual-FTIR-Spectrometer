@@ -142,7 +142,8 @@ export default function Fetch({ type, params, fetchURL, buttonText, isAir }) {
     let pressure = params.pressure;
 
     if (isAir) {
-      pressure = 1.01325
+      const air_pressure = 1.01325
+      mole = params.pressure / air_pressure
     }
 
     console.log(pressure);
