@@ -8,7 +8,7 @@ import {
   storeParams,
   setFlag,
 } from "../redux/actions";
-import { FlagOps } from "../redux/store";
+import { FlagOps } from "../redux/store-old";
 
 // this component reaches out to the flask server with user parameters and receives X and Y coordinates to graph
 export default function Fetch({ type, params, fetchURL, buttonText, isAir }) {
@@ -88,7 +88,11 @@ export default function Fetch({ type, params, fetchURL, buttonText, isAir }) {
     }
 
     // check if the resolution is correct
-    if (![1, 0.5, 0.25, 0.125, 0.0625, 0.03125, 0.015625].includes(params.resolution)) {
+    if (
+      ![1, 0.5, 0.25, 0.125, 0.0625, 0.03125, 0.015625].includes(
+        params.resolution
+      )
+    ) {
       return "resolution is not valid (1, 0.5, 0.25, 0.125, 0.0625)";
     }
 
@@ -198,7 +202,7 @@ export default function Fetch({ type, params, fetchURL, buttonText, isAir }) {
           }
           // display error message
           else {
-            console.log("not sucess")
+            console.log("not sucess");
             dispatch(setProgress(false));
             dispatch(setError({ active: true, text: String(data.text) }));
           }

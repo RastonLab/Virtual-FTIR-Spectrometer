@@ -6,8 +6,8 @@ import { Action } from "./actions";
 export const FlagOps = {
   NoData: -1,
   Processed: 0,
-  Background: 1
-}
+  Background: 1,
+};
 
 const initialState = {
   params: {
@@ -77,7 +77,7 @@ function reducer(state, action) {
     case Action.SetFlag:
       return {
         ...state,
-        lastGenerated: action.payload
+        lastGenerated: action.payload,
       };
     default:
       return state;
