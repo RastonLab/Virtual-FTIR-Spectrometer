@@ -13,6 +13,11 @@
   font-family: "Roboto";
 }
 
+/* ---------- parameter ---------- */
+.parameter {
+  margin: 10px;
+}
+
 /* ---------- form ---------- */
 #form {
   display: flex;
@@ -41,31 +46,6 @@
   overflow-x: auto;
   align-items: center;
   padding: 0;
-}
-
-/* -------- Switch Style -------- */
-.switch {
-  display: flex;
-  flex-direction: row !important;
-  align-items: center;
-  justify-content: center;
-}
-
-.switch label {
-  text-align: center;
-  margin: 0 !important;
-  width: 100px;
-  justify-content: center;
-}
-
-.switch-label {
-  text-align: left !important;
-}
-
-.input {
-  display: flex;
-  flex-direction: column;
-  margin: 10px;
 }
 
 /* ---------- spinner ---------- */
@@ -149,7 +129,7 @@
   }
 }
 
-@media only screen and (max-width: 700px){
+@media only screen and (max-width: 700px) {
   #form {
     flex-direction: column;
     justify-content: center;
@@ -164,4 +144,3 @@
     margin-left: 0;
   }
 }
-

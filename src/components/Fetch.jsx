@@ -8,7 +8,7 @@ import {
   storeParams,
   setFlag,
 } from "../redux/actions";
-import { FlagOps } from "../redux/store-old";
+import { FlagOps } from "../redux/store";
 
 // this component reaches out to the flask server with user parameters and receives X and Y coordinates to graph
 export default function Fetch({ type, params, fetchURL, buttonText, isAir }) {

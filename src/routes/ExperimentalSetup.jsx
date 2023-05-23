@@ -1,159 +1,156 @@
-import React, { forwardRef, useState } from "react";
-import { useSelector } from "react-redux";
-// import { FlagOps } from "../redux/store";
+import React from "react";
 
 // components
-import Fetch from "../components/Fetch";
-import { ProcessedPlotly } from "../components/ProcessedPlotly";
-import BackgroundPlotly from "../components/BackgroundPlotly";
+// import Fetch from "../components/Fetch";
+// import { ProcessedPlotly } from "../components/ProcessedPlotly";
+// import BackgroundPlotly from "../components/BackgroundPlotly";
 
 // inputs
-import MinWave from "../components/inputs/MinWave";
-import MaxWave from "../components/inputs/MaxWave";
+import Wavenumber from "../components/inputs/Wavenumber";
 import Pressure from "../components/inputs/Pressure";
 import Molecule from "../components/inputs/Molecule";
 import Resolution from "../components/inputs/Resolution";
-import NumOfScans from "../components/inputs/NumOfScans";
+import Scan from "../components/inputs/Scan";
 import Beamsplitter from "../components/inputs/Beamsplitter";
-import CellWindows from "../components/inputs/CellWindows";
+import Window from "../components/inputs/Window";
 import Detector from "../components/inputs/Detector";
 import Source from "../components/inputs/Source";
-import ZeroFillling from "../components/inputs/ZeroFilling";
-import AirVac from "../components/inputs/AirVac";
+import ZeroFill from "../components/inputs/ZeroFill";
+import Medium from "../components/inputs/Medium";
+
+import { useSelector } from "react-redux";
 
 // style
 import "../style/routes/ExperimentalSetup.css";
-// import { /*Button,*/ Drawer } from "@mui/material";
 
-const ExperimentalSetup = (props, ref) => {
-  const storedParams = useSelector((state) => state.params);
-  const progress = useSelector((state) => state.progress);
-  const error = useSelector((state) => state.error);
-  // const lastGenerated = useSelector((state) => state.lastGenerated);
-
+export default function ExperimentalSetup() {
   // values set by user
-  const [minWave, setMinWave] = useState(storedParams.minWave);
-  const [maxWave, setMaxWave] = useState(storedParams.maxWave);
-  const [molecule, setMolecule] = useState(storedParams.molecule);
-  const [pressure, setPressure] = useState(storedParams.pressure);
-  const [resolution, setResolution] = useState(storedParams.resolution);
-  const [numScan, setNumScan] = useState(storedParams.numScan);
-  const [zeroFill, setZeroFill] = useState(storedParams.zeroFill);
-  const [source, setSource] = useState(storedParams.source);
-  const [beamsplitter, setBeamsplitter] = useState(storedParams.beamsplitter);
-  const [cellWindow, setCellWindow] = useState(storedParams.cellWindow);
-  const [detector, setDetector] = useState(storedParams.detector);
+  // const {
+  //   beamsplitter,
+  //   detector,
+  //   medium,
+  //   molecule,
+  //   pressure,
+  //   resolution,
+  //   scan,
+  //   source,
+  //   waveMin,
+  //   waveMax,
+  //   window,
+  //   zeroFill,
+  // } = useSelector((store) => store.parameter);
 
-  const [airVac, setAirVac] = useState(false);
-
-  // const [openDrawer, setOpenDrawer] = useState(true);
+  const { progress } = useSelector((store) => store.progress);
+  // const { error } = useSelector((store) => store.error);
 
   return (
-    <div ref={ref} id="experimental-setup">
+    <div id="experimental-setup">
       <div id="form">
         <div className="col">
-          <MinWave val={minWave} setter={setMinWave} />
+          <div className="parameter">
+            <Wavenumber />
+          </div>
 
-          <MaxWave val={maxWave} setter={setMaxWave} />
+          <div className="parameter">
+            <Pressure />
+          </div>
 
-          <Pressure val={pressure} setter={setPressure} />
+          <div className="parameter">
+            <Scan />
+          </div>
 
-          <NumOfScans params={numScan} setParams={setNumScan} />
+          <div className="parameter">
+            <Molecule />
+          </div>
 
-          <Molecule val={molecule} setter={setMolecule} />
+          <div className="parameter">
+            <Resolution />
+          </div>
 
-          <Resolution params={resolution} setParams={setResolution} />
-
-          <ZeroFillling params={zeroFill} setParams={setZeroFill} />
+          <div className="parameter">
+            <ZeroFill />
+          </div>
         </div>
         <div className="col">
-          <Source className="switch" params={source} setParams={setSource} />
+          <div className="parameter">
+            <Source />
+          </div>
 
-          <Beamsplitter
-            className="switch"
-            params={beamsplitter}
-            setParams={setBeamsplitter}
-          />
+          <div className="parameter">
+            <Beamsplitter />
+          </div>
 
-          <CellWindows
-            className="switch"
-            params={cellWindow}
-            setParams={setCellWindow}
-          />
+          <div className="parameter">
+            <Window />
+          </div>
 
-          <Detector
-            className="switch"
-            params={detector}
-            setParams={setDetector}
-          />
+          <div className="parameter">
+            <Detector />
+          </div>
 
-          <AirVac
-            className="switch"
-            params={airVac}
-            setParams={setAirVac}
-            pressure={pressure}
-            setPressure={setPressure}
-          />
+          <div className="parameter">
+            <Medium />
+          </div>
 
-          <div className="fetch-zone">
+          {/* <div className="fetch-zone">
             <Fetch
               type="spectrum"
               params={{
-                minWave,
-                maxWave,
+                waveMin,
+                waveMax,
                 molecule,
                 pressure,
                 resolution,
-                numScan,
+                scan,
                 zeroFill,
                 source,
                 beamsplitter,
-                cellWindow,
+                window,
                 detector,
               }}
               // fetchURL={"http://localhost:5000/spectrum"}
               fetchURL={"https://api.ftir.rastonlab.org/spectrum"}
               buttonText="Generate Processed Spectrum"
-              isAir={airVac}
+              isAir={medium}
             />
             <Fetch
               type="background"
               params={{
-                minWave,
-                maxWave,
+                waveMin,
+                waveMax,
                 molecule,
                 pressure,
                 resolution,
-                numScan,
+                scan,
                 zeroFill,
                 source,
                 beamsplitter,
-                cellWindow,
+                window,
                 detector,
               }}
               // fetchURL={"http://localhost:5000/background"}
               fetchURL={"https://api.ftir.rastonlab.org/background"}
               buttonText={"Generate Background Sample"}
-              isAir={airVac}
+              isAir={medium}
             />
-          </div>
+          </div> */}
         </div>
       </div>
       <div id="graph-and-error" className="col">
         {progress && <div id="spinner" />}
 
-        {error.active && (
+        {/* {error.a && (
           <div id="error">
             <p style={{ fontSize: 30 }}>{error.text}</p>
           </div>
-        )}
+        )} */}
 
-        {!progress && !error.active && <ProcessedPlotly />}
+        {/* {!progress && !error.active && <ProcessedPlotly />}
 
-        {!progress && !error.active && <BackgroundPlotly />}
+        {!progress && !error.active && <BackgroundPlotly />} */}
       </div>
     </div>
   );
-};
+}
 
-export default forwardRef(ExperimentalSetup);
+// export default forwardRef(ExperimentalSetup);
