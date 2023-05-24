@@ -13,6 +13,8 @@ import {
   activateProgress,
   deactivateProgress,
 } from "../features/progress/progressSlice";
+import { updateBackgroundData } from "../features/backgroundData/backgroundDataSlice";
+import { updateSpectrumData } from "../features/spectrumData/spectrumDataSlice";
 
 // this component reaches out to the flask server with user parameters and receives X and Y coordinates to graph
 export default function Fetch({ type, params, fetchURL, buttonText, isAir }) {
@@ -20,8 +22,6 @@ export default function Fetch({ type, params, fetchURL, buttonText, isAir }) {
   const { progress } = useSelector((store) => store.progress);
 
   function checkParams(params) {
-    console.log(params);
-
     // check if wavenumbers are correct
     if (params.waveMin < 400 || params.waveMin > 12500) {
       return "min wavenumber is out of range (400 - 12500)";
@@ -149,21 +149,12 @@ export default function Fetch({ type, params, fetchURL, buttonText, isAir }) {
     // dispatch(storeParams(params));
 
     // remove any errors (if existing) and start a progress spinner
-    dispatch(deactivateError);
-    dispatch(activateProgress);
+    dispatch(deactivateError());
+    dispatch(activateProgress());
 
     // validate the user parameters
     let errorMessage = checkParams(params);
 
-    let pressure = params.pressure;
-    // let mole = 0
-
-    // if (isAir) {
-    //   const air_pressure = 1.01325
-    //   mole = params.pressure / air_pressure
-    // }
-
-    // console.log(pressure);
     // error occurred in checkParams, display error message to user
     if (errorMessage) {
       dispatch(deactivateProgress());
@@ -183,7 +174,7 @@ export default function Fetch({ type, params, fetchURL, buttonText, isAir }) {
             detector: params.detector,
             medium: params.medium,
             molecule: params.molecule,
-            pressure: pressure,
+            pressure: params.pressure,
             resolution: params.resolution,
             scan: params.scan,
             source: params.source,
@@ -202,12 +193,12 @@ export default function Fetch({ type, params, fetchURL, buttonText, isAir }) {
             switch (type) {
               case "spectrum":
                 // TODO
-                // dispatch(storeSpectrumData(data));
+                dispatch(updateSpectrumData(data));
                 // dispatch(setFlag(e.Processed));
                 break;
               case "background":
                 // TODO
-                // dispatch(storeBackgroundData(data));
+                dispatch(updateBackgroundData(data));
                 // dispatch(setFlag(FlagOps.Background));
                 break;
               default:

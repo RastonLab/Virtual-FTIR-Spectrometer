@@ -45,6 +45,12 @@ export default function ExperimentalSetup() {
   const { progress } = useSelector((store) => store.progress);
   const { error, errorText } = useSelector((store) => store.error);
 
+  console.log("source: " + source);
+  console.log("beamsplitter: " + beamsplitter);
+  console.log("window: " + window);
+  console.log("detector: " + detector);
+  console.log("medium: " + medium);
+
   return (
     <div id="experimental-setup">
       <div id="form">
@@ -142,15 +148,12 @@ export default function ExperimentalSetup() {
       </div>
       <div id="graph-and-error" className="col">
         {progress && <div id="spinner" />}
-
         {error && (
           <div id="error">
             <p style={{ fontSize: 30 }}>{errorText}</p>
           </div>
         )}
-
         {!progress && !error && <ProcessedPlotly />}
-
         {!progress && !error && <BackgroundPlotly />}
       </div>
     </div>

@@ -14,8 +14,6 @@ export default function BackgroundPlotly() {
   const { backgroundData } = useSelector((store) => store.backgroundData);
   const { waveMax, waveMin } = useSelector((store) => store.parameter);
 
-  console.log(backgroundData);
-
   if (backgroundData) {
     // https://github.com/suzil/radis-app/blob/main/frontend/src/components/CalcSpectrumPlot.tsx
     return (
