@@ -1,41 +1,54 @@
-import store from "./store-old";
+// components
 import FileSaver from "file-saver";
 
-export const Save = () => {
-  const state = store.getState();
+// redux
+import { useSelector } from "react-redux";
 
-  if (state.data === null) {
+export const Save = () => {
+  const {
+    beamsplitter,
+    detector,
+    medium,
+    molecule,
+    pressure,
+    resolution,
+    scan,
+    source,
+    waveMax,
+    waveMin,
+    window,
+    zeroFill,
+  } = useSelector((store) => store.parameter);
+  const { backgroundData } = useSelector((store) => store.backgroundData);
+  const { spectrumData } = useSelector((store) => store.spectrumData);
+
+  if (spectrumData === null) {
     return;
   }
 
-  const params = state.params;
-
-  if (state.spectrumData != null) {
+  if (spectrumData != null) {
     console.log("saving processed");
-    const xVals = state.spectrumData.x;
-    const yVals = state.spectrumData.y;
-    let data = `# Min Wavenumber: ${params.minWave} Max Wavenumber: ${params.maxWave} Molecule: ${params.molecule} Pressure: ${params.pressure} Resolution: ${params.resolution} Number of Scans: ${params.numScan} Zero Fill: ${params.zeroFill} Source: ${params.source} Beamsplitter: ${params.beamsplitter} Cell Window: ${params.cellWindow} Detector: ${params.detector} \n`;
+    const xVals = spectrumData.x;
+    const yVals = spectrumData.y;
+    let data = `# Min Wavenumber: ${waveMin} Max Wavenumber: ${waveMax} Molecule: ${molecule} Pressure: ${pressure} Resolution: ${resolution} Number of Scans: ${scan} Zero Fill: ${zeroFill} Source: ${source} Beamsplitter: ${beamsplitter} Cell Window: ${window} Detector: ${detector} Medium: ${medium} \n`;
     for (let i = 0; i < xVals.length; i++) {
       data += `${xVals[i]},${yVals[i]}\n`;
     }
 
     const blob = new Blob(new Array([data]), { type: "application/csv" });
-    FileSaver.saveAs(blob, `${params.minWave}-${params.maxWave}-spectrum.csv`);
+    FileSaver.saveAs(blob, `${waveMin}-${waveMax}-spectrum.csv`);
   }
 
-  if (state.backgroundData != null) {
+  if (backgroundData != null) {
     console.log("saving background");
-    const xVals = state.backgroundData.x;
-    const yVals = state.backgroundData.y;
-    let data = `# Min Wavenumber: ${params.minWave} Max Wavenumber: ${params.maxWave} Molecule: ${params.molecule} Pressure: ${params.pressure} Resolution: ${params.resolution} Number of Scans: ${params.numScan} Zero Fill: ${params.zeroFill} Source: ${params.source} Beamsplitter: ${params.beamsplitter} Cell Window: ${params.cellWindow} Detector: ${params.detector} \n`;
+    const xVals = backgroundData.x;
+    const yVals = backgroundData.y;
+    let data = `# Min Wavenumber: ${waveMin} Max Wavenumber: ${waveMax} Molecule: ${molecule} Pressure: ${pressure} Resolution: ${resolution} Number of Scans: ${scan} Zero Fill: ${zeroFill} Source: ${source} Beamsplitter: ${beamsplitter} Cell Window: ${window} Detector: ${detector} Medium: ${medium} \n`;
     for (let i = 0; i < xVals.length; i++) {
       data += `${xVals[i]},${yVals[i]}\n`;
     }
 
     const blob = new Blob(new Array([data]), { type: "application/csv" });
-    FileSaver.saveAs(
-      blob,
-      `${params.minWave}-${params.maxWave}-background-spectrum.csv`
-    );
+    FileSaver.saveAs(blob, `${waveMin}-${waveMax}-background-spectrum.csv`);
   }
 };
