@@ -1,5 +1,5 @@
 import React, { forwardRef } from "react";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 
 // components
 import Plot from "react-plotly.js";
@@ -14,7 +14,6 @@ export const AbsorbancePlotly = forwardRef((props, ref) => {
   const backgroundData = useSelector((state) => state.backgroundData);
   const params = useSelector((state) => state.params);
 
-  //   const newX = spectrumData.x / backgroundData.x;
   const newY = [spectrumData.x.length];
 
   for (let i = 0; i < spectrumData.x.length; i++) {
@@ -65,7 +64,10 @@ export const AbsorbancePlotly = forwardRef((props, ref) => {
 
         <FetchPeaks 
           type="find_peaks"
-          params={null}
+          params={{
+            x: spectrumData.x,
+            y: newY
+          }}
           fetchURL={"http://localhost:5000/find_peaks"} // TODO: Add api url
           buttonText={"Find Peaks"}
         />

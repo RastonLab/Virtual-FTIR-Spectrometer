@@ -42,7 +42,8 @@ export default function FetchPeaks({ type, params, fetchURL, buttonText}) {
             "content-type": "application/json",
           },
           body: JSON.stringify({
-
+            "x": params.x,
+            "y": params.y
           }),
         });
 
