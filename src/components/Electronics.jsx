@@ -1,4 +1,6 @@
 import React from "react";
+
+// redux
 import { useSelector } from "react-redux";
 
 // style
@@ -6,7 +8,8 @@ import "../style/components/Electronics.css";
 
 // this component displays user selected parameters in a condensed fashion
 export default function Electronics() {
-  const storedParams = useSelector((state) => state.params);
+  const { beamsplitter, detector, resolution, scan, source, waveMax, waveMin } =
+    useSelector((store) => store.parameter);
 
   return (
     <div className="electronics">
@@ -18,11 +21,7 @@ export default function Electronics() {
             <label>
               Source
               <input
-                value={
-                  storedParams.source === 1700
-                    ? "Globar (1700K)"
-                    : "Tungsten (3100K)"
-                }
+                value={source === 1700 ? "Globar (1700K)" : "Tungsten (3100K)"}
                 readOnly
               />
             </label>
@@ -31,7 +30,7 @@ export default function Electronics() {
           <div className="grid">
             <label>
               Beamsplitter
-              <input value={storedParams.beamsplitter} readOnly />
+              <input value={beamsplitter} readOnly />
             </label>
           </div>
 
@@ -45,7 +44,7 @@ export default function Electronics() {
           <div className="grid">
             <label>
               Detector
-              <input value={storedParams.detector} readOnly />
+              <input value={detector} readOnly />
             </label>
           </div>
         </div>
@@ -58,14 +57,14 @@ export default function Electronics() {
           <div className="grid">
             <label>
               OPD
-              <input value={storedParams.resolution} readOnly></input>
+              <input value={resolution} readOnly></input>
             </label>
           </div>
 
           <div className="grid">
             <label>
               Number of Scans
-              <input value={storedParams.numScan} readOnly />
+              <input value={scan} readOnly />
             </label>
           </div>
 
@@ -73,7 +72,7 @@ export default function Electronics() {
             <label>
               Range
               <input
-                value={`${storedParams.minWave} - ${storedParams.maxWave} cm^-1`} // FIXME - find better way to superscript
+                value={`${waveMin} - ${waveMax} cm^-1`} // FIXME - find better way to superscript
                 readOnly
               />
             </label>
@@ -82,7 +81,7 @@ export default function Electronics() {
           <div className="grid">
             <label>
               Resolution
-              <input value={`${storedParams.resolution} cm`} readOnly />
+              <input value={`${resolution} cm`} readOnly />
             </label>
           </div>
         </div>

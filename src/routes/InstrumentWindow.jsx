@@ -1,16 +1,23 @@
 import React, { useState } from "react";
-import { useSelector } from "react-redux";
+
+// components
 import { Dialog } from "@mui/material";
 import { ReactComponent as Main } from "../components/svgs/ftir-main.svg";
-import { toolTips } from "../dictionaries/SVGLibrary";
-
-import "../style/routes/InstrumentWindow.css";
-import "../style/components/Electronics.css";
 import Electronics from "../components/Electronics";
 import { ProcessedPlotly } from "../components/ProcessedPlotly";
 
+// dictionaries
+import { toolTips } from "../dictionaries/SVGLibrary";
+
+// redux
+import { useSelector } from "react-redux";
+
+// style
+import "../style/routes/InstrumentWindow.css";
+import "../style/components/Electronics.css";
+
 export default function InstrumentWindow() {
-  const storedSpectrumData = useSelector((state) => state.spectrumData);
+  const { spectrumData } = useSelector((store) => store.spectrumData);
   const [toggled, setToggled] = useState(false);
   const [element, setElement] = useState();
 
@@ -32,7 +39,7 @@ export default function InstrumentWindow() {
           <Electronics />
         </div>
         <div id="spectrum">
-          {storedSpectrumData ? (
+          {spectrumData ? (
             <ProcessedPlotly />
           ) : (
             <p>Please generate a processed spectrum and return here</p>
