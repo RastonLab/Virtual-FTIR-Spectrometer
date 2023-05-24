@@ -11,7 +11,7 @@ import {
 import { FlagOps } from "../redux/store";
 
 // this component reaches out to the flask server with user parameters and receives X and Y coordinates to graph
-export default function Fetch({ type, params, fetchURL, buttonText, isAir }) {
+export default function Fetch({ type, params, fetchURL, buttonText}) {
   const dispatch = useDispatch();
   const progress = useSelector((state) => state.progress);
 
@@ -139,15 +139,6 @@ export default function Fetch({ type, params, fetchURL, buttonText, isAir }) {
     // validate the user parameters
     let errorMessage = checkParams(params);
 
-    let pressure = params.pressure;
-    // let mole = 0
-
-    // if (isAir) {
-    //   const air_pressure = 1.01325
-    //   mole = params.pressure / air_pressure
-    // }
-
-    // console.log(pressure);
     // error occurred in checkParams, display error message to user
     if (errorMessage) {
       dispatch(setProgress(false));
@@ -155,6 +146,19 @@ export default function Fetch({ type, params, fetchURL, buttonText, isAir }) {
     }
     // checkParam succeeded, send request to api
     else {
+
+      let mole = 1
+      let pressure = params.pressure
+
+      if (params.airVac) {
+        const air_pressure = 1.01325
+        mole = params.pressure / air_pressure
+        pressure = air_pressure
+      }
+      console.log(params.airVac)
+      console.log(mole)
+      console.log(params.pressure)
+
       try {
         const response = await fetch(fetchURL, {
           method: "POST",
@@ -173,6 +177,7 @@ export default function Fetch({ type, params, fetchURL, buttonText, isAir }) {
             beamsplitter: params.beamsplitter,
             cellWindow: params.cellWindow,
             detector: params.detector,
+            mole: mole
           }),
         });
 
