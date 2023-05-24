@@ -45,12 +45,6 @@ export default function ExperimentalSetup() {
   const { progress } = useSelector((store) => store.progress);
   const { error, errorText } = useSelector((store) => store.error);
 
-  console.log("source: " + source);
-  console.log("beamsplitter: " + beamsplitter);
-  console.log("window: " + window);
-  console.log("detector: " + detector);
-  console.log("medium: " + medium);
-
   return (
     <div id="experimental-setup">
       <div id="form">
