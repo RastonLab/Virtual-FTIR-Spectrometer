@@ -132,8 +132,8 @@ const ExperimentalSetup = (props, ref) => {
                 detector,
                 airVac
               }}
-              fetchURL={"http://localhost:5000/background"}
-              // fetchURL={"https://api.ftir.rastonlab.org/background"}
+              // fetchURL={"http://localhost:5000/background"}
+              fetchURL={"https://api.ftir.rastonlab.org/background"}
               buttonText={"Generate Background Sample"}
             />
           </div>

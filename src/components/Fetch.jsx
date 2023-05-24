@@ -155,9 +155,6 @@ export default function Fetch({ type, params, fetchURL, buttonText}) {
         mole = params.pressure / air_pressure
         pressure = air_pressure
       }
-      console.log(params.airVac)
-      console.log(mole)
-      console.log(params.pressure)
 
       try {
         const response = await fetch(fetchURL, {
