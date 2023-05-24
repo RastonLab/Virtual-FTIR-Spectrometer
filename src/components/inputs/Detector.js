@@ -22,7 +22,7 @@ export default function Detector() {
 
   const label = {
     inputProps: { "aria-label": "Detector" },
-    unchecked: "MCT",
+    unchecked: "InSb",
   };
 
   return (

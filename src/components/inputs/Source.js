@@ -15,21 +15,21 @@ export default function Source() {
   const dispatch = useDispatch();
 
   const handleChange = (event, newAlignment) => {
-    newAlignment ? dispatch(updateSource(1700)) : dispatch(updateSource(3100));
+    newAlignment ? dispatch(updateSource(3100)) : dispatch(updateSource(1700));
   };
 
   const label = {
     inputProps: { "aria-label": "Source" },
-    unchecked: "Tungsten",
+    unchecked: "Globar",
   };
 
   return (
     <FormControl component="fieldset">
       <FormLabel component="legend">Source</FormLabel>
       <Stack direction="row" spacing={1} alignItems="center">
-        <Typography>Tungsten</Typography>
-        <CustomSwitch {...label} onChange={handleChange} />
         <Typography>Globar</Typography>
+        <CustomSwitch {...label} onChange={handleChange} defaultChecked />
+        <Typography>Tungsten</Typography>
       </Stack>
     </FormControl>
   );

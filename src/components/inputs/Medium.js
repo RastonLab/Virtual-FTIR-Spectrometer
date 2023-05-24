@@ -22,7 +22,7 @@ export default function Medium() {
 
   const label = {
     inputProps: { "aria-label": "Medium" },
-    unchecked: "Vacuum",
+    unchecked: "Air",
   };
 
   return (

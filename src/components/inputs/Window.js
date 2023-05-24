@@ -30,7 +30,7 @@ export default function Window() {
       <FormLabel component="legend">Cell Window</FormLabel>
       <Stack direction="row" spacing={1} alignItems="center">
         <Typography>ZnSe</Typography>
-        <CustomSwitch {...label} onChange={handleChange} />
+        <CustomSwitch {...label} onChange={handleChange} defaultChecked />
         <Typography>CaF₂</Typography>
       </Stack>
     </FormControl>

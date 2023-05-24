@@ -22,7 +22,7 @@ export default function Beamsplitter() {
 
   const label = {
     inputProps: { "aria-label": "Beamsplitter" },
-    unchecked: "AR_ZnSe",
+    unchecked: "AR_CaF2",
   };
 
   return (
@@ -31,7 +31,7 @@ export default function Beamsplitter() {
       <Stack direction="row" spacing={1} alignItems="center">
         <Typography>AR_ZnSe</Typography>
         <CustomSwitch {...label} onChange={handleChange} />
-        <Typography>InSb</Typography>
+        <Typography>AR_CaF2</Typography>
       </Stack>
     </FormControl>
   );

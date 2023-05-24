@@ -9,9 +9,9 @@ const initialState = {
   resolution: 1,
   scan: 1,
   source: 3100,
-  waveMin: 2000,
-  waveMax: 8000,
-  window: "ZnSe",
+  waveMin: 1900,
+  waveMax: 2300,
+  window: "CaF2",
   zeroFill: 0,
 };
 
