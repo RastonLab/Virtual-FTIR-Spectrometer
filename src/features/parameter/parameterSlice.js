@@ -6,13 +6,13 @@ const initialState = {
   medium: "Vacuum",
   molecule: "CO",
   pressure: 0.001,
-  resolution: "1",
+  resolution: 1,
   scan: 1,
-  source: "tungsten",
+  source: 3100,
   waveMin: 2000,
   waveMax: 8000,
   window: "ZnSe",
-  zeroFill: "0",
+  zeroFill: 0,
 };
 
 const parameterSlice = createSlice({

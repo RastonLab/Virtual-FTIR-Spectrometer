@@ -1,16 +1,18 @@
 import React, { forwardRef } from "react";
-import { useSelector } from "react-redux";
 
 // components
 import Plot from "react-plotly.js";
+
+// redux
+import { useSelector } from "react-redux";
 
 // style
 import "../style/components/Plotly.css";
 
 // this component uses the plotly library to graph processed spectrum data
 export const ProcessedPlotly = forwardRef((props, ref) => {
-  const spectrumData = useSelector((state) => state.spectrumData);
-  const params = useSelector((state) => state.params);
+  const { spectrumData } = useSelector((store) => store.spectrumData);
+  const { waveMax, waveMin } = useSelector((store) => store.parameter);
 
   if (spectrumData) {
     // https://github.com/suzil/radis-app/blob/main/frontend/src/components/CalcSpectrumPlot.tsx
@@ -32,7 +34,7 @@ export const ProcessedPlotly = forwardRef((props, ref) => {
               title: "Processed Spectrum",
               font: { family: "Roboto", color: "#000" },
               xaxis: {
-                range: [params.minWave, params.maxWave],
+                range: [waveMin, waveMax],
                 title: { text: "Wavenumber (cm⁻¹)" },
                 rangeslider: {
                   autorange: true,

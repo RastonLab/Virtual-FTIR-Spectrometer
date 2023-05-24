@@ -15,9 +15,7 @@ export default function Source() {
   const dispatch = useDispatch();
 
   const handleChange = (event, newAlignment) => {
-    newAlignment
-      ? dispatch(updateSource("globar"))
-      : dispatch(updateSource("tungsten"));
+    newAlignment ? dispatch(updateSource(1700)) : dispatch(updateSource(3100));
   };
 
   const label = {
