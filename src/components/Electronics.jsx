@@ -71,10 +71,7 @@ export default function Electronics() {
           <div className="grid">
             <label>
               Range
-              <input
-                value={`${waveMin} - ${waveMax} cm^-1`} // FIXME - find better way to superscript
-                readOnly
-              />
+              <input value={`${waveMin} - ${waveMax} cm⁻¹`} readOnly />
             </label>
           </div>
 
