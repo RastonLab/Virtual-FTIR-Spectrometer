@@ -8,7 +8,7 @@ import { CustomSwitch } from "./custom/CustomSwitch";
 
 // redux
 import { useDispatch } from "react-redux";
-import { updateSource } from "../../features/parameter/parameterSlice";
+import { updateSource } from "../../features/parameterSlice";
 
 // this input component sets the source temperature to globar (1700 K) or tungsten (3100 K)
 export default function Source() {

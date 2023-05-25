@@ -11,13 +11,13 @@ import {
   activateError,
   deactivateError,
   updateErrorText,
-} from "../features/error/errorSlice";
+} from "../features/errorSlice";
 import {
   activateProgress,
   deactivateProgress,
-} from "../features/progress/progressSlice";
-import { updateBackgroundData } from "../features/backgroundData/backgroundDataSlice";
-import { updateSpectrumData } from "../features/spectrumData/spectrumDataSlice";
+} from "../features/progressSlice";
+import { updateBackgroundData } from "../features/backgroundDataSlice";
+import { updateSpectrumData } from "../features/spectrumDataSlice";
 
 // this component reaches out to the flask server with user parameters and receives X and Y coordinates to graph
 export default function Fetch({ type, params, fetchURL, buttonText }) {

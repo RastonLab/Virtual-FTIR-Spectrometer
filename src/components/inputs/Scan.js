@@ -9,7 +9,7 @@ import ShowChartIcon from "@mui/icons-material/ShowChart";
 
 // redux
 import { useDispatch, useSelector } from "react-redux";
-import { updateScan } from "../../features/parameter/parameterSlice";
+import { updateScan } from "../../features/parameterSlice";
 
 const Input = styled(MuiInput)`
   width: 42px;

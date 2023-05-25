@@ -8,10 +8,7 @@ import MuiInput from "@mui/material/Input";
 
 // redux
 import { useDispatch, useSelector } from "react-redux";
-import {
-  updateWaveMin,
-  updateWaveMax,
-} from "../../features/parameter/parameterSlice";
+import { updateWaveMin, updateWaveMax } from "../../features/parameterSlice";
 
 const Input = styled(MuiInput)`
   width: 52px;

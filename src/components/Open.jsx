@@ -4,9 +4,9 @@ import { useState } from "react";
 import { useDispatch } from "react-redux";
 
 // redux slices
-import { deactivateError } from "../features/error/errorSlice";
-import { updateBackgroundData } from "../features/backgroundData/backgroundDataSlice";
-import { updateSpectrumData } from "../features/spectrumData/spectrumDataSlice";
+import { deactivateError } from "../features/errorSlice";
+import { updateBackgroundData } from "../features/backgroundDataSlice";
+import { updateSpectrumData } from "../features/spectrumDataSlice";
 
 // style
 import "../style/components/Open.css";

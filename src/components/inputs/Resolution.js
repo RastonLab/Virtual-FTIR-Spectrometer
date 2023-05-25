@@ -10,7 +10,7 @@ import { resolutions } from "../../dictionaries/resolutionDict";
 
 // redux
 import { useDispatch, useSelector } from "react-redux";
-import { updateResolution } from "../../features/parameter/parameterSlice";
+import { updateResolution } from "../../features/parameterSlice";
 
 // this input component sets the resolution from a pre-approved selection
 export default function Resolution() {

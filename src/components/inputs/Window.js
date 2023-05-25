@@ -8,7 +8,7 @@ import { CustomSwitch } from "./custom/CustomSwitch";
 
 // redux
 import { useDispatch } from "react-redux";
-import { updateWindow } from "../../features/parameter/parameterSlice";
+import { updateWindow } from "../../features/parameterSlice";
 
 // this input component sets the cell window to 'ZnSe' or 'CaF2'
 export default function Window() {
