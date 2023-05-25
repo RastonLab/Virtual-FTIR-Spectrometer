@@ -10,7 +10,9 @@ const initialState = {
   scan: 1,
   source: 3100,
   waveMin: 1900,
+  waveMinSaved: null,
   waveMax: 2300,
+  waveMaxSaved: null,
   window: "CaF2",
   zeroFill: 0,
 };
@@ -46,8 +48,14 @@ const parameterSlice = createSlice({
     updateWaveMin: (state, { payload }) => {
       state.waveMin = payload;
     },
+    updateWaveMinSaved: (state, { payload }) => {
+      state.waveMinSaved = payload;
+    },
     updateWaveMax: (state, { payload }) => {
       state.waveMax = payload;
+    },
+    updateWaveMaxSaved: (state, { payload }) => {
+      state.waveMaxSaved = payload;
     },
     updateWindow: (state, { payload }) => {
       state.window = payload;
@@ -68,7 +76,9 @@ export const {
   updateScan,
   updateSource,
   updateWaveMin,
+  updateWaveMinSaved,
   updateWaveMax,
+  updateWaveMaxSaved,
   updateWindow,
   updateZeroFill,
 } = parameterSlice.actions;

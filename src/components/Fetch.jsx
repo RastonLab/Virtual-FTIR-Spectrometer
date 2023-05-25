@@ -18,6 +18,10 @@ import {
 } from "../features/progressSlice";
 import { updateBackgroundData } from "../features/backgroundDataSlice";
 import { updateSpectrumData } from "../features/spectrumDataSlice";
+import {
+  updateWaveMaxSaved,
+  updateWaveMinSaved,
+} from "../features/parameterSlice";
 
 // this component reaches out to the flask server with user parameters and receives X and Y coordinates to graph
 export default function Fetch({ type, params, fetchURL, buttonText }) {
@@ -81,9 +85,13 @@ export default function Fetch({ type, params, fetchURL, buttonText }) {
             switch (type) {
               case "spectrum":
                 dispatch(updateSpectrumData(data));
+                dispatch(updateWaveMinSaved(params.waveMin));
+                dispatch(updateWaveMaxSaved(params.waveMax));
                 break;
               case "background":
                 dispatch(updateBackgroundData(data));
+                dispatch(updateWaveMinSaved(params.waveMin));
+                dispatch(updateWaveMaxSaved(params.waveMax));
                 break;
               default:
                 console.log("not processed or background");

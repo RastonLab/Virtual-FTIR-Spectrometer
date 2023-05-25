@@ -12,7 +12,9 @@ import "../style/components/Plotly.css";
 // this component uses the plotly library to graph background sample data
 export default function BackgroundPlotly() {
   const { backgroundData } = useSelector((store) => store.backgroundData);
-  const { waveMax, waveMin } = useSelector((store) => store.parameter);
+  const { waveMaxSaved, waveMinSaved } = useSelector(
+    (store) => store.parameter
+  );
 
   if (backgroundData) {
     // https://github.com/suzil/radis-app/blob/main/frontend/src/components/CalcSpectrumPlot.tsx
@@ -33,7 +35,7 @@ export default function BackgroundPlotly() {
               title: "Background Spectrum",
               font: { family: "Roboto", color: "#000" },
               xaxis: {
-                range: [waveMin, waveMax],
+                range: [waveMinSaved, waveMaxSaved],
                 title: { text: "Wavenumber (cm⁻¹)" },
                 rangeslider: {
                   autorange: true,
