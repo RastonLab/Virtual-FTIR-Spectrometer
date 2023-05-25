@@ -1,5 +1,5 @@
 import React, { forwardRef } from "react";
-import { useDispatch, useSelector } from "react-redux";
+import { useSelector } from "react-redux";
 
 // components
 import Plot from "react-plotly.js";

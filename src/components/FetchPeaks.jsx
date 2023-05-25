@@ -66,6 +66,7 @@ export default function FetchPeaks({ type, params, fetchURL, buttonText}) {
             //     console.log("not processed or background");
             //     break;
             // }
+            console.log(data.peaks)
             dispatch(setProgress(false));
             console.log("AOK")
           }
