@@ -93,6 +93,13 @@ export const AbsorbancePlotly = forwardRef((props, ref) => {
               );
             })
           }
+          { 
+            peaks.intensity.map((peak) => {
+              return (
+                <p>{peak}</p>
+              );
+            })
+          }
         </Dialog>
 
       </>
