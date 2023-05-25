@@ -1,8 +1,9 @@
-import React, { forwardRef } from "react";
+import React, { forwardRef, useState } from "react";
 import { useSelector } from "react-redux";
 
 // components
 import Plot from "react-plotly.js";
+import { Dialog } from "@mui/material";
 
 // style
 import "../style/components/Plotly.css";
@@ -12,7 +13,10 @@ import FetchPeaks from "./FetchPeaks";
 export const AbsorbancePlotly = forwardRef((props, ref) => {
   const spectrumData = useSelector((state) => state.spectrumData);
   const backgroundData = useSelector((state) => state.backgroundData);
+  const peaks = useSelector((state) => state.peaks);
   const params = useSelector((state) => state.params);
+
+  const [open, setOpen] = useState(false);
 
   const newY = [spectrumData.x.length];
 
@@ -70,7 +74,27 @@ export const AbsorbancePlotly = forwardRef((props, ref) => {
           }}
           fetchURL={"http://localhost:5000/find_peaks"} // TODO: Add api url
           buttonText={"Find Peaks"}
+          openPopup={setOpen}
         />
+        
+        <Dialog
+          className="popup"
+          onClose={() => {
+            setOpen(false);
+          }}
+          open={open}
+        >
+          <h1>Absorbance Peaks</h1>
+          {/* NOTE: cannot open absorbance tab while this code is there and peaks is null */}
+          { 
+            peaks.peaks.map((peak) => {
+              return (
+                <p>{peak}</p>
+              );
+            })
+          }
+        </Dialog>
+
       </>
     );
   } else {

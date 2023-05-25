@@ -3,6 +3,7 @@ import { useSelector, useDispatch } from "react-redux";
 import {
   setProgress,
   setError,
+  setPeaks,
 //   storeSpectrumData,
 //   storeBackgroundData,
 //   storeParams,
@@ -11,7 +12,7 @@ import {
 // import { FlagOps } from "../redux/store";
 
 // this component reaches out to the flask server with user parameters and receives X and Y coordinates to graph
-export default function FetchPeaks({ type, params, fetchURL, buttonText}) {
+export default function FetchPeaks({ type, params, fetchURL, buttonText, openPopup}) {
   const dispatch = useDispatch();
   const progress = useSelector((state) => state.progress);
 
@@ -66,9 +67,8 @@ export default function FetchPeaks({ type, params, fetchURL, buttonText}) {
             //     console.log("not processed or background");
             //     break;
             // }
-            console.log(data.peaks)
             dispatch(setProgress(false));
-            console.log("AOK")
+            dispatch(setPeaks(data))
           }
           // display error message
           else {
@@ -99,6 +99,7 @@ export default function FetchPeaks({ type, params, fetchURL, buttonText}) {
         dispatch(setError({ active: true, text: errorMessage }));
       }
     }
+    openPopup(true);
   };
 
   return (

@@ -9,6 +9,8 @@ export const Action = Object.freeze({
 
   SetError: "SetError",
 
+  SetPeaks: "SetPeaks",
+
   SetFlag: "SetFlag",
 });
 
@@ -35,6 +37,10 @@ export function setProgress(progress) {
 // -------------------- error text --------------------
 export function setError(error) {
   return { type: Action.SetError, payload: error };
+}
+
+export function setPeaks(peaks) {
+  return { type: Action.SetPeaks, payload: peaks};
 }
 
 // -------------------- flag ----------------------

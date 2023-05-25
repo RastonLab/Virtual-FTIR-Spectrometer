@@ -35,6 +35,8 @@ const initialState = {
     text: "",
   },
 
+  peaks: null,
+
   lastGenerated: FlagOps.NoData,
 };
 
@@ -74,6 +76,13 @@ function reducer(state, action) {
         ...state,
         error: action.payload,
       };
+
+    case Action.SetPeaks:
+      return {
+        ...state,
+        peaks: action.payload,
+      }
+
     case Action.SetFlag:
       return {
         ...state,
