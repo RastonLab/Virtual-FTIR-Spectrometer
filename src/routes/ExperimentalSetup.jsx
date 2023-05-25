@@ -25,7 +25,6 @@ import { useSelector } from "react-redux";
 import "../style/routes/ExperimentalSetup.css";
 
 export default function ExperimentalSetup() {
-  // parameters set by user
   const {
     beamsplitter,
     detector,
@@ -151,5 +150,3 @@ export default function ExperimentalSetup() {
     </div>
   );
 }
-
-// export default forwardRef(ExperimentalSetup);
