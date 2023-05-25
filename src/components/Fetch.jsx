@@ -166,7 +166,7 @@ export default function Fetch({ type, params, fetchURL, buttonText }) {
       let mole = 1;
       let pressure = params.pressure;
 
-      if (params.airVac) {
+      if (params.medium === "Air") {
         const air_pressure = 1.01325;
         mole = params.pressure / air_pressure;
         pressure = air_pressure;
@@ -184,7 +184,7 @@ export default function Fetch({ type, params, fetchURL, buttonText }) {
             medium: params.medium,
             mole: mole,
             molecule: params.molecule,
-            pressure: params.pressure,
+            pressure: pressure,
             resolution: params.resolution,
             scan: params.scan,
             source: params.source,

@@ -114,7 +114,6 @@ export default function ExperimentalSetup() {
               fetchURL={"http://localhost:5000/spectrum"}
               // fetchURL={"https://api.ftir.rastonlab.org/spectrum"}
               buttonText="Generate Processed Spectrum"
-              isAir={airVac}
             />
             <Fetch
               type="background"
@@ -131,12 +130,10 @@ export default function ExperimentalSetup() {
                 waveMin,
                 window,
                 zeroFill,
-                airVac,
               }}
               fetchURL={"http://localhost:5000/background"}
               // fetchURL={"https://api.ftir.rastonlab.org/background"}
               buttonText={"Generate Background Sample"}
-              // isAir={medium}
             />
           </div>
         </div>
