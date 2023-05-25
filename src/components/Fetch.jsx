@@ -25,10 +25,6 @@ export default function Fetch({ type, params, fetchURL, buttonText }) {
   const { progress } = useSelector((store) => store.progress);
 
   const fetchLinode = async () => {
-    // store the current user parameters
-    // TODO
-    // dispatch(storeParams(params));
-
     // remove any errors (if existing) and start a progress spinner
     dispatch(deactivateError());
     dispatch(activateProgress());
@@ -84,14 +80,10 @@ export default function Fetch({ type, params, fetchURL, buttonText }) {
           if (data.success) {
             switch (type) {
               case "spectrum":
-                // TODO
                 dispatch(updateSpectrumData(data));
-                // dispatch(setFlag(e.Processed));
                 break;
               case "background":
-                // TODO
                 dispatch(updateBackgroundData(data));
-                // dispatch(setFlag(FlagOps.Background));
                 break;
               default:
                 console.log("not processed or background");
