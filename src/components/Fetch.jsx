@@ -17,7 +17,7 @@ import { updateBackgroundData } from "../features/backgroundData/backgroundDataS
 import { updateSpectrumData } from "../features/spectrumData/spectrumDataSlice";
 
 // this component reaches out to the flask server with user parameters and receives X and Y coordinates to graph
-export default function Fetch({ type, params, fetchURL, buttonText, isAir }) {
+export default function Fetch({ type, params, fetchURL, buttonText }) {
   const dispatch = useDispatch();
   const { progress } = useSelector((store) => store.progress);
 
@@ -163,6 +163,15 @@ export default function Fetch({ type, params, fetchURL, buttonText, isAir }) {
     }
     // checkParam succeeded, send request to api
     else {
+      let mole = 1;
+      let pressure = params.pressure;
+
+      if (params.airVac) {
+        const air_pressure = 1.01325;
+        mole = params.pressure / air_pressure;
+        pressure = air_pressure;
+      }
+
       try {
         const response = await fetch(fetchURL, {
           method: "POST",
@@ -173,6 +182,7 @@ export default function Fetch({ type, params, fetchURL, buttonText, isAir }) {
             beamsplitter: params.beamsplitter,
             detector: params.detector,
             medium: params.medium,
+            mole: mole,
             molecule: params.molecule,
             pressure: params.pressure,
             resolution: params.resolution,
