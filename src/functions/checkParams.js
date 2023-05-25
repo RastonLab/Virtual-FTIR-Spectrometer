@@ -47,7 +47,7 @@ export default function checkParams(params) {
   }
 
   // check if the zero fill is correct
-  if (!zeroFills.map(({ value }) => value).includes(params.resolution)) {
+  if (!zeroFills.map(({ value }) => value).includes(params.zeroFill)) {
     return "zero fill is not valid (0, 1, 2)";
   }
 
