@@ -72,29 +72,45 @@ export const AbsorbancePlotly = forwardRef((props, ref) => {
             x: spectrumData.x,
             y: newY
           }}
-          fetchURL={"http://localhost:5000/find_peaks"} // TODO: Add api url
+          fetchURL={"http://localhost:5000/find_peaks"}
+          // fetchURL={"https://api.ftir.rastonlab.org/find_peaks"}
           buttonText={"Find Peaks"}
           openPopup={setOpen}
         />
-        
-        <Dialog
+
+        {/* Displays data from the server if there were no errors */}
+        {peaksData && !peaksData.error && (
+          <Dialog
+            className="popup"
+            onClose={() => {
+              setOpen(false);
+            }}
+            open={open}
+          >
+            <h1>Absorbance Peaks</h1>
+            {Object.keys(peaksData.peaks).map((key) => {
+              // NOTE: i can only get one space here
+              return <p>{`Peak: ${key} Intensity: ${peaksData.peaks[key]}`}</p>;
+            })}
+          </Dialog>
+        )}
+
+        {/* Displays any error message sent back from the sever */}
+        {peaksData && peaksData.error && (
+
+          <Dialog
           className="popup"
           onClose={() => {
             setOpen(false);
           }}
           open={open}
-        >
+          >
           <h1>Absorbance Peaks</h1>
-          {/* NOTE: cannot open absorbance tab while this code is there and peaks is null */}
-          {/* { 
-            Object.keys(peaks.peaks).map((key) => {
-              // NOTE: i can only get one space here
-              return (
-                <p>{`Peak: ${key} Intensity: ${peaks.peaks[key]}`}</p> 
-              );
-            })
-          } */}
-        </Dialog>
+
+          <p>There was an error in finding the peaks of this data. Please adust your experiment settings and try again.</p>
+          
+          </Dialog>
+        )}
 
       </>
     );
