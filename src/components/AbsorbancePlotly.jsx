@@ -3,6 +3,8 @@ import React, { forwardRef, useState } from "react";
 // components
 import Plot from "react-plotly.js";
 import { Dialog } from "@mui/material";
+import Box from "@mui/material/Box";
+import TextField from "@mui/material/TextField";
 
 // redux
 import { useSelector } from "react-redux";
@@ -10,6 +12,7 @@ import { useSelector } from "react-redux";
 // style
 import "../style/components/Plotly.css";
 import FetchPeaks from "./FetchPeaks";
+
 
 // this component uses the plotly library to graph processed spectrum data
 export const AbsorbancePlotly = forwardRef((props, ref) => {
@@ -21,6 +24,7 @@ export const AbsorbancePlotly = forwardRef((props, ref) => {
   );
 
   const [open, setOpen] = useState(false);
+  const [threshold, setThreshold] = useState(0);
 
   const newY = [spectrumData.x.length];
 
@@ -70,14 +74,39 @@ export const AbsorbancePlotly = forwardRef((props, ref) => {
           useResizeHandler={true}
         />
 
+        <Box
+              sx={{
+                "& .MuiTextField-root": { m: 1, width: "25ch" },
+              }}
+              noValidate
+              autoComplete="off"
+            >
+              <TextField
+                id="standard-number"
+                label="Threshold"
+                placeholder="Enter threshold "
+                type="number"
+                value={threshold}
+                onChange={(e) => {setThreshold(e.target.value);}}
+                InputProps={{
+                  inputProps: {
+                    min: 0.0001,
+                    max: 10,
+                    step: 0.0001,
+                  },
+                }}
+              />
+            </Box>
+
         <FetchPeaks
           type="find_peaks"
           params={{
             x: spectrumData.x,
             y: newY,
+            threshold: threshold
           }}
-          // fetchURL={"http://localhost:5000/find_peaks"}
-          fetchURL={"https://api.ftir.rastonlab.org/find_peaks"}
+          fetchURL={"http://localhost:5000/find_peaks"}
+          // fetchURL={"https://api.ftir.rastonlab.org/find_peaks"}
           buttonText={"Find Peaks"}
           openPopup={setOpen}
         />
@@ -91,7 +120,6 @@ export const AbsorbancePlotly = forwardRef((props, ref) => {
             open={open}
           >
             <h1>Absorbance Peaks</h1>
-            {/* NOTE: cannot open absorbance tab while this code is there and peaks is null */}
             {Object.keys(peaksData.peaks).map((key) => {
               // NOTE: i can only get one space here
               return <p>{`Peak: ${key} Intensity: ${peaksData.peaks[key]}`}</p>;
