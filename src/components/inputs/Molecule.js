@@ -10,7 +10,7 @@ import { molecules } from "../../dictionaries/moleculeDict";
 
 // redux
 import { useDispatch, useSelector } from "react-redux";
-import { updateMolecule } from "../../features/parameter/parameterSlice";
+import { updateMolecule } from "../../features/parameterSlice";
 
 // this input component sets the molecule to a pre-approved selection
 export default function Molecule() {

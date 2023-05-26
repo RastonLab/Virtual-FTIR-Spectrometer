@@ -10,7 +10,7 @@ import { zeroFills } from "../../dictionaries/zeroFillDict";
 
 // redux
 import { useDispatch, useSelector } from "react-redux";
-import { updateZeroFill } from "../../features/parameter/parameterSlice";
+import { updateZeroFill } from "../../features/parameterSlice";
 
 // this input component sets the zero filling to zero, one, or two
 export default function ZeroFill() {

@@ -8,7 +8,7 @@ import { CustomSwitch } from "./custom/CustomSwitch";
 
 // redux
 import { useDispatch } from "react-redux";
-import { updateMedium } from "../../features/parameter/parameterSlice";
+import { updateMedium } from "../../features/parameterSlice";
 
 // this input component sets the medium to 'vacuum' or 'air'
 export default function Medium() {

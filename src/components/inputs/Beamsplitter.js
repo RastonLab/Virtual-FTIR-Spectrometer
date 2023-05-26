@@ -8,7 +8,7 @@ import { CustomSwitch } from "./custom/CustomSwitch";
 
 // redux
 import { useDispatch } from "react-redux";
-import { updateBeamsplitter } from "../../features/parameter/parameterSlice";
+import { updateBeamsplitter } from "../../features/parameterSlice";
 
 // this input component sets the beamsplitter to 'AR_ZnSe' or 'AR_CaF2'
 export default function Beamsplitter() {

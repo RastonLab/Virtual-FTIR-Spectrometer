@@ -1,18 +1,16 @@
 import { configureStore } from "@reduxjs/toolkit";
 
 // reducers
-import backgroundDataReducer from "../features/backgroundData/backgroundDataSlice";
-import errorReducer from "../features/error/errorSlice";
-import flagOpsReducer from "../features/flagOps/flagOpsSlice";
-import parameterReducer from "../features/parameter/parameterSlice";
-import progressReducer from "../features/progress/progressSlice";
-import spectrumDataReducer from "../features/spectrumData/spectrumDataSlice";
+import backgroundDataReducer from "../features/backgroundDataSlice";
+import errorReducer from "../features/errorSlice";
+import parameterReducer from "../features/parameterSlice";
+import progressReducer from "../features/progressSlice";
+import spectrumDataReducer from "../features/spectrumDataSlice";
 
 export const store = configureStore({
   reducer: {
     backgroundData: backgroundDataReducer,
     error: errorReducer,
-    flagOps: flagOpsReducer,
     parameter: parameterReducer,
     progress: progressReducer,
     spectrumData: spectrumDataReducer,

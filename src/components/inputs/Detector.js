@@ -8,7 +8,7 @@ import { CustomSwitch } from "./custom/CustomSwitch";
 
 // redux
 import { useDispatch } from "react-redux";
-import { updateDetector } from "../../features/parameter/parameterSlice";
+import { updateDetector } from "../../features/parameterSlice";
 
 // this input component sets the detector to 'MCT' or 'InSb'
 export default function Detector() {

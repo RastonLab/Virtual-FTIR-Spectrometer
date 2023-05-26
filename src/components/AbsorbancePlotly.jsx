@@ -13,8 +13,9 @@ import "../style/components/Plotly.css";
 export const AbsorbancePlotly = forwardRef((props, ref) => {
   const { backgroundData } = useSelector((store) => store.backgroundData);
   const { spectrumData } = useSelector((store) => store.spectrumData);
-  const { waveMax, waveMin } = useSelector((store) => store.parameter);
-
+  const { waveMaxSaved, waveMinSaved } = useSelector(
+    (store) => store.parameter
+  );
   //   const newX = spectrumData.x / backgroundData.x;
   const newY = [spectrumData.x.length];
 
@@ -42,7 +43,7 @@ export const AbsorbancePlotly = forwardRef((props, ref) => {
               title: "Absorbance Spectrum",
               font: { family: "Roboto", color: "#000" },
               xaxis: {
-                range: [waveMin, waveMax],
+                range: [waveMinSaved, waveMaxSaved],
                 title: { text: "Wavenumber (cm⁻¹)" },
                 rangeslider: {
                   autorange: true,

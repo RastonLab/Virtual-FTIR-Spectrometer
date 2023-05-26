@@ -5,7 +5,7 @@ import InputAdornment from "@mui/material/InputAdornment";
 
 // redux
 import { useDispatch, useSelector } from "react-redux";
-import { updatePressure } from "../../features/parameter/parameterSlice";
+import { updatePressure } from "../../features/parameterSlice";
 
 // this input component sets the pressure from 0 to 10 Bar
 export default function Pressure() {

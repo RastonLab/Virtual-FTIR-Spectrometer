@@ -25,7 +25,6 @@ import { useSelector } from "react-redux";
 import "../style/routes/ExperimentalSetup.css";
 
 export default function ExperimentalSetup() {
-  // parameters set by user
   const {
     beamsplitter,
     detector,
@@ -96,26 +95,6 @@ export default function ExperimentalSetup() {
 
           <div className="fetch-zone">
             <Fetch
-              type="spectrum"
-              params={{
-                beamsplitter,
-                detector,
-                medium,
-                molecule,
-                pressure,
-                resolution,
-                scan,
-                source,
-                waveMax,
-                waveMin,
-                window,
-                zeroFill,
-              }}
-              fetchURL={"http://localhost:5000/spectrum"}
-              // fetchURL={"https://api.ftir.rastonlab.org/spectrum"}
-              buttonText="Generate Processed Spectrum"
-            />
-            <Fetch
               type="background"
               params={{
                 beamsplitter,
@@ -131,9 +110,29 @@ export default function ExperimentalSetup() {
                 window,
                 zeroFill,
               }}
-              fetchURL={"http://localhost:5000/background"}
-              // fetchURL={"https://api.ftir.rastonlab.org/background"}
-              buttonText={"Generate Background Sample"}
+              // fetchURL={"http://localhost:5000/background"}
+              fetchURL={"https://api.ftir.rastonlab.org/background"}
+              buttonText={"Collect Background Sample"}
+            />
+            <Fetch
+              type="spectrum"
+              params={{
+                beamsplitter,
+                detector,
+                medium,
+                molecule,
+                pressure,
+                resolution,
+                scan,
+                source,
+                waveMax,
+                waveMin,
+                window,
+                zeroFill,
+              }}
+              // fetchURL={"http://localhost:5000/spectrum"}
+              fetchURL={"https://api.ftir.rastonlab.org/spectrum"}
+              buttonText="Collect Processed Spectrum"
             />
           </div>
         </div>
@@ -145,11 +144,9 @@ export default function ExperimentalSetup() {
             <p style={{ fontSize: 30 }}>{errorText}</p>
           </div>
         )}
-        {!progress && !error && <ProcessedPlotly />}
         {!progress && !error && <BackgroundPlotly />}
+        {!progress && !error && <ProcessedPlotly />}
       </div>
     </div>
   );
 }
-
-// export default forwardRef(ExperimentalSetup);
