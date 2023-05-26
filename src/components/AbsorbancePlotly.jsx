@@ -86,14 +86,14 @@ export const AbsorbancePlotly = forwardRef((props, ref) => {
         >
           <h1>Absorbance Peaks</h1>
           {/* NOTE: cannot open absorbance tab while this code is there and peaks is null */}
-          { 
+          {/* { 
             Object.keys(peaks.peaks).map((key) => {
               // NOTE: i can only get one space here
               return (
                 <p>{`Peak: ${key} Intensity: ${peaks.peaks[key]}`}</p> 
               );
             })
-          }
+          } */}
         </Dialog>
 
       </>
