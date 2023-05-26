@@ -1,16 +1,20 @@
 import React from "react";
-import { useSelector } from "react-redux";
 
 // components
 import Plot from "react-plotly.js";
+
+// redux
+import { useSelector } from "react-redux";
 
 // style
 import "../style/components/Plotly.css";
 
 // this component uses the plotly library to graph background sample data
 export default function BackgroundPlotly() {
-  const backgroundData = useSelector((state) => state.backgroundData);
-  const params = useSelector((state) => state.params);
+  const { backgroundData } = useSelector((store) => store.backgroundData);
+  const { waveMaxSaved, waveMinSaved } = useSelector(
+    (store) => store.parameter
+  );
 
   if (backgroundData) {
     // https://github.com/suzil/radis-app/blob/main/frontend/src/components/CalcSpectrumPlot.tsx
@@ -31,7 +35,7 @@ export default function BackgroundPlotly() {
               title: "Background Spectrum",
               font: { family: "Roboto", color: "#000" },
               xaxis: {
-                range: [params.minWave, params.maxWave],
+                range: [waveMinSaved, waveMaxSaved],
                 title: { text: "Wavenumber (cm⁻¹)" },
                 rangeslider: {
                   autorange: true,

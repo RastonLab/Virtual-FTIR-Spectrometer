@@ -1,21 +1,26 @@
 import { useState } from "react";
+
+// redux
 import { useDispatch } from "react-redux";
-import {
-  setError,
-  storeSpectrumData,
-  storeBackgroundData,
-} from "../redux/actions";
+
+// redux slices
+import { deactivateError } from "../features/errorSlice";
+import { updateBackgroundData } from "../features/backgroundDataSlice";
+import { updateSpectrumData } from "../features/spectrumDataSlice";
 
 // style
 import "../style/components/Open.css";
 
 // this component is used to open a CSV file of X and Y coordinates
-//   https://dev.to/pankod/how-to-import-csv-file-with-react-4pj2
+// https://dev.to/pankod/how-to-import-csv-file-with-react-4pj2
 export const Open = () => {
+  const dispatch = useDispatch();
+
+  // setup FileReader
+  const filereader = new FileReader();
+
   const [data, setData] = useState();
   const [filename, setFilename] = useState();
-  const dispatch = useDispatch();
-  const filereader = new FileReader();
   const [sucess, toggleSucess] = useState(false);
 
   const changeHandler = (event) => {
@@ -79,12 +84,12 @@ export const Open = () => {
     }
 
     if (filename.includes("background")) {
-      dispatch(storeBackgroundData({ x: xData, y: yData }));
+      dispatch(updateBackgroundData({ x: xData, y: yData }));
     } else {
-      dispatch(storeSpectrumData({ x: xData, y: yData }));
+      dispatch(updateSpectrumData({ x: xData, y: yData }));
     }
 
-    dispatch(setError({ active: false }));
+    dispatch(deactivateError);
     toggleSucess(true);
   };
 

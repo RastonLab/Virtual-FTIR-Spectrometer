@@ -1,10 +1,7 @@
 import React from "react";
 
-// functions
-import checkParams from "../functions/checkParams";
-
 // redux
-import { useDispatch, useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
 
 // redux slices
 import {
@@ -16,44 +13,39 @@ import {
   activateProgress,
   deactivateProgress,
 } from "../features/progressSlice";
-import { updateBackgroundData } from "../features/backgroundDataSlice";
-import { updateSpectrumData } from "../features/spectrumDataSlice";
-import {
-  updateWaveMaxSaved,
-  updateWaveMinSaved,
-} from "../features/parameterSlice";
+
+import { updatePeaksData } from "../features/peaksDataSlice";
 
 // this component reaches out to the flask server with user parameters and receives X and Y coordinates to graph
-export default function Fetch({ type, params, fetchURL, buttonText }) {
+export default function FetchPeaks({
+  type,
+  params,
+  fetchURL,
+  buttonText,
+  openPopup,
+}) {
   const dispatch = useDispatch();
-  const { progress } = useSelector((store) => store.progress);
+  const progress = useSelector((state) => state.progress);
 
   const fetchLinode = async () => {
+    // store the current user parameters
+    // dispatch(storeParams(params));
+
     // remove any errors (if existing) and start a progress spinner
     dispatch(deactivateError());
     dispatch(activateProgress());
 
     // validate the user parameters
-    let errorMessage = checkParams(params);
+    // let errorMessage = checkParams(params); // you may need to add a check function if params are ever added
 
     // error occurred in checkParams, display error message to user
-    if (errorMessage) {
+    // NOTE: Hardcoded bc there are no params
+    if (false) {
       dispatch(deactivateProgress());
-      dispatch(activateError());
-      dispatch(updateErrorText(String(errorMessage)));
+      //   dispatch(setError({ active: true, text: String(errorMessage) }));
     }
     // checkParam succeeded, send request to api
     else {
-      // calculate medium if set to "Air"
-      let mole = 1;
-      let pressure = params.pressure;
-
-      if (params.medium === "Air") {
-        const air_pressure = 1.01325;
-        mole = params.pressure / air_pressure;
-        pressure = air_pressure;
-      }
-
       try {
         const response = await fetch(fetchURL, {
           method: "POST",
@@ -61,19 +53,8 @@ export default function Fetch({ type, params, fetchURL, buttonText }) {
             "content-type": "application/json",
           },
           body: JSON.stringify({
-            beamsplitter: params.beamsplitter,
-            detector: params.detector,
-            medium: params.medium,
-            mole: mole,
-            molecule: params.molecule,
-            pressure: pressure,
-            resolution: params.resolution,
-            scan: params.scan,
-            source: params.source,
-            waveMax: params.waveMax,
-            waveMin: params.waveMin,
-            window: params.window,
-            zeroFill: params.zeroFill,
+            x: params.x,
+            y: params.y,
           }),
         });
 
@@ -82,26 +63,26 @@ export default function Fetch({ type, params, fetchURL, buttonText }) {
         if (response.ok) {
           // determine where to store received data
           if (data.success) {
-            switch (type) {
-              case "spectrum":
-                dispatch(updateSpectrumData(data));
-                dispatch(updateWaveMinSaved(params.waveMin));
-                dispatch(updateWaveMaxSaved(params.waveMax));
-                break;
-              case "background":
-                dispatch(updateBackgroundData(data));
-                dispatch(updateWaveMinSaved(params.waveMin));
-                dispatch(updateWaveMaxSaved(params.waveMax));
-                break;
-              default:
-                console.log("not processed or background");
-                break;
-            }
+            // NOTE: May need something similar if we need to store the peaks
+            // switch (type) {
+            //   case "spectrum":
+            //     dispatch(storeSpectrumData(data));
+            //     dispatch(setFlag(FlagOps.Processed));
+            //     break;
+            //   case "background":
+            //     dispatch(storeBackgroundData(data));
+            //     dispatch(setFlag(FlagOps.Background));
+            //     break;
+            //   default:
+            //     console.log("not processed or background");
+            //     break;
+            // }
             dispatch(deactivateProgress());
+            dispatch(updatePeaksData(data));
           }
           // display error message
           else {
-            console.log("not success");
+            console.log("not sucess");
             dispatch(deactivateProgress());
             dispatch(activateError());
             dispatch(updateErrorText(String(data.text)));
@@ -131,10 +112,11 @@ export default function Fetch({ type, params, fetchURL, buttonText }) {
         dispatch(updateErrorText(errorMessage));
       }
     }
+    openPopup(true);
   };
 
   return (
-    <button id="button" disabled={progress} onClick={fetchLinode}>
+    <button id="button" disabled={!progress} onClick={fetchLinode}>
       {buttonText}
     </button>
   );

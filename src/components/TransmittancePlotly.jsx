@@ -1,18 +1,21 @@
 import React, { forwardRef } from "react";
-import { useSelector } from "react-redux";
 
 // components
 import Plot from "react-plotly.js";
+
+// redux
+import { useSelector } from "react-redux";
 
 // style
 import "../style/components/Plotly.css";
 
 // this component uses the plotly library to graph processed spectrum data
 export const TransmittancePlotly = forwardRef((props, ref) => {
-  const spectrumData = useSelector((state) => state.spectrumData);
-  const backgroundData = useSelector((state) => state.backgroundData);
-  const params = useSelector((state) => state.params);
-
+  const { backgroundData } = useSelector((store) => store.backgroundData);
+  const { spectrumData } = useSelector((store) => store.spectrumData);
+  const { waveMaxSaved, waveMinSaved } = useSelector(
+    (store) => store.parameter
+  );
   //   const newX = spectrumData.x / backgroundData.x;
   const newY = [spectrumData.x.length];
 
@@ -40,7 +43,7 @@ export const TransmittancePlotly = forwardRef((props, ref) => {
               title: "Transmittance Spectrum",
               font: { family: "Roboto", color: "#000" },
               xaxis: {
-                range: [params.minWave, params.maxWave],
+                range: [waveMinSaved, waveMaxSaved],
                 title: { text: "Wavenumber (cm⁻¹)" },
                 rangeslider: {
                   autorange: true,

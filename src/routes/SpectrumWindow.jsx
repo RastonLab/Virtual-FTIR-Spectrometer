@@ -1,18 +1,23 @@
 import React from "react";
-import { useSelector } from "react-redux";
-import { Outlet } from "react-router-dom";
 
-import { ProcessedPlotly } from "../components/ProcessedPlotly";
-import BackgroundPlotly from "../components/BackgroundPlotly";
-import { TransmittancePlotly } from "../components/TransmittancePlotly";
+// components
 import { AbsorbancePlotly } from "../components/AbsorbancePlotly";
+import { Outlet } from "react-router-dom";
+import { ProcessedPlotly } from "../components/ProcessedPlotly";
+import { TransmittancePlotly } from "../components/TransmittancePlotly";
+import BackgroundPlotly from "../components/BackgroundPlotly";
 
-import "../style/routes/SpectrumWindow.css";
-
-import Box from "@mui/material/Box";
-import Tabs from "@mui/material/Tabs";
-import Tab from "@mui/material/Tab";
+// mui components
 import { styled } from "@mui/material/styles";
+import Box from "@mui/material/Box";
+import Tab from "@mui/material/Tab";
+import Tabs from "@mui/material/Tabs";
+
+// redux
+import { useSelector } from "react-redux";
+
+//style
+import "../style/routes/SpectrumWindow.css";
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -71,8 +76,8 @@ const StyledTab = styled((props) => <Tab disableRipple {...props} />)(
 );
 
 export default function SpectrumWindow() {
-  const storedSpectrumData = useSelector((state) => state.spectrumData);
-  const storedBackgroundData = useSelector((state) => state.backgroundData);
+  const { backgroundData } = useSelector((store) => store.backgroundData);
+  const { spectrumData } = useSelector((store) => store.spectrumData);
   const [tabValue, setValue] = React.useState(0);
 
   const handleChange = (event, newValue) => {
@@ -81,7 +86,7 @@ export default function SpectrumWindow() {
 
   return (
     <Box>
-      <Box sx={{ borederBottom: 1, borderColor: "divider"}}>
+      <Box sx={{ borederBottom: 1, borderColor: "divider" }}>
         <StyledTabs
           value={tabValue}
           onChange={handleChange}
@@ -102,7 +107,7 @@ export default function SpectrumWindow() {
       {/* Sample Spectrum */}
       <TabPanel value={tabValue} index={0}>
         <div id="spectrum">
-          {storedSpectrumData ? (
+          {spectrumData ? (
             <ProcessedPlotly />
           ) : (
             <p>Please generate a Sample Spectrum and return here</p>
@@ -113,7 +118,7 @@ export default function SpectrumWindow() {
       {/* Background Spectrum */}
       <TabPanel value={tabValue} index={1}>
         <div id="spectrum">
-          {storedBackgroundData ? (
+          {backgroundData ? (
             <BackgroundPlotly />
           ) : (
             <p>Please generate a Background Spectrum and return here</p>
@@ -124,37 +129,43 @@ export default function SpectrumWindow() {
       {/* Transmittance Spectrum */}
       <TabPanel value={tabValue} index={2}>
         <div id="spectrum">
-            {storedBackgroundData && storedSpectrumData ? (
-              <TransmittancePlotly />
-            ) : (
-              <p>Please generate both a Sample Spectrum and a Background Spectrum and return here</p>
-            )}
+          {backgroundData && spectrumData ? (
+            <TransmittancePlotly />
+          ) : (
+            <p>
+              Please generate both a Sample Spectrum and a Background Spectrum
+              and return here
+            </p>
+          )}
         </div>
       </TabPanel>
 
       {/* Absorbance Spectrum */}
       <TabPanel value={tabValue} index={3}>
         <div id="spectrum">
-          {storedBackgroundData && storedSpectrumData ? (
-              <AbsorbancePlotly />
-            ) : (
-              <p>Please generate both a Sample Spectrum and a Background Spectrum and return here</p>
-            )}
+          {backgroundData && spectrumData ? (
+            <AbsorbancePlotly />
+          ) : (
+            <p>
+              Please generate both a Sample Spectrum and a Background Spectrum
+              and return here
+            </p>
+          )}
         </div>
       </TabPanel>
 
       {/* All Spectra */}
       <TabPanel value={tabValue} index={4}>
         <div id="spectrum">
-          {storedSpectrumData ? (
+          {spectrumData ? (
             <ProcessedPlotly />
           ) : (
-            <p>Please generate a Processed Spectrum and return here</p>
+            <p>Please generate a Sample Spectrum and return here</p>
           )}
         </div>
 
         <div id="spectrum">
-          {storedBackgroundData ? (
+          {backgroundData ? (
             <BackgroundPlotly />
           ) : (
             <p>Please generate a Background Spectrum and return here</p>
@@ -162,18 +173,24 @@ export default function SpectrumWindow() {
         </div>
 
         <div id="spectrum">
-            {storedBackgroundData && storedSpectrumData ? (
-              <TransmittancePlotly />
-            ) : (
-              <p>Please generate both a Sample Spectrum and a Background Spectrum and return here</p>
-            )}
+          {backgroundData && spectrumData ? (
+            <TransmittancePlotly />
+          ) : (
+            <p>
+              Please generate both a Sample Spectrum and a Background Spectrum
+              and return here
+            </p>
+          )}
         </div>
 
         <div id="spectrum">
-        {storedBackgroundData && storedSpectrumData ? (
+          {backgroundData && spectrumData ? (
             <AbsorbancePlotly />
           ) : (
-            <p>Please generate both a Sample Spectrum and a Background Spectrum and return here</p>
+            <p>
+              Please generate both a Sample Spectrum and a Background Spectrum
+              and return here
+            </p>
           )}
         </div>
       </TabPanel>
