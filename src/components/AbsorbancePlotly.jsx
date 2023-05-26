@@ -105,13 +105,14 @@ export const AbsorbancePlotly = forwardRef((props, ref) => {
             y: newY,
             threshold: threshold
           }}
-          // fetchURL={"http://localhost:5000/find_peaks"}
-          fetchURL={"https://api.ftir.rastonlab.org/find_peaks"}
+          fetchURL={"http://localhost:5000/find_peaks"}
+          // fetchURL={"https://api.ftir.rastonlab.org/find_peaks"}
           buttonText={"Find Peaks"}
           openPopup={setOpen}
         />
 
-        {peaksData && (
+        {/* Displays data from the server if there were no errors */}
+        {peaksData && !peaksData.error && (
           <Dialog
             className="popup"
             onClose={() => {
@@ -124,6 +125,23 @@ export const AbsorbancePlotly = forwardRef((props, ref) => {
               // NOTE: i can only get one space here
               return <p>{`Peak: ${key} Intensity: ${peaksData.peaks[key]}`}</p>;
             })}
+          </Dialog>
+        )}
+
+        {/* Displays any error message sent back from the sever */}
+        {peaksData && peaksData.error && (
+
+          <Dialog
+          className="popup"
+          onClose={() => {
+            setOpen(false);
+          }}
+          open={open}
+          >
+          <h1>Absorbance Peaks</h1>
+
+          <p>There was an error in finding the peaks of this data. Please adust your experiment settings and try again.</p>
+          
           </Dialog>
         )}
       </>
