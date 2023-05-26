@@ -110,8 +110,8 @@ export default function ExperimentalSetup() {
                 window,
                 zeroFill,
               }}
-              fetchURL={"http://localhost:5000/background"}
-              // fetchURL={"https://api.ftir.rastonlab.org/background"}
+              // fetchURL={"http://localhost:5000/background"}
+              fetchURL={"https://api.ftir.rastonlab.org/background"}
               buttonText={"Collect Background Sample"}
             />
             <Fetch
@@ -130,8 +130,8 @@ export default function ExperimentalSetup() {
                 window,
                 zeroFill,
               }}
-              fetchURL={"http://localhost:5000/spectrum"}
-              // fetchURL={"https://api.ftir.rastonlab.org/spectrum"}
+              // fetchURL={"http://localhost:5000/spectrum"}
+              fetchURL={"https://api.ftir.rastonlab.org/spectrum"}
               buttonText="Collect Processed Spectrum"
             />
           </div>
