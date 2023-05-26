@@ -160,7 +160,7 @@ export default function SpectrumWindow() {
           {spectrumData ? (
             <ProcessedPlotly />
           ) : (
-            <p>Please generate a Processed Spectrum and return here</p>
+            <p>Please generate a Sample Spectrum and return here</p>
           )}
         </div>
 
