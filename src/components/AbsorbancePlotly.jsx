@@ -14,13 +14,11 @@ import FetchPeaks from "./FetchPeaks";
 // this component uses the plotly library to graph processed spectrum data
 export const AbsorbancePlotly = forwardRef((props, ref) => {
   const { backgroundData } = useSelector((store) => store.backgroundData);
+  const { peaksData } = useSelector((store) => store.peaksData);
   const { spectrumData } = useSelector((store) => store.spectrumData);
   const { waveMaxSaved, waveMinSaved } = useSelector(
     (store) => store.parameter
   );
-
-  const peaks = useSelector((state) => state.peaks);
-  const params = useSelector((state) => state.params);
 
   const [open, setOpen] = useState(false);
 
@@ -78,30 +76,28 @@ export const AbsorbancePlotly = forwardRef((props, ref) => {
             x: spectrumData.x,
             y: newY,
           }}
-          // fetchURL={"http://localhost:5000/find_peaks"}
-          fetchURL={"https://api.ftir.rastonlab.org/find_peaks"}
+          fetchURL={"http://localhost:5000/find_peaks"}
+          // fetchURL={"https://api.ftir.rastonlab.org/find_peaks"}
           buttonText={"Find Peaks"}
           openPopup={setOpen}
         />
 
-        <Dialog
-          className="popup"
-          onClose={() => {
-            setOpen(false);
-          }}
-          open={open}
-        >
-          <h1>Absorbance Peaks</h1>
-          {/* NOTE: cannot open absorbance tab while this code is there and peaks is null */}
-          {/* { 
-            Object.keys(peaks.peaks).map((key) => {
+        {peaksData && (
+          <Dialog
+            className="popup"
+            onClose={() => {
+              setOpen(false);
+            }}
+            open={open}
+          >
+            <h1>Absorbance Peaks</h1>
+            {/* NOTE: cannot open absorbance tab while this code is there and peaks is null */}
+            {Object.keys(peaksData.peaks).map((key) => {
               // NOTE: i can only get one space here
-              return (
-                <p>{`Peak: ${key} Intensity: ${peaks.peaks[key]}`}</p> 
-              );
-            })
-          } */}
-        </Dialog>
+              return <p>{`Peak: ${key} Intensity: ${peaksData.peaks[key]}`}</p>;
+            })}
+          </Dialog>
+        )}
       </>
     );
   } else {

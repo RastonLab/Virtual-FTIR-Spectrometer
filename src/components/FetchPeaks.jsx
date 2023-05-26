@@ -1,18 +1,29 @@
 import React from "react";
+
+// redux
 import { useSelector, useDispatch } from "react-redux";
+
+// redux slices
 import {
-  setProgress,
-  setError,
-  setPeaks,
-//   storeSpectrumData,
-//   storeBackgroundData,
-//   storeParams,
-//   setFlag,
-} from "../redux/actions";
-// import { FlagOps } from "../redux/store";
+  activateError,
+  deactivateError,
+  updateErrorText,
+} from "../features/errorSlice";
+import {
+  activateProgress,
+  deactivateProgress,
+} from "../features/progressSlice";
+
+import { updatePeaksData } from "../features/peaksDataSlice";
 
 // this component reaches out to the flask server with user parameters and receives X and Y coordinates to graph
-export default function FetchPeaks({ type, params, fetchURL, buttonText, openPopup}) {
+export default function FetchPeaks({
+  type,
+  params,
+  fetchURL,
+  buttonText,
+  openPopup,
+}) {
   const dispatch = useDispatch();
   const progress = useSelector((state) => state.progress);
 
@@ -21,8 +32,8 @@ export default function FetchPeaks({ type, params, fetchURL, buttonText, openPop
     // dispatch(storeParams(params));
 
     // remove any errors (if existing) and start a progress spinner
-    dispatch(setError({ active: false }));
-    dispatch(setProgress(true));
+    dispatch(deactivateError());
+    dispatch(activateProgress());
 
     // validate the user parameters
     // let errorMessage = checkParams(params); // you may need to add a check function if params are ever added
@@ -30,12 +41,11 @@ export default function FetchPeaks({ type, params, fetchURL, buttonText, openPop
     // error occurred in checkParams, display error message to user
     // NOTE: Hardcoded bc there are no params
     if (false) {
-      dispatch(setProgress(false));
-    //   dispatch(setError({ active: true, text: String(errorMessage) }));
+      dispatch(deactivateProgress());
+      //   dispatch(setError({ active: true, text: String(errorMessage) }));
     }
     // checkParam succeeded, send request to api
     else {
-
       try {
         const response = await fetch(fetchURL, {
           method: "POST",
@@ -43,8 +53,8 @@ export default function FetchPeaks({ type, params, fetchURL, buttonText, openPop
             "content-type": "application/json",
           },
           body: JSON.stringify({
-            "x": params.x,
-            "y": params.y
+            x: params.x,
+            y: params.y,
           }),
         });
 
@@ -67,20 +77,22 @@ export default function FetchPeaks({ type, params, fetchURL, buttonText, openPop
             //     console.log("not processed or background");
             //     break;
             // }
-            dispatch(setProgress(false));
-            dispatch(setPeaks(data))
+            dispatch(deactivateProgress());
+            dispatch(updatePeaksData(data));
           }
           // display error message
           else {
-            console.log("not sucess")
-            dispatch(setProgress(false));
-            dispatch(setError({ active: true, text: String(data.text) }));
+            console.log("not sucess");
+            dispatch(deactivateProgress());
+            dispatch(activateError());
+            dispatch(updateErrorText(String(data.text)));
           }
         }
         // connection was unsuccessful
         else {
-          dispatch(setProgress(false));
-          dispatch(setError({ active: true, text: String(data.text) }));
+          dispatch(deactivateProgress());
+          dispatch(activateError());
+          dispatch(updateErrorText(String(data.text)));
         }
       } catch (error) {
         // error occurred when reaching out to server
@@ -95,15 +107,16 @@ export default function FetchPeaks({ type, params, fetchURL, buttonText, openPop
             console.log(error);
             break;
         }
-        dispatch(setProgress(false));
-        dispatch(setError({ active: true, text: errorMessage }));
+        dispatch(deactivateProgress());
+        dispatch(activateError());
+        dispatch(updateErrorText(errorMessage));
       }
     }
     openPopup(true);
   };
 
   return (
-    <button id="button" disabled={progress} onClick={fetchLinode}>
+    <button id="button" disabled={!progress} onClick={fetchLinode}>
       {buttonText}
     </button>
   );
