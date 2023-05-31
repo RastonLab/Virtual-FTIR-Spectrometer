@@ -39,7 +39,7 @@ export default function FetchPeaks({
     // let errorMessage = checkParams(params); // you may need to add a check function if params are ever added
 
     // error occurred in checkParams, display error message to user
-    // NOTE: Hardcoded bc there are no params
+    // NOTE: Hardcoded bc there are no params that need to be checked
     if (false) {
       dispatch(deactivateProgress());
       //   dispatch(setError({ active: true, text: String(errorMessage) }));
@@ -64,29 +64,16 @@ export default function FetchPeaks({
         if (response.ok) {
           // determine where to store received data
           if (data.success) {
-            // NOTE: May need something similar if we need to store the peaks
-            // switch (type) {
-            //   case "spectrum":
-            //     dispatch(storeSpectrumData(data));
-            //     dispatch(setFlag(FlagOps.Processed));
-            //     break;
-            //   case "background":
-            //     dispatch(storeBackgroundData(data));
-            //     dispatch(setFlag(FlagOps.Background));
-            //     break;
-            //   default:
-            //     console.log("not processed or background");
-            //     break;
-            // }
             dispatch(deactivateProgress());
             dispatch(updatePeaksData(data));
           }
           // display error message
           else {
             console.log("not sucess");
+            dispatch(updatePeaksData(data))
             dispatch(deactivateProgress());
             dispatch(activateError());
-            dispatch(updateErrorText(String(data.text)));
+            dispatch(updateErrorText(String(data.error)));
           }
         }
         // connection was unsuccessful
