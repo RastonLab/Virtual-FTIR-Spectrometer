@@ -9,28 +9,40 @@ import { ProcessedPlotly } from "../components/ProcessedPlotly";
 // dictionaries
 import { toolTips } from "../dictionaries/SVGLibrary";
 
+// functions
+// import updateSVG from "../functions/updateSVG";
+
 // redux
 import { useSelector } from "react-redux";
 
 // style
 import "../style/routes/InstrumentWindow.css";
-import "../style/components/Electronics.css";
 
 export default function InstrumentWindow() {
+  // const { detector, source } = useSelector((store) => store.parameter);
   const { spectrumData } = useSelector((store) => store.spectrumData);
   const [toggled, setToggled] = useState(false);
   const [element, setElement] = useState();
 
+  const badID = [
+    "instrument-window",
+    "instrument",
+    "ftir",
+    "globar-laser",
+    "tungsten-laser",
+    "mct-laser",
+    "insb-laser",
+  ];
+
   const handleClick = (event) => {
-    if (
-      event.target.parentElement.id !== "instrument-window" &&
-      event.target.parentElement.id !== "instrument" &&
-      event.target.parentElement.id !== "ftir"
-    ) {
+    if (!badID.includes(event.target.parentElement.id)) {
       setElement(event.target.parentElement.id);
       setToggled(!toggled);
     }
   };
+
+  // console.log(document.querySelectorAll("*[id]"));
+  // updateSVG(detector, source);
 
   return (
     <div id="instrument-window">
@@ -48,6 +60,8 @@ export default function InstrumentWindow() {
       </div>
 
       <Main id="instrument" onClick={handleClick} />
+      {(document.getElementById("tungsten-laser").style.display = "none")}
+      {(document.getElementById("insb-laser").style.display = "none")}
 
       {element && (
         <Dialog className="popup" onClose={handleClick} open={toggled}>
