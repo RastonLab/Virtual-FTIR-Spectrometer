@@ -1,4 +1,4 @@
-import { Save } from "../redux/save";
+import  Save  from "../components/Save";
 import { Open } from "../components/Open";
 import Print from "../components/Print";
 
@@ -14,7 +14,9 @@ export const menuItems = [
       },
       {
         label: "Save",
-        action: Save,
+        button: true,
+        title: "",
+        text: <Save />
       },
       {
         label: "Print",

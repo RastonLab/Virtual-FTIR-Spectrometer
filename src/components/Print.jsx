@@ -14,6 +14,7 @@ import { ProcessedPlotly } from "./ProcessedPlotly";
 // style
 import "../style/components/Print.css";
 
+
 // this component is used to print a generated spectrum and user inputs
 export default function Print() {
   const componentRef = useRef();
