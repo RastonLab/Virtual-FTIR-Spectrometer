@@ -68,21 +68,40 @@ export default function Save() {
             {printAbsorb && <CSVDownload headers={header} data={data} target="."/>}
 
             <h1>Save Data</h1>
-            <h3>What data would you like to save?</h3>
-            <div className="col">
-                <button 
-                    className="button"
-                    onClick={peaksCSV}
-                >
-                    Save Peaks Data
-                </button>
 
-                <button 
-                    className="button"
-                    onClick={absorbCSV}
-                >
-                    Save Absorbance Spectrum Data
-                </button>
+            {
+                spectrumData && backgroundData &&
+                <h3>What data would you like to save?</h3>
+            }
+
+            {
+                (!spectrumData || !backgroundData) &&
+                <h3>There is currently no data to save</h3>
+            }
+
+            <div className="col">
+
+                {
+                    peaksData &&
+                    <button 
+                        className="button"
+                        onClick={peaksCSV}
+                    >
+                        Save Peaks Data
+                    </button>
+                }
+
+
+                {
+                    spectrumData && backgroundData &&
+                    <button 
+                        className="button"
+                        onClick={absorbCSV}
+                        >
+                        Save Absorbance Spectrum Data
+                    </button>
+                }
+
             </div>
         </div>
         
