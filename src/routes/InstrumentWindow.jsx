@@ -2,31 +2,41 @@ import React, { useState } from "react";
 
 // components
 import { Dialog } from "@mui/material";
-import { ReactComponent as Main } from "../components/svgs/ftir-main.svg";
+import Main from "../components/svgs/InstrumentSVG";
+// import { ReactComponent as Main } from "../components/svgs/ftir-main.svg";
 import Electronics from "../components/Electronics";
 import { ProcessedPlotly } from "../components/ProcessedPlotly";
 
 // dictionaries
 import { toolTips } from "../dictionaries/SVGLibrary";
 
+// functions
+// import updateSVG from "../functions/updateSVG";
+
 // redux
 import { useSelector } from "react-redux";
 
 // style
 import "../style/routes/InstrumentWindow.css";
-import "../style/components/Electronics.css";
 
 export default function InstrumentWindow() {
+  const { detector, source } = useSelector((store) => store.parameter);
   const { spectrumData } = useSelector((store) => store.spectrumData);
   const [toggled, setToggled] = useState(false);
   const [element, setElement] = useState();
 
+  const badID = [
+    "instrument-window",
+    "instrument",
+    "ftir",
+    "globar-laser",
+    "tungsten-laser",
+    "mct-laser",
+    "insb-laser",
+  ];
+
   const handleClick = (event) => {
-    if (
-      event.target.parentElement.id !== "instrument-window" &&
-      event.target.parentElement.id !== "instrument" &&
-      event.target.parentElement.id !== "ftir"
-    ) {
+    if (!badID.includes(event.target.parentElement.id)) {
       setElement(event.target.parentElement.id);
       setToggled(!toggled);
     }
@@ -47,7 +57,19 @@ export default function InstrumentWindow() {
         </div>
       </div>
 
-      <Main id="instrument" onClick={handleClick} />
+      <Main
+        id="instrument"
+        onClick={handleClick}
+        // condition ? expression1 : expression2
+        detector={{
+          insb: detector === "InSb" ? "inline" : "none",
+          mct: detector === "MCT" ? "inline" : "none",
+        }}
+        source={{
+          globar: source === 1700 ? "inline" : "none",
+          tungsten: source === 3100 ? "inline" : "none",
+        }}
+      />
 
       {element && (
         <Dialog className="popup" onClose={handleClick} open={toggled}>
