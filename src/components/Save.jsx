@@ -8,6 +8,21 @@ import { useState } from "react";
 
 export default function Save() {
 
+    const {
+        beamsplitter,
+        detector,
+        medium,
+        molecule,
+        pressure,
+        resolution,
+        scan,
+        source,
+        waveMax,
+        waveMin,
+        window,
+        zeroFill,
+      } = useSelector((store) => store.parameter);
+
     const { peaksData } = useSelector((store) => store.peaksData);
     const { backgroundData } = useSelector((store) => store.backgroundData);
     const { spectrumData } = useSelector((store) => store.spectrumData);
@@ -15,6 +30,7 @@ export default function Save() {
     const [data, setData] = useState();
     const [printPeaks, setPrintPeaks] = useState(false);
     const [printAbsorb, setPrintAbsorb] = useState(false);
+    const header = [`Spectrum details | Min Wavenumber: ${waveMin} Max Wavenumber: ${waveMax} Molecule: ${molecule} Pressure: ${pressure} Resolution: ${resolution} Number of Scans: ${scan} Zero Fill: ${zeroFill} Source: ${source} Beamsplitter: ${beamsplitter} Cell Window: ${window} Detector: ${detector} Medium: ${medium}`];
 
     const peaksCSV = () => {
 
@@ -48,8 +64,8 @@ export default function Save() {
     return (
         <div>
             {/* NOTE: cannot control filenames at the moment */}
-            {printPeaks && <CSVDownload data={data} target="."/>}
-            {printAbsorb && <CSVDownload data={data} target="."/>}
+            {printPeaks && <CSVDownload headers={header} data={data} target="."/>}
+            {printAbsorb && <CSVDownload headers={header} data={data} target="."/>}
 
             <button 
                 className="button"
