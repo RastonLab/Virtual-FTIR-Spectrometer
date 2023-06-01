@@ -2,7 +2,8 @@ import React, { useState } from "react";
 
 // components
 import { Dialog } from "@mui/material";
-import { ReactComponent as Main } from "../components/svgs/ftir-main.svg";
+import Main from "../components/svgs/InstrumentSVG";
+// import { ReactComponent as Main } from "../components/svgs/ftir-main.svg";
 import Electronics from "../components/Electronics";
 import { ProcessedPlotly } from "../components/ProcessedPlotly";
 
@@ -19,7 +20,7 @@ import { useSelector } from "react-redux";
 import "../style/routes/InstrumentWindow.css";
 
 export default function InstrumentWindow() {
-  // const { detector, source } = useSelector((store) => store.parameter);
+  const { detector, source } = useSelector((store) => store.parameter);
   const { spectrumData } = useSelector((store) => store.spectrumData);
   const [toggled, setToggled] = useState(false);
   const [element, setElement] = useState();
@@ -41,9 +42,6 @@ export default function InstrumentWindow() {
     }
   };
 
-  // console.log(document.querySelectorAll("*[id]"));
-  // updateSVG(detector, source);
-
   return (
     <div id="instrument-window">
       <div id="instrument-accessories">
@@ -59,9 +57,19 @@ export default function InstrumentWindow() {
         </div>
       </div>
 
-      <Main id="instrument" onClick={handleClick} />
-      {(document.getElementById("tungsten-laser").style.display = "none")}
-      {(document.getElementById("insb-laser").style.display = "none")}
+      <Main
+        id="instrument"
+        onClick={handleClick}
+        // condition ? expression1 : expression2
+        detector={{
+          insb: detector === "InSb" ? "inline" : "none",
+          mct: detector === "MCT" ? "inline" : "none",
+        }}
+        source={{
+          globar: source === 1700 ? "inline" : "none",
+          tungsten: source === 3100 ? "inline" : "none",
+        }}
+      />
 
       {element && (
         <Dialog className="popup" onClose={handleClick} open={toggled}>
