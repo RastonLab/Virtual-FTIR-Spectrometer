@@ -74,23 +74,23 @@ export default function ExperimentalSetup() {
         </div>
         <div className="col">
           <div className="parameter">
-            <Source />
+            <Source parameter={source} />
           </div>
 
           <div className="parameter">
-            <Beamsplitter />
+            <Beamsplitter parameter={beamsplitter} />
           </div>
 
           <div className="parameter">
-            <Window />
+            <Window parameter={window} />
           </div>
 
           <div className="parameter">
-            <Detector />
+            <Detector parameter={detector} />
           </div>
 
           <div className="parameter">
-            <Medium />
+            <Medium parameter={medium} />
           </div>
 
           <div className="fetch-zone">

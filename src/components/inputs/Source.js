@@ -11,7 +11,7 @@ import { useDispatch } from "react-redux";
 import { updateSource } from "../../features/parameterSlice";
 
 // this input component sets the source temperature to globar (1700 K) or tungsten (3100 K)
-export default function Source() {
+export default function Source({ parameter }) {
   const dispatch = useDispatch();
 
   const handleChange = (event, newAlignment) => {
@@ -20,7 +20,6 @@ export default function Source() {
 
   const label = {
     inputProps: { "aria-label": "Source" },
-    unchecked: "Globar",
   };
 
   return (
@@ -28,7 +27,11 @@ export default function Source() {
       <FormLabel component="legend">Source</FormLabel>
       <Stack direction="row" spacing={1} alignItems="center">
         <Typography>Globar</Typography>
-        <CustomSwitch {...label} onChange={handleChange} defaultChecked />
+        <CustomSwitch
+          {...label}
+          onChange={handleChange}
+          checked={parameter === 3100 ? true : false}
+        />
         <Typography>Tungsten</Typography>
       </Stack>
     </FormControl>

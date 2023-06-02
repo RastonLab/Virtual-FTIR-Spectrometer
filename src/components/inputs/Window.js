@@ -11,7 +11,7 @@ import { useDispatch } from "react-redux";
 import { updateWindow } from "../../features/parameterSlice";
 
 // this input component sets the cell window to 'ZnSe' or 'CaF2'
-export default function Window() {
+export default function Window({ parameter }) {
   const dispatch = useDispatch();
 
   const handleChange = (event, newAlignment) => {
@@ -22,7 +22,6 @@ export default function Window() {
 
   const label = {
     inputProps: { "aria-label": "Cell Window" },
-    unchecked: "ZnSe",
   };
 
   return (
@@ -30,7 +29,11 @@ export default function Window() {
       <FormLabel component="legend">Cell Window</FormLabel>
       <Stack direction="row" spacing={1} alignItems="center">
         <Typography>ZnSe</Typography>
-        <CustomSwitch {...label} onChange={handleChange} defaultChecked />
+        <CustomSwitch
+          {...label}
+          onChange={handleChange}
+          checked={parameter === "CaF2" ? true : false}
+        />
         <Typography>CaF₂</Typography>
       </Stack>
     </FormControl>
