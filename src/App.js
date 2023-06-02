@@ -13,7 +13,7 @@ export default function App() {
       <div className="nav-area">
         <RLLogo className="logo" width={55} height={55} viewBox="0 0 85 85" />
         <Link className="logo" to="/">
-          The Raston Lab: FTIR
+          FTIR-VSI
         </Link>
 
         <nav>
