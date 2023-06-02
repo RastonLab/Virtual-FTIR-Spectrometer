@@ -11,7 +11,7 @@ import { useDispatch } from "react-redux";
 import { updateMedium } from "../../features/parameterSlice";
 
 // this input component sets the medium to 'vacuum' or 'air'
-export default function Medium() {
+export default function Medium({ parameter }) {
   const dispatch = useDispatch();
 
   const handleChange = (event, newAlignment) => {
@@ -22,7 +22,6 @@ export default function Medium() {
 
   const label = {
     inputProps: { "aria-label": "Medium" },
-    unchecked: "Air",
   };
 
   return (
@@ -30,7 +29,11 @@ export default function Medium() {
       <FormLabel component="legend">Medium</FormLabel>
       <Stack direction="row" spacing={1} alignItems="center">
         <Typography>Vacuum</Typography>
-        <CustomSwitch {...label} onChange={handleChange} />
+        <CustomSwitch
+          {...label}
+          onChange={handleChange}
+          checked={parameter === "Air" ? true : false}
+        />
         <Typography>Air</Typography>
       </Stack>
     </FormControl>

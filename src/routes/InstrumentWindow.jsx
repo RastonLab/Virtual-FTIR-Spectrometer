@@ -3,15 +3,11 @@ import React, { useState } from "react";
 // components
 import { Dialog } from "@mui/material";
 import Main from "../components/svgs/InstrumentSVG";
-// import { ReactComponent as Main } from "../components/svgs/ftir-main.svg";
 import Electronics from "../components/Electronics";
 import { ProcessedPlotly } from "../components/ProcessedPlotly";
 
 // dictionaries
 import { toolTips } from "../dictionaries/SVGLibrary";
-
-// functions
-// import updateSVG from "../functions/updateSVG";
 
 // redux
 import { useSelector } from "react-redux";
@@ -60,11 +56,12 @@ export default function InstrumentWindow() {
       <Main
         id="instrument"
         onClick={handleClick}
-        // condition ? expression1 : expression2
+        // ternary used to show/hide detector laser in the Main SVG
         detector={{
           insb: detector === "InSb" ? "inline" : "none",
           mct: detector === "MCT" ? "inline" : "none",
         }}
+        // ternary used to show/hide source laser in the Main SVG
         source={{
           globar: source === 1700 ? "inline" : "none",
           tungsten: source === 3100 ? "inline" : "none",

@@ -11,7 +11,7 @@ import { useDispatch } from "react-redux";
 import { updateDetector } from "../../features/parameterSlice";
 
 // this input component sets the detector to 'MCT' or 'InSb'
-export default function Detector() {
+export default function Detector({ parameter }) {
   const dispatch = useDispatch();
 
   const handleChange = (event, newAlignment) => {
@@ -22,7 +22,6 @@ export default function Detector() {
 
   const label = {
     inputProps: { "aria-label": "Detector" },
-    unchecked: "InSb",
   };
 
   return (
@@ -30,7 +29,11 @@ export default function Detector() {
       <FormLabel component="legend">Detector</FormLabel>
       <Stack direction="row" spacing={1} alignItems="center">
         <Typography>MCT</Typography>
-        <CustomSwitch {...label} onChange={handleChange} />
+        <CustomSwitch
+          {...label}
+          onChange={handleChange}
+          checked={parameter === "InSb" ? true : false}
+        />
         <Typography>InSb</Typography>
       </Stack>
     </FormControl>
