@@ -29,6 +29,8 @@ export const AbsorbancePlotly = forwardRef((props, ref) => {
 
   const [open, setOpen] = useState(false);
   const [threshold, setThreshold] = useState(0);
+  const [lowerBound, setLowerBound] = useState(waveMinSaved);
+  const [upperBound, setUpperBound] = useState(waveMaxSaved);
 
   if (spectrumData && backgroundData && !absorbanceData) {
 
@@ -52,12 +54,17 @@ export const AbsorbancePlotly = forwardRef((props, ref) => {
       x: spectrumData.x,
       y: newY,
     }));
+
   }
+
+  // TODO: add onChange handlers for the bounds boxes
+  // only pull the relevant data from absorbance data/ restrict the range find peaks uses
 
   if (absorbanceData) {
     // https://github.com/suzil/radis-app/blob/main/frontend/src/components/CalcSpectrumPlot.tsx
     return (
       <>
+        {/* Graph */}
         <Plot
           ref={ref}
           className="plotly"
@@ -95,7 +102,61 @@ export const AbsorbancePlotly = forwardRef((props, ref) => {
           // https://community.plotly.com/t/react-plotly-responsive-chart-not-working/47547
           useResizeHandler={true}
         />
+        {/* End Graph */}
 
+        {/* Lower Bound Box */}
+        <Box
+              sx={{
+                "& .MuiTextField-root": { m: 1, width: "25ch" },
+              }}
+              noValidate
+              autoComplete="off"
+            >
+              <TextField
+                id="standard-number"
+                label="Lower Domain Bound"
+                placeholder="Enter Lower Bound"
+                type="number"
+                value={lowerBound}
+                onChange={(e) => {setLowerBound(e.target.value);}}
+                InputProps={{
+                  inputProps: {
+                    min: waveMinSaved,
+                    max: waveMaxSaved,
+                    // step: 0.0001,
+                  },
+                }}
+              />
+        </Box>
+        {/* End Lower Bound Box */}
+
+        {/* Lower Upper Box */}
+        <Box
+              sx={{
+                "& .MuiTextField-root": { m: 1, width: "25ch" },
+              }}
+              noValidate
+              autoComplete="off"
+            >
+              <TextField
+                id="standard-number"
+                label="Upper Domain Bound"
+                placeholder="Enter Upper Bound"
+                type="number"
+                value={upperBound}
+                onChange={(e) => {setUpperBound(e.target.value);}}
+                InputProps={{
+                  inputProps: {
+                    min: waveMinSaved,
+                    max: waveMaxSaved,
+                    // step: 0.0001,
+                  },
+                }}
+              />
+        </Box>
+        {/* End Upper Bound Box */}
+
+        {/* Threshold Input */}
         <Box
               sx={{
                 "& .MuiTextField-root": { m: 1, width: "25ch" },
@@ -119,12 +180,16 @@ export const AbsorbancePlotly = forwardRef((props, ref) => {
                 }}
               />
         </Box>
+        {/* End Threshold Input */}
 
+        {/* Fetch Peaks */}
         <FetchPeaks
           type="find_peaks"
           params={{
             x: absorbanceData.x,
             y: absorbanceData.y,
+            lowerBound: lowerBound,
+            upperBound: upperBound,
             threshold: threshold
           }}
           // fetchURL={"http://localhost:5000/find_peaks"}
@@ -132,6 +197,7 @@ export const AbsorbancePlotly = forwardRef((props, ref) => {
           buttonText={"Find Peaks"}
           openPopup={setOpen}
         />
+        {/* End Fetch Peaks */}
 
         {/* Displays data from the server if there were no errors */}
         {peaksData && !peaksData.error && (
@@ -149,6 +215,7 @@ export const AbsorbancePlotly = forwardRef((props, ref) => {
             })}
           </Dialog>
         )}
+        {/* End Data Display */}
 
         {/* Displays any error message sent back from the sever */}
         {peaksData && peaksData.error && (
@@ -166,6 +233,8 @@ export const AbsorbancePlotly = forwardRef((props, ref) => {
           
           </Dialog>
         )}
+        {/* End Error Display */}
+
       </>
     );
   } else {
