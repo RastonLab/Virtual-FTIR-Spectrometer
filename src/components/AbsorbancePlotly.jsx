@@ -31,8 +31,6 @@ export const AbsorbancePlotly = forwardRef((props, ref) => {
   const [threshold, setThreshold] = useState(0);
   const [lowerBound, setLowerBound] = useState(waveMinSaved);
   const [upperBound, setUpperBound] = useState(waveMaxSaved);
-  // const [peaksX, setPeaksX] = useState();
-  // const [peaksY, setPeaksY] = useState();
 
   if (spectrumData && backgroundData && !absorbanceData) {
 
@@ -58,18 +56,6 @@ export const AbsorbancePlotly = forwardRef((props, ref) => {
     }));
 
   }
-
-  // const setPeaksRange = () => {
-  //   const tempX = [];
-  //   let tempY = [];
-  //   for (let i = lowerBound; i <= upperBound; i++) {
-
-  //     tempX.push(absorbanceData.x[i]);
-  //     tempY.push(absorbanceData.y[i]);
-  //   }
-  //   setPeaksX(tempX);
-  //   setPeaksY(tempY);
-  // }
 
   // TODO: add onChange handlers for the bounds boxes
   // only pull the relevant data from absorbance data/ restrict the range find peaks uses
