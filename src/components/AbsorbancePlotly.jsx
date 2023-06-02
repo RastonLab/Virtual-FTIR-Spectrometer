@@ -58,6 +58,7 @@ export const AbsorbancePlotly = forwardRef((props, ref) => {
     // https://github.com/suzil/radis-app/blob/main/frontend/src/components/CalcSpectrumPlot.tsx
     return (
       <>
+        {/* Graph */}
         <Plot
           ref={ref}
           className="plotly"
@@ -95,7 +96,9 @@ export const AbsorbancePlotly = forwardRef((props, ref) => {
           // https://community.plotly.com/t/react-plotly-responsive-chart-not-working/47547
           useResizeHandler={true}
         />
+        {/* End Graph */}
 
+        {/* Threshold Input */}
         <Box
               sx={{
                 "& .MuiTextField-root": { m: 1, width: "25ch" },
@@ -119,7 +122,9 @@ export const AbsorbancePlotly = forwardRef((props, ref) => {
                 }}
               />
         </Box>
+        {/* End Threshold Input */}
 
+        {/* Fetch Peaks */}
         <FetchPeaks
           type="find_peaks"
           params={{
@@ -132,6 +137,7 @@ export const AbsorbancePlotly = forwardRef((props, ref) => {
           buttonText={"Find Peaks"}
           openPopup={setOpen}
         />
+        {/* End Fetch Peaks */}
 
         {/* Displays data from the server if there were no errors */}
         {peaksData && !peaksData.error && (
@@ -149,6 +155,7 @@ export const AbsorbancePlotly = forwardRef((props, ref) => {
             })}
           </Dialog>
         )}
+        {/* End Data Display */}
 
         {/* Displays any error message sent back from the sever */}
         {peaksData && peaksData.error && (
@@ -166,6 +173,8 @@ export const AbsorbancePlotly = forwardRef((props, ref) => {
           
           </Dialog>
         )}
+        {/* End Error Display */}
+        
       </>
     );
   } else {
