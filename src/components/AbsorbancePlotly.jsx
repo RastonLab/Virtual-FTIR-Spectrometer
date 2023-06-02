@@ -7,15 +7,17 @@ import Box from "@mui/material/Box";
 import TextField from "@mui/material/TextField";
 
 // redux
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
 
 // style
 import "../style/components/Plotly.css";
 import FetchPeaks from "./FetchPeaks";
+import { updateAbsorbanceData } from "../features/absorbanceDataSlice";
 
 
 // this component uses the plotly library to graph processed spectrum data
 export const AbsorbancePlotly = forwardRef((props, ref) => {
+  const { absorbanceData } = useSelector((store) => store.absorbanceData);
   const { backgroundData } = useSelector((store) => store.backgroundData);
   const { peaksData } = useSelector((store) => store.peaksData);
   const { spectrumData } = useSelector((store) => store.spectrumData);
@@ -23,16 +25,36 @@ export const AbsorbancePlotly = forwardRef((props, ref) => {
     (store) => store.parameter
   );
 
+  const dispatch = useDispatch();
+
   const [open, setOpen] = useState(false);
   const [threshold, setThreshold] = useState(0);
 
-  const newY = [spectrumData.x.length];
+  if (spectrumData && backgroundData && !absorbanceData) {
 
-  for (let i = 0; i < spectrumData.x.length; i++) {
-    newY[i] = -1 * Math.log(spectrumData.y[i] / backgroundData.y[i]);
+    const newY = [spectrumData.x.length];
+
+    for (let i = 0; i < spectrumData.x.length; i++) {
+
+      newY[i] = -1 * Math.log(Math.abs(spectrumData.y[i] / backgroundData.y[i]));
+
+      if (newY[i] > 5) {
+        newY[i] = 5;
+      }
+
+      if (newY[i] < -5) {
+        newY[i] = -5;
+      }
+
+    }
+
+    dispatch(updateAbsorbanceData({
+      x: spectrumData.x,
+      y: newY,
+    }));
   }
 
-  if (spectrumData) {
+  if (absorbanceData) {
     // https://github.com/suzil/radis-app/blob/main/frontend/src/components/CalcSpectrumPlot.tsx
     return (
       <>
@@ -41,8 +63,8 @@ export const AbsorbancePlotly = forwardRef((props, ref) => {
           className="plotly"
           data={[
             {
-              x: spectrumData.x,
-              y: newY,
+              x: absorbanceData.x,
+              y: absorbanceData.y,
               type: "scatter",
               marker: { color: "#f50057" },
             },
@@ -96,13 +118,13 @@ export const AbsorbancePlotly = forwardRef((props, ref) => {
                   },
                 }}
               />
-            </Box>
+        </Box>
 
         <FetchPeaks
           type="find_peaks"
           params={{
-            x: spectrumData.x,
-            y: newY,
+            x: absorbanceData.x,
+            y: absorbanceData.y,
             threshold: threshold
           }}
           // fetchURL={"http://localhost:5000/find_peaks"}

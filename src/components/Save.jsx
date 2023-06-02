@@ -24,6 +24,7 @@ export default function Save() {
       } = useSelector((store) => store.parameter);
 
     const { peaksData } = useSelector((store) => store.peaksData);
+    const { absorbanceData } = useSelector((store) => store.absorbanceData);
     const { backgroundData } = useSelector((store) => store.backgroundData);
     const { spectrumData } = useSelector((store) => store.spectrumData);
 
@@ -51,9 +52,9 @@ export default function Save() {
         setPrintPeaks(false);
         let newData = [];
 
-        for (let i = 0; i < spectrumData.x.length; i++) {
-          let newY = -1 * Math.log(spectrumData.y[i] / backgroundData.y[i]);
-          newData.push([spectrumData.x[i], newY]);
+        // easier to save in store and pull from there instead of repeating all the checks for Absorbance Data
+        for (let i = 0; i < absorbanceData.x.length; i++) {
+          newData.push([absorbanceData.x[i], absorbanceData.y[i]]);
         }
 
         setData(newData);

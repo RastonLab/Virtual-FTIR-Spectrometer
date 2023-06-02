@@ -22,6 +22,7 @@ import {
   updateWaveMaxSaved,
   updateWaveMinSaved,
 } from "../features/parameterSlice";
+import { updateAbsorbanceData } from "../features/absorbanceDataSlice";
 
 // this component reaches out to the flask server with user parameters and receives X and Y coordinates to graph
 export default function Fetch({ type, params, fetchURL, buttonText }) {
@@ -29,6 +30,11 @@ export default function Fetch({ type, params, fetchURL, buttonText }) {
   const { progress } = useSelector((store) => store.progress);
 
   const fetchLinode = async () => {
+
+    // Allows the user to generate new absorbance data (there was a recursive issue in the Absorbance Plotly)
+    dispatch(updateAbsorbanceData(null));
+
+
     // remove any errors (if existing) and start a progress spinner
     dispatch(deactivateError());
     dispatch(activateProgress());
