@@ -100,7 +100,7 @@ export default function SpectrumWindow() {
           <StyledTab label="Background Spectrum" />
           <StyledTab label="Transmittance Spectrum" />
           <StyledTab label="Absorbance Spectrum" />
-          <StyledTab label="All Spectra" />
+          {/* <StyledTab label="All Spectra" /> */}
         </StyledTabs>
       </Box>
 
@@ -155,7 +155,7 @@ export default function SpectrumWindow() {
       </TabPanel>
 
       {/* All Spectra */}
-      <TabPanel value={tabValue} index={4}>
+      {/* <TabPanel value={tabValue} index={4}>
         <div id="spectrum">
           {spectrumData ? (
             <ProcessedPlotly />
@@ -193,7 +193,7 @@ export default function SpectrumWindow() {
             </p>
           )}
         </div>
-      </TabPanel>
+      </TabPanel> */}
       <Outlet />
     </Box>
   );
