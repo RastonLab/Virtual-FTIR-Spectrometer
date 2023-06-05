@@ -55,6 +55,8 @@ export default function FetchPeaks({
           body: JSON.stringify({
             x: params.x,
             y: params.y,
+            lowerbound: params.lowerBound,
+            upperbound: params.upperBound,
             threshold: params.threshold
           }),
         });
