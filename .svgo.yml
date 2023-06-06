@@ -1,0 +1,21 @@
+# .svgo.yml
+plugins:
+  - removeViewBox: false
+  - removeDimensions: true # this deletes width/height and adds it to the viewBox
+  - removeDoctype: true
+  - removeComments: true
+  - removeMetadata: true
+  - removeEditorsNSData: true
+  - cleanupIDs: false
+  - removeRasterImages: true
+  - removeUselessDefs: true
+  - removeUnknownsAndDefaults: true
+  - removeUselessStrokeAndFill: true
+  - removeHiddenElems: true
+  - removeEmptyText: true
+  - removeEmptyAttrs: true
+  - removeEmptyContainers: true
+  - removeUnusedNS: true
+  - removeDesc: true
+  - prefixIds: false
+  - prefixClassNames: false
