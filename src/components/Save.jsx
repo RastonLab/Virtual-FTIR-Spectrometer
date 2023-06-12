@@ -83,15 +83,34 @@ export default function Save() {
             <div className="save-col">
 
                 {
-                    peaksData &&
+                    spectrumData &&
                     <button 
                         className="button"
-                        onClick={peaksCSV}
-                    >
-                        Save Peaks Data
+                        // onClick={}
+                        >
+                        Sample Spectrum Data
                     </button>
                 }
 
+                {
+                    backgroundData &&
+                    <button 
+                        className="button"
+                        // onClick={}
+                        >
+                        Background Spectrum Data
+                    </button>
+                }   
+
+                {
+                    spectrumData && backgroundData &&
+                    <button 
+                        className="button"
+                        // onClick={absorbCSV}
+                        >
+                        Transmittance Spectrum Data
+                    </button>
+                }
 
                 {
                     spectrumData && backgroundData &&
@@ -99,7 +118,17 @@ export default function Save() {
                         className="button"
                         onClick={absorbCSV}
                         >
-                        Save Absorbance Spectrum Data
+                        Absorbance Spectrum Data
+                    </button>
+                }
+
+                {
+                    peaksData &&
+                    <button 
+                        className="button"
+                        onClick={peaksCSV}
+                    >
+                        Peaks Data
                     </button>
                 }
 
