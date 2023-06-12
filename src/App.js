@@ -13,7 +13,7 @@ export default function App() {
       <div className="nav-area">
         <RLLogo className="logo" width={55} height={55} viewBox="0 0 100 100" />
         <Link className="logo" to="/">
-          FTIR-VSI
+          FTIR-SIS
         </Link>
 
         <nav>
