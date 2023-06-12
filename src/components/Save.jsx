@@ -80,7 +80,7 @@ export default function Save() {
                 <h3>There is currently no data to save</h3>
             }
 
-            <div className="col">
+            <div className="save-col">
 
                 {
                     peaksData &&
