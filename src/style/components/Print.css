@@ -39,6 +39,14 @@ h3 {
   justify-content: center;
 }
 
+.save-col {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%; 
+  align-self: center;
+}
+
 #print {
   margin: 10px;
   padding: 8px 12px;

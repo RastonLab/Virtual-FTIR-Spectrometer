@@ -11,6 +11,8 @@ import { useSelector, useDispatch } from "react-redux";
 
 // style
 import "../style/components/Plotly.css";
+import "../style/components/Absorbance.css";
+
 import FetchPeaks from "./FetchPeaks";
 import { updateAbsorbanceData } from "../features/absorbanceDataSlice";
 
@@ -24,6 +26,8 @@ export const AbsorbancePlotly = forwardRef((props, ref) => {
   const { waveMaxSaved, waveMinSaved } = useSelector(
     (store) => store.parameter
   );
+  const { progress } = useSelector((store) => store.progress);
+
 
   const dispatch = useDispatch();
 
@@ -57,165 +61,174 @@ export const AbsorbancePlotly = forwardRef((props, ref) => {
 
   }
 
-  // TODO: add onChange handlers for the bounds boxes
-  // only pull the relevant data from absorbance data/ restrict the range find peaks uses
-
   if (absorbanceData) {
     // https://github.com/suzil/radis-app/blob/main/frontend/src/components/CalcSpectrumPlot.tsx
     return (
-      <>
-        {/* Graph */}
-        <Plot
-          ref={ref}
-          className="plotly"
-          data={[
-            {
-              x: absorbanceData.x,
-              y: absorbanceData.y,
-              type: "scatter",
-              marker: { color: "#f50057" },
-            },
-          ]}
-          layout={{
-            title: "Absorbance Spectrum",
-            font: { family: "Roboto", color: "#000" },
-            xaxis: {
-              range: [waveMinSaved, waveMaxSaved],
-              title: { text: "Wavenumber (cm⁻¹)" },
-              rangeslider: {
+      <div className="absorbance">
+        <div className="row">
+          {/* Graph */}
+          <Plot
+            ref={ref}
+            className="plotly"
+            data={[
+              {
+                x: absorbanceData.x,
+                y: absorbanceData.y,
+                type: "scatter",
+                marker: { color: "#f50057" },
+              },
+            ]}
+            layout={{
+              title: "Absorbance Spectrum",
+              font: { family: "Roboto", color: "#000" },
+              xaxis: {
+                range: [waveMinSaved, waveMaxSaved],
+                title: { text: "Wavenumber (cm⁻¹)" },
+                rangeslider: {
+                  autorange: true,
+                  yaxis: { rangemode: "auto" },
+                },
+                type: "linear",
+              },
+              yaxis: {
                 autorange: true,
-                yaxis: { rangemode: "auto" },
+                title: {
+                  text: "Signal",
+                },
+                type: "linear",
+                fixedrange: false,
+                // https://community.plotly.com/t/how-to-hide-axis-ticktexts-but-remain-axis-tilte/10839/2
+                showticklabels: false,
               },
-              type: "linear",
-            },
-            yaxis: {
-              autorange: true,
-              title: {
-                text: "Signal",
-              },
-              type: "linear",
-              fixedrange: false,
-              // https://community.plotly.com/t/how-to-hide-axis-ticktexts-but-remain-axis-tilte/10839/2
-              showticklabels: false,
-            },
-          }}
-          // https://community.plotly.com/t/react-plotly-responsive-chart-not-working/47547
-          useResizeHandler={true}
-        />
-        {/* End Graph */}
+            }}
+            // https://community.plotly.com/t/react-plotly-responsive-chart-not-working/47547
+            useResizeHandler={true}
+          />
+          {/* End Graph */}
+        </div>
+        
+        <div className="row">
+          <div className="col">
+            <div className="row">
+              {/* Lower Bound Box */}
+              <Box
+                    sx={{
+                      "& .MuiTextField-root": { m: 1, width: "25ch" },
+                    }}
+                    noValidate
+                    autoComplete="off"
+                  >
+                    <TextField
+                      id="standard-number"
+                      label="Lower Domain Bound"
+                      placeholder="Enter Lower Bound"
+                      type="number"
+                      value={lowerBound}
+                      onChange={(e) => {setLowerBound(e.target.value);}}
+                      InputProps={{
+                        inputProps: {
+                          min: waveMinSaved,
+                          max: waveMaxSaved,
+                          // step: 0.0001,
+                        },
+                      }}
+                    />
+              </Box>
+              {/* End Lower Bound Box */}
 
-        {/* Lower Bound Box */}
-        <Box
-              sx={{
-                "& .MuiTextField-root": { m: 1, width: "25ch" },
+              {/* Lower Upper Box */}
+              <Box
+                    sx={{
+                      "& .MuiTextField-root": { m: 1, width: "25ch" },
+                    }}
+                    noValidate
+                    autoComplete="off"
+                  >
+                    <TextField
+                      id="standard-number"
+                      label="Upper Domain Bound"
+                      placeholder="Enter Upper Bound"
+                      type="number"
+                      value={upperBound}
+                      onChange={(e) => {setUpperBound(e.target.value);}}
+                      InputProps={{
+                        inputProps: {
+                          min: waveMinSaved,
+                          max: waveMaxSaved,
+                          // step: 0.0001,
+                        },
+                      }}
+                    />
+              </Box>
+              {/* End Upper Bound Box */}
+            </div>
+            {/* Threshold Input */}
+            <Box
+                  sx={{
+                    "& .MuiTextField-root": { m: 1, width: "25ch" },
+                  }}
+                  noValidate
+                  autoComplete="off"
+                  className="row"
+                >
+                  <TextField
+                    id="standard-number"
+                    label="Threshold"
+                    placeholder="Enter threshold "
+                    type="number"
+                    value={threshold}
+                    onChange={(e) => {setThreshold(e.target.value);}}
+                    InputProps={{
+                      inputProps: {
+                        min: 0.0001,
+                        max: 10,
+                        step: 0.0001,
+                      },
+                    }}
+                  />
+            </Box>
+            {/* End Threshold Input */}
+
+            {/* Fetch Peaks */}
+            <FetchPeaks
+              type="find_peaks"
+              params={{
+                x: absorbanceData.x,
+                y: absorbanceData.y,
+                lowerBound: lowerBound,
+                upperBound: upperBound,
+                threshold: threshold
               }}
-              noValidate
-              autoComplete="off"
-            >
-              <TextField
-                id="standard-number"
-                label="Lower Domain Bound"
-                placeholder="Enter Lower Bound"
-                type="number"
-                value={lowerBound}
-                onChange={(e) => {setLowerBound(e.target.value);}}
-                InputProps={{
-                  inputProps: {
-                    min: waveMinSaved,
-                    max: waveMaxSaved,
-                    // step: 0.0001,
-                  },
-                }}
-              />
-        </Box>
-        {/* End Lower Bound Box */}
-
-        {/* Lower Upper Box */}
-        <Box
-              sx={{
-                "& .MuiTextField-root": { m: 1, width: "25ch" },
-              }}
-              noValidate
-              autoComplete="off"
-            >
-              <TextField
-                id="standard-number"
-                label="Upper Domain Bound"
-                placeholder="Enter Upper Bound"
-                type="number"
-                value={upperBound}
-                onChange={(e) => {setUpperBound(e.target.value);}}
-                InputProps={{
-                  inputProps: {
-                    min: waveMinSaved,
-                    max: waveMaxSaved,
-                    // step: 0.0001,
-                  },
-                }}
-              />
-        </Box>
-        {/* End Upper Bound Box */}
-
-        {/* Threshold Input */}
-        <Box
-              sx={{
-                "& .MuiTextField-root": { m: 1, width: "25ch" },
-              }}
-              noValidate
-              autoComplete="off"
-            >
-              <TextField
-                id="standard-number"
-                label="Threshold"
-                placeholder="Enter threshold "
-                type="number"
-                value={threshold}
-                onChange={(e) => {setThreshold(e.target.value);}}
-                InputProps={{
-                  inputProps: {
-                    min: 0.0001,
-                    max: 10,
-                    step: 0.0001,
-                  },
-                }}
-              />
-        </Box>
-        {/* End Threshold Input */}
-
-        {/* Fetch Peaks */}
-        <FetchPeaks
-          type="find_peaks"
-          params={{
-            x: absorbanceData.x,
-            y: absorbanceData.y,
-            lowerBound: lowerBound,
-            upperBound: upperBound,
-            threshold: threshold
-          }}
-          // fetchURL={"http://localhost:5000/find_peaks"}
-          fetchURL={"https://api.ftir.rastonlab.org/find_peaks"}
-          buttonText={"Find Peaks"}
-          openPopup={setOpen}
-        />
-        {/* End Fetch Peaks */}
+              fetchURL={"http://localhost:5000/find_peaks"}
+              // fetchURL={"https://api.ftir.rastonlab.org/find_peaks"}
+              buttonText={"Find Peaks"}
+              openPopup={setOpen}
+            />
+            {/* End Fetch Peaks */}
+          </div>
 
         {/* Displays data from the server if there were no errors */}
-        {peaksData && !peaksData.error && (
-          <Dialog
-            className="popup"
-            onClose={() => {
-              setOpen(false);
-            }}
-            open={open}
-          >
+        {(progress && <div id="spinner" classname="col"/>) || (peaksData && !peaksData.error && (
+          <div className="col" id="data">
+          {/* // <Dialog
+          //   className="popup"
+          //   onClose={() => {
+          //     setOpen(false);
+          //   }}
+          //   open={open}
+          // > */}
             <h1>Absorbance Peaks</h1>
-            {Object.keys(peaksData.peaks).map((key) => {
-              // NOTE: i can only get one space here
-              return <p>{`Peak: ${key} Intensity: ${peaksData.peaks[key]}`}</p>;
-            })}
-          </Dialog>
-        )}
+            <div className="file">
+              {Object.keys(peaksData.peaks).map((key) => {
+                // NOTE: i can only get one space here
+                return <p className="content">{`Peak: ${key} Intensity: ${peaksData.peaks[key]}`}</p>;
+              })}
+            </div>
+          </div>
+          // {/* </Dialog> */}
+        ))}
         {/* End Data Display */}
+        </div>
 
         {/* Displays any error message sent back from the sever */}
         {peaksData && peaksData.error && (
@@ -235,7 +248,7 @@ export const AbsorbancePlotly = forwardRef((props, ref) => {
         )}
         {/* End Error Display */}
 
-      </>
+      </div>
     );
   } else {
     return <div></div>;
