@@ -34,7 +34,8 @@ export default function Save() {
     const [printTrans, setPrintTrans] = useState(false);
     const [printAbsorb, setPrintAbsorb] = useState(false);
     const [printPeaks, setPrintPeaks] = useState(false);
-    const header = [`Spectrum details | Min Wavenumber: ${waveMin} Max Wavenumber: ${waveMax} Molecule: ${molecule} Pressure: ${pressure} Resolution: ${resolution} Number of Scans: ${scan} Zero Fill: ${zeroFill} Source: ${source} Beamsplitter: ${beamsplitter} Cell Window: ${window} Detector: ${detector} Medium: ${medium}`];
+    const header = [`Spectrum details | Min Wavenumber: ${waveMin} Max Wavenumber: ${waveMax} Molecule: ${molecule} Pressure: ${pressure} Resolution: ${resolution} Number of Scans: ${scan} Zero Fill: ${zeroFill} Source: ${source} Beamsplitter: ${beamsplitter} Cell Window: ${window} Detector: ${detector} Medium: ${medium} `];
+    // ^^ extra space at the end allows for uniform file reading
 
     const resetPrints = () => {
         setPrintSample(false);
