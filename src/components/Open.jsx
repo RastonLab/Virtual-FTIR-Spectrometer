@@ -7,9 +7,9 @@ import { useDispatch } from "react-redux";
 import { deactivateError } from "../features/errorSlice";
 import { updateBackgroundData } from "../features/backgroundDataSlice";
 import { updateSpectrumData } from "../features/spectrumDataSlice";
-import { updateBeamsplitter, updateDetector, updateMedium, updateMolecule,
-  updatePressure, updateResolution, updateScan, updateSource, updateWaveMax,
-  updateWaveMin, updateWindow, updateZeroFill } from "../features/parameterSlice";
+// import { updateBeamsplitter, updateDetector, updateMedium, updateMolecule,
+//   updatePressure, updateResolution, updateScan, updateSource, updateWaveMax,
+//   updateWaveMin, updateWindow, updateZeroFill } from "../features/parameterSlice";
 
 // style
 import "../style/components/Open.css";
@@ -23,84 +23,99 @@ export const Open = () => {
   const filereader = new FileReader();
 
   const [data, setData] = useState();
-  const [filename, setFilename] = useState();
+  // const [filename, setFilename] = useState();
   const [sucess, toggleSucess] = useState(false);
+  const [badFile, toggleBadFile] = useState(false);
 
   const changeHandler = (event) => {
     if (event.target.files[0]) {
       filereader.onload = function (e) {
         setData(e.target.result);
-        setFilename(event.target.files[0].name);
+        // setFilename(event.target.files[0].name);
       };
       filereader.readAsText(event.target.files[0]);
     }
   };
 
   const handleSubmission = () => {
+    toggleBadFile(false);
 
     let rawData = data;
 
     let index = rawData.indexOf("\n");
-    let line = rawData.substring(0, index);
+    // let parmLine = rawData.substring(0, index);
+
+    rawData = rawData.substring(index + 1);
+
+    index = rawData.indexOf("\n");
+    let specType = rawData.substring(0, index);
+
+    rawData = rawData.substring(index + 1);
+    
+
+    if (specType.includes("Sample") || specType.includes("Background")) {
 
       // Gathers Parameters
-      const parameters = [];
-      while (line.indexOf(":") > 0) {
-        let paramStart = line.indexOf(":") + 2; // The Additional 2 accounts for the colon inself and the following space
-        line = line.substring(paramStart);
-        let paramEnd = line.indexOf(" ");
-        let param = line.substring(0, paramEnd);
-        line = line.substring(paramEnd + 1);
-        parameters.push(param);
+      // const parameters = [];
+      // while (parmLine.indexOf(":") > 0) {
+      //   let paramStart = parmLine.indexOf(":") + 2; // The Additional 2 accounts for the colon inself and the following space
+      //   parmLine = parmLine.substring(paramStart);
+      //   let paramEnd = parmLine.indexOf(" ");
+      //   let param = parmLine.substring(0, paramEnd);
+      //   parmLine = parmLine.substring(paramEnd + 1);
+      //   parameters.push(param);
+      // }
+
+      // // for (let i = 0; i < parameters.length; i++){
+      // //   console.log(parameters[i]);
+      // // }
+      
+      // dispatch(updateWaveMin(parameters[0]));
+      // dispatch(updateWaveMax(parameters[1]));
+      // dispatch(updateMolecule(parameters[2]));
+      // dispatch(updatePressure(parameters[3]));
+      // dispatch(updateResolution(parameters[4]));
+      // dispatch(updateScan(parameters[5]));
+      // dispatch(updateZeroFill(parameters[6]));
+      // dispatch(updateSource(parameters[7]));
+      // dispatch(updateBeamsplitter(parameters[8]));
+      // dispatch(updateWindow(parameters[9]));
+      // dispatch(updateDetector(parameters[10]));
+      // dispatch(updateMedium(parameters[11]));
+
+      const xData = [];
+      const yData = [];
+
+      while (index >= 0) {
+
+        index = rawData.indexOf("\n");
+        let line = rawData.substring(0, index);
+
+        let comma = line.indexOf(",");
+        let x = line.substring(1, comma); // Also removes " charater from the begining of both strings to allow for number parsing
+        let y = line.substring(comma + 2);
+        
+        xData.push(parseFloat(x));
+        yData.push(parseFloat(y));
+
+        rawData = rawData.substring(index + 1);
       }
+      console.log(xData);
+      console.log(yData);
 
-      for (let i = 0; i < parameters.length; i++){
-        console.log(parameters[i]);
+      if (specType.includes("Background")) {
+        dispatch(updateBackgroundData({ x: xData, y: yData }));
+      } else if (specType.includes("Sample")) {
+        dispatch(updateSpectrumData({ x: xData, y: yData }));
       }
-
-      // dispatch(
-      //   storeParams({
-      //     minWave: parameters[0],
-      //     maxWave: parameters[1],
-      //     molecule: parameters[2],
-      //     pressure: parameters[3],
-      //     resolution: parameters[4],
-      //     numScan: parameters[5],
-      //     zeroFill: parameters[6],
-      //     source: parameters[7],
-      //     beamsplitter: parameters[8],
-      //     cellWindow: parameters[9],
-      //     detector: parameters[10],
-      //   })
-      // );
-
-    const xData = [];
-    const yData = [];
-
-    while (rawData !== "") {
-
-      let index = rawData.indexOf("\n");
-      let line = rawData.substring(0, index);
-
-      let comma = line.indexOf(",");
-      let x = line.substring(0, comma);
-      let y = line.substring(comma + 1);
-
-      xData.push(Number(x));
-      yData.push(Number(y));
-
-      rawData = rawData.substring(index + 1);
-    }
-
-    // NOTE: Handled differently now
-    if (filename.includes("background")) {
-      dispatch(updateBackgroundData({ x: xData, y: yData }));
+    
+      dispatch(deactivateError);
+      toggleSucess(true);
     } else {
-      dispatch(updateSpectrumData({ x: xData, y: yData }));
+      toggleBadFile(true);
     }
 
-    dispatch(deactivateError);
-    toggleSucess(true);
+    
   };
 
   return (
@@ -111,6 +126,7 @@ export const Open = () => {
           <input type="file" name="file" onChange={changeHandler} />
         </label>
         <h2>{sucess && "Upload Sucessful!"}</h2>
+        <h2>{badFile && "Cannot Upload File"}</h2>
         <button className="button" onClick={handleSubmission}>
           Upload
         </button>
