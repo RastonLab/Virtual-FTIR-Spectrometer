@@ -61,7 +61,19 @@ export default function Save() {
     }
 
     const backCSV = () => {
+
         resetPrints();
+        let newData = [];
+
+        const specType = ['Spectrum Type: Background Spectrum'];
+        newData.push(specType);
+
+        for (let i = 0; i < backgroundData.x.length; i++) {
+            newData.push([backgroundData.x[i], backgroundData.y[i]]);
+        }
+        
+        setData(newData);
+        setPrintBack(true);
     }
 
     const transCSV = () => {
