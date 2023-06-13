@@ -29,13 +29,65 @@ export default function Save() {
     const { spectrumData } = useSelector((store) => store.spectrumData);
 
     const [data, setData] = useState();
-    const [printPeaks, setPrintPeaks] = useState(false);
+    const [printSample, setPrintSample] = useState(false);
+    const [printBack, setPrintBack] = useState(false);
+    const [printTrans, setPrintTrans] = useState(false);
     const [printAbsorb, setPrintAbsorb] = useState(false);
+    const [printPeaks, setPrintPeaks] = useState(false);
     const header = [`Spectrum details | Min Wavenumber: ${waveMin} Max Wavenumber: ${waveMax} Molecule: ${molecule} Pressure: ${pressure} Resolution: ${resolution} Number of Scans: ${scan} Zero Fill: ${zeroFill} Source: ${source} Beamsplitter: ${beamsplitter} Cell Window: ${window} Detector: ${detector} Medium: ${medium}`];
+
+    const resetPrints = () => {
+        setPrintSample(false);
+        setPrintBack(false);
+        setPrintTrans(false);
+        setPrintAbsorb(false);
+        setPrintPeaks(false);
+    }
+
+    const sampleCSV = () => {
+        
+        resetPrints();
+        let newData = [];
+
+        const specType = ['Spectrum Type: Sample Spectrum'];
+        newData.push(specType);
+
+        for (let i = 0; i < spectrumData.x.length; i++) {
+            newData.push([spectrumData.x[i], spectrumData.y[i]]);
+        }
+        
+        setData(newData);
+        setPrintSample(true);
+    }
+
+    const backCSV = () => {
+        resetPrints();
+    }
+
+    const transCSV = () => {
+        resetPrints();
+    }
+
+    const absorbCSV = () => {
+
+        resetPrints();
+        let newData = [];
+
+        const specType = ['Spectrum Type: Absorbance Spectrum'];
+        newData.push(specType);
+
+        // easier to save in store and pull from there instead of repeating all the checks for Absorbance Data
+        for (let i = 0; i < absorbanceData.x.length; i++) {
+          newData.push([absorbanceData.x[i], absorbanceData.y[i]]);
+        }
+
+        setData(newData);
+        setPrintAbsorb(true);
+    }
 
     const peaksCSV = () => {
 
-        setPrintAbsorb(false); 
+        resetPrints();
         let newData = [];
 
         for (const [peak, intensity] of Object.entries(peaksData.peaks)) {
@@ -47,26 +99,16 @@ export default function Save() {
     }
 
 
-    const absorbCSV = () => {
-
-        setPrintPeaks(false);
-        let newData = [];
-
-        // easier to save in store and pull from there instead of repeating all the checks for Absorbance Data
-        for (let i = 0; i < absorbanceData.x.length; i++) {
-          newData.push([absorbanceData.x[i], absorbanceData.y[i]]);
-        }
-
-        setData(newData);
-        setPrintAbsorb(true);
-    }
-
 
     return (
         <div>
             {/* NOTE: cannot control filenames at the moment */}
-            {printPeaks && <CSVDownload headers={header} data={data} target="."/>}
+            {printSample && <CSVDownload headers={header} data={data} target="."/>}
+            {printBack && <CSVDownload headers={header} data={data} target="."/>}
+            {printTrans && <CSVDownload headers={header} data={data} target="."/>}
             {printAbsorb && <CSVDownload headers={header} data={data} target="."/>}
+            {printPeaks && <CSVDownload headers={header} data={data} target="."/>}
+
 
             <h1>Save Data</h1>
 
@@ -86,7 +128,7 @@ export default function Save() {
                     spectrumData &&
                     <button 
                         className="button"
-                        // onClick={}
+                        onClick={sampleCSV}
                         >
                         Sample Spectrum Data
                     </button>
@@ -96,7 +138,7 @@ export default function Save() {
                     backgroundData &&
                     <button 
                         className="button"
-                        // onClick={}
+                        onClick={backCSV}
                         >
                         Background Spectrum Data
                     </button>
@@ -106,7 +148,7 @@ export default function Save() {
                     spectrumData && backgroundData &&
                     <button 
                         className="button"
-                        // onClick={absorbCSV}
+                        onClick={transCSV}
                         >
                         Transmittance Spectrum Data
                     </button>
