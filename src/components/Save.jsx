@@ -77,7 +77,20 @@ export default function Save() {
     }
 
     const transCSV = () => {
+
         resetPrints();
+        let newData = [];
+
+        const specType = ['Spectrum Type: Transmittance Spectrum'];
+        newData.push(specType);
+
+        for (let i = 0; i < spectrumData.x.length; i++) {
+            let newY = spectrumData.y[i] / backgroundData.y[i];
+            newData.push([spectrumData.x[i], newY]);
+        }
+        
+        setData(newData);
+        setPrintTrans(true);
     }
 
     const absorbCSV = () => {
