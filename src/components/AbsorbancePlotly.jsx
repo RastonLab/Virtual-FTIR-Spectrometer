@@ -208,7 +208,7 @@ export const AbsorbancePlotly = forwardRef((props, ref) => {
           </div>
 
         {/* Displays data from the server if there were no errors */}
-        {(progress && <div id="spinner" classname="col"/>) || (peaksData && !peaksData.error && (
+        {(progress && <div id="spinner" className="col"/>) || (peaksData && !peaksData.error && (
           <div className="col" id="data">
           {/* // <Dialog
           //   className="popup"

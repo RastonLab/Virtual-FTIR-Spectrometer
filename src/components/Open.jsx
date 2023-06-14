@@ -7,9 +7,9 @@ import { useDispatch } from "react-redux";
 import { deactivateError } from "../features/errorSlice";
 import { updateBackgroundData } from "../features/backgroundDataSlice";
 import { updateSpectrumData } from "../features/spectrumDataSlice";
-// import { updateBeamsplitter, updateDetector, updateMedium, updateMolecule,
-//   updatePressure, updateResolution, updateScan, updateSource, updateWaveMax,
-//   updateWaveMin, updateWindow, updateZeroFill } from "../features/parameterSlice";
+import { updateBeamsplitter, updateDetector, updateMedium, updateMolecule,
+  updatePressure, updateResolution, updateScan, updateSource, updateWaveMax,
+  updateWaveMin, updateWindow, updateZeroFill } from "../features/parameterSlice";
 
 // style
 import "../style/components/Open.css";
@@ -43,7 +43,7 @@ export const Open = () => {
     let rawData = data;
 
     let index = rawData.indexOf("\n");
-    // let parmLine = rawData.substring(0, index);
+    let parmLine = rawData.substring(0, index);
 
     rawData = rawData.substring(index + 1);
 
@@ -56,32 +56,30 @@ export const Open = () => {
     if (specType.includes("Sample") || specType.includes("Background")) {
 
       // Gathers Parameters
-      // const parameters = [];
-      // while (parmLine.indexOf(":") > 0) {
-      //   let paramStart = parmLine.indexOf(":") + 2; // The Additional 2 accounts for the colon inself and the following space
-      //   parmLine = parmLine.substring(paramStart);
-      //   let paramEnd = parmLine.indexOf(" ");
-      //   let param = parmLine.substring(0, paramEnd);
-      //   parmLine = parmLine.substring(paramEnd + 1);
-      //   parameters.push(param);
-      // }
+      const parameters = [];
+      while (parmLine.indexOf(":") > 0) {
+        let paramStart = parmLine.indexOf(":") + 2; // The Additional 2 accounts for the colon inself and the following space
+        parmLine = parmLine.substring(paramStart);
+        let paramEnd = parmLine.indexOf(" ");
+        let param = parmLine.substring(0, paramEnd);
+        parmLine = parmLine.substring(paramEnd + 1);
+        parameters.push(param);
+      }
 
-      // // for (let i = 0; i < parameters.length; i++){
-      // //   console.log(parameters[i]);
-      // // }
       
-      // dispatch(updateWaveMin(parameters[0]));
-      // dispatch(updateWaveMax(parameters[1]));
-      // dispatch(updateMolecule(parameters[2]));
-      // dispatch(updatePressure(parameters[3]));
-      // dispatch(updateResolution(parameters[4]));
-      // dispatch(updateScan(parameters[5]));
-      // dispatch(updateZeroFill(parameters[6]));
-      // dispatch(updateSource(parameters[7]));
-      // dispatch(updateBeamsplitter(parameters[8]));
-      // dispatch(updateWindow(parameters[9]));
-      // dispatch(updateDetector(parameters[10]));
-      // dispatch(updateMedium(parameters[11]));
+      // Load parameters into the store
+      dispatch(updateWaveMin(parseFloat(parameters[0])));
+      dispatch(updateWaveMax(parseFloat(parameters[1])));
+      dispatch(updateMolecule(parameters[2]));
+      dispatch(updatePressure(parseFloat(parameters[3])));
+      dispatch(updateResolution(parseFloat(parameters[4])));
+      dispatch(updateScan(parseFloat(parameters[5])));
+      dispatch(updateZeroFill(parseFloat(parameters[6])));
+      dispatch(updateSource(parseFloat(parameters[7])));
+      dispatch(updateBeamsplitter(parameters[8]));
+      dispatch(updateWindow(parameters[9]));
+      dispatch(updateDetector(parameters[10]));
+      dispatch(updateMedium(parameters[11]));
 
       const xData = [];
       const yData = [];
@@ -100,8 +98,7 @@ export const Open = () => {
 
         rawData = rawData.substring(index + 1);
       }
-      console.log(xData);
-      console.log(yData);
+
 
       if (specType.includes("Background")) {
         dispatch(updateBackgroundData({ x: xData, y: yData }));
