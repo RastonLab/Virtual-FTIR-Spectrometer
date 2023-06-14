@@ -36,12 +36,11 @@
 .absorb-col {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   width: 40%;
   align-self: flex-start;
 }
 
-.file {
+.display {
   height: 100%;
   max-height: 18rem;
   overflow-y: scroll;
@@ -56,15 +55,4 @@
 
 #data {
   padding: 0;
-}
-
-input[type="file"] {
-  display: none;
-}
-
-.custom-file-upload {
-  border: 1px solid #ccc;
-  display: inline-block;
-  padding: 6px 12px;
-  cursor: pointer;
 }

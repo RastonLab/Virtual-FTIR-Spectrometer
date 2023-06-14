@@ -208,17 +208,19 @@ export const AbsorbancePlotly = forwardRef((props, ref) => {
           </div>
 
         {/* Displays data from the server if there were no errors */}
-        {(progress && <div id="spinner" className="col"/>) || (peaksData && !peaksData.error && (
-          <div className="absorb-col" id="data">
-            <h1>Absorbance Peaks</h1>
-            <div className="file">
-              {Object.keys(peaksData.peaks).map((key) => {
-                return <p className="content">{`Peak: ${key} Intensity: ${peaksData.peaks[key]}`}</p>;
-              })}
+        <div className="absorb-col">
+          {(progress && <div id="spinner"/>) || (peaksData && !peaksData.error && (
+            <div id="data">
+              <h1>Absorbance Peaks</h1>
+              <div className="display">
+                {Object.keys(peaksData.peaks).map((key) => {
+                  return <p className="content">{`Peak: ${key} Intensity: ${peaksData.peaks[key]}`}</p>;
+                })}
+              </div>
             </div>
-          </div>
-          // {/* </Dialog> */}
-        ))}
+            // {/* </Dialog> */}
+          ))}
+        </div>
         {/* End Data Display */}
         </div>
 
