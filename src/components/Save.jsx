@@ -29,13 +29,91 @@ export default function Save() {
     const { spectrumData } = useSelector((store) => store.spectrumData);
 
     const [data, setData] = useState();
-    const [printPeaks, setPrintPeaks] = useState(false);
+    const [printSample, setPrintSample] = useState(false);
+    const [printBack, setPrintBack] = useState(false);
+    const [printTrans, setPrintTrans] = useState(false);
     const [printAbsorb, setPrintAbsorb] = useState(false);
-    const header = [`Spectrum details | Min Wavenumber: ${waveMin} Max Wavenumber: ${waveMax} Molecule: ${molecule} Pressure: ${pressure} Resolution: ${resolution} Number of Scans: ${scan} Zero Fill: ${zeroFill} Source: ${source} Beamsplitter: ${beamsplitter} Cell Window: ${window} Detector: ${detector} Medium: ${medium}`];
+    const [printPeaks, setPrintPeaks] = useState(false);
+    const header = [`Spectrum details | Min Wavenumber: ${waveMin} Max Wavenumber: ${waveMax} Molecule: ${molecule} Pressure: ${pressure} Resolution: ${resolution} Number of Scans: ${scan} Zero Fill: ${zeroFill} Source: ${source} Beamsplitter: ${beamsplitter} Cell Window: ${window} Detector: ${detector} Medium: ${medium} `];
+    // ^^ extra space at the end allows for uniform file reading
+
+    const resetPrints = () => {
+        setPrintSample(false);
+        setPrintBack(false);
+        setPrintTrans(false);
+        setPrintAbsorb(false);
+        setPrintPeaks(false);
+    }
+
+    const sampleCSV = () => {
+        
+        resetPrints();
+        let newData = [];
+
+        const specType = ['Spectrum Type: Sample Spectrum'];
+        newData.push(specType);
+
+        for (let i = 0; i < spectrumData.x.length; i++) {
+            newData.push([spectrumData.x[i], spectrumData.y[i]]);
+        }
+        
+        setData(newData);
+        setPrintSample(true);
+    }
+
+    const backCSV = () => {
+
+        resetPrints();
+        let newData = [];
+
+        const specType = ['Spectrum Type: Background Spectrum'];
+        newData.push(specType);
+
+        for (let i = 0; i < backgroundData.x.length; i++) {
+            newData.push([backgroundData.x[i], backgroundData.y[i]]);
+        }
+        
+        setData(newData);
+        setPrintBack(true);
+    }
+
+    const transCSV = () => {
+
+        resetPrints();
+        let newData = [];
+
+        const specType = ['Spectrum Type: Transmittance Spectrum'];
+        newData.push(specType);
+
+        for (let i = 0; i < spectrumData.x.length; i++) {
+            let newY = spectrumData.y[i] / backgroundData.y[i];
+            newData.push([spectrumData.x[i], newY]);
+        }
+        
+        setData(newData);
+        setPrintTrans(true);
+    }
+
+    const absorbCSV = () => {
+
+        resetPrints();
+        let newData = [];
+
+        const specType = ['Spectrum Type: Absorbance Spectrum'];
+        newData.push(specType);
+
+        // easier to save in store and pull from there instead of repeating all the checks for Absorbance Data
+        for (let i = 0; i < absorbanceData.x.length; i++) {
+          newData.push([absorbanceData.x[i], absorbanceData.y[i]]);
+        }
+
+        setData(newData);
+        setPrintAbsorb(true);
+    }
 
     const peaksCSV = () => {
 
-        setPrintAbsorb(false); 
+        resetPrints();
         let newData = [];
 
         for (const [peak, intensity] of Object.entries(peaksData.peaks)) {
@@ -47,26 +125,16 @@ export default function Save() {
     }
 
 
-    const absorbCSV = () => {
-
-        setPrintPeaks(false);
-        let newData = [];
-
-        // easier to save in store and pull from there instead of repeating all the checks for Absorbance Data
-        for (let i = 0; i < absorbanceData.x.length; i++) {
-          newData.push([absorbanceData.x[i], absorbanceData.y[i]]);
-        }
-
-        setData(newData);
-        setPrintAbsorb(true);
-    }
-
 
     return (
         <div>
             {/* NOTE: cannot control filenames at the moment */}
-            {printPeaks && <CSVDownload headers={header} data={data} target="."/>}
+            {printSample && <CSVDownload headers={header} data={data} target="."/>}
+            {printBack && <CSVDownload headers={header} data={data} target="."/>}
+            {printTrans && <CSVDownload headers={header} data={data} target="."/>}
             {printAbsorb && <CSVDownload headers={header} data={data} target="."/>}
+            {printPeaks && <CSVDownload headers={header} data={data} target="."/>}
+
 
             <h1>Save Data</h1>
 
@@ -83,15 +151,34 @@ export default function Save() {
             <div className="save-col">
 
                 {
-                    peaksData &&
+                    spectrumData &&
                     <button 
                         className="button"
-                        onClick={peaksCSV}
-                    >
-                        Save Peaks Data
+                        onClick={sampleCSV}
+                        >
+                        Sample Spectrum Data
                     </button>
                 }
 
+                {
+                    backgroundData &&
+                    <button 
+                        className="button"
+                        onClick={backCSV}
+                        >
+                        Background Spectrum Data
+                    </button>
+                }   
+
+                {
+                    spectrumData && backgroundData &&
+                    <button 
+                        className="button"
+                        onClick={transCSV}
+                        >
+                        Transmittance Spectrum Data
+                    </button>
+                }
 
                 {
                     spectrumData && backgroundData &&
@@ -99,7 +186,17 @@ export default function Save() {
                         className="button"
                         onClick={absorbCSV}
                         >
-                        Save Absorbance Spectrum Data
+                        Absorbance Spectrum Data
+                    </button>
+                }
+
+                {
+                    peaksData &&
+                    <button 
+                        className="button"
+                        onClick={peaksCSV}
+                    >
+                        Peaks Data
                     </button>
                 }
 

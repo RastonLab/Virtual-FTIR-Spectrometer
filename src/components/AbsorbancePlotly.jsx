@@ -199,7 +199,7 @@ export const AbsorbancePlotly = forwardRef((props, ref) => {
                 upperBound: upperBound,
                 threshold: threshold
               }}
-//               fetchURL={"http://localhost:5000/find_peaks"}
+              // fetchURL={"http://localhost:5000/find_peaks"}
               fetchURL={"https://api.ftir.rastonlab.org/find_peaks"}
               buttonText={"Find Peaks"}
               openPopup={setOpen}
