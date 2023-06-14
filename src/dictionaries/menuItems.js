@@ -6,12 +6,12 @@ export const menuItems = [
   {
     label: "File",
     submenu: [
-      // {
-      //   label: "Open",
-      //   button: true,
-      //   title: "Please Select a File",
-      //   text: <Open />,
-      // },
+      {
+        label: "Open",
+        button: true,
+        title: "Please Select a File",
+        text: <Open />,
+      },
       {
         label: "Save",
         button: true,
