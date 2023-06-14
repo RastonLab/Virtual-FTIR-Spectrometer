@@ -9,14 +9,23 @@
 .popup h2 {
   font-family: "Montserrat";
   text-align: center;
-  padding: 20px 0;
+  /* padding: 10px 0; */
   text-decoration: underline;
 }
 
 .popup p {
   font-family: "Roboto";
   pointer-events: none;
-  padding: 0 3%;
+  padding: 3% 3%;
+}
+
+.popup ol {
+  font-family: "Roboto";
+  padding: 0 6%;
+}
+
+.popup li {
+  padding: 1.5% 0;
 }
 
 .MuiDialog-paper {

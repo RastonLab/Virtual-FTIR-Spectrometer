@@ -67,11 +67,83 @@ export const menuItems = [
     submenu: [
       {
         label: "Tutorial",
+        button: true,
+        title: "How to use the FTIR-SIS",
+        text: (
+          <div>
+            <p>
+              This is a brief tutorial that shows how to acquire spectra, find 
+              peaks, and export data using FTIR-SIS. In this tutorial we focus 
+              on carbon monoxide (CO) in the mid-IR.
+            </p>
+            <ol>
+              <li>
+                Navigate to the Window menu and chose Experimental Setup. Select 
+                appropriate parameters: In this example we chose CO at a partial 
+                pressure of 0.002 bar (in air), a wavenumber range of 400-5000 cm-1, 
+                and 100 scans at a resolution of 0.125 cm-1 with a zero-filling 
+                factor of 2. The radiation source, optics, and detector were set to 
+                values that maximize the radiation throughput in the mid-IR: Tungsten 
+                source, antireflective CaF2 beamsplitter (AR-CaF2), CaF2 gas cell windows, 
+                and InSb detector.
+              </li>
+              <li>
+                Navigate to the Window menu and chose Instrument. Click/tap on 
+                the "Collect Background Spectrum" button. You will see the corner 
+                cube mirror on the right move back and forth as the spectrum is 
+                acquired. The spectrum shown in the lower left corner of the window 
+                corresponds to a running average over the number of scans that has 
+                been completed. While the averaging is occurring, you are encouraged 
+                to click/tap on the various components to learn about their functionality.
+              </li>
+              <li>
+                After the background scans have been completed, click/tap on the 
+                "Collect Sample Spectrum" button. This will initiate the acquisition 
+                of a spectrum with your sample in the gas cell. The graph in 
+                the lower left corner of the window compares the averaged 
+                background spectrum to a running average of the sample spectrum. 
+                Note: You can zoom in and out of different regions of the plots 
+                while spectra are being acquired.
+              </li>
+              <li>
+                After both spectra have been acquired, navigate to the Window 
+                menu and choose Spectra. Directly below the menu bar, four 
+                types are listed: Sample Spectrum (I), Background Spectrum (Io), 
+                Transmittance Spectrum (T=I/Io), and Absorbance Spectrum (-log10T). 
+                Click/tap on "Absorbance Spectrum" and zoom in on the 
+                (rotationally resolved) fundamental band of CO (~2000-2250 cm-1).
+              </li>
+              <li>
+                Below the spectrum are parameter cells that can be adjusted so 
+                that peaks can be picked (identified). Set the "Lower Domain Bound" 
+                to 2000 cm-1, the "Upper Domain Bound" to 2250 cm-1, and the 
+                "Threshold" to a positive number (this is the absorbance value 
+                above which peaks will be identified). Click/tap on "Find Peaks" 
+                after which a list of peaks and their intensities will appear. 
+                The peak list can then be exported by navigating to the File menu 
+                and choosing Save , followed by selecting the "Save Peaks Data" 
+                option (note the other option which is to "Save Absorbance Spectrum Data").
+              </li>
+              <li>
+                If you wish to analyze the overtone band of CO, then zoom in from 
+                ~4150-4350 cm-1. The signal-to-noise in this region can be improved 
+                by performing more averaging (increasing the number of scans), or 
+                by increasing the gas cell pressure. After (optionally) optimizing 
+                conditions, then you can generate a peak list and export it as mentioned above.
+              </li>
+            </ol>
+            <p>
+              Note that one cannot (yet) perform a rovibrational analysis to 
+              determine molecular constants using FTIR-SIS. For more information 
+              please go to the Help menu and choose Usage.
+            </p>
+          </div>
+        ),
       },
       {
         label: "Usage",
         button: true,
-        title: "How to use the FITR",
+        title: "Components of the FITR-SIS",
         text: (
           <div>
             <h2>Window</h2>
@@ -205,13 +277,13 @@ export const menuItems = [
       {
         label: "About",
         button: true,
-        title: "About The Raston Lab: FTIR",
+        title: "About The Raston Lab: FTIR-SIS",
         text: (
           <p>
             This Virtual Instrument is one of four in development by Raston Lab.
             The goal of these Virtual Instruments is to provide students who do
             not have access to these tools with experience they will need after
-            graduation. The Virtual FTIR allows students to generate spectra
+            graduation. The FTIR-SIS allows students to generate spectra
             similar to those you would get from the physical instrument. This is
             achived through mathmatical computations combined with data pulled
             from RADIS, a spectrum generation tool that uses data from the
