@@ -1,5 +1,5 @@
 import Save from "../components/Save";
-// import { Open } from "../components/Open";
+import { Open } from "../components/Open";
 import Print from "../components/Print";
 
 export const menuItems = [
