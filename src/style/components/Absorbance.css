@@ -33,8 +33,9 @@
   align-self: center;
 }
 
-.col {
+.absorb-col {
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
   width: 40%;
   align-self: flex-start;
