@@ -21,6 +21,14 @@ export const TransmittancePlotly = forwardRef((props, ref) => {
 
   for (let i = 0; i < spectrumData.x.length; i++) {
     newY[i] = spectrumData.y[i] / backgroundData.y[i];
+
+    if (newY[i] > 2) {
+      newY[i] = 2;
+    }
+    
+    if (newY[i] < -2) {
+      newY[i] = -2;
+    }
   }
 
   if (spectrumData) {
