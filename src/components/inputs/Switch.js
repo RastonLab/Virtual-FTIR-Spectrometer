@@ -4,7 +4,7 @@ import Stack from "@mui/material/Stack";
 import FormControl from "@mui/material/FormControl";
 import FormLabel from "@mui/material/FormLabel";
 
-import { CustomSwitch } from "./SwitchStyle";
+import { SwitchStyle } from "./SwitchStyle";
 
 // redux
 import { useDispatch } from "react-redux";
@@ -16,7 +16,7 @@ import {
   updateWindow,
 } from "../../features/parameterSlice";
 
-export default function NewSwitch({
+export default function Switch({
   formLabel,
   optionOneLabel,
   optionOneData,
@@ -66,7 +66,7 @@ export default function NewSwitch({
       <FormLabel component="legend">{formLabel}</FormLabel>
       <Stack direction="row" spacing={1} alignItems="center">
         <Typography>{optionOneLabel}</Typography>
-        <CustomSwitch
+        <SwitchStyle
           {...label}
           onChange={handleChange}
           checked={store === optionTwoData ? true : false}
