@@ -96,32 +96,32 @@ export default function SpectrumWindow() {
           allowScrollButtonsMobile
           aria-label="Spectrum Window Selection"
         >
-          <StyledTab label="Sample Spectrum" />
           <StyledTab label="Background Spectrum" />
+          <StyledTab label="Sample Spectrum" />
           <StyledTab label="Transmittance Spectrum" />
           <StyledTab label="Absorbance Spectrum" />
           {/* <StyledTab label="All Spectra" /> */}
         </StyledTabs>
       </Box>
 
-      {/* Sample Spectrum */}
-      <TabPanel value={tabValue} index={0}>
-        <div id="spectrum">
-          {spectrumData ? (
-            <ProcessedPlotly />
-          ) : (
-            <p>Please generate a Sample Spectrum and return here</p>
-          )}
-        </div>
-      </TabPanel>
-
       {/* Background Spectrum */}
-      <TabPanel value={tabValue} index={1}>
+      <TabPanel value={tabValue} index={0}>
         <div id="spectrum">
           {backgroundData ? (
             <BackgroundPlotly />
           ) : (
             <p>Please generate a Background Spectrum and return here</p>
+          )}
+        </div>
+      </TabPanel>
+
+      {/* Sample Spectrum */}
+      <TabPanel value={tabValue} index={1}>
+        <div id="spectrum">
+          {spectrumData ? (
+            <ProcessedPlotly />
+          ) : (
+            <p>Please generate a Sample Spectrum and return here</p>
           )}
         </div>
       </TabPanel>
