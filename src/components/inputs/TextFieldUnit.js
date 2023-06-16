@@ -4,20 +4,33 @@ import TextField from "@mui/material/TextField";
 import InputAdornment from "@mui/material/InputAdornment";
 
 // redux
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
+
+// redux store
 import { updatePressure } from "../../features/parameterSlice";
 
-// this input component sets the pressure from 0 to 10 Bar
-export default function Pressure() {
+export default function TextFieldUnit({
+  formLabel,
+  store,
+  placeholder,
+  unit,
+  min,
+  max,
+  step,
+}) {
   const dispatch = useDispatch();
-  const { pressure } = useSelector((store) => store.parameter);
 
   const handleTextChange = (event) => {
-    dispatch(
-      updatePressure(
-        event.target.value === "" ? "" : Number(event.target.value)
-      )
-    );
+    switch (formLabel) {
+      case "Pressure":
+        dispatch(
+          updatePressure(
+            event.target.value === "" ? "" : Number(event.target.value)
+          )
+        );
+        break;
+      default:
+    }
   };
 
   return (
@@ -30,18 +43,18 @@ export default function Pressure() {
     >
       <TextField
         id="standard-number"
-        label="Pressure"
-        placeholder="Enter pressure "
+        label={formLabel}
+        placeholder={placeholder}
         type="number"
-        value={pressure}
+        value={store}
         onChange={handleTextChange}
         InputProps={{
           inputProps: {
-            min: 0.0001,
-            max: 10,
-            step: 0.0001,
+            min: min,
+            max: max,
+            step: step,
           },
-          endAdornment: <InputAdornment position="end">Bar</InputAdornment>,
+          endAdornment: <InputAdornment position="end">{unit}</InputAdornment>,
         }}
       />
     </Box>

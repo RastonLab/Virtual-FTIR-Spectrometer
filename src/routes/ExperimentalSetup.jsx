@@ -13,9 +13,9 @@ import { zeroFills } from "../dictionaries/zeroFillDict";
 // inputs
 import Dropdown from "../components/inputs/Dropdown";
 import Switch from "../components/inputs/Switch";
-import Pressure from "../components/inputs/Pressure";
 import Scan from "../components/inputs/Scan";
 import Wavenumber from "../components/inputs/Wavenumber";
+import TextFieldUnit from "../components/inputs/TextFieldUnit";
 
 // redux
 import { useSelector } from "react-redux";
@@ -52,7 +52,15 @@ export default function ExperimentalSetup() {
           </div>
 
           <div className="parameter">
-            <Pressure />
+            <TextFieldUnit
+              formLabel={"Pressure"}
+              store={pressure}
+              placeholder={"Enter pressure"}
+              unit={"Bar"}
+              min={0.0001}
+              max={10}
+              step={0.0001}
+            />
           </div>
 
           <div className="parameter">
