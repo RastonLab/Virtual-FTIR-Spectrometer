@@ -6,16 +6,12 @@ import { ProcessedPlotly } from "../components/ProcessedPlotly";
 import BackgroundPlotly from "../components/BackgroundPlotly";
 
 // inputs
-import Beamsplitter from "../components/inputs/Beamsplitter";
-import Detector from "../components/inputs/Detector";
-import Medium from "../components/inputs/Medium";
+import Switch from "../components/inputs/Switch";
 import Molecule from "../components/inputs/Molecule";
 import Pressure from "../components/inputs/Pressure";
 import Resolution from "../components/inputs/Resolution";
 import Scan from "../components/inputs/Scan";
-import Source from "../components/inputs/Source";
 import Wavenumber from "../components/inputs/Wavenumber";
-import Window from "../components/inputs/Window";
 import ZeroFill from "../components/inputs/ZeroFill";
 
 // redux
@@ -74,23 +70,58 @@ export default function ExperimentalSetup() {
         </div>
         <div className="col">
           <div className="parameter">
-            <Source parameter={source} />
+            <Switch
+              formLabel={"Source"}
+              optionOneLabel={"Globar"}
+              optionOneData={1700}
+              optionTwoLabel={"Tungsten"}
+              optionTwoData={3100}
+              store={source}
+            />
           </div>
 
           <div className="parameter">
-            <Beamsplitter parameter={beamsplitter} />
+            <Switch
+              formLabel={"Beamsplitter"}
+              optionOneLabel={"AR_ZnSe"}
+              optionOneData={"AR_ZnSe"}
+              optionTwoLabel={"AR_CaF2"}
+              optionTwoData={"AR_CaF2"}
+              store={beamsplitter}
+            />
           </div>
 
           <div className="parameter">
-            <Window parameter={window} />
+            <Switch
+              formLabel={"Cell Window"}
+              optionOneLabel={"ZnSe"}
+              optionOneData={"ZnSe"}
+              optionTwoLabel={"CaF2"}
+              optionTwoData={"CaF2"}
+              store={window}
+            />
           </div>
 
           <div className="parameter">
-            <Detector parameter={detector} />
+            <Switch
+              formLabel={"Detector"}
+              optionOneLabel={"MCT"}
+              optionOneData={"MCT"}
+              optionTwoLabel={"InSb"}
+              optionTwoData={"InSb"}
+              store={detector}
+            />
           </div>
 
           <div className="parameter">
-            <Medium parameter={medium} />
+            <Switch
+              formLabel={"Medium"}
+              optionOneLabel={"Vacuum"}
+              optionOneData={"Vacuum"}
+              optionTwoLabel={"Air"}
+              optionTwoData={"Air"}
+              store={medium}
+            />
           </div>
 
           <div className="fetch-zone">
