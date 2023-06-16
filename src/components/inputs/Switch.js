@@ -8,6 +8,8 @@ import { SwitchStyle } from "./SwitchStyle";
 
 // redux
 import { useDispatch } from "react-redux";
+
+// redux slice
 import {
   updateBeamsplitter,
   updateDetector,
