@@ -100,7 +100,7 @@ export default function ExperimentalSetup() {
               formLabel={"Beamsplitter"}
               optionOneLabel={"AR_ZnSe"}
               optionOneData={"AR_ZnSe"}
-              optionTwoLabel={"AR_CaF2"}
+              optionTwoLabel={"AR_CaF₂"}
               optionTwoData={"AR_CaF2"}
               store={beamsplitter}
             />
@@ -111,7 +111,7 @@ export default function ExperimentalSetup() {
               formLabel={"Cell Window"}
               optionOneLabel={"ZnSe"}
               optionOneData={"ZnSe"}
-              optionTwoLabel={"CaF2"}
+              optionTwoLabel={"CaF₂"}
               optionTwoData={"CaF2"}
               store={window}
             />
