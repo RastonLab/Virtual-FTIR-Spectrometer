@@ -5,34 +5,46 @@ import MenuItem from "@mui/material/MenuItem";
 import FormControl from "@mui/material/FormControl";
 import Select from "@mui/material/Select";
 
-// dictionaries
-import { zeroFills } from "../../dictionaries/zeroFillDict";
-
 // redux
-import { useDispatch, useSelector } from "react-redux";
-import { updateZeroFill } from "../../features/parameterSlice";
+import { useDispatch } from "react-redux";
 
-// this input component sets the zero filling to zero, one, or two
-export default function ZeroFill() {
+// redux slice
+import {
+  updateMolecule,
+  updateResolution,
+  updateZeroFill,
+} from "../../features/parameterSlice";
+
+export default function Dropdown({ dictionary, formLabel, store }) {
   const dispatch = useDispatch();
-  const { zeroFill } = useSelector((store) => store.parameter);
 
   const handleChange = (event) => {
-    dispatch(updateZeroFill(event.target.value));
+    switch (formLabel) {
+      case "Molecule":
+        dispatch(updateMolecule(event.target.value));
+        break;
+      case "Resolution":
+        dispatch(updateResolution(event.target.value));
+        break;
+      case "Zero Fill":
+        dispatch(updateZeroFill(event.target.value));
+        break;
+      default:
+    }
   };
 
   return (
     <Box sx={{ minWidth: 120 }}>
       <FormControl fullWidth>
-        <InputLabel id="demo-simple-select-label">Zero Fill</InputLabel>
+        <InputLabel id="demo-simple-select-label">{formLabel}</InputLabel>
         <Select
           labelId="demo-simple-select-label"
           id="demo-simple-select"
-          value={zeroFill}
-          label="zeroFill"
+          value={store}
+          label={formLabel}
           onChange={handleChange}
         >
-          {zeroFills.map((option) => (
+          {dictionary.map((option) => (
             <MenuItem key={option.value} value={option.value}>
               {option.label}
             </MenuItem>

@@ -5,14 +5,17 @@ import Fetch from "../components/Fetch";
 import { ProcessedPlotly } from "../components/ProcessedPlotly";
 import BackgroundPlotly from "../components/BackgroundPlotly";
 
+// dictionaries
+import { molecules } from "../dictionaries/moleculeDict";
+import { resolutions } from "../dictionaries/resolutionDict";
+import { zeroFills } from "../dictionaries/zeroFillDict";
+
 // inputs
+import Dropdown from "../components/inputs/Dropdown";
 import Switch from "../components/inputs/Switch";
-import Molecule from "../components/inputs/Molecule";
 import Pressure from "../components/inputs/Pressure";
-import Resolution from "../components/inputs/Resolution";
 import Scan from "../components/inputs/Scan";
 import Wavenumber from "../components/inputs/Wavenumber";
-import ZeroFill from "../components/inputs/ZeroFill";
 
 // redux
 import { useSelector } from "react-redux";
@@ -57,15 +60,27 @@ export default function ExperimentalSetup() {
           </div>
 
           <div className="parameter">
-            <Molecule />
+            <Dropdown
+              dictionary={molecules}
+              formLabel={"Molecule"}
+              store={molecule}
+            />
           </div>
 
           <div className="parameter">
-            <Resolution />
+            <Dropdown
+              dictionary={resolutions}
+              formLabel={"Resolution"}
+              store={resolution}
+            />
           </div>
 
           <div className="parameter">
-            <ZeroFill />
+            <Dropdown
+              dictionary={zeroFills}
+              formLabel={"Zero Fill"}
+              store={zeroFill}
+            />
           </div>
         </div>
         <div className="col">
