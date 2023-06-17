@@ -1,17 +1,23 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
+
+// components
+import App from "./App";
+import ExperimentalSetup from "./routes/ExperimentalSetup";
+import InstrumentWindow from "./routes/InstrumentWindow";
+import LandingPage from "./routes/LandingPage";
+import NotFound from "./components/NotFound";
+import SpectrumWindow from "./routes/SpectrumWindow";
+
+// redux
 import { Provider } from "react-redux";
+import { store } from "./redux/store";
+
+// router
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
-import App from "./App";
-import InstrumentWindow from "./routes/InstrumentWindow";
-import ExperimentalSetup from "./routes/ExperimentalSetup";
-import SpectrumWindow from "./routes/SpectrumWindow";
-import NotFound from "./components/NotFound";
-import LandingPage from "./routes/LandingPage";
-
+// style
 import "./index.css";
-import { store } from "./redux/store";
 
 // -------------------- react router --------------------
 const root = ReactDOM.createRoot(document.getElementById("root"));

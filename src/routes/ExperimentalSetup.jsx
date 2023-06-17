@@ -10,6 +10,9 @@ import { molecules } from "../dictionaries/moleculeDict";
 import { resolutions } from "../dictionaries/resolutionDict";
 import { zeroFills } from "../dictionaries/zeroFillDict";
 
+// functions
+import * as fetchURL from "../functions/fetchURL";
+
 // inputs
 import Dropdown from "../components/inputs/Dropdown";
 import DualInputSlider from "../components/inputs/DualInputSlider";
@@ -178,8 +181,7 @@ export default function ExperimentalSetup() {
                 window,
                 zeroFill,
               }}
-              // fetchURL={"http://localhost:5000/background"}
-              fetchURL={"https://api.ftir.rastonlab.org/background"}
+              fetchURL={fetchURL.BACKGROUND}
               buttonText={"Collect Background Sample"}
             />
             <Fetch
@@ -198,8 +200,7 @@ export default function ExperimentalSetup() {
                 window,
                 zeroFill,
               }}
-              // fetchURL={"http://localhost:5000/spectrum"}
-              fetchURL={"https://api.ftir.rastonlab.org/spectrum"}
+              fetchURL={fetchURL.SPECTRUM}
               buttonText="Collect Processed Spectrum"
             />
           </div>

@@ -1,11 +1,17 @@
 import React from "react";
+
+// components
+import MenuItems from "./components/menu/MenuItems";
+import { ReactComponent as RLLogo } from "./components/svgs/RastonLabLogo.svg";
+
+// dictionary
+import { menuItems } from "./dictionaries/menuItems";
+
+// router
 import { Outlet, Link } from "react-router-dom";
 
-import { menuItems } from "./dictionaries/menuItems";
-import MenuItems from "./components/menu/MenuItems";
-
+// style
 import "./style/App.css";
-import { ReactComponent as RLLogo } from "./components/svgs/RastonLabLogo.svg";
 
 export default function App() {
   return (

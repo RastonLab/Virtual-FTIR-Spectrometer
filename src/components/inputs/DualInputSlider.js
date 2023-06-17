@@ -1,5 +1,3 @@
-import * as React from "react";
-
 // mui
 import { styled } from "@mui/material/styles";
 import Box from "@mui/material/Box";

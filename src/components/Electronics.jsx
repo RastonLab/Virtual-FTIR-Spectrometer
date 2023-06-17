@@ -30,14 +30,17 @@ export default function Electronics() {
           <div className="grid">
             <label>
               Beamsplitter
-              <input value={beamsplitter} readOnly />
+              <input
+                value={beamsplitter === "AR_ZnSe" ? "AR_ZnSe" : "AR_CaF₂"}
+                readOnly
+              />
             </label>
           </div>
 
           <div className="grid">
             <label>
               Gas
-              <input value="294.15" readOnly />
+              <input value="294.15 K" readOnly />
             </label>
           </div>
 
