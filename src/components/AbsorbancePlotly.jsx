@@ -4,6 +4,9 @@ import React, { forwardRef, useState } from "react";
 import FetchPeaks from "./FetchPeaks";
 import Plot from "react-plotly.js";
 
+// functions
+import * as fetchURL from "../functions/fetchURL";
+
 // mui
 import { Dialog } from "@mui/material";
 import Box from "@mui/material/Box";
@@ -205,8 +208,7 @@ export const AbsorbancePlotly = forwardRef((props, ref) => {
                 upperBound: upperBound,
                 threshold: threshold,
               }}
-              // fetchURL={"http://localhost:5000/find_peaks"}
-              fetchURL={"https://api.ftir.rastonlab.org/find_peaks"}
+              fetchURL={fetchURL.FIND_PEAKS}
               buttonText={"Find Peaks"}
               openPopup={setOpen}
             />
