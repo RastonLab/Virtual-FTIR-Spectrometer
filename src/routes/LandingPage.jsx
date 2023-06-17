@@ -1,5 +1,6 @@
 import React from "react";
 
+// style
 import "../style/routes/LandingPage.css";
 
 // https://reactrouter.com/docs/en/v6/getting-started/concepts#defining-routes

@@ -1,9 +1,9 @@
 import React from "react";
 
 // components
-import Fetch from "../components/Fetch";
 import { ProcessedPlotly } from "../components/ProcessedPlotly";
 import BackgroundPlotly from "../components/BackgroundPlotly";
+import Fetch from "../components/Fetch";
 
 // dictionaries
 import { molecules } from "../dictionaries/moleculeDict";
@@ -12,10 +12,10 @@ import { zeroFills } from "../dictionaries/zeroFillDict";
 
 // inputs
 import Dropdown from "../components/inputs/Dropdown";
+import DualInputSlider from "../components/inputs/DualInputSlider";
+import SingleInputSlider from "../components/inputs/SingleInputSlider";
 import Switch from "../components/inputs/Switch";
 import TextFieldUnit from "../components/inputs/TextFieldUnit";
-import SingleInputSlider from "../components/inputs/SingleInputSlider";
-import DualInputSlider from "../components/inputs/DualInputSlider";
 
 // redux
 import { useSelector } from "react-redux";

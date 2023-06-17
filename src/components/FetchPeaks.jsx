@@ -13,7 +13,6 @@ import {
   activateProgress,
   deactivateProgress,
 } from "../features/progressSlice";
-
 import { updatePeaksData } from "../features/peaksDataSlice";
 
 // this component reaches out to the flask server with user parameters and receives X and Y coordinates to graph
@@ -57,7 +56,7 @@ export default function FetchPeaks({
             y: params.y,
             lowerbound: params.lowerBound,
             upperbound: params.upperBound,
-            threshold: params.threshold
+            threshold: params.threshold,
           }),
         });
 
@@ -72,7 +71,7 @@ export default function FetchPeaks({
           // display error message
           else {
             console.log("not sucess");
-            dispatch(updatePeaksData(data))
+            dispatch(updatePeaksData(data));
             dispatch(deactivateProgress());
             dispatch(activateError());
             dispatch(updateErrorText(String(data.error)));

@@ -1,10 +1,13 @@
 import * as React from "react";
-import Typography from "@mui/material/Typography";
-import Stack from "@mui/material/Stack";
+
+// components
+import { SwitchStyle } from "./SwitchStyle";
+
+// mui
 import FormControl from "@mui/material/FormControl";
 import FormLabel from "@mui/material/FormLabel";
-
-import { SwitchStyle } from "./SwitchStyle";
+import Stack from "@mui/material/Stack";
+import Typography from "@mui/material/Typography";
 
 // redux
 import { useDispatch } from "react-redux";
