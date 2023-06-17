@@ -1,22 +1,21 @@
 import React from "react";
 
 // components
-import Fetch from "../components/Fetch";
 import { ProcessedPlotly } from "../components/ProcessedPlotly";
 import BackgroundPlotly from "../components/BackgroundPlotly";
+import Fetch from "../components/Fetch";
+
+// dictionaries
+import { molecules } from "../dictionaries/moleculeDict";
+import { resolutions } from "../dictionaries/resolutionDict";
+import { zeroFills } from "../dictionaries/zeroFillDict";
 
 // inputs
-import Beamsplitter from "../components/inputs/Beamsplitter";
-import Detector from "../components/inputs/Detector";
-import Medium from "../components/inputs/Medium";
-import Molecule from "../components/inputs/Molecule";
-import Pressure from "../components/inputs/Pressure";
-import Resolution from "../components/inputs/Resolution";
-import Scan from "../components/inputs/Scan";
-import Source from "../components/inputs/Source";
-import Wavenumber from "../components/inputs/Wavenumber";
-import Window from "../components/inputs/Window";
-import ZeroFill from "../components/inputs/ZeroFill";
+import Dropdown from "../components/inputs/Dropdown";
+import DualInputSlider from "../components/inputs/DualInputSlider";
+import SingleInputSlider from "../components/inputs/SingleInputSlider";
+import Switch from "../components/inputs/Switch";
+import TextFieldUnit from "../components/inputs/TextFieldUnit";
 
 // redux
 import { useSelector } from "react-redux";
@@ -49,48 +48,117 @@ export default function ExperimentalSetup() {
       <div id="form">
         <div className="col">
           <div className="parameter">
-            <Wavenumber />
+            <DualInputSlider
+              formLabel={"Wavenumber range"}
+              storeMin={waveMin}
+              storeMax={waveMax}
+              unit={"cm⁻¹"}
+              min={400}
+              max={12500}
+              step={10}
+            />
           </div>
 
           <div className="parameter">
-            <Pressure />
+            <TextFieldUnit
+              formLabel={"Pressure"}
+              store={pressure}
+              placeholder={"Enter pressure"}
+              unit={"Bar"}
+              min={0.0001}
+              max={10}
+              step={0.0001}
+            />
           </div>
 
           <div className="parameter">
-            <Scan />
+            <SingleInputSlider
+              formLabel={"Scans"}
+              store={scan}
+              min={1}
+              max={10000}
+              step={10}
+            />
           </div>
 
           <div className="parameter">
-            <Molecule />
+            <Dropdown
+              dictionary={molecules}
+              formLabel={"Molecule"}
+              store={molecule}
+            />
           </div>
 
           <div className="parameter">
-            <Resolution />
+            <Dropdown
+              dictionary={resolutions}
+              formLabel={"Resolution"}
+              store={resolution}
+            />
           </div>
 
           <div className="parameter">
-            <ZeroFill />
+            <Dropdown
+              dictionary={zeroFills}
+              formLabel={"Zero Fill"}
+              store={zeroFill}
+            />
           </div>
         </div>
         <div className="col">
           <div className="parameter">
-            <Source parameter={source} />
+            <Switch
+              formLabel={"Source"}
+              optionOneLabel={"Globar"}
+              optionOneData={1700}
+              optionTwoLabel={"Tungsten"}
+              optionTwoData={3100}
+              store={source}
+            />
           </div>
 
           <div className="parameter">
-            <Beamsplitter parameter={beamsplitter} />
+            <Switch
+              formLabel={"Beamsplitter"}
+              optionOneLabel={"AR_ZnSe"}
+              optionOneData={"AR_ZnSe"}
+              optionTwoLabel={"AR_CaF₂"}
+              optionTwoData={"AR_CaF2"}
+              store={beamsplitter}
+            />
           </div>
 
           <div className="parameter">
-            <Window parameter={window} />
+            <Switch
+              formLabel={"Cell Window"}
+              optionOneLabel={"ZnSe"}
+              optionOneData={"ZnSe"}
+              optionTwoLabel={"CaF₂"}
+              optionTwoData={"CaF2"}
+              store={window}
+            />
           </div>
 
           <div className="parameter">
-            <Detector parameter={detector} />
+            <Switch
+              formLabel={"Detector"}
+              optionOneLabel={"MCT"}
+              optionOneData={"MCT"}
+              optionTwoLabel={"InSb"}
+              optionTwoData={"InSb"}
+              store={detector}
+            />
           </div>
 
           <div className="parameter">
-            <Medium parameter={medium} />
+            <Switch
+              formLabel={"Medium"}
+              optionOneLabel={"Vacuum"}
+              optionOneData={"Vacuum"}
+              optionTwoLabel={"Air"}
+              optionTwoData={"Air"}
+              store={medium}
+            />
           </div>
 
           <div className="fetch-zone">

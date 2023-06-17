@@ -2,9 +2,9 @@ import React, { useState } from "react";
 
 // components
 import { Dialog } from "@mui/material";
-import Main from "../components/svgs/InstrumentSVG";
-import Electronics from "../components/Electronics";
 import { ProcessedPlotly } from "../components/ProcessedPlotly";
+import Electronics from "../components/Electronics";
+import Main from "../components/svgs/InstrumentSVG";
 
 // dictionaries
 import { toolTips } from "../dictionaries/SVGLibrary";

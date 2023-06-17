@@ -1,7 +1,10 @@
 import React, { forwardRef, useState } from "react";
 
 // components
+import FetchPeaks from "./FetchPeaks";
 import Plot from "react-plotly.js";
+
+// mui
 import { Dialog } from "@mui/material";
 import Box from "@mui/material/Box";
 import TextField from "@mui/material/TextField";
@@ -9,13 +12,12 @@ import TextField from "@mui/material/TextField";
 // redux
 import { useSelector, useDispatch } from "react-redux";
 
+// redux slice
+import { updateAbsorbanceData } from "../features/absorbanceDataSlice";
+
 // style
 import "../style/components/Plotly.css";
 import "../style/components/Absorbance.css";
-
-import FetchPeaks from "./FetchPeaks";
-import { updateAbsorbanceData } from "../features/absorbanceDataSlice";
-
 
 // this component uses the plotly library to graph processed spectrum data
 export const AbsorbancePlotly = forwardRef((props, ref) => {
@@ -28,7 +30,6 @@ export const AbsorbancePlotly = forwardRef((props, ref) => {
   );
   const { progress } = useSelector((store) => store.progress);
 
-
   const dispatch = useDispatch();
 
   const [open, setOpen] = useState(false);
@@ -37,12 +38,11 @@ export const AbsorbancePlotly = forwardRef((props, ref) => {
   const [upperBound, setUpperBound] = useState(waveMaxSaved);
 
   if (spectrumData && backgroundData && !absorbanceData) {
-
     const newY = [spectrumData.x.length];
 
     for (let i = 0; i < spectrumData.x.length; i++) {
-
-      newY[i] = -1 * Math.log(Math.abs(spectrumData.y[i] / backgroundData.y[i]));
+      newY[i] =
+        -1 * Math.log(Math.abs(spectrumData.y[i] / backgroundData.y[i]));
 
       if (newY[i] > 5) {
         newY[i] = 5;
@@ -51,14 +51,14 @@ export const AbsorbancePlotly = forwardRef((props, ref) => {
       if (newY[i] < -5) {
         newY[i] = -5;
       }
-
     }
 
-    dispatch(updateAbsorbanceData({
-      x: spectrumData.x,
-      y: newY,
-    }));
-
+    dispatch(
+      updateAbsorbanceData({
+        x: spectrumData.x,
+        y: newY,
+      })
+    );
   }
 
   if (absorbanceData) {
@@ -106,86 +106,92 @@ export const AbsorbancePlotly = forwardRef((props, ref) => {
           />
           {/* End Graph */}
         </div>
-        
+
         <div className="row">
           <div className="absorb-col">
             <div className="row">
               {/* Lower Bound Box */}
               <Box
-                    sx={{
-                      "& .MuiTextField-root": { m: 1, width: "25ch" },
-                    }}
-                    noValidate
-                    autoComplete="off"
-                  >
-                    <TextField
-                      id="standard-number"
-                      label="Lower Domain Bound"
-                      placeholder="Enter Lower Bound"
-                      type="number"
-                      value={lowerBound}
-                      onChange={(e) => {setLowerBound(e.target.value);}}
-                      InputProps={{
-                        inputProps: {
-                          min: waveMinSaved,
-                          max: waveMaxSaved,
-                          // step: 0.0001,
-                        },
-                      }}
-                    />
+                sx={{
+                  "& .MuiTextField-root": { m: 1, width: "25ch" },
+                }}
+                noValidate
+                autoComplete="off"
+              >
+                <TextField
+                  id="standard-number"
+                  label="Lower Domain Bound"
+                  placeholder="Enter Lower Bound"
+                  type="number"
+                  value={lowerBound}
+                  onChange={(e) => {
+                    setLowerBound(e.target.value);
+                  }}
+                  InputProps={{
+                    inputProps: {
+                      min: waveMinSaved,
+                      max: waveMaxSaved,
+                      // step: 0.0001,
+                    },
+                  }}
+                />
               </Box>
               {/* End Lower Bound Box */}
 
               {/* Lower Upper Box */}
               <Box
-                    sx={{
-                      "& .MuiTextField-root": { m: 1, width: "25ch" },
-                    }}
-                    noValidate
-                    autoComplete="off"
-                  >
-                    <TextField
-                      id="standard-number"
-                      label="Upper Domain Bound"
-                      placeholder="Enter Upper Bound"
-                      type="number"
-                      value={upperBound}
-                      onChange={(e) => {setUpperBound(e.target.value);}}
-                      InputProps={{
-                        inputProps: {
-                          min: waveMinSaved,
-                          max: waveMaxSaved,
-                          // step: 0.0001,
-                        },
-                      }}
-                    />
+                sx={{
+                  "& .MuiTextField-root": { m: 1, width: "25ch" },
+                }}
+                noValidate
+                autoComplete="off"
+              >
+                <TextField
+                  id="standard-number"
+                  label="Upper Domain Bound"
+                  placeholder="Enter Upper Bound"
+                  type="number"
+                  value={upperBound}
+                  onChange={(e) => {
+                    setUpperBound(e.target.value);
+                  }}
+                  InputProps={{
+                    inputProps: {
+                      min: waveMinSaved,
+                      max: waveMaxSaved,
+                      // step: 0.0001,
+                    },
+                  }}
+                />
               </Box>
               {/* End Upper Bound Box */}
             </div>
             {/* Threshold Input */}
             <Box
-                  sx={{
-                    "& .MuiTextField-root": { m: 1, width: "25ch" },
-                  }}
-                  noValidate
-                  autoComplete="off"
-                  className="row"
-                >
-                  <TextField
-                    id="standard-number"
-                    label="Threshold"
-                    placeholder="Enter threshold "
-                    type="number"
-                    value={threshold}
-                    onChange={(e) => {setThreshold(e.target.value);}}
-                    InputProps={{
-                      inputProps: {
-                        min: 0.0001,
-                        max: 10,
-                        step: 0.0001,
-                      },
-                    }}
-                  />
+              sx={{
+                "& .MuiTextField-root": { m: 1, width: "25ch" },
+              }}
+              noValidate
+              autoComplete="off"
+              className="row"
+            >
+              <TextField
+                id="standard-number"
+                label="Threshold"
+                placeholder="Enter threshold "
+                type="number"
+                value={threshold}
+                onChange={(e) => {
+                  setThreshold(e.target.value);
+                }}
+                InputProps={{
+                  inputProps: {
+                    min: 0.0001,
+                    max: 10,
+                    step: 0.0001,
+                  },
+                }}
+              />
             </Box>
             {/* End Threshold Input */}
 
@@ -197,7 +203,7 @@ export const AbsorbancePlotly = forwardRef((props, ref) => {
                 y: absorbanceData.y,
                 lowerBound: lowerBound,
                 upperBound: upperBound,
-                threshold: threshold
+                threshold: threshold,
               }}
               // fetchURL={"http://localhost:5000/find_peaks"}
               fetchURL={"https://api.ftir.rastonlab.org/find_peaks"}
@@ -207,41 +213,44 @@ export const AbsorbancePlotly = forwardRef((props, ref) => {
             {/* End Fetch Peaks */}
           </div>
 
-        {/* Displays data from the server if there were no errors */}
-        <div className="absorb-col">
-          {(progress && <div id="spinner"/>) || (peaksData && !peaksData.error && (
-            <div id="data">
-              <h1>Absorbance Peaks</h1>
-              <div className="display">
-                {Object.keys(peaksData.peaks).map((key) => {
-                  return <p className="content">{`Peak: ${key} Intensity: ${peaksData.peaks[key]}`}</p>;
-                })}
-              </div>
-            </div>
-            // {/* </Dialog> */}
-          ))}
-        </div>
-        {/* End Data Display */}
+          {/* Displays data from the server if there were no errors */}
+          <div className="absorb-col">
+            {(progress && <div id="spinner" />) ||
+              (peaksData && !peaksData.error && (
+                <div id="data">
+                  <h1>Absorbance Peaks</h1>
+                  <div className="display">
+                    {Object.keys(peaksData.peaks).map((key) => {
+                      return (
+                        <p className="content">{`Peak: ${key} Intensity: ${peaksData.peaks[key]}`}</p>
+                      );
+                    })}
+                  </div>
+                </div>
+                // {/* </Dialog> */}
+              ))}
+          </div>
+          {/* End Data Display */}
         </div>
 
         {/* Displays any error message sent back from the sever */}
         {peaksData && peaksData.error && (
-
           <Dialog
-          className="popup"
-          onClose={() => {
-            setOpen(false);
-          }}
-          open={open}
+            className="popup"
+            onClose={() => {
+              setOpen(false);
+            }}
+            open={open}
           >
-          <h1>Absorbance Peaks</h1>
+            <h1>Absorbance Peaks</h1>
 
-          <p>There was an error in finding the peaks of this data. Please adust your experiment settings and try again.</p>
-          
+            <p>
+              There was an error in finding the peaks of this data. Please adust
+              your experiment settings and try again.
+            </p>
           </Dialog>
         )}
         {/* End Error Display */}
-
       </div>
     );
   } else {

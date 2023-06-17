@@ -1,5 +1,11 @@
 import { React, useRef, useState } from "react";
+
+// components
+import { ProcessedPlotly } from "./ProcessedPlotly";
 import { useReactToPrint } from "react-to-print";
+import ExperimentalSetup from "../routes/ExperimentalSetup";
+
+// mui
 import {
   RadioGroup,
   FormControl,
@@ -7,13 +13,8 @@ import {
   Radio,
 } from "@mui/material";
 
-// components
-import ExperimentalSetup from "../routes/ExperimentalSetup";
-import { ProcessedPlotly } from "./ProcessedPlotly";
-
 // style
 import "../style/components/Print.css";
-
 
 // this component is used to print a generated spectrum and user inputs
 export default function Print() {

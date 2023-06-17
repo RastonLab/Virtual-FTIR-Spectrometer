@@ -1,7 +1,10 @@
 import React, { useState, useEffect, useRef } from "react";
+
+// components
 import Dropdown from "./Dropdown";
 
-import "../../style/components/menu/MenuItems.css"
+// style
+import "../../style/components/menu/MenuItems.css";
 
 const MenuItems = ({ items }) => {
   const [dropdown, setDropdown] = useState(false);
@@ -24,14 +27,19 @@ const MenuItems = ({ items }) => {
 
   const onMouseEnter = () => {
     window.innerWidth > 960 && setDropdown(true);
-   };
-   
-   const onMouseLeave = () => {
+  };
+
+  const onMouseLeave = () => {
     window.innerWidth > 960 && setDropdown(false);
-   };
+  };
 
   return (
-    <li className="menu-items" ref={ref} onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave} >
+    <li
+      className="menu-items"
+      ref={ref}
+      onMouseEnter={onMouseEnter}
+      onMouseLeave={onMouseLeave}
+    >
       {items.submenu ? (
         <>
           <button

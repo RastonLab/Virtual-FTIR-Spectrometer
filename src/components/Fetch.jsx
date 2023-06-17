@@ -30,10 +30,8 @@ export default function Fetch({ type, params, fetchURL, buttonText }) {
   const { progress } = useSelector((store) => store.progress);
 
   const fetchLinode = async () => {
-
     // Allows the user to generate new absorbance data (there was a recursive issue in the Absorbance Plotly)
     dispatch(updateAbsorbanceData(null));
-
 
     // remove any errors (if existing) and start a progress spinner
     dispatch(deactivateError());

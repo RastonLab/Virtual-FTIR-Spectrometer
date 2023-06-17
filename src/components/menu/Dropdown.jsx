@@ -1,8 +1,13 @@
 import React from "react";
-import { Link } from "react-router-dom";
+
+// components
 import Popup from "../Popup";
 
-import "../../style/components/menu/Dropdown.css"
+// router
+import { Link } from "react-router-dom";
+
+// style
+import "../../style/components/menu/Dropdown.css";
 
 const Dropdown = ({ submenus, dropdown }) => {
   return (
