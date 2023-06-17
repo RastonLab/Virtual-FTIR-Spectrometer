@@ -13,9 +13,9 @@ import { zeroFills } from "../dictionaries/zeroFillDict";
 // inputs
 import Dropdown from "../components/inputs/Dropdown";
 import Switch from "../components/inputs/Switch";
-import Scan from "../components/inputs/Scan";
 import Wavenumber from "../components/inputs/Wavenumber";
 import TextFieldUnit from "../components/inputs/TextFieldUnit";
+import SingleInputSlider from "../components/inputs/SingleInputSlider";
 
 // redux
 import { useSelector } from "react-redux";
@@ -64,7 +64,13 @@ export default function ExperimentalSetup() {
           </div>
 
           <div className="parameter">
-            <Scan />
+            <SingleInputSlider
+              formLabel={"Scans"}
+              store={scan}
+              min={1}
+              max={10000}
+              step={10}
+            />
           </div>
 
           <div className="parameter">

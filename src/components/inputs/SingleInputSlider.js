@@ -8,40 +8,60 @@ import MuiInput from "@mui/material/Input";
 import ShowChartIcon from "@mui/icons-material/ShowChart";
 
 // redux
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import { updateScan } from "../../features/parameterSlice";
 
 const Input = styled(MuiInput)`
   width: 42px;
 `;
 
-// this input component sets the number of times the spectrum generation function runs
-export default function Scan() {
+export default function Scan({ formLabel, store, min, max, step }) {
   const dispatch = useDispatch();
-  const { scan } = useSelector((store) => store.parameter);
 
   const handleSliderChange = (event, newValue) => {
-    dispatch(updateScan(newValue));
+    switch (formLabel) {
+      case "Scans":
+        dispatch(updateScan(newValue));
+        break;
+      default:
+    }
   };
 
   const handleInputChange = (event) => {
-    dispatch(
-      updateScan(event.target.value === "" ? "" : Number(event.target.value))
-    );
+    switch (formLabel) {
+      case "Scans":
+        dispatch(
+          updateScan(
+            event.target.value === "" ? "" : Number(event.target.value)
+          )
+        );
+        break;
+      default:
+    }
   };
 
   const handleBlur = () => {
-    if (scan < 1) {
-      dispatch(updateScan(1));
-    } else if (scan > 10000) {
-      dispatch(updateScan(10000));
+    if (store < 1) {
+      switch (formLabel) {
+        case "Scans":
+          dispatch(updateScan(1));
+          break;
+        default:
+      }
+    } else if (store > 10000) {
+      switch (formLabel) {
+        case "Scans":
+          dispatch(updateScan(10000));
+          break;
+        default:
+      }
     }
   };
 
   return (
     <Box sx={{ width: 300 }}>
       <Typography id="input-slider" gutterBottom>
-        Number of Scans
+        {formLabel}
       </Typography>
       <Grid container spacing={2} alignItems="center">
         <Grid item>
@@ -49,9 +69,9 @@ export default function Scan() {
         </Grid>
         <Grid item xs>
           <Slider
-            value={typeof scan === "number" ? scan : 1}
-            min={1}
-            max={10000}
+            value={typeof store === "number" ? store : min}
+            min={min}
+            max={max}
             onChange={handleSliderChange}
             aria-labelledby={"input-slider"}
           />
@@ -59,14 +79,14 @@ export default function Scan() {
         <Grid item>
           <Input
             sx={{ width: "75%" }}
-            value={scan}
+            value={store}
             size="small"
             onChange={handleInputChange}
             onBlur={handleBlur}
             inputProps={{
-              step: 10,
-              min: 1,
-              max: 10000,
+              step: step,
+              min: min,
+              max: max,
               type: "number",
               "aria-labelledby": "input-slider",
             }}
