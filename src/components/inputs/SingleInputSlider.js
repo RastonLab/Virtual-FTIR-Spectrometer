@@ -17,7 +17,13 @@ const Input = styled(MuiInput)`
   width: 42px;
 `;
 
-export default function Scan({ formLabel, store, min, max, step }) {
+export default function SingleInputSlider({
+  formLabel,
+  store,
+  min,
+  max,
+  step,
+}) {
   const dispatch = useDispatch();
 
   const handleSliderChange = (event, newValue) => {
