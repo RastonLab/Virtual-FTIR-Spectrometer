@@ -9,6 +9,8 @@ import ShowChartIcon from "@mui/icons-material/ShowChart";
 
 // redux
 import { useDispatch } from "react-redux";
+
+// redux slice
 import { updateScan } from "../../features/parameterSlice";
 
 const Input = styled(MuiInput)`
