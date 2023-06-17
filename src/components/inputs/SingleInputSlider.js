@@ -71,11 +71,9 @@ export default function SingleInputSlider({
       <Typography id="input-slider" gutterBottom>
         {formLabel}
       </Typography>
-      <Grid container spacing={2} alignItems="center">
-        <Grid item>
-          <ShowChartIcon />
-        </Grid>
+      <Grid alignItems="center">
         <Grid item xs>
+          <ShowChartIcon />
           <Slider
             value={typeof store === "number" ? store : min}
             min={min}
