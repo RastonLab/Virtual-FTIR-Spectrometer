@@ -49,17 +49,17 @@ export default function SingleInputSlider({
   };
 
   const handleBlur = () => {
-    if (store < 1) {
+    if (store < min) {
       switch (formLabel) {
         case "Scans":
-          dispatch(updateScan(1));
+          dispatch(updateScan(min));
           break;
         default:
       }
-    } else if (store > 10000) {
+    } else if (store > max) {
       switch (formLabel) {
         case "Scans":
-          dispatch(updateScan(10000));
+          dispatch(updateScan(max));
           break;
         default:
       }
