@@ -1,5 +1,3 @@
-import * as React from "react";
-
 // components
 import { SwitchStyle } from "./SwitchStyle";
 

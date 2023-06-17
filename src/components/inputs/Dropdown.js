@@ -1,5 +1,3 @@
-import * as React from "react";
-
 // mui
 import Box from "@mui/material/Box";
 import FormControl from "@mui/material/FormControl";
