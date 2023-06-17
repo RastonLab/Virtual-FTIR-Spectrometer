@@ -13,9 +13,9 @@ import { zeroFills } from "../dictionaries/zeroFillDict";
 // inputs
 import Dropdown from "../components/inputs/Dropdown";
 import Switch from "../components/inputs/Switch";
-import Wavenumber from "../components/inputs/Wavenumber";
 import TextFieldUnit from "../components/inputs/TextFieldUnit";
 import SingleInputSlider from "../components/inputs/SingleInputSlider";
+import DualInputSlider from "../components/inputs/DualInputSlider";
 
 // redux
 import { useSelector } from "react-redux";
@@ -48,7 +48,15 @@ export default function ExperimentalSetup() {
       <div id="form">
         <div className="col">
           <div className="parameter">
-            <Wavenumber />
+            <DualInputSlider
+              formLabel={"Wavenumber range"}
+              storeMin={waveMin}
+              storeMax={waveMax}
+              unit={"cm⁻¹"}
+              min={400}
+              max={12500}
+              step={10}
+            />
           </div>
 
           <div className="parameter">
