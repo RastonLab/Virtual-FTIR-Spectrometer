@@ -1,7 +1,7 @@
 // mui
 import { styled } from "@mui/material/styles";
 import Grid from "@mui/material/Grid";
-import MuiInput from "@mui/material/Input";
+import Input from "@mui/material/Input";
 import Slider from "@mui/material/Slider";
 import Typography from "@mui/material/Typography";
 
@@ -10,10 +10,6 @@ import { useDispatch } from "react-redux";
 
 // redux slice
 import { updateWaveMin, updateWaveMax } from "../../features/parameterSlice";
-
-const Input = styled(MuiInput)`
-  width: 52px;
-`;
 
 export default function DualInputSlider({
   formLabel,
