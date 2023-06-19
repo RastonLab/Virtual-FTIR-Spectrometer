@@ -52,10 +52,9 @@ export default function ExperimentalSetup() {
         <div className="col">
           <div className="parameter">
             <DualInputSlider
-              formLabel={"Wavenumber range"}
+              formLabel={"Wavenumber range (cm⁻¹)"}
               storeMin={waveMin}
               storeMax={waveMax}
-              unit={"cm⁻¹"}
               min={400}
               max={12500}
               step={10}
