@@ -1,9 +1,6 @@
 // mui
-import { styled } from "@mui/material/styles";
-import Box from "@mui/material/Box";
 import Grid from "@mui/material/Grid";
-import InputAdornment from "@mui/material/InputAdornment";
-import MuiInput from "@mui/material/Input";
+import Input from "@mui/material/Input";
 import Slider from "@mui/material/Slider";
 import Typography from "@mui/material/Typography";
 
@@ -13,15 +10,10 @@ import { useDispatch } from "react-redux";
 // redux slice
 import { updateWaveMin, updateWaveMax } from "../../features/parameterSlice";
 
-const Input = styled(MuiInput)`
-  width: 52px;
-`;
-
 export default function DualInputSlider({
   formLabel,
   storeMin,
   storeMax,
-  unit,
   min,
   max,
   step,
@@ -30,7 +22,7 @@ export default function DualInputSlider({
 
   const handleSliderChange = (event, newValue) => {
     switch (formLabel) {
-      case "Wavenumber range":
+      case "Wavenumber range (cm⁻¹)":
         dispatch(updateWaveMin(newValue[0]));
         dispatch(updateWaveMax(newValue[1]));
         break;
@@ -40,7 +32,7 @@ export default function DualInputSlider({
 
   const handleInputChangeMin = (event) => {
     switch (formLabel) {
-      case "Wavenumber range":
+      case "Wavenumber range (cm⁻¹)":
         dispatch(
           updateWaveMin(
             event.target.value === "" ? "" : Number(event.target.value)
@@ -53,7 +45,7 @@ export default function DualInputSlider({
 
   const handleInputChangeMax = (event) => {
     switch (formLabel) {
-      case "Wavenumber range":
+      case "Wavenumber range (cm⁻¹)":
         dispatch(
           updateWaveMax(
             event.target.value === "" ? "" : Number(event.target.value)
@@ -70,7 +62,7 @@ export default function DualInputSlider({
     }
     if (storeMin < min) {
       switch (formLabel) {
-        case "Wavenumber range":
+        case "Wavenumber range (cm⁻¹)":
           dispatch(updateWaveMin(min));
           break;
         default:
@@ -78,7 +70,7 @@ export default function DualInputSlider({
     }
     if (storeMax > max) {
       switch (formLabel) {
-        case "Wavenumber range":
+        case "Wavenumber range (cm⁻¹)":
           dispatch(updateWaveMax(max));
           break;
         default:
@@ -87,21 +79,16 @@ export default function DualInputSlider({
   };
 
   return (
-    <Box sx={{ width: 300 }}>
+    <div>
       <Typography id="input-slider" gutterBottom>
         {formLabel}
       </Typography>
-      <Grid alignItems="center">
+
+      <Grid container spacing={2} alignItems="center">
         <Grid item>
           <Input
-            id="standard-adornment-weight"
-            endAdornment={
-              <InputAdornment position="end">{unit}</InputAdornment>
-            }
-            aria-describedby="standard-weight-helper-text"
-            sx={{ width: "75%" }}
+            sx={{ minWidth: "75px", maxWidth: "75px" }}
             value={storeMin}
-            size="small"
             onChange={handleInputChangeMin}
             onBlur={handleBlur}
             inputProps={{
@@ -109,12 +96,13 @@ export default function DualInputSlider({
               min: min,
               max: max,
               type: "number",
-              "aria-labelledby": "input-slider",
             }}
           />
         </Grid>
-        <Grid item xs>
+
+        <Grid item>
           <Slider
+            sx={{ minWidth: "150px" }}
             value={[
               storeMin === "" ? min : storeMin,
               storeMax === "" ? max : storeMax,
@@ -122,19 +110,14 @@ export default function DualInputSlider({
             min={min}
             max={max}
             onChange={handleSliderChange}
-            aria-labelledby={"input-slider"}
+            aria-labelledby="input-slider"
           />
         </Grid>
+
         <Grid item>
           <Input
-            id="standard-adornment-weight"
-            endAdornment={
-              <InputAdornment position="end">{unit}</InputAdornment>
-            }
-            aria-describedby="standard-weight-helper-text"
-            sx={{ width: "75%" }}
+            sx={{ minWidth: "75px", maxWidth: "75px" }}
             value={storeMax}
-            size="small"
             onChange={handleInputChangeMax}
             onBlur={handleBlur}
             inputProps={{
@@ -142,11 +125,10 @@ export default function DualInputSlider({
               min: min,
               max: max,
               type: "number",
-              "aria-labelledby": "input-slider",
             }}
           />
         </Grid>
       </Grid>
-    </Box>
+    </div>
   );
 }

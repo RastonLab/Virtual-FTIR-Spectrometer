@@ -1,5 +1,4 @@
 // mui
-import Box from "@mui/material/Box";
 import InputAdornment from "@mui/material/InputAdornment";
 import TextField from "@mui/material/TextField";
 
@@ -34,15 +33,9 @@ export default function TextFieldUnit({
   };
 
   return (
-    <Box
-      sx={{
-        "& .MuiTextField-root": { m: 1, width: "25ch" },
-      }}
-      noValidate
-      autoComplete="off"
-    >
+    <div>
       <TextField
-        id="standard-number"
+        sx={{ maxWidth: "175px" }}
         label={formLabel}
         placeholder={placeholder}
         type="number"
@@ -57,6 +50,6 @@ export default function TextFieldUnit({
           endAdornment: <InputAdornment position="end">{unit}</InputAdornment>,
         }}
       />
-    </Box>
+    </div>
   );
 }
