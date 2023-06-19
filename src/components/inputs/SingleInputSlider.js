@@ -1,8 +1,6 @@
 // mui
-import { styled } from "@mui/material/styles";
-import Box from "@mui/material/Box";
 import Grid from "@mui/material/Grid";
-import MuiInput from "@mui/material/Input";
+import Input from "@mui/material/Input";
 import ShowChartIcon from "@mui/icons-material/ShowChart";
 import Slider from "@mui/material/Slider";
 import Typography from "@mui/material/Typography";
@@ -12,10 +10,6 @@ import { useDispatch } from "react-redux";
 
 // redux slice
 import { updateScan } from "../../features/parameterSlice";
-
-const Input = styled(MuiInput)`
-  width: 42px;
-`;
 
 export default function SingleInputSlider({
   formLabel,
@@ -67,14 +61,18 @@ export default function SingleInputSlider({
   };
 
   return (
-    <Box sx={{ width: 300 }}>
+    <div>
       <Typography id="input-slider" gutterBottom>
         {formLabel}
       </Typography>
-      <Grid alignItems="center">
-        <Grid item xs>
+
+      <Grid container spacing={2} alignItems="center">
+        <Grid item>
           <ShowChartIcon />
+        </Grid>
+        <Grid item>
           <Slider
+            sx={{ minWidth: "200px" }}
             value={typeof store === "number" ? store : min}
             min={min}
             max={max}
@@ -84,7 +82,7 @@ export default function SingleInputSlider({
         </Grid>
         <Grid item>
           <Input
-            sx={{ width: "75%" }}
+            sx={{ minWidth: "75px", maxWidth: "75px" }}
             value={store}
             size="small"
             onChange={handleInputChange}
@@ -94,11 +92,10 @@ export default function SingleInputSlider({
               min: min,
               max: max,
               type: "number",
-              "aria-labelledby": "input-slider",
             }}
           />
         </Grid>
       </Grid>
-    </Box>
+    </div>
   );
 }
