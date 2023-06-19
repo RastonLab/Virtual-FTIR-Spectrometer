@@ -1,5 +1,4 @@
 // mui
-import { styled } from "@mui/material/styles";
 import Grid from "@mui/material/Grid";
 import Input from "@mui/material/Input";
 import Slider from "@mui/material/Slider";
