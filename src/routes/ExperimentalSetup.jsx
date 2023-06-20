@@ -78,7 +78,7 @@ export default function ExperimentalSetup() {
               formLabel={"Scans"}
               store={scan}
               min={1}
-              max={10000}
+              max={256}
               step={10}
             />
           </div>
