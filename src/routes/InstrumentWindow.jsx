@@ -42,7 +42,6 @@ export default function InstrumentWindow() {
   ];
 
   const handleClick = (event) => {
-    console.log(event.target.parentElement.id);
     if (!badID.includes(event.target.parentElement.id)) {
       setElement(event.target.parentElement.id);
       setToggled(!toggled);
