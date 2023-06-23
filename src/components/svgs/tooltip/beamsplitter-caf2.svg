@@ -1,0 +1,15 @@
+<svg viewBox="0 0 280.301 45.301" version="1.1" id="svg19846" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg">
+    <defs id="defs19843">
+        <linearGradient xlink:href="#linearGradient15256" id="linearGradient13376" gradientUnits="userSpaceOnUse" gradientTransform="matrix(1.97707 0 0 3.08712 -622.69 306.058)" x1="326.345" y1="-188.391" x2="326.345" y2="-101.093"/>
+        <linearGradient id="linearGradient15256">
+            <stop offset=".05" id="stop15246" stop-color="#787878" stop-opacity="1"/>
+            <stop offset=".245" id="stop15248" stop-color="#9c9c9c" stop-opacity="1"/>
+            <stop offset=".498" id="stop15250" stop-color="#e2e2e2" stop-opacity="1"/>
+            <stop offset=".75" id="stop15252" stop-color="#9c9c9c" stop-opacity="1"/>
+            <stop offset=".95" id="stop15254" stop-color="#787878" stop-opacity="1"/>
+        </linearGradient>
+    </defs>
+    <g id="beamsplitter-caf2" transform="translate(-.722 .893)">
+        <path id="rect32961-3-3" transform="rotate(90)" fill="url(#linearGradient13376)" fill-opacity="1" stroke="#0047af" stroke-width="10.301" stroke-dasharray="none" stroke-opacity="1" paint-order="markers stroke fill" d="M4.257-275.872h35v270h-35z"/>
+    </g>
+</svg>

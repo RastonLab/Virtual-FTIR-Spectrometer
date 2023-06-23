@@ -1,30 +1,30 @@
-<svg width="300" height="120.11522" version="1.1" id="svg5" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg">
-  <defs id="defs2">
-    <linearGradient id="linearGradient996">
-      <stop style="stop-color:#4d4d4d;stop-opacity:1" offset="0" id="stop992"/>
-      <stop style="stop-color:#666;stop-opacity:1" offset=".5" id="stop1000"/>
-      <stop style="stop-color:#4d4d4d;stop-opacity:1" offset="1" id="stop994"/>
-    </linearGradient>
-    <linearGradient id="linearGradient986">
-      <stop style="stop-color:#333;stop-opacity:1" offset="0" id="stop982"/>
-      <stop style="stop-color:#4d4d4d;stop-opacity:1" offset=".5" id="stop990"/>
-      <stop style="stop-color:#666;stop-opacity:1" offset="1" id="stop984"/>
-    </linearGradient>
-    <linearGradient id="linearGradient976">
-      <stop style="stop-color:#c90;stop-opacity:1" offset="0" id="stop972"/>
-      <stop style="stop-color:#ffc61a;stop-opacity:1" offset=".5" id="stop980"/>
-      <stop style="stop-color:#ffd34c;stop-opacity:1" offset="1" id="stop974"/>
-    </linearGradient>
-    <linearGradient xlink:href="#linearGradient976" id="linearGradient978" x1="55.52483" y1="179.73273" x2="160.64606" y2="179.73273" gradientUnits="userSpaceOnUse" gradientTransform="translate(-86.293759 -241.69379) scale(2.53812)"/>
-    <linearGradient xlink:href="#linearGradient986" id="linearGradient988" x1="55.52483" y1="166.79305" x2="174.3007" y2="166.79305" gradientUnits="userSpaceOnUse" gradientTransform="translate(-86.293759 -241.69379) scale(2.53812)"/>
-    <linearGradient xlink:href="#linearGradient996" id="linearGradient998" x1="167.47337" y1="193.99097" x2="167.47337" y2="173.31377" gradientUnits="userSpaceOnUse" gradientTransform="translate(-86.293759 -241.69379) scale(2.53812)"/>
-  </defs>
-  <g id="flat-mirror" transform="translate(-56.103214 -157.13533)">
-    <path d="m102.13196 178.97546 253.97125 58.9792V186.6771l-253.97125-29.54177Z" style="fill:#e9e9ff;fill-rule:evenodd;stroke:none;stroke-width:9.50528;stroke-linecap:square;stroke-linejoin:round;paint-order:markers stroke fill" id="path1245"/>
-    <path d="M56.103214 184.82056v-24.7575l46.028746-2.92773v21.84013z" style="fill:#353564;fill-rule:evenodd;stroke:none;stroke-width:9.50528;stroke-linecap:square;stroke-linejoin:round;paint-order:markers stroke fill" id="path1247"/>
-    <path d="m56.103214 184.82056 265.342816 92.42999 34.65718-39.29589-253.97125-58.9792z" style="fill:#4d4d9f;fill-rule:evenodd;stroke:none;stroke-width:9.50528;stroke-linecap:square;stroke-linejoin:round;paint-order:markers stroke fill" id="path1249"/>
-    <path d="m56.103214 160.06306 265.342816 46.29677 34.65718-19.68273-253.97125-29.54177Z" style="fill:url(#linearGradient988);fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:9.50528;stroke-linecap:square;stroke-linejoin:round;paint-order:markers stroke fill" id="path1251"/>
-    <path d="M321.44603 277.25055v-70.89072l34.65718-19.68273v51.27756z" style="fill:url(#linearGradient998);fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:9.50528;stroke-linecap:square;stroke-linejoin:round;paint-order:markers stroke fill" id="path1253"/>
-    <path d="m56.103214 184.82056 265.342816 92.42999v-70.89072L56.103214 160.06306Z" style="fill:url(#linearGradient978);fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:9.50528;stroke-linecap:square;stroke-linejoin:round;paint-order:markers stroke fill" id="path1255"/>
-  </g>
+<svg viewBox="0 0 300 120.115" version="1.1" id="svg5" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg">
+    <defs id="defs2">
+        <linearGradient id="linearGradient996">
+            <stop offset="0" id="stop992" stop-color="#4d4d4d" stop-opacity="1"/>
+            <stop offset=".5" id="stop1000" stop-color="#666" stop-opacity="1"/>
+            <stop offset="1" id="stop994" stop-color="#4d4d4d" stop-opacity="1"/>
+        </linearGradient>
+        <linearGradient id="linearGradient986">
+            <stop offset="0" id="stop982" stop-color="#333" stop-opacity="1"/>
+            <stop offset=".5" id="stop990" stop-color="#4d4d4d" stop-opacity="1"/>
+            <stop offset="1" id="stop984" stop-color="#666" stop-opacity="1"/>
+        </linearGradient>
+        <linearGradient id="linearGradient976">
+            <stop offset="0" id="stop972" stop-color="#c90" stop-opacity="1"/>
+            <stop offset=".5" id="stop980" stop-color="#ffc61a" stop-opacity="1"/>
+            <stop offset="1" id="stop974" stop-color="#ffd34c" stop-opacity="1"/>
+        </linearGradient>
+        <linearGradient xlink:href="#linearGradient976" id="linearGradient978" x1="55.525" y1="179.733" x2="160.646" y2="179.733" gradientUnits="userSpaceOnUse" gradientTransform="translate(-86.294 -241.694) scale(2.53812)"/>
+        <linearGradient xlink:href="#linearGradient986" id="linearGradient988" x1="55.525" y1="166.793" x2="174.301" y2="166.793" gradientUnits="userSpaceOnUse" gradientTransform="translate(-86.294 -241.694) scale(2.53812)"/>
+        <linearGradient xlink:href="#linearGradient996" id="linearGradient998" x1="167.473" y1="193.991" x2="167.473" y2="173.314" gradientUnits="userSpaceOnUse" gradientTransform="translate(-86.294 -241.694) scale(2.53812)"/>
+    </defs>
+    <g id="flat-mirror" transform="translate(-56.103 -157.135)" fill-rule="evenodd" stroke="none" stroke-width="9.505" stroke-linecap="square" stroke-linejoin="round" paint-order="markers stroke fill">
+        <path d="M102.132 178.975l253.971 58.98v-51.278l-253.971-29.542z" id="path1245" fill="#e9e9ff"/>
+        <path d="M56.103 184.82v-24.757l46.029-2.928v21.84z" id="path1247" fill="#353564"/>
+        <path d="M56.103 184.82l265.343 92.43 34.657-39.295-253.971-58.98z" id="path1249" fill="#4d4d9f"/>
+        <path d="M56.103 160.063l265.343 46.297 34.657-19.683-253.971-29.542z" id="path1251" fill="url(#linearGradient988)" fill-opacity="1"/>
+        <path d="M321.446 277.25v-70.89l34.657-19.683v51.278z" id="path1253" fill="url(#linearGradient998)" fill-opacity="1"/>
+        <path d="M56.103 184.82l265.343 92.43v-70.89L56.103 160.063z" id="path1255" fill="url(#linearGradient978)" fill-opacity="1"/>
+    </g>
 </svg>

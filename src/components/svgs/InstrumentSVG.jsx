@@ -1,267 +1,696 @@
 import * as React from "react";
-
 const SvgComponent = (props) => (
   <svg
-    xmlnsXlink="http://www.w3.org/1999/xlink"
     xmlns="http://www.w3.org/2000/svg"
-    viewBox="0 0 4000 3000"
+    xmlnsXlink="http://www.w3.org/1999/xlink"
+    xmlSpace="preserve"
+    viewBox="0 0 3600 2700"
     {...props}
   >
+    <style id="style26144" />
     <defs id="defs6711">
-      <linearGradient id="linearGradient6348">
+      <linearGradient id="linearGradient13434">
         <stop
-          id="stop6344"
-          offset={0.203}
-          style={{
-            stopColor: "#f33",
-            stopOpacity: 1,
-          }}
-        />
-        <stop
-          id="stop6352"
-          offset={0.5}
-          style={{
-            stopColor: "#f99",
-            stopOpacity: 1,
-          }}
-        />
-        <stop
-          id="stop6346"
-          offset={0.801}
-          style={{
-            stopColor: "#f33",
-            stopOpacity: 1,
-          }}
-        />
-      </linearGradient>
-      <linearGradient id="linearGradient6338">
-        <stop
-          id="stop6334"
-          offset={0.199}
-          style={{
-            stopColor: "#f33",
-            stopOpacity: 1,
-          }}
-        />
-        <stop
-          id="stop6342"
-          offset={0.5}
-          style={{
-            stopColor: "#f99",
-            stopOpacity: 1,
-          }}
-        />
-        <stop
-          id="stop6336"
-          offset={0.797}
-          style={{
-            stopColor: "#f33",
-            stopOpacity: 1,
-          }}
-        />
-      </linearGradient>
-      <linearGradient id="linearGradient2581">
-        <stop
-          id="stop2577"
-          offset={0.199}
-          style={{
-            stopColor: "#f33",
-            stopOpacity: 1,
-          }}
-        />
-        <stop
-          id="stop2585"
-          offset={0.5}
-          style={{
-            stopColor: "#f99",
-            stopOpacity: 1,
-          }}
-        />
-        <stop
-          id="stop2579"
-          offset={0.797}
-          style={{
-            stopColor: "#f33",
-            stopOpacity: 1,
-          }}
-        />
-      </linearGradient>
-      <linearGradient id="linearGradient2571">
-        <stop
-          id="stop2567"
-          offset={0.203}
-          style={{
-            stopColor: "#f33",
-            stopOpacity: 1,
-          }}
-        />
-        <stop
-          id="stop2575"
-          offset={0.5}
-          style={{
-            stopColor: "#f99",
-            stopOpacity: 1,
-          }}
-        />
-        <stop
-          id="stop2569"
-          offset={0.797}
-          style={{
-            stopColor: "#f33",
-            stopOpacity: 1,
-          }}
-        />
-      </linearGradient>
-      <linearGradient id="linearGradient2551">
-        <stop
-          id="stop2547"
-          offset={0.304}
-          style={{
-            stopColor: "#f33",
-            stopOpacity: 1,
-          }}
-        />
-        <stop
-          id="stop2555"
-          offset={0.5}
-          style={{
-            stopColor: "#f99",
-            stopOpacity: 1,
-          }}
-        />
-        <stop
-          id="stop2549"
-          offset={0.703}
-          style={{
-            stopColor: "#f33",
-            stopOpacity: 1,
-          }}
-        />
-      </linearGradient>
-      <linearGradient id="linearGradient2541">
-        <stop
-          id="stop2537"
-          offset={0.253}
-          style={{
-            stopColor: "#f33",
-            stopOpacity: 1,
-          }}
-        />
-        <stop
-          id="stop2545"
-          offset={0.45}
-          style={{
-            stopColor: "#f99",
-            stopOpacity: 1,
-          }}
-        />
-        <stop
-          id="stop2539"
-          offset={0.822}
-          style={{
-            stopColor: "#f33",
-            stopOpacity: 1,
-          }}
-        />
-      </linearGradient>
-      <linearGradient id="linearGradient2531">
-        <stop
-          id="stop2527"
-          offset={0.351}
-          style={{
-            stopColor: "#f33",
-            stopOpacity: 1,
-          }}
-        />
-        <stop
-          id="stop2535"
-          offset={0.551}
-          style={{
-            stopColor: "#f99",
-            stopOpacity: 1,
-          }}
-        />
-        <stop
-          id="stop2529"
-          offset={0.747}
-          style={{
-            stopColor: "#f33",
-            stopOpacity: 1,
-          }}
-        />
-      </linearGradient>
-      <linearGradient id="linearGradient13676">
-        <stop
-          id="stop13672"
+          id="stop13430"
           offset={0}
-          style={{
-            stopColor: "#ffc51a",
-            stopOpacity: 1,
-          }}
-        />
-        <stop
-          id="stop14406"
-          offset={0.5}
-          style={{
-            stopColor: "#ffbf00",
-            stopOpacity: 1,
-          }}
-        />
-        <stop
-          id="stop13674"
-          offset={1}
           style={{
             stopColor: "#e5ac00",
             stopOpacity: 1,
           }}
         />
-      </linearGradient>
-      <linearGradient id="linearGradient10943">
         <stop
-          id="stop10939"
-          offset={0}
-          style={{
-            stopColor: "#3d3d3d",
-            stopOpacity: 1,
-          }}
-        />
-        <stop
-          id="stop10947"
+          id="stop13438"
           offset={0.5}
           style={{
-            stopColor: "#5c5c5c",
+            stopColor: "#ffc100",
             stopOpacity: 1,
           }}
         />
         <stop
-          id="stop10949"
-          offset={0.75}
-          style={{
-            stopColor: "#2e2e2e",
-            stopOpacity: 1,
-          }}
-        />
-        <stop
-          id="stop10951"
-          offset={0.875}
-          style={{
-            stopColor: "#383838",
-            stopOpacity: 1,
-          }}
-        />
-        <stop
-          id="stop10953"
-          offset={0.938}
-          style={{
-            stopColor: "#5c5c5c",
-            stopOpacity: 1,
-          }}
-        />
-        <stop
-          id="stop10941"
+          id="stop13432"
           offset={1}
           style={{
-            stopColor: "#575757",
+            stopColor: "#ffc61a",
+            stopOpacity: 1,
+          }}
+        />
+      </linearGradient>
+      <linearGradient id="linearGradient13424">
+        <stop
+          id="stop13420"
+          offset={0}
+          style={{
+            stopColor: "#e5ac00",
+            stopOpacity: 1,
+          }}
+        />
+        <stop
+          id="stop13428"
+          offset={0.5}
+          style={{
+            stopColor: "#ffc100",
+            stopOpacity: 1,
+          }}
+        />
+        <stop
+          id="stop13422"
+          offset={1}
+          style={{
+            stopColor: "#ffc61a",
+            stopOpacity: 1,
+          }}
+        />
+      </linearGradient>
+      <linearGradient id="linearGradient13408">
+        <stop
+          id="stop13404"
+          offset={0}
+          style={{
+            stopColor: "#474747",
+            stopOpacity: 1,
+          }}
+        />
+        <stop
+          id="stop13412"
+          offset={0.5}
+          style={{
+            stopColor: "#333",
+            stopOpacity: 1,
+          }}
+        />
+        <stop
+          id="stop13414"
+          offset={0.75}
+          style={{
+            stopColor: "#666",
+            stopOpacity: 1,
+          }}
+        />
+        <stop
+          id="stop13416"
+          offset={0.875}
+          style={{
+            stopColor: "#7a7a7a",
+            stopOpacity: 1,
+          }}
+        />
+        <stop
+          id="stop13418"
+          offset={0.938}
+          style={{
+            stopColor: "#4a4a4a",
+            stopOpacity: 1,
+          }}
+        />
+        <stop
+          id="stop13406"
+          offset={1}
+          style={{
+            stopColor: "#000",
+            stopOpacity: 1,
+          }}
+        />
+      </linearGradient>
+      <linearGradient id="linearGradient13390">
+        <stop
+          id="stop13386"
+          offset={0}
+          style={{
+            stopColor: "#474747",
+            stopOpacity: 1,
+          }}
+        />
+        <stop
+          id="stop13394"
+          offset={0.5}
+          style={{
+            stopColor: "#333",
+            stopOpacity: 1,
+          }}
+        />
+        <stop
+          id="stop13396"
+          offset={0.75}
+          style={{
+            stopColor: "#666",
+            stopOpacity: 1,
+          }}
+        />
+        <stop
+          id="stop13398"
+          offset={0.875}
+          style={{
+            stopColor: "#7a7a7a",
+            stopOpacity: 1,
+          }}
+        />
+        <stop
+          id="stop13400"
+          offset={0.938}
+          style={{
+            stopColor: "#4a4a4a",
+            stopOpacity: 1,
+          }}
+        />
+        <stop
+          id="stop13388"
+          offset={1}
+          style={{
+            stopColor: "#000",
+            stopOpacity: 1,
+          }}
+        />
+      </linearGradient>
+      <linearGradient id="linearGradient18521">
+        <stop
+          id="stop18517"
+          offset={0.055}
+          style={{
+            stopColor: "#989898",
+            stopOpacity: 1,
+          }}
+        />
+        <stop
+          id="stop18525"
+          offset={0.249}
+          style={{
+            stopColor: "#d0d0d0",
+            stopOpacity: 1,
+          }}
+        />
+        <stop
+          id="stop18527"
+          offset={0.409}
+          style={{
+            stopColor: "#afafaf",
+            stopOpacity: 1,
+          }}
+        />
+        <stop
+          id="stop18529"
+          offset={0.624}
+          style={{
+            stopColor: "#9c9c9c",
+            stopOpacity: 1,
+          }}
+        />
+        <stop
+          id="stop18531"
+          offset={0.783}
+          style={{
+            stopColor: "#8c8c8c",
+            stopOpacity: 1,
+          }}
+        />
+        <stop
+          id="stop18519"
+          offset={0.952}
+          style={{
+            stopColor: "#b3b3b3",
+            stopOpacity: 1,
+          }}
+        />
+      </linearGradient>
+      <linearGradient id="linearGradient18505">
+        <stop
+          id="stop18501"
+          offset={0.051}
+          style={{
+            stopColor: "#989898",
+            stopOpacity: 1,
+          }}
+        />
+        <stop
+          id="stop18509"
+          offset={0.252}
+          style={{
+            stopColor: "#d0d0d0",
+            stopOpacity: 1,
+          }}
+        />
+        <stop
+          id="stop18511"
+          offset={0.412}
+          style={{
+            stopColor: "#afafaf",
+            stopOpacity: 1,
+          }}
+        />
+        <stop
+          id="stop18513"
+          offset={0.624}
+          style={{
+            stopColor: "#9c9c9c",
+            stopOpacity: 1,
+          }}
+        />
+        <stop
+          id="stop18515"
+          offset={0.78}
+          style={{
+            stopColor: "#8c8c8c",
+            stopOpacity: 1,
+          }}
+        />
+        <stop
+          id="stop18503"
+          offset={0.945}
+          style={{
+            stopColor: "#b3b3b3",
+            stopOpacity: 1,
+          }}
+        />
+      </linearGradient>
+      <linearGradient id="linearGradient17757">
+        <stop
+          id="stop17755"
+          offset={0.051}
+          style={{
+            stopColor: "#989898",
+            stopOpacity: 1,
+          }}
+        />
+        <stop
+          id="stop17767"
+          offset={0.22}
+          style={{
+            stopColor: "#d0d0d0",
+            stopOpacity: 1,
+          }}
+        />
+        <stop
+          id="stop17765"
+          offset={0.376}
+          style={{
+            stopColor: "#afafaf",
+            stopOpacity: 1,
+          }}
+        />
+        <stop
+          id="stop17763"
+          offset={0.588}
+          style={{
+            stopColor: "#9c9c9c",
+            stopOpacity: 1,
+          }}
+        />
+        <stop
+          id="stop17761"
+          offset={0.751}
+          style={{
+            stopColor: "#8c8c8c",
+            stopOpacity: 1,
+          }}
+        />
+        <stop
+          id="stop17753"
+          offset={0.949}
+          style={{
+            stopColor: "#b3b3b3",
+            stopOpacity: 1,
+          }}
+        />
+      </linearGradient>
+      <linearGradient id="linearGradient16891">
+        <stop
+          id="stop16887"
+          offset={0.045}
+          style={{
+            stopColor: "#b3b3b3",
+            stopOpacity: 1,
+          }}
+        />
+        <stop
+          id="stop16895"
+          offset={0.249}
+          style={{
+            stopColor: "#8c8c8c",
+            stopOpacity: 1,
+          }}
+        />
+        <stop
+          id="stop16897"
+          offset={0.412}
+          style={{
+            stopColor: "#9c9c9c",
+            stopOpacity: 1,
+          }}
+        />
+        <stop
+          id="stop16899"
+          offset={0.618}
+          style={{
+            stopColor: "#afafaf",
+            stopOpacity: 1,
+          }}
+        />
+        <stop
+          id="stop16901"
+          offset={0.78}
+          style={{
+            stopColor: "#d0d0d0",
+            stopOpacity: 1,
+          }}
+        />
+        <stop
+          id="stop16889"
+          offset={0.945}
+          style={{
+            stopColor: "#989898",
+            stopOpacity: 1,
+          }}
+        />
+      </linearGradient>
+      <linearGradient id="linearGradient16149">
+        <stop
+          id="stop16145"
+          offset={0.084}
+          style={{
+            stopColor: "#b3b3b3",
+            stopOpacity: 1,
+          }}
+        />
+        <stop
+          id="stop16153"
+          offset={0.246}
+          style={{
+            stopColor: "#8c8c8c",
+            stopOpacity: 1,
+          }}
+        />
+        <stop
+          id="stop16155"
+          offset={0.406}
+          style={{
+            stopColor: "#9c9c9c",
+            stopOpacity: 1,
+          }}
+        />
+        <stop
+          id="stop16157"
+          offset={0.624}
+          style={{
+            stopColor: "#afafaf",
+            stopOpacity: 1,
+          }}
+        />
+        <stop
+          id="stop16159"
+          offset={0.78}
+          style={{
+            stopColor: "#d0d0d0",
+            stopOpacity: 1,
+          }}
+        />
+        <stop
+          id="stop16147"
+          offset={0.955}
+          style={{
+            stopColor: "#989898",
+            stopOpacity: 1,
+          }}
+        />
+      </linearGradient>
+      <linearGradient id="linearGradient14681">
+        <stop
+          id="stop14677"
+          offset={0.08}
+          style={{
+            stopColor: "#b3b3b3",
+            stopOpacity: 1,
+          }}
+        />
+        <stop
+          id="stop14685"
+          offset={0.249}
+          style={{
+            stopColor: "#8c8c8c",
+            stopOpacity: 1,
+          }}
+        />
+        <stop
+          id="stop14687"
+          offset={0.409}
+          style={{
+            stopColor: "#9c9c9c",
+            stopOpacity: 1,
+          }}
+        />
+        <stop
+          id="stop14689"
+          offset={0.621}
+          style={{
+            stopColor: "#afafaf",
+            stopOpacity: 1,
+          }}
+        />
+        <stop
+          id="stop14691"
+          offset={0.783}
+          style={{
+            stopColor: "#d0d0d0",
+            stopOpacity: 1,
+          }}
+        />
+        <stop
+          id="stop14679"
+          offset={0.952}
+          style={{
+            stopColor: "#989898",
+            stopOpacity: 1,
+          }}
+        />
+      </linearGradient>
+      <linearGradient id="linearGradient16079">
+        <stop
+          id="stop16075"
+          offset={0.08}
+          style={{
+            stopColor: "#b3b3b3",
+            stopOpacity: 1,
+          }}
+        />
+        <stop
+          id="stop16083"
+          offset={0.25}
+          style={{
+            stopColor: "#828282",
+            stopOpacity: 1,
+          }}
+        />
+        <stop
+          id="stop16085"
+          offset={0.41}
+          style={{
+            stopColor: "#9c9c9c",
+            stopOpacity: 1,
+          }}
+        />
+        <stop
+          id="stop16087"
+          offset={0.62}
+          style={{
+            stopColor: "#afafaf",
+            stopOpacity: 1,
+          }}
+        />
+        <stop
+          id="stop16089"
+          offset={0.78}
+          style={{
+            stopColor: "#d0d0d0",
+            stopOpacity: 1,
+          }}
+        />
+        <stop
+          id="stop16077"
+          offset={0.95}
+          style={{
+            stopColor: "#989898",
+            stopOpacity: 1,
+          }}
+        />
+      </linearGradient>
+      <linearGradient id="linearGradient12626">
+        <stop
+          id="stop12624"
+          offset={0.05}
+          style={{
+            stopColor: "#989898",
+            stopOpacity: 1,
+          }}
+        />
+        <stop
+          id="stop12636"
+          offset={0.22}
+          style={{
+            stopColor: "#d0d0d0",
+            stopOpacity: 1,
+          }}
+        />
+        <stop
+          id="stop12634"
+          offset={0.38}
+          style={{
+            stopColor: "#afafaf",
+            stopOpacity: 1,
+          }}
+        />
+        <stop
+          id="stop12632"
+          offset={0.59}
+          style={{
+            stopColor: "#9c9c9c",
+            stopOpacity: 1,
+          }}
+        />
+        <stop
+          id="stop12630"
+          offset={0.75}
+          style={{
+            stopColor: "#d2d2d2",
+            stopOpacity: 1,
+          }}
+        />
+        <stop
+          id="stop12622"
+          offset={0.92}
+          style={{
+            stopColor: "#b3b3b3",
+            stopOpacity: 1,
+          }}
+        />
+      </linearGradient>
+      <linearGradient id="linearGradient22410">
+        <stop
+          id="stop22400"
+          offset={0}
+          style={{
+            stopColor: "#787878",
+            stopOpacity: 1,
+          }}
+        />
+        <stop
+          id="stop22402"
+          offset={0.245}
+          style={{
+            stopColor: "#9c9c9c",
+            stopOpacity: 1,
+          }}
+        />
+        <stop
+          id="stop22404"
+          offset={0.498}
+          style={{
+            stopColor: "#e2e2e2",
+            stopOpacity: 1,
+          }}
+        />
+        <stop
+          id="stop22406"
+          offset={0.75}
+          style={{
+            stopColor: "#9c9c9c",
+            stopOpacity: 1,
+          }}
+        />
+        <stop
+          id="stop22408"
+          offset={1}
+          style={{
+            stopColor: "#787878",
+            stopOpacity: 1,
+          }}
+        />
+      </linearGradient>
+      <linearGradient id="linearGradient13048">
+        <stop
+          id="stop13044"
+          offset={0}
+          style={{
+            stopColor: "#00002d",
+            stopOpacity: 1,
+          }}
+        />
+        <stop
+          id="stop13778"
+          offset={0.4}
+          style={{
+            stopColor: "#000073",
+            stopOpacity: 1,
+          }}
+        />
+        <stop
+          id="stop13780"
+          offset={0.5}
+          style={{
+            stopColor: "#0000c8",
+            stopOpacity: 1,
+          }}
+        />
+        <stop
+          id="stop13782"
+          offset={0.6}
+          style={{
+            stopColor: "#000073",
+            stopOpacity: 1,
+          }}
+        />
+        <stop
+          id="stop13046"
+          offset={1}
+          style={{
+            stopColor: "#00002d",
+            stopOpacity: 1,
+          }}
+        />
+      </linearGradient>
+      <linearGradient id="linearGradient48695">
+        <stop
+          id="stop48683"
+          offset={0}
+          style={{
+            stopColor: "#d20f0f",
+            stopOpacity: 1,
+          }}
+        />
+        <stop
+          id="stop48685"
+          offset={0.2}
+          style={{
+            stopColor: "#be0f0f",
+            stopOpacity: 1,
+          }}
+        />
+        <stop
+          id="stop48687"
+          offset={0.4}
+          style={{
+            stopColor: "#aa0f0f",
+            stopOpacity: 1,
+          }}
+        />
+        <stop
+          id="stop48689"
+          offset={0.6}
+          style={{
+            stopColor: "#9b0f0f",
+            stopOpacity: 1,
+          }}
+        />
+        <stop
+          id="stop48691"
+          offset={0.8}
+          style={{
+            stopColor: "#d20000",
+            stopOpacity: 1,
+          }}
+        />
+        <stop
+          id="stop48693"
+          offset={1}
+          style={{
+            stopColor: "#870a0a",
             stopOpacity: 1,
           }}
         />
@@ -368,32 +797,6 @@ const SvgComponent = (props) => (
           }}
         />
       </linearGradient>
-      <linearGradient id="linearGradient4083">
-        <stop
-          id="stop4079"
-          offset={0}
-          style={{
-            stopColor: "#ffc51a",
-            stopOpacity: 1,
-          }}
-        />
-        <stop
-          id="stop4087"
-          offset={0.5}
-          style={{
-            stopColor: "#ffbd00",
-            stopOpacity: 1,
-          }}
-        />
-        <stop
-          id="stop4081"
-          offset={1}
-          style={{
-            stopColor: "#e5ad00",
-            stopOpacity: 1,
-          }}
-        />
-      </linearGradient>
       <linearGradient id="linearGradient2597">
         <stop
           id="stop2593"
@@ -446,168 +849,12 @@ const SvgComponent = (props) => (
           }}
         />
       </linearGradient>
-      <linearGradient id="linearGradient5295">
-        <stop
-          id="stop5291"
-          offset={0.203}
-          style={{
-            stopColor: "#f33",
-            stopOpacity: 1,
-          }}
-        />
-        <stop
-          id="stop5299"
-          offset={0.5}
-          style={{
-            stopColor: "#f99",
-            stopOpacity: 1,
-          }}
-        />
-        <stop
-          id="stop5293"
-          offset={0.797}
-          style={{
-            stopColor: "#f33",
-            stopOpacity: 1,
-          }}
-        />
-      </linearGradient>
-      <linearGradient id="linearGradient5281">
-        <stop
-          id="stop5279"
-          offset={0.199}
-          style={{
-            stopColor: "#f33",
-            stopOpacity: 1,
-          }}
-        />
-        <stop
-          id="stop5285"
-          offset={0.5}
-          style={{
-            stopColor: "#f99",
-            stopOpacity: 1,
-          }}
-        />
-        <stop
-          id="stop5277"
-          offset={0.797}
-          style={{
-            stopColor: "#f33",
-            stopOpacity: 1,
-          }}
-        />
-      </linearGradient>
-      <linearGradient id="linearGradient5267">
-        <stop
-          id="stop5263"
-          offset={0.203}
-          style={{
-            stopColor: "#f33",
-            stopOpacity: 1,
-          }}
-        />
-        <stop
-          id="stop5271"
-          offset={0.5}
-          style={{
-            stopColor: "#f99",
-            stopOpacity: 1,
-          }}
-        />
-        <stop
-          id="stop5265"
-          offset={0.804}
-          style={{
-            stopColor: "#f33",
-            stopOpacity: 1,
-          }}
-        />
-      </linearGradient>
-      <linearGradient id="linearGradient5253">
-        <stop
-          id="stop5249"
-          offset={0.199}
-          style={{
-            stopColor: "#f33",
-            stopOpacity: 1,
-          }}
-        />
-        <stop
-          id="stop5257"
-          offset={0.5}
-          style={{
-            stopColor: "#f99",
-            stopOpacity: 1,
-          }}
-        />
-        <stop
-          id="stop5251"
-          offset={0.801}
-          style={{
-            stopColor: "#f33",
-            stopOpacity: 1,
-          }}
-        />
-      </linearGradient>
-      <linearGradient id="linearGradient5239">
-        <stop
-          id="stop5235"
-          offset={0.247}
-          style={{
-            stopColor: "#f33",
-            stopOpacity: 1,
-          }}
-        />
-        <stop
-          id="stop5243"
-          offset={0.551}
-          style={{
-            stopColor: "#f99",
-            stopOpacity: 1,
-          }}
-        />
-        <stop
-          id="stop5237"
-          offset={0.851}
-          style={{
-            stopColor: "#f33",
-            stopOpacity: 1,
-          }}
-        />
-      </linearGradient>
-      <linearGradient id="linearGradient4499">
-        <stop
-          id="stop4495"
-          offset={0.196}
-          style={{
-            stopColor: "#f33",
-            stopOpacity: 1,
-          }}
-        />
-        <stop
-          id="stop4503"
-          offset={0.5}
-          style={{
-            stopColor: "#f99",
-            stopOpacity: 1,
-          }}
-        />
-        <stop
-          id="stop4497"
-          offset={0.804}
-          style={{
-            stopColor: "#f33",
-            stopOpacity: 1,
-          }}
-        />
-      </linearGradient>
       <linearGradient id="linearGradient5756">
         <stop
           id="stop5746"
           offset={0}
           style={{
-            stopColor: "#a7a7a7",
+            stopColor: "#787878",
             stopOpacity: 1,
           }}
         />
@@ -631,7 +878,7 @@ const SvgComponent = (props) => (
           id="stop5752"
           offset={0.75}
           style={{
-            stopColor: "#737373",
+            stopColor: "#9c9c9c",
             stopOpacity: 1,
           }}
         />
@@ -741,7 +988,7 @@ const SvgComponent = (props) => (
           id="stop11554"
           offset={0.272}
           style={{
-            stopColor: "#fffb78",
+            stopColor: "#78faff",
             stopOpacity: 1,
           }}
         />
@@ -749,7 +996,7 @@ const SvgComponent = (props) => (
           id="stop11556"
           offset={0.554}
           style={{
-            stopColor: "#fabb00",
+            stopColor: "#00befa",
             stopOpacity: 0.9937107,
           }}
         />
@@ -757,27 +1004,17 @@ const SvgComponent = (props) => (
           id="stop11558"
           offset={0.868}
           style={{
-            stopColor: "#d40000",
+            stopColor: "#0000d2",
             stopOpacity: 1,
           }}
         />
       </linearGradient>
-      <linearGradient
-        xlinkHref="#linearGradient2012"
-        id="linearGradient2042"
-        x1={261.721}
-        x2={281.819}
-        y1={71.46}
-        y2={71.46}
-        gradientTransform="matrix(1.78757 0 0 1.79302 436.656 436.708)"
-        gradientUnits="userSpaceOnUse"
-      />
       <linearGradient id="linearGradient2012">
         <stop
           id="stop2008"
           offset={0}
           style={{
-            stopColor: "#ff5b5b",
+            stopColor: "#5a5aff",
             stopOpacity: 1,
           }}
         />
@@ -785,7 +1022,7 @@ const SvgComponent = (props) => (
           id="stop2016"
           offset={0.2}
           style={{
-            stopColor: "#ff6262",
+            stopColor: "#6464ff",
             stopOpacity: 1,
           }}
         />
@@ -793,7 +1030,7 @@ const SvgComponent = (props) => (
           id="stop2018"
           offset={0.4}
           style={{
-            stopColor: "#f70000",
+            stopColor: "#0006e1",
             stopOpacity: 1,
           }}
         />
@@ -801,7 +1038,7 @@ const SvgComponent = (props) => (
           id="stop2020"
           offset={0.6}
           style={{
-            stopColor: "#c00000",
+            stopColor: "#0000be",
             stopOpacity: 1,
           }}
         />
@@ -809,728 +1046,27 @@ const SvgComponent = (props) => (
           id="stop2022"
           offset={0.8}
           style={{
-            stopColor: "#ff0e0e",
-            stopOpacity: 0.98742139,
+            stopColor: "#0f0fff",
+            stopOpacity: 1,
           }}
         />
         <stop
           id="stop2010"
           offset={1}
           style={{
-            stopColor: "#a70000",
+            stopColor: "#0000a5",
             stopOpacity: 1,
           }}
         />
       </linearGradient>
       <linearGradient
-        xlinkHref="#linearGradient2012"
+        xlinkHref="#linearGradient48695"
         id="linearGradient2014"
         x1={261.721}
         x2={281.819}
         y1={71.46}
         y2={71.46}
-        gradientTransform="matrix(2.08262 0 0 2.33512 -60.736 25.085)"
-        gradientUnits="userSpaceOnUse"
-      />
-      <linearGradient
-        xlinkHref="#linearGradient44730"
-        id="linearGradient55895"
-        x1={58.135}
-        x2={77.913}
-        y1={65.447}
-        y2={65.566}
-        gradientTransform="translate(-16.096 -5.597)"
-        gradientUnits="userSpaceOnUse"
-      />
-      <linearGradient id="linearGradient44730">
-        <stop
-          id="stop44726"
-          offset={0}
-          style={{
-            stopColor: "#4a4a4a",
-            stopOpacity: 1,
-          }}
-        />
-        <stop
-          id="stop44821"
-          offset={0.201}
-          style={{
-            stopColor: "#5b5b5b",
-            stopOpacity: 1,
-          }}
-        />
-        <stop
-          id="stop44823"
-          offset={0.4}
-          style={{
-            stopColor: "#8a8a8a",
-            stopOpacity: 1,
-          }}
-        />
-        <stop
-          id="stop44825"
-          offset={0.6}
-          style={{
-            stopColor: "#424242",
-            stopOpacity: 1,
-          }}
-        />
-        <stop
-          id="stop44829"
-          offset={0.802}
-          style={{
-            stopColor: "#6b6b6b",
-            stopOpacity: 1,
-          }}
-        />
-        <stop
-          id="stop44728"
-          offset={1}
-          style={{
-            stopColor: "#4a4a4a",
-            stopOpacity: 1,
-          }}
-        />
-      </linearGradient>
-      <linearGradient
-        xlinkHref="#linearGradient44730"
-        id="linearGradient58819"
-        x1={58.135}
-        x2={77.913}
-        y1={65.447}
-        y2={65.566}
-        gradientTransform="translate(-16.096 -20.58)"
-        gradientUnits="userSpaceOnUse"
-      />
-      <linearGradient
-        xlinkHref="#linearGradient44730"
-        id="linearGradient58815"
-        x1={58.135}
-        x2={77.913}
-        y1={65.447}
-        y2={65.566}
-        gradientTransform="translate(-16.096 -17.583)"
-        gradientUnits="userSpaceOnUse"
-      />
-      <linearGradient
-        xlinkHref="#linearGradient44730"
-        id="linearGradient58811"
-        x1={58.135}
-        x2={77.913}
-        y1={65.447}
-        y2={65.566}
-        gradientTransform="translate(-16.096 -14.586)"
-        gradientUnits="userSpaceOnUse"
-      />
-      <linearGradient
-        xlinkHref="#linearGradient44730"
-        id="linearGradient58807"
-        x1={58.135}
-        x2={77.913}
-        y1={65.447}
-        y2={65.566}
-        gradientTransform="translate(-16.096 -11.59)"
-        gradientUnits="userSpaceOnUse"
-      />
-      <linearGradient
-        xlinkHref="#linearGradient44730"
-        id="linearGradient58803"
-        x1={58.135}
-        x2={77.913}
-        y1={65.447}
-        y2={65.566}
-        gradientTransform="translate(-16.096 -8.593)"
-        gradientUnits="userSpaceOnUse"
-      />
-      <linearGradient
-        xlinkHref="#linearGradient44730"
-        id="linearGradient66085"
-        x1={58.135}
-        x2={77.913}
-        y1={65.447}
-        y2={65.566}
-        gradientTransform="translate(-16.096 -23.576)"
-        gradientUnits="userSpaceOnUse"
-      />
-      <linearGradient
-        xlinkHref="#linearGradient31314"
-        id="linearGradient31318"
-        x1={134.835}
-        x2={171.708}
-        y1={185.429}
-        y2={185.429}
-        gradientTransform="matrix(.01797 -.61903 .21754 -.00907 -1.61 147.278)"
-        gradientUnits="userSpaceOnUse"
-      />
-      <linearGradient id="linearGradient31314">
-        <stop
-          id="stop31302"
-          offset={0.077}
-          style={{
-            stopColor: "#b3b3b3",
-            stopOpacity: 1,
-          }}
-        />
-        <stop
-          id="stop31304"
-          offset={0.249}
-          style={{
-            stopColor: "#d2d2d2",
-            stopOpacity: 1,
-          }}
-        />
-        <stop
-          id="stop31306"
-          offset={0.41}
-          style={{
-            stopColor: "#9c9c9c",
-            stopOpacity: 1,
-          }}
-        />
-        <stop
-          id="stop31308"
-          offset={0.618}
-          style={{
-            stopColor: "#afafaf",
-            stopOpacity: 1,
-          }}
-        />
-        <stop
-          id="stop31310"
-          offset={0.779}
-          style={{
-            stopColor: "#d0d0d0",
-            stopOpacity: 1,
-          }}
-        />
-        <stop
-          id="stop31312"
-          offset={0.955}
-          style={{
-            stopColor: "#989898",
-            stopOpacity: 1,
-          }}
-        />
-      </linearGradient>
-      <linearGradient
-        xlinkHref="#linearGradient31314"
-        id="linearGradient76316"
-        x1={134.835}
-        x2={171.708}
-        y1={185.429}
-        y2={185.429}
-        gradientTransform="matrix(-.0023 .1832 -.15387 .0043 96.093 4.784)"
-        gradientUnits="userSpaceOnUse"
-      />
-      <linearGradient
-        xlinkHref="#linearGradient48501"
-        id="linearGradient48503"
-        x1={32.603}
-        x2={77.553}
-        y1={49.265}
-        y2={49.025}
-        gradientTransform="translate(35.207 -2.96)"
-        gradientUnits="userSpaceOnUse"
-      />
-      <linearGradient id="linearGradient48501">
-        <stop
-          id="stop48497"
-          offset={0}
-          style={{
-            stopColor: "#424242",
-            stopOpacity: 1,
-          }}
-        />
-        <stop
-          id="stop48505"
-          offset={0.2}
-          style={{
-            stopColor: "#828282",
-            stopOpacity: 1,
-          }}
-        />
-        <stop
-          id="stop48507"
-          offset={0.4}
-          style={{
-            stopColor: "#929292",
-            stopOpacity: 1,
-          }}
-        />
-        <stop
-          id="stop48509"
-          offset={0.6}
-          style={{
-            stopColor: "#a5a5a5",
-            stopOpacity: 1,
-          }}
-        />
-        <stop
-          id="stop48511"
-          offset={0.796}
-          style={{
-            stopColor: "#878787",
-            stopOpacity: 1,
-          }}
-        />
-        <stop
-          id="stop48499"
-          offset={1}
-          style={{
-            stopColor: "#2d2d2d",
-            stopOpacity: 1,
-          }}
-        />
-      </linearGradient>
-      <linearGradient
-        xlinkHref="#linearGradient44730"
-        id="linearGradient44732"
-        x1={58.135}
-        x2={77.913}
-        y1={65.447}
-        y2={65.566}
-        gradientTransform="translate(35.207 -2.96)"
-        gradientUnits="userSpaceOnUse"
-      />
-      <linearGradient
-        xlinkHref="#linearGradient48625"
-        id="linearGradient46287"
-        x1={58.135}
-        x2={77.913}
-        y1={65.447}
-        y2={65.566}
-        gradientTransform="translate(35.207 -6.436)"
-        gradientUnits="userSpaceOnUse"
-      />
-      <linearGradient id="linearGradient48625">
-        <stop
-          id="stop48613"
-          offset={0}
-          style={{
-            stopColor: "#4a4a4a",
-            stopOpacity: 1,
-          }}
-        />
-        <stop
-          id="stop48615"
-          offset={0.201}
-          style={{
-            stopColor: "#5b5b5b",
-            stopOpacity: 1,
-          }}
-        />
-        <stop
-          id="stop48617"
-          offset={0.4}
-          style={{
-            stopColor: "#8a8a8a",
-            stopOpacity: 1,
-          }}
-        />
-        <stop
-          id="stop48619"
-          offset={0.6}
-          style={{
-            stopColor: "#6a6a6a",
-            stopOpacity: 1,
-          }}
-        />
-        <stop
-          id="stop48621"
-          offset={0.802}
-          style={{
-            stopColor: "#6b6b6b",
-            stopOpacity: 1,
-          }}
-        />
-        <stop
-          id="stop48623"
-          offset={1}
-          style={{
-            stopColor: "#4a4a4a",
-            stopOpacity: 1,
-          }}
-        />
-      </linearGradient>
-      <linearGradient
-        xlinkHref="#linearGradient48611"
-        id="linearGradient46291"
-        x1={58.135}
-        x2={77.913}
-        y1={65.447}
-        y2={65.566}
-        gradientTransform="translate(35.207 -9.912)"
-        gradientUnits="userSpaceOnUse"
-      />
-      <linearGradient id="linearGradient48611">
-        <stop
-          id="stop48599"
-          offset={0}
-          style={{
-            stopColor: "#4a4a4a",
-            stopOpacity: 1,
-          }}
-        />
-        <stop
-          id="stop48601"
-          offset={0.201}
-          style={{
-            stopColor: "#5b5b5b",
-            stopOpacity: 1,
-          }}
-        />
-        <stop
-          id="stop48603"
-          offset={0.4}
-          style={{
-            stopColor: "#8a8a8a",
-            stopOpacity: 1,
-          }}
-        />
-        <stop
-          id="stop48605"
-          offset={0.6}
-          style={{
-            stopColor: "#636363",
-            stopOpacity: 1,
-          }}
-        />
-        <stop
-          id="stop48607"
-          offset={0.802}
-          style={{
-            stopColor: "#6b6b6b",
-            stopOpacity: 1,
-          }}
-        />
-        <stop
-          id="stop48609"
-          offset={1}
-          style={{
-            stopColor: "#4a4a4a",
-            stopOpacity: 1,
-          }}
-        />
-      </linearGradient>
-      <linearGradient
-        xlinkHref="#linearGradient48625"
-        id="linearGradient46295"
-        x1={58.135}
-        x2={77.913}
-        y1={65.447}
-        y2={65.566}
-        gradientTransform="translate(35.207 -13.747)"
-        gradientUnits="userSpaceOnUse"
-      />
-      <linearGradient
-        xlinkHref="#linearGradient48583"
-        id="linearGradient46299"
-        x1={58.135}
-        x2={77.913}
-        y1={65.447}
-        y2={65.566}
-        gradientTransform="translate(35.207 -17.343)"
-        gradientUnits="userSpaceOnUse"
-      />
-      <linearGradient id="linearGradient48583">
-        <stop
-          id="stop48571"
-          offset={0}
-          style={{
-            stopColor: "#4a4a4a",
-            stopOpacity: 1,
-          }}
-        />
-        <stop
-          id="stop48573"
-          offset={0.201}
-          style={{
-            stopColor: "#5b5b5b",
-            stopOpacity: 1,
-          }}
-        />
-        <stop
-          id="stop48575"
-          offset={0.4}
-          style={{
-            stopColor: "#8a8a8a",
-            stopOpacity: 1,
-          }}
-        />
-        <stop
-          id="stop48577"
-          offset={0.6}
-          style={{
-            stopColor: "#6f6f6f",
-            stopOpacity: 1,
-          }}
-        />
-        <stop
-          id="stop48579"
-          offset={0.802}
-          style={{
-            stopColor: "#6b6b6b",
-            stopOpacity: 1,
-          }}
-        />
-        <stop
-          id="stop48581"
-          offset={1}
-          style={{
-            stopColor: "#4a4a4a",
-            stopOpacity: 1,
-          }}
-        />
-      </linearGradient>
-      <linearGradient
-        xlinkHref="#linearGradient48569"
-        id="linearGradient46303"
-        x1={58.135}
-        x2={77.913}
-        y1={65.447}
-        y2={65.566}
-        gradientTransform="translate(35.207 -20.7)"
-        gradientUnits="userSpaceOnUse"
-      />
-      <linearGradient id="linearGradient48569">
-        <stop
-          id="stop48557"
-          offset={0}
-          style={{
-            stopColor: "#4a4a4a",
-            stopOpacity: 1,
-          }}
-        />
-        <stop
-          id="stop48559"
-          offset={0.201}
-          style={{
-            stopColor: "#5b5b5b",
-            stopOpacity: 1,
-          }}
-        />
-        <stop
-          id="stop48561"
-          offset={0.4}
-          style={{
-            stopColor: "#8a8a8a",
-            stopOpacity: 1,
-          }}
-        />
-        <stop
-          id="stop48563"
-          offset={0.6}
-          style={{
-            stopColor: "#6d6d6d",
-            stopOpacity: 1,
-          }}
-        />
-        <stop
-          id="stop48565"
-          offset={0.802}
-          style={{
-            stopColor: "#6b6b6b",
-            stopOpacity: 1,
-          }}
-        />
-        <stop
-          id="stop48567"
-          offset={1}
-          style={{
-            stopColor: "#4a4a4a",
-            stopOpacity: 1,
-          }}
-        />
-      </linearGradient>
-      <linearGradient
-        xlinkHref="#linearGradient48555"
-        id="linearGradient46307"
-        x1={58.135}
-        x2={77.913}
-        y1={65.447}
-        y2={65.566}
-        gradientTransform="translate(35.207 -24.176)"
-        gradientUnits="userSpaceOnUse"
-      />
-      <linearGradient id="linearGradient48555">
-        <stop
-          id="stop48543"
-          offset={0}
-          style={{
-            stopColor: "#4a4a4a",
-            stopOpacity: 1,
-          }}
-        />
-        <stop
-          id="stop48545"
-          offset={0.201}
-          style={{
-            stopColor: "#5b5b5b",
-            stopOpacity: 1,
-          }}
-        />
-        <stop
-          id="stop48547"
-          offset={0.4}
-          style={{
-            stopColor: "#8a8a8a",
-            stopOpacity: 1,
-          }}
-        />
-        <stop
-          id="stop48549"
-          offset={0.6}
-          style={{
-            stopColor: "#707070",
-            stopOpacity: 1,
-          }}
-        />
-        <stop
-          id="stop48551"
-          offset={0.802}
-          style={{
-            stopColor: "#6b6b6b",
-            stopOpacity: 1,
-          }}
-        />
-        <stop
-          id="stop48553"
-          offset={1}
-          style={{
-            stopColor: "#4a4a4a",
-            stopOpacity: 1,
-          }}
-        />
-      </linearGradient>
-      <linearGradient
-        xlinkHref="#linearGradient48541"
-        id="linearGradient46311"
-        x1={58.135}
-        x2={77.913}
-        y1={65.447}
-        y2={65.566}
-        gradientTransform="translate(35.207 -27.772)"
-        gradientUnits="userSpaceOnUse"
-      />
-      <linearGradient id="linearGradient48541">
-        <stop
-          id="stop48529"
-          offset={0}
-          style={{
-            stopColor: "#4a4a4a",
-            stopOpacity: 1,
-          }}
-        />
-        <stop
-          id="stop48531"
-          offset={0.201}
-          style={{
-            stopColor: "#5b5b5b",
-            stopOpacity: 1,
-          }}
-        />
-        <stop
-          id="stop48533"
-          offset={0.4}
-          style={{
-            stopColor: "#8a8a8a",
-            stopOpacity: 1,
-          }}
-        />
-        <stop
-          id="stop48535"
-          offset={0.6}
-          style={{
-            stopColor: "#5f5f5f",
-            stopOpacity: 1,
-          }}
-        />
-        <stop
-          id="stop48537"
-          offset={0.802}
-          style={{
-            stopColor: "#6b6b6b",
-            stopOpacity: 1,
-          }}
-        />
-        <stop
-          id="stop48539"
-          offset={1}
-          style={{
-            stopColor: "#4a4a4a",
-            stopOpacity: 1,
-          }}
-        />
-      </linearGradient>
-      <linearGradient
-        xlinkHref="#linearGradient48611"
-        id="linearGradient47041"
-        x1={58.135}
-        x2={77.913}
-        y1={65.447}
-        y2={65.566}
-        gradientTransform="translate(35.207 -31.248)"
-        gradientUnits="userSpaceOnUse"
-      />
-      <linearGradient
-        xlinkHref="#linearGradient92545"
-        id="linearGradient92547"
-        x1={6.357}
-        x2={18.098}
-        y1={24.031}
-        y2={24.152}
-        gradientUnits="userSpaceOnUse"
-      />
-      <linearGradient id="linearGradient92545">
-        <stop
-          id="stop92541"
-          offset={0}
-          style={{
-            stopColor: "#2f2f2f",
-            stopOpacity: 1,
-          }}
-        />
-        <stop
-          id="stop92549"
-          offset={0.249}
-          style={{
-            stopColor: "#474747",
-            stopOpacity: 1,
-          }}
-        />
-        <stop
-          id="stop92551"
-          offset={0.5}
-          style={{
-            stopColor: "#787878",
-            stopOpacity: 1,
-          }}
-        />
-        <stop
-          id="stop92553"
-          offset={0.75}
-          style={{
-            stopColor: "#4f4f4f",
-            stopOpacity: 1,
-          }}
-        />
-        <stop
-          id="stop92543"
-          offset={1}
-          style={{
-            stopColor: "#3d3d3d",
-            stopOpacity: 1,
-          }}
-        />
-      </linearGradient>
-      <linearGradient
-        xlinkHref="#linearGradient2028"
-        id="linearGradient2030"
-        x1={237.47}
-        x2={246.588}
-        y1={67.792}
-        y2={67.792}
-        gradientTransform="matrix(1.30193 0 0 1.23722 608.515 482.01)"
+        gradientTransform="matrix(1.38678 0 0 1.8276 983.17 394.827)"
         gradientUnits="userSpaceOnUse"
       />
       <linearGradient id="linearGradient2028">
@@ -1590,7 +1126,7 @@ const SvgComponent = (props) => (
         x2={246.588}
         y1={67.792}
         y2={67.792}
-        gradientTransform="matrix(1.5311 0 0 1.23722 532.075 440.796)"
+        gradientTransform="matrix(1.22268 0 0 1.4974 1064.133 423.915)"
         gradientUnits="userSpaceOnUse"
       />
       <linearGradient
@@ -1703,7 +1239,7 @@ const SvgComponent = (props) => (
         x2={110.341}
         y1={79.185}
         y2={79.185}
-        gradientTransform="matrix(.67013 0 0 .77513 391.85 641.256)"
+        gradientTransform="matrix(.67013 0 0 .77513 391.85 640.788)"
         gradientUnits="userSpaceOnUse"
       />
       <linearGradient id="linearGradient64789">
@@ -1711,7 +1247,7 @@ const SvgComponent = (props) => (
           id="stop64785"
           offset={0}
           style={{
-            stopColor: "#5a0000",
+            stopColor: "#e521c5",
             stopOpacity: 1,
           }}
         />
@@ -1719,7 +1255,7 @@ const SvgComponent = (props) => (
           id="stop64793"
           offset={0.2}
           style={{
-            stopColor: "#840000",
+            stopColor: "#e549c5",
             stopOpacity: 1,
           }}
         />
@@ -1727,7 +1263,7 @@ const SvgComponent = (props) => (
           id="stop64795"
           offset={0.4}
           style={{
-            stopColor: "#a00",
+            stopColor: "#e571c5",
             stopOpacity: 1,
           }}
         />
@@ -1735,15 +1271,15 @@ const SvgComponent = (props) => (
           id="stop64797"
           offset={0.6}
           style={{
-            stopColor: "#ad0000",
+            stopColor: "#e574c5",
             stopOpacity: 1,
           }}
         />
         <stop
-          id="stop64799"
-          offset={0.799}
+          id="stop15500"
+          offset={0.8}
           style={{
-            stopColor: "#9d0000",
+            stopColor: "#e55dc5",
             stopOpacity: 1,
           }}
         />
@@ -1751,7 +1287,7 @@ const SvgComponent = (props) => (
           id="stop64787"
           offset={1}
           style={{
-            stopColor: "#300",
+            stopColor: "#e505c5",
             stopOpacity: 1,
           }}
         />
@@ -1763,7 +1299,7 @@ const SvgComponent = (props) => (
         x2={110.341}
         y1={79.185}
         y2={79.185}
-        gradientTransform="matrix(.67013 0 0 .77513 391.85 641.256)"
+        gradientTransform="matrix(.67013 0 0 .77513 391.85 640.788)"
         gradientUnits="userSpaceOnUse"
       />
       <linearGradient id="linearGradient65554">
@@ -1821,7 +1357,7 @@ const SvgComponent = (props) => (
           id="stop11554-9"
           offset={0.272}
           style={{
-            stopColor: "#fffb78",
+            stopColor: "#ff0",
             stopOpacity: 1,
           }}
         />
@@ -1829,15 +1365,15 @@ const SvgComponent = (props) => (
           id="stop11556-0"
           offset={0.554}
           style={{
-            stopColor: "#fabb00",
-            stopOpacity: 0.9937107,
+            stopColor: "#f60",
+            stopOpacity: 1,
           }}
         />
         <stop
           id="stop11558-2"
           offset={0.868}
           style={{
-            stopColor: "#d40000",
+            stopColor: "#9b0f0f",
             stopOpacity: 1,
           }}
         />
@@ -1863,13 +1399,301 @@ const SvgComponent = (props) => (
         gradientUnits="userSpaceOnUse"
       />
       <linearGradient
-        xlinkHref="#linearGradient5756"
-        id="linearGradient32969"
-        x1={326.345}
-        x2={326.345}
-        y1={-188.953}
-        y2={-102.395}
-        gradientTransform="matrix(.55365 0 0 .57758 423.525 683.565)"
+        xlinkHref="#linearGradient2012"
+        id="linearGradient2025"
+        x1={267.385}
+        x2={278.769}
+        y1={63.763}
+        y2={77.982}
+        gradientTransform="matrix(1.56359 0 0 2.06061 936.843 380.319)"
+        gradientUnits="userSpaceOnUse"
+      />
+      <linearGradient
+        xlinkHref="#linearGradient2028"
+        id="linearGradient2027"
+        x1={238.844}
+        x2={245.126}
+        y1={64.712}
+        y2={70.924}
+        gradientTransform="matrix(1.37856 0 0 1.68832 1028.127 413.115)"
+        gradientUnits="userSpaceOnUse"
+      />
+      <linearGradient id="linearGradient11659">
+        <stop
+          id="stop11655"
+          offset={0.05}
+          style={{
+            stopColor: "#959595",
+            stopOpacity: 1,
+          }}
+        />
+        <stop
+          id="stop11663"
+          offset={0.25}
+          style={{
+            stopColor: "#b4b4b4",
+            stopOpacity: 1,
+          }}
+        />
+        <stop
+          id="stop11665"
+          offset={0.5}
+          style={{
+            stopColor: "#7e7e7e",
+            stopOpacity: 1,
+          }}
+        />
+        <stop
+          id="stop11667"
+          offset={0.75}
+          style={{
+            stopColor: "#919191",
+            stopOpacity: 1,
+          }}
+        />
+        <stop
+          id="stop11657"
+          offset={0.95}
+          style={{
+            stopColor: "#b2b2b2",
+            stopOpacity: 1,
+          }}
+        />
+      </linearGradient>
+      <linearGradient id="linearGradient18591">
+        <stop
+          id="stop18589"
+          offset={0.05}
+          style={{
+            stopColor: "#949494",
+            stopOpacity: 1,
+          }}
+        />
+        <stop
+          id="stop18587"
+          offset={0.25}
+          style={{
+            stopColor: "#737373",
+            stopOpacity: 1,
+          }}
+        />
+        <stop
+          id="stop18585"
+          offset={0.5}
+          style={{
+            stopColor: "#606060",
+            stopOpacity: 1,
+          }}
+        />
+        <stop
+          id="stop18583"
+          offset={0.75}
+          style={{
+            stopColor: "#969696",
+            stopOpacity: 1,
+          }}
+        />
+        <stop
+          id="stop18581"
+          offset={0.95}
+          style={{
+            stopColor: "#777",
+            stopOpacity: 1,
+          }}
+        />
+      </linearGradient>
+      <linearGradient
+        xlinkHref="#linearGradient29180"
+        id="linearGradient29182"
+        x1={47.5}
+        x2={67.5}
+        y1={115.585}
+        y2={115.585}
+        gradientTransform="scale(2.2472)"
+        gradientUnits="userSpaceOnUse"
+      />
+      <linearGradient id="linearGradient29180">
+        <stop
+          id="stop29176"
+          offset={0.053}
+          style={{
+            stopColor: "#b3b3b3",
+            stopOpacity: 1,
+          }}
+        />
+        <stop
+          id="stop29184"
+          offset={0.25}
+          style={{
+            stopColor: "#d2d2d2",
+            stopOpacity: 1,
+          }}
+        />
+        <stop
+          id="stop29186"
+          offset={0.5}
+          style={{
+            stopColor: "#9c9c9c",
+            stopOpacity: 1,
+          }}
+        />
+        <stop
+          id="stop29188"
+          offset={0.75}
+          style={{
+            stopColor: "#afafaf",
+            stopOpacity: 1,
+          }}
+        />
+        <stop
+          id="stop29190"
+          offset={0.95}
+          style={{
+            stopColor: "#d0d0d0",
+            stopOpacity: 1,
+          }}
+        />
+      </linearGradient>
+      <linearGradient
+        xlinkHref="#linearGradient29166"
+        id="linearGradient29168"
+        x1={45}
+        x2={70}
+        y1={125.563}
+        y2={125.563}
+        gradientTransform="scale(2.2472)"
+        gradientUnits="userSpaceOnUse"
+      />
+      <linearGradient id="linearGradient29166">
+        <stop
+          id="stop29162"
+          offset={0.05}
+          style={{
+            stopColor: "#b3b3b3",
+            stopOpacity: 1,
+          }}
+        />
+        <stop
+          id="stop29170"
+          offset={0.25}
+          style={{
+            stopColor: "#d2d2d2",
+            stopOpacity: 1,
+          }}
+        />
+        <stop
+          id="stop29172"
+          offset={0.5}
+          style={{
+            stopColor: "#9c9c9c",
+            stopOpacity: 1,
+          }}
+        />
+        <stop
+          id="stop29174"
+          offset={0.75}
+          style={{
+            stopColor: "#afafaf",
+            stopOpacity: 1,
+          }}
+        />
+        <stop
+          id="stop29164"
+          offset={0.95}
+          style={{
+            stopColor: "#d0d0d0",
+            stopOpacity: 1,
+          }}
+        />
+      </linearGradient>
+      <linearGradient
+        xlinkHref="#linearGradient9133"
+        id="linearGradient9135"
+        x1={0}
+        x2={114.631}
+        y1={57.5}
+        y2={57.5}
+        gradientTransform="scale(2.2472)"
+        gradientUnits="userSpaceOnUse"
+      />
+      <linearGradient id="linearGradient9133">
+        <stop
+          id="stop9129"
+          offset={0.1}
+          style={{
+            stopColor: "#b3b3b3",
+            stopOpacity: 1,
+          }}
+        />
+        <stop
+          id="stop11476"
+          offset={0.25}
+          style={{
+            stopColor: "#d2d2d2",
+            stopOpacity: 1,
+          }}
+        />
+        <stop
+          id="stop11478"
+          offset={0.4}
+          style={{
+            stopColor: "#9c9c9c",
+            stopOpacity: 1,
+          }}
+        />
+        <stop
+          id="stop11480"
+          offset={0.6}
+          style={{
+            stopColor: "#afafaf",
+            stopOpacity: 1,
+          }}
+        />
+        <stop
+          id="stop11482"
+          offset={0.75}
+          style={{
+            stopColor: "#d0d0d0",
+            stopOpacity: 1,
+          }}
+        />
+        <stop
+          id="stop9131"
+          offset={0.95}
+          style={{
+            stopColor: "#989898",
+            stopOpacity: 1,
+          }}
+        />
+      </linearGradient>
+      <linearGradient
+        xlinkHref="#linearGradient11659"
+        id="linearGradient11661-6"
+        x1={14.063}
+        x2={21.063}
+        y1={-4.875}
+        y2={-4.875}
+        gradientTransform="matrix(5.61809 0 0 5.61639 -2195.527 -2248.602)"
+        gradientUnits="userSpaceOnUse"
+      />
+      <linearGradient
+        xlinkHref="#linearGradient11659"
+        id="linearGradient10403-5"
+        x1={12.563}
+        x2={22.563}
+        y1={2.375}
+        y2={2.375}
+        gradientTransform="matrix(5.61809 0 0 5.61639 -2195.527 -2248.602)"
+        gradientUnits="userSpaceOnUse"
+      />
+      <linearGradient
+        xlinkHref="#linearGradient18591"
+        id="linearGradient12498-2"
+        x1={12.563}
+        x2={22.563}
+        y1={-11.375}
+        y2={-11.375}
+        gradientTransform="matrix(-8.58755 3.83195 -2.73794 -6.13211 2216.534 2139.689)"
         gradientUnits="userSpaceOnUse"
       />
       <linearGradient
@@ -1879,342 +1703,939 @@ const SvgComponent = (props) => (
         x2={326.345}
         y1={-188.953}
         y2={-102.395}
-        gradientTransform="matrix(.55363 0 0 .57761 666.612 683.57)"
+        gradientTransform="matrix(2.05136 0 0 2.25336 2035.301 2441.127)"
         gradientUnits="userSpaceOnUse"
       />
       <linearGradient
-        xlinkHref="#linearGradient4499"
-        id="linearGradient4501"
-        x1={1915.42}
-        x2={1915.42}
-        y1={1515.295}
-        y2={1407.295}
+        xlinkHref="#linearGradient22410"
+        id="linearGradient32969"
+        x1={326.345}
+        x2={326.345}
+        y1={-188.953}
+        y2={-102.395}
+        gradientTransform="matrix(2.05136 0 0 2.25336 1111.863 2441.127)"
         gradientUnits="userSpaceOnUse"
       />
       <linearGradient
-        xlinkHref="#linearGradient5239"
-        id="linearGradient5241"
-        x1={2928.881}
-        x2={3037.422}
-        y1={1361.284}
-        y2={1361.284}
+        xlinkHref="#linearGradient13048"
+        id="linearGradient13050"
+        x1={710.228}
+        x2={1003.191}
+        y1={732.734}
+        y2={732.734}
+        gradientTransform="matrix(.59663 0 0 .70282 347.13 215.217)"
+        gradientUnits="userSpaceOnUse"
+      />
+      <linearGradient id="linearGradient31314">
+        <stop
+          id="stop31302"
+          offset={0.077}
+          style={{
+            stopColor: "#b3b3b3",
+            stopOpacity: 1,
+          }}
+        />
+        <stop
+          id="stop31304"
+          offset={0.249}
+          style={{
+            stopColor: "#d2d2d2",
+            stopOpacity: 1,
+          }}
+        />
+        <stop
+          id="stop31306"
+          offset={0.41}
+          style={{
+            stopColor: "#9c9c9c",
+            stopOpacity: 1,
+          }}
+        />
+        <stop
+          id="stop31308"
+          offset={0.618}
+          style={{
+            stopColor: "#afafaf",
+            stopOpacity: 1,
+          }}
+        />
+        <stop
+          id="stop31310"
+          offset={0.779}
+          style={{
+            stopColor: "#d0d0d0",
+            stopOpacity: 1,
+          }}
+        />
+        <stop
+          id="stop31312"
+          offset={0.955}
+          style={{
+            stopColor: "#989898",
+            stopOpacity: 1,
+          }}
+        />
+      </linearGradient>
+      <linearGradient
+        xlinkHref="#linearGradient44730"
+        id="linearGradient55895-5"
+        x1={58.135}
+        x2={77.913}
+        y1={65.447}
+        y2={65.566}
+        gradientTransform="matrix(5.54004 0 0 5.03068 -1082.064 -273.688)"
+        gradientUnits="userSpaceOnUse"
+      />
+      <linearGradient id="linearGradient44730">
+        <stop
+          id="stop44726"
+          offset={0}
+          style={{
+            stopColor: "#4a4a4a",
+            stopOpacity: 1,
+          }}
+        />
+        <stop
+          id="stop44821"
+          offset={0.201}
+          style={{
+            stopColor: "#5b5b5b",
+            stopOpacity: 1,
+          }}
+        />
+        <stop
+          id="stop44823"
+          offset={0.4}
+          style={{
+            stopColor: "#8a8a8a",
+            stopOpacity: 1,
+          }}
+        />
+        <stop
+          id="stop44825"
+          offset={0.6}
+          style={{
+            stopColor: "#424242",
+            stopOpacity: 1,
+          }}
+        />
+        <stop
+          id="stop44829"
+          offset={0.802}
+          style={{
+            stopColor: "#6b6b6b",
+            stopOpacity: 1,
+          }}
+        />
+        <stop
+          id="stop44728"
+          offset={1}
+          style={{
+            stopColor: "#4a4a4a",
+            stopOpacity: 1,
+          }}
+        />
+      </linearGradient>
+      <linearGradient
+        xlinkHref="#linearGradient31314"
+        id="linearGradient31318-5"
+        x1={134.835}
+        x2={171.708}
+        y1={185.429}
+        y2={185.429}
+        gradientTransform="matrix(.09953 -3.11413 1.20517 -.0456 -1002.07 495.789)"
         gradientUnits="userSpaceOnUse"
       />
       <linearGradient
-        xlinkHref="#linearGradient5253"
-        id="linearGradient5255"
-        x1={2454.23}
-        x2={2454.23}
-        y1={1300.359}
-        y2={1194.359}
+        xlinkHref="#linearGradient31314"
+        id="linearGradient76316-0"
+        x1={134.835}
+        x2={171.708}
+        y1={185.429}
+        y2={185.429}
+        gradientTransform="matrix(-.01277 .92162 -.85242 .02158 -460.533 -221.465)"
         gradientUnits="userSpaceOnUse"
       />
       <linearGradient
-        xlinkHref="#linearGradient5267"
-        id="linearGradient5269"
-        x1={1862.424}
-        x2={2007.073}
-        y1={839.377}
-        y2={839.377}
+        xlinkHref="#linearGradient48501"
+        id="linearGradient48503-5"
+        x1={32.603}
+        x2={77.553}
+        y1={49.265}
+        y2={49.025}
+        gradientTransform="matrix(5.54004 0 0 5.03068 -797.846 -260.422)"
+        gradientUnits="userSpaceOnUse"
+      />
+      <linearGradient id="linearGradient48501">
+        <stop
+          id="stop48497"
+          offset={0}
+          style={{
+            stopColor: "#424242",
+            stopOpacity: 1,
+          }}
+        />
+        <stop
+          id="stop48505"
+          offset={0.2}
+          style={{
+            stopColor: "#828282",
+            stopOpacity: 1,
+          }}
+        />
+        <stop
+          id="stop48507"
+          offset={0.4}
+          style={{
+            stopColor: "#929292",
+            stopOpacity: 1,
+          }}
+        />
+        <stop
+          id="stop48509"
+          offset={0.6}
+          style={{
+            stopColor: "#a5a5a5",
+            stopOpacity: 1,
+          }}
+        />
+        <stop
+          id="stop48511"
+          offset={0.796}
+          style={{
+            stopColor: "#878787",
+            stopOpacity: 1,
+          }}
+        />
+        <stop
+          id="stop48499"
+          offset={1}
+          style={{
+            stopColor: "#2d2d2d",
+            stopOpacity: 1,
+          }}
+        />
+      </linearGradient>
+      <linearGradient
+        xlinkHref="#linearGradient44730"
+        id="linearGradient44732-4"
+        x1={58.135}
+        x2={77.913}
+        y1={65.447}
+        y2={65.566}
+        gradientTransform="matrix(5.54004 0 0 5.03068 -797.846 -260.422)"
         gradientUnits="userSpaceOnUse"
       />
       <linearGradient
-        xlinkHref="#linearGradient5281"
-        id="linearGradient5283"
-        x1={1831.039}
-        x2={1831.039}
-        y1={520.821}
-        y2={380.848}
+        xlinkHref="#linearGradient92545"
+        id="linearGradient7719"
+        x1={6.357}
+        x2={18.098}
+        y1={24.031}
+        y2={24.152}
+        gradientUnits="userSpaceOnUse"
+      />
+      <linearGradient id="linearGradient92545">
+        <stop
+          id="stop92541"
+          offset={0}
+          style={{
+            stopColor: "#2f2f2f",
+            stopOpacity: 1,
+          }}
+        />
+        <stop
+          id="stop92549"
+          offset={0.249}
+          style={{
+            stopColor: "#474747",
+            stopOpacity: 1,
+          }}
+        />
+        <stop
+          id="stop92551"
+          offset={0.5}
+          style={{
+            stopColor: "#787878",
+            stopOpacity: 1,
+          }}
+        />
+        <stop
+          id="stop92553"
+          offset={0.75}
+          style={{
+            stopColor: "#4f4f4f",
+            stopOpacity: 1,
+          }}
+        />
+        <stop
+          id="stop92543"
+          offset={1}
+          style={{
+            stopColor: "#3d3d3d",
+            stopOpacity: 1,
+          }}
+        />
+      </linearGradient>
+      <linearGradient
+        xlinkHref="#linearGradient11659"
+        id="linearGradient11661"
+        x1={14.063}
+        x2={21.063}
+        y1={-4.875}
+        y2={-4.875}
+        gradientTransform="matrix(4.55249 0 0 4.55249 -2871.609 3235.253)"
+        gradientUnits="userSpaceOnUse"
+      />
+      <linearGradient
+        xlinkHref="#linearGradient11659"
+        id="linearGradient10403"
+        x1={12.563}
+        x2={22.563}
+        y1={2.375}
+        y2={2.375}
+        gradientTransform="matrix(4.55249 0 0 4.55249 -2871.609 3235.253)"
+        gradientUnits="userSpaceOnUse"
+      />
+      <linearGradient
+        xlinkHref="#linearGradient11673"
+        id="linearGradient11675"
+        x1={21}
+        x2={24}
+        y1={-4.625}
+        y2={-4.625}
+        gradientTransform="matrix(4.55249 0 0 4.55249 -2871.609 3235.253)"
+        gradientUnits="userSpaceOnUse"
+      />
+      <linearGradient id="linearGradient11673">
+        <stop
+          id="stop11671"
+          offset={0.05}
+          style={{
+            stopColor: "#959595",
+            stopOpacity: 1,
+          }}
+        />
+        <stop
+          id="stop11681"
+          offset={0.25}
+          style={{
+            stopColor: "#b4b4b4",
+            stopOpacity: 1,
+          }}
+        />
+        <stop
+          id="stop11679"
+          offset={0.5}
+          style={{
+            stopColor: "#7e7e7e",
+            stopOpacity: 1,
+          }}
+        />
+        <stop
+          id="stop11677"
+          offset={0.75}
+          style={{
+            stopColor: "#919191",
+            stopOpacity: 1,
+          }}
+        />
+        <stop
+          id="stop11688"
+          offset={0.95}
+          style={{
+            stopColor: "#b2b2b2",
+            stopOpacity: 1,
+          }}
+        />
+      </linearGradient>
+      <linearGradient
+        xlinkHref="#linearGradient11659"
+        id="linearGradient11706"
+        x1={15.563}
+        x2={19.563}
+        y1={-10.125}
+        y2={-10.125}
+        gradientTransform="matrix(4.55249 0 0 4.55249 -2871.609 3235.253)"
+        gradientUnits="userSpaceOnUse"
+      />
+      <linearGradient
+        xlinkHref="#linearGradient11659"
+        id="linearGradient12498"
+        x1={12.563}
+        x2={22.563}
+        y1={-11.375}
+        y2={-11.375}
+        gradientTransform="matrix(6.37348 0 0 4.55249 -2903.59 3235.253)"
+        gradientUnits="userSpaceOnUse"
+      />
+      <linearGradient
+        xlinkHref="#linearGradient12517"
+        id="linearGradient12519"
+        x1={3}
+        x2={33}
+        y1={40.375}
+        y2={40.375}
+        gradientTransform="matrix(0 -4.55249 4.55249 0 3237.53 2870.328)"
+        gradientUnits="userSpaceOnUse"
+      />
+      <linearGradient id="linearGradient12517">
+        <stop
+          id="stop12513"
+          offset={0.05}
+          style={{
+            stopColor: "#644896",
+            stopOpacity: 1,
+          }}
+        />
+        <stop
+          id="stop12521"
+          offset={0.25}
+          style={{
+            stopColor: "#8e68cc",
+            stopOpacity: 1,
+          }}
+        />
+        <stop
+          id="stop12523"
+          offset={0.5}
+          style={{
+            stopColor: "#734f96",
+            stopOpacity: 1,
+          }}
+        />
+        <stop
+          id="stop12525"
+          offset={0.75}
+          style={{
+            stopColor: "#732a96",
+            stopOpacity: 1,
+          }}
+        />
+        <stop
+          id="stop12515"
+          offset={0.95}
+          style={{
+            stopColor: "#731e96",
+            stopOpacity: 1,
+          }}
+        />
+      </linearGradient>
+      <linearGradient
+        xlinkHref="#linearGradient15520"
+        id="linearGradient15522"
+        x1={5.65}
+        x2={30.547}
+        y1={48.21}
+        y2={48.21}
+        gradientTransform="matrix(4.55249 0 0 4.55249 -2863.71 3243.886)"
+        gradientUnits="userSpaceOnUse"
+      />
+      <linearGradient id="linearGradient15520">
+        <stop
+          id="stop15516"
+          offset={0}
+          style={{
+            stopColor: "#8c8c8c",
+            stopOpacity: 1,
+          }}
+        />
+        <stop
+          id="stop15526"
+          offset={0.203}
+          style={{
+            stopColor: "#a0a0a0",
+            stopOpacity: 1,
+          }}
+        />
+        <stop
+          id="stop15528"
+          offset={0.601}
+          style={{
+            stopColor: "#8c8c8c",
+            stopOpacity: 1,
+          }}
+        />
+        <stop
+          id="stop15518"
+          offset={1}
+          style={{
+            stopColor: "#787878",
+            stopOpacity: 1,
+          }}
+        />
+      </linearGradient>
+      <linearGradient
+        xlinkHref="#linearGradient11659"
+        id="linearGradient21598"
+        x1={14.063}
+        x2={21.063}
+        y1={-4.875}
+        y2={-4.875}
+        gradientTransform="matrix(5.61809 0 0 5.61639 -2486.167 -2248.602)"
+        gradientUnits="userSpaceOnUse"
+      />
+      <linearGradient
+        xlinkHref="#linearGradient11659"
+        id="linearGradient21600"
+        x1={12.563}
+        x2={22.563}
+        y1={2.375}
+        y2={2.375}
+        gradientTransform="matrix(5.61809 0 0 5.61639 -2486.167 -2248.602)"
+        gradientUnits="userSpaceOnUse"
+      />
+      <linearGradient
+        xlinkHref="#linearGradient18591"
+        id="linearGradient21602"
+        x1={12.563}
+        x2={22.563}
+        y1={-11.375}
+        y2={-11.375}
+        gradientTransform="matrix(-8.58755 3.83195 -2.73794 -6.13211 2507.174 2139.689)"
+        gradientUnits="userSpaceOnUse"
+      />
+      <linearGradient
+        xlinkHref="#linearGradient2597"
+        id="linearGradient2316"
+        x1={193.718}
+        x2={321.702}
+        y1={38.386}
+        y2={38.386}
+        gradientTransform="translate(-497.658 8.6)"
+        gradientUnits="userSpaceOnUse"
+      />
+      <linearGradient
+        xlinkHref="#linearGradient9854"
+        id="linearGradient2318"
+        x1={193.2}
+        x2={306.165}
+        y1={38.292}
+        y2={38.292}
+        gradientTransform="translate(-497.658 8.694)"
+        gradientUnits="userSpaceOnUse"
+      />
+      <linearGradient
+        xlinkHref="#linearGradient2597"
+        id="linearGradient7863"
+        x1={193.718}
+        x2={321.672}
+        y1={38.386}
+        y2={38.386}
+        gradientTransform="matrix(1 0 0 .94455 -497.664 10.603)"
+        gradientUnits="userSpaceOnUse"
+      />
+      <linearGradient
+        xlinkHref="#linearGradient2597"
+        id="linearGradient7865"
+        x1={193.718}
+        x2={321.142}
+        y1={38.386}
+        y2={38.386}
+        gradientTransform="matrix(.9905 0 0 .96347 -494.43 10.19)"
+        gradientUnits="userSpaceOnUse"
+      />
+      <linearGradient
+        xlinkHref="#linearGradient9854"
+        id="linearGradient7867"
+        x1={193.2}
+        x2={306.165}
+        y1={38.292}
+        y2={38.292}
+        gradientTransform="matrix(1.00364 0 0 .94556 -498.608 10.712)"
+        gradientUnits="userSpaceOnUse"
+      />
+      <linearGradient
+        xlinkHref="#linearGradient2597"
+        id="linearGradient8738"
+        x1={193.718}
+        x2={321.594}
+        y1={38.386}
+        y2={38.386}
+        gradientTransform="matrix(1 0 0 .94455 -497.664 10.603)"
+        gradientUnits="userSpaceOnUse"
+      />
+      <linearGradient
+        xlinkHref="#linearGradient2597"
+        id="linearGradient8740"
+        x1={193.718}
+        x2={321.142}
+        y1={38.386}
+        y2={38.386}
+        gradientTransform="matrix(.9905 0 0 .96347 -494.43 10.19)"
+        gradientUnits="userSpaceOnUse"
+      />
+      <linearGradient
+        xlinkHref="#linearGradient9854"
+        id="linearGradient8742"
+        x1={193.2}
+        x2={306.165}
+        y1={38.292}
+        y2={38.292}
+        gradientTransform="matrix(1.00364 0 0 .94556 -498.608 10.712)"
+        gradientUnits="userSpaceOnUse"
+      />
+      <linearGradient
+        xlinkHref="#linearGradient2597"
+        id="linearGradient2316-9"
+        x1={193.718}
+        x2={321.513}
+        y1={38.386}
+        y2={38.386}
+        gradientTransform="translate(-497.658 8.6)"
+        gradientUnits="userSpaceOnUse"
+      />
+      <linearGradient
+        xlinkHref="#linearGradient9854"
+        id="linearGradient2318-6"
+        x1={193.2}
+        x2={306.165}
+        y1={38.292}
+        y2={38.292}
+        gradientTransform="translate(-497.658 8.694)"
+        gradientUnits="userSpaceOnUse"
+      />
+      <linearGradient
+        xlinkHref="#linearGradient9846"
+        id="linearGradient14799"
+        x1={-104.693}
+        x2={105.307}
+        y1={496.733}
+        y2={496.733}
+        gradientTransform="matrix(1 0 0 .17165 -37.174 445.711)"
+        gradientUnits="userSpaceOnUse"
+      />
+      <linearGradient
+        xlinkHref="#linearGradient6395"
+        id="linearGradient4580"
+        x1={-104.693}
+        x2={105.307}
+        y1={496.733}
+        y2={496.733}
+        gradientTransform="matrix(1 0 0 .85824 -37.174 81.487)"
+        gradientUnits="userSpaceOnUse"
+      />
+      <linearGradient
+        xlinkHref="#linearGradient9846"
+        id="linearGradient10461"
+        x1={-104.693}
+        x2={105.307}
+        y1={496.733}
+        y2={496.733}
+        gradientTransform="matrix(1 0 0 .15556 -1694.584 205.751)"
+        gradientUnits="userSpaceOnUse"
+      />
+      <linearGradient
+        xlinkHref="#linearGradient6395"
+        id="linearGradient10463"
+        x1={-104.693}
+        x2={105.307}
+        y1={496.733}
+        y2={496.733}
+        gradientTransform="matrix(1 0 0 .77778 -1694.584 -124.327)"
+        gradientUnits="userSpaceOnUse"
+      />
+      <linearGradient
+        xlinkHref="#linearGradient9846"
+        id="linearGradient10998"
+        x1={-104.693}
+        x2={105.307}
+        y1={496.733}
+        y2={496.733}
+        gradientTransform="matrix(1 0 0 .15556 3601.965 -1147.434)"
+        gradientUnits="userSpaceOnUse"
+      />
+      <linearGradient
+        xlinkHref="#linearGradient6395"
+        id="linearGradient11000"
+        x1={-104.693}
+        x2={105.307}
+        y1={496.733}
+        y2={496.733}
+        gradientTransform="matrix(1 0 0 .77778 3601.965 -1477.512)"
+        gradientUnits="userSpaceOnUse"
+      />
+      <linearGradient
+        xlinkHref="#linearGradient12626"
+        id="linearGradient12628"
+        x1={-577.099}
+        x2={-546.054}
+        y1={-105.957}
+        y2={-105.957}
+        gradientUnits="userSpaceOnUse"
+      />
+      <linearGradient
+        xlinkHref="#linearGradient16079"
+        id="linearGradient16081"
+        x1={2070.859}
+        x2={2122.859}
+        y1={2381.742}
+        y2={2381.742}
+        gradientUnits="userSpaceOnUse"
+      />
+      <linearGradient
+        xlinkHref="#linearGradient16079"
+        id="linearGradient16139"
+        x1={2070.859}
+        x2={2122.859}
+        y1={2381.742}
+        y2={2381.742}
+        gradientTransform="translate(-310.647)"
+        gradientUnits="userSpaceOnUse"
+      />
+      <linearGradient
+        xlinkHref="#linearGradient16079"
+        id="linearGradient16704"
+        x1={2070.859}
+        x2={2122.859}
+        y1={2381.742}
+        y2={2381.742}
+        gradientTransform="translate(-1.582 -4.926)"
+        gradientUnits="userSpaceOnUse"
+      />
+      <linearGradient
+        xlinkHref="#linearGradient16079"
+        id="linearGradient16706"
+        x1={2070.859}
+        x2={2122.859}
+        y1={2381.742}
+        y2={2381.742}
+        gradientTransform="translate(-158.162 -4.926)"
+        gradientUnits="userSpaceOnUse"
+      />
+      <linearGradient
+        xlinkHref="#linearGradient15256"
+        id="linearGradient13376"
+        x1={326.345}
+        x2={326.345}
+        y1={-188.391}
+        y2={-101.093}
+        gradientTransform="matrix(1.97707 0 0 3.08712 -622.69 306.058)"
+        gradientUnits="userSpaceOnUse"
+      />
+      <linearGradient id="linearGradient15256">
+        <stop
+          id="stop15246"
+          offset={0.05}
+          style={{
+            stopColor: "#787878",
+            stopOpacity: 1,
+          }}
+        />
+        <stop
+          id="stop15248"
+          offset={0.245}
+          style={{
+            stopColor: "#9c9c9c",
+            stopOpacity: 1,
+          }}
+        />
+        <stop
+          id="stop15250"
+          offset={0.498}
+          style={{
+            stopColor: "#e2e2e2",
+            stopOpacity: 1,
+          }}
+        />
+        <stop
+          id="stop15252"
+          offset={0.75}
+          style={{
+            stopColor: "#9c9c9c",
+            stopOpacity: 1,
+          }}
+        />
+        <stop
+          id="stop15254"
+          offset={0.95}
+          style={{
+            stopColor: "#787878",
+            stopOpacity: 1,
+          }}
+        />
+      </linearGradient>
+      <linearGradient
+        xlinkHref="#linearGradient14681"
+        id="linearGradient14683"
+        x1={1916.198}
+        x2={1961.198}
+        y1={2477.024}
+        y2={2477.024}
+        gradientUnits="userSpaceOnUse"
+      />
+      <linearGradient
+        xlinkHref="#linearGradient16149"
+        id="linearGradient16151"
+        x1={2072.777}
+        x2={2117.777}
+        y1={2326.24}
+        y2={2326.24}
+        gradientUnits="userSpaceOnUse"
+      />
+      <linearGradient
+        xlinkHref="#linearGradient16891"
+        id="linearGradient16893"
+        x1={2012.659}
+        x2={2013.383}
+        y1={2354.439}
+        y2={2399.476}
+        gradientUnits="userSpaceOnUse"
+      />
+      <linearGradient
+        xlinkHref="#linearGradient17757"
+        id="linearGradient17759"
+        x1={1763.711}
+        x2={1808.711}
+        y1={2425.489}
+        y2={2425.489}
+        gradientUnits="userSpaceOnUse"
+      />
+      <linearGradient
+        xlinkHref="#linearGradient18505"
+        id="linearGradient18507"
+        x1={1941.973}
+        x2={1941.973}
+        y1={2403.405}
+        y2={2360.363}
+        gradientUnits="userSpaceOnUse"
+      />
+      <linearGradient
+        xlinkHref="#linearGradient18521"
+        id="linearGradient18523"
+        x1={2074.359}
+        x2={2119.359}
+        y1={2328.386}
+        y2={2328.386}
+        gradientUnits="userSpaceOnUse"
+      />
+      <linearGradient
+        xlinkHref="#linearGradient9846"
+        id="linearGradient3682"
+        x1={-104.693}
+        x2={105.307}
+        y1={496.733}
+        y2={496.733}
+        gradientTransform="matrix(1 0 0 .17165 -37.174 445.711)"
+        gradientUnits="userSpaceOnUse"
+      />
+      <linearGradient
+        xlinkHref="#linearGradient6395"
+        id="linearGradient3684"
+        x1={-104.693}
+        x2={105.307}
+        y1={496.733}
+        y2={496.733}
+        gradientTransform="matrix(1 0 0 .85824 -37.174 81.487)"
+        gradientUnits="userSpaceOnUse"
+      />
+      <linearGradient
+        xlinkHref="#linearGradient9846"
+        id="linearGradient5024"
+        x1={-104.693}
+        x2={105.307}
+        y1={496.733}
+        y2={496.733}
+        gradientTransform="matrix(1 0 0 .15556 3601.965 -1147.434)"
+        gradientUnits="userSpaceOnUse"
+      />
+      <linearGradient
+        xlinkHref="#linearGradient6395"
+        id="linearGradient5026"
+        x1={-104.693}
+        x2={105.307}
+        y1={496.733}
+        y2={496.733}
+        gradientTransform="matrix(1 0 0 .77778 3601.965 -1477.512)"
+        gradientUnits="userSpaceOnUse"
+      />
+      <linearGradient id="linearGradient15256-3">
+        <stop
+          id="stop38889"
+          offset={0.05}
+          style={{
+            stopColor: "#a2a08c",
+            stopOpacity: 1,
+          }}
+        />
+        <stop
+          id="stop38887"
+          offset={0.245}
+          style={{
+            stopColor: "#bfb575",
+            stopOpacity: 1,
+          }}
+        />
+        <stop
+          id="stop38885"
+          offset={0.498}
+          style={{
+            stopColor: "#ff0",
+            stopOpacity: 1,
+          }}
+        />
+        <stop
+          id="stop38883"
+          offset={0.75}
+          style={{
+            stopColor: "#bfb575",
+            stopOpacity: 1,
+          }}
+        />
+        <stop
+          id="stop38881"
+          offset={0.95}
+          style={{
+            stopColor: "#a2a08c",
+            stopOpacity: 1,
+          }}
+        />
+      </linearGradient>
+      <linearGradient
+        xlinkHref="#linearGradient15256-3"
+        id="linearGradient13376-0"
+        x1={326.345}
+        x2={326.345}
+        y1={-188.516}
+        y2={-101.043}
+        gradientTransform="matrix(1.97707 0 0 3.08712 -621.797 306.78)"
         gradientUnits="userSpaceOnUse"
         spreadMethod="pad"
       />
       <linearGradient
-        xlinkHref="#linearGradient5295"
-        id="linearGradient5297"
-        x1={1595.303}
-        x2={1759.768}
-        y1={1349.825}
-        y2={1349.825}
+        xlinkHref="#linearGradient13390"
+        id="linearGradient13392"
+        x1={0}
+        x2={365}
+        y1={182.5}
+        y2={182.5}
         gradientUnits="userSpaceOnUse"
       />
       <linearGradient
-        xlinkHref="#linearGradient2597"
-        id="linearGradient2599"
-        x1={193.718}
-        x2={340.599}
-        y1={38.386}
-        y2={38.386}
-        gradientTransform="translate(-497.658 8.6)"
+        xlinkHref="#linearGradient13408"
+        id="linearGradient13410"
+        x1={0.001}
+        x2={365.001}
+        y1={182.5}
+        y2={182.5}
         gradientUnits="userSpaceOnUse"
       />
       <linearGradient
-        xlinkHref="#linearGradient9854"
-        id="linearGradient4085"
-        x1={193.2}
-        x2={306.165}
-        y1={38.292}
-        y2={38.292}
-        gradientTransform="translate(-497.658 8.843)"
+        xlinkHref="#linearGradient13424"
+        id="linearGradient13426"
+        x1={55.001}
+        x2={365.001}
+        y1={210}
+        y2={210}
         gradientUnits="userSpaceOnUse"
       />
       <linearGradient
-        xlinkHref="#linearGradient2597"
-        id="linearGradient5690"
-        x1={193.718}
-        x2={340.599}
-        y1={38.386}
-        y2={38.386}
-        gradientTransform="translate(-497.658 8.6)"
-        gradientUnits="userSpaceOnUse"
-      />
-      <linearGradient
-        xlinkHref="#linearGradient4083"
-        id="linearGradient5692"
-        x1={193.2}
-        x2={306.165}
-        y1={38.292}
-        y2={38.292}
-        gradientTransform="translate(-497.658 8.843)"
-        gradientUnits="userSpaceOnUse"
-      />
-      <linearGradient
-        xlinkHref="#linearGradient6395"
-        id="linearGradient6397"
-        x1={1144.707}
-        x2={1469.707}
-        y1={180.354}
-        y2={180.354}
-        gradientTransform="translate(-4.707 -.354)"
-        gradientUnits="userSpaceOnUse"
-      />
-      <linearGradient
-        xlinkHref="#linearGradient9846"
-        id="linearGradient7178"
-        x1={1144.707}
-        x2={1469.707}
-        y1={180.354}
-        y2={180.354}
-        gradientTransform="matrix(1 0 0 .16667 -4.707 184.941)"
-        gradientUnits="userSpaceOnUse"
-      />
-      <linearGradient
-        xlinkHref="#linearGradient6395"
-        id="linearGradient9928"
-        x1={1144.707}
-        x2={1469.707}
-        y1={180.354}
-        y2={180.354}
-        gradientTransform="translate(-4.707 -.354)"
-        gradientUnits="userSpaceOnUse"
-      />
-      <linearGradient
-        xlinkHref="#linearGradient9846"
-        id="linearGradient9930"
-        x1={1144.707}
-        x2={1469.707}
-        y1={180.354}
-        y2={180.354}
-        gradientTransform="matrix(1 0 0 .16667 -4.707 184.941)"
-        gradientUnits="userSpaceOnUse"
-      />
-      <linearGradient
-        xlinkHref="#linearGradient6395"
-        id="linearGradient10003"
-        x1={1144.707}
-        x2={1469.707}
-        y1={180.354}
-        y2={180.354}
-        gradientTransform="translate(-4.707 -.354)"
-        gradientUnits="userSpaceOnUse"
-      />
-      <linearGradient
-        xlinkHref="#linearGradient9846"
-        id="linearGradient10005"
-        x1={1144.707}
-        x2={1469.707}
-        y1={180.354}
-        y2={180.354}
-        gradientTransform="matrix(1 0 0 .16667 -4.707 184.941)"
-        gradientUnits="userSpaceOnUse"
-      />
-      <linearGradient
-        xlinkHref="#linearGradient10943"
-        id="linearGradient10945"
-        x1={2235.468}
-        x2={2467.995}
-        y1={433.532}
-        y2={201.005}
-        gradientUnits="userSpaceOnUse"
-      />
-      <linearGradient
-        xlinkHref="#linearGradient13676"
-        id="linearGradient13678"
-        x1={2069}
-        x2={2399}
-        y1={435}
-        y2={435}
-        gradientUnits="userSpaceOnUse"
-      />
-      <linearGradient
-        xlinkHref="#linearGradient10943"
-        id="linearGradient10945-8"
-        x1={2235.468}
-        x2={2467.995}
-        y1={433.532}
-        y2={201.005}
-        gradientUnits="userSpaceOnUse"
-      />
-      <linearGradient
-        xlinkHref="#linearGradient13676"
-        id="linearGradient13678-9"
-        x1={2069}
-        x2={2399}
-        y1={435}
-        y2={435}
-        gradientUnits="userSpaceOnUse"
-      />
-      <linearGradient
-        xlinkHref="#linearGradient2597"
-        id="linearGradient2599-9"
-        x1={193.718}
-        x2={340.599}
-        y1={38.386}
-        y2={38.386}
-        gradientTransform="translate(-497.658 8.6)"
-        gradientUnits="userSpaceOnUse"
-      />
-      <linearGradient
-        xlinkHref="#linearGradient2597"
-        id="linearGradient19546"
-        x1={193.718}
-        x2={340.599}
-        y1={38.386}
-        y2={38.386}
-        gradientTransform="translate(-497.658 8.6)"
-        gradientUnits="userSpaceOnUse"
-      />
-      <linearGradient
-        xlinkHref="#linearGradient9854"
-        id="linearGradient19548"
-        x1={193.2}
-        x2={306.165}
-        y1={38.292}
-        y2={38.292}
-        gradientTransform="matrix(1.00364 0 0 1.00411 -498.608 8.696)"
-        gradientUnits="userSpaceOnUse"
-      />
-      <linearGradient
-        xlinkHref="#linearGradient2597"
-        id="linearGradient19546-4"
-        x1={193.718}
-        x2={340.599}
-        y1={38.386}
-        y2={38.386}
-        gradientTransform="translate(-497.658 8.6)"
-        gradientUnits="userSpaceOnUse"
-      />
-      <linearGradient
-        xlinkHref="#linearGradient2597"
-        id="linearGradient21206"
-        x1={193.718}
-        x2={340.599}
-        y1={38.386}
-        y2={38.386}
-        gradientTransform="translate(-497.658 8.6)"
-        gradientUnits="userSpaceOnUse"
-      />
-      <linearGradient
-        xlinkHref="#linearGradient9854"
-        id="linearGradient21208"
-        x1={193.2}
-        x2={306.165}
-        y1={38.292}
-        y2={38.292}
-        gradientTransform="matrix(1.00364 0 0 1.00411 -498.608 8.696)"
-        gradientUnits="userSpaceOnUse"
-      />
-      <linearGradient
-        xlinkHref="#linearGradient2531"
-        id="linearGradient2533"
-        x1={245}
-        x2={315}
-        y1={382}
-        y2={376}
-        gradientUnits="userSpaceOnUse"
-      />
-      <linearGradient
-        xlinkHref="#linearGradient2541"
-        id="linearGradient2543"
-        x1={583}
-        x2={582}
-        y1={298.5}
-        y2={230.5}
-        gradientUnits="userSpaceOnUse"
-      />
-      <linearGradient
-        xlinkHref="#linearGradient2551"
-        id="linearGradient2553"
-        x1={774}
-        x2={923}
-        y1={861.5}
-        y2={865.5}
-        gradientUnits="userSpaceOnUse"
-      />
-      <linearGradient
-        xlinkHref="#linearGradient2571"
-        id="linearGradient2573"
-        x1={3742.811}
-        x2={3803.578}
-        y1={2171.211}
-        y2={2173.711}
-        gradientUnits="userSpaceOnUse"
-      />
-      <linearGradient
-        xlinkHref="#linearGradient2581"
-        id="linearGradient2583"
-        x1={3672.486}
-        x2={3672.986}
-        y1={2002.055}
-        y2={1975}
-        gradientUnits="userSpaceOnUse"
-      />
-      <linearGradient
-        xlinkHref="#linearGradient6338"
-        id="linearGradient6340"
-        x1={2165.414}
-        x2={2164}
-        y1={2210.63}
-        y2={2285.583}
-        gradientUnits="userSpaceOnUse"
-      />
-      <linearGradient
-        xlinkHref="#linearGradient6348"
-        id="linearGradient6350"
-        x1={3364.994}
-        x2={3361.485}
-        y1={2252.772}
-        y2={2314.934}
-        gradientTransform="translate(-38 -11)"
-        gradientUnits="userSpaceOnUse"
-      />
-      <linearGradient
-        xlinkHref="#linearGradient2531"
-        id="linearGradient1270"
-        x1={245}
-        x2={315}
-        y1={382}
-        y2={376}
-        gradientTransform="translate(361 114.5)"
-        gradientUnits="userSpaceOnUse"
-      />
-      <linearGradient
-        xlinkHref="#linearGradient2581"
-        id="linearGradient1925"
-        x1={3672.486}
-        x2={3672.986}
-        y1={2002.055}
-        y2={1975}
-        gradientTransform="translate(83.316 119.166)"
+        xlinkHref="#linearGradient13434"
+        id="linearGradient13436"
+        x1={55}
+        x2={365.001}
+        y1={210}
+        y2={210}
         gradientUnits="userSpaceOnUse"
       />
       <filter
@@ -2230,232 +2651,28 @@ const SvgComponent = (props) => (
         <feGaussianBlur id="feGaussianBlur29367" stdDeviation={1.283} />
       </filter>
       <filter
-        id="filter6129"
-        width={1.031}
-        height={2.063}
-        x={-0.015}
-        y={-0.532}
-        style={{
-          colorInterpolationFilters: "sRGB",
-        }}
-      >
-        <feGaussianBlur id="feGaussianBlur6131" stdDeviation={1.341} />
-      </filter>
-      <filter
-        id="filter6137"
-        width={1.044}
-        height={1.349}
-        x={-0.022}
-        y={-0.174}
-        style={{
-          colorInterpolationFilters: "sRGB",
-        }}
-      >
-        <feGaussianBlur id="feGaussianBlur6139" stdDeviation={0.44} />
-      </filter>
-      <filter
-        id="filter4505"
-        width={1.025}
-        height={1.486}
-        x={-0.013}
-        y={-0.243}
-        style={{
-          colorInterpolationFilters: "sRGB",
-        }}
-      >
-        <feGaussianBlur id="feGaussianBlur4507" stdDeviation={11.78} />
-      </filter>
-      <filter
-        id="filter5245"
-        width={1.521}
-        height={1.179}
-        x={-0.26}
-        y={-0.09}
-        style={{
-          colorInterpolationFilters: "sRGB",
-        }}
-      >
-        <feGaussianBlur id="feGaussianBlur5247" stdDeviation={11.78} />
-      </filter>
-      <filter
-        id="filter5259"
-        width={1.048}
-        height={1.547}
-        x={-0.024}
-        y={-0.273}
-        style={{
-          colorInterpolationFilters: "sRGB",
-        }}
-      >
-        <feGaussianBlur id="feGaussianBlur5261" stdDeviation={11.78} />
-      </filter>
-      <filter
-        id="filter5273"
-        width={1.391}
-        height={1.061}
-        x={-0.195}
-        y={-0.03}
-        style={{
-          colorInterpolationFilters: "sRGB",
-        }}
-      >
-        <feGaussianBlur id="feGaussianBlur5275" stdDeviation={11.78} />
-      </filter>
-      <filter
-        id="filter5287"
-        width={1.143}
-        height={1.38}
-        x={-0.071}
-        y={-0.19}
-        style={{
-          colorInterpolationFilters: "sRGB",
-        }}
-      >
-        <feGaussianBlur id="feGaussianBlur5289" stdDeviation={11.78} />
-      </filter>
-      <filter
-        id="filter5301"
-        width={1.346}
-        height={1.029}
-        x={-0.173}
-        y={-0.015}
-        style={{
-          colorInterpolationFilters: "sRGB",
-        }}
-      >
-        <feGaussianBlur id="feGaussianBlur5303" stdDeviation={11.841} />
-      </filter>
-      <filter
-        id="filter4777"
-        width={1.136}
-        height={1.034}
-        x={-0.068}
-        y={-0.017}
-        style={{
-          colorInterpolationFilters: "sRGB",
-        }}
-      >
-        <feGaussianBlur id="feGaussianBlur4779" stdDeviation={2.008} />
-      </filter>
-      <filter
-        id="filter4781"
-        width={1.03}
-        height={1.247}
-        x={-0.015}
-        y={-0.124}
-        style={{
-          colorInterpolationFilters: "sRGB",
-        }}
-      >
-        <feGaussianBlur id="feGaussianBlur4783" stdDeviation={4.531} />
-      </filter>
-      <filter
-        id="filter4785"
-        width={1.265}
-        height={1.03}
-        x={-0.132}
-        y={-0.015}
-        style={{
-          colorInterpolationFilters: "sRGB",
-        }}
-      >
-        <feGaussianBlur id="feGaussianBlur4787" stdDeviation={8.438} />
-      </filter>
-      <filter
-        id="filter4793"
-        width={1.182}
-        height={1.032}
-        x={-0.091}
-        y={-0.016}
-        style={{
-          colorInterpolationFilters: "sRGB",
-        }}
-      >
-        <feGaussianBlur id="feGaussianBlur4795" stdDeviation={2.858} />
-      </filter>
-      <filter
-        id="filter4797"
-        width={1.031}
+        id="filter28488"
+        width={1.204}
         height={1.229}
-        x={-0.015}
-        y={-0.115}
+        x={-0.102}
+        y={-0.114}
         style={{
           colorInterpolationFilters: "sRGB",
         }}
       >
-        <feGaussianBlur id="feGaussianBlur4799" stdDeviation={2.23} />
+        <feGaussianBlur id="feGaussianBlur28490" stdDeviation={1.363} />
       </filter>
       <filter
-        id="filter6354"
-        width={1.037}
-        height={1.237}
-        x={-0.018}
-        y={-0.119}
-        style={{
-          colorInterpolationFilters: "sRGB",
-        }}
-      >
-        <feGaussianBlur id="feGaussianBlur6356" stdDeviation={7.363} />
-      </filter>
-      <filter
-        id="filter6358"
-        width={1.08}
-        height={4.772}
-        x={-0.04}
-        y={-1.886}
-        style={{
-          colorInterpolationFilters: "sRGB",
-        }}
-      >
-        <feGaussianBlur id="feGaussianBlur6360" stdDeviation={6.909} />
-      </filter>
-      <filter
-        id="filter6362"
-        width={1.031}
-        height={1.265}
-        x={-0.015}
-        y={-0.133}
-        style={{
-          colorInterpolationFilters: "sRGB",
-        }}
-      >
-        <feGaussianBlur id="feGaussianBlur6364" stdDeviation={6.322} />
-      </filter>
-      <filter
-        id="filter12077"
-        width={4.697}
-        height={1.311}
-        x={-1.849}
-        y={-0.156}
-        style={{
-          colorInterpolationFilters: "sRGB",
-        }}
-      >
-        <feGaussianBlur id="feGaussianBlur12079" stdDeviation={5.777} />
-      </filter>
-      <filter
-        id="filter4777-0"
-        width={1.139}
-        height={1.04}
-        x={-0.07}
-        y={-0.02}
-        style={{
-          colorInterpolationFilters: "sRGB",
-        }}
-      >
-        <feGaussianBlur id="feGaussianBlur4779-6" stdDeviation={2.008} />
-      </filter>
-      <filter
-        id="filter4797-8"
-        width={1.031}
+        id="filter28550"
+        width={1.204}
         height={1.229}
-        x={-0.015}
-        y={-0.115}
+        x={-0.102}
+        y={-0.114}
         style={{
           colorInterpolationFilters: "sRGB",
         }}
       >
-        <feGaussianBlur id="feGaussianBlur4799-4" stdDeviation={2.23} />
+        <feGaussianBlur id="feGaussianBlur28552" stdDeviation={1.363} />
       </filter>
       <radialGradient
         xlinkHref="#linearGradient11560"
@@ -2480,1152 +2697,211 @@ const SvgComponent = (props) => (
         gradientUnits="userSpaceOnUse"
       />
     </defs>
-    <g id="ftir">
+    <g id="ftir" transform="translate(82.464 -98.408)">
       <path
-        id="path2020"
-        d="m3728.31 2390.15 29.584-432.878 42.098 31.112 3.586 299.257z"
-        style={{
-          display: "inline",
-          mixBlendMode: "lighten",
-          fill: "url(#linearGradient2573)",
-          fillOpacity: 1,
-          fillRule: "evenodd",
-          strokeWidth: 3.745,
-          strokeLinecap: "square",
-          paintOrder: "markers stroke fill",
-          filter: "url(#filter4793)",
-        }}
-      />
-      <g
-        id="mct-laser"
-        style={{
-          display: props.detector.mct,
-        }}
-      >
-        <path
-          id="path2022"
-          d="m3773.122 1970-287.6 15.828 349.825 30.84z"
-          style={{
-            display: "inline",
-            mixBlendMode: "lighten",
-            fill: "url(#linearGradient2583)",
-            fillOpacity: 1,
-            fillRule: "evenodd",
-            strokeWidth: 3.745,
-            strokeLinecap: "square",
-            paintOrder: "markers stroke fill",
-            filter: "url(#filter4797)",
-          }}
-        />
-      </g>
-      <g
-        id="insb-laser"
-        style={{
-          display: props.detector.insb,
-        }}
-      >
-        <path
-          id="path2022-0"
-          d="m3856.437 2089.166-287.6 15.828 349.826 30.84z"
-          style={{
-            display: "inline",
-            mixBlendMode: "lighten",
-            fill: "url(#linearGradient1925)",
-            fillOpacity: 1,
-            fillRule: "evenodd",
-            strokeWidth: 3.745,
-            strokeLinecap: "square",
-            paintOrder: "markers stroke fill",
-            filter: "url(#filter4797-8)",
-          }}
-          transform="matrix(.68499 -.42971 .53142 .84711 13.213 1857.706)"
-        />
-      </g>
-      <path
-        id="path6326"
-        d="m3787.646 2235.665 59.002 9.515-981.442 1.972L3793.068 2350z"
-        style={{
-          mixBlendMode: "lighten",
-          fill: "url(#linearGradient6350)",
-          fillOpacity: 1,
-          fillRule: "evenodd",
-          strokeWidth: 3.745,
-          strokeLinecap: "square",
-          paintOrder: "markers stroke fill",
-          filter: "url(#filter6362)",
-        }}
-        transform="rotate(-1.048 3475.206 2398.88)"
-      />
-      <rect
-        id="rect6328"
-        width={412.997}
-        height={8.793}
-        x={2621.221}
-        y={2209.029}
-        ry={0}
-        style={{
-          mixBlendMode: "lighten",
-          fill: "#f99",
-          fillOpacity: 1,
-          fillRule: "evenodd",
-          strokeWidth: 3.71753,
-          strokeLinecap: "square",
-          paintOrder: "markers stroke fill",
-          filter: "url(#filter6358)",
-        }}
-        transform="matrix(1.37357 .01681 -.0231 .99986 -1098.351 -1)"
-      />
-      <path
-        id="path6324"
-        d="m1584 2163 961 94-815 55z"
-        style={{
-          mixBlendMode: "lighten",
-          fill: "url(#linearGradient6340)",
-          fillOpacity: 1,
-          fillRule: "evenodd",
-          strokeWidth: 3.745,
-          strokeLinecap: "square",
-          paintOrder: "markers stroke fill",
-          filter: "url(#filter6354)",
-        }}
-      />
-      <path
-        id="path2428"
-        d="m1595.913 522.63-.61 1631.243 163.856 166.292.609-1940.679z"
-        style={{
-          mixBlendMode: "lighten",
-          fill: "url(#linearGradient5297)",
-          fillOpacity: 1,
-          fillRule: "evenodd",
-          stroke: "none",
-          strokeWidth: 1.222,
-          strokeLinecap: "square",
-          strokeDasharray: "none",
-          paintOrder: "markers stroke fill",
-          filter: "url(#filter5301)",
-        }}
-      />
-      <path
-        id="path2426"
-        d="m1991.236 520.194-127.308-144.363-98.678.61-170.556 148.017 396.542-4.264z"
-        style={{
-          mixBlendMode: "lighten",
-          fill: "url(#linearGradient5283)",
-          fillOpacity: 1,
-          fillRule: "evenodd",
-          stroke: "none",
-          strokeWidth: 1.222,
-          strokeLinecap: "square",
-          strokeDasharray: "none",
-          paintOrder: "markers stroke fill",
-          filter: "url(#filter5287)",
-        }}
-      />
-      <path
-        id="path2424"
-        d="m2006.464 1304.14.61-769.936-144.364-159.59-.286 808.998z"
-        style={{
-          mixBlendMode: "lighten",
-          fill: "url(#linearGradient5269)",
-          fillOpacity: 1,
-          fillRule: "evenodd",
-          stroke: "none",
-          strokeWidth: 1.222,
-          strokeLinecap: "square",
-          strokeDasharray: "none",
-          paintOrder: "markers stroke fill",
-          filter: "url(#filter5273)",
-        }}
-      />
-      <path
-        id="path2420"
-        d="m3037.422 1296.891-117.586-100.357-1048.798-.861 123.185 103.372z"
-        style={{
-          mixBlendMode: "lighten",
-          fill: "url(#linearGradient5255)",
-          fillOpacity: 1,
-          fillRule: "evenodd",
-          stroke: "none",
-          strokeWidth: 1.222,
-          strokeLinecap: "square",
-          strokeDasharray: "none",
-          paintOrder: "markers stroke fill",
-          filter: "url(#filter5259)",
-        }}
-      />
-      <path
-        id="path2418"
-        d="m2930.173 1519.142 107.249-117.156-.43-108.54-108.111-90.02z"
-        style={{
-          mixBlendMode: "lighten",
-          fill: "url(#linearGradient5241)",
-          fillOpacity: 1,
-          fillRule: "evenodd",
-          stroke: "none",
-          strokeWidth: 1.222,
-          strokeLinecap: "square",
-          strokeDasharray: "none",
-          paintOrder: "markers stroke fill",
-          filter: "url(#filter5245)",
-        }}
-      />
-      <path
-        id="path2416"
-        d="m796.433 1403.124 114.212 116.343 2021.036-2.048 102.726-110.695z"
-        style={{
-          mixBlendMode: "lighten",
-          fill: "url(#linearGradient4501)",
-          fillOpacity: 1,
-          fillRule: "evenodd",
-          stroke: "none",
-          strokeWidth: 1.222,
-          strokeLinecap: "square",
-          strokeDasharray: "none",
-          paintOrder: "markers stroke fill",
-          filter: "url(#filter4505)",
-        }}
-      />
-      <rect
-        id="rect12070"
-        width={7.5}
-        height={89.085}
-        x={848.675}
-        y={684.136}
-        ry={0}
-        style={{
-          mixBlendMode: "lighten",
-          fill: "#f99",
-          fillOpacity: 1,
-          fillRule: "evenodd",
-          strokeWidth: 2.51933,
-          strokeLinecap: "square",
-          paintOrder: "markers stroke fill",
-          filter: "url(#filter12077)",
-        }}
-      />
-      <path
-        id="path2014"
-        d="M805.5 191 851 737l-81 657 153 144-72-798 72-458.5Z"
-        style={{
-          display: "inline",
-          mixBlendMode: "lighten",
-          fill: "url(#linearGradient2553)",
-          fillOpacity: 1,
-          fillRule: "evenodd",
-          strokeWidth: 3.745,
-          strokeLinecap: "square",
-          paintOrder: "markers stroke fill",
-          filter: "url(#filter4785)",
-        }}
-      />
-      <path
-        id="path2012"
-        d="m227 291 717.5 13L823 216l-542 27Z"
-        style={{
-          display: "inline",
-          mixBlendMode: "lighten",
-          fill: "url(#linearGradient2543)",
-          fillOpacity: 1,
-          fillRule: "evenodd",
-          strokeWidth: 3.745,
-          strokeLinecap: "square",
-          paintOrder: "markers stroke fill",
-          filter: "url(#filter4781)",
-        }}
-      />
-      <g
-        id="tungsten-laser"
-        style={{
-          display: props.source.tungsten,
-        }}
-        transform="matrix(1.06955 0 0 1.0121 -27.685 -5.76)"
-      >
-        <path
-          id="path2010-1"
-          d="m659 633.5-54-237 69.321-3.63z"
-          style={{
-            display: "inline",
-            mixBlendMode: "lighten",
-            fill: "url(#linearGradient1270)",
-            fillOpacity: 1,
-            fillRule: "evenodd",
-            strokeWidth: 3.745,
-            strokeLinecap: "square",
-            paintOrder: "markers stroke fill",
-            filter: "url(#filter4777-0)",
-          }}
-          transform="matrix(.80782 -.33281 .42152 .63783 -414.05 237.816)"
-        />
-      </g>
-      <g
-        id="globar-laser"
-        style={{
-          display: props.source.globar,
-        }}
-      >
-        <path
-          id="path2010"
-          d="m298 519-54-237 71-49Z"
-          style={{
-            display: "inline",
-            mixBlendMode: "lighten",
-            fill: "url(#linearGradient2533)",
-            fillOpacity: 1,
-            fillRule: "evenodd",
-            strokeWidth: 3.745,
-            strokeLinecap: "square",
-            paintOrder: "markers stroke fill",
-            filter: "url(#filter4777)",
-          }}
-        />
-      </g>
-      <path
-        id="rect49000"
-        d="M45.034-134.318h47.609v6.052H45.034z"
-        style={{
-          mixBlendMode: "normal",
-          fill: "red",
-          fillOpacity: 1,
-          stroke: "none",
-          strokeWidth: 1.11672,
-          strokeLinecap: "square",
-          strokeOpacity: 1,
-          paintOrder: "markers stroke fill",
-          filter: "url(#filter6137)",
-        }}
-        transform="matrix(-.00458 17.43453 -3.1071 -.0055 1526.487 -365.402)"
-      />
-      <path
-        id="rect49322"
-        d="M24.075 100.753h208.986v6.052H24.075z"
-        style={{
-          mixBlendMode: "normal",
-          fill: "red",
-          fillOpacity: 1,
-          stroke: "none",
-          strokeWidth: 2.33967,
-          strokeLinecap: "square",
-          strokeOpacity: 1,
-          paintOrder: "markers stroke fill",
-          filter: "url(#filter6129)",
-        }}
-        transform="matrix(1.64236 0 0 2.42365 1607.478 197.48)"
-      />
-      <path
-        id="rect48250"
-        d="M24.075 100.753h208.986v6.052H24.075z"
-        style={{
-          mixBlendMode: "normal",
-          fill: "red",
-          fillOpacity: 1,
-          stroke: "none",
-          strokeWidth: 2.33967,
-          strokeLinecap: "square",
-          strokeOpacity: 1,
-          paintOrder: "markers stroke fill",
-          filter: "url(#filter6129)",
-        }}
-        transform="matrix(5.37857 0 0 2.42365 1765.556 998.584)"
-      />
-      <path
-        id="rect45312"
-        d="M45.034-134.318h47.609v6.052H45.034z"
-        style={{
-          mixBlendMode: "normal",
-          fill: "red",
-          fillOpacity: 1,
-          stroke: "none",
-          strokeWidth: 1.11672,
-          strokeLinecap: "square",
-          strokeOpacity: 1,
-          paintOrder: "markers stroke fill",
-          filter: "url(#filter6137)",
-        }}
-        transform="matrix(-.00458 4.25841 -3.1071 -.00134 2583.903 1060.574)"
-      />
-      <path
-        id="box-right"
-        d="M1975 1830v350h20v-330h1315v341h20v-341h605v710h-605v-244h-20v244H1995v-255h-20v275h1980v-750h-645z"
+        id="source-chamber"
+        d="M-20.864 160.73v15h.002v590h473v-15h-458v-575h721.75v575h-89.25v15h104.25v-605h-.246z"
         style={{
           fill: "#000",
           fillOpacity: 1,
-          fillRule: "evenodd",
           stroke: "none",
-          strokeWidth: 30.3151,
+          strokeWidth: 0.773409,
           strokeLinecap: "square",
           strokeDasharray: "none",
-          strokeOpacity: 1,
-          paintOrder: "markers stroke fill",
+          paintOrder: "fill markers stroke",
         }}
       />
-      <path
-        id="box-left"
-        d="M742.493 732.46H83.053V66.92v0H1123.59v665.54H968.267"
-        style={{
-          fill: "none",
-          fillRule: "evenodd",
-          stroke: "#000",
-          strokeWidth: 20,
-          strokeLinecap: "square",
-          strokeDasharray: "none",
-          strokeOpacity: 1,
-          paintOrder: "markers stroke fill",
-        }}
-      />
-      <path
-        id="hose-2"
-        d="M2815.176 2428.736c-32.176 37.689-51.708 85.99-54.772 135.45-3.064 49.46 10.356 99.802 37.634 141.174s68.26 73.541 114.927 90.213c46.667 16.671 98.755 17.75 146.073 3.026 9.96-3.099 19.709-6.875 29.157-11.293"
-        style={{
-          fill: "none",
-          stroke: "#bb4c00",
-          strokeWidth: 14.7373,
-          strokeOpacity: 1,
-          paintOrder: "markers stroke fill",
-        }}
-      />
-      <path
-        id="hose-1"
-        d="M2504.156 2407.999c15.38 55.363 8.756 116.52-18.12 167.307-26.877 50.787-73.718 90.661-128.145 109.084a228.158 228.158 0 0 1-83.58 11.761"
-        style={{
-          fill: "none",
-          stroke: "#bb4c00",
-          strokeWidth: 17.2383,
-          strokeOpacity: 1,
-          paintOrder: "markers stroke fill",
-        }}
-      />
-      <g
-        id="parabolic-mirror-hole-2"
-        style={{
-          stroke: "none",
-          strokeWidth: 1.00013,
-          strokeDasharray: "none",
-        }}
-        transform="matrix(0 2.66486 4.07062 0 1488.6 2856.17)"
-      >
+      <g id="beams">
         <path
-          id="path7564-9-7"
-          d="M-236.662 44.675h79.603V8.263H-303.94c8.791 3.616 21.936 9.791 32.581 15.489 11.613 6.215 23.312 13.1 34.184 20.563.173.12.34.24.514.36z"
+          id="rect6675"
+          d="M344.494 1210.539h1713.303v10H344.494z"
           style={{
-            fill: "url(#linearGradient21206)",
-            fillOpacity: 1,
+            fill: "red",
             fillRule: "evenodd",
             stroke: "none",
-            strokeWidth: 0.997274,
-            strokeLinecap: "square",
-            strokeDasharray: "none",
-            paintOrder: "markers stroke fill",
-          }}
-        />
-        <path
-          id="path17363-3"
-          d="M-157.059 85.71V50.011h-71.982c7.42 5.323 14.562 10.889 21.241 17.27 5.826 5.567 16.024 18.427 16.024 18.427z"
-          style={{
-            fill: "url(#linearGradient19546-4)",
-            fillOpacity: 1,
-            fillRule: "evenodd",
-            stroke: "none",
-            strokeWidth: 0.997274,
-            strokeLinecap: "square",
-            strokeDasharray: "none",
-            paintOrder: "markers stroke fill",
-          }}
-        />
-        <path
-          id="path8346-0-8"
-          d="M-157.064 46.598v-1.96h-79.575l-.255-.175c-4.827-3.27-9.704-6.469-14.685-9.497a408.85 408.85 0 0 0-19.635-11.198c-5.799-3.1-11.716-5.977-17.645-8.819a318.442 318.442 0 0 0-9.736-4.467c-1.756-.77-5.306-2.22-5.306-2.22l-.805 1.34s3.452 1.723 5.185 2.57c3.238 1.58 6.506 3.1 9.74 4.69 5.95 2.922 11.944 5.759 17.777 8.906 6.541 3.529 12.96 7.289 19.294 11.176a333.962 333.962 0 0 1 11.987 7.736l.027.018c.962.63 1.922 1.263 2.879 1.9z"
-          style={{
-            fill: "url(#linearGradient21208)",
-            fillOpacity: 1,
-            fillRule: "evenodd",
-            stroke: "none",
-            strokeWidth: 1.00415,
-            strokeLinecap: "square",
+            strokeWidth: 16.4017,
             strokeDasharray: "none",
             strokeOpacity: 1,
-            paintOrder: "markers stroke fill",
           }}
         />
         <path
-          id="rect19550-5"
-          d="M814.182 1740.742s15.25 29.538 23.28 43.785c9.318 16.528 18.644 33.119 28.872 48.33 14.252 21.196 29.489 40.859 45.135 59.608 7.99 9.574 16.205 18.695 24.52 27.607H700.017v9.856H950v-9.856h-.094c-11.35-12.414-22.607-25.03-33.617-38.136-15.367-18.296-31.169-36.018-44.992-57.004-10.399-15.787-18.875-34.288-28.293-51.457-5.978-10.9-17.91-32.733-17.91-32.733z"
+          id="rect6675-3"
+          d="M-330.744 1163.812h-.002l-9.993-9.998h-2148.43v10h2148.425v232.722l-650.551-.035-9.988 10h660.591l9.946-9.963h.002v-232.726z"
           style={{
-            fill: "#ffbf00",
-            fillOpacity: 1,
+            fill: "red",
+            fillRule: "evenodd",
+            strokeWidth: 18.3655,
+          }}
+          transform="rotate(-90)"
+        />
+        <path
+          id="rect6675-4-0"
+          d="M1406.495 991.284h651.214v10h-651.214z"
+          style={{
+            fill: "red",
+            fillRule: "evenodd",
+            strokeWidth: 10.1119,
+          }}
+        />
+        <path
+          id="rect6675-3-6"
+          d="M-1210.542 2057.73h209.282v10h-209.282z"
+          style={{
+            fill: "red",
             fillRule: "evenodd",
             stroke: "none",
-            strokeWidth: 1.65608,
-            strokeLinecap: "square",
+            strokeWidth: 5.73242,
             strokeDasharray: "none",
             strokeOpacity: 1,
-            paintOrder: "markers stroke fill",
           }}
-          transform="matrix(-.30392 0 0 -.19896 55.683 432.051)"
+          transform="rotate(-90)"
         />
       </g>
-      <g
-        id="parabolic-mirror-hole-1"
-        style={{
-          stroke: "none",
-          strokeWidth: 1.00013,
-          strokeDasharray: "none",
-        }}
-        transform="matrix(-3.29037 0 0 -5.0261 80.218 1699.33)"
-      >
+      <g id="rays">
         <path
-          id="path7564-9"
-          d="M-236.662 44.675h79.603V8.263H-303.94c8.791 3.616 21.936 9.791 32.581 15.489 11.613 6.215 23.312 13.1 34.184 20.563.173.12.34.24.514.36z"
+          id="path3385-0-1"
+          d="m539.245 759.832-50-492.635 92.019 80.953z"
           style={{
-            fill: "url(#linearGradient19546)",
+            opacity: 0.65,
+            fill: "#ff6638",
             fillOpacity: 1,
-            fillRule: "evenodd",
-            stroke: "none",
-            strokeWidth: 0.997274,
+            strokeWidth: 3.06951,
             strokeLinecap: "square",
-            strokeDasharray: "none",
-            paintOrder: "markers stroke fill",
+            paintOrder: "fill markers stroke",
           }}
         />
         <path
-          id="path17363"
-          d="M-157.059 85.71V50.011h-71.982c7.42 5.323 14.562 10.889 21.241 17.27 5.826 5.567 16.024 18.427 16.024 18.427z"
+          id="path3385-0-6"
+          d="m539.245 759.472 50.403 506.52-92.24-92.415z"
           style={{
-            fill: "url(#linearGradient2599-9)",
+            opacity: 0.65,
+            fill: "#ff6638",
             fillOpacity: 1,
-            fillRule: "evenodd",
-            stroke: "none",
-            strokeWidth: 0.997274,
+            strokeWidth: 3.08946,
             strokeLinecap: "square",
-            strokeDasharray: "none",
-            paintOrder: "markers stroke fill",
+            paintOrder: "fill markers stroke",
           }}
         />
         <path
-          id="path8346-0"
-          d="M-157.064 46.598v-1.96h-79.575l-.255-.175c-4.827-3.27-9.704-6.469-14.685-9.497a408.85 408.85 0 0 0-19.635-11.198c-5.799-3.1-11.716-5.977-17.645-8.819a318.442 318.442 0 0 0-9.736-4.467c-1.756-.77-5.306-2.22-5.306-2.22l-.805 1.34s3.452 1.723 5.185 2.57c3.238 1.58 6.506 3.1 9.74 4.69 5.95 2.922 11.944 5.759 17.777 8.906 6.541 3.529 12.96 7.289 19.294 11.176a333.962 333.962 0 0 1 11.987 7.736l.027.018c.962.63 1.922 1.263 2.879 1.9z"
+          id="rect14491-7-9-2-3-0"
+          d="m1164.195-2120.56 94.356 95.49v1442.153l-94.356 89.932z"
           style={{
-            fill: "url(#linearGradient19548)",
-            fillOpacity: 1,
-            fillRule: "evenodd",
-            stroke: "none",
-            strokeWidth: 1.00415,
+            opacity: 0.65,
+            fill: "#ff6638",
+            strokeWidth: 1.35184,
             strokeLinecap: "square",
-            strokeDasharray: "none",
-            strokeOpacity: 1,
-            paintOrder: "markers stroke fill",
+            paintOrder: "fill markers stroke",
+          }}
+          transform="rotate(90)"
+        />
+        <path
+          id="rect14491-7-9-2-3-7"
+          d="M1042.09-2114.01h127.395l94.208 94.154h-315.73Z"
+          style={{
+            opacity: 0.65,
+            fill: "#ff6638",
+            strokeWidth: 0.590217,
+            strokeLinecap: "square",
+            paintOrder: "fill markers stroke",
+          }}
+          transform="rotate(90)"
+        />
+        <path
+          id="rect14491-7-9-2-3-5"
+          d="m953.417-2026.826 94.391-91.072v670.662l-94.391 95.49z"
+          style={{
+            opacity: 0.65,
+            fill: "#ff6638",
+            strokeWidth: 0.920739,
+            strokeLinecap: "square",
+            paintOrder: "fill markers stroke",
+          }}
+          transform="rotate(90)"
+        />
+        <path
+          id="rect14491-7-9-2-3-6"
+          d="m292.557-1363.255 94.659-93.352v353.825l-94.659-93.353z"
+          style={{
+            opacity: 0.65,
+            fill: "#ff6638",
+            strokeWidth: 0.627734,
+            strokeLinecap: "square",
+            paintOrder: "fill markers stroke",
+          }}
+          transform="rotate(90)"
+        />
+        <path
+          id="rect14491-7-9-2-3-64"
+          d="M286.832-1202.16h1884.781l-92.64 94.87H380.556Z"
+          style={{
+            opacity: 0.65,
+            fill: "#ff6638",
+            strokeWidth: 1.45629,
+            strokeLinecap: "square",
+            paintOrder: "fill markers stroke",
+          }}
+          transform="rotate(90)"
+        />
+        <path
+          id="path3385-0-10"
+          d="m2244.122 2116.472-1051.628 44.513-92.603-94.17z"
+          style={{
+            opacity: 0.65,
+            fill: "#ff6638",
+            fillOpacity: 1,
+            strokeWidth: 4.67388,
+            strokeLinecap: "square",
+            paintOrder: "fill markers stroke",
           }}
         />
         <path
-          id="rect19550"
-          d="M814.182 1740.742s15.25 29.538 23.28 43.785c9.318 16.528 18.644 33.119 28.872 48.33 14.252 21.196 29.489 40.859 45.135 59.608 7.99 9.574 16.205 18.695 24.52 27.607H700.017v9.856H950v-9.856h-.094c-11.35-12.414-22.607-25.03-33.617-38.136-15.367-18.296-31.169-36.018-44.992-57.004-10.399-15.787-18.875-34.288-28.293-51.457-5.978-10.9-17.91-32.733-17.91-32.733z"
+          id="path3385-0-02"
+          d="m2240.448 2116.472 1106.667-50-83.233 96.722z"
           style={{
-            fill: "#ffbf00",
+            opacity: 0.65,
+            fill: "#ff6638",
             fillOpacity: 1,
-            fillRule: "evenodd",
-            stroke: "none",
-            strokeWidth: 1.65608,
+            strokeWidth: 4.60059,
             strokeLinecap: "square",
-            strokeDasharray: "none",
-            strokeOpacity: 1,
-            paintOrder: "markers stroke fill",
+            paintOrder: "fill markers stroke",
           }}
-          transform="matrix(-.30392 0 0 -.19896 55.683 432.051)"
-        />
-      </g>
-      <path
-        id="rect49328"
-        d="M45.034-134.318h47.609v6.052H45.034z"
-        style={{
-          mixBlendMode: "normal",
-          fill: "red",
-          fillOpacity: 1,
-          stroke: "none",
-          strokeWidth: 1.11672,
-          strokeLinecap: "square",
-          strokeOpacity: 1,
-          paintOrder: "markers stroke fill",
-          filter: "url(#filter6137)",
-        }}
-        transform="matrix(-.00458 45.10223 -3.1071 -.01423 1273.816 -1604.198)"
-      />
-      <path
-        id="rect43828"
-        d="M24.075 100.753h208.986v6.052H24.075z"
-        style={{
-          mixBlendMode: "normal",
-          fill: "red",
-          fillOpacity: 1,
-          stroke: "none",
-          strokeWidth: 2.33967,
-          strokeLinecap: "square",
-          strokeOpacity: 1,
-          paintOrder: "markers stroke fill",
-          filter: "url(#filter6129)",
-        }}
-        transform="matrix(12.18283 0 0 2.42365 130.62 1210.79)"
-      />
-      <g
-        id="sample-compartment"
-        transform="matrix(3.74451 0 0 3.74451 -31.544 3.296)"
-      >
-        <path
-          id="valve-2"
-          d="m2861.313 2360.313-.448 37.261-24.357-.265-.14 11.84 24.357.263-.207 17.27-7.926-.047-16.213 16.998 44.324 10.824 43.606-10.309-17.373-17.195-8.112-.047.205-17.078 25.084.273.143-11.838-25.086-.273.447-37.262z"
-          style={{
-            fill: "#000",
-            strokeWidth: 3.11565,
-          }}
-          transform="matrix(.26706 0 0 .26706 -10.54 -5.192)"
         />
         <path
-          id="valve-1"
-          d="m2562.324 2360.313-.445 37.261-24.357-.265-.143 11.84 24.357.263-.205 17.27-7.928-.045-16.212 16.998 44.324 10.824 43.605-10.309-17.373-17.195-8.11-.047.204-17.078 25.084.273.143-11.838-25.084-.273.445-37.262z"
+          id="rect14491-7-9-2-3-1"
+          d="m1801.501-3330.484 272.212-16.905 90.217 94.28-397.802-26.303z"
           style={{
-            fill: "#000",
-            strokeWidth: 3.11565,
+            opacity: 0.65,
+            fill: "#ff6638",
+            strokeWidth: 0.682941,
+            strokeLinecap: "square",
+            paintOrder: "fill markers stroke",
           }}
-          transform="matrix(.26706 0 0 .26706 -10.54 -5.192)"
+          transform="rotate(90)"
         />
         <path
-          id="rect7077"
-          d="M604.662 575.603h240.886v48.942H604.662z"
+          id="rect14491-7-9-2-3-29"
+          d="M1453.213 382.155v670.04l-94.658-93.725V286.012Z"
           style={{
-            fill: "none",
-            fillOpacity: 1,
-            stroke: "#000",
-            strokeWidth: 5.81196,
+            opacity: 0.65,
+            fill: "#ff6638",
+            strokeWidth: 0.923678,
             strokeLinecap: "square",
-            strokeDasharray: "none",
-            strokeOpacity: 1,
-            paintOrder: "markers stroke fill",
+            paintOrder: "fill markers stroke",
           }}
         />
-        <rect
-          id="rect5758"
-          width={9.801}
-          height={50.518}
-          x={842.172}
-          y={574.688}
-          ry={1.312}
+        <path
+          id="rect14491-7-9-2-3-2"
+          d="m498.149 266.551 82.632 89.367-472.138-18.632 28.864-49.644z"
           style={{
-            fill: "url(#linearGradient5760)",
-            fillOpacity: 1,
-            stroke: "#0047af",
-            strokeWidth: 3.89934,
-            strokeDasharray: "none",
-            strokeOpacity: 1,
-            paintOrder: "markers stroke fill",
-          }}
-        />
-        <rect
-          id="rect6170"
-          width={18.488}
-          height={11.107}
-          x={841.284}
-          y={619.672}
-          ry={1.819}
-          style={{
-            fill: "#009ee0",
-            fillOpacity: 1,
-            stroke: "#000",
-            strokeWidth: 4.20966,
+            opacity: 0.65,
+            fill: "#ff6638",
+            strokeWidth: 0.701833,
             strokeLinecap: "square",
-            strokeDasharray: "none",
-            strokeOpacity: 1,
-            paintOrder: "markers stroke fill",
-          }}
-        />
-        <rect
-          id="rect32961"
-          width={9.801}
-          height={50.515}
-          x={599.091}
-          y={574.689}
-          ry={1.312}
-          style={{
-            fill: "url(#linearGradient32969)",
-            fillOpacity: 1,
-            stroke: "#0047af",
-            strokeWidth: 3.89932,
-            strokeDasharray: "none",
-            strokeOpacity: 1,
-            paintOrder: "markers stroke fill",
-          }}
-        />
-        <rect
-          id="rect6168"
-          width={17.936}
-          height={11.161}
-          x={841.258}
-          y={568.695}
-          ry={1.828}
-          style={{
-            fill: "#009ee0",
-            fillOpacity: 1,
-            stroke: "#000",
-            strokeWidth: 4.15627,
-            strokeLinecap: "square",
-            strokeDasharray: "none",
-            strokeOpacity: 1,
-            paintOrder: "markers stroke fill",
-          }}
-        />
-        <rect
-          id="rect10251"
-          width={18.488}
-          height={11.107}
-          x={591.379}
-          y={619.672}
-          ry={1.819}
-          style={{
-            fill: "#009ee0",
-            fillOpacity: 1,
-            stroke: "#000",
-            strokeWidth: 4.20966,
-            strokeLinecap: "square",
-            strokeDasharray: "none",
-            strokeOpacity: 1,
-            paintOrder: "markers stroke fill",
-          }}
-        />
-        <rect
-          id="rect8256-0"
-          width={17.936}
-          height={11.161}
-          x={592.096}
-          y={568.695}
-          ry={1.828}
-          style={{
-            fill: "#009ee0",
-            fillOpacity: 1,
-            stroke: "#000",
-            strokeWidth: 4.15627,
-            strokeLinecap: "square",
-            strokeDasharray: "none",
-            strokeOpacity: 1,
-            paintOrder: "markers stroke fill",
+            paintOrder: "fill markers stroke",
           }}
         />
       </g>
-      <g id="pump" transform="matrix(5.53413 0 0 5.2449 1775.688 2516.996)">
-        <rect
-          id="rect50079"
-          width={20.737}
-          height={7.192}
-          x={72.725}
-          y={64.285}
-          ry={0.446}
-          style={{
-            fill: "gray",
-            strokeWidth: 0.649925,
-            strokeLinecap: "square",
-            paintOrder: "markers stroke fill",
-          }}
-        />
-        <rect
-          id="rect19760"
-          width={34.761}
-          height={19.418}
-          x={38.563}
-          y={41.631}
-          rx={0}
-          ry={2.987}
-          style={{
-            fill: "#666",
-            strokeWidth: 0.375052,
-            strokeLinecap: "square",
-            paintOrder: "markers stroke fill",
-          }}
-        />
-        <rect
-          id="rect55893"
-          width={19.778}
-          height={2.757}
-          x={41.919}
-          y={58.651}
-          ry={0.446}
-          style={{
-            fill: "url(#linearGradient55895)",
-            fillOpacity: 1,
-            stroke: "#000",
-            strokeWidth: 0.155965,
-            strokeLinecap: "square",
-            strokeOpacity: 1,
-            paintOrder: "markers stroke fill",
-          }}
-        />
-        <rect
-          id="rect58817"
-          width={19.778}
-          height={2.757}
-          x={41.919}
-          y={43.668}
-          ry={0.446}
-          style={{
-            fill: "url(#linearGradient58819)",
-            fillOpacity: 1,
-            stroke: "#000",
-            strokeWidth: 0.155965,
-            strokeLinecap: "square",
-            strokeOpacity: 1,
-            paintOrder: "markers stroke fill",
-          }}
-        />
-        <rect
-          id="rect58813"
-          width={19.778}
-          height={2.757}
-          x={41.919}
-          y={46.665}
-          ry={0.446}
-          style={{
-            fill: "url(#linearGradient58815)",
-            fillOpacity: 1,
-            stroke: "#000",
-            strokeWidth: 0.155965,
-            strokeLinecap: "square",
-            strokeOpacity: 1,
-            paintOrder: "markers stroke fill",
-          }}
-        />
-        <rect
-          id="rect58809"
-          width={19.778}
-          height={2.757}
-          x={41.919}
-          y={49.662}
-          ry={0.446}
-          style={{
-            fill: "url(#linearGradient58811)",
-            fillOpacity: 1,
-            stroke: "#000",
-            strokeWidth: 0.155965,
-            strokeLinecap: "square",
-            strokeOpacity: 1,
-            paintOrder: "markers stroke fill",
-          }}
-        />
-        <rect
-          id="rect58805"
-          width={19.778}
-          height={2.757}
-          x={41.919}
-          y={52.658}
-          ry={0.446}
-          style={{
-            fill: "url(#linearGradient58807)",
-            fillOpacity: 1,
-            stroke: "#000",
-            strokeWidth: 0.155965,
-            strokeLinecap: "square",
-            strokeOpacity: 1,
-            paintOrder: "markers stroke fill",
-          }}
-        />
-        <rect
-          id="rect58801"
-          width={19.778}
-          height={2.757}
-          x={41.919}
-          y={55.655}
-          ry={0.446}
-          style={{
-            fill: "url(#linearGradient58803)",
-            fillOpacity: 1,
-            stroke: "#000",
-            strokeWidth: 0.155965,
-            strokeLinecap: "square",
-            strokeOpacity: 1,
-            paintOrder: "markers stroke fill",
-          }}
-        />
-        <rect
-          id="rect66083"
-          width={19.778}
-          height={2.757}
-          x={41.919}
-          y={40.672}
-          ry={0.446}
-          style={{
-            fill: "url(#linearGradient66085)",
-            fillOpacity: 1,
-            stroke: "#000",
-            strokeWidth: 0.155965,
-            strokeLinecap: "square",
-            strokeOpacity: 1,
-            paintOrder: "markers stroke fill",
-          }}
-        />
-        <rect
-          id="rect32992"
-          width={10.428}
-          height={27.09}
-          x={60.019}
-          y={38.274}
-          ry={2.618}
-          style={{
-            fill: "gray",
-            strokeWidth: 0.292892,
-            strokeLinecap: "square",
-            paintOrder: "markers stroke fill",
-          }}
-        />
-        <path
-          id="path31294"
-          d="M38.195 50.769a.89 11.331 1.688 0 0 .473 11.222l-.002.07.091-.003 4.705-.196.002-.07a.89 11.331 1.688 0 0 .09.066.89 11.331 1.688 0 0 1.219-11.363.89 11.331 1.688 0 0-.562-11.29.89 11.331 1.688 0 0-.094.076l.002-.072-4.704.196-.092.004-.002.071a.89 11.331 1.688 0 0-1.126 11.289zm.557 11.461 4.847-.374z"
-          style={{
-            fill: "url(#linearGradient31318)",
-            fillOpacity: 1,
-            strokeWidth: 0.347029,
-          }}
-        />
-        <path
-          id="path76314"
-          d="M69.535 33.62a.63 3.352.806 0 0-.524-3.315v-.021l-.064.002-3.328.092v.021a.63 3.352.806 0 0-.064-.019.63 3.352.806 0 0-.673 3.37.63 3.352.806 0 0 .588 3.334.63 3.352.806 0 0 .065-.023v.021l3.327-.092.065-.002v-.021a.63 3.352.806 0 0 .608-3.347zm-.588-3.385-3.425.146z"
-          style={{
-            fill: "url(#linearGradient76316)",
-            fillOpacity: 1,
-            strokeWidth: 0.158841,
-          }}
-        />
-        <rect
-          id="rect19032"
-          width={45.069}
-          height={39.795}
-          x={67.57}
-          y={28.206}
-          ry={3.476}
-          style={{
-            fill: "url(#linearGradient48503)",
-            fillOpacity: 1,
-            strokeWidth: 0.299228,
-            strokeLinecap: "square",
-            paintOrder: "markers stroke fill",
-          }}
-        />
-        <rect
-          id="rect26348"
-          width={49.504}
-          height={3.476}
-          x={63.375}
-          y={69.679}
-          ry={1.319}
-          style={{
-            fill: "#999",
-            strokeWidth: 0.277075,
-            strokeLinecap: "square",
-            paintOrder: "markers stroke fill",
-          }}
-        />
-        <rect
-          id="rect31432"
-          width={0.479}
-          height={39.795}
-          x={92.862}
-          y={28.206}
-          ry={0}
-          style={{
-            fill: "#000",
-            strokeWidth: 0.151952,
-            strokeLinecap: "square",
-            paintOrder: "markers stroke fill",
-          }}
-        />
-        <rect
-          id="rect38076"
-          width={0.479}
-          height={39.795}
-          x={72.605}
-          y={28.206}
-          ry={0}
-          style={{
-            fill: "#000",
-            strokeWidth: 0.151952,
-            strokeLinecap: "square",
-            paintOrder: "markers stroke fill",
-          }}
-        />
-        <rect
-          id="rect43160"
-          width={19.778}
-          height={2.757}
-          x={93.222}
-          y={61.288}
-          ry={0.446}
-          style={{
-            fill: "url(#linearGradient44732)",
-            fillOpacity: 1,
-            strokeWidth: 0.155965,
-            strokeLinecap: "square",
-            paintOrder: "markers stroke fill",
-          }}
-        />
-        <rect
-          id="rect46285"
-          width={19.778}
-          height={2.757}
-          x={93.222}
-          y={57.812}
-          ry={0.446}
-          style={{
-            fill: "url(#linearGradient46287)",
-            fillOpacity: 1,
-            strokeWidth: 0.155965,
-            strokeLinecap: "square",
-            paintOrder: "markers stroke fill",
-          }}
-        />
-        <rect
-          id="rect46289"
-          width={19.778}
-          height={2.757}
-          x={93.222}
-          y={54.336}
-          ry={0.446}
-          style={{
-            fill: "url(#linearGradient46291)",
-            fillOpacity: 1,
-            strokeWidth: 0.155965,
-            strokeLinecap: "square",
-            paintOrder: "markers stroke fill",
-          }}
-        />
-        <rect
-          id="rect46293"
-          width={19.778}
-          height={2.757}
-          x={93.222}
-          y={50.501}
-          ry={0.446}
-          style={{
-            fill: "url(#linearGradient46295)",
-            fillOpacity: 1,
-            strokeWidth: 0.155965,
-            strokeLinecap: "square",
-            paintOrder: "markers stroke fill",
-          }}
-        />
-        <rect
-          id="rect46297"
-          width={19.778}
-          height={2.757}
-          x={93.222}
-          y={46.905}
-          ry={0.446}
-          style={{
-            fill: "url(#linearGradient46299)",
-            fillOpacity: 1,
-            strokeWidth: 0.155965,
-            strokeLinecap: "square",
-            paintOrder: "markers stroke fill",
-          }}
-        />
-        <rect
-          id="rect46301"
-          width={19.778}
-          height={2.757}
-          x={93.222}
-          y={43.548}
-          ry={0.446}
-          style={{
-            fill: "url(#linearGradient46303)",
-            fillOpacity: 1,
-            strokeWidth: 0.155965,
-            strokeLinecap: "square",
-            paintOrder: "markers stroke fill",
-          }}
-        />
-        <rect
-          id="rect46305"
-          width={19.778}
-          height={2.757}
-          x={93.222}
-          y={40.072}
-          ry={0.446}
-          style={{
-            fill: "url(#linearGradient46307)",
-            fillOpacity: 1,
-            strokeWidth: 0.155965,
-            strokeLinecap: "square",
-            paintOrder: "markers stroke fill",
-          }}
-        />
-        <rect
-          id="rect46309"
-          width={19.778}
-          height={2.757}
-          x={93.222}
-          y={36.476}
-          ry={0.446}
-          style={{
-            fill: "url(#linearGradient46311)",
-            fillOpacity: 1,
-            strokeWidth: 0.155965,
-            strokeLinecap: "square",
-            paintOrder: "markers stroke fill",
-          }}
-        />
-        <rect
-          id="rect47039"
-          width={19.778}
-          height={2.757}
-          x={93.222}
-          y={33}
-          ry={0.446}
-          style={{
-            fill: "url(#linearGradient47041)",
-            fillOpacity: 1,
-            strokeWidth: 0.155965,
-            strokeLinecap: "square",
-            paintOrder: "markers stroke fill",
-          }}
-        />
-        <path
-          id="path91087"
-          d="m15.103 29.487-6.066-.042-2.996-5.274 3.069-5.232 6.066.042 2.996 5.274z"
-          style={{
-            fill: "url(#linearGradient92547)",
-            fillOpacity: 1,
-            stroke: "#000",
-            strokeWidth: 1.33244,
-            strokeLinecap: "square",
-            strokeDasharray: "none",
-            strokeOpacity: 1,
-            paintOrder: "markers stroke fill",
-          }}
-          transform="matrix(.25434 0 0 .24408 103.987 59.993)"
-        />
-      </g>
-      <g
-        id="lecture"
-        transform="matrix(.0079 -5.09312 3.33622 .00973 1794.262 2959.188)"
-      >
-        <path
-          id="rect1303"
-          d="M40.615 386.516h-4.381v-4.773l1.425-.011 2.88-4.747-7.996-2.858-7.82 2.98 3.161 4.7 1.46-.01v4.72H24.83v3.271h4.512v10.3h6.89v-10.3h4.382z"
-          style={{
-            fill: "#4d4d4d",
-            strokeWidth: 0.694687,
-          }}
-        />
-        <path
-          id="path836"
-          d="M48.135 471.547a15.573 4.239 0 0 0-.972-1.47v-59.695h-.05a13.928 14.602 90 0 0-14.573-13.107 13.928 14.602 90 0 0-14.573 13.107h-.028v59.71a15.573 4.239 0 0 0-.95 1.455 15.573 4.239 0 0 0 15.572 4.24 15.573 4.239 0 0 0 15.574-4.24z"
-          style={{
-            fill: "maroon",
-            strokeWidth: 0.697593,
-          }}
-        />
-        <path
-          id="rect1697"
-          d="M19.781 413.447h25.618v57.02H19.781z"
-          style={{
-            fill: "#666",
-            strokeWidth: 0.999996,
-          }}
-        />
-      </g>
-      <g id="laser" transform="matrix(3.74451 0 0 3.74451 39.465 19.44)">
+      <g id="laser" transform="matrix(3.74451 0 0 3.74451 -40.354 -228.052)">
         <path
           id="rect27237"
           d="M97.752 368.915a5.042 16.606 0 0 0-.933.292H2.814v32.921H97.03v-.176a5.042 16.606 0 0 0 .72.176 5.042 16.606 0 0 0 5.044-16.606 5.042 16.606 0 0 0-5.043-16.607z"
@@ -3805,53 +3081,117 @@ const SvgComponent = (props) => (
         />
       </g>
       <g
-        id="aperture-wheel"
-        transform="matrix(3.74451 0 0 3.74451 39.465 19.44)"
+        id="beamsplitter-znse"
+        style={{
+          display: props.beamsplitter.znse,
+        }}
+        transform="rotate(-45 2090.357 -610.836)"
       >
-        <rect
-          id="rect9142"
-          width={22.556}
-          height={7.319}
-          x={232.384}
-          y={187.837}
-          ry={1.199}
+        <path
+          id="rect32961-3-3-8"
+          d="M5.15-275.15h35v270h-35z"
           style={{
-            fill: "#005a80",
+            fill: "url(#linearGradient13376-0)",
             fillOpacity: 1,
-            stroke: "#000",
-            strokeWidth: 3.77449,
+            fillRule: "nonzero",
+            stroke: "#9b0f0f",
+            strokeWidth: 10.3009,
             strokeLinecap: "square",
+            strokeLinejoin: "miter",
+            strokeMiterlimit: 4,
             strokeDasharray: "none",
             strokeOpacity: 1,
             paintOrder: "markers stroke fill",
           }}
+          transform="rotate(90)"
         />
-        <rect
-          id="rect8256"
-          width={22.556}
-          height={7.319}
-          x={181.951}
-          y={186.84}
-          ry={1.199}
+      </g>
+      <g
+        id="beamsplitter-caf2"
+        style={{
+          display: props.beamsplitter.caf2,
+        }}
+        transform="rotate(-45 2091.795 -610.41)"
+      >
+        <path
+          id="rect32961-3-3"
+          d="M4.257-275.872h35v270h-35z"
           style={{
-            fill: "#005f87",
+            fill: "url(#linearGradient13376)",
             fillOpacity: 1,
-            stroke: "#000",
-            strokeWidth: 3.77449,
-            strokeLinecap: "square",
+            stroke: "#0047af",
+            strokeWidth: 10.3007,
             strokeDasharray: "none",
             strokeOpacity: 1,
             paintOrder: "markers stroke fill",
+          }}
+          transform="rotate(90)"
+        />
+      </g>
+      <path
+        id="sample-chamber"
+        d="M1611.593 1664.928v369h15v-354h1215v354h15v-354h580v615h-580v-100h-15v100h-1215v-100h-15v115h1839.998v-645H1626.593Z"
+        style={{
+          fillRule: "evenodd",
+          strokeWidth: 25.3084,
+          strokeLinecap: "square",
+          paintOrder: "markers stroke fill",
+        }}
+      />
+      <g
+        id="aperture-wheel"
+        transform="matrix(.99919 0 0 1.14723 -318.324 -79.428)"
+      >
+        <path
+          id="rect2792"
+          d="M771.766 713.694h173v33h-173z"
+          style={{
+            fill: "url(#linearGradient13050)",
+            fillOpacity: 1,
+            stroke: "#000",
+            strokeWidth: 1.99971,
+            strokeLinecap: "square",
+            strokeDasharray: "none",
+            strokeOpacity: 1,
+            paintOrder: "fill markers stroke",
+          }}
+        />
+        <path
+          id="rect8256"
+          d="M771.821 713.696h63.891v33h-63.891z"
+          style={{
+            fill: "#00a",
+            fillOpacity: 1,
+            stroke: "#000",
+            strokeWidth: 1.9998,
+            strokeLinecap: "square",
+            strokeDasharray: "none",
+            strokeOpacity: 1,
+            paintOrder: "fill markers stroke",
+          }}
+        />
+        <path
+          id="rect9142"
+          d="M880.834 713.694h63.865v33h-63.865z"
+          style={{
+            fill: "#00a",
+            fillOpacity: 1,
+            stroke: "#000",
+            strokeWidth: 1.99982,
+            strokeLinecap: "square",
+            strokeDasharray: "none",
+            strokeOpacity: 1,
+            paintOrder: "fill markers stroke",
           }}
         />
       </g>
-      <g id="apd" transform="matrix(3.74451 0 0 3.74451 39.465 19.44)">
+      <g id="apd" transform="matrix(2.7976 0 0 2.7976 -65.695 604.603)">
         <rect
           id="rect64392"
           width={45.889}
           height={47.096}
           x={414.877}
-          y={679.087}
+          y={678.619}
           ry={9.844}
           style={{
             fill: "url(#linearGradient64791)",
@@ -3864,35 +3204,1617 @@ const SvgComponent = (props) => (
           }}
         />
       </g>
-      <g id="mct" transform="matrix(3.58788 0 0 3.06279 1608.05 1392.115)">
-        <rect
-          id="rect21297"
-          width={10.692}
-          height={13.208}
-          x={917.731}
-          y={518.676}
-          ry={1.858}
+      <g
+        id="tungsten-beam"
+        style={{
+          display: props.source.tungsten,
+        }}
+      >
+        <path
+          id="path-tungsten"
+          d="M303.016 484.916 119.803 335.637l9.81-65.845Z"
           style={{
-            fill: "red",
+            opacity: 0.65,
+            fill: "#ff6638",
             fillOpacity: 1,
-            stroke: "#af9204",
-            strokeWidth: 2.64584,
+            strokeWidth: 2.56177,
+            strokeLinecap: "square",
+            paintOrder: "fill markers stroke",
+          }}
+        />
+      </g>
+      <g
+        id="flat-rotatable-mirror-tungsten"
+        style={{
+          display: props.source.tungstenMirror,
+        }}
+        transform="matrix(.38268 -.92388 .83727 .3468 -301.168 95.094)"
+      >
+        <path
+          id="rect2866-5-6"
+          d="M-141.868 527.112h210v7.724h-210z"
+          style={{
+            fill: "url(#linearGradient3682)",
+            fillOpacity: 1,
+            fillRule: "evenodd",
+            strokeWidth: 1.00003,
+            strokeDasharray: "none",
+          }}
+        />
+        <path
+          id="rect2866-94"
+          d="M-141.868 488.491h210v38.621h-210z"
+          style={{
+            fill: "url(#linearGradient3684)",
+            fillOpacity: 1,
+            fillRule: "evenodd",
+            strokeWidth: 1.00003,
+            strokeDasharray: "none",
+          }}
+        />
+      </g>
+      <g
+        id="globar-beam"
+        style={{
+          display: props.source.globar,
+        }}
+      >
+        <path
+          id="path-globar"
+          d="m133.004 556.488-23.212-222.494 52.714-52.236Z"
+          style={{
+            opacity: 0.65,
+            fill: "#ff6638",
+            fillOpacity: 1,
+            strokeWidth: 2.56177,
+            strokeLinecap: "square",
+            paintOrder: "fill markers stroke",
+          }}
+        />
+      </g>
+      <g
+        id="flat-rotatable-mirror-globar"
+        style={{
+          display: props.source.globarMirror,
+        }}
+        transform="rotate(-45 -157.299 194.99) scale(1 .90625)"
+      >
+        <path
+          id="rect2866-5"
+          d="M-141.868 527.112h210v7.724h-210z"
+          style={{
+            fill: "url(#linearGradient14799)",
+            fillOpacity: 1,
+            fillRule: "evenodd",
+            strokeWidth: 1.00003,
+            strokeDasharray: "none",
+          }}
+        />
+        <path
+          id="rect2866"
+          d="M-141.868 488.491h210v38.621h-210z"
+          style={{
+            fill: "url(#linearGradient4580)",
+            fillOpacity: 1,
+            fillRule: "evenodd",
+            strokeWidth: 1.00003,
+            strokeDasharray: "none",
+          }}
+        />
+      </g>
+      <g
+        id="parabolic-mirror-1"
+        style={{
+          stroke: "none",
+          strokeWidth: 1.00013,
+          strokeDasharray: "none",
+        }}
+        transform="matrix(2.64587 0 0 3.9382 1181.505 143.154)"
+      >
+        <path
+          id="path7564-7-1"
+          d="M-303.94 8.263h127.984v77.446h-15.82s-10.198-12.86-16.024-18.427c-9.09-8.685-19.032-15.865-29.376-22.967-10.872-7.463-22.572-14.348-34.184-20.563-10.645-5.697-23.79-11.874-32.58-15.49z"
+          style={{
+            fill: "url(#linearGradient2316)",
+            fillOpacity: 1,
+            fillRule: "evenodd",
+            stroke: "none",
+            strokeWidth: 0.997274,
+            strokeLinecap: "square",
+            strokeDasharray: "none",
+            paintOrder: "markers stroke fill",
+          }}
+        />
+        <path
+          id="path8346-8-5"
+          d="M-303.935 8.263s3.747 1.433 5.565 2.21c3.303 1.412 6.492 2.913 9.7 4.45 5.909 2.829 11.804 5.695 17.582 8.782a407.417 407.417 0 0 1 19.563 11.152c4.964 3.016 9.823 6.203 14.632 9.458 5.291 3.583 10.61 7.144 15.641 11.082 4.786 3.746 9.447 7.674 13.806 11.909 3.129 3.039 5.981 6.354 8.831 9.656 2.457 2.846 7.122 8.747 7.122 8.747h-3.339s-3.649-4.362-5.478-6.54c-2.88-3.43-5.474-7.125-8.654-10.28-4.229-4.192-9.062-7.733-13.763-11.388-5.037-3.917-10.205-7.666-15.46-11.285a326.358 326.358 0 0 0-14.465-9.389c-6.311-3.871-12.706-7.615-19.223-11.13-5.812-3.134-11.785-5.96-17.713-8.87-3.222-1.583-6.478-3.096-9.705-4.671-1.726-.843-5.166-2.558-5.166-2.558z"
+          style={{
+            fill: "url(#linearGradient2318)",
+            fillOpacity: 1,
+            fillRule: "evenodd",
+            stroke: "none",
+            strokeWidth: 1.00027,
+            strokeLinecap: "square",
+            strokeDasharray: "none",
             strokeOpacity: 1,
             paintOrder: "markers stroke fill",
           }}
-          transform="matrix(1.04366 0 0 1.22258 -437.19 -448.178)"
+        />
+      </g>
+      <g
+        id="parabolic-mirror-hole-1"
+        style={{
+          stroke: "none",
+          strokeWidth: 1.00066,
+          strokeDasharray: "none",
+        }}
+        transform="matrix(-2.64164 0 0 -4.11064 -80.347 1409.995)"
+      >
+        <path
+          id="path7564-9-7-5-9-4"
+          d="M-236.668 44.677h60.676V10.284h-127.954c8.791 3.415 21.936 9.249 32.581 14.63 11.612 5.87 23.312 12.374 34.184 19.424.173.112.34.227.513.339z"
+          style={{
+            fill: "url(#linearGradient7863)",
+            fillOpacity: 1,
+            fillRule: "evenodd",
+            stroke: "none",
+            strokeWidth: 0.972524,
+            strokeLinecap: "square",
+            strokeDasharray: "none",
+            paintOrder: "markers stroke fill",
+          }}
+        />
+        <path
+          id="path17363-3-8-2-2"
+          d="M-175.992 84.482V50.089h-52.37c7.35 5.128 14.386 10.49 21.001 16.64 5.77 5.362 15.909 17.753 15.909 17.753z"
+          style={{
+            fill: "url(#linearGradient7865)",
+            fillOpacity: 1,
+            fillRule: "evenodd",
+            stroke: "none",
+            strokeWidth: 0.97754,
+            strokeLinecap: "square",
+            strokeDasharray: "none",
+            paintOrder: "markers stroke fill",
+          }}
+        />
+        <path
+          id="path8346-0-8-1-9-0"
+          d="M-175.992 46.404v-1.846h-60.647l-.255-.165c-4.827-3.078-9.704-6.09-14.685-8.94a416.006 416.006 0 0 0-19.629-10.546c-5.799-2.92-11.716-5.629-17.645-8.304a328.187 328.187 0 0 0-9.736-4.207c-1.756-.725-5.356-2.112-5.356-2.112l-.755 1.284s3.452 1.622 5.185 2.419c3.238 1.489 6.506 2.92 9.74 4.416 5.95 2.752 11.944 5.424 17.777 8.387 6.54 3.323 12.953 6.864 19.288 10.525a337.078 337.078 0 0 1 11.987 7.285l.027.017a417.05 417.05 0 0 1 2.879 1.787z"
+          style={{
+            fill: "url(#linearGradient7867)",
+            fillOpacity: 1,
+            fillRule: "evenodd",
+            stroke: "none",
+            strokeWidth: 0.971046,
+            strokeLinecap: "square",
+            strokeDasharray: "none",
+            strokeOpacity: 1,
+            paintOrder: "markers stroke fill",
+          }}
+        />
+        <path
+          id="rect19550-5-0-8-2"
+          d="M-191.419 84.482s-4.673-5.657-7.085-8.385c-2.797-3.165-5.672-6.342-8.743-9.255-4.278-4.059-8.853-7.824-13.55-11.414-2.399-1.834-4.865-3.58-7.361-5.287h52.166v-1.887h-56.373v1.887h.028c3.408 2.377 6.787 4.793 10.093 7.303 4.613 3.504 9.357 6.897 13.507 10.916 3.122 3.023 5.667 6.566 8.495 9.854 1.795 2.087 5.377 6.268 5.377 6.268z"
+          style={{
+            fill: "#ffbf00",
+            fillOpacity: 1,
+            fillRule: "evenodd",
+            stroke: "none",
+            strokeWidth: 0.975723,
+            strokeLinecap: "square",
+            strokeDasharray: "none",
+            strokeOpacity: 1,
+            paintOrder: "markers stroke fill",
+          }}
+        />
+      </g>
+      <g
+        id="parabolic-mirror-hole-2"
+        style={{
+          stroke: "none",
+          strokeWidth: 1.00066,
+          strokeDasharray: "none",
+        }}
+        transform="matrix(0 2.64164 4.11064 0 964.488 2746.524)"
+      >
+        <path
+          id="path7564-9-7-5-9-4-0"
+          d="M-236.668 44.677h60.676V10.284h-127.954c8.791 3.415 21.936 9.249 32.581 14.63 11.612 5.87 23.312 12.374 34.184 19.424.173.112.34.227.513.339z"
+          style={{
+            fill: "url(#linearGradient8738)",
+            fillOpacity: 1,
+            fillRule: "evenodd",
+            stroke: "none",
+            strokeWidth: 0.972524,
+            strokeLinecap: "square",
+            strokeDasharray: "none",
+            paintOrder: "markers stroke fill",
+          }}
+        />
+        <path
+          id="path17363-3-8-2-2-1"
+          d="M-175.992 84.482V50.089h-52.37c7.35 5.128 14.386 10.49 21.001 16.64 5.77 5.362 15.909 17.753 15.909 17.753z"
+          style={{
+            fill: "url(#linearGradient8740)",
+            fillOpacity: 1,
+            fillRule: "evenodd",
+            stroke: "none",
+            strokeWidth: 0.97754,
+            strokeLinecap: "square",
+            strokeDasharray: "none",
+            paintOrder: "markers stroke fill",
+          }}
+        />
+        <path
+          id="path8346-0-8-1-9-0-9"
+          d="M-175.992 46.404v-1.846h-60.647l-.255-.165c-4.827-3.078-9.704-6.09-14.685-8.94a416.006 416.006 0 0 0-19.629-10.546c-5.799-2.92-11.716-5.629-17.645-8.304a328.187 328.187 0 0 0-9.736-4.207c-1.756-.725-5.356-2.112-5.356-2.112l-.755 1.284s3.452 1.622 5.185 2.419c3.238 1.489 6.506 2.92 9.74 4.416 5.95 2.752 11.944 5.424 17.777 8.387 6.54 3.323 12.953 6.864 19.288 10.525a337.078 337.078 0 0 1 11.987 7.285l.027.017a417.05 417.05 0 0 1 2.879 1.787z"
+          style={{
+            fill: "url(#linearGradient8742)",
+            fillOpacity: 1,
+            fillRule: "evenodd",
+            stroke: "none",
+            strokeWidth: 0.971046,
+            strokeLinecap: "square",
+            strokeDasharray: "none",
+            strokeOpacity: 1,
+            paintOrder: "markers stroke fill",
+          }}
+        />
+        <path
+          id="rect19550-5-0-8-2-8"
+          d="M-191.419 84.482s-4.673-5.657-7.085-8.385c-2.797-3.165-5.672-6.342-8.743-9.255-4.278-4.059-8.853-7.824-13.55-11.414-2.399-1.834-4.865-3.58-7.361-5.287h52.166v-1.887h-56.373v1.887h.028c3.408 2.377 6.787 4.793 10.093 7.303 4.613 3.504 9.357 6.897 13.507 10.916 3.122 3.023 5.667 6.566 8.495 9.854 1.795 2.087 5.377 6.268 5.377 6.268z"
+          style={{
+            fill: "#ffbf00",
+            fillOpacity: 1,
+            fillRule: "evenodd",
+            stroke: "none",
+            strokeWidth: 0.975723,
+            strokeLinecap: "square",
+            strokeDasharray: "none",
+            strokeOpacity: 1,
+            paintOrder: "markers stroke fill",
+          }}
+        />
+      </g>
+      <g
+        id="parabolic-mirror-2"
+        style={{
+          stroke: "none",
+          strokeWidth: 1.00013,
+          strokeDasharray: "none",
+        }}
+        transform="matrix(0 2.64587 -3.9382 0 3469.225 2760.54)"
+      >
+        <path
+          id="path7564-7-1-5"
+          d="M-303.94 8.263h127.983v77.446h-15.82s-10.197-12.86-16.023-18.427c-9.09-8.685-19.032-15.865-29.376-22.967-10.872-7.463-22.572-14.348-34.184-20.563-10.645-5.697-23.79-11.874-32.58-15.49z"
+          style={{
+            fill: "url(#linearGradient2316-9)",
+            fillOpacity: 1,
+            fillRule: "evenodd",
+            stroke: "none",
+            strokeWidth: 0.997274,
+            strokeLinecap: "square",
+            strokeDasharray: "none",
+            paintOrder: "markers stroke fill",
+          }}
+        />
+        <path
+          id="path8346-8-5-9"
+          d="M-303.935 8.263s3.747 1.433 5.565 2.21c3.303 1.412 6.492 2.913 9.7 4.45 5.909 2.829 11.804 5.695 17.582 8.782a407.417 407.417 0 0 1 19.563 11.152c4.964 3.016 9.823 6.203 14.632 9.458 5.291 3.583 10.61 7.144 15.641 11.082 4.786 3.746 9.447 7.674 13.806 11.909 3.129 3.039 5.981 6.354 8.831 9.656 2.457 2.846 7.122 8.747 7.122 8.747h-3.339s-3.649-4.362-5.478-6.54c-2.88-3.43-5.474-7.125-8.654-10.28-4.229-4.192-9.062-7.733-13.763-11.388-5.037-3.917-10.205-7.666-15.46-11.285a326.358 326.358 0 0 0-14.465-9.389c-6.311-3.871-12.706-7.615-19.223-11.13-5.812-3.134-11.785-5.96-17.713-8.87-3.222-1.583-6.478-3.096-9.705-4.671-1.726-.843-5.166-2.558-5.166-2.558z"
+          style={{
+            fill: "url(#linearGradient2318-6)",
+            fillOpacity: 1,
+            fillRule: "evenodd",
+            stroke: "none",
+            strokeWidth: 1.00027,
+            strokeLinecap: "square",
+            strokeDasharray: "none",
+            strokeOpacity: 1,
+            paintOrder: "markers stroke fill",
+          }}
+        />
+      </g>
+      <g
+        id="pressure-gauge"
+        transform="matrix(.76667 0 0 .76667 2143.182 1781.672)"
+      >
+        <path
+          id="rect29156"
+          d="M106.742 254.124h44.944v11.236h-44.944z"
+          style={{
+            fill: "url(#linearGradient29182)",
+            fillOpacity: 1,
+            stroke: "none",
+            strokeWidth: 0.116854,
+            strokeDasharray: "none",
+            strokeOpacity: 1,
+          }}
+        />
+        <path
+          id="rect29158"
+          d="M101.124 264.326h56.18V300h-56.18z"
+          style={{
+            fill: "url(#linearGradient29168)",
+            fillOpacity: 1,
+            stroke: "none",
+            strokeWidth: 0.352591,
+            strokeDasharray: "none",
+            strokeOpacity: 1,
+          }}
+        />
+        <circle
+          id="path234-8"
+          cx={129.213}
+          cy={129.213}
+          r={129.213}
+          style={{
+            fill: "url(#linearGradient9135)",
+            fillOpacity: 1,
+            strokeWidth: 6.51225,
+          }}
+        />
+        <circle
+          id="path234"
+          cx={129.213}
+          cy={129.213}
+          r={112.36}
+          style={{
+            fill: "#fbe631",
+            fillOpacity: 1,
+            strokeWidth: 5.66283,
+          }}
+        />
+        <rect
+          id="rect1700"
+          width={163.821}
+          height={75.858}
+          x={47.303}
+          y={68.813}
+          ry={0}
+          style={{
+            fill: "#8e9b81",
+            fillOpacity: 1,
+            stroke: "#000",
+            strokeWidth: 2.79384,
+            strokeDasharray: "none",
+            strokeOpacity: 1,
+          }}
+        />
+        <rect
+          id="rect3310-9"
+          width={38.059}
+          height={22.111}
+          x={4.805}
+          y={243.973}
+          ry={10.693}
+          style={{
+            fill: "#fff",
+            fillOpacity: 1,
+            stroke: "#000",
+            strokeWidth: 1.1236,
+            strokeDasharray: "none",
+            strokeOpacity: 1,
+          }}
+          transform="scale(-1 1) rotate(45)"
+        />
+        <path
+          id="rect8596-7"
+          d="m163.482 200.868 6.694-6.694-.67-.67-6.028 6.029-6.028-6.028-.67.67 6.697 6.693.002-.004z"
+          style={{
+            fill: "#000",
+            fillOpacity: 1,
+            stroke: "none",
+            strokeWidth: 0.189453,
+            strokeDasharray: "none",
+            strokeOpacity: 1,
+          }}
+        />
+        <rect
+          id="rect3310"
+          width={36.844}
+          height={21.404}
+          x={187.398}
+          y={60.893}
+          ry={10.351}
+          style={{
+            fill: "#fff",
+            fillOpacity: 1,
+            stroke: "#000",
+            strokeWidth: 1.0877,
+            strokeDasharray: "none",
+            strokeOpacity: 1,
+          }}
+          transform="rotate(44.972)"
+        />
+        <path
+          id="rect8596"
+          d="m95.502 192.948-6.694 6.694.67.669 6.028-6.028 6.028 6.028.67-.67-6.697-6.693-.001.004z"
+          style={{
+            fill: "#000",
+            fillOpacity: 1,
+            stroke: "none",
+            strokeWidth: 0.188764,
+            strokeDasharray: "none",
+            strokeOpacity: 1,
+          }}
+        />
+        <rect
+          id="rect3310-1"
+          width={38.202}
+          height={22.472}
+          x={179.775}
+          y={-140.449}
+          ry={10.868}
+          style={{
+            fill: "#fff",
+            fillOpacity: 1,
+            stroke: "#000",
+            strokeWidth: 1.1236,
+            strokeDasharray: "none",
+            strokeOpacity: 1,
+          }}
+          transform="rotate(90)"
+        />
+        <path
+          id="rect8923"
+          d="M124.719 201.124h8.989v1.124h-8.989z"
+          style={{
+            fill: "#000",
+            fillOpacity: 1,
+            stroke: "none",
+            strokeWidth: 0.0544912,
+            strokeDasharray: "none",
+            strokeOpacity: 1,
+          }}
+        />
+        <path
+          id="rect8923-7"
+          d="M124.719 198.315h8.989v1.124h-8.989z"
+          style={{
+            fill: "#000",
+            fillOpacity: 1,
+            stroke: "none",
+            strokeWidth: 0.0544912,
+            strokeDasharray: "none",
+            strokeOpacity: 1,
+          }}
+        />
+        <path
+          id="rect8923-6"
+          d="M124.719 195.506h8.989v1.124h-8.989z"
+          style={{
+            fill: "#000",
+            fillOpacity: 1,
+            stroke: "none",
+            strokeWidth: 0.0544912,
+            strokeDasharray: "none",
+            strokeOpacity: 1,
+          }}
+        />
+        <path
+          id="path9023"
+          d="M129.213 191.011a7.865 7.865 0 0 0-7.865 7.865 7.865 7.865 0 0 0 7.865 7.866 7.865 7.865 0 0 0 7.866-7.866 7.865 7.865 0 0 0-7.866-7.865zm0 1.124a6.742 6.742 0 0 1 6.742 6.741 6.742 6.742 0 0 1-6.742 6.742 6.742 6.742 0 0 1-6.741-6.742 6.742 6.742 0 0 1 6.741-6.741z"
+          style={{
+            fill: "#000",
+            fillOpacity: 1,
+            stroke: "none",
+            strokeWidth: 0.319142,
+            strokeDasharray: "none",
+            strokeOpacity: 1,
+          }}
+        />
+        <path
+          id="path32292"
+          d="M60.537 64.29v-7.987h2.943q1.633 0 2.622 1.158.989 1.153.989 2.85t-1.018 2.839q-1.019 1.14-2.915 1.14zm1.48-1.176h1.2q.966 0 1.638-.725.673-.726.673-2.16 0-1.17-.59-1.978-.586-.813-1.551-.813h-1.37z"
+          style={{
+            fontSize: "5.33333px",
+            fontFamily: "&quot",
+            InkscapeFontSpecification: "&quot",
+            strokeWidth: 0.116854,
+          }}
+        />
+        <path
+          id="path32294"
+          d="M69.865 64.29h-1.44v-7.987h1.44z"
+          style={{
+            fontSize: "5.33333px",
+            fontFamily: "&quot",
+            InkscapeFontSpecification: "&quot",
+            strokeWidth: 0.116854,
+          }}
+        />
+        <path
+          id="path32296"
+          d="M77.683 60.206v4.085h-.638l-.439-1.077q-.696 1.2-2.159 1.2-1.633 0-2.44-1.241-.802-1.24-.802-2.873 0-1.727.895-2.92.902-1.2 2.517-1.2 1.205 0 1.984.702.778.696.983 1.738l-1.253.222q-.35-1.463-1.68-1.463-.848 0-1.386.691-.533.69-.533 2.124 0 3.026 1.896 3.026.738 0 1.218-.51.485-.508.485-1.345h-1.65v-1.159z"
+          style={{
+            fontSize: "5.33333px",
+            fontFamily: "&quot",
+            InkscapeFontSpecification: "&quot",
+            strokeWidth: 0.116854,
+          }}
+        />
+        <path
+          id="path32298"
+          d="M80.756 64.29h-1.44v-7.987h1.44Z"
+          style={{
+            fontSize: "5.33333px",
+            fontFamily: "&quot",
+            InkscapeFontSpecification: "&quot",
+            strokeWidth: 0.116854,
+          }}
+        />
+        <path
+          id="path32300"
+          d="M85.303 64.29h-1.545v-6.753h-2.125v-1.234h5.794v1.234h-2.124z"
+          style={{
+            fontSize: "5.33333px",
+            fontFamily: "&quot",
+            InkscapeFontSpecification: "&quot",
+            strokeWidth: 0.116854,
+          }}
+        />
+        <path
+          id="path32302"
+          d="M93.952 64.29h-1.54l-.637-1.901h-3.072l-.627 1.902h-1.228l2.65-7.988h1.774zm-2.563-3.054-1.165-3.564-1.164 3.564z"
+          style={{
+            fontSize: "5.33333px",
+            fontFamily: "&quot",
+            InkscapeFontSpecification: "&quot",
+            strokeWidth: 0.116854,
+          }}
+        />
+        <path
+          id="path32304"
+          d="M99.827 64.29h-4.915v-7.987h1.515v6.683h3.4z"
+          style={{
+            fontSize: "5.33333px",
+            fontFamily: "&quot",
+            InkscapeFontSpecification: "&quot",
+            strokeWidth: 0.116854,
+          }}
+        />
+        <path
+          id="path32306"
+          d="M105.322 64.29h-1.44v-7.987h3.272q1.399 0 2.072.708.679.702.679 1.662 0 1.094-.732 1.773-.731.679-1.855.679h-1.996zm0-4.4h1.703q.668 0 1.019-.328.35-.327.35-.872 0-.491-.327-.842-.322-.352-1.17-.352h-1.575z"
+          style={{
+            fontSize: "5.33333px",
+            fontFamily: "&quot",
+            InkscapeFontSpecification: "&quot",
+            strokeWidth: 0.116854,
+          }}
+        />
+        <path
+          id="path32308"
+          d="M117.29 64.29h-1.522l-1.24-3.282h-2.025v3.283h-1.44v-7.988h3.465q1.445 0 2.124.655.679.65.679 1.685 0 1.54-1.44 2.119zm-4.787-4.435h1.79q.779 0 1.16-.328.38-.328.38-.901 0-.527-.375-.849-.374-.327-1.047-.327h-1.908z"
+          style={{
+            fontSize: "5.33333px",
+            fontFamily: "&quot",
+            InkscapeFontSpecification: "&quot",
+            strokeWidth: 0.116854,
+          }}
+        />
+        <path
+          id="path32310"
+          d="M123.955 64.29h-5.19v-7.987h5.138v1.188h-3.699v2.165h2.973v1.159h-2.973v2.235h3.751z"
+          style={{
+            fontSize: "5.33333px",
+            fontFamily: "&quot",
+            InkscapeFontSpecification: "&quot",
+            strokeWidth: 0.116854,
+          }}
+        />
+        <path
+          id="path32312"
+          d="m124.36 62.365 1.398-.298q.251 1.188 1.931 1.188.767 0 1.176-.304.416-.305.416-.755 0-.328-.187-.603-.188-.281-.802-.439l-1.528-.398q-.784-.205-1.158-.462-.375-.264-.603-.738-.222-.474-.222-1.012 0-1.07.795-1.715.796-.65 2.037-.65 1.03 0 1.837.451.814.451 1.036 1.276l-1.37.34q-.315-.908-1.474-.908-.673 0-1.03.281-.35.281-.35.714 0 .685 1.111.96l1.358.34q1.234.31 1.656.918.421.603.421 1.335 0 1.176-.89 1.855-.883.673-2.293.673-1.188 0-2.084-.498-.89-.497-1.182-1.55z"
+          style={{
+            fontSize: "5.33333px",
+            fontFamily: "&quot",
+            InkscapeFontSpecification: "&quot",
+            strokeWidth: 0.116854,
+          }}
+        />
+        <path
+          id="path32314"
+          d="m131.206 62.365 1.399-.298q.251 1.188 1.93 1.188.768 0 1.177-.304.416-.305.416-.755 0-.328-.188-.603-.187-.281-.801-.439l-1.528-.398q-.784-.205-1.158-.462-.375-.264-.603-.738-.223-.474-.223-1.012 0-1.07.796-1.715.796-.65 2.037-.65 1.03 0 1.837.451.814.451 1.036 1.276l-1.37.34q-.315-.908-1.474-.908-.673 0-1.03.281-.351.281-.351.714 0 .685 1.112.96l1.358.34q1.234.31 1.656.918.421.603.421 1.335 0 1.176-.89 1.855-.883.673-2.293.673-1.188 0-2.084-.498-.89-.497-1.182-1.55z"
+          style={{
+            fontSize: "5.33333px",
+            fontFamily: "&quot",
+            InkscapeFontSpecification: "&quot",
+            strokeWidth: 0.116854,
+          }}
+        />
+        <path
+          id="path32316"
+          d="M144.373 56.303v5.132q0 1.042-.234 1.603-.234.562-.907.972-.667.404-1.633.404-.977 0-1.609-.352-.626-.35-.901-.96-.275-.614-.275-1.562v-5.237h1.469v5.132q0 1.053.439 1.387.444.328 1.03.328.672 0 1.076-.352.404-.357.404-1.363v-5.132z"
+          style={{
+            fontSize: "5.33333px",
+            fontFamily: "&quot",
+            InkscapeFontSpecification: "&quot",
+            strokeWidth: 0.116854,
+          }}
+        />
+        <path
+          id="path32318"
+          d="M152.244 64.29h-1.521l-1.24-3.282h-2.026v3.283h-1.44v-7.988h3.465q1.446 0 2.124.655.68.65.68 1.685 0 1.54-1.44 2.119zm-4.787-4.435h1.791q.778 0 1.159-.328.38-.328.38-.901 0-.527-.374-.849-.375-.327-1.048-.327h-1.908z"
+          style={{
+            fontSize: "5.33333px",
+            fontFamily: "&quot",
+            InkscapeFontSpecification: "&quot",
+            strokeWidth: 0.116854,
+          }}
+        />
+        <path
+          id="path32320"
+          d="M158.91 64.29h-5.191v-7.987h5.138v1.188h-3.698v2.165h2.972v1.159h-2.972v2.235h3.75z"
+          style={{
+            fontSize: "5.33333px",
+            fontFamily: "&quot",
+            InkscapeFontSpecification: "&quot",
+            strokeWidth: 0.116854,
+          }}
+        />
+        <path
+          id="path32322"
+          d="M169.21 60.206v4.085h-.639l-.438-1.077q-.697 1.2-2.16 1.2-1.633 0-2.44-1.241-.802-1.24-.802-2.873 0-1.727.896-2.92.9-1.2 2.516-1.2 1.205 0 1.984.702.778.696.983 1.738l-1.252.222q-.352-1.463-1.68-1.463-.849 0-1.387.691-.532.69-.532 2.124 0 3.026 1.896 3.026.737 0 1.217-.51.486-.508.486-1.345h-1.65v-1.159z"
+          style={{
+            fontSize: "5.33333px",
+            fontFamily: "&quot",
+            InkscapeFontSpecification: "&quot",
+            strokeWidth: 0.116854,
+          }}
+        />
+        <path
+          id="path32324"
+          d="M177.168 64.29h-1.539l-.638-1.901h-3.072l-.626 1.902h-1.23l2.652-7.988h1.773zm-2.563-3.054-1.165-3.564-1.164 3.564z"
+          style={{
+            fontSize: "5.33333px",
+            fontFamily: "&quot",
+            InkscapeFontSpecification: "&quot",
+            strokeWidth: 0.116854,
+          }}
+        />
+        <path
+          id="path32326"
+          d="M183.36 56.303v5.132q0 1.042-.234 1.603-.235.562-.908.972-.667.404-1.632.404-.978 0-1.61-.352-.626-.35-.9-.96-.276-.614-.276-1.562v-5.237h1.47v5.132q0 1.053.438 1.387.445.328 1.03.328.673 0 1.077-.352.403-.357.403-1.363v-5.132z"
+          style={{
+            fontSize: "5.33333px",
+            fontFamily: "&quot",
+            InkscapeFontSpecification: "&quot",
+            strokeWidth: 0.116854,
+          }}
+        />
+        <path
+          id="path32328"
+          d="M191.067 60.206v4.085h-.638l-.439-1.077q-.696 1.2-2.16 1.2-1.632 0-2.44-1.241-.801-1.24-.801-2.873 0-1.727.895-2.92.901-1.2 2.516-1.2 1.206 0 1.984.702.778.696.983 1.738l-1.252.222q-.351-1.463-1.68-1.463-.848 0-1.387.691-.532.69-.532 2.124 0 3.026 1.896 3.026.737 0 1.217-.51.486-.508.486-1.345h-1.65v-1.159z"
+          style={{
+            fontSize: "5.33333px",
+            fontFamily: "&quot",
+            InkscapeFontSpecification: "&quot",
+            strokeWidth: 0.116854,
+          }}
+        />
+        <path
+          id="path32330"
+          d="M197.89 64.29h-5.19v-7.987h5.138v1.188h-3.699v2.165h2.973v1.159h-2.973v2.235h3.751z"
+          style={{
+            fontSize: "5.33333px",
+            fontFamily: "&quot",
+            InkscapeFontSpecification: "&quot",
+            strokeWidth: 0.116854,
+          }}
+        />
+      </g>
+      <g id="sample-compartment">
+        <path
+          id="rect5963-3"
+          d="M-2116.524-2302.661h39.327v53.356h-39.327z"
+          style={{
+            fill: "url(#linearGradient11661-6)",
+            fillOpacity: 1,
+            strokeWidth: 0.240503,
+          }}
+          transform="scale(-1)"
+        />
+        <path
+          id="rect4162-5"
+          d="M-2124.95-2249.305h56.181v28.082h-56.181z"
+          style={{
+            fill: "url(#linearGradient10403-5)",
+            fillOpacity: 1,
+            strokeWidth: 0.144951,
+          }}
+          transform="scale(-1)"
+        />
+        <rect
+          id="rect5181-6"
+          width={56.181}
+          height={0.562}
+          x={-2124.95}
+          y={-2241.766}
+          ry={0}
+          style={{
+            fill: "#a0a0a0",
+            fillOpacity: 1,
+            strokeWidth: 0.0616743,
+          }}
+          transform="scale(-1)"
+        />
+        <path
+          id="rect9017-5"
+          d="M2091.056 2263.742a14.24 14.235 0 0 0-8.406 13.824l-27.715 12.367a3.346 3.346 0 0 0-1.698 4.433l1.371 3.068a3.348 3.348 0 0 0 4.434 1.696l27.714-12.366a14.24 14.235 0 0 0 15.908 2.976 14.24 14.235 0 0 0 8.405-13.824l27.715-12.369a3.346 3.346 0 0 0 1.696-4.433l-1.367-3.067a3.35 3.35 0 0 0-4.435-1.697l-27.71 12.363a14.24 14.235 0 0 0-15.912-2.972z"
+          style={{
+            fill: "url(#linearGradient12498-2)",
+            fillOpacity: 1,
+            stroke: "none",
+            strokeWidth: 0.352131,
+            strokeDasharray: "none",
+            strokeOpacity: 1,
+          }}
+        />
+        <path
+          id="rect5963-3-1"
+          d="M-2407.164-2302.661h39.327v53.356h-39.327z"
+          style={{
+            fill: "url(#linearGradient21598)",
+            fillOpacity: 1,
+            strokeWidth: 0.240503,
+          }}
+          transform="scale(-1)"
+        />
+        <path
+          id="rect4162-5-4"
+          d="M-2415.59-2249.305h56.181v28.082h-56.181z"
+          style={{
+            fill: "url(#linearGradient21600)",
+            fillOpacity: 1,
+            strokeWidth: 0.144951,
+          }}
+          transform="scale(-1)"
+        />
+        <rect
+          id="rect5181-6-8"
+          width={56.181}
+          height={0.562}
+          x={-2415.59}
+          y={-2241.766}
+          ry={0}
+          style={{
+            fill: "#a0a0a0",
+            fillOpacity: 1,
+            strokeWidth: 0.0616743,
+          }}
+          transform="scale(-1)"
+        />
+        <path
+          id="rect9017-5-0"
+          d="M2381.696 2263.742a14.24 14.235 0 0 0-8.406 13.824l-27.714 12.367a3.346 3.346 0 0 0-1.699 4.433l1.372 3.068a3.348 3.348 0 0 0 4.433 1.696l27.714-12.366a14.24 14.235 0 0 0 15.908 2.976 14.24 14.235 0 0 0 8.405-13.824l27.716-12.369a3.346 3.346 0 0 0 1.696-4.433l-1.367-3.067a3.35 3.35 0 0 0-4.436-1.697l-27.71 12.363a14.24 14.235 0 0 0-15.912-2.972z"
+          style={{
+            fill: "url(#linearGradient21602)",
+            fillOpacity: 1,
+            stroke: "none",
+            strokeWidth: 0.352131,
+            strokeDasharray: "none",
+            strokeOpacity: 1,
+          }}
+        />
+        <path
+          id="rect7077"
+          d="M1773.597 2019.876h937.163v190.052h-937.163z"
+          style={{
+            fill: "none",
+            fillOpacity: 1,
+            stroke: "#000",
+            strokeWidth: 22.5902,
+            strokeLinecap: "square",
+            strokeDasharray: "none",
+            strokeOpacity: 1,
+            paintOrder: "markers stroke fill",
+          }}
+        />
+        <rect
+          id="rect5758"
+          width={36.315}
+          height={197.08}
+          x={2685.807}
+          y={2016.362}
+          ry={5.119}
+          style={{
+            fill: "url(#linearGradient5760)",
+            fillOpacity: 1,
+            stroke: "none",
+            strokeWidth: 14.8253,
+            strokeDasharray: "none",
+            strokeOpacity: 1,
+            paintOrder: "markers stroke fill",
+          }}
+        />
+        <rect
+          id="rect6170"
+          width={55.701}
+          height={41.728}
+          x={2676.804}
+          y={2189.88}
+          ry={6.834}
+          style={{
+            fill: "#009ee0",
+            fillOpacity: 1,
+            stroke: "#000",
+            strokeWidth: 14.1625,
+            strokeLinecap: "square",
+            strokeDasharray: "none",
+            strokeOpacity: 1,
+            paintOrder: "markers stroke fill",
+          }}
+        />
+        <rect
+          id="rect32961"
+          width={36.315}
+          height={197.08}
+          x={1762.369}
+          y={2016.362}
+          ry={5.119}
+          style={{
+            fill: "url(#linearGradient32969)",
+            fillOpacity: 1,
+            stroke: "none",
+            strokeWidth: 14.8253,
+            strokeDasharray: "none",
+            strokeOpacity: 1,
+            paintOrder: "markers stroke fill",
+          }}
+        />
+        <rect
+          id="rect6168"
+          width={55.701}
+          height={41.728}
+          x={2676.807}
+          y={1998.196}
+          ry={6.834}
+          style={{
+            fill: "#009ee0",
+            fillOpacity: 1,
+            stroke: "#000",
+            strokeWidth: 14.1625,
+            strokeLinecap: "square",
+            strokeDasharray: "none",
+            strokeOpacity: 1,
+            paintOrder: "markers stroke fill",
+          }}
+        />
+        <rect
+          id="rect10251"
+          width={55.701}
+          height={41.728}
+          x={1751.984}
+          y={2189.88}
+          ry={6.834}
+          style={{
+            fill: "#009ee0",
+            fillOpacity: 1,
+            stroke: "#000",
+            strokeWidth: 14.1625,
+            strokeLinecap: "square",
+            strokeDasharray: "none",
+            strokeOpacity: 1,
+            paintOrder: "markers stroke fill",
+          }}
+        />
+        <rect
+          id="rect8256-0"
+          width={55.701}
+          height={41.728}
+          x={1751.984}
+          y={1998.196}
+          ry={6.834}
+          style={{
+            fill: "#009ee0",
+            fillOpacity: 1,
+            stroke: "#000",
+            strokeWidth: 14.1626,
+            strokeLinecap: "square",
+            strokeDasharray: "none",
+            strokeOpacity: 1,
+            paintOrder: "markers stroke fill",
+          }}
+        />
+      </g>
+      <g
+        id="lecture"
+        transform="matrix(1.66772 0 0 1.66772 -2816.29 -2052.516)"
+      >
+        <path
+          id="rect5963"
+          d="M-2807.589 3191.436h31.867v43.249h-31.867z"
+          style={{
+            fill: "url(#linearGradient11661)",
+            fillOpacity: 1,
+            strokeWidth: 0.194914,
+          }}
+          transform="rotate(-90)"
+        />
+        <path
+          id="rect4162"
+          d="M-2814.418 3234.684h45.525v22.762h-45.525z"
+          style={{
+            fill: "url(#linearGradient10403)",
+            fillOpacity: 1,
+            strokeWidth: 0.117477,
+          }}
+          transform="rotate(-90)"
+        />
+        <rect
+          id="rect5181"
+          width={45.525}
+          height={0.455}
+          x={-2814.418}
+          y={3240.794}
+          ry={0}
+          style={{
+            fill: "#a0a0a0",
+            fillOpacity: 1,
+            strokeWidth: 0.049984,
+          }}
+          transform="rotate(-90)"
+        />
+        <path
+          id="rect8157"
+          d="M-2776.006 3202.817h13.657v22.762h-13.657z"
+          style={{
+            fill: "url(#linearGradient11675)",
+            fillOpacity: 1,
+            strokeWidth: 0.170623,
+          }}
+          transform="rotate(-90)"
+        />
+        <path
+          id="rect8161"
+          d="M-2800.76 3186.883h18.21v4.552h-18.21z"
+          style={{
+            fill: "url(#linearGradient11706)",
+            fillOpacity: 1,
+            strokeWidth: 0.362494,
+          }}
+          transform="rotate(-90)"
+        />
+        <rect
+          id="rect9017"
+          width={63.735}
+          height={6.829}
+          x={-2823.523}
+          y={3180.055}
+          ry={2.276}
+          style={{
+            fill: "url(#linearGradient12498)",
+            fillOpacity: 1,
+            strokeWidth: 0.238872,
+          }}
+          transform="rotate(-90)"
+        />
+        <path
+          id="rect234"
+          d="M3318.495 2720.096a67.877 68.287 0 0 0-67.877 68.287 67.877 68.287 0 0 0 67.877 68.288 67.877 68.287 0 0 0 1.106-.08c.26.022.511.08.778.08h262.616c5.019 0 9.06-4.061 9.06-9.105V2729.2c0-5.044-4.041-9.105-9.06-9.105h-262.616c-.123 0-.24.03-.363.036a67.877 68.287 0 0 0-1.521-.036z"
+          style={{
+            fill: "url(#linearGradient12519)",
+            fillOpacity: 1,
+            strokeWidth: 0.232347,
+          }}
+        />
+        <rect
+          id="rect1697-1"
+          width={113.346}
+          height={235.352}
+          x={-2837.99}
+          y={3345.685}
+          ry={3.362}
+          style={{
+            fill: "url(#linearGradient15522)",
+            fillOpacity: 1,
+            strokeWidth: 4.26287,
+          }}
+          transform="rotate(-89.873) skewX(.01)"
+        />
+      </g>
+      <g id="pump" transform="translate(2509.775 2588.72) scale(1.28845)">
+        <rect
+          id="rect50079-5"
+          width={114.882}
+          height={36.18}
+          x={-589.996}
+          y={77.864}
+          ry={2.246}
+          style={{
+            fill: "gray",
+            strokeWidth: 3.4311,
+            strokeLinecap: "square",
+            paintOrder: "markers stroke fill",
+          }}
+        />
+        <rect
+          id="rect19760-8"
+          width={192.577}
+          height={97.687}
+          x={-779.253}
+          y={-36.104}
+          rx={0}
+          ry={15.029}
+          style={{
+            fill: "#666",
+            strokeWidth: 1.97997,
+            strokeLinecap: "square",
+            paintOrder: "markers stroke fill",
+          }}
+        />
+        <path
+          id="rect55893-8"
+          d="M-758.414-40.928a2.24 2.24 0 0 0-2.245 2.245v9.38c0 1.243 1.001 2.244 2.245 2.244h105.079c1.244 0 2.246-1 2.246-2.245v-9.379a2.24 2.24 0 0 0-2.246-2.245zm0 15.076a2.24 2.24 0 0 0-2.245 2.245v9.378c0 1.245 1.001 2.245 2.245 2.245h105.079c1.244 0 2.246-1 2.246-2.245v-9.378a2.24 2.24 0 0 0-2.246-2.245zm0 15.075a2.24 2.24 0 0 0-2.245 2.245V.847c0 1.244 1.001 2.245 2.245 2.245h105.079c1.244 0 2.246-1.001 2.246-2.245v-9.379a2.24 2.24 0 0 0-2.246-2.245zm0 15.075a2.24 2.24 0 0 0-2.245 2.245v9.378c0 1.244 1.001 2.246 2.245 2.246h105.079a2.242 2.242 0 0 0 2.246-2.246V6.543a2.24 2.24 0 0 0-2.246-2.245zm0 15.074a2.24 2.24 0 0 0-2.245 2.247v9.377c0 1.244 1.001 2.246 2.245 2.246h105.079a2.242 2.242 0 0 0 2.246-2.246v-9.377a2.242 2.242 0 0 0-2.246-2.247zm0 15.076a2.24 2.24 0 0 0-2.245 2.246v9.377c0 1.244 1.001 2.247 2.245 2.247h105.079a2.242 2.242 0 0 0 2.246-2.247v-9.377a2.242 2.242 0 0 0-2.246-2.246zm0 15.075a2.24 2.24 0 0 0-2.245 2.246v9.378c0 1.244 1.001 2.245 2.245 2.245h105.079c1.244 0 2.246-1.001 2.246-2.245v-9.378a2.242 2.242 0 0 0-2.246-2.246z"
+          style={{
+            fill: "url(#linearGradient55895-5)",
+            fillOpacity: 1,
+            stroke: "#000",
+            strokeWidth: 0.823374,
+            strokeLinecap: "square",
+            strokeOpacity: 1,
+            paintOrder: "markers stroke fill",
+          }}
+        />
+        <rect
+          id="rect32992-8"
+          width={57.773}
+          height={136.279}
+          x={-660.386}
+          y={-52.988}
+          ry={13.17}
+          style={{
+            fill: "gray",
+            strokeWidth: 1.54623,
+            strokeLinecap: "square",
+            paintOrder: "markers stroke fill",
+          }}
+        />
+        <path
+          id="path31294-3"
+          d="M-781.548 10.28a4.926 57.009 1.86 0 0 2.618 56.459l-.011.351.506-.018 26.063-.987.011-.351a4.926 57.009 1.86 0 0 .495.332 4.926 57.009 1.86 0 0 6.757-57.164 4.926 57.009 1.86 0 0-3.115-56.792 4.926 57.009 1.86 0 0-.518.378l.012-.358-26.063.986-.506.019-.012.358a4.926 57.009 1.86 0 0-6.237 56.787zm3.085 57.661 26.852-1.885z"
+          style={{
+            fill: "url(#linearGradient31318-5)",
+            fillOpacity: 1,
+            strokeWidth: 1.83205,
+          }}
+        />
+        <path
+          id="path76314-7"
+          d="M-607.669-76.402a3.488 16.865.894 0 0-2.9-16.679l.002-.104-.358.009-18.435.467v.104a3.488 16.865.894 0 0-.357-.095 3.488 16.865.894 0 0-3.725 16.95 3.488 16.865.894 0 0 3.258 16.775 3.488 16.865.894 0 0 .359-.115l-.001.106 18.434-.467.358-.009.001-.106a3.488 16.865.894 0 0 3.364-16.836zm-3.252-17.031-18.977.737z"
+          style={{
+            fill: "url(#linearGradient76316-0)",
+            fillOpacity: 1,
+            strokeWidth: 0.838556,
+          }}
+        />
+        <path
+          id="rect12620"
+          d="M-577.099-109.838h31.045v7.761h-31.045z"
+          style={{
+            fill: "url(#linearGradient12628)",
+            stroke: "none",
+            strokeWidth: 0.657027,
+            strokeLinecap: "square",
+            strokeDasharray: "none",
+            paintOrder: "markers stroke fill",
+            fillOpacity: 1,
+          }}
+        />
+        <rect
+          id="rect19032-7"
+          width={249.686}
+          height={200.198}
+          x={-618.55}
+          y={-103.64}
+          ry={9.648}
+          style={{
+            fill: "url(#linearGradient48503-5)",
+            fillOpacity: 1,
+            strokeWidth: 1.57968,
+            strokeLinecap: "square",
+            paintOrder: "markers stroke fill",
+          }}
+        />
+        <rect
+          id="rect26348-8"
+          width={274.257}
+          height={17.487}
+          x={-641.792}
+          y={105}
+          ry={6.633}
+          style={{
+            fill: "#999",
+            strokeWidth: 1.46274,
+            strokeLinecap: "square",
+            paintOrder: "markers stroke fill",
+          }}
+        />
+        <rect
+          id="rect31432-3"
+          width={2.656}
+          height={200.198}
+          x={-478.434}
+          y={-103.64}
+          ry={0}
+          style={{
+            fill: "#000",
+            strokeWidth: 0.802188,
+            strokeLinecap: "square",
+            paintOrder: "markers stroke fill",
+          }}
+        />
+        <rect
+          id="rect38076-8"
+          width={2.656}
+          height={200.198}
+          x={-590.66}
+          y={-103.64}
+          ry={0}
+          style={{
+            fill: "#000",
+            strokeWidth: 0.802188,
+            strokeLinecap: "square",
+            paintOrder: "markers stroke fill",
+          }}
+        />
+        <path
+          id="rect43160-9"
+          d="M-474.196-79.52a2.24 2.24 0 0 0-2.246 2.245v9.379a2.24 2.24 0 0 0 2.246 2.245h105.079c1.244 0 2.245-1.001 2.245-2.245v-9.38c0-1.243-1.001-2.244-2.245-2.244zm0 17.487a2.242 2.242 0 0 0-2.246 2.247v9.377a2.24 2.24 0 0 0 2.246 2.245h105.079c1.244 0 2.245-1.001 2.245-2.245v-9.377c0-1.245-1.001-2.247-2.245-2.247zm0 18.09a2.24 2.24 0 0 0-2.246 2.245v9.38a2.24 2.24 0 0 0 2.246 2.244h105.079c1.244 0 2.245-1 2.245-2.245v-9.379c0-1.244-1.001-2.245-2.245-2.245zm0 17.487a2.24 2.24 0 0 0-2.246 2.245v9.38a2.24 2.24 0 0 0 2.246 2.244h105.079c1.244 0 2.245-1 2.245-2.245v-9.379c0-1.244-1.001-2.245-2.245-2.245zm0 16.884a2.242 2.242 0 0 0-2.246 2.247v9.377a2.242 2.242 0 0 0 2.246 2.246h105.079a2.24 2.24 0 0 0 2.245-2.246v-9.377c0-1.244-1.001-2.247-2.245-2.247zm0 18.09a2.242 2.242 0 0 0-2.246 2.247v9.377a2.24 2.24 0 0 0 2.246 2.245h105.079c1.244 0 2.245-1 2.245-2.245v-9.377c0-1.244-1.001-2.246-2.245-2.246zm0 19.298a2.24 2.24 0 0 0-2.246 2.245v9.377a2.242 2.242 0 0 0 2.246 2.246h105.079a2.24 2.24 0 0 0 2.245-2.246V30.06c0-1.244-1.001-2.245-2.245-2.245zm0 17.487a2.24 2.24 0 0 0-2.246 2.245v9.377a2.242 2.242 0 0 0 2.246 2.246h105.079a2.24 2.24 0 0 0 2.245-2.246v-9.377c0-1.244-1.001-2.245-2.245-2.245zm0 17.487a2.24 2.24 0 0 0-2.246 2.245v9.379a2.24 2.24 0 0 0 2.246 2.245h105.079c1.244 0 2.245-1.001 2.245-2.245v-9.38c0-1.243-1.001-2.244-2.245-2.244z"
+          style={{
+            fill: "url(#linearGradient44732-4)",
+            fillOpacity: 1,
+            strokeWidth: 0.823374,
+            strokeLinecap: "square",
+            paintOrder: "markers stroke fill",
+          }}
+        />
+        <path
+          id="path91087-0"
+          d="m15.103 29.487-6.066-.042-2.996-5.274 3.069-5.232 6.066.042 2.996 5.274z"
+          style={{
+            fill: "url(#linearGradient7719)",
+            fillOpacity: 1,
+            stroke: "#000",
+            strokeWidth: 1.33244,
+            strokeLinecap: "square",
+            strokeDasharray: "none",
+            strokeOpacity: 1,
+            paintOrder: "markers stroke fill",
+          }}
+          transform="matrix(1.40904 0 0 1.2279 -416.801 56.274)"
+        />
+      </g>
+      <g id="fixed-mirror">
+        <path
+          id="rect2866-5-59"
+          d="M-1799.277 279.521h210v7h-210z"
+          style={{
+            fill: "url(#linearGradient10461)",
+            fillOpacity: 1,
+            fillRule: "evenodd",
+            strokeWidth: 0.952,
+            strokeDasharray: "none",
+          }}
+          transform="rotate(-135)"
+        />
+        <path
+          id="rect2866-9"
+          d="M-1799.277 244.521h210v35h-210z"
+          style={{
+            fill: "url(#linearGradient10463)",
+            fillOpacity: 1,
+            fillRule: "evenodd",
+            strokeWidth: 0.952,
+            strokeDasharray: "none",
+          }}
+          transform="rotate(-135)"
+        />
+      </g>
+      <g id="fixed-corner-cube" transform="rotate(45 487.155 1608.651)">
+        <path
+          id="rect17548"
+          d="M0 0v365h55V55h310V0H0z"
+          style={{
+            opacity: 1,
+            fill: "url(#linearGradient13410)",
+            fillOpacity: 1,
+            stroke: "none",
+            strokeWidth: 1.68749,
+            strokeLinecap: "square",
+            strokeDasharray: "none",
+            paintOrder: "fill markers stroke",
+          }}
+        />
+        <path
+          id="rect2866-5-5"
+          d="M55 55v310h7V62h303v-7H55z"
+          style={{
+            fill: "url(#linearGradient13426)",
+            fillOpacity: 1,
+            fillRule: "evenodd",
+            stroke: "none",
+            strokeWidth: 1.15667,
+            strokeDasharray: "none",
+          }}
+        />
+      </g>
+      <g id="movable-corner-cube" transform="rotate(135 900.985 1021.051)">
+        <path
+          id="rect17548-4"
+          d="M0 365h55V55h310V0H0v365z"
+          style={{
+            opacity: 1,
+            fill: "url(#linearGradient13392)",
+            fillOpacity: 1,
+            stroke: "none",
+            strokeWidth: 1.68749,
+            strokeLinecap: "square",
+            strokeDasharray: "none",
+            paintOrder: "fill markers stroke",
+          }}
+        />
+        <path
+          id="rect2866-5-5-8"
+          d="M55 365h7V62h303v-7H55v310z"
+          style={{
+            fill: "url(#linearGradient13436)",
+            fillOpacity: 1,
+            fillRule: "evenodd",
+            stroke: "none",
+            strokeWidth: 1.15667,
+            strokeDasharray: "none",
+          }}
+        />
+      </g>
+      <g
+        id="insb-beam"
+        style={{
+          display: props.detector.insb,
+        }}
+      >
+        <path
+          id="path-insb"
+          d="m3164.329 1929.583 117.532-150.45 52.155 23.879z"
+          style={{
+            opacity: 0.65,
+            fill: "#ff6638",
+            fillOpacity: 1,
+            strokeWidth: 2.21179,
+            strokeLinecap: "square",
+            paintOrder: "fill markers stroke",
+          }}
+        />
+      </g>
+      <g
+        id="flat-rotatable-mirror-insb"
+        style={{
+          display: props.detector.insbMirror,
+        }}
+        transform="rotate(-22.5 3301.691 1794.086)"
+      >
+        <path
+          id="rect2866-5-0-8"
+          d="M3497.272-1073.665h210v7h-210z"
+          style={{
+            fill: "url(#linearGradient5024)",
+            fillOpacity: 1,
+            fillRule: "evenodd",
+            strokeWidth: 0.952,
+            strokeDasharray: "none",
+          }}
+          transform="rotate(45)"
+        />
+        <path
+          id="rect2866-3-6"
+          d="M3497.272-1108.665h210v35h-210z"
+          style={{
+            fill: "url(#linearGradient5026)",
+            fillOpacity: 1,
+            fillRule: "evenodd",
+            strokeWidth: 0.952,
+            strokeDasharray: "none",
+          }}
+          transform="rotate(45)"
+        />
+      </g>
+      <g
+        id="mct-beam"
+        style={{
+          display: props.detector.mct,
+        }}
+      >
+        <path
+          id="path-mct"
+          d="m3080.987 1793.841 204.992-23.953 53.564 54.457z"
+          style={{
+            opacity: 0.65,
+            fill: "#ff6638",
+            fillOpacity: 1,
+            strokeWidth: 2.21179,
+            strokeLinecap: "square",
+            paintOrder: "fill markers stroke",
+          }}
+        />
+      </g>
+      <g
+        id="flat-rotatable-mirror-mct"
+        style={{
+          display: props.detector.mctMirror,
+        }}
+      >
+        <path
+          id="rect2866-5-0"
+          d="M3497.272-1073.665h210v7h-210z"
+          style={{
+            fill: "url(#linearGradient10998)",
+            fillOpacity: 1,
+            fillRule: "evenodd",
+            strokeWidth: 0.952,
+            strokeDasharray: "none",
+          }}
+          transform="rotate(45)"
+        />
+        <path
+          id="rect2866-3"
+          d="M3497.272-1108.665h210v35h-210z"
+          style={{
+            fill: "url(#linearGradient11000)",
+            fillOpacity: 1,
+            fillRule: "evenodd",
+            strokeWidth: 0.952,
+            strokeDasharray: "none",
+          }}
+          transform="rotate(45)"
+        />
+      </g>
+      <g id="hose-2" transform="matrix(-1 0 0 1 4482.777 2.625)">
+        <path
+          id="rect12396-8-7"
+          d="M2354.315-2069.965h45v106.334h-45z"
+          style={{
+            fill: "green",
+            stroke: "none",
+            strokeWidth: 1.35227,
+            strokeLinecap: "square",
+            strokeDasharray: "none",
+            paintOrder: "markers stroke fill",
+          }}
+          transform="rotate(90)"
+        />
+        <path
+          id="rect12396-8-7-0"
+          d="M2069.965 2354.315v.807l-.807-.807zm-1.264 0-1.893 1.893 2.121 2.121 1.036-1.035v4.898l-1.036-1.035-2.12 2.121 2.12 2.121 1.036-1.035v4.9l-1.036-1.035-2.12 2.122 2.12 2.12 1.036-1.035v4.899l-1.036-1.035-2.12 2.12 2.12 2.122 1.036-1.035v4.898l-1.036-1.035-2.12 2.121 2.12 2.123 1.036-1.035v4.898l-1.036-1.035-2.12 2.121 2.12 2.121 1.036-1.035v4.899l-1.036-1.035-2.12 2.12.68.682h-4.19l.681-.681-2.12-2.121-2.122 2.12.682.682h-4.194l.682-.681-2.121-2.121-2.121 2.12.681.682h-4.191l.682-.681-2.122-2.121-2.12 2.12.681.682h-4.191l.681-.681-2.12-2.121-2.124 2.12.682.682h-4.192l.682-.681-2.121-2.121-2.121 2.12.681.682h-4.19l.68-.681-2.12-2.121-2.122 2.12.682.682h-4.193l.681-.681-2.12-2.121-2.122 2.12.682.682h-4.192l.682-.681-2.121-2.121-2.121 2.12.682.682h-4.192l.682-.681-2.121-2.121-2.121 2.12.681.682h-4.193l.682-.681-2.122-2.121-2.12 2.12.681.682h-4.191l.681-.681-2.12-2.121-2.122 2.12.682.682h-4.192l.682-.681-2.123-2.121-2.121 2.12.681.682h-4.191l.682-.681-2.121-2.121-2.122 2.12.682.682h-4.191l.681-.681-2.12-2.121-2.122 2.12.682.682h-4.194l.682-.681-1.353-1.354v-4.363l1.353-1.354-1.353-1.353v-4.363l1.353-1.356-1.353-1.353v-4.364l1.353-1.353-1.353-1.354v-4.363l1.353-1.354-1.353-1.353v-4.365l1.353-1.354-1.353-1.353v-4.364l1.353-1.353-1.353-1.354v-.539h2.289l.478.479.479-.479h2.83l-1.893 1.893 2.121 2.121 2.121-2.121-1.892-1.893h2.828l.478.479.479-.479h2.828l-1.893 1.893 2.122 2.121 2.12-2.121-1.892-1.893h2.828l.479.479.478-.479h2.828l-1.892 1.893 2.12 2.121 2.124-2.121-1.895-1.893h2.83l.479.479.478-.479h2.829l-1.893 1.893 2.121 2.121 2.121-2.121-1.892-1.893h2.828l.478.479.479-.479h2.828l-1.893 1.893 2.121 2.121 2.122-2.121-1.893-1.893h2.828l.479.479.478-.479h2.83l-1.892 1.893 2.12 2.121 2.122-2.121-1.893-1.893h2.828l.479.479.478-.479h2.828l-1.892 1.893 2.121 2.121 2.121-2.121-1.892-1.893h2.828l.478.479.479-.479h2.828l-1.893 1.893 2.121 2.121 2.121-2.121-1.892-1.893h2.83l.478.479.479-.479h2.828l-1.893 1.893 2.122 2.121 2.12-2.121-1.892-1.893h2.828l.479.479.478-.479h2.828l-1.892 1.893 2.12 2.121 2.122-2.121-1.893-1.893h2.829l.478.479.479-.479h2.83l-1.895 1.893 2.123 2.121 2.121-2.121-1.892-1.893h2.828l.478.479.479-.479h2.828l-1.893 1.893 2.121 2.121 2.122-2.121-1.893-1.893h2.828l.479.479.478-.479h2.828l-1.892 1.893 2.12 2.121 2.122-2.121-1.893-1.893h2.83l.479.479.478-.479h2.829l-1.893 1.893 2.121 2.121 2.121-2.121-1.892-1.893h2.828l.478.479.479-.479zm-3.307 3.307-2.12 2.121 2.12 2.121 2.121-2.121zm-7.07 0-2.123 2.121 2.123 2.121 2.121-2.121zm-7.072 0-2.121 2.121 2.12 2.121 2.122-2.121zm-7.07 0-2.122 2.121 2.121 2.121 2.121-2.121zm-7.073 0-2.121 2.121 2.121 2.121 2.121-2.121zm-7.07 0-2.121 2.121 2.12 2.121 2.122-2.121zm-7.07 0-2.124 2.121 2.123 2.121 2.122-2.121zm-7.073 0-2.12 2.121 2.12 2.121 2.121-2.121zm-7.07 0-2.121 2.121 2.12 2.121 2.122-2.121zm-7.072 0-2.122 2.121 2.122 2.121 2.123-2.121zm-7.07 0-2.122 2.121 2.121 2.121 2.121-2.121zm-7.071 0-2.121 2.121 2.121 2.121 2.121-2.121zm-7.072 0-2.121 2.121 2.12 2.121 2.122-2.121zm-7.07 0-2.122 2.121 2.121 2.121 2.121-2.121zm-7.073 0-2.12 2.121 2.12 2.121 2.123-2.121zm95.461 3.535-2.121 2.121 2.121 2.121 2.121-2.12zm-7.072 0-2.121 2.121 2.12 2.121 2.122-2.12zm-7.07 0-2.122 2.121 2.121 2.121 2.122-2.12zm-7.07 0-2.124 2.121 2.123 2.121 2.121-2.12zm-7.073 0-2.121 2.121 2.12 2.121 2.122-2.12zm-7.07 0-2.122 2.121 2.122 2.121 2.12-2.12zm-7.073 0-2.12 2.121 2.12 2.121 2.121-2.12zm-7.07 0-2.121 2.121 2.121 2.121 2.121-2.12zm-7.07 0-2.121 2.121 2.12 2.121 2.122-2.12zm-7.073 0-2.12 2.121 2.12 2.121 2.122-2.12zm-7.07 0-2.12 2.121 2.12 2.121 2.121-2.12zm-7.072 0-2.121 2.121 2.12 2.121 2.124-2.12zm-7.07 0-2.122 2.121 2.122 2.121 2.12-2.12zm-7.07 0-2.122 2.121 2.121 2.121 2.121-2.12zm95.458 3.535-2.12 2.121 2.12 2.123 2.121-2.123zm-7.07 0-2.123 2.121 2.123 2.123 2.121-2.123zm-7.072 0-2.121 2.121 2.12 2.123 2.122-2.123zm-7.07 0-2.122 2.121 2.121 2.123 2.121-2.123zm-7.073 0-2.121 2.121 2.121 2.123 2.121-2.123zm-7.07 0-2.121 2.121 2.12 2.123 2.122-2.123zm-7.07 0-2.124 2.121 2.123 2.123 2.122-2.123zm-7.073 0-2.12 2.121 2.12 2.123 2.121-2.123zm-7.07 0-2.121 2.121 2.12 2.123 2.122-2.123zm-7.072 0-2.122 2.121 2.122 2.123 2.123-2.123zm-7.07 0-2.122 2.121 2.121 2.123 2.121-2.123zm-7.071 0-2.121 2.121 2.121 2.123 2.121-2.123zm-7.072 0-2.121 2.121 2.12 2.123 2.122-2.123zm-7.07 0-2.122 2.121 2.121 2.123 2.121-2.123zm-7.073 0-2.12 2.121 2.12 2.123 2.123-2.123zm95.461 3.537-2.121 2.121 2.121 2.122 2.121-2.122zm-7.072 0-2.121 2.121 2.12 2.122 2.122-2.122zm-7.07 0-2.122 2.121 2.121 2.122 2.122-2.122zm-7.07 0-2.124 2.121 2.123 2.122 2.121-2.122zm-7.073 0-2.121 2.121 2.12 2.122 2.122-2.122zm-7.07 0-2.122 2.121 2.122 2.122 2.12-2.122zm-7.073 0-2.12 2.121 2.12 2.122 2.121-2.122zm-7.07 0-2.121 2.121 2.121 2.122 2.121-2.122zm-7.07 0-2.121 2.121 2.12 2.122 2.122-2.122zm-7.073 0-2.12 2.121 2.12 2.122 2.122-2.122zm-7.07 0-2.12 2.121 2.12 2.122 2.121-2.122zm-7.072 0-2.121 2.121 2.12 2.122 2.124-2.122zm-7.07 0-2.122 2.121 2.122 2.122 2.12-2.122zm-7.07 0-2.122 2.121 2.121 2.122 2.121-2.122zm95.458 3.535-2.12 2.122 2.12 2.12 2.121-2.12zm-7.07 0-2.123 2.122 2.123 2.12 2.121-2.12zm-7.072 0-2.121 2.122 2.12 2.12 2.122-2.12zm-7.07 0-2.122 2.122 2.121 2.12 2.121-2.12zm-7.073 0-2.121 2.122 2.121 2.12 2.121-2.12zm-7.07 0-2.121 2.122 2.12 2.12 2.122-2.12zm-7.07 0-2.124 2.122 2.123 2.12 2.122-2.12zm-7.073 0-2.12 2.122 2.12 2.12 2.121-2.12zm-7.07 0-2.121 2.122 2.12 2.12 2.122-2.12zm-7.072 0-2.122 2.122 2.122 2.12 2.123-2.12zm-7.07 0-2.122 2.122 2.121 2.12 2.121-2.12zm-7.071 0-2.121 2.122 2.121 2.12 2.121-2.12zm-7.072 0-2.121 2.122 2.12 2.12 2.122-2.12zm-7.07 0-2.122 2.122 2.121 2.12 2.121-2.12zm-7.073 0-2.12 2.122 2.12 2.12 2.123-2.12zm95.461 3.536-2.121 2.12 2.121 2.122 2.121-2.121zm-7.072 0-2.121 2.12 2.12 2.122 2.122-2.121zm-7.07 0-2.122 2.12 2.121 2.122 2.122-2.121zm-7.07 0-2.124 2.12 2.123 2.122 2.121-2.121zm-7.073 0-2.121 2.12 2.12 2.122 2.122-2.121zm-7.07 0-2.122 2.12 2.122 2.122 2.12-2.121zm-7.073 0-2.12 2.12 2.12 2.122 2.121-2.121zm-7.07 0-2.121 2.12 2.121 2.122 2.121-2.121zm-7.07 0-2.121 2.12 2.12 2.122 2.122-2.121zm-7.073 0-2.12 2.12 2.12 2.122 2.122-2.121zm-7.07 0-2.12 2.12 2.12 2.122 2.121-2.121zm-7.072 0-2.121 2.12 2.12 2.122 2.124-2.121zm-7.07 0-2.122 2.12 2.122 2.122 2.12-2.121zm-7.07 0-2.122 2.12 2.121 2.122 2.121-2.121zm95.458 3.535-2.12 2.12 2.12 2.122 2.121-2.121zm-7.07 0-2.123 2.12 2.123 2.122 2.121-2.121zm-7.072 0-2.121 2.12 2.12 2.122 2.122-2.121zm-7.07 0-2.122 2.12 2.121 2.122 2.121-2.121zm-7.073 0-2.121 2.12 2.121 2.122 2.121-2.121zm-7.07 0-2.121 2.12 2.12 2.122 2.122-2.121zm-7.07 0-2.124 2.12 2.123 2.122 2.122-2.121zm-7.073 0-2.12 2.12 2.12 2.122 2.121-2.121zm-7.07 0-2.121 2.12 2.12 2.122 2.122-2.121zm-7.072 0-2.122 2.12 2.122 2.122 2.123-2.121zm-7.07 0-2.122 2.12 2.121 2.122 2.121-2.121zm-7.071 0-2.121 2.12 2.121 2.122 2.121-2.121zm-7.072 0-2.121 2.12 2.12 2.122 2.122-2.121zm-7.07 0-2.122 2.12 2.121 2.122 2.121-2.121zm-7.073 0-2.12 2.12 2.12 2.122 2.123-2.121zm95.461 3.535-2.121 2.121 2.121 2.123 2.121-2.123zm-7.072 0-2.121 2.121 2.12 2.123 2.122-2.123zm-7.07 0-2.122 2.121 2.121 2.123 2.122-2.123zm-7.07 0-2.124 2.121 2.123 2.123 2.121-2.123zm-7.073 0-2.121 2.121 2.12 2.123 2.122-2.123zm-7.07 0-2.122 2.121 2.122 2.123 2.12-2.123zm-7.073 0-2.12 2.121 2.12 2.123 2.121-2.123zm-7.07 0-2.121 2.121 2.121 2.123 2.121-2.123zm-7.07 0-2.121 2.121 2.12 2.123 2.122-2.123zm-7.073 0-2.12 2.121 2.12 2.123 2.122-2.123zm-7.07 0-2.12 2.121 2.12 2.123 2.121-2.123zm-7.072 0-2.121 2.121 2.12 2.123 2.124-2.123zm-7.07 0-2.122 2.121 2.122 2.123 2.12-2.123zm-7.07 0-2.122 2.121 2.121 2.123 2.121-2.123zm95.458 3.535-2.12 2.123 2.12 2.121 2.121-2.12zm-7.07 0-2.123 2.123 2.123 2.121 2.121-2.12zm-7.072 0-2.121 2.123 2.12 2.121 2.122-2.12zm-7.07 0-2.122 2.123 2.121 2.121 2.121-2.12zm-7.073 0-2.121 2.123 2.121 2.121 2.121-2.12zm-7.07 0-2.121 2.123 2.12 2.121 2.122-2.12zm-7.07 0-2.124 2.123 2.123 2.121 2.122-2.12zm-7.073 0-2.12 2.123 2.12 2.121 2.121-2.12zm-7.07 0-2.121 2.123 2.12 2.121 2.122-2.12zm-7.072 0-2.122 2.123 2.122 2.121 2.123-2.12zm-7.07 0-2.122 2.123 2.121 2.121 2.121-2.12zm-7.071 0-2.121 2.123 2.121 2.121 2.121-2.12zm-7.072 0-2.121 2.123 2.12 2.121 2.122-2.12zm-7.07 0-2.122 2.123 2.121 2.121 2.121-2.12zm-7.073 0-2.12 2.123 2.12 2.121 2.123-2.12zm95.461 3.537-2.121 2.121 2.121 2.121 2.121-2.12zm-7.072 0-2.121 2.121 2.12 2.121 2.122-2.12zm-7.07 0-2.122 2.121 2.121 2.121 2.122-2.12zm-7.07 0-2.124 2.121 2.123 2.121 2.121-2.12zm-7.073 0-2.121 2.121 2.12 2.121 2.122-2.12zm-7.07 0-2.122 2.121 2.122 2.121 2.12-2.12zm-7.073 0-2.12 2.121 2.12 2.121 2.121-2.12zm-7.07 0-2.121 2.121 2.121 2.121 2.121-2.12zm-7.07 0-2.121 2.121 2.12 2.121 2.122-2.12zm-7.073 0-2.12 2.121 2.12 2.121 2.122-2.12zm-7.07 0-2.12 2.121 2.12 2.121 2.121-2.12zm-7.072 0-2.121 2.121 2.12 2.121 2.124-2.12zm-7.07 0-2.122 2.121 2.122 2.121 2.12-2.12zm-7.07 0-2.122 2.121 2.121 2.121 2.121-2.12zm95.458 3.535-2.12 2.121 2.12 2.122 2.121-2.122zm-7.07 0-2.123 2.121 2.123 2.122 2.121-2.122zm-7.072 0-2.121 2.121 2.12 2.122 2.122-2.122zm-7.07 0-2.122 2.121 2.121 2.122 2.121-2.122zm-7.073 0-2.121 2.121 2.121 2.122 2.121-2.122zm-7.07 0-2.121 2.121 2.12 2.122 2.122-2.122zm-7.07 0-2.124 2.121 2.123 2.122 2.122-2.122zm-7.073 0-2.12 2.121 2.12 2.122 2.121-2.122zm-7.07 0-2.121 2.121 2.12 2.122 2.122-2.122zm-7.072 0-2.122 2.121 2.122 2.122 2.123-2.122zm-7.07 0-2.122 2.121 2.121 2.122 2.121-2.122zm-7.071 0-2.121 2.121 2.121 2.122 2.121-2.122zm-7.072 0-2.121 2.121 2.12 2.122 2.122-2.122zm-7.07 0-2.122 2.121 2.121 2.122 2.121-2.122zm-7.073 0-2.12 2.121 2.12 2.122 2.123-2.122z"
+          style={{
+            fill: "url(#linearGradient16893)",
+            stroke: "none",
+            strokeWidth: 1.35227,
+            strokeLinecap: "square",
+            strokeDasharray: "none",
+            paintOrder: "markers stroke fill",
+            fillOpacity: 1,
+          }}
+        />
+        <rect
+          id="rect12396-4"
+          width={45}
+          height={55}
+          x={2072.777}
+          y={2298.741}
+          ry={0}
+          style={{
+            fill: "green",
+            stroke: "none",
+            strokeWidth: 0.972546,
+            strokeLinecap: "square",
+            strokeDasharray: "none",
+            paintOrder: "markers stroke fill",
+          }}
+        />
+        <path
+          id="rect12396-4-2"
+          d="m2117.206 2298.74-.898.899 1.469 1.468v4.133l-1.47 1.469 1.47 1.469v4.133l-1.47 1.47 1.47 1.469v4.133l-1.47 1.469 1.47 1.468v4.133l-1.47 1.469 1.47 1.469v4.134l-1.47 1.47 1.47 1.468v4.133l-1.47 1.468 1.47 1.47v4.132l-1.47 1.469 1.47 1.47v3.135h-1.83l1.068-1.068-2.121-2.121-2.123 2.12 1.07 1.07h-4.967l1.069-1.07-2.122-2.12-2.12 2.12 1.068 1.07h-4.965l1.068-1.07-2.12-2.12-2.122 2.12 1.069 1.07h-4.967l1.07-1.07-2.123-2.12-2.121 2.12 1.068 1.07h-4.965l1.069-1.07-2.121-2.12-2.121 2.12 1.068 1.07h-4.965l1.068-1.07-2.12-2.12-2.122 2.12 1.069 1.07h-4.967l1.068-1.07-1.81-1.81v-3.45l1.81-1.811-1.81-1.81v-3.45l1.81-1.81-1.81-1.811v-3.45l1.81-1.81-1.81-1.813v-3.449l1.81-1.81-1.81-1.81v-3.45l1.81-1.81-1.81-1.811v-3.451l1.81-1.81-1.81-1.811v-3.45l1.81-1.81-1.81-1.81v-2.624h2.002l-.899.899 2.123 2.12 2.121-2.12-.898-.899h4.625l-.899.899 2.122 2.12 2.12-2.12-.898-.899h4.625l-.898.899 2.12 2.12 2.122-2.12-.899-.899h4.627l-.898.899 2.121 2.12 2.121-2.12-.898-.899h4.625l-.899.899 2.121 2.12 2.122-2.12-.899-.899h4.625l-.898.899 2.12 2.12 2.124-2.12-.899-.899zm-2.312 2.313-2.123 2.12 2.123 2.122 2.12-2.121zm-7.072 0-2.122 2.12 2.122 2.122 2.12-2.121zm-7.07 0-2.122 2.12 2.121 2.122 2.121-2.121zm-7.073 0-2.121 2.12 2.12 2.122 2.124-2.121zm-7.07 0-2.121 2.12 2.12 2.122 2.122-2.121zm-7.07 0-2.122 2.12 2.121 2.122 2.121-2.121zm31.818 3.535-2.121 2.121 2.12 2.121 2.124-2.121zm-7.07 0-2.122 2.121 2.121 2.121 2.122-2.121zm-7.07 0-2.122 2.121 2.121 2.121 2.121-2.121zm-7.073 0-2.121 2.121 2.12 2.121 2.122-2.121zm-7.07 0-2.122 2.121 2.122 2.121 2.12-2.121zm-7.07 0-2.124 2.121 2.123 2.121 2.121-2.121zm38.89 3.535-2.123 2.121 2.123 2.121 2.12-2.12zm-7.072 0-2.122 2.121 2.122 2.121 2.12-2.12zm-7.07 0-2.122 2.121 2.121 2.121 2.121-2.12zm-7.073 0-2.121 2.121 2.12 2.121 2.124-2.12zm-7.07 0-2.121 2.121 2.12 2.121 2.122-2.12zm-7.07 0-2.122 2.121 2.121 2.121 2.121-2.12zm31.818 3.535-2.121 2.123 2.12 2.121 2.124-2.12zm-7.07 0-2.122 2.123 2.121 2.121 2.122-2.12zm-7.07 0-2.122 2.123 2.121 2.121 2.121-2.12zm-7.073 0-2.121 2.123 2.12 2.121 2.122-2.12zm-7.07 0-2.122 2.123 2.122 2.121 2.12-2.12zm-7.07 0-2.124 2.123 2.123 2.121 2.121-2.12zm38.89 3.537-2.123 2.121 2.123 2.121 2.12-2.12zm-7.072 0-2.122 2.121 2.122 2.121 2.12-2.12zm-7.07 0-2.122 2.121 2.121 2.121 2.121-2.12zm-7.073 0-2.121 2.121 2.12 2.121 2.124-2.12zm-7.07 0-2.121 2.121 2.12 2.121 2.122-2.12zm-7.07 0-2.122 2.121 2.121 2.121 2.121-2.12zm31.818 3.535-2.121 2.122 2.12 2.12 2.124-2.12zm-7.07 0-2.122 2.122 2.121 2.12 2.122-2.12zm-7.07 0-2.122 2.122 2.121 2.12 2.121-2.12zm-7.073 0-2.121 2.122 2.12 2.12 2.122-2.12zm-7.07 0-2.122 2.122 2.122 2.12 2.12-2.12zm-7.07 0-2.124 2.122 2.123 2.12 2.121-2.12zm38.89 3.536-2.123 2.12 2.123 2.122 2.12-2.121zm-7.072 0-2.122 2.12 2.122 2.122 2.12-2.121zm-7.07 0-2.122 2.12 2.121 2.122 2.121-2.121zm-7.073 0-2.121 2.12 2.12 2.122 2.124-2.121zm-7.07 0-2.121 2.12 2.12 2.122 2.122-2.121zm-7.07 0-2.122 2.12 2.121 2.122 2.121-2.121zm31.818 3.535-2.121 2.12 2.12 2.122 2.124-2.121zm-7.07 0-2.122 2.12 2.121 2.122 2.122-2.121zm-7.07 0-2.122 2.12 2.121 2.122 2.121-2.121zm-7.073 0-2.121 2.12 2.12 2.122 2.122-2.121zm-7.07 0-2.122 2.12 2.122 2.122 2.12-2.121zm-7.07 0-2.124 2.12 2.123 2.122 2.121-2.121zm38.89 3.535-2.123 2.123 2.123 2.121 2.12-2.121zm-7.072 0-2.122 2.123 2.122 2.121 2.12-2.121zm-7.07 0-2.122 2.123 2.121 2.121 2.121-2.121zm-7.073 0-2.121 2.123 2.12 2.121 2.124-2.121zm-7.07 0-2.121 2.123 2.12 2.121 2.122-2.121zm-7.07 0-2.122 2.123 2.121 2.121 2.121-2.121zm31.818 3.537-2.121 2.121 2.12 2.121 2.124-2.12zm-7.07 0-2.122 2.121 2.121 2.121 2.122-2.12zm-7.07 0-2.122 2.121 2.121 2.121 2.121-2.12zm-7.073 0-2.121 2.121 2.12 2.121 2.122-2.12zm-7.07 0-2.122 2.121 2.122 2.121 2.12-2.12zm-7.07 0-2.124 2.121 2.123 2.121 2.121-2.12zm38.89 3.535-2.123 2.121 2.123 2.121 2.12-2.12zm-7.072 0-2.122 2.121 2.122 2.121 2.12-2.12zm-7.07 0-2.122 2.121 2.121 2.121 2.121-2.12zm-7.073 0-2.121 2.121 2.12 2.121 2.124-2.12zm-7.07 0-2.121 2.121 2.12 2.121 2.122-2.12zm-7.07 0-2.122 2.121 2.121 2.121 2.121-2.12zm31.818 3.535-2.121 2.121 2.12 2.122 2.124-2.122zm-7.07 0-2.122 2.121 2.121 2.122 2.122-2.122zm-7.07 0-2.122 2.121 2.121 2.122 2.121-2.122zm-7.073 0-2.121 2.121 2.12 2.122 2.122-2.122zm-7.07 0-2.122 2.121 2.122 2.122 2.12-2.122zm-7.07 0-2.124 2.121 2.123 2.122 2.121-2.122zm38.89 3.536-2.123 2.12 2.123 2.122 2.12-2.121zm-7.072 0-2.122 2.12 2.122 2.122 2.12-2.121zm-7.07 0-2.122 2.12 2.121 2.122 2.121-2.121zm-7.073 0-2.121 2.12 2.12 2.122 2.124-2.121zm-7.07 0-2.121 2.12 2.12 2.122 2.122-2.121zm-7.07 0-2.122 2.12 2.121 2.122 2.121-2.121zm31.818 3.535-2.121 2.12 2.12 2.124 2.124-2.123zm-7.07 0-2.122 2.12 2.121 2.124 2.122-2.123zm-7.07 0-2.122 2.12 2.121 2.124 2.121-2.123zm-7.073 0-2.121 2.12 2.12 2.124 2.122-2.123zm-7.07 0-2.122 2.12 2.122 2.124 2.12-2.123zm-7.07 0-2.124 2.12 2.123 2.124 2.121-2.123z"
+          style={{
+            fill: "url(#linearGradient16151)",
+            stroke: "none",
+            strokeWidth: 0.972546,
+            strokeLinecap: "square",
+            strokeDasharray: "none",
+            paintOrder: "markers stroke fill",
+            fillOpacity: 1,
+          }}
+        />
+        <path
+          id="rect12396-1-1"
+          d="M1916.197 2400.263h45v153.522h-45z"
+          style={{
+            fill: "green",
+            stroke: "none",
+            strokeWidth: 1.62485,
+            strokeLinecap: "square",
+            strokeDasharray: "none",
+            paintOrder: "markers stroke fill",
+          }}
+        />
+        <path
+          id="rect12396-1-1-1"
+          d="M1961.198 2400.263v1.655l-1.655-1.655zm-2.084 0-1.907 1.907 2.121 2.123 1.87-1.871v2.83l-.456.455.456.455v2.828l-1.87-1.87-2.12 2.122 2.12 2.121 1.87-1.87v2.829l-.456.455.456.455v2.828l-1.87-1.869-2.12 2.121 2.12 2.121 1.87-1.869v2.828l-.456.455.456.455v2.83l-1.87-1.87-2.12 2.122 2.12 2.122 1.87-1.87v2.828l-.456.456.456.455v2.828l-1.87-1.87-2.12 2.122 2.12 2.12 1.87-1.868v2.828l-.456.455.456.455v2.828l-1.87-1.869-2.12 2.121 2.12 2.121 1.87-1.869v2.828l-.456.455.456.455v2.83l-1.87-1.869-2.12 2.121 2.12 2.121 1.87-1.869v2.828l-.456.455.456.456v2.828l-1.87-1.87-2.12 2.122 2.12 2.12 1.87-1.868v2.828l-.456.455.456.455v2.828l-1.87-1.87-2.12 2.122 2.12 2.123 1.87-1.871v2.83l-.456.455.456.455v2.828l-1.87-1.869-2.12 2.121 2.12 2.121 1.87-1.869v2.828l-.456.455.456.456v2.828l-1.87-1.87-2.12 2.122 2.12 2.12 1.87-1.868v2.828l-.456.455.456.455v2.83l-1.87-1.87-2.12 2.122 2.12 2.12 1.87-1.868v2.828l-.456.455.456.455v2.828l-1.87-1.869-2.12 2.121 2.12 2.121 1.87-1.869v2.828l-.456.455.456.455v2.829l-1.87-1.87-2.12 2.121 2.12 2.122 1.87-1.87v2.83l-.456.456.456.455v2.828l-1.87-1.87-2.12 2.122 2.12 2.12 1.87-1.868v2.828l-.456.455.456.455v2.828l-1.87-1.87-2.12 2.122 2.12 2.121 1.87-1.869v2.828l-.456.455.456.455v2.83l-1.87-1.87-2.12 2.122 2.12 2.121 1.87-1.869v2.828l-.456.455.456.456v2.828l-1.87-1.87-2.12 2.122 2.12 2.12 1.87-1.868v2.828l-.456.455.456.455v2.828l-1.87-1.87-2.12 2.122 2.12 2.121 1.87-1.87v2.83l-.456.456.456.455v2.828l-1.87-1.869-2.12 2.121 2.12 2.121 1.87-1.869v2.828l-.456.455.456.455v2.829l-1.87-1.87-2.12 2.122 2.12 2.12 1.87-1.869v2.829l-.456.455.456.455v2.83l-1.87-1.871-2.12 2.123 2.12 2.12 1.87-1.868v2.828l-.041.04h-3.657l-1.707-1.706-1.707 1.707h-3.656l-1.709-1.707-1.707 1.707h-3.656l-1.707-1.707-1.707 1.707h-3.657l-1.707-1.707-1.707 1.707h-3.658l-1.707-1.707-1.707 1.707h-3.656l-1.707-1.707-1.707 1.707h-2.533v-1.705l.705.705 2.12-2.121-2.12-2.123-.705.705v-4.239l.705.706 2.12-2.122-2.12-2.12-.705.704v-4.238l.705.705 2.12-2.12-2.12-2.122-.705.705v-4.24l.705.705 2.12-2.121-2.12-2.121-.705.705v-4.238l.705.705 2.12-2.121-2.12-2.122-.705.706v-4.239l.705.705 2.12-2.12-2.12-2.124-.705.705v-4.238l.705.705 2.12-2.121-2.12-2.121-.705.705v-4.238l.705.705 2.12-2.121-2.12-2.121-.705.705v-4.24l.705.704 2.12-2.12-2.12-2.122-.705.705v-4.238l.705.705 2.12-2.121-2.12-2.121-.705.705v-4.238l.705.705 2.12-2.121-2.12-2.121-.705.705v-4.24l.705.705 2.12-2.121-2.12-2.122-.705.705v-4.238l.705.705 2.12-2.12-2.12-2.122-.705.705v-4.238l.705.705 2.12-2.123-2.12-2.121-.705.705v-4.238l.705.705 2.12-2.121-2.12-2.121-.705.705v-4.239l.705.705 2.12-2.12-2.12-2.122-.705.705v-4.24l.705.705 2.12-2.121-2.12-2.121-.705.705v-4.238l.705.705 2.12-2.121-2.12-2.121-.705.705v-4.239l.705.706 2.12-2.122-2.12-2.123-.705.705v-4.238l.705.705 2.12-2.12-2.12-2.122-.705.705v-4.238l.705.705 2.12-2.121-2.12-2.121-.705.705v-4.238l.705.705 2.12-2.123-1.906-1.907h2.829l.492.493.492-.493h2.828l-1.906 1.907 2.121 2.123 2.121-2.123-1.906-1.907h2.828l.492.493.492-.493h2.83l-1.908 1.907 2.123 2.123 2.121-2.123-1.906-1.907h2.828l.492.493.493-.493h2.828l-1.907 1.907 2.121 2.123 2.122-2.123-1.907-1.907h2.828l.493.493.492-.493h2.828l-1.906 1.907 2.12 2.123 2.122-2.123-1.906-1.907h2.828l.492.493.492-.493h2.83l-1.906 1.907 2.121 2.123 2.121-2.123-1.906-1.907h2.828l.492.493.492-.493zm-42.426 0-.49.49v-.49zm39.105 3.32-2.12 2.124 2.12 2.12 2.121-2.12zm-7.072 0-2.121 2.124 2.121 2.12 2.123-2.12zm-7.07 0-2.121 2.124 2.12 2.12 2.122-2.12zm-7.07 0-2.122 2.124 2.121 2.12 2.121-2.12zm-7.073 0-2.121 2.124 2.121 2.12 2.121-2.12zm-7.07 0-2.121 2.124 2.12 2.12 2.122-2.12zm31.82 3.538-2.121 2.12 2.121 2.122 2.121-2.121zm-7.072 0-2.121 2.12 2.12 2.122 2.122-2.121zm-7.07 0-2.122 2.12 2.121 2.122 2.122-2.121zm-7.07 0-2.124 2.12 2.123 2.122 2.121-2.121zm-7.073 0-2.121 2.12 2.121 2.122 2.121-2.121zm31.82 3.535-2.12 2.121 2.12 2.121 2.121-2.121zm-7.072 0-2.121 2.121 2.121 2.121 2.123-2.121zm-7.07 0-2.121 2.121 2.12 2.121 2.122-2.121zm-7.07 0-2.122 2.121 2.121 2.121 2.121-2.121zm-7.073 0-2.121 2.121 2.121 2.121 2.121-2.121zm-7.07 0-2.121 2.121 2.12 2.121 2.122-2.121zm31.82 3.535-2.121 2.121 2.121 2.121 2.121-2.12zm-7.072 0-2.121 2.121 2.12 2.121 2.122-2.12zm-7.07 0-2.122 2.121 2.121 2.121 2.122-2.12zm-7.07 0-2.124 2.121 2.123 2.121 2.121-2.12zm-7.073 0-2.121 2.121 2.121 2.121 2.121-2.12zm31.82 3.535-2.12 2.121 2.12 2.121 2.121-2.12zm-7.072 0-2.121 2.121 2.121 2.121 2.123-2.12zm-7.07 0-2.121 2.121 2.12 2.121 2.122-2.12zm-7.07 0-2.122 2.121 2.121 2.121 2.121-2.12zm-7.073 0-2.121 2.121 2.121 2.121 2.121-2.12zm-7.07 0-2.121 2.121 2.12 2.121 2.122-2.12zm31.82 3.535-2.121 2.123 2.121 2.122 2.121-2.122zm-7.072 0-2.121 2.123 2.12 2.122 2.122-2.122zm-7.07 0-2.122 2.123 2.121 2.122 2.122-2.122zm-7.07 0-2.124 2.123 2.123 2.122 2.121-2.122zm-7.073 0-2.121 2.123 2.121 2.122 2.121-2.122zm31.82 3.537-2.12 2.122 2.12 2.12 2.121-2.12zm-7.072 0-2.121 2.122 2.121 2.12 2.123-2.12zm-7.07 0-2.121 2.122 2.12 2.12 2.122-2.12zm-7.07 0-2.122 2.122 2.121 2.12 2.121-2.12zm-7.073 0-2.121 2.122 2.121 2.12 2.121-2.12zm-7.07 0-2.121 2.122 2.12 2.12 2.122-2.12zm31.82 3.536-2.121 2.12 2.121 2.122 2.121-2.121zm-7.072 0-2.121 2.12 2.12 2.122 2.122-2.121zm-7.07 0-2.122 2.12 2.121 2.122 2.122-2.121zm-7.07 0-2.124 2.12 2.123 2.122 2.121-2.121zm-7.073 0-2.121 2.12 2.121 2.122 2.121-2.121zm31.82 3.535-2.12 2.12 2.12 2.122 2.121-2.121zm-7.072 0-2.121 2.12 2.121 2.122 2.123-2.121zm-7.07 0-2.121 2.12 2.12 2.122 2.122-2.121zm-7.07 0-2.122 2.12 2.121 2.122 2.121-2.121zm-7.073 0-2.121 2.12 2.121 2.122 2.121-2.121zm-7.07 0-2.121 2.12 2.12 2.122 2.122-2.121zm31.82 3.535-2.121 2.121 2.121 2.121 2.121-2.12zm-7.072 0-2.121 2.121 2.12 2.121 2.122-2.12zm-7.07 0-2.122 2.121 2.121 2.121 2.122-2.12zm-7.07 0-2.124 2.121 2.123 2.121 2.121-2.12zm-7.073 0-2.121 2.121 2.121 2.121 2.121-2.12zm31.82 3.535-2.12 2.121 2.12 2.123 2.121-2.123zm-7.072 0-2.121 2.121 2.121 2.123 2.123-2.123zm-7.07 0-2.121 2.121 2.12 2.123 2.122-2.123zm-7.07 0-2.122 2.121 2.121 2.123 2.121-2.123zm-7.073 0-2.121 2.121 2.121 2.123 2.121-2.123zm-7.07 0-2.121 2.121 2.12 2.123 2.122-2.123zm31.82 3.537-2.121 2.121 2.121 2.121 2.121-2.12zm-7.072 0-2.121 2.121 2.12 2.121 2.122-2.12zm-7.07 0-2.122 2.121 2.121 2.121 2.122-2.12zm-7.07 0-2.124 2.121 2.123 2.121 2.121-2.12zm-7.073 0-2.121 2.121 2.121 2.121 2.121-2.12zm31.82 3.535-2.12 2.121 2.12 2.122 2.121-2.122zm-7.072 0-2.121 2.121 2.121 2.122 2.123-2.122zm-7.07 0-2.121 2.121 2.12 2.122 2.122-2.122zm-7.07 0-2.122 2.121 2.121 2.122 2.121-2.122zm-7.073 0-2.121 2.121 2.121 2.122 2.121-2.122zm-7.07 0-2.121 2.121 2.12 2.122 2.122-2.122zm31.82 3.536-2.121 2.12 2.121 2.122 2.121-2.121zm-7.072 0-2.121 2.12 2.12 2.122 2.122-2.121zm-7.07 0-2.122 2.12 2.121 2.122 2.122-2.121zm-7.07 0-2.124 2.12 2.123 2.122 2.121-2.121zm-7.073 0-2.121 2.12 2.121 2.122 2.121-2.121zm31.82 3.535-2.12 2.12 2.12 2.122 2.121-2.121zm-7.072 0-2.121 2.12 2.121 2.122 2.123-2.121zm-7.07 0-2.121 2.12 2.12 2.122 2.122-2.121zm-7.07 0-2.122 2.12 2.121 2.122 2.121-2.121zm-7.073 0-2.121 2.12 2.121 2.122 2.121-2.121zm-7.07 0-2.121 2.12 2.12 2.122 2.122-2.121zm31.82 3.535-2.121 2.121 2.121 2.123 2.121-2.123zm-7.072 0-2.121 2.121 2.12 2.123 2.122-2.123zm-7.07 0-2.122 2.121 2.121 2.123 2.122-2.123zm-7.07 0-2.124 2.121 2.123 2.123 2.121-2.123zm-7.073 0-2.121 2.121 2.121 2.123 2.121-2.123zm31.82 3.537-2.12 2.121 2.12 2.121 2.121-2.12zm-7.072 0-2.121 2.121 2.121 2.121 2.123-2.12zm-7.07 0-2.121 2.121 2.12 2.121 2.122-2.12zm-7.07 0-2.122 2.121 2.121 2.121 2.121-2.12zm-7.073 0-2.121 2.121 2.121 2.121 2.121-2.12zm-7.07 0-2.121 2.121 2.12 2.121 2.122-2.12zm31.82 3.535-2.121 2.121 2.121 2.121 2.121-2.12zm-7.072 0-2.121 2.121 2.12 2.121 2.122-2.12zm-7.07 0-2.122 2.121 2.121 2.121 2.122-2.12zm-7.07 0-2.124 2.121 2.123 2.121 2.121-2.12zm-7.073 0-2.121 2.121 2.121 2.121 2.121-2.12zm31.82 3.535-2.12 2.121 2.12 2.121 2.121-2.12zm-7.072 0-2.121 2.121 2.121 2.121 2.123-2.12zm-7.07 0-2.121 2.121 2.12 2.121 2.122-2.12zm-7.07 0-2.122 2.121 2.121 2.121 2.121-2.12zm-7.073 0-2.121 2.121 2.121 2.121 2.121-2.12zm-7.07 0-2.121 2.121 2.12 2.121 2.122-2.12zm31.82 3.535-2.121 2.122 2.121 2.12 2.121-2.12zm-7.072 0-2.121 2.122 2.12 2.12 2.122-2.12zm-7.07 0-2.122 2.122 2.121 2.12 2.122-2.12zm-7.07 0-2.124 2.122 2.123 2.12 2.121-2.12zm-7.073 0-2.121 2.122 2.121 2.12 2.121-2.12zm31.82 3.536-2.12 2.12 2.12 2.124 2.121-2.123zm-7.072 0-2.121 2.12 2.121 2.124 2.123-2.123zm-7.07 0-2.121 2.12 2.12 2.124 2.122-2.123zm-7.07 0-2.122 2.12 2.121 2.124 2.121-2.123zm-7.073 0-2.121 2.12 2.121 2.124 2.121-2.123zm-7.07 0-2.121 2.12 2.12 2.124 2.122-2.123zm31.82 3.537-2.121 2.12 2.121 2.122 2.121-2.121zm-7.072 0-2.121 2.12 2.12 2.122 2.122-2.121zm-7.07 0-2.122 2.12 2.121 2.122 2.122-2.121zm-7.07 0-2.124 2.12 2.123 2.122 2.121-2.121zm-7.073 0-2.121 2.12 2.121 2.122 2.121-2.121zm31.82 3.535-2.12 2.121 2.12 2.121 2.121-2.121zm-7.072 0-2.121 2.121 2.121 2.121 2.123-2.121zm-7.07 0-2.121 2.121 2.12 2.121 2.122-2.121zm-7.07 0-2.122 2.121 2.121 2.121 2.121-2.121zm-7.073 0-2.121 2.121 2.121 2.121 2.121-2.121zm-7.07 0-2.121 2.121 2.12 2.121 2.122-2.121zm31.82 3.535-2.121 2.121 2.121 2.121 2.121-2.12zm-7.072 0-2.121 2.121 2.12 2.121 2.122-2.12zm-7.07 0-2.122 2.121 2.121 2.121 2.122-2.12zm-7.07 0-2.124 2.121 2.123 2.121 2.121-2.12zm-7.073 0-2.121 2.121 2.121 2.121 2.121-2.12zm31.82 3.535-2.12 2.121 2.12 2.121 2.121-2.12zm-7.072 0-2.121 2.121 2.121 2.121 2.123-2.12zm-7.07 0-2.121 2.121 2.12 2.121 2.122-2.12zm-7.07 0-2.122 2.121 2.121 2.121 2.121-2.12zm-7.073 0-2.121 2.121 2.121 2.121 2.121-2.12zm-7.07 0-2.121 2.121 2.12 2.121 2.122-2.12zm31.82 3.535-2.121 2.121 2.121 2.121 2.121-2.12zm-7.072 0-2.121 2.121 2.12 2.121 2.122-2.12zm-7.07 0-2.122 2.121 2.121 2.121 2.122-2.12zm-7.07 0-2.124 2.121 2.123 2.121 2.121-2.12zm-7.073 0-2.121 2.121 2.121 2.121 2.121-2.12zm31.82 3.535-2.12 2.124 2.12 2.12 2.121-2.12zm-7.072 0-2.121 2.124 2.121 2.12 2.123-2.12zm-7.07 0-2.121 2.124 2.12 2.12 2.122-2.12zm-7.07 0-2.122 2.124 2.121 2.12 2.121-2.12zm-7.073 0-2.121 2.124 2.121 2.12 2.121-2.12zm-7.07 0-2.121 2.124 2.12 2.12 2.122-2.12zm31.82 3.538-2.121 2.12 2.121 2.122 2.121-2.121zm-7.072 0-2.121 2.12 2.12 2.122 2.122-2.121zm-7.07 0-2.122 2.12 2.121 2.122 2.122-2.121zm-7.07 0-2.124 2.12 2.123 2.122 2.121-2.121zm-7.073 0-2.121 2.12 2.121 2.122 2.121-2.121zm31.82 3.535-2.12 2.12 2.12 2.122 2.121-2.121zm-7.072 0-2.121 2.12 2.121 2.122 2.123-2.121zm-7.07 0-2.121 2.12 2.12 2.122 2.122-2.121zm-7.07 0-2.122 2.12 2.121 2.122 2.121-2.121zm-7.073 0-2.121 2.12 2.121 2.122 2.121-2.121zm-7.07 0-2.121 2.12 2.12 2.122 2.122-2.121zm31.82 3.535-2.121 2.121 2.121 2.121 2.121-2.121zm-7.072 0-2.121 2.121 2.12 2.121 2.122-2.121zm-7.07 0-2.122 2.121 2.121 2.121 2.122-2.121zm-7.07 0-2.124 2.121 2.123 2.121 2.121-2.121zm-7.073 0-2.121 2.121 2.121 2.121 2.121-2.121zm31.82 3.535-2.12 2.121 2.12 2.121 2.121-2.12zm-7.072 0-2.121 2.121 2.121 2.121 2.123-2.12zm-7.07 0-2.121 2.121 2.12 2.121 2.122-2.12zm-7.07 0-2.122 2.121 2.121 2.121 2.121-2.12zm-7.073 0-2.121 2.121 2.121 2.121 2.121-2.12zm-7.07 0-2.121 2.121 2.12 2.121 2.122-2.12zm31.82 3.535-2.121 2.123 2.121 2.121 2.121-2.12zm-7.072 0-2.121 2.123 2.12 2.121 2.122-2.12zm-7.07 0-2.122 2.123 2.121 2.121 2.122-2.12zm-7.07 0-2.124 2.123 2.123 2.121 2.121-2.12zm-7.073 0-2.121 2.123 2.121 2.121 2.121-2.12zm31.82 3.537-2.12 2.121 2.12 2.121 2.121-2.12zm-7.072 0-2.121 2.121 2.121 2.121 2.123-2.12zm-7.07 0-2.121 2.121 2.12 2.121 2.122-2.12zm-7.07 0-2.122 2.121 2.121 2.121 2.121-2.12zm-7.073 0-2.121 2.121 2.121 2.121 2.121-2.12zm-7.07 0-2.121 2.121 2.12 2.121 2.122-2.12zm31.82 3.535-2.121 2.122 2.121 2.12 2.121-2.12zm-7.072 0-2.121 2.122 2.12 2.12 2.122-2.12zm-7.07 0-2.122 2.122 2.121 2.12 2.122-2.12zm-7.07 0-2.124 2.122 2.123 2.12 2.121-2.12zm-7.073 0-2.121 2.122 2.121 2.12 2.121-2.12zm31.82 3.536-2.12 2.12 2.12 2.122 2.121-2.121zm-7.072 0-2.121 2.12 2.121 2.122 2.123-2.121zm-7.07 0-2.121 2.12 2.12 2.122 2.122-2.121zm-7.07 0-2.122 2.12 2.121 2.122 2.121-2.121zm-7.073 0-2.121 2.12 2.121 2.122 2.121-2.121zm-7.07 0-2.121 2.12 2.12 2.122 2.122-2.121zm31.82 3.535-2.121 2.12 2.121 2.122 2.121-2.121zm-7.072 0-2.121 2.12 2.12 2.122 2.122-2.121zm-7.07 0-2.122 2.12 2.121 2.122 2.122-2.121zm-7.07 0-2.124 2.12 2.123 2.122 2.121-2.121zm-7.073 0-2.121 2.12 2.121 2.122 2.121-2.121zm31.82 3.535-2.12 2.123 2.12 2.121 2.121-2.121zm-7.072 0-2.121 2.123 2.121 2.121 2.123-2.121zm-7.07 0-2.121 2.123 2.12 2.121 2.122-2.121zm-7.07 0-2.122 2.123 2.121 2.121 2.121-2.121zm-7.073 0-2.121 2.123 2.121 2.121 2.121-2.121zm-7.07 0-2.121 2.123 2.12 2.121 2.122-2.121zm31.82 3.537-2.121 2.121 2.121 2.121 2.121-2.12zm-7.072 0-2.121 2.121 2.12 2.121 2.122-2.12zm-7.07 0-2.122 2.121 2.121 2.121 2.122-2.12zm-7.07 0-2.124 2.121 2.123 2.121 2.121-2.12zm-7.073 0-2.121 2.121 2.121 2.121 2.121-2.12zm31.82 3.535-2.12 2.121 2.12 2.121 2.121-2.12zm-7.072 0-2.121 2.121 2.121 2.121 2.123-2.12zm-7.07 0-2.121 2.121 2.12 2.121 2.122-2.12zm-7.07 0-2.122 2.121 2.121 2.121 2.121-2.12zm-7.073 0-2.121 2.121 2.121 2.121 2.121-2.12zm-7.07 0-2.121 2.121 2.12 2.121 2.122-2.12zm31.82 3.535-2.121 2.121 2.121 2.122 2.121-2.122zm-7.072 0-2.121 2.121 2.12 2.122 2.122-2.122zm-7.07 0-2.122 2.121 2.121 2.122 2.122-2.122zm-7.07 0-2.124 2.121 2.123 2.122 2.121-2.122zm-7.073 0-2.121 2.121 2.121 2.122 2.121-2.122zm31.82 3.536-2.12 2.12 2.12 2.122 2.121-2.121zm-7.072 0-2.121 2.12 2.121 2.122 2.123-2.121zm-7.07 0-2.121 2.12 2.12 2.122 2.122-2.121zm-7.07 0-2.122 2.12 2.121 2.122 2.121-2.121zm-7.073 0-2.121 2.12 2.121 2.122 2.121-2.121zm-7.07 0-2.121 2.12 2.12 2.122 2.122-2.121zm31.82 3.535-2.121 2.123 2.121 2.12 2.121-2.12zm-7.072 0-2.121 2.123 2.12 2.12 2.122-2.12zm-7.07 0-2.122 2.123 2.121 2.12 2.122-2.12zm-7.07 0-2.124 2.123 2.123 2.12 2.121-2.12zm-7.073 0-2.121 2.123 2.121 2.12 2.121-2.12z"
+          style={{
+            fill: "url(#linearGradient14683)",
+            stroke: "none",
+            strokeWidth: 1.62485,
+            strokeLinecap: "square",
+            strokeDasharray: "none",
+            paintOrder: "markers stroke fill",
+            fillOpacity: 1,
+          }}
+        />
+        <path
+          id="rect12394-59"
+          d="M2069.277 2350.815h52v52h-52z"
+          style={{
+            fill: "url(#linearGradient16704)",
+            fillOpacity: 1,
+            stroke: "none",
+            strokeWidth: 1.08632,
+            strokeLinecap: "square",
+            strokeDasharray: "none",
+            paintOrder: "markers stroke fill",
+          }}
+        />
+        <path
+          id="rect12394-5-9"
+          d="M1912.697 2350.815h52v52h-52z"
+          style={{
+            fill: "url(#linearGradient16706)",
+            fillOpacity: 1,
+            stroke: "none",
+            strokeWidth: 1.08632,
+            strokeLinecap: "square",
+            strokeDasharray: "none",
+            paintOrder: "markers stroke fill",
+          }}
+        />
+      </g>
+      <g id="hose-1">
+        <path
+          id="rect12396-8"
+          d="M2359.242-2072.238h45v261.316h-45z"
+          style={{
+            fill: "green",
+            stroke: "none",
+            strokeWidth: 2.11988,
+            strokeLinecap: "square",
+            strokeDasharray: "none",
+            paintOrder: "markers stroke fill",
+          }}
+          transform="rotate(90)"
+        />
+        <path
+          id="rect12396-8-9"
+          d="M1810.922 2359.241v2.659l.47.468-.47.47v2.827l1.883-1.883 2.121 2.121-2.12 2.122-1.884-1.883v2.828l.47.469-.47.468v2.83l1.883-1.882 2.121 2.12-2.12 2.122-1.884-1.883v2.828l.47.469-.47.469v2.828l1.883-1.883 2.121 2.121-2.12 2.121-1.884-1.883v2.828l.47.47-.47.468v2.828l1.883-1.883 2.121 2.121-2.12 2.123-1.884-1.884v2.83l.47.469-.47.468v2.828l1.883-1.882 2.121 2.12-2.12 2.122-1.884-1.883v2.828l.47.469-.47.469v2.828l1.883-1.883 2.121 2.121-2.12 2.121-1.884-1.883v2.744h3.85l1.568-1.568 1.569 1.568h3.933l1.57-1.568 1.569 1.568h3.934l1.568-1.568 1.568 1.568h3.934l1.568-1.568 1.569 1.568h3.935l1.569-1.568 1.568 1.568h3.934l1.568-1.568 1.568 1.568h3.934l1.57-1.568 1.568 1.568h3.934l1.568-1.568 1.569 1.568h3.933l1.569-1.568 1.568 1.568h3.936l1.568-1.568 1.568 1.568h3.934l1.568-1.568 1.569 1.568h3.933l1.569-1.568 1.57 1.568h3.934l1.568-1.568 1.568 1.568h3.934l1.568-1.568 1.569 1.568h3.935l1.568-1.568 1.569 1.568h3.933l1.569-1.568 1.568 1.568h3.934l1.568-1.568 1.57 1.568h3.934l1.568-1.568 1.569 1.568h3.933l1.569-1.568 1.568 1.568h3.934l1.57-1.568 1.568 1.568h3.934l1.568-1.568 1.569 1.568h3.933l1.569-1.568 1.568 1.568h3.935l1.569-1.568 1.568 1.568h3.934l1.568-1.568 1.569 1.568h3.933l1.57-1.568 1.569 1.568h3.933l1.569-1.568 1.568 1.568h3.934l1.568-1.568 1.568 1.568h3.936l1.568-1.568 1.569 1.568h3.933l1.569-1.568 1.568 1.568h3.934l1.568-1.568 1.57 1.568h3.934l1.568-1.568 1.569 1.568h3.933l1.569-1.568 1.568 1.568h3.933l1.57-1.568 1.57 1.568h3.933l1.568-1.568 1.568 1.568h3.934l1.568-1.568 1.569 1.568h3.935l1.569-1.568 1.568 1.568h3.934l1.568-1.568 1.34 1.34v-5.508l-1.34 1.34-2.121-2.121 2.12-2.121 1.34 1.34v-5.508l-1.34 1.34-2.12-2.121 2.12-2.124 1.34 1.342v-5.51l-1.34 1.34-2.12-2.12 2.12-2.122 1.34 1.34v-5.508l-1.34 1.34-2.12-2.121 2.12-2.121 1.34 1.34v-5.51l-1.34 1.342-2.12-2.123 2.12-2.121 1.34 1.34v-5.508l-1.34 1.34-2.12-2.122 2.12-2.12 1.34 1.34v-2.347h-3.161l-1.713 1.713-1.713-1.713h-3.645l-1.712 1.713-1.715-1.713h-3.645l-1.713 1.713-1.713-1.713h-3.644l-1.713 1.713-1.713-1.713h-3.644l-1.715 1.713-1.713-1.713h-3.645l-1.713 1.713-1.713-1.713h-3.644l-1.713 1.713-1.713-1.713h-3.646l-1.713 1.713-1.713-1.713h-3.645l-1.713 1.713-1.712-1.713h-3.645l-1.715 1.713-1.713-1.713h-3.644l-1.713 1.713-1.713-1.713h-3.645l-1.712 1.713-1.713-1.713h-3.647l-1.713 1.713-1.713-1.713h-3.644l-1.713 1.713-1.713-1.713h-3.644l-1.713 1.713-1.715-1.713h-3.645l-1.713 1.713-1.712-1.713h-3.645l-1.713 1.713-1.713-1.713h-3.644l-1.715 1.713-1.713-1.713h-3.645l-1.712 1.713-1.713-1.713h-3.645l-1.713 1.713-1.713-1.713h-3.646l-1.713 1.713-1.713-1.713h-3.644l-1.713 1.713-1.713-1.713h-3.645l-1.715 1.713-1.713-1.713h-3.644l-1.713 1.713-1.713-1.713h-3.644l-1.713 1.713-1.713-1.713h-3.647l-1.713 1.713-1.712-1.713h-3.645l-1.713 1.713-1.713-1.713h-3.644l-1.713 1.713-1.715-1.713h-3.645l-1.712 1.713-1.713-1.713h-3.645l-1.713 1.713-1.713-1.713h-3.646l-1.713 1.713-1.713-1.713h-3.644l-1.713 1.713-1.713-1.713h-3.645l-1.713 1.713-1.714-1.713h-3.645l-1.713 1.713-1.713-1.713h-3.644l-1.713 1.713-1.713-1.713h-3.645l-1.714 1.713-1.713-1.713h-3.645l-1.713 1.713-1.713-1.713zm5.418 1.006 2.121 2.121-2.12 2.121-2.122-2.12zm7.073 0 2.12 2.121-2.12 2.121-2.123-2.12zm7.07 0 2.121 2.121-2.121 2.121-2.121-2.12zm7.07 0 2.121 2.121-2.12 2.121-2.122-2.12zm7.072 0 2.122 2.121-2.121 2.121-2.122-2.12zm7.07 0 2.122 2.121-2.121 2.121-2.121-2.12zm7.073 0 2.121 2.121-2.12 2.121-2.124-2.12zm7.07 0 2.122 2.121-2.122 2.121-2.12-2.12zm7.07 0 2.122 2.121-2.121 2.121-2.121-2.12zm7.073 0 2.121 2.121-2.121 2.121-2.121-2.12zm7.07 0 2.121 2.121-2.12 2.121-2.122-2.12zm7.07 0 2.124 2.121-2.123 2.121-2.121-2.12zm7.073 0 2.121 2.121-2.121 2.121-2.121-2.12zm7.07 0 2.121 2.121-2.12 2.121-2.122-2.12zm7.072 0 2.122 2.121-2.122 2.121-2.12-2.12zm7.07 0 2.122 2.121-2.121 2.121-2.121-2.12zm7.071 0 2.123 2.121-2.123 2.121-2.121-2.12zm7.072 0 2.121 2.121-2.12 2.121-2.122-2.12zm7.07 0 2.122 2.121-2.121 2.121-2.121-2.12zm7.073 0 2.121 2.121-2.121 2.121-2.123-2.12zm7.07 0 2.121 2.121-2.12 2.121-2.122-2.12zm7.07 0 2.122 2.121-2.121 2.121-2.122-2.12zm7.073 0 2.12 2.121-2.12 2.121-2.121-2.12zm7.07 0 2.121 2.121-2.12 2.121-2.122-2.12zm7.072 0 2.122 2.121-2.122 2.121-2.123-2.12zm7.07 0 2.122 2.121-2.121 2.121-2.121-2.12zm7.071 0 2.121 2.121-2.121 2.121-2.121-2.12zm7.072 0 2.121 2.121-2.12 2.121-2.122-2.12zm7.07 0 2.122 2.121-2.121 2.121-2.121-2.12zm7.07 0 2.124 2.121-2.123 2.121-2.121-2.12zm7.073 0 2.121 2.121-2.12 2.121-2.122-2.12zm7.07 0 2.122 2.121-2.121 2.121-2.122-2.12zm7.073 0 2.12 2.121-2.12 2.121-2.123-2.12zm7.07 0 2.121 2.121-2.121 2.121-2.121-2.12zm7.07 0 2.122 2.121-2.122 2.121-2.12-2.12zm7.073 0 2.12 2.121-2.12 2.121-2.121-2.12zm-243.953 3.535 2.123 2.121-2.123 2.122-2.122-2.122zm7.072 0 2.12 2.121-2.12 2.122-2.121-2.122zm7.07 0 2.121 2.121-2.12 2.122-2.122-2.122zm7.072 0 2.121 2.121-2.12 2.122-2.124-2.122zm7.07 0 2.122 2.121-2.121 2.122-2.121-2.122zm7.071 0 2.121 2.121-2.121 2.122-2.121-2.122zm7.072 0 2.121 2.121-2.12 2.122-2.122-2.122zm7.07 0 2.122 2.121-2.121 2.122-2.121-2.122zm7.073 0 2.12 2.121-2.12 2.122-2.123-2.122zm7.07 0 2.121 2.121-2.12 2.122-2.122-2.122zm7.07 0 2.122 2.121-2.122 2.122-2.12-2.122zm7.073 0 2.12 2.121-2.12 2.122-2.121-2.122zm7.07 0 2.121 2.121-2.121 2.122-2.121-2.122zm7.07 0 2.123 2.121-2.123 2.122-2.12-2.122zm7.073 0 2.12 2.121-2.12 2.122-2.121-2.122zm7.07 0 2.121 2.121-2.121 2.122-2.121-2.122zm7.072 0 2.121 2.121-2.12 2.122-2.122-2.122zm7.07 0 2.122 2.121-2.121 2.122-2.122-2.122zm7.07 0 2.124 2.121-2.123 2.122-2.121-2.122zm7.073 0 2.121 2.121-2.12 2.122-2.122-2.122zm7.07 0 2.122 2.121-2.122 2.122-2.12-2.122zm7.073 0 2.12 2.121-2.12 2.122-2.123-2.122zm7.07 0 2.121 2.121-2.121 2.122-2.121-2.122zm7.07 0 2.121 2.121-2.12 2.122-2.122-2.122zm7.073 0 2.12 2.121-2.12 2.122-2.122-2.122zm7.07 0 2.12 2.121-2.12 2.122-2.121-2.122zm7.07 0 2.123 2.121-2.123 2.122-2.12-2.122zm7.072 0 2.122 2.121-2.122 2.122-2.12-2.122zm7.07 0 2.122 2.121-2.121 2.122-2.121-2.122zm7.073 0 2.121 2.121-2.121 2.122-2.121-2.122zm7.07 0 2.121 2.121-2.12 2.122-2.122-2.122zm7.07 0 2.124 2.121-2.123 2.122-2.121-2.122zm7.073 0 2.121 2.121-2.121 2.122-2.121-2.122zm7.07 0 2.121 2.121-2.12 2.122-2.122-2.122zm7.073 0 2.12 2.121-2.12 2.122-2.124-2.122zm7.07 0 2.12 2.121-2.12 2.122-2.121-2.122zm-251.024 3.536 2.121 2.12-2.12 2.124-2.122-2.123zm7.073 0 2.12 2.12-2.12 2.124-2.123-2.123zm7.07 0 2.121 2.12-2.121 2.124-2.121-2.123zm7.07 0 2.121 2.12-2.12 2.124-2.122-2.123zm7.073 0 2.12 2.12-2.12 2.124-2.122-2.123zm7.07 0 2.12 2.12-2.12 2.124-2.121-2.123zm7.072 0 2.121 2.12-2.12 2.124-2.124-2.123zm7.07 0 2.122 2.12-2.122 2.124-2.12-2.123zm7.07 0 2.122 2.12-2.121 2.124-2.121-2.123zm7.073 0 2.121 2.12-2.121 2.124-2.121-2.123zm7.07 0 2.121 2.12-2.12 2.124-2.122-2.123zm7.07 0 2.124 2.12-2.123 2.124-2.121-2.123zm7.073 0 2.121 2.12-2.121 2.124-2.121-2.123zm7.07 0 2.121 2.12-2.12 2.124-2.122-2.123zm7.072 0 2.122 2.12-2.122 2.124-2.12-2.123zm7.07 0 2.122 2.12-2.121 2.124-2.121-2.123zm7.071 0 2.123 2.12-2.123 2.124-2.121-2.123zm7.072 0 2.121 2.12-2.12 2.124-2.122-2.123zm7.07 0 2.122 2.12-2.121 2.124-2.121-2.123zm7.073 0 2.121 2.12-2.121 2.124-2.123-2.123zm7.07 0 2.121 2.12-2.12 2.124-2.122-2.123zm7.07 0 2.122 2.12-2.121 2.124-2.122-2.123zm7.073 0 2.12 2.12-2.12 2.124-2.121-2.123zm7.07 0 2.121 2.12-2.12 2.124-2.122-2.123zm7.072 0 2.122 2.12-2.122 2.124-2.123-2.123zm7.07 0 2.122 2.12-2.121 2.124-2.121-2.123zm7.071 0 2.121 2.12-2.121 2.124-2.121-2.123zm7.072 0 2.121 2.12-2.12 2.124-2.122-2.123zm7.07 0 2.122 2.12-2.121 2.124-2.121-2.123zm7.07 0 2.124 2.12-2.123 2.124-2.121-2.123zm7.073 0 2.121 2.12-2.12 2.124-2.122-2.123zm7.07 0 2.122 2.12-2.121 2.124-2.122-2.123zm7.073 0 2.12 2.12-2.12 2.124-2.123-2.123zm7.07 0 2.121 2.12-2.121 2.124-2.121-2.123zm7.07 0 2.122 2.12-2.122 2.124-2.12-2.123zm7.073 0 2.12 2.12-2.12 2.124-2.121-2.123zm-243.953 3.537 2.123 2.12-2.123 2.122-2.122-2.121zm7.072 0 2.12 2.12-2.12 2.122-2.121-2.121zm7.07 0 2.121 2.12-2.12 2.122-2.122-2.121zm7.072 0 2.121 2.12-2.12 2.122-2.124-2.121zm7.07 0 2.122 2.12-2.121 2.122-2.121-2.121zm7.071 0 2.121 2.12-2.121 2.122-2.121-2.121zm7.072 0 2.121 2.12-2.12 2.122-2.122-2.121zm7.07 0 2.122 2.12-2.121 2.122-2.121-2.121zm7.073 0 2.12 2.12-2.12 2.122-2.123-2.121zm7.07 0 2.121 2.12-2.12 2.122-2.122-2.121zm7.07 0 2.122 2.12-2.122 2.122-2.12-2.121zm7.073 0 2.12 2.12-2.12 2.122-2.121-2.121zm7.07 0 2.121 2.12-2.121 2.122-2.121-2.121zm7.07 0 2.123 2.12-2.123 2.122-2.12-2.121zm7.073 0 2.12 2.12-2.12 2.122-2.121-2.121zm7.07 0 2.121 2.12-2.121 2.122-2.121-2.121zm7.072 0 2.121 2.12-2.12 2.122-2.122-2.121zm7.07 0 2.122 2.12-2.121 2.122-2.122-2.121zm7.07 0 2.124 2.12-2.123 2.122-2.121-2.121zm7.073 0 2.121 2.12-2.12 2.122-2.122-2.121zm7.07 0 2.122 2.12-2.122 2.122-2.12-2.121zm7.073 0 2.12 2.12-2.12 2.122-2.123-2.121zm7.07 0 2.121 2.12-2.121 2.122-2.121-2.121zm7.07 0 2.121 2.12-2.12 2.122-2.122-2.121zm7.073 0 2.12 2.12-2.12 2.122-2.122-2.121zm7.07 0 2.12 2.12-2.12 2.122-2.121-2.121zm7.07 0 2.123 2.12-2.123 2.122-2.12-2.121zm7.072 0 2.122 2.12-2.122 2.122-2.12-2.121zm7.07 0 2.122 2.12-2.121 2.122-2.121-2.121zm7.073 0 2.121 2.12-2.121 2.122-2.121-2.121zm7.07 0 2.121 2.12-2.12 2.122-2.122-2.121zm7.07 0 2.124 2.12-2.123 2.122-2.121-2.121zm7.073 0 2.121 2.12-2.121 2.122-2.121-2.121zm7.07 0 2.121 2.12-2.12 2.122-2.122-2.121zm7.073 0 2.12 2.12-2.12 2.122-2.124-2.121zm7.07 0 2.12 2.12-2.12 2.122-2.121-2.121zm-251.024 3.535 2.121 2.12-2.12 2.122-2.122-2.121zm7.073 0 2.12 2.12-2.12 2.122-2.123-2.121zm7.07 0 2.121 2.12-2.121 2.122-2.121-2.121zm7.07 0 2.121 2.12-2.12 2.122-2.122-2.121zm7.073 0 2.12 2.12-2.12 2.122-2.122-2.121zm7.07 0 2.12 2.12-2.12 2.122-2.121-2.121zm7.072 0 2.121 2.12-2.12 2.122-2.124-2.121zm7.07 0 2.122 2.12-2.122 2.122-2.12-2.121zm7.07 0 2.122 2.12-2.121 2.122-2.121-2.121zm7.073 0 2.121 2.12-2.121 2.122-2.121-2.121zm7.07 0 2.121 2.12-2.12 2.122-2.122-2.121zm7.07 0 2.124 2.12-2.123 2.122-2.121-2.121zm7.073 0 2.121 2.12-2.121 2.122-2.121-2.121zm7.07 0 2.121 2.12-2.12 2.122-2.122-2.121zm7.072 0 2.122 2.12-2.122 2.122-2.12-2.121zm7.07 0 2.122 2.12-2.121 2.122-2.121-2.121zm7.071 0 2.123 2.12-2.123 2.122-2.121-2.121zm7.072 0 2.121 2.12-2.12 2.122-2.122-2.121zm7.07 0 2.122 2.12-2.121 2.122-2.121-2.121zm7.073 0 2.121 2.12-2.121 2.122-2.123-2.121zm7.07 0 2.121 2.12-2.12 2.122-2.122-2.121zm7.07 0 2.122 2.12-2.121 2.122-2.122-2.121zm7.073 0 2.12 2.12-2.12 2.122-2.121-2.121zm7.07 0 2.121 2.12-2.12 2.122-2.122-2.121zm7.072 0 2.122 2.12-2.122 2.122-2.123-2.121zm7.07 0 2.122 2.12-2.121 2.122-2.121-2.121zm7.071 0 2.121 2.12-2.121 2.122-2.121-2.121zm7.072 0 2.121 2.12-2.12 2.122-2.122-2.121zm7.07 0 2.122 2.12-2.121 2.122-2.121-2.121zm7.07 0 2.124 2.12-2.123 2.122-2.121-2.121zm7.073 0 2.121 2.12-2.12 2.122-2.122-2.121zm7.07 0 2.122 2.12-2.121 2.122-2.122-2.121zm7.073 0 2.12 2.12-2.12 2.122-2.123-2.121zm7.07 0 2.121 2.12-2.121 2.122-2.121-2.121zm7.07 0 2.122 2.12-2.122 2.122-2.12-2.121zm7.073 0 2.12 2.12-2.12 2.122-2.121-2.121zm-243.953 3.535 2.123 2.121-2.123 2.121-2.122-2.12zm7.072 0 2.12 2.121-2.12 2.121-2.121-2.12zm7.07 0 2.121 2.121-2.12 2.121-2.122-2.12zm7.072 0 2.121 2.121-2.12 2.121-2.124-2.12zm7.07 0 2.122 2.121-2.121 2.121-2.121-2.12zm7.071 0 2.121 2.121-2.121 2.121-2.121-2.12zm7.072 0 2.121 2.121-2.12 2.121-2.122-2.12zm7.07 0 2.122 2.121-2.121 2.121-2.121-2.12zm7.073 0 2.12 2.121-2.12 2.121-2.123-2.12zm7.07 0 2.121 2.121-2.12 2.121-2.122-2.12zm7.07 0 2.122 2.121-2.122 2.121-2.12-2.12zm7.073 0 2.12 2.121-2.12 2.121-2.121-2.12zm7.07 0 2.121 2.121-2.121 2.121-2.121-2.12zm7.07 0 2.123 2.121-2.123 2.121-2.12-2.12zm7.073 0 2.12 2.121-2.12 2.121-2.121-2.12zm7.07 0 2.121 2.121-2.121 2.121-2.121-2.12zm7.072 0 2.121 2.121-2.12 2.121-2.122-2.12zm7.07 0 2.122 2.121-2.121 2.121-2.122-2.12zm7.07 0 2.124 2.121-2.123 2.121-2.121-2.12zm7.073 0 2.121 2.121-2.12 2.121-2.122-2.12zm7.07 0 2.122 2.121-2.122 2.121-2.12-2.12zm7.073 0 2.12 2.121-2.12 2.121-2.123-2.12zm7.07 0 2.121 2.121-2.121 2.121-2.121-2.12zm7.07 0 2.121 2.121-2.12 2.121-2.122-2.12zm7.073 0 2.12 2.121-2.12 2.121-2.122-2.12zm7.07 0 2.12 2.121-2.12 2.121-2.121-2.12zm7.07 0 2.123 2.121-2.123 2.121-2.12-2.12zm7.072 0 2.122 2.121-2.122 2.121-2.12-2.12zm7.07 0 2.122 2.121-2.121 2.121-2.121-2.12zm7.073 0 2.121 2.121-2.121 2.121-2.121-2.12zm7.07 0 2.121 2.121-2.12 2.121-2.122-2.12zm7.07 0 2.124 2.121-2.123 2.121-2.121-2.12zm7.073 0 2.121 2.121-2.121 2.121-2.121-2.12zm7.07 0 2.121 2.121-2.12 2.121-2.122-2.12zm7.073 0 2.12 2.121-2.12 2.121-2.124-2.12zm7.07 0 2.12 2.121-2.12 2.121-2.121-2.12zm-251.024 3.535 2.121 2.121-2.12 2.121-2.122-2.12zm7.073 0 2.12 2.121-2.12 2.121-2.123-2.12zm7.07 0 2.121 2.121-2.121 2.121-2.121-2.12zm7.07 0 2.121 2.121-2.12 2.121-2.122-2.12zm7.073 0 2.12 2.121-2.12 2.121-2.122-2.12zm7.07 0 2.12 2.121-2.12 2.121-2.121-2.12zm7.072 0 2.121 2.121-2.12 2.121-2.124-2.12zm7.07 0 2.122 2.121-2.122 2.121-2.12-2.12zm7.07 0 2.122 2.121-2.121 2.121-2.121-2.12zm7.073 0 2.121 2.121-2.121 2.121-2.121-2.12zm7.07 0 2.121 2.121-2.12 2.121-2.122-2.12zm7.07 0 2.124 2.121-2.123 2.121-2.121-2.12zm7.073 0 2.121 2.121-2.121 2.121-2.121-2.12zm7.07 0 2.121 2.121-2.12 2.121-2.122-2.12zm7.072 0 2.122 2.121-2.122 2.121-2.12-2.12zm7.07 0 2.122 2.121-2.121 2.121-2.121-2.12zm7.071 0 2.123 2.121-2.123 2.121-2.121-2.12zm7.072 0 2.121 2.121-2.12 2.121-2.122-2.12zm7.07 0 2.122 2.121-2.121 2.121-2.121-2.12zm7.073 0 2.121 2.121-2.121 2.121-2.123-2.12zm7.07 0 2.121 2.121-2.12 2.121-2.122-2.12zm7.07 0 2.122 2.121-2.121 2.121-2.122-2.12zm7.073 0 2.12 2.121-2.12 2.121-2.121-2.12zm7.07 0 2.121 2.121-2.12 2.121-2.122-2.12zm7.072 0 2.122 2.121-2.122 2.121-2.123-2.12zm7.07 0 2.122 2.121-2.121 2.121-2.121-2.12zm7.071 0 2.121 2.121-2.121 2.121-2.121-2.12zm7.072 0 2.121 2.121-2.12 2.121-2.122-2.12zm7.07 0 2.122 2.121-2.121 2.121-2.121-2.12zm7.07 0 2.124 2.121-2.123 2.121-2.121-2.12zm7.073 0 2.121 2.121-2.12 2.121-2.122-2.12zm7.07 0 2.122 2.121-2.121 2.121-2.122-2.12zm7.073 0 2.12 2.121-2.12 2.121-2.123-2.12zm7.07 0 2.121 2.121-2.121 2.121-2.121-2.12zm7.07 0 2.122 2.121-2.122 2.121-2.12-2.12zm7.073 0 2.12 2.121-2.12 2.121-2.121-2.12zm-243.953 3.535 2.123 2.121-2.123 2.123-2.122-2.123zm7.072 0 2.12 2.121-2.12 2.123-2.121-2.123zm7.07 0 2.121 2.121-2.12 2.123-2.122-2.123zm7.072 0 2.121 2.121-2.12 2.123-2.124-2.123zm7.07 0 2.122 2.121-2.121 2.123-2.121-2.123zm7.071 0 2.121 2.121-2.121 2.123-2.121-2.123zm7.072 0 2.121 2.121-2.12 2.123-2.122-2.123zm7.07 0 2.122 2.121-2.121 2.123-2.121-2.123zm7.073 0 2.12 2.121-2.12 2.123-2.123-2.123zm7.07 0 2.121 2.121-2.12 2.123-2.122-2.123zm7.07 0 2.122 2.121-2.122 2.123-2.12-2.123zm7.073 0 2.12 2.121-2.12 2.123-2.121-2.123zm7.07 0 2.121 2.121-2.121 2.123-2.121-2.123zm7.07 0 2.123 2.121-2.123 2.123-2.12-2.123zm7.073 0 2.12 2.121-2.12 2.123-2.121-2.123zm7.07 0 2.121 2.121-2.121 2.123-2.121-2.123zm7.072 0 2.121 2.121-2.12 2.123-2.122-2.123zm7.07 0 2.122 2.121-2.121 2.123-2.122-2.123zm7.07 0 2.124 2.121-2.123 2.123-2.121-2.123zm7.073 0 2.121 2.121-2.12 2.123-2.122-2.123zm7.07 0 2.122 2.121-2.122 2.123-2.12-2.123zm7.073 0 2.12 2.121-2.12 2.123-2.123-2.123zm7.07 0 2.121 2.121-2.121 2.123-2.121-2.123zm7.07 0 2.121 2.121-2.12 2.123-2.122-2.123zm7.073 0 2.12 2.121-2.12 2.123-2.122-2.123zm7.07 0 2.12 2.121-2.12 2.123-2.121-2.123zm7.07 0 2.123 2.121-2.123 2.123-2.12-2.123zm7.072 0 2.122 2.121-2.122 2.123-2.12-2.123zm7.07 0 2.122 2.121-2.121 2.123-2.121-2.123zm7.073 0 2.121 2.121-2.121 2.123-2.121-2.123zm7.07 0 2.121 2.121-2.12 2.123-2.122-2.123zm7.07 0 2.124 2.121-2.123 2.123-2.121-2.123zm7.073 0 2.121 2.121-2.121 2.123-2.121-2.123zm7.07 0 2.121 2.121-2.12 2.123-2.122-2.123zm7.073 0 2.12 2.121-2.12 2.123-2.124-2.123zm7.07 0 2.12 2.121-2.12 2.123-2.121-2.123zm-251.024 3.535 2.121 2.123-2.12 2.122-2.122-2.122zm7.073 0 2.12 2.123-2.12 2.122-2.123-2.122zm7.07 0 2.121 2.123-2.121 2.122-2.121-2.122zm7.07 0 2.121 2.123-2.12 2.122-2.122-2.122zm7.073 0 2.12 2.123-2.12 2.122-2.122-2.122zm7.07 0 2.12 2.123-2.12 2.122-2.121-2.122zm7.072 0 2.121 2.123-2.12 2.122-2.124-2.122zm7.07 0 2.122 2.123-2.122 2.122-2.12-2.122zm7.07 0 2.122 2.123-2.121 2.122-2.121-2.122zm7.073 0 2.121 2.123-2.121 2.122-2.121-2.122zm7.07 0 2.121 2.123-2.12 2.122-2.122-2.122zm7.07 0 2.124 2.123-2.123 2.122-2.121-2.122zm7.073 0 2.121 2.123-2.121 2.122-2.121-2.122zm7.07 0 2.121 2.123-2.12 2.122-2.122-2.122zm7.072 0 2.122 2.123-2.122 2.122-2.12-2.122zm7.07 0 2.122 2.123-2.121 2.122-2.121-2.122zm7.071 0 2.123 2.123-2.123 2.122-2.121-2.122zm7.072 0 2.121 2.123-2.12 2.122-2.122-2.122zm7.07 0 2.122 2.123-2.121 2.122-2.121-2.122zm7.073 0 2.121 2.123-2.121 2.122-2.123-2.122zm7.07 0 2.121 2.123-2.12 2.122-2.122-2.122zm7.07 0 2.122 2.123-2.121 2.122-2.122-2.122zm7.073 0 2.12 2.123-2.12 2.122-2.121-2.122zm7.07 0 2.121 2.123-2.12 2.122-2.122-2.122zm7.072 0 2.122 2.123-2.122 2.122-2.123-2.122zm7.07 0 2.122 2.123-2.121 2.122-2.121-2.122zm7.071 0 2.121 2.123-2.121 2.122-2.121-2.122zm7.072 0 2.121 2.123-2.12 2.122-2.122-2.122zm7.07 0 2.122 2.123-2.121 2.122-2.121-2.122zm7.07 0 2.124 2.123-2.123 2.122-2.121-2.122zm7.073 0 2.121 2.123-2.12 2.122-2.122-2.122zm7.07 0 2.122 2.123-2.121 2.122-2.122-2.122zm7.073 0 2.12 2.123-2.12 2.122-2.123-2.122zm7.07 0 2.121 2.123-2.121 2.122-2.121-2.122zm7.07 0 2.122 2.123-2.122 2.122-2.12-2.122zm7.073 0 2.12 2.123-2.12 2.122-2.121-2.122zm-243.953 3.538 2.123 2.12-2.123 2.122-2.122-2.121zm7.072 0 2.12 2.12-2.12 2.122-2.121-2.121zm7.07 0 2.121 2.12-2.12 2.122-2.122-2.121zm7.072 0 2.121 2.12-2.12 2.122-2.124-2.121zm7.07 0 2.122 2.12-2.121 2.122-2.121-2.121zm7.071 0 2.121 2.12-2.121 2.122-2.121-2.121zm7.072 0 2.121 2.12-2.12 2.122-2.122-2.121zm7.07 0 2.122 2.12-2.121 2.122-2.121-2.121zm7.073 0 2.12 2.12-2.12 2.122-2.123-2.121zm7.07 0 2.121 2.12-2.12 2.122-2.122-2.121zm7.07 0 2.122 2.12-2.122 2.122-2.12-2.121zm7.073 0 2.12 2.12-2.12 2.122-2.121-2.121zm7.07 0 2.121 2.12-2.121 2.122-2.121-2.121zm7.07 0 2.123 2.12-2.123 2.122-2.12-2.121zm7.073 0 2.12 2.12-2.12 2.122-2.121-2.121zm7.07 0 2.121 2.12-2.121 2.122-2.121-2.121zm7.072 0 2.121 2.12-2.12 2.122-2.122-2.121zm7.07 0 2.122 2.12-2.121 2.122-2.122-2.121zm7.07 0 2.124 2.12-2.123 2.122-2.121-2.121zm7.073 0 2.121 2.12-2.12 2.122-2.122-2.121zm7.07 0 2.122 2.12-2.122 2.122-2.12-2.121zm7.073 0 2.12 2.12-2.12 2.122-2.123-2.121zm7.07 0 2.121 2.12-2.121 2.122-2.121-2.121zm7.07 0 2.121 2.12-2.12 2.122-2.122-2.121zm7.073 0 2.12 2.12-2.12 2.122-2.122-2.121zm7.07 0 2.12 2.12-2.12 2.122-2.121-2.121zm7.07 0 2.123 2.12-2.123 2.122-2.12-2.121zm7.072 0 2.122 2.12-2.122 2.122-2.12-2.121zm7.07 0 2.122 2.12-2.121 2.122-2.121-2.121zm7.073 0 2.121 2.12-2.121 2.122-2.121-2.121zm7.07 0 2.121 2.12-2.12 2.122-2.122-2.121zm7.07 0 2.124 2.12-2.123 2.122-2.121-2.121zm7.073 0 2.121 2.12-2.121 2.122-2.121-2.121zm7.07 0 2.121 2.12-2.12 2.122-2.122-2.121zm7.073 0 2.12 2.12-2.12 2.122-2.124-2.121zm7.07 0 2.12 2.12-2.12 2.122-2.121-2.121zm-251.024 3.535 2.121 2.12-2.12 2.122-2.122-2.121zm7.073 0 2.12 2.12-2.12 2.122-2.123-2.121zm7.07 0 2.121 2.12-2.121 2.122-2.121-2.121zm7.07 0 2.121 2.12-2.12 2.122-2.122-2.121zm7.073 0 2.12 2.12-2.12 2.122-2.122-2.121zm7.07 0 2.12 2.12-2.12 2.122-2.121-2.121zm7.072 0 2.121 2.12-2.12 2.122-2.124-2.121zm7.07 0 2.122 2.12-2.122 2.122-2.12-2.121zm7.07 0 2.122 2.12-2.121 2.122-2.121-2.121zm7.073 0 2.121 2.12-2.121 2.122-2.121-2.121zm7.07 0 2.121 2.12-2.12 2.122-2.122-2.121zm7.07 0 2.124 2.12-2.123 2.122-2.121-2.121zm7.073 0 2.121 2.12-2.121 2.122-2.121-2.121zm7.07 0 2.121 2.12-2.12 2.122-2.122-2.121zm7.072 0 2.122 2.12-2.122 2.122-2.12-2.121zm7.07 0 2.122 2.12-2.121 2.122-2.121-2.121zm7.071 0 2.123 2.12-2.123 2.122-2.121-2.121zm7.072 0 2.121 2.12-2.12 2.122-2.122-2.121zm7.07 0 2.122 2.12-2.121 2.122-2.121-2.121zm7.073 0 2.121 2.12-2.121 2.122-2.123-2.121zm7.07 0 2.121 2.12-2.12 2.122-2.122-2.121zm7.07 0 2.122 2.12-2.121 2.122-2.122-2.121zm7.073 0 2.12 2.12-2.12 2.122-2.121-2.121zm7.07 0 2.121 2.12-2.12 2.122-2.122-2.121zm7.072 0 2.122 2.12-2.122 2.122-2.123-2.121zm7.07 0 2.122 2.12-2.121 2.122-2.121-2.121zm7.071 0 2.121 2.12-2.121 2.122-2.121-2.121zm7.072 0 2.121 2.12-2.12 2.122-2.122-2.121zm7.07 0 2.122 2.12-2.121 2.122-2.121-2.121zm7.07 0 2.124 2.12-2.123 2.122-2.121-2.121zm7.073 0 2.121 2.12-2.12 2.122-2.122-2.121zm7.07 0 2.122 2.12-2.121 2.122-2.122-2.121zm7.073 0 2.12 2.12-2.12 2.122-2.123-2.121zm7.07 0 2.121 2.12-2.121 2.122-2.121-2.121zm7.07 0 2.122 2.12-2.122 2.122-2.12-2.121zm7.073 0 2.12 2.12-2.12 2.122-2.121-2.121zm-243.953 3.535 2.123 2.121-2.123 2.121-2.122-2.121zm7.072 0 2.12 2.121-2.12 2.121-2.121-2.121zm7.07 0 2.121 2.121-2.12 2.121-2.122-2.121zm7.072 0 2.121 2.121-2.12 2.121-2.124-2.121zm7.07 0 2.122 2.121-2.121 2.121-2.121-2.121zm7.071 0 2.121 2.121-2.121 2.121-2.121-2.121zm7.072 0 2.121 2.121-2.12 2.121-2.122-2.121zm7.07 0 2.122 2.121-2.121 2.121-2.121-2.121zm7.073 0 2.12 2.121-2.12 2.121-2.123-2.121zm7.07 0 2.121 2.121-2.12 2.121-2.122-2.121zm7.07 0 2.122 2.121-2.122 2.121-2.12-2.121zm7.073 0 2.12 2.121-2.12 2.121-2.121-2.121zm7.07 0 2.121 2.121-2.121 2.121-2.121-2.121zm7.07 0 2.123 2.121-2.123 2.121-2.12-2.121zm7.073 0 2.12 2.121-2.12 2.121-2.121-2.121zm7.07 0 2.121 2.121-2.121 2.121-2.121-2.121zm7.072 0 2.121 2.121-2.12 2.121-2.122-2.121zm7.07 0 2.122 2.121-2.121 2.121-2.122-2.121zm7.07 0 2.124 2.121-2.123 2.121-2.121-2.121zm7.073 0 2.121 2.121-2.12 2.121-2.122-2.121zm7.07 0 2.122 2.121-2.122 2.121-2.12-2.121zm7.073 0 2.12 2.121-2.12 2.121-2.123-2.121zm7.07 0 2.121 2.121-2.121 2.121-2.121-2.121zm7.07 0 2.121 2.121-2.12 2.121-2.122-2.121zm7.073 0 2.12 2.121-2.12 2.121-2.122-2.121zm7.07 0 2.12 2.121-2.12 2.121-2.121-2.121zm7.07 0 2.123 2.121-2.123 2.121-2.12-2.121zm7.072 0 2.122 2.121-2.122 2.121-2.12-2.121zm7.07 0 2.122 2.121-2.121 2.121-2.121-2.121zm7.073 0 2.121 2.121-2.121 2.121-2.121-2.121zm7.07 0 2.121 2.121-2.12 2.121-2.122-2.121zm7.07 0 2.124 2.121-2.123 2.121-2.121-2.121zm7.073 0 2.121 2.121-2.121 2.121-2.121-2.121zm7.07 0 2.121 2.121-2.12 2.121-2.122-2.121zm7.073 0 2.12 2.121-2.12 2.121-2.124-2.121zm7.07 0 2.12 2.121-2.12 2.121-2.121-2.121z"
+          style={{
+            fill: "url(#linearGradient18507)",
+            stroke: "none",
+            strokeWidth: 2.11988,
+            strokeLinecap: "square",
+            strokeDasharray: "none",
+            paintOrder: "markers stroke fill",
+            fillOpacity: 1,
+          }}
+        />
+        <rect
+          id="rect12396"
+          width={45}
+          height={55}
+          x={2074.359}
+          y={2300.884}
+          ry={0}
+          style={{
+            fill: "green",
+            stroke: "none",
+            strokeWidth: 0.972546,
+            strokeLinecap: "square",
+            strokeDasharray: "none",
+            paintOrder: "markers stroke fill",
+          }}
+        />
+        <path
+          id="rect12396-15"
+          d="m2075.176 2300.884 1.38 1.381-2.12 2.121-.077-.076v2.98l.076-.075 2.122 2.12-2.122 2.122-.076-.076v2.98l.076-.076 2.122 2.123-2.122 2.121-.076-.076v2.981l.076-.076 2.122 2.121-2.122 2.121-.076-.076v2.98l.076-.075 2.122 2.12-2.122 2.122-.076-.076v2.982l.076-.076 2.122 2.121-2.122 2.122-.076-.076v2.98l.076-.076 2.122 2.121-2.122 2.121-.076-.076v2.98l.076-.075 2.122 2.12-2.122 2.124-.076-.076v2.076h2.077l-.586-.586 2.123-2.12 2.12 2.12-.585.586h4l-.586-.586 2.121-2.12 2.121 2.12-.586.586h4l-.586-.586 2.121-2.12 2.121 2.12-.586.586h4.002l-.586-.586 2.122-2.12 2.12 2.12-.585.586h4l-.586-.586 2.12-2.12 2.122 2.12-.586.586h4l-.586-.586 2.121-2.12 2.123 2.12-.586.586h4l-.586-.586 1.082-1.082v-4.908l-1.082-1.082 1.082-1.082v-4.906l-1.082-1.082 1.082-1.082v-4.907l-1.082-1.082 1.082-1.084v-4.906l-1.082-1.082 1.082-1.082v-4.906l-1.082-1.082 1.082-1.082v-4.909l-1.082-1.082 1.082-1.082v-4.906l-1.082-1.082 1.082-1.082v-3.834h-1.755l1.38 1.381-2.12 2.121-2.122-2.121 1.381-1.38h-5.592l1.381 1.38-2.12 2.121-2.122-2.121 1.38-1.38h-5.589l1.38 1.38-2.12 2.121-2.121-2.121 1.38-1.38h-5.59l1.381 1.38-2.12 2.121-2.124-2.121 1.383-1.38h-5.592l1.381 1.38-2.12 2.121-2.122-2.121 1.38-1.38h-5.589l1.381 1.38-2.121 2.121-2.121-2.121 1.38-1.38zm2.797 2.795 2.12 2.121-2.12 2.121-2.124-2.12zm7.07 0 2.12 2.121-2.12 2.121-2.121-2.12zm7.07 0 2.121 2.121-2.12 2.121-2.122-2.12zm7.072 0 2.121 2.121-2.12 2.121-2.122-2.12zm7.07 0 2.122 2.121-2.121 2.121-2.121-2.12zm7.071 0 2.123 2.121-2.123 2.121-2.121-2.12zm-31.818 3.535 2.12 2.121-2.12 2.122-2.121-2.122zm7.07 0 2.121 2.121-2.121 2.122-2.121-2.122zm7.072 0 2.121 2.121-2.12 2.122-2.124-2.122zm7.07 0 2.122 2.121-2.122 2.122-2.12-2.122zm7.07 0 2.122 2.121-2.121 2.122-2.121-2.122zm7.073 0 2.121 2.121-2.12 2.122-2.122-2.122zm-38.89 3.536 2.12 2.12-2.12 2.122-2.124-2.121zm7.07 0 2.12 2.12-2.12 2.122-2.121-2.121zm7.07 0 2.121 2.12-2.12 2.122-2.122-2.121zm7.072 0 2.121 2.12-2.12 2.122-2.122-2.121zm7.07 0 2.122 2.12-2.121 2.122-2.121-2.121zm7.071 0 2.123 2.12-2.123 2.122-2.121-2.121zm-31.818 3.535 2.12 2.123-2.12 2.12-2.121-2.12zm7.07 0 2.121 2.123-2.121 2.12-2.121-2.12zm7.072 0 2.121 2.123-2.12 2.12-2.124-2.12zm7.07 0 2.122 2.123-2.122 2.12-2.12-2.12zm7.07 0 2.122 2.123-2.121 2.12-2.121-2.12zm7.073 0 2.121 2.123-2.12 2.12-2.122-2.12zm-38.89 3.537 2.12 2.121-2.12 2.121-2.124-2.121zm7.07 0 2.12 2.121-2.12 2.121-2.121-2.121zm7.07 0 2.121 2.121-2.12 2.121-2.122-2.121zm7.072 0 2.121 2.121-2.12 2.121-2.122-2.121zm7.07 0 2.122 2.121-2.121 2.121-2.121-2.121zm7.071 0 2.123 2.121-2.123 2.121-2.121-2.121zm-31.818 3.535 2.12 2.121-2.12 2.121-2.121-2.12zm7.07 0 2.121 2.121-2.121 2.121-2.121-2.12zm7.072 0 2.121 2.121-2.12 2.121-2.124-2.12zm7.07 0 2.122 2.121-2.122 2.121-2.12-2.12zm7.07 0 2.122 2.121-2.121 2.121-2.121-2.12zm7.073 0 2.121 2.121-2.12 2.121-2.122-2.12zm-38.89 3.535 2.12 2.121-2.12 2.121-2.124-2.12zm7.07 0 2.12 2.121-2.12 2.121-2.121-2.12zm7.07 0 2.121 2.121-2.12 2.121-2.122-2.12zm7.072 0 2.121 2.121-2.12 2.121-2.122-2.12zm7.07 0 2.122 2.121-2.121 2.121-2.121-2.12zm7.071 0 2.123 2.121-2.123 2.121-2.121-2.12zm-31.818 3.535 2.12 2.121-2.12 2.121-2.121-2.12zm7.07 0 2.121 2.121-2.121 2.121-2.121-2.12zm7.072 0 2.121 2.121-2.12 2.121-2.124-2.12zm7.07 0 2.122 2.121-2.122 2.121-2.12-2.12zm7.07 0 2.122 2.121-2.121 2.121-2.121-2.12zm7.073 0 2.121 2.121-2.12 2.121-2.122-2.12zm-38.89 3.535 2.12 2.123-2.12 2.122-2.124-2.122zm7.07 0 2.12 2.123-2.12 2.122-2.121-2.122zm7.07 0 2.121 2.123-2.12 2.122-2.122-2.122zm7.072 0 2.121 2.123-2.12 2.122-2.122-2.122zm7.07 0 2.122 2.123-2.121 2.122-2.121-2.122zm7.071 0 2.123 2.123-2.123 2.122-2.121-2.122zm-31.818 3.538 2.12 2.12-2.12 2.122-2.121-2.121zm7.07 0 2.121 2.12-2.121 2.122-2.121-2.121zm7.072 0 2.121 2.12-2.12 2.122-2.124-2.121zm7.07 0 2.122 2.12-2.122 2.122-2.12-2.121zm7.07 0 2.122 2.12-2.121 2.122-2.121-2.121zm7.073 0 2.121 2.12-2.12 2.122-2.122-2.121zm-38.89 3.535 2.12 2.12-2.12 2.122-2.124-2.121zm7.07 0 2.12 2.12-2.12 2.122-2.121-2.121zm7.07 0 2.121 2.12-2.12 2.122-2.122-2.121zm7.072 0 2.121 2.12-2.12 2.122-2.122-2.121zm7.07 0 2.122 2.12-2.121 2.122-2.121-2.121zm7.071 0 2.123 2.12-2.123 2.122-2.121-2.121zm-31.818 3.535 2.12 2.121-2.12 2.121-2.121-2.121zm7.07 0 2.121 2.121-2.121 2.121-2.121-2.121zm7.072 0 2.121 2.121-2.12 2.121-2.124-2.121zm7.07 0 2.122 2.121-2.122 2.121-2.12-2.121zm7.07 0 2.122 2.121-2.121 2.121-2.121-2.121zm7.073 0 2.121 2.121-2.12 2.121-2.122-2.121zm-38.89 3.535 2.12 2.121-2.12 2.121-2.124-2.12zm7.07 0 2.12 2.121-2.12 2.121-2.121-2.12zm7.07 0 2.121 2.121-2.12 2.121-2.122-2.12zm7.072 0 2.121 2.121-2.12 2.121-2.122-2.12zm7.07 0 2.122 2.121-2.121 2.121-2.121-2.12zm7.071 0 2.123 2.121-2.123 2.121-2.121-2.12zm-31.818 3.535 2.12 2.121-2.12 2.123-2.121-2.123zm7.07 0 2.121 2.121-2.121 2.123-2.121-2.123zm7.072 0 2.121 2.121-2.12 2.123-2.124-2.123zm7.07 0 2.122 2.121-2.122 2.123-2.12-2.123zm7.07 0 2.122 2.121-2.121 2.123-2.121-2.123zm7.073 0 2.121 2.121-2.12 2.123-2.122-2.123z"
+          style={{
+            fill: "url(#linearGradient18523)",
+            stroke: "none",
+            strokeWidth: 0.972546,
+            strokeLinecap: "square",
+            strokeDasharray: "none",
+            paintOrder: "markers stroke fill",
+            fillOpacity: 1,
+          }}
+        />
+        <path
+          id="rect12396-1"
+          d="M1763.712 2397.989h45v55h-45z"
+          style={{
+            fill: "green",
+            stroke: "none",
+            strokeWidth: 0.972546,
+            strokeLinecap: "square",
+            strokeDasharray: "none",
+            paintOrder: "markers stroke fill",
+          }}
+        />
+        <path
+          id="rect12396-1-2"
+          d="M1763.711 2397.99v1.552l1.717 1.717-1.717 1.717v3.637l1.717 1.718-1.717 1.717v3.637l1.717 1.717-1.717 1.716v3.637l1.717 1.717-1.717 1.717v3.638l1.717 1.717-1.717 1.717v3.637l1.717 1.716-1.717 1.717v3.637l1.717 1.717-1.717 1.719v3.636l1.717 1.717-1.717 1.717v.515h2.315l.818-.818.819.818h5.433l.819-.818.818.818h5.434l.818-.818.818.818h5.436l.818-.818.818.818h5.434l.819-.818.818.818h5.433l.819-.818.818.818h5.436l.26-.26v-3.945l-1.563-1.562 1.562-1.563v-3.947l-1.562-1.562 1.562-1.563v-3.945l-1.562-1.563 1.562-1.562v-3.945l-1.562-1.563 1.562-1.564v-3.946l-1.562-1.562 1.562-1.563v-3.945l-1.562-1.563 1.562-1.562v-3.945l-1.562-1.565 1.562-1.562v-3.946l-1.296-1.297h-3.36l-1.857 1.856-1.856-1.856h-3.36l-1.854 1.856-1.856-1.856h-3.36l-1.855 1.856-1.855-1.856h-3.362l-1.855 1.856-1.856-1.856h-3.359l-1.855 1.856-1.856-1.856h-3.36l-1.855 1.856-1.857-1.856zm6.668 1.148 2.121 2.121-2.12 2.121-2.122-2.121zm7.07 0 2.122 2.121-2.121 2.121-2.121-2.121zm7.071 0 2.123 2.121-2.123 2.121-2.121-2.121zm7.072 0 2.121 2.121-2.12 2.121-2.122-2.121zm7.07 0 2.122 2.121-2.121 2.121-2.121-2.121zm7.073 0 2.121 2.121-2.121 2.121-2.121-2.121zm-38.89 3.535 2.12 2.121-2.12 2.123-2.124-2.123zm7.07 0 2.12 2.121-2.12 2.123-2.121-2.123zm7.07 0 2.121 2.121-2.121 2.123-2.121-2.123zm7.072 0 2.121 2.121-2.12 2.123-2.122-2.123zm7.07 0 2.122 2.121-2.121 2.123-2.122-2.123zm7.07 0 2.124 2.121-2.123 2.123-2.121-2.123zm-31.818 3.535 2.122 2.123-2.122 2.121-2.12-2.12zm7.07 0 2.122 2.123-2.121 2.121-2.121-2.12zm7.071 0 2.123 2.123-2.123 2.121-2.121-2.12zm7.072 0 2.121 2.123-2.12 2.121-2.122-2.12zm7.07 0 2.122 2.123-2.121 2.121-2.121-2.12zm7.073 0 2.121 2.123-2.121 2.121-2.121-2.12zm-38.89 3.537 2.12 2.121-2.12 2.121-2.124-2.12zm7.07 0 2.12 2.121-2.12 2.121-2.121-2.12zm7.07 0 2.121 2.121-2.121 2.121-2.121-2.12zm7.072 0 2.121 2.121-2.12 2.121-2.122-2.12zm7.07 0 2.122 2.121-2.121 2.121-2.122-2.12zm7.07 0 2.124 2.121-2.123 2.121-2.121-2.12zm-31.818 3.535 2.122 2.121-2.122 2.122-2.12-2.122zm7.07 0 2.122 2.121-2.121 2.122-2.121-2.122zm7.071 0 2.123 2.121-2.123 2.122-2.121-2.122zm7.072 0 2.121 2.121-2.12 2.122-2.122-2.122zm7.07 0 2.122 2.121-2.121 2.122-2.121-2.122zm7.073 0 2.121 2.121-2.121 2.122-2.121-2.122zm-38.89 3.536 2.12 2.12-2.12 2.122-2.124-2.121zm7.07 0 2.12 2.12-2.12 2.122-2.121-2.121zm7.07 0 2.121 2.12-2.121 2.122-2.121-2.121zm7.072 0 2.121 2.12-2.12 2.122-2.122-2.121zm7.07 0 2.122 2.12-2.121 2.122-2.122-2.121zm7.07 0 2.124 2.12-2.123 2.122-2.121-2.121zm-31.818 3.535 2.122 2.12-2.122 2.122-2.12-2.121zm7.07 0 2.122 2.12-2.121 2.122-2.121-2.121zm7.071 0 2.123 2.12-2.123 2.122-2.121-2.121zm7.072 0 2.121 2.12-2.12 2.122-2.122-2.121zm7.07 0 2.122 2.12-2.121 2.122-2.121-2.121zm7.073 0 2.121 2.12-2.121 2.122-2.121-2.121zm-38.89 3.535 2.12 2.123-2.12 2.121-2.124-2.121zm7.07 0 2.12 2.123-2.12 2.121-2.121-2.121zm7.07 0 2.121 2.123-2.121 2.121-2.121-2.121zm7.072 0 2.121 2.123-2.12 2.121-2.122-2.121zm7.07 0 2.122 2.123-2.121 2.121-2.122-2.121zm7.07 0 2.124 2.123-2.123 2.121-2.121-2.121zm-31.818 3.537 2.122 2.121-2.122 2.121-2.12-2.12zm7.07 0 2.122 2.121-2.121 2.121-2.121-2.12zm7.071 0 2.123 2.121-2.123 2.121-2.121-2.12zm7.072 0 2.121 2.121-2.12 2.121-2.122-2.12zm7.07 0 2.122 2.121-2.121 2.121-2.121-2.12zm7.073 0 2.121 2.121-2.121 2.121-2.121-2.12zm-38.89 3.535 2.12 2.121-2.12 2.121-2.124-2.12zm7.07 0 2.12 2.121-2.12 2.121-2.121-2.12zm7.07 0 2.121 2.121-2.121 2.121-2.121-2.12zm7.072 0 2.121 2.121-2.12 2.121-2.122-2.12zm7.07 0 2.122 2.121-2.121 2.121-2.122-2.12zm7.07 0 2.124 2.121-2.123 2.121-2.121-2.12zm-31.818 3.535 2.122 2.121-2.122 2.121-2.12-2.12zm7.07 0 2.122 2.121-2.121 2.121-2.121-2.12zm7.071 0 2.123 2.121-2.123 2.121-2.121-2.12zm7.072 0 2.121 2.121-2.12 2.121-2.122-2.12zm7.07 0 2.122 2.121-2.121 2.121-2.121-2.12zm7.073 0 2.121 2.121-2.121 2.121-2.121-2.12zm-38.89 3.535 2.12 2.122-2.12 2.12-2.124-2.12zm7.07 0 2.12 2.122-2.12 2.12-2.121-2.12zm7.07 0 2.121 2.122-2.121 2.12-2.121-2.12zm7.072 0 2.121 2.122-2.12 2.12-2.122-2.12zm7.07 0 2.122 2.122-2.121 2.12-2.122-2.12zm7.07 0 2.124 2.122-2.123 2.12-2.121-2.12zm-31.818 3.536 2.122 2.12-2.122 2.124-2.12-2.123zm7.07 0 2.122 2.12-2.121 2.124-2.121-2.123zm7.071 0 2.123 2.12-2.123 2.124-2.121-2.123zm7.072 0 2.121 2.12-2.12 2.124-2.122-2.123zm7.07 0 2.122 2.12-2.121 2.124-2.121-2.123zm7.073 0 2.121 2.12-2.121 2.124-2.121-2.123zm-38.89 3.537 2.12 2.12-2.12 2.122-2.124-2.121zm7.07 0 2.12 2.12-2.12 2.122-2.121-2.121zm7.07 0 2.121 2.12-2.121 2.122-2.121-2.121zm7.072 0 2.121 2.12-2.12 2.122-2.122-2.121zm7.07 0 2.122 2.12-2.121 2.122-2.122-2.121zm7.07 0 2.124 2.12-2.123 2.122-2.121-2.121zm-31.818 3.535 2.122 2.121-2.122 2.121-2.12-2.121zm7.07 0 2.122 2.121-2.121 2.121-2.121-2.121zm7.071 0 2.123 2.121-2.123 2.121-2.121-2.121zm7.072 0 2.121 2.121-2.12 2.121-2.122-2.121zm7.07 0 2.122 2.121-2.121 2.121-2.121-2.121zm7.073 0 2.121 2.121-2.121 2.121-2.121-2.121z"
+          style={{
+            fill: "url(#linearGradient17759)",
+            stroke: "none",
+            strokeWidth: 0.972546,
+            strokeLinecap: "square",
+            strokeDasharray: "none",
+            paintOrder: "markers stroke fill",
+            fillOpacity: 1,
+          }}
+        />
+        <path
+          id="rect12394-5"
+          d="M1760.212 2355.742h52v52h-52z"
+          style={{
+            fill: "url(#linearGradient16139)",
+            fillOpacity: 1,
+            stroke: "none",
+            strokeWidth: 1.08632,
+            strokeLinecap: "square",
+            strokeDasharray: "none",
+            paintOrder: "markers stroke fill",
+          }}
+        />
+        <path
+          id="rect12394"
+          d="M2070.859 2355.742h52v52h-52z"
+          style={{
+            fill: "url(#linearGradient16081)",
+            stroke: "none",
+            strokeWidth: 1.08632,
+            strokeLinecap: "square",
+            strokeDasharray: "none",
+            paintOrder: "markers stroke fill",
+            fillOpacity: 1,
+          }}
+        />
+      </g>
+      <g id="mct" transform="matrix(5.74061 0 0 4.90046 -4820.832 -780.073)">
+        <rect
+          id="rect21297"
+          width={10.937}
+          height={16.591}
+          x={1367.13}
+          y={517.132}
+          ry={2.334}
+          style={{
+            fill: "#9b0f0f",
+            fillOpacity: 1,
+            stroke: "#af9204",
+            strokeWidth: 2.99903,
+            strokeOpacity: 1,
+            paintOrder: "markers stroke fill",
+          }}
         />
         <ellipse
           id="path12267"
-          cx={505.26}
-          cy={191.951}
-          rx={20.928}
-          ry={20.858}
+          cx={1360.056}
+          cy={525.427}
+          rx={13.936}
+          ry={16.325}
           style={{
             fill: "url(#linearGradient2014)",
             fillOpacity: 1,
             stroke: "none",
-            strokeWidth: 7.8132,
+            strokeWidth: 5.64045,
             strokeLinecap: "square",
             strokeDasharray: "none",
             strokeOpacity: 1,
@@ -3901,49 +4823,51 @@ const SvgComponent = (props) => (
         />
         <ellipse
           id="ellipse2044"
-          cx={902.645}
-          cy={524.669}
-          rx={6.98}
-          ry={5.395}
+          cx={1360.056}
+          cy={525.427}
+          rx={5.574}
+          ry={6.53}
           style={{
             fill: "url(#linearGradient2046)",
             fillOpacity: 1,
-            strokeWidth: 2.89978,
+            strokeWidth: 2.85079,
             strokeLinecap: "square",
             paintOrder: "markers stroke fill",
           }}
-          transform="matrix(1.04366 0 0 1.22258 -437.19 -448.178)"
         />
       </g>
-      <g id="insb" transform="matrix(3.74451 0 0 3.74451 39.465 19.44)">
+      <g
+        id="insb"
+        transform="matrix(3.49151 -3.70573 3.16339 2.98052 -3319.524 5463.154)"
+      >
         <rect
-          id="rect22391"
-          width={10.692}
-          height={13.208}
-          x={656.878}
-          y={863.116}
-          ry={1.858}
+          id="rect21297-8"
+          width={12.058}
+          height={18.521}
+          x={1383.302}
+          y={469.659}
+          ry={2.605}
           style={{
-            fill: "red",
+            fill: "#0006fc",
             fillOpacity: 1,
             stroke: "#af9204",
-            strokeWidth: 2.64584,
+            strokeWidth: 3.32712,
             strokeOpacity: 1,
             paintOrder: "markers stroke fill",
           }}
-          transform="rotate(-21.919)"
+          transform="matrix(.99937 .03549 -.02652 .99965 0 0)"
         />
         <ellipse
-          id="ellipse2040"
-          cx={922.464}
-          cy={564.836}
-          rx={17.963}
-          ry={16.016}
+          id="path12267-6"
+          cx={1361.779}
+          cy={527.569}
+          rx={15.713}
+          ry={18.406}
           style={{
-            fill: "url(#linearGradient2042)",
+            fill: "url(#linearGradient2025)",
             fillOpacity: 1,
             stroke: "none",
-            strokeWidth: 6.34296,
+            strokeWidth: 6.35958,
             strokeLinecap: "square",
             strokeDasharray: "none",
             strokeOpacity: 1,
@@ -3951,21 +4875,35 @@ const SvgComponent = (props) => (
           }}
         />
         <ellipse
-          id="path1374"
-          cx={923.619}
-          cy={565.883}
-          rx={5.936}
-          ry={5.395}
+          id="ellipse2044-2"
+          cx={1361.779}
+          cy={527.569}
+          rx={6.285}
+          ry={7.363}
           style={{
-            fill: "url(#linearGradient2030)",
+            fill: "url(#linearGradient2027)",
             fillOpacity: 1,
-            strokeWidth: 2.67397,
+            strokeWidth: 3.21425,
             strokeLinecap: "square",
             paintOrder: "markers stroke fill",
           }}
         />
       </g>
-      <g id="tungsten" transform="matrix(3.74451 0 0 3.74451 39.465 19.44)">
+      <g id="tungsten" transform="matrix(3.10501 0 0 3.48633 46.05 111.819)">
+        <ellipse
+          id="path8786-5-38"
+          cx={88.324}
+          cy={111.813}
+          rx={17.657}
+          ry={15.726}
+          style={{
+            fill: "#0000d2",
+            fillOpacity: 1,
+            strokeWidth: 1.76244,
+            strokeLinecap: "square",
+            paintOrder: "markers stroke fill",
+          }}
+        />
         <ellipse
           id="path8786-5"
           cx={104.628}
@@ -3978,10 +4916,27 @@ const SvgComponent = (props) => (
             strokeWidth: 1.60222,
             strokeLinecap: "square",
             paintOrder: "markers stroke fill",
+            filter: "url(#filter28550)",
           }}
+          transform="translate(-16.304 -4.803)"
         />
       </g>
-      <g id="globar" transform="matrix(3.74451 0 0 3.74451 39.465 19.44)">
+      <g id="globar" transform="matrix(3.10501 0 0 3.48633 -90.226 66.46)">
+        <ellipse
+          id="path8786-5-3-8"
+          cx={71.932}
+          cy={147.133}
+          rx={17.657}
+          ry={15.726}
+          style={{
+            fill: "#9b0f0f",
+            fillOpacity: 1,
+            stroke: "none",
+            strokeWidth: 1.76244,
+            strokeLinecap: "square",
+            paintOrder: "markers stroke fill",
+          }}
+        />
         <ellipse
           id="path8786-5-3"
           cx={71.932}
@@ -3989,261 +4944,14 @@ const SvgComponent = (props) => (
           rx={16.052}
           ry={14.296}
           style={{
+            mixBlendMode: "normal",
             fill: "url(#radialGradient9180-4-7)",
             fillOpacity: 1,
+            stroke: "none",
             strokeWidth: 1.60222,
             strokeLinecap: "square",
             paintOrder: "markers stroke fill",
-          }}
-        />
-      </g>
-      <g
-        id="parabolic-mirror-2"
-        style={{
-          stroke: "none",
-          strokeWidth: 1.00013,
-          strokeDasharray: "none",
-        }}
-        transform="matrix(0 3.74451 -3.74451 0 3965.94 3148.05)"
-      >
-        <path
-          id="path7564-4"
-          d="M-303.94 8.263h146.88v77.446h-34.717s-10.197-12.86-16.023-18.427c-9.09-8.685-19.032-15.865-29.376-22.967-10.872-7.463-22.572-14.348-34.184-20.563-10.645-5.697-23.79-11.874-32.58-15.49z"
-          style={{
-            fill: "url(#linearGradient5690)",
-            fillOpacity: 1,
-            fillRule: "evenodd",
-            stroke: "none",
-            strokeWidth: 0.997274,
-            strokeLinecap: "square",
-            strokeDasharray: "none",
-            paintOrder: "markers stroke fill",
-          }}
-        />
-        <path
-          id="path8346-1"
-          d="M-303.657 8.411s3.538 1.444 5.287 2.211a317.345 317.345 0 0 1 9.7 4.449c5.909 2.83 11.804 5.695 17.582 8.782a407.417 407.417 0 0 1 19.564 11.153c4.963 3.015 9.822 6.202 14.63 9.458 5.292 3.582 10.61 7.144 15.642 11.082 4.786 3.746 9.447 7.674 13.806 11.909 3.129 3.039 5.981 6.353 8.831 9.655 2.457 2.847 7.122 8.748 7.122 8.748h-3.339s-3.649-4.362-5.478-6.54c-2.88-3.43-5.474-7.126-8.654-10.28-4.229-4.192-9.062-7.733-13.763-11.389-5.037-3.916-10.205-7.666-15.46-11.285a326.358 326.358 0 0 0-14.465-9.388c-6.311-3.872-12.706-7.616-19.223-11.13-5.812-3.134-11.785-5.96-17.713-8.87-3.222-1.583-6.478-3.097-9.705-4.672-1.726-.843-5.166-2.557-5.166-2.557z"
-          style={{
-            fill: "url(#linearGradient5692)",
-            fillOpacity: 1,
-            fillRule: "evenodd",
-            stroke: "none",
-            strokeWidth: 1.00027,
-            strokeLinecap: "square",
-            strokeDasharray: "none",
-            strokeOpacity: 1,
-            paintOrder: "markers stroke fill",
-          }}
-        />
-      </g>
-      <g
-        id="parabolic-mirror-1"
-        style={{
-          stroke: "none",
-          strokeWidth: 1.00013,
-          strokeDasharray: "none",
-        }}
-        transform="matrix(3.74451 0 0 3.74451 1702.05 46.06)"
-      >
-        <path
-          id="path7564"
-          d="M-303.94 8.263h146.88v77.446h-34.717s-10.197-12.86-16.023-18.427c-9.09-8.685-19.032-15.865-29.376-22.967-10.872-7.463-22.572-14.348-34.184-20.563-10.645-5.697-23.79-11.874-32.58-15.49z"
-          style={{
-            fill: "url(#linearGradient2599)",
-            fillOpacity: 1,
-            fillRule: "evenodd",
-            stroke: "none",
-            strokeWidth: 0.997274,
-            strokeLinecap: "square",
-            strokeDasharray: "none",
-            paintOrder: "markers stroke fill",
-          }}
-        />
-        <path
-          id="path8346"
-          d="M-303.657 8.411s3.538 1.444 5.287 2.211a317.345 317.345 0 0 1 9.7 4.449c5.909 2.83 11.804 5.695 17.582 8.782a407.417 407.417 0 0 1 19.564 11.153c4.963 3.015 9.822 6.202 14.63 9.458 5.292 3.582 10.61 7.144 15.642 11.082 4.786 3.746 9.447 7.674 13.806 11.909 3.129 3.039 5.981 6.353 8.831 9.655 2.457 2.847 7.122 8.748 7.122 8.748h-3.339s-3.649-4.362-5.478-6.54c-2.88-3.43-5.474-7.126-8.654-10.28-4.229-4.192-9.062-7.733-13.763-11.389-5.037-3.916-10.205-7.666-15.46-11.285a326.358 326.358 0 0 0-14.465-9.388c-6.311-3.872-12.706-7.616-19.223-11.13-5.812-3.134-11.785-5.96-17.713-8.87-3.222-1.583-6.478-3.097-9.705-4.672-1.726-.843-5.166-2.557-5.166-2.557z"
-          style={{
-            fill: "url(#linearGradient4085)",
-            fillOpacity: 1,
-            fillRule: "evenodd",
-            stroke: "none",
-            strokeWidth: 1.00027,
-            strokeLinecap: "square",
-            strokeDasharray: "none",
-            strokeOpacity: 1,
-            paintOrder: "markers stroke fill",
-          }}
-        />
-      </g>
-      <g
-        id="movable-corner-cube"
-        transform="scale(.97227 .92808) rotate(45 1360.793 1815.544)"
-      >
-        <path
-          id="rect10934-2"
-          d="M2069 200v70h330v330h70V200h-70z"
-          style={{
-            fill: "url(#linearGradient10945-8)",
-            fillOpacity: 1,
-            fillRule: "evenodd",
-            stroke: "none",
-            strokeWidth: 2.40737,
-            strokeLinecap: "square",
-            strokeDasharray: "none",
-            strokeOpacity: 1,
-            paintOrder: "markers stroke fill",
-          }}
-        />
-        <path
-          id="rect12459-8"
-          d="M2069 270v10h320v320h10V270h-10z"
-          style={{
-            fill: "url(#linearGradient13678-9)",
-            fillOpacity: 1,
-            fillRule: "evenodd",
-            stroke: "none",
-            strokeWidth: 2.03866,
-            strokeLinecap: "square",
-            strokeDasharray: "none",
-            strokeOpacity: 1,
-            paintOrder: "markers stroke fill",
-          }}
-        />
-      </g>
-      <g id="fixed-corner-cube" transform="rotate(-45 2160.29 1012.129)">
-        <path
-          id="rect10934"
-          d="M2069 200v70h330v330h70V200h-70z"
-          style={{
-            fill: "url(#linearGradient10945)",
-            fillOpacity: 1,
-            fillRule: "evenodd",
-            stroke: "none",
-            strokeWidth: 2.40737,
-            strokeLinecap: "square",
-            strokeDasharray: "none",
-            strokeOpacity: 1,
-            paintOrder: "markers stroke fill",
-          }}
-        />
-        <path
-          id="rect12459"
-          d="M2069 270v10h320v320h10V270h-10z"
-          style={{
-            fill: "url(#linearGradient13678)",
-            fillOpacity: 1,
-            fillRule: "evenodd",
-            stroke: "none",
-            strokeWidth: 2.03866,
-            strokeLinecap: "square",
-            strokeDasharray: "none",
-            strokeOpacity: 1,
-            paintOrder: "markers stroke fill",
-          }}
-        />
-      </g>
-      <g
-        id="fixed-mirror"
-        transform="matrix(-.57627 -.4824 .51686 -.61744 2576.614 2007.484)"
-      >
-        <path
-          id="rect6389-60"
-          d="M1140 150h325v60h-325z"
-          style={{
-            fill: "url(#linearGradient9928)",
-            fillOpacity: 1,
-            fillRule: "evenodd",
-            stroke: "none",
-            strokeWidth: 1.66484,
-            strokeLinecap: "square",
-            strokeDasharray: "none",
-            strokeOpacity: 1,
-            paintOrder: "markers stroke fill",
-          }}
-        />
-        <path
-          id="rect6389-6-8"
-          d="M1140 210h325v10h-325z"
-          style={{
-            fill: "url(#linearGradient9930)",
-            fillOpacity: 1,
-            fillRule: "evenodd",
-            stroke: "none",
-            strokeWidth: 0.679668,
-            strokeLinecap: "square",
-            strokeDasharray: "none",
-            strokeOpacity: 1,
-            paintOrder: "markers stroke fill",
-          }}
-        />
-      </g>
-      <g
-        id="flat-rotatable-mirror-2"
-        transform="matrix(.64905 .49355 -.43235 .56857 3025.204 1227.125)"
-      >
-        <path
-          id="rect6389-60-1"
-          d="M1140 150h325v60h-325z"
-          style={{
-            fill: "url(#linearGradient10003)",
-            fillOpacity: 1,
-            fillRule: "evenodd",
-            stroke: "none",
-            strokeWidth: 1.66484,
-            strokeLinecap: "square",
-            strokeDasharray: "none",
-            strokeOpacity: 1,
-            paintOrder: "markers stroke fill",
-          }}
-        />
-        <path
-          id="rect6389-6-8-0"
-          d="M1140 210h325v10h-325z"
-          style={{
-            fill: "url(#linearGradient10005)",
-            fillOpacity: 1,
-            fillRule: "evenodd",
-            stroke: "none",
-            strokeWidth: 0.679668,
-            strokeLinecap: "square",
-            strokeDasharray: "none",
-            strokeOpacity: 1,
-            paintOrder: "markers stroke fill",
-          }}
-        />
-      </g>
-      <g
-        id="flat-rotatable-mirror-1"
-        transform="rotate(-33.264 867.69 1945.723)"
-      >
-        <path
-          id="rect6389"
-          d="M1140 150h325v60h-325z"
-          style={{
-            fill: "url(#linearGradient6397)",
-            fillOpacity: 1,
-            fillRule: "evenodd",
-            stroke: "none",
-            strokeWidth: 1.66484,
-            strokeLinecap: "square",
-            strokeDasharray: "none",
-            strokeOpacity: 1,
-            paintOrder: "markers stroke fill",
-          }}
-        />
-        <path
-          id="rect6389-6"
-          d="M1140 210h325v10h-325z"
-          style={{
-            fill: "url(#linearGradient7178)",
-            fillOpacity: 1,
-            fillRule: "evenodd",
-            stroke: "none",
-            strokeWidth: 0.679668,
-            strokeLinecap: "square",
-            strokeDasharray: "none",
-            strokeOpacity: 1,
-            paintOrder: "markers stroke fill",
+            filter: "url(#filter28488)",
           }}
         />
       </g>
