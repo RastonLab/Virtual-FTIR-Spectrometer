@@ -1,29 +1,29 @@
-<svg version="1.1" id="svg862" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 300">
-  <defs id="defs859">
-    <linearGradient id="linearGradient2031">
-      <stop style="stop-color:#373737;stop-opacity:1" offset="0" id="stop2027"/>
-      <stop style="stop-color:#383838;stop-opacity:1" offset=".2" id="stop2035"/>
-      <stop style="stop-color:#3a3a3a;stop-opacity:1" offset=".40000001" id="stop2037"/>
-      <stop style="stop-color:#121212;stop-opacity:1" offset=".60000002" id="stop2039"/>
-      <stop style="stop-color:#555;stop-opacity:1" offset=".80000001" id="stop2041"/>
-      <stop style="stop-color:#000;stop-opacity:1" offset="1" id="stop2029"/>
-    </linearGradient>
-    <linearGradient id="linearGradient1356">
-      <stop style="stop-color:#d7b100;stop-opacity:1" offset="0" id="stop1352"/>
-      <stop style="stop-color:#d4a000;stop-opacity:1" offset=".2" id="stop2002"/>
-      <stop style="stop-color:#e4c500;stop-opacity:1" offset=".40000001" id="stop2004"/>
-      <stop style="stop-color:#c09900;stop-opacity:1" offset=".60000002" id="stop2006"/>
-      <stop style="stop-color:#ffd21b;stop-opacity:1" offset=".80000001" id="stop2008"/>
-      <stop style="stop-color:#c7b400;stop-opacity:1" offset="1" id="stop1354"/>
-    </linearGradient>
-    <linearGradient xlink:href="#linearGradient1356" id="linearGradient1358" x1="41.523964" y1="12.1969" x2="70.721779" y2="12.262855" gradientUnits="userSpaceOnUse" gradientTransform="matrix(11.23815 0 0 11.218 -399.0709 -131.92023)"/>
-    <linearGradient xlink:href="#linearGradient2031" id="linearGradient2033" x1="44.810623" y1="39.62693" x2="21.334713" y2="38.886826" gradientUnits="userSpaceOnUse"/>
-    <clipPath clipPathUnits="userSpaceOnUse" id="clipPath1171">
-      <path style="fill:red;stroke-width:1.84739;stroke-linecap:square;paint-order:markers stroke fill" id="rect1173" transform="matrix(.92 .3919 -.39508 .91865 0 0)" d="M31.821415 15.462275h32.391418v15.597071H31.821415z"/>
-    </clipPath>
-  </defs>
-  <g id="parabolic-mirror" transform="translate(-22.986739 -34.866333)">
-    <path id="rect1055" clip-path="url(#clipPath1171)" style="fill:url(#linearGradient2033);fill-opacity:1;stroke-width:1.33244;stroke-linecap:square;paint-order:markers stroke fill" d="m21.117835 56.734364 23.796935-.000257-.0019-19.475833-.01749.09156c.0079-.03074.01305-.06154.0153-.09237.01224-1.349038-5.304846-2.490722-11.875973-2.550005-6.570925-.05924-11.907435.986294-11.919538 2.335292-.000799.102275.02969.20473.09129.30676l-.08622-.295467z" transform="matrix(-11.15502 .13513 -.10065 -14.97559 545.11418 850.16704)"/>
-    <ellipse style="fill:url(#linearGradient1358);fill-opacity:1;stroke-width:17.5809;stroke-linecap:square;paint-order:markers stroke fill" id="ellipse1290" cx="231.09288" cy="8.0476208" rx="164.17494" ry="72.988274" transform="matrix(.77112 .6367 -.6477 .76189 0 0)"/>
-  </g>
+<svg viewBox="0 0 300 300" version="1.1" id="svg862" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg">
+    <defs id="defs859">
+        <linearGradient id="linearGradient2031">
+            <stop offset="0" id="stop2027" stop-color="#373737" stop-opacity="1"/>
+            <stop offset=".2" id="stop2035" stop-color="#383838" stop-opacity="1"/>
+            <stop offset=".4" id="stop2037" stop-color="#3a3a3a" stop-opacity="1"/>
+            <stop offset=".6" id="stop2039" stop-color="#121212" stop-opacity="1"/>
+            <stop offset=".8" id="stop2041" stop-color="#555" stop-opacity="1"/>
+            <stop offset="1" id="stop2029" stop-color="#000" stop-opacity="1"/>
+        </linearGradient>
+        <linearGradient id="linearGradient1356">
+            <stop offset="0" id="stop1352" stop-color="#d7b100" stop-opacity="1"/>
+            <stop offset=".2" id="stop2002" stop-color="#d4a000" stop-opacity="1"/>
+            <stop offset=".4" id="stop2004" stop-color="#e4c500" stop-opacity="1"/>
+            <stop offset=".6" id="stop2006" stop-color="#c09900" stop-opacity="1"/>
+            <stop offset=".8" id="stop2008" stop-color="#ffd21b" stop-opacity="1"/>
+            <stop offset="1" id="stop1354" stop-color="#c7b400" stop-opacity="1"/>
+        </linearGradient>
+        <linearGradient xlink:href="#linearGradient1356" id="linearGradient1358" x1="41.524" y1="12.197" x2="70.722" y2="12.263" gradientUnits="userSpaceOnUse" gradientTransform="matrix(11.23815 0 0 11.218 -399.07 -131.92)"/>
+        <linearGradient xlink:href="#linearGradient2031" id="linearGradient2033" x1="44.811" y1="39.627" x2="21.335" y2="38.887" gradientUnits="userSpaceOnUse"/>
+        <clipPath clipPathUnits="userSpaceOnUse" id="clipPath1171">
+            <path id="rect1173" transform="matrix(.92 .3919 -.39508 .91865 0 0)" fill="red" stroke-width="1.847" stroke-linecap="square" paint-order="markers stroke fill" d="M31.821 15.462h32.391v15.597H31.821z"/>
+        </clipPath>
+    </defs>
+    <g id="parabolic-mirror" transform="translate(-22.987 -34.866)" fill-opacity="1" stroke-linecap="square" paint-order="markers stroke fill">
+        <path id="rect1055" clip-path="url(#clipPath1171)" d="M21.118 56.734h23.797l-.002-19.476-.018.092a.524.524 0 00.016-.093c.012-1.349-5.305-2.49-11.876-2.55-6.571-.059-11.908.987-11.92 2.336 0 .102.03.204.091.307l-.086-.296z" transform="matrix(-11.15502 .13513 -.10065 -14.97559 545.114 850.167)" fill="url(#linearGradient2033)" stroke-width="1.332"/>
+        <ellipse id="ellipse1290" cx="231.093" cy="8.048" rx="164.175" ry="72.988" transform="matrix(.77112 .6367 -.6477 .76189 0 0)" fill="url(#linearGradient1358)" stroke-width="17.581"/>
+    </g>
 </svg>
