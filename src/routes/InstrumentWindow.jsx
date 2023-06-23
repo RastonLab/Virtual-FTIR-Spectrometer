@@ -33,6 +33,7 @@ export default function InstrumentWindow() {
     "insb-beam",
     "insb-laser",
     "instrument-window",
+    "instrument",
     "mct-beam",
     "mct-laser",
     "rays",
