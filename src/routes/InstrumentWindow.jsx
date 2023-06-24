@@ -7,7 +7,7 @@ import Electronics from "../components/Electronics";
 import Main from "../components/svgs/InstrumentSVG";
 
 // dictionaries
-import { toolTips } from "../dictionaries/SVGLibrary";
+import { toolTips } from "../dictionaries/svgLibrary";
 
 // redux
 import { useSelector } from "react-redux";
