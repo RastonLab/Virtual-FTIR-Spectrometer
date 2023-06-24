@@ -16,6 +16,24 @@ import pump from "../components/svgs/tooltip/pump.svg";
 import sample from "../components/svgs/tooltip/sample-compartment.svg";
 import tungsten from "../components/svgs/tooltip/tungsten.svg";
 
+const flatRotatableMirror = {
+  image: fm,
+  title: "Flat Rotatable Mirror",
+  text: "Gold plated flat rotatable mirror that reflects radiation from the source to the parabolic mirror.",
+};
+
+const parabolicMirror = {
+  image: pm,
+  title: "Parabolic Mirror",
+  text: "Gold plated parabolic mirror that focuses reflected radiation onto the detector.",
+};
+
+const parabolicMirrorHole = {
+  image: pmh,
+  title: "Parabolic Mirror With Hole",
+  text: "Gold plated parabolic mirror with centered hole for the laser beam to pass through.",
+};
+
 export const toolTips = {
   apd: {
     image: apd,
@@ -52,26 +70,10 @@ export const toolTips = {
   },
 
   // flat rotatable mirrors
-  "flat-rotatable-mirror-insb": {
-    image: fm,
-    title: "Flat Rotatable Mirror",
-    text: "Gold plated flat rotatable mirror that reflects radiation from the source to the parabolic mirror.",
-  },
-  "flat-rotatable-mirror-globar": {
-    image: fm,
-    title: "Flat Rotatable Mirror",
-    text: "Gold plated flat rotatable mirror that reflects radiation from the source to the parabolic mirror.",
-  },
-  "flat-rotatable-mirror-mct": {
-    image: fm,
-    title: "Flat Rotatable Mirror",
-    text: "Gold plated flat rotatable mirror that reflects radiation from the source to the parabolic mirror.",
-  },
-  "flat-rotatable-mirror-tungsten": {
-    image: fm,
-    title: "Flat Rotatable Mirror",
-    text: "Gold plated flat rotatable mirror that reflects radiation from the source to the parabolic mirror.",
-  },
+  "flat-rotatable-mirror-insb": flatRotatableMirror,
+  "flat-rotatable-mirror-globar": flatRotatableMirror,
+  "flat-rotatable-mirror-mct": flatRotatableMirror,
+  "flat-rotatable-mirror-tungsten": flatRotatableMirror,
 
   "pressure-gauge": {
     image: gauge,
@@ -110,26 +112,12 @@ export const toolTips = {
   },
 
   // parabolic mirrors
-  "parabolic-mirror-1": {
-    image: pm,
-    title: "Parabolic Mirror",
-    text: "Gold plated parabolic mirror that focuses reflected radiation onto the detector.",
-  },
-  "parabolic-mirror-2": {
-    image: pm,
-    title: "Parabolic Mirror",
-    text: "Gold plated parabolic mirror that focuses reflected radiation onto the detector.",
-  },
-  "parabolic-mirror-hole-1": {
-    image: pmh,
-    title: "Parabolic Mirror With Hole",
-    text: "Gold plated parabolic mirror with centered hole for the laser beam to pass through.",
-  },
-  "parabolic-mirror-hole-2": {
-    image: pmh,
-    title: "Parabolic Mirror With Hole",
-    text: "Gold plated parabolic mirror with centered hole for the laser beam to pass through.",
-  },
+  "parabolic-mirror-1": parabolicMirror,
+  "parabolic-mirror-2": parabolicMirror,
+
+  // parabolic mirrors with hole
+  "parabolic-mirror-hole-1": parabolicMirrorHole,
+  "parabolic-mirror-hole-2": parabolicMirrorHole,
 
   pump: {
     image: pump,
