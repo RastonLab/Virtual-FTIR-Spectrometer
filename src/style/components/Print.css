@@ -1,19 +1,8 @@
-/* ---------- fonts ---------- */
-@font-face {
-  font-family: "Montserrat";
-  src: url(../fonts/Montserrat-VariableFont_wght.ttf);
-}
-
-@font-face {
-  font-family: "Roboto";
-  src: url(../fonts/Roboto-Regular.ttf);
-}
-
 h1 {
   font-family: "Montserrat" !important;
   text-align: center;
   text-decoration: underline;
-}
+ }
 
 h3 {
   font-family: "Roboto";
@@ -27,24 +16,17 @@ h3 {
   flex-direction: column;
 }
 
+/* Save */
 .print-row {
   align-items: center;
   justify-content: center;
   margin-top: 10%;
 }
 
-.print-button {
+#print-button {
   max-width: 90px;
   align-self: center;
   justify-content: center;
-}
-
-.save-col {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  width: 100%; 
-  align-self: center;
 }
 
 #print {

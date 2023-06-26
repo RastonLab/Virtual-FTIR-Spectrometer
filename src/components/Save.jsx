@@ -1,6 +1,7 @@
 // style
 import { useSelector } from "react-redux";
-import "../style/components/Print.css";
+import "../style/components/Save.css";
+import "../style/components/Button.css";
 
 // CSV
 import { CSVDownload } from "react-csv";

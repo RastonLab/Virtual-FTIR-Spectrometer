@@ -15,6 +15,7 @@ import {
 
 // style
 import "../style/components/Print.css";
+import "../style/components/Button.css";
 
 // this component is used to print a generated spectrum and user inputs
 export default function Print() {
@@ -57,7 +58,7 @@ export default function Print() {
           </RadioGroup>
         </FormControl>
 
-        <button className="print-button button print-row" onClick={handlePrint}>
+        <button id="print-button" className="button print-row" onClick={handlePrint}>
           Print
         </button>
       </div>

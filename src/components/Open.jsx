@@ -13,6 +13,7 @@ import { updateBeamsplitter, updateDetector, updateMedium, updateMolecule,
 
 // style
 import "../style/components/Open.css";
+import "../style/components/Button.css";
 
 // this component is used to open a CSV file of X and Y coordinates
 // https://dev.to/pankod/how-to-import-csv-file-with-react-4pj2
@@ -116,8 +117,8 @@ export const Open = () => {
   };
 
   return (
-    <div className="open">
-      <div className="row">
+    <div id="open">
+      <div className="open-row">
         <label className=".custom-file-upload button">
           Select a File
           <input type="file" name="file" onChange={changeHandler} />
@@ -128,7 +129,7 @@ export const Open = () => {
           Upload
         </button>
       </div>
-      <div className="row file">
+      <div className="open-row file">
         <p className="content">{data}</p>
       </div>
     </div>
