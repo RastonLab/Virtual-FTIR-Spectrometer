@@ -116,7 +116,7 @@ export const Open = () => {
   };
 
   return (
-    <div className="open">
+    <div id="open">
       <div className="row">
         <label className=".custom-file-upload button">
           Select a File

@@ -68,7 +68,7 @@ export const AbsorbancePlotly = forwardRef((props, ref) => {
     // https://github.com/suzil/radis-app/blob/main/frontend/src/components/CalcSpectrumPlot.tsx
     return (
       <div className="absorbance">
-        <div className="row">
+        <div className="absorb-row">
           {/* Graph */}
           <Plot
             ref={ref}
@@ -110,9 +110,9 @@ export const AbsorbancePlotly = forwardRef((props, ref) => {
           {/* End Graph */}
         </div>
 
-        <div className="row">
+        <div className="absorb-row">
           <div className="absorb-col">
-            <div className="row">
+            <div className="absorb-row">
               {/* Lower Bound Box */}
               <Box
                 sx={{
@@ -176,7 +176,7 @@ export const AbsorbancePlotly = forwardRef((props, ref) => {
               }}
               noValidate
               autoComplete="off"
-              className="row"
+              className="absorb-row"
             >
               <TextField
                 id="standard-number"
@@ -224,7 +224,7 @@ export const AbsorbancePlotly = forwardRef((props, ref) => {
                   <div className="display">
                     {Object.keys(peaksData.peaks).map((key) => {
                       return (
-                        <p className="content">{`Peak: ${key} Intensity: ${peaksData.peaks[key]}`}</p>
+                        <p id="peaks">{`Peak: ${key} Intensity: ${peaksData.peaks[key]}`}</p>
                       );
                     })}
                   </div>

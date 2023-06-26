@@ -5,7 +5,7 @@
   width: 100%;
 }
 
-.row {
+.absorb-row {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -29,10 +29,6 @@
   border-radius: 1.5em;
 }
 
-.content {
+#peaks {
   padding: 0 1rem;
-}
-
-#data {
-  padding: 0;
 }
