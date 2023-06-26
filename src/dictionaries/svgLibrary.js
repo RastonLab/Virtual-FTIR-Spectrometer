@@ -13,7 +13,8 @@ import mct from "../components/svgs/tooltip/mct.svg";
 import pm from "../components/svgs/tooltip/parabolic-mirror.svg";
 import pmh from "../components/svgs/tooltip/parabolic-mirror-hole.svg";
 import pump from "../components/svgs/tooltip/pump.svg";
-import sample from "../components/svgs/tooltip/sample-compartment.svg";
+import samplecaf2 from "../components/svgs/tooltip/sample-compartment-caf2.svg";
+import sampleznse from "../components/svgs/tooltip/sample-compartment-znse.svg";
 import tungsten from "../components/svgs/tooltip/tungsten.svg";
 
 const flatRotatableMirror = {
@@ -126,11 +127,19 @@ export const toolTips = {
     title: "Rotary Pump",
     text: "The rotary pump is used to evacuate the sample cell. The exhaust gas flows to the rooftop.",
   },
-  "sample-compartment": {
-    image: sample,
-    title: "Sample Compartment",
-    text: "This is a pyrex sample cell that has two valves for controlling gas flow into (right) and out from (right) it. There are uncoated salt windows on either end which can be either zinc selenide (ZnSe), which has good transmittance in the far-to-mid-infrared region (in particular, below 1100 cm⁻¹), or calcium fluoride (CaF2), which has good transmittance in the mid-to-near-infrared region.",
+
+  // sample compartments
+  "sample-compartment-caf2": {
+    image: samplecaf2,
+    title: "Sample Compartment (CaF₂)",
+    text: "This is a pyrex sample cell that has two valves for controlling gas flow into (right) and out from (right) it. The uncoated salt windows on either end are calcium fluoride (CaF2), which has good transmittance in the mid-to-near-infrared region.",
   },
+  "sample-compartment-znse": {
+    image: sampleznse,
+    title: "Sample Compartment (ZnSe)",
+    text: "This is a pyrex sample cell that has two valves for controlling gas flow into (right) and out from (right) it. The uncoated salt windows on either end are zinc selenide (ZnSe), which has good transmittance in the far-to-mid-infrared region (in particular, below 1100 cm⁻¹).",
+  },
+
   tungsten: {
     image: tungsten,
     title: "Tungsten",

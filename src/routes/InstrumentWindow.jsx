@@ -16,7 +16,7 @@ import { useSelector } from "react-redux";
 import "../style/routes/InstrumentWindow.css";
 
 export default function InstrumentWindow() {
-  const { beamsplitter, detector, source } = useSelector(
+  const { beamsplitter, detector, source, window } = useSelector(
     (store) => store.parameter
   );
   const { spectrumData } = useSelector((store) => store.spectrumData);
@@ -26,22 +26,23 @@ export default function InstrumentWindow() {
   const badID = [
     "beams",
     "ftir",
-    "globar-beam",
+    "beam-globar",
     "globar-laser",
     "hose-1",
     "hose-2",
-    "insb-beam",
+    "beam-insb",
     "insb-laser",
     "instrument-window",
     "instrument",
-    "mct-beam",
+    "beam-mct",
     "mct-laser",
     "rays",
-    "tungsten-beam",
+    "beam-tungsten",
     "tungsten-laser",
   ];
 
   const handleClick = (event) => {
+    console.log(event.target.parentElement.id);
     if (!badID.includes(event.target.parentElement.id)) {
       setElement(event.target.parentElement.id);
       setToggled(!toggled);
@@ -66,6 +67,11 @@ export default function InstrumentWindow() {
       <Main
         id="instrument"
         onClick={handleClick}
+        // ternary used to show/hide beamsplitter in the Main SVG
+        beamsplitter={{
+          caf2: beamsplitter === "AR_CaF2" ? "inline" : "none",
+          znse: beamsplitter === "AR_ZnSe" ? "inline" : "none",
+        }}
         // ternary used to show/hide detector laser and mirror in the Main SVG
         detector={{
           insb: detector === "InSb" ? "inline" : "none",
@@ -80,10 +86,9 @@ export default function InstrumentWindow() {
           tungsten: source === 3100 ? "inline" : "none",
           tungstenMirror: source === 3100 ? "inline" : "none",
         }}
-        // ternary used to show/hide beamsplitter in the Main SVG
-        beamsplitter={{
-          caf2: beamsplitter === "AR_CaF2" ? "inline" : "none",
-          znse: beamsplitter === "AR_ZnSe" ? "inline" : "none",
+        window={{
+          caf2: window === "CaF2" ? "inline" : "none",
+          znse: window === "ZnSe" ? "inline" : "none",
         }}
       />
 
