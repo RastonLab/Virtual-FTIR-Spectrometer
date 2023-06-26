@@ -50,7 +50,7 @@ export default function ExperimentalSetup() {
   return (
     <div id="experimental-setup">
       <div id="form">
-        <div className="col">
+        <div className="exp-col">
           <div className="parameter">
             <DualInputSlider
               formLabel={"Wavenumber range (cm⁻¹)"}
@@ -108,7 +108,7 @@ export default function ExperimentalSetup() {
             />
           </div>
         </div>
-        <div className="col">
+        <div className="exp-col">
           <div className="parameter">
             <Switch
               formLabel={"Source"}
@@ -206,7 +206,7 @@ export default function ExperimentalSetup() {
           </div>
         </div>
       </div>
-      <div id="graph-and-error" className="col">
+      <div id="graph-and-error" className="exp-col">
         {progress && <div id="spinner" />}
         {error && (
           <div id="error">
