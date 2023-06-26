@@ -22,12 +22,6 @@ const flatRotatableMirror = {
   text: "Gold plated flat rotatable mirror that reflects radiation from the source to the parabolic mirror.",
 };
 
-const parabolicMirror = {
-  image: pm,
-  title: "Parabolic Mirror",
-  text: "Gold plated parabolic mirror that focuses reflected radiation onto the detector.",
-};
-
 const parabolicMirrorHole = {
   image: pmh,
   title: "Parabolic Mirror With Hole",
@@ -50,12 +44,12 @@ export const toolTips = {
   "beamsplitter-caf2": {
     image: bscaf2,
     title: "Beamsplitter (AR_CaF₂)",
-    text: "TODO",
+    text: "AntiReflective (AR) coated calcium fluoride (CaF₂) beamsplitter, which has good transmittance and reflectance in the mid-to-near-infrared region.",
   },
   "beamsplitter-znse": {
     image: bsznse,
     title: "Beamsplitter (AR_ZnSe)",
-    text: "TODO",
+    text: "AntiReflective (AR) coated zinc selenide (ZnSe) beamsplitter, which has good transmittance and reflectance in the far-to-mid-infrared region.",
   },
 
   "fixed-corner-cube": {
@@ -77,8 +71,8 @@ export const toolTips = {
 
   "pressure-gauge": {
     image: gauge,
-    title: "Pressure Gauge",
-    text: "TODO",
+    title: "Manometer",
+    text: "Digital pressure gauge (0-2 bar).",
   },
   globar: {
     image: globar,
@@ -112,8 +106,16 @@ export const toolTips = {
   },
 
   // parabolic mirrors
-  "parabolic-mirror-1": parabolicMirror,
-  "parabolic-mirror-2": parabolicMirror,
+  "parabolic-mirror-1": {
+    image: pm,
+    title: "Parabolic Mirror",
+    text: "Gold plated parabolic mirror that focuses reflected radiation onto the aperture wheel.",
+  },
+  "parabolic-mirror-2": {
+    image: pm,
+    title: "Parabolic Mirror",
+    text: "Gold plated parabolic mirror that focuses reflected radiation onto the detector.",
+  },
 
   // parabolic mirrors with hole
   "parabolic-mirror-hole-1": parabolicMirrorHole,
