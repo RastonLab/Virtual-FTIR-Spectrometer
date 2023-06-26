@@ -4,10 +4,10 @@ const SvgComponent = (props) => (
     xmlns="http://www.w3.org/2000/svg"
     xmlnsXlink="http://www.w3.org/1999/xlink"
     xmlSpace="preserve"
+    id="instrument-window"
     viewBox="0 0 3600 2700"
     {...props}
   >
-    <style id="style26144" />
     <defs id="defs6711">
       <linearGradient id="linearGradient13434">
         <stop
@@ -2781,15 +2781,6 @@ const SvgComponent = (props) => (
       <path
         id="source-chamber"
         d="M-20.864 160.73v15h.002v590h473v-15h-458v-575h721.75v575h-89.25v15h104.25v-605h-.246z"
-        style={{
-          fill: "#000",
-          fillOpacity: 1,
-          stroke: "none",
-          strokeWidth: 0.773409,
-          strokeLinecap: "square",
-          strokeDasharray: "none",
-          paintOrder: "fill markers stroke",
-        }}
       />
       <g id="beams">
         <path
@@ -2837,12 +2828,7 @@ const SvgComponent = (props) => (
           transform="rotate(-90)"
         />
       </g>
-      <g
-        id="rays"
-        style={{
-          display: "inline",
-        }}
-      >
+      <g id="rays">
         <path
           id="path3385-0-1"
           d="m539.245 759.832-50-492.635 92.019 80.953z"
@@ -3168,7 +3154,7 @@ const SvgComponent = (props) => (
       <g
         id="beamsplitter-znse"
         style={{
-          display: props.beamsplitter.znse,
+          display: props.beamsplitter.caf2,
         }}
         transform="rotate(-45 2090.357 -610.836)"
       >
@@ -3195,7 +3181,7 @@ const SvgComponent = (props) => (
       <g
         id="beamsplitter-caf2"
         style={{
-          display: props.beamsplitter.caf2,
+          display: props.beamsplitter.znse,
         }}
         transform="rotate(-45 2091.795 -610.41)"
       >
@@ -3217,18 +3203,9 @@ const SvgComponent = (props) => (
       <path
         id="sample-chamber"
         d="M1611.593 1664.928v369h15v-354h1215v354h15v-354h580v615h-580v-100h-15v100h-1215v-100h-15v115h1839.998v-645H1626.593Z"
-        style={{
-          fillRule: "evenodd",
-          strokeWidth: 25.3084,
-          strokeLinecap: "square",
-          paintOrder: "markers stroke fill",
-        }}
       />
       <g
         id="aperture-wheel"
-        style={{
-          display: "inline",
-        }}
         transform="matrix(.99919 0 0 1.14723 -318.324 -79.428)"
       >
         <path
@@ -3316,9 +3293,7 @@ const SvgComponent = (props) => (
       <g
         id="flat-rotatable-mirror-tungsten"
         style={{
-          display: props.source.tungstenMirror,
-          strokeWidth: 1.00003,
-          strokeDasharray: "none",
+          display: props.source.tungsten,
         }}
         transform="matrix(.38268 -.92388 .83727 .3468 -301.168 95.094)"
       >
@@ -3355,7 +3330,6 @@ const SvgComponent = (props) => (
           id="path-globar"
           d="m133.004 556.488-23.212-222.494 52.714-52.236Z"
           style={{
-            display: "inline",
             opacity: 0.65,
             fill: "#ff6638",
             fillOpacity: 1,
@@ -3368,9 +3342,7 @@ const SvgComponent = (props) => (
       <g
         id="flat-rotatable-mirror-globar"
         style={{
-          display: props.source.globarMirror,
-          strokeWidth: 1.00003,
-          strokeDasharray: "none",
+          display: props.source.globar,
         }}
         transform="rotate(-45 -157.299 194.99) scale(1 .90625)"
       >
@@ -3399,11 +3371,6 @@ const SvgComponent = (props) => (
       </g>
       <g
         id="parabolic-mirror-1"
-        style={{
-          stroke: "none",
-          strokeWidth: 1.00013,
-          strokeDasharray: "none",
-        }}
         transform="matrix(2.64587 0 0 3.9382 1181.505 143.154)"
       >
         <path
@@ -3438,11 +3405,6 @@ const SvgComponent = (props) => (
       </g>
       <g
         id="parabolic-mirror-hole-1"
-        style={{
-          stroke: "none",
-          strokeWidth: 1.00066,
-          strokeDasharray: "none",
-        }}
         transform="matrix(-2.64164 0 0 -4.11064 -80.347 1409.995)"
       >
         <path
@@ -3506,11 +3468,6 @@ const SvgComponent = (props) => (
       </g>
       <g
         id="parabolic-mirror-hole-2"
-        style={{
-          stroke: "none",
-          strokeWidth: 1.00066,
-          strokeDasharray: "none",
-        }}
         transform="matrix(0 2.64164 4.11064 0 964.488 2746.524)"
       >
         <path
@@ -3574,11 +3531,6 @@ const SvgComponent = (props) => (
       </g>
       <g
         id="parabolic-mirror-2"
-        style={{
-          stroke: "none",
-          strokeWidth: 1.00013,
-          strokeDasharray: "none",
-        }}
         transform="matrix(0 2.64587 -3.9382 0 3469.225 2760.54)"
       >
         <path
@@ -4766,13 +4718,7 @@ const SvgComponent = (props) => (
           }}
         />
       </g>
-      <g
-        id="movable-corner-cube"
-        style={{
-          display: "inline",
-        }}
-        transform="rotate(135 900.985 1021.051)"
-      >
+      <g id="movable-corner-cube" transform="rotate(135 900.985 1021.051)">
         <path
           id="rect17548-4"
           d="M0 365h55V55h310V0H0v365z"
@@ -4823,7 +4769,7 @@ const SvgComponent = (props) => (
       <g
         id="flat-rotatable-mirror-insb"
         style={{
-          display: props.detector.insbMirror,
+          display: props.detector.insb,
         }}
         transform="rotate(-22.5 3301.691 1794.086)"
       >
@@ -4875,7 +4821,7 @@ const SvgComponent = (props) => (
       <g
         id="flat-rotatable-mirror-mct"
         style={{
-          display: props.detector.mctMirror,
+          display: props.detector.mct,
         }}
       >
         <path
@@ -4903,13 +4849,7 @@ const SvgComponent = (props) => (
           transform="rotate(45)"
         />
       </g>
-      <g
-        id="hose-2"
-        style={{
-          display: "inline",
-        }}
-        transform="matrix(-1 0 0 1 4482.777 2.625)"
-      >
+      <g id="hose-2" transform="matrix(-1 0 0 1 4482.777 2.625)">
         <path
           id="rect12396-8-7"
           d="M2354.315-2069.965h45v106.334h-45z"
@@ -5230,13 +5170,7 @@ const SvgComponent = (props) => (
           }}
         />
       </g>
-      <g
-        id="tungsten"
-        style={{
-          display: "inline",
-        }}
-        transform="matrix(3.10501 0 0 3.48633 46.05 111.819)"
-      >
+      <g id="tungsten" transform="matrix(3.10501 0 0 3.48633 46.05 111.819)">
         <ellipse
           id="path8786-5-38"
           cx={88.324}

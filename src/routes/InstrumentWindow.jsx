@@ -24,20 +24,20 @@ export default function InstrumentWindow() {
   const [element, setElement] = useState();
 
   const badID = [
+    "beam-globar",
+    "beam-insb",
+    "beam-mct",
+    "beam-tungsten",
     "beams",
     "ftir",
-    "beam-globar",
     "globar-laser",
     "hose-1",
     "hose-2",
-    "beam-insb",
     "insb-laser",
     "instrument-window",
     "instrument",
-    "beam-mct",
     "mct-laser",
     "rays",
-    "beam-tungsten",
     "tungsten-laser",
   ];
 
@@ -75,16 +75,12 @@ export default function InstrumentWindow() {
         // ternary used to show/hide detector laser and mirror in the Main SVG
         detector={{
           insb: detector === "InSb" ? "inline" : "none",
-          insbMirror: detector === "InSb" ? "inline" : "none",
           mct: detector === "MCT" ? "inline" : "none",
-          mctMirror: detector === "MCT" ? "inline" : "none",
         }}
         // ternary used to show/hide source laser and mirror in the Main SVG
         source={{
           globar: source === 1700 ? "inline" : "none",
-          globarMirror: source === 1700 ? "inline" : "none",
           tungsten: source === 3100 ? "inline" : "none",
-          tungstenMirror: source === 3100 ? "inline" : "none",
         }}
         window={{
           caf2: window === "CaF2" ? "inline" : "none",
