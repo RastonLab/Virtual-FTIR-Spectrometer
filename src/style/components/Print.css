@@ -1,14 +1,3 @@
-/* ---------- fonts ---------- */
-@font-face {
-  font-family: "Montserrat";
-  src: url(../fonts/Montserrat-VariableFont_wght.ttf);
-}
-
-@font-face {
-  font-family: "Roboto";
-  src: url(../fonts/Roboto-Regular.ttf);
-}
-
 h1 {
   font-family: "Montserrat" !important;
   text-align: center;
