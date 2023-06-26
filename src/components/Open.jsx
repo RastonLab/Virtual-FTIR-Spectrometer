@@ -117,7 +117,7 @@ export const Open = () => {
 
   return (
     <div id="open">
-      <div className="row">
+      <div className="open-row">
         <label className=".custom-file-upload button">
           Select a File
           <input type="file" name="file" onChange={changeHandler} />
@@ -128,7 +128,7 @@ export const Open = () => {
           Upload
         </button>
       </div>
-      <div className="row file">
+      <div className="open-row file">
         <p className="content">{data}</p>
       </div>
     </div>
