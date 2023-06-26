@@ -1,4 +1,4 @@
-<svg viewBox="0 0 154.349 300" version="1.1" id="svg5" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg">
+<svg viewBox="0 0 130.901 300" version="1.1" id="svg5" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg">
     <defs id="defs2">
         <linearGradient id="linearGradient19515">
             <stop offset="0" id="stop19511" stop-color="#e5ac00" stop-opacity="1"/>
@@ -16,7 +16,7 @@
         <linearGradient xlink:href="#linearGradient9211" id="linearGradient9213" x1="151.262" y1="31.162" x2="203.608" y2="217.912" gradientUnits="userSpaceOnUse" gradientTransform="translate(-70.31 -14.718) scale(1.54393)"/>
         <linearGradient xlink:href="#linearGradient19515" id="linearGradient19517" x1="68.874" y1="-151.046" x2="263.874" y2="-151.046" gradientUnits="userSpaceOnUse" gradientTransform="matrix(1.54437 0 0 1.54413 -32.483 64.135)"/>
     </defs>
-    <g id="flat-rotatable-mirror" transform="translate(-129.246 -27.017) scale(.99987)" fill-opacity="1" fill-rule="evenodd">
+    <g id="flat-rotatable-mirror" transform="rotate(15 235.756 -369.282) scale(.99617)" fill-opacity="1" fill-rule="evenodd">
         <path id="ellipse4005" d="M239.916 168.089a150.533 50.178 75 00-49.223-109.232l-8.356-31.184-29.826 7.992v.003a150.533 50.178 75 00-.024.003 150.533 50.178 75 00-9.507 158.391 150.533 50.178 75 0087.43 132.417 150.533 50.178 75 00.022-.006l29.827-7.992-8.275-30.88a150.533 50.178 75 00-12.068-119.512z" fill="url(#linearGradient9213)" stroke="none" stroke-width="15.646" stroke-dasharray="none"/>
         <ellipse id="path4003" cx="224.46" cy="-169.1" rx="150.576" ry="50.184" transform="rotate(75)" fill="url(#linearGradient19517)" stroke-width="15.65"/>
     </g>
