@@ -3,7 +3,7 @@ import aperture from "../components/svgs/tooltip/aperture-wheel.svg";
 import bscaf2 from "../components/svgs/tooltip/beamsplitter-caf2.svg";
 import bsznse from "../components/svgs/tooltip/beamsplitter-znse.svg";
 import fcc from "../components/svgs/tooltip/fixed-corner-cube.svg";
-import fm from "../components/svgs/tooltip/fixed-mirror.svg";
+import fm from "../components/svgs/tooltip/flat-mirror.svg";
 import gauge from "../components/svgs/tooltip/pressure-gauge.svg";
 import globar from "../components/svgs/tooltip/globar.svg";
 import insb from "../components/svgs/tooltip/insb.svg";
