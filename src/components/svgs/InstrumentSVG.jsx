@@ -3154,7 +3154,7 @@ const SvgComponent = (props) => (
       <g
         id="beamsplitter-znse"
         style={{
-          display: props.beamsplitter.caf2,
+          display: props.beamsplitter.znse,
         }}
         transform="rotate(-45 2090.357 -610.836)"
       >
@@ -3181,7 +3181,7 @@ const SvgComponent = (props) => (
       <g
         id="beamsplitter-caf2"
         style={{
-          display: props.beamsplitter.znse,
+          display: props.beamsplitter.caf2,
         }}
         transform="rotate(-45 2091.795 -610.41)"
       >
