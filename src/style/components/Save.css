@@ -1,0 +1,14 @@
+h3 {
+    font-family: "Roboto";
+    text-align: center;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+
+.save-col {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%; 
+    align-self: center;
+  }

@@ -1,14 +1,13 @@
 import React, { forwardRef, useState } from "react";
 
 // components
-import FetchPeaks from "./FetchPeaks";
+import Fetch from "./Fetch";
 import Plot from "react-plotly.js";
 
 // functions
 import * as fetchURL from "../functions/fetchURL";
 
 // mui
-import { Dialog } from "@mui/material";
 import Box from "@mui/material/Box";
 import TextField from "@mui/material/TextField";
 
@@ -32,10 +31,10 @@ export const AbsorbancePlotly = forwardRef((props, ref) => {
     (store) => store.parameter
   );
   const { progress } = useSelector((store) => store.progress);
+  const { error, errorText } = useSelector((store) => store.error);
 
   const dispatch = useDispatch();
 
-  const [open, setOpen] = useState(false);
   const [threshold, setThreshold] = useState(0);
   const [lowerBound, setLowerBound] = useState(waveMinSaved);
   const [upperBound, setUpperBound] = useState(waveMaxSaved);
@@ -68,7 +67,7 @@ export const AbsorbancePlotly = forwardRef((props, ref) => {
     // https://github.com/suzil/radis-app/blob/main/frontend/src/components/CalcSpectrumPlot.tsx
     return (
       <div className="absorbance">
-        <div className="row">
+        <div className="absorb-row">
           {/* Graph */}
           <Plot
             ref={ref}
@@ -110,9 +109,9 @@ export const AbsorbancePlotly = forwardRef((props, ref) => {
           {/* End Graph */}
         </div>
 
-        <div className="row">
+        <div className="absorb-row">
           <div className="absorb-col">
-            <div className="row">
+            <div className="absorb-row">
               {/* Lower Bound Box */}
               <Box
                 sx={{
@@ -176,7 +175,7 @@ export const AbsorbancePlotly = forwardRef((props, ref) => {
               }}
               noValidate
               autoComplete="off"
-              className="row"
+              className="absorb-row"
             >
               <TextField
                 id="standard-number"
@@ -199,7 +198,7 @@ export const AbsorbancePlotly = forwardRef((props, ref) => {
             {/* End Threshold Input */}
 
             {/* Fetch Peaks */}
-            <FetchPeaks
+            <Fetch
               type="find_peaks"
               params={{
                 x: absorbanceData.x,
@@ -210,49 +209,38 @@ export const AbsorbancePlotly = forwardRef((props, ref) => {
               }}
               fetchURL={fetchURL.FIND_PEAKS}
               buttonText={"Find Peaks"}
-              openPopup={setOpen}
             />
             {/* End Fetch Peaks */}
           </div>
 
           {/* Displays data from the server if there were no errors */}
           <div className="absorb-col">
-            {(progress && <div id="spinner" />) ||
-              (peaksData && !peaksData.error && (
+            {/* Data Display */}
+            {(progress && <div id="spinner" />)}
+            {!progress && !error && (
                 <div id="data">
                   <h1>Absorbance Peaks</h1>
                   <div className="display">
                     {Object.keys(peaksData.peaks).map((key) => {
                       return (
-                        <p className="content">{`Peak: ${key} Intensity: ${peaksData.peaks[key]}`}</p>
+                        <p id="peaks">{`Peak: ${key} Intensity: ${peaksData.peaks[key]}`}</p>
                       );
                     })}
                   </div>
                 </div>
-                // {/* </Dialog> */}
-              ))}
+              )
+            }
           </div>
           {/* End Data Display */}
+
+          {/* Error Display */}
+          {error && (
+          <div id="error">
+            <p style={{ fontSize: 30 }}>{errorText}</p>
+          </div>
+          )}
+          {/* End Error Display */}
         </div>
-
-        {/* Displays any error message sent back from the sever */}
-        {peaksData && peaksData.error && (
-          <Dialog
-            className="popup"
-            onClose={() => {
-              setOpen(false);
-            }}
-            open={open}
-          >
-            <h1>Absorbance Peaks</h1>
-
-            <p>
-              There was an error in finding the peaks of this data. Please adust
-              your experiment settings and try again.
-            </p>
-          </Dialog>
-        )}
-        {/* End Error Display */}
       </div>
     );
   } else {
