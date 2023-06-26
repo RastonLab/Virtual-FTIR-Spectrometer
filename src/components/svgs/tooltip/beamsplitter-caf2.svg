@@ -1,15 +1,22 @@
-<svg viewBox="0 0 280.301 45.301" version="1.1" id="svg19846" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg">
-    <defs id="defs19843">
-        <linearGradient xlink:href="#linearGradient15256" id="linearGradient13376" gradientUnits="userSpaceOnUse" gradientTransform="matrix(1.97707 0 0 3.08712 -622.69 306.058)" x1="326.345" y1="-188.391" x2="326.345" y2="-101.093"/>
-        <linearGradient id="linearGradient15256">
-            <stop offset=".05" id="stop15246" stop-color="#787878" stop-opacity="1"/>
-            <stop offset=".245" id="stop15248" stop-color="#9c9c9c" stop-opacity="1"/>
-            <stop offset=".498" id="stop15250" stop-color="#e2e2e2" stop-opacity="1"/>
-            <stop offset=".75" id="stop15252" stop-color="#9c9c9c" stop-opacity="1"/>
-            <stop offset=".95" id="stop15254" stop-color="#787878" stop-opacity="1"/>
+<svg viewBox="0 0 130.901 300" version="1.1" id="svg5" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg">
+    <defs id="defs2">
+        <linearGradient id="linearGradient11218">
+            <stop offset="0" id="stop11214" stop-color="#5c5050" stop-opacity="1"/>
+            <stop offset=".5" id="stop11222" stop-color="#455658" stop-opacity="1"/>
+            <stop offset=".75" id="stop11224" stop-color="#787878" stop-opacity="1"/>
+            <stop offset=".875" id="stop11226" stop-color="#ac9393" stop-opacity="1"/>
+            <stop offset="1" id="stop11216" stop-color="#787878" stop-opacity="1"/>
         </linearGradient>
+        <linearGradient id="linearGradient19515">
+            <stop offset="0" id="stop19511" stop-color="#002baf" stop-opacity="1"/>
+            <stop offset=".5" id="stop19519" stop-color="#0063af" stop-opacity="1"/>
+            <stop offset=".75" id="stop19513" stop-color="#0047af" stop-opacity="1"/>
+        </linearGradient>
+        <linearGradient xlink:href="#linearGradient19515" id="linearGradient19517" x1="68.874" y1="-151.046" x2="263.874" y2="-151.046" gradientUnits="userSpaceOnUse" gradientTransform="matrix(1.54437 0 0 1.54413 -32.483 64.135)"/>
+        <linearGradient xlink:href="#linearGradient11218" id="linearGradient11220" x1="158.47" y1="35.427" x2="238.257" y2="322.885" gradientUnits="userSpaceOnUse"/>
     </defs>
-    <g id="beamsplitter-caf2" transform="translate(-.722 .893)">
-        <path id="rect32961-3-3" transform="rotate(90)" fill="url(#linearGradient13376)" fill-opacity="1" stroke="#0047af" stroke-width="10.301" stroke-dasharray="none" stroke-opacity="1" paint-order="markers stroke fill" d="M4.257-275.872h35v270h-35z"/>
+    <g id="flat-rotatable-mirror" transform="rotate(15 235.756 -369.282) scale(.99617)" fill-opacity="1" fill-rule="evenodd">
+        <path id="ellipse4005" d="M239.916 168.089a150.533 50.178 75 00-49.223-109.232l-8.356-31.184-29.826 7.992v.003a150.533 50.178 75 00-.024.003 150.533 50.178 75 00-9.507 158.391 150.533 50.178 75 0087.43 132.417 150.533 50.178 75 00.022-.006l29.827-7.992-8.275-30.88a150.533 50.178 75 00-12.068-119.512z" fill="url(#linearGradient11220)" stroke="none" stroke-width="15.646" stroke-dasharray="none"/>
+        <ellipse id="path4003" cx="224.46" cy="-169.1" rx="150.576" ry="50.184" transform="rotate(75)" fill="url(#linearGradient19517)" stroke-width="15.65"/>
     </g>
 </svg>
