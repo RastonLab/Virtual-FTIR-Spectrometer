@@ -105,7 +105,7 @@ export default function FetchPeaks({
   };
 
   return (
-    <button id="button" disabled={!progress} onClick={fetchLinode}>
+    <button className="button" disabled={!progress} onClick={fetchLinode}>
       {buttonText}
     </button>
   );

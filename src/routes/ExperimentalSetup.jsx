@@ -25,6 +25,7 @@ import { useSelector } from "react-redux";
 
 // style
 import "../style/routes/ExperimentalSetup.css";
+import "../style/components/Button.css";
 
 export default function ExperimentalSetup() {
   const {

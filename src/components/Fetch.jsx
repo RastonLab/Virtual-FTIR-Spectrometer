@@ -138,7 +138,7 @@ export default function Fetch({ type, params, fetchURL, buttonText }) {
   };
 
   return (
-    <button id="button" disabled={progress} onClick={fetchLinode}>
+    <button className="button" disabled={progress} onClick={fetchLinode}>
       {buttonText}
     </button>
   );
