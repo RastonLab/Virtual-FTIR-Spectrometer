@@ -17,11 +17,11 @@
 #spectrum {
   display: flex;
   flex-direction: column;
-  flex-grow: 1;
 }
 
 #instrument {
   height: 94vh;
+  flex-grow: 1;
 }
 
 @media only screen and (max-width: 1200px) {
@@ -56,8 +56,31 @@ g {
   pointer-events: all;
 }
 
-.example-image {
-  align-self: center;
-  width: 70%;
-  height: 30%;
+/* ---------- tooltip ---------- */
+.popup-tooltip h2 {
+  font-family: "Montserrat";
+  text-align: center;
+  padding: 20px 0;
+  text-decoration: underline;
+}
+
+.popup-tooltip img {
+  margin: 20px;
+  height: auto;
+  width: auto;
+  max-height: 350px;
+  max-width: 500px;
+}
+
+.popup-tooltip p {
+  font-size: large;
+  font-family: "Roboto";
+  text-align: center;
+  padding: 3% 3%;
+}
+
+.popup-tooltip .MuiDialog-paper {
+  align-items: center;
+  width: 25%;
+  height: auto;
 }

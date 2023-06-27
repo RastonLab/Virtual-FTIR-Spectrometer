@@ -4,10 +4,10 @@ const SvgComponent = (props) => (
     xmlns="http://www.w3.org/2000/svg"
     xmlnsXlink="http://www.w3.org/1999/xlink"
     xmlSpace="preserve"
+    id="instrument-window"
     viewBox="0 0 3600 2700"
     {...props}
   >
-    <style id="style26144" />
     <defs id="defs6711">
       <linearGradient id="linearGradient13434">
         <stop
@@ -849,48 +849,6 @@ const SvgComponent = (props) => (
           }}
         />
       </linearGradient>
-      <linearGradient id="linearGradient5756">
-        <stop
-          id="stop5746"
-          offset={0}
-          style={{
-            stopColor: "#787878",
-            stopOpacity: 1,
-          }}
-        />
-        <stop
-          id="stop5748"
-          offset={0.245}
-          style={{
-            stopColor: "#9c9c9c",
-            stopOpacity: 1,
-          }}
-        />
-        <stop
-          id="stop5750"
-          offset={0.498}
-          style={{
-            stopColor: "#e2e2e2",
-            stopOpacity: 1,
-          }}
-        />
-        <stop
-          id="stop5752"
-          offset={0.75}
-          style={{
-            stopColor: "#9c9c9c",
-            stopOpacity: 1,
-          }}
-        />
-        <stop
-          id="stop5754"
-          offset={1}
-          style={{
-            stopColor: "#787878",
-            stopOpacity: 1,
-          }}
-        />
-      </linearGradient>
       <linearGradient id="linearGradient7163">
         <stop
           id="stop7159"
@@ -1667,56 +1625,6 @@ const SvgComponent = (props) => (
         />
       </linearGradient>
       <linearGradient
-        xlinkHref="#linearGradient11659"
-        id="linearGradient11661-6"
-        x1={14.063}
-        x2={21.063}
-        y1={-4.875}
-        y2={-4.875}
-        gradientTransform="matrix(5.61809 0 0 5.61639 -2195.527 -2248.602)"
-        gradientUnits="userSpaceOnUse"
-      />
-      <linearGradient
-        xlinkHref="#linearGradient11659"
-        id="linearGradient10403-5"
-        x1={12.563}
-        x2={22.563}
-        y1={2.375}
-        y2={2.375}
-        gradientTransform="matrix(5.61809 0 0 5.61639 -2195.527 -2248.602)"
-        gradientUnits="userSpaceOnUse"
-      />
-      <linearGradient
-        xlinkHref="#linearGradient18591"
-        id="linearGradient12498-2"
-        x1={12.563}
-        x2={22.563}
-        y1={-11.375}
-        y2={-11.375}
-        gradientTransform="matrix(-8.58755 3.83195 -2.73794 -6.13211 2216.534 2139.689)"
-        gradientUnits="userSpaceOnUse"
-      />
-      <linearGradient
-        xlinkHref="#linearGradient5756"
-        id="linearGradient5760"
-        x1={326.345}
-        x2={326.345}
-        y1={-188.953}
-        y2={-102.395}
-        gradientTransform="matrix(2.05136 0 0 2.25336 2035.301 2441.127)"
-        gradientUnits="userSpaceOnUse"
-      />
-      <linearGradient
-        xlinkHref="#linearGradient22410"
-        id="linearGradient32969"
-        x1={326.345}
-        x2={326.345}
-        y1={-188.953}
-        y2={-102.395}
-        gradientTransform="matrix(2.05136 0 0 2.25336 1111.863 2441.127)"
-        gradientUnits="userSpaceOnUse"
-      />
-      <linearGradient
         xlinkHref="#linearGradient13048"
         id="linearGradient13050"
         x1={710.228}
@@ -2166,36 +2074,6 @@ const SvgComponent = (props) => (
         />
       </linearGradient>
       <linearGradient
-        xlinkHref="#linearGradient11659"
-        id="linearGradient21598"
-        x1={14.063}
-        x2={21.063}
-        y1={-4.875}
-        y2={-4.875}
-        gradientTransform="matrix(5.61809 0 0 5.61639 -2486.167 -2248.602)"
-        gradientUnits="userSpaceOnUse"
-      />
-      <linearGradient
-        xlinkHref="#linearGradient11659"
-        id="linearGradient21600"
-        x1={12.563}
-        x2={22.563}
-        y1={2.375}
-        y2={2.375}
-        gradientTransform="matrix(5.61809 0 0 5.61639 -2486.167 -2248.602)"
-        gradientUnits="userSpaceOnUse"
-      />
-      <linearGradient
-        xlinkHref="#linearGradient18591"
-        id="linearGradient21602"
-        x1={12.563}
-        x2={22.563}
-        y1={-11.375}
-        y2={-11.375}
-        gradientTransform="matrix(-8.58755 3.83195 -2.73794 -6.13211 2507.174 2139.689)"
-        gradientUnits="userSpaceOnUse"
-      />
-      <linearGradient
         xlinkHref="#linearGradient2597"
         id="linearGradient2316"
         x1={193.718}
@@ -2638,6 +2516,208 @@ const SvgComponent = (props) => (
         y2={210}
         gradientUnits="userSpaceOnUse"
       />
+      <linearGradient
+        xlinkHref="#linearGradient11659"
+        id="linearGradient3033"
+        x1={14.063}
+        x2={21.063}
+        y1={-4.875}
+        y2={-4.875}
+        gradientTransform="matrix(.42951 0 0 .42938 -556.793 -429.42)"
+        gradientUnits="userSpaceOnUse"
+      />
+      <linearGradient
+        xlinkHref="#linearGradient11659"
+        id="linearGradient3035"
+        x1={12.563}
+        x2={22.563}
+        y1={2.375}
+        y2={2.375}
+        gradientTransform="matrix(.42951 0 0 .42938 -556.793 -429.42)"
+        gradientUnits="userSpaceOnUse"
+      />
+      <linearGradient
+        xlinkHref="#linearGradient18591"
+        id="linearGradient3037"
+        x1={12.563}
+        x2={22.563}
+        y1={-11.375}
+        y2={-11.375}
+        gradientTransform="matrix(-.65653 .29296 -.20932 -.4688 558.399 421.093)"
+        gradientUnits="userSpaceOnUse"
+      />
+      <linearGradient
+        xlinkHref="#linearGradient11659"
+        id="linearGradient11661-6-6"
+        x1={14.063}
+        x2={21.063}
+        y1={-4.875}
+        y2={-4.875}
+        gradientTransform="matrix(.42951 0 0 .42938 -579.013 -429.42)"
+        gradientUnits="userSpaceOnUse"
+      />
+      <linearGradient
+        xlinkHref="#linearGradient11659"
+        id="linearGradient10403-5-4"
+        x1={12.563}
+        x2={22.563}
+        y1={2.375}
+        y2={2.375}
+        gradientTransform="matrix(.42951 0 0 .42938 -579.013 -429.42)"
+        gradientUnits="userSpaceOnUse"
+      />
+      <linearGradient
+        xlinkHref="#linearGradient18591"
+        id="linearGradient12498-2-4"
+        x1={12.563}
+        x2={22.563}
+        y1={-11.375}
+        y2={-11.375}
+        gradientTransform="matrix(-.65653 .29296 -.20932 -.4688 580.619 421.093)"
+        gradientUnits="userSpaceOnUse"
+      />
+      <linearGradient id="linearGradient4766">
+        <stop
+          id="stop4756"
+          offset={0}
+          style={{
+            stopColor: "#a2a08c",
+            stopOpacity: 1,
+          }}
+        />
+        <stop
+          id="stop4758"
+          offset={0.245}
+          style={{
+            stopColor: "#bfb575",
+            stopOpacity: 1,
+          }}
+        />
+        <stop
+          id="stop4760"
+          offset={0.498}
+          style={{
+            stopColor: "#ff0",
+            stopOpacity: 1,
+          }}
+        />
+        <stop
+          id="stop4762"
+          offset={0.75}
+          style={{
+            stopColor: "#bfb575",
+            stopOpacity: 1,
+          }}
+        />
+        <stop
+          id="stop4764"
+          offset={1}
+          style={{
+            stopColor: "#a2a08c",
+            stopOpacity: 1,
+          }}
+        />
+      </linearGradient>
+      <linearGradient
+        xlinkHref="#linearGradient22410"
+        id="linearGradient32969-4"
+        x1={326.345}
+        x2={326.345}
+        y1={-188.953}
+        y2={-102.395}
+        gradientTransform="matrix(.15683 0 0 .17227 473.945 444.138)"
+        gradientUnits="userSpaceOnUse"
+      />
+      <linearGradient
+        xlinkHref="#linearGradient22410"
+        id="linearGradient5760-6"
+        x1={326.345}
+        x2={326.345}
+        y1={-188.953}
+        y2={-102.395}
+        gradientTransform="matrix(.15683 0 0 .17227 544.543 444.138)"
+        gradientUnits="userSpaceOnUse"
+      />
+      <linearGradient
+        xlinkHref="#linearGradient11659"
+        id="linearGradient1728"
+        x1={14.063}
+        x2={21.063}
+        y1={-4.875}
+        y2={-4.875}
+        gradientTransform="matrix(.42951 0 0 .42938 -556.793 -429.42)"
+        gradientUnits="userSpaceOnUse"
+      />
+      <linearGradient
+        xlinkHref="#linearGradient11659"
+        id="linearGradient1730"
+        x1={12.563}
+        x2={22.563}
+        y1={2.375}
+        y2={2.375}
+        gradientTransform="matrix(.42951 0 0 .42938 -556.793 -429.42)"
+        gradientUnits="userSpaceOnUse"
+      />
+      <linearGradient
+        xlinkHref="#linearGradient18591"
+        id="linearGradient1732"
+        x1={12.563}
+        x2={22.563}
+        y1={-11.375}
+        y2={-11.375}
+        gradientTransform="matrix(-.65653 .29296 -.20932 -.4688 558.399 421.093)"
+        gradientUnits="userSpaceOnUse"
+      />
+      <linearGradient
+        xlinkHref="#linearGradient11659"
+        id="linearGradient1734"
+        x1={14.063}
+        x2={21.063}
+        y1={-4.875}
+        y2={-4.875}
+        gradientTransform="matrix(.42951 0 0 .42938 -579.013 -429.42)"
+        gradientUnits="userSpaceOnUse"
+      />
+      <linearGradient
+        xlinkHref="#linearGradient11659"
+        id="linearGradient1736"
+        x1={12.563}
+        x2={22.563}
+        y1={2.375}
+        y2={2.375}
+        gradientTransform="matrix(.42951 0 0 .42938 -579.013 -429.42)"
+        gradientUnits="userSpaceOnUse"
+      />
+      <linearGradient
+        xlinkHref="#linearGradient18591"
+        id="linearGradient1738"
+        x1={12.563}
+        x2={22.563}
+        y1={-11.375}
+        y2={-11.375}
+        gradientTransform="matrix(-.65653 .29296 -.20932 -.4688 580.619 421.093)"
+        gradientUnits="userSpaceOnUse"
+      />
+      <linearGradient
+        xlinkHref="#linearGradient4766"
+        id="linearGradient1740"
+        x1={326.345}
+        x2={326.345}
+        y1={-188.953}
+        y2={-102.395}
+        gradientTransform="matrix(.15683 0 0 .17227 473.945 444.138)"
+        gradientUnits="userSpaceOnUse"
+      />
+      <linearGradient
+        xlinkHref="#linearGradient4766"
+        id="linearGradient1744"
+        x1={326.345}
+        x2={326.345}
+        y1={-188.953}
+        y2={-102.395}
+        gradientTransform="matrix(.15683 0 0 .17227 544.543 444.138)"
+        gradientUnits="userSpaceOnUse"
+      />
       <filter
         id="filter29365"
         width={2.492}
@@ -2701,15 +2781,6 @@ const SvgComponent = (props) => (
       <path
         id="source-chamber"
         d="M-20.864 160.73v15h.002v590h473v-15h-458v-575h721.75v575h-89.25v15h104.25v-605h-.246z"
-        style={{
-          fill: "#000",
-          fillOpacity: 1,
-          stroke: "none",
-          strokeWidth: 0.773409,
-          strokeLinecap: "square",
-          strokeDasharray: "none",
-          paintOrder: "fill markers stroke",
-        }}
       />
       <g id="beams">
         <path
@@ -3091,6 +3162,7 @@ const SvgComponent = (props) => (
           id="rect32961-3-3-8"
           d="M5.15-275.15h35v270h-35z"
           style={{
+            display: "inline",
             fill: "url(#linearGradient13376-0)",
             fillOpacity: 1,
             fillRule: "nonzero",
@@ -3131,12 +3203,6 @@ const SvgComponent = (props) => (
       <path
         id="sample-chamber"
         d="M1611.593 1664.928v369h15v-354h1215v354h15v-354h580v615h-580v-100h-15v100h-1215v-100h-15v115h1839.998v-645H1626.593Z"
-        style={{
-          fillRule: "evenodd",
-          strokeWidth: 25.3084,
-          strokeLinecap: "square",
-          paintOrder: "markers stroke fill",
-        }}
       />
       <g
         id="aperture-wheel"
@@ -3205,7 +3271,7 @@ const SvgComponent = (props) => (
         />
       </g>
       <g
-        id="tungsten-beam"
+        id="beam-tungsten"
         style={{
           display: props.source.tungsten,
         }}
@@ -3214,6 +3280,7 @@ const SvgComponent = (props) => (
           id="path-tungsten"
           d="M303.016 484.916 119.803 335.637l9.81-65.845Z"
           style={{
+            display: "inline",
             opacity: 0.65,
             fill: "#ff6638",
             fillOpacity: 1,
@@ -3226,7 +3293,7 @@ const SvgComponent = (props) => (
       <g
         id="flat-rotatable-mirror-tungsten"
         style={{
-          display: props.source.tungstenMirror,
+          display: props.source.tungsten,
         }}
         transform="matrix(.38268 -.92388 .83727 .3468 -301.168 95.094)"
       >
@@ -3254,7 +3321,7 @@ const SvgComponent = (props) => (
         />
       </g>
       <g
-        id="globar-beam"
+        id="beam-globar"
         style={{
           display: props.source.globar,
         }}
@@ -3275,7 +3342,7 @@ const SvgComponent = (props) => (
       <g
         id="flat-rotatable-mirror-globar"
         style={{
-          display: props.source.globarMirror,
+          display: props.source.globar,
         }}
         transform="rotate(-45 -157.299 194.99) scale(1 .90625)"
       >
@@ -3304,11 +3371,6 @@ const SvgComponent = (props) => (
       </g>
       <g
         id="parabolic-mirror-1"
-        style={{
-          stroke: "none",
-          strokeWidth: 1.00013,
-          strokeDasharray: "none",
-        }}
         transform="matrix(2.64587 0 0 3.9382 1181.505 143.154)"
       >
         <path
@@ -3343,11 +3405,6 @@ const SvgComponent = (props) => (
       </g>
       <g
         id="parabolic-mirror-hole-1"
-        style={{
-          stroke: "none",
-          strokeWidth: 1.00066,
-          strokeDasharray: "none",
-        }}
         transform="matrix(-2.64164 0 0 -4.11064 -80.347 1409.995)"
       >
         <path
@@ -3411,11 +3468,6 @@ const SvgComponent = (props) => (
       </g>
       <g
         id="parabolic-mirror-hole-2"
-        style={{
-          stroke: "none",
-          strokeWidth: 1.00066,
-          strokeDasharray: "none",
-        }}
         transform="matrix(0 2.64164 4.11064 0 964.488 2746.524)"
       >
         <path
@@ -3479,11 +3531,6 @@ const SvgComponent = (props) => (
       </g>
       <g
         id="parabolic-mirror-2"
-        style={{
-          stroke: "none",
-          strokeWidth: 1.00013,
-          strokeDasharray: "none",
-        }}
         transform="matrix(0 2.64587 -3.9382 0 3469.225 2760.54)"
       >
         <path
@@ -3906,107 +3953,113 @@ const SvgComponent = (props) => (
           }}
         />
       </g>
-      <g id="sample-compartment">
+      <g
+        id="sample-compartment-znse"
+        style={{
+          display: props.window.znse,
+        }}
+        transform="translate(-5087.448 -3368.296) scale(13.08022)"
+      >
         <path
-          id="rect5963-3"
-          d="M-2116.524-2302.661h39.327v53.356h-39.327z"
+          id="rect5963-3-5-4"
+          d="M-550.753-433.552h3.007v4.079h-3.007z"
           style={{
-            fill: "url(#linearGradient11661-6)",
+            fill: "url(#linearGradient1728)",
             fillOpacity: 1,
-            strokeWidth: 0.240503,
+            strokeWidth: 0.0183868,
           }}
           transform="scale(-1)"
         />
         <path
-          id="rect4162-5"
-          d="M-2124.95-2249.305h56.181v28.082h-56.181z"
+          id="rect4162-5-2-5"
+          d="M-551.397-429.473h4.295v2.147h-4.295z"
           style={{
-            fill: "url(#linearGradient10403-5)",
+            fill: "url(#linearGradient1730)",
             fillOpacity: 1,
-            strokeWidth: 0.144951,
+            strokeWidth: 0.0110817,
           }}
           transform="scale(-1)"
         />
         <rect
-          id="rect5181-6"
-          width={56.181}
-          height={0.562}
-          x={-2124.95}
-          y={-2241.766}
+          id="rect5181-6-1-3"
+          width={4.295}
+          height={0.043}
+          x={-551.397}
+          y={-428.896}
           ry={0}
           style={{
             fill: "#a0a0a0",
             fillOpacity: 1,
-            strokeWidth: 0.0616743,
+            strokeWidth: 0.00471508,
           }}
           transform="scale(-1)"
         />
         <path
-          id="rect9017-5"
-          d="M2091.056 2263.742a14.24 14.235 0 0 0-8.406 13.824l-27.715 12.367a3.346 3.346 0 0 0-1.698 4.433l1.371 3.068a3.348 3.348 0 0 0 4.434 1.696l27.714-12.366a14.24 14.235 0 0 0 15.908 2.976 14.24 14.235 0 0 0 8.405-13.824l27.715-12.369a3.346 3.346 0 0 0 1.696-4.433l-1.367-3.067a3.35 3.35 0 0 0-4.435-1.697l-27.71 12.363a14.24 14.235 0 0 0-15.912-2.972z"
+          id="rect9017-5-3-5"
+          d="M548.806 430.577a1.089 1.088 0 0 0-.643 1.056l-2.119.946a.256.256 0 0 0-.13.339l.105.234c.058.13.21.188.34.13l2.118-.945a1.089 1.088 0 0 0 1.216.227 1.089 1.088 0 0 0 .643-1.057l2.119-.945a.256.256 0 0 0 .13-.34l-.105-.234a.256.256 0 0 0-.34-.13l-2.118.946a1.089 1.088 0 0 0-1.216-.227z"
           style={{
-            fill: "url(#linearGradient12498-2)",
+            fill: "url(#linearGradient1732)",
             fillOpacity: 1,
             stroke: "none",
-            strokeWidth: 0.352131,
+            strokeWidth: 0.0269209,
             strokeDasharray: "none",
             strokeOpacity: 1,
           }}
         />
         <path
-          id="rect5963-3-1"
-          d="M-2407.164-2302.661h39.327v53.356h-39.327z"
+          id="rect5963-3-1-0-1"
+          d="M-572.973-433.552h3.007v4.079h-3.007z"
           style={{
-            fill: "url(#linearGradient21598)",
+            fill: "url(#linearGradient1734)",
             fillOpacity: 1,
-            strokeWidth: 0.240503,
+            strokeWidth: 0.0183868,
           }}
           transform="scale(-1)"
         />
         <path
-          id="rect4162-5-4"
-          d="M-2415.59-2249.305h56.181v28.082h-56.181z"
+          id="rect4162-5-4-9-8"
+          d="M-573.617-429.473h4.295v2.147h-4.295z"
           style={{
-            fill: "url(#linearGradient21600)",
+            fill: "url(#linearGradient1736)",
             fillOpacity: 1,
-            strokeWidth: 0.144951,
+            strokeWidth: 0.0110817,
           }}
           transform="scale(-1)"
         />
         <rect
-          id="rect5181-6-8"
-          width={56.181}
-          height={0.562}
-          x={-2415.59}
-          y={-2241.766}
+          id="rect5181-6-8-4-3"
+          width={4.295}
+          height={0.043}
+          x={-573.617}
+          y={-428.896}
           ry={0}
           style={{
             fill: "#a0a0a0",
             fillOpacity: 1,
-            strokeWidth: 0.0616743,
+            strokeWidth: 0.00471508,
           }}
           transform="scale(-1)"
         />
         <path
-          id="rect9017-5-0"
-          d="M2381.696 2263.742a14.24 14.235 0 0 0-8.406 13.824l-27.714 12.367a3.346 3.346 0 0 0-1.699 4.433l1.372 3.068a3.348 3.348 0 0 0 4.433 1.696l27.714-12.366a14.24 14.235 0 0 0 15.908 2.976 14.24 14.235 0 0 0 8.405-13.824l27.716-12.369a3.346 3.346 0 0 0 1.696-4.433l-1.367-3.067a3.35 3.35 0 0 0-4.436-1.697l-27.71 12.363a14.24 14.235 0 0 0-15.912-2.972z"
+          id="rect9017-5-0-2-7"
+          d="M571.026 430.577a1.089 1.088 0 0 0-.643 1.056l-2.119.946a.256.256 0 0 0-.13.339l.105.234c.058.13.21.188.34.13l2.118-.945a1.089 1.088 0 0 0 1.216.227 1.089 1.088 0 0 0 .643-1.057l2.119-.945a.256.256 0 0 0 .13-.34l-.105-.234a.256.256 0 0 0-.34-.13l-2.118.946a1.089 1.088 0 0 0-1.216-.227z"
           style={{
-            fill: "url(#linearGradient21602)",
+            fill: "url(#linearGradient1738)",
             fillOpacity: 1,
             stroke: "none",
-            strokeWidth: 0.352131,
+            strokeWidth: 0.0269209,
             strokeDasharray: "none",
             strokeOpacity: 1,
           }}
         />
         <path
-          id="rect7077"
-          d="M1773.597 2019.876h937.163v190.052h-937.163z"
+          id="rect7077-3-6"
+          d="M524.536 411.933h71.647v14.53h-71.647z"
           style={{
             fill: "none",
             fillOpacity: 1,
             stroke: "#000",
-            strokeWidth: 22.5902,
+            strokeWidth: 1.72705,
             strokeLinecap: "square",
             strokeDasharray: "none",
             strokeOpacity: 1,
@@ -4014,69 +4067,51 @@ const SvgComponent = (props) => (
           }}
         />
         <rect
-          id="rect5758"
-          width={36.315}
-          height={197.08}
-          x={2685.807}
-          y={2016.362}
-          ry={5.119}
+          id="cell-left-znse"
+          width={2.776}
+          height={15.067}
+          x={523.677}
+          y={411.664}
+          ry={0.391}
           style={{
-            fill: "url(#linearGradient5760)",
+            fill: "url(#linearGradient1740)",
             fillOpacity: 1,
             stroke: "none",
-            strokeWidth: 14.8253,
+            strokeWidth: 1.13341,
             strokeDasharray: "none",
             strokeOpacity: 1,
             paintOrder: "markers stroke fill",
           }}
         />
         <rect
-          id="rect6170"
-          width={55.701}
-          height={41.728}
-          x={2676.804}
-          y={2189.88}
-          ry={6.834}
+          id="cell-right-znse"
+          width={2.776}
+          height={15.067}
+          x={594.275}
+          y={411.664}
+          ry={0.391}
           style={{
-            fill: "#009ee0",
-            fillOpacity: 1,
-            stroke: "#000",
-            strokeWidth: 14.1625,
-            strokeLinecap: "square",
-            strokeDasharray: "none",
-            strokeOpacity: 1,
-            paintOrder: "markers stroke fill",
-          }}
-        />
-        <rect
-          id="rect32961"
-          width={36.315}
-          height={197.08}
-          x={1762.369}
-          y={2016.362}
-          ry={5.119}
-          style={{
-            fill: "url(#linearGradient32969)",
+            fill: "url(#linearGradient1744)",
             fillOpacity: 1,
             stroke: "none",
-            strokeWidth: 14.8253,
+            strokeWidth: 1.13341,
             strokeDasharray: "none",
             strokeOpacity: 1,
             paintOrder: "markers stroke fill",
           }}
         />
         <rect
-          id="rect6168"
-          width={55.701}
-          height={41.728}
-          x={2676.807}
-          y={1998.196}
-          ry={6.834}
+          id="rect6170-0-6"
+          width={4.258}
+          height={3.19}
+          x={593.587}
+          y={424.93}
+          ry={0.522}
           style={{
             fill: "#009ee0",
             fillOpacity: 1,
             stroke: "#000",
-            strokeWidth: 14.1625,
+            strokeWidth: 1.08274,
             strokeLinecap: "square",
             strokeDasharray: "none",
             strokeOpacity: 1,
@@ -4084,17 +4119,17 @@ const SvgComponent = (props) => (
           }}
         />
         <rect
-          id="rect10251"
-          width={55.701}
-          height={41.728}
-          x={1751.984}
-          y={2189.88}
-          ry={6.834}
+          id="rect6168-3-2"
+          width={4.258}
+          height={3.19}
+          x={593.587}
+          y={410.275}
+          ry={0.522}
           style={{
             fill: "#009ee0",
             fillOpacity: 1,
             stroke: "#000",
-            strokeWidth: 14.1625,
+            strokeWidth: 1.08274,
             strokeLinecap: "square",
             strokeDasharray: "none",
             strokeOpacity: 1,
@@ -4102,17 +4137,256 @@ const SvgComponent = (props) => (
           }}
         />
         <rect
-          id="rect8256-0"
-          width={55.701}
-          height={41.728}
-          x={1751.984}
-          y={1998.196}
-          ry={6.834}
+          id="rect10251-9-7"
+          width={4.258}
+          height={3.19}
+          x={522.883}
+          y={424.93}
+          ry={0.522}
           style={{
             fill: "#009ee0",
             fillOpacity: 1,
             stroke: "#000",
-            strokeWidth: 14.1626,
+            strokeWidth: 1.08274,
+            strokeLinecap: "square",
+            strokeDasharray: "none",
+            strokeOpacity: 1,
+            paintOrder: "markers stroke fill",
+          }}
+        />
+        <rect
+          id="rect8256-0-9-4"
+          width={4.258}
+          height={3.19}
+          x={522.883}
+          y={410.275}
+          ry={0.522}
+          style={{
+            fill: "#009ee0",
+            fillOpacity: 1,
+            stroke: "#000",
+            strokeWidth: 1.08275,
+            strokeLinecap: "square",
+            strokeDasharray: "none",
+            strokeOpacity: 1,
+            paintOrder: "markers stroke fill",
+          }}
+        />
+      </g>
+      <g
+        id="sample-compartment-caf2"
+        style={{
+          display: props.window.caf2,
+        }}
+        transform="translate(-5087.448 -3368.296) scale(13.08022)"
+      >
+        <path
+          id="rect5963-3-5"
+          d="M-550.753-433.552h3.007v4.079h-3.007z"
+          style={{
+            fill: "url(#linearGradient3033)",
+            fillOpacity: 1,
+            strokeWidth: 0.0183868,
+          }}
+          transform="scale(-1)"
+        />
+        <path
+          id="rect4162-5-2"
+          d="M-551.397-429.473h4.295v2.147h-4.295z"
+          style={{
+            fill: "url(#linearGradient3035)",
+            fillOpacity: 1,
+            strokeWidth: 0.0110817,
+          }}
+          transform="scale(-1)"
+        />
+        <rect
+          id="rect5181-6-1"
+          width={4.295}
+          height={0.043}
+          x={-551.397}
+          y={-428.896}
+          ry={0}
+          style={{
+            fill: "#a0a0a0",
+            fillOpacity: 1,
+            strokeWidth: 0.00471508,
+          }}
+          transform="scale(-1)"
+        />
+        <path
+          id="rect9017-5-3"
+          d="M548.806 430.577a1.089 1.088 0 0 0-.643 1.056l-2.119.946a.256.256 0 0 0-.13.339l.105.234c.058.13.21.188.34.13l2.118-.945a1.089 1.088 0 0 0 1.216.227 1.089 1.088 0 0 0 .643-1.057l2.119-.945a.256.256 0 0 0 .13-.34l-.105-.234a.256.256 0 0 0-.34-.13l-2.118.946a1.089 1.088 0 0 0-1.216-.227z"
+          style={{
+            fill: "url(#linearGradient3037)",
+            fillOpacity: 1,
+            stroke: "none",
+            strokeWidth: 0.0269209,
+            strokeDasharray: "none",
+            strokeOpacity: 1,
+          }}
+        />
+        <path
+          id="rect5963-3-1-0"
+          d="M-572.973-433.552h3.007v4.079h-3.007z"
+          style={{
+            fill: "url(#linearGradient11661-6-6)",
+            fillOpacity: 1,
+            strokeWidth: 0.0183868,
+          }}
+          transform="scale(-1)"
+        />
+        <path
+          id="rect4162-5-4-9"
+          d="M-573.617-429.473h4.295v2.147h-4.295z"
+          style={{
+            fill: "url(#linearGradient10403-5-4)",
+            fillOpacity: 1,
+            strokeWidth: 0.0110817,
+          }}
+          transform="scale(-1)"
+        />
+        <rect
+          id="rect5181-6-8-4"
+          width={4.295}
+          height={0.043}
+          x={-573.617}
+          y={-428.896}
+          ry={0}
+          style={{
+            fill: "#a0a0a0",
+            fillOpacity: 1,
+            strokeWidth: 0.00471508,
+          }}
+          transform="scale(-1)"
+        />
+        <path
+          id="rect9017-5-0-2"
+          d="M571.026 430.577a1.089 1.088 0 0 0-.643 1.056l-2.119.946a.256.256 0 0 0-.13.339l.105.234c.058.13.21.188.34.13l2.118-.945a1.089 1.088 0 0 0 1.216.227 1.089 1.088 0 0 0 .643-1.057l2.119-.945a.256.256 0 0 0 .13-.34l-.105-.234a.256.256 0 0 0-.34-.13l-2.118.946a1.089 1.088 0 0 0-1.216-.227z"
+          style={{
+            fill: "url(#linearGradient12498-2-4)",
+            fillOpacity: 1,
+            stroke: "none",
+            strokeWidth: 0.0269209,
+            strokeDasharray: "none",
+            strokeOpacity: 1,
+          }}
+        />
+        <path
+          id="rect7077-3"
+          d="M524.536 411.933h71.647v14.53h-71.647z"
+          style={{
+            fill: "none",
+            fillOpacity: 1,
+            stroke: "#000",
+            strokeWidth: 1.72705,
+            strokeLinecap: "square",
+            strokeDasharray: "none",
+            strokeOpacity: 1,
+            paintOrder: "markers stroke fill",
+          }}
+        />
+        <rect
+          id="cell-left-caf2"
+          width={2.776}
+          height={15.067}
+          x={523.677}
+          y={411.664}
+          ry={0.391}
+          style={{
+            fill: "url(#linearGradient32969-4)",
+            fillOpacity: 1,
+            stroke: "none",
+            strokeWidth: 1.13341,
+            strokeDasharray: "none",
+            strokeOpacity: 1,
+            paintOrder: "markers stroke fill",
+          }}
+        />
+        <rect
+          id="cell-right-caf2"
+          width={2.776}
+          height={15.067}
+          x={594.275}
+          y={411.664}
+          ry={0.391}
+          style={{
+            display: "inline",
+            fill: "url(#linearGradient5760-6)",
+            fillOpacity: 1,
+            stroke: "none",
+            strokeWidth: 1.13341,
+            strokeDasharray: "none",
+            strokeOpacity: 1,
+            paintOrder: "markers stroke fill",
+          }}
+        />
+        <rect
+          id="rect6170-0"
+          width={4.258}
+          height={3.19}
+          x={593.587}
+          y={424.93}
+          ry={0.522}
+          style={{
+            fill: "#009ee0",
+            fillOpacity: 1,
+            stroke: "#000",
+            strokeWidth: 1.08274,
+            strokeLinecap: "square",
+            strokeDasharray: "none",
+            strokeOpacity: 1,
+            paintOrder: "markers stroke fill",
+          }}
+        />
+        <rect
+          id="rect6168-3"
+          width={4.258}
+          height={3.19}
+          x={593.587}
+          y={410.275}
+          ry={0.522}
+          style={{
+            fill: "#009ee0",
+            fillOpacity: 1,
+            stroke: "#000",
+            strokeWidth: 1.08274,
+            strokeLinecap: "square",
+            strokeDasharray: "none",
+            strokeOpacity: 1,
+            paintOrder: "markers stroke fill",
+          }}
+        />
+        <rect
+          id="rect10251-9"
+          width={4.258}
+          height={3.19}
+          x={522.883}
+          y={424.93}
+          ry={0.522}
+          style={{
+            fill: "#009ee0",
+            fillOpacity: 1,
+            stroke: "#000",
+            strokeWidth: 1.08274,
+            strokeLinecap: "square",
+            strokeDasharray: "none",
+            strokeOpacity: 1,
+            paintOrder: "markers stroke fill",
+          }}
+        />
+        <rect
+          id="rect8256-0-9"
+          width={4.258}
+          height={3.19}
+          x={522.883}
+          y={410.275}
+          ry={0.522}
+          style={{
+            fill: "#009ee0",
+            fillOpacity: 1,
+            stroke: "#000",
+            strokeWidth: 1.08275,
             strokeLinecap: "square",
             strokeDasharray: "none",
             strokeOpacity: 1,
@@ -4393,6 +4667,7 @@ const SvgComponent = (props) => (
           id="rect2866-5-59"
           d="M-1799.277 279.521h210v7h-210z"
           style={{
+            display: "inline",
             fill: "url(#linearGradient10461)",
             fillOpacity: 1,
             fillRule: "evenodd",
@@ -4405,6 +4680,7 @@ const SvgComponent = (props) => (
           id="rect2866-9"
           d="M-1799.277 244.521h210v35h-210z"
           style={{
+            display: "inline",
             fill: "url(#linearGradient10463)",
             fillOpacity: 1,
             fillRule: "evenodd",
@@ -4471,7 +4747,7 @@ const SvgComponent = (props) => (
         />
       </g>
       <g
-        id="insb-beam"
+        id="beam-insb"
         style={{
           display: props.detector.insb,
         }}
@@ -4480,6 +4756,7 @@ const SvgComponent = (props) => (
           id="path-insb"
           d="m3164.329 1929.583 117.532-150.45 52.155 23.879z"
           style={{
+            display: "inline",
             opacity: 0.65,
             fill: "#ff6638",
             fillOpacity: 1,
@@ -4492,7 +4769,7 @@ const SvgComponent = (props) => (
       <g
         id="flat-rotatable-mirror-insb"
         style={{
-          display: props.detector.insbMirror,
+          display: props.detector.insb,
         }}
         transform="rotate(-22.5 3301.691 1794.086)"
       >
@@ -4522,7 +4799,7 @@ const SvgComponent = (props) => (
         />
       </g>
       <g
-        id="mct-beam"
+        id="beam-mct"
         style={{
           display: props.detector.mct,
         }}
@@ -4531,6 +4808,7 @@ const SvgComponent = (props) => (
           id="path-mct"
           d="m3080.987 1793.841 204.992-23.953 53.564 54.457z"
           style={{
+            display: "inline",
             opacity: 0.65,
             fill: "#ff6638",
             fillOpacity: 1,
@@ -4543,7 +4821,7 @@ const SvgComponent = (props) => (
       <g
         id="flat-rotatable-mirror-mct"
         style={{
-          display: props.detector.mctMirror,
+          display: props.detector.mct,
         }}
       >
         <path
@@ -4589,6 +4867,7 @@ const SvgComponent = (props) => (
           id="rect12396-8-7-0"
           d="M2069.965 2354.315v.807l-.807-.807zm-1.264 0-1.893 1.893 2.121 2.121 1.036-1.035v4.898l-1.036-1.035-2.12 2.121 2.12 2.121 1.036-1.035v4.9l-1.036-1.035-2.12 2.122 2.12 2.12 1.036-1.035v4.899l-1.036-1.035-2.12 2.12 2.12 2.122 1.036-1.035v4.898l-1.036-1.035-2.12 2.121 2.12 2.123 1.036-1.035v4.898l-1.036-1.035-2.12 2.121 2.12 2.121 1.036-1.035v4.899l-1.036-1.035-2.12 2.12.68.682h-4.19l.681-.681-2.12-2.121-2.122 2.12.682.682h-4.194l.682-.681-2.121-2.121-2.121 2.12.681.682h-4.191l.682-.681-2.122-2.121-2.12 2.12.681.682h-4.191l.681-.681-2.12-2.121-2.124 2.12.682.682h-4.192l.682-.681-2.121-2.121-2.121 2.12.681.682h-4.19l.68-.681-2.12-2.121-2.122 2.12.682.682h-4.193l.681-.681-2.12-2.121-2.122 2.12.682.682h-4.192l.682-.681-2.121-2.121-2.121 2.12.682.682h-4.192l.682-.681-2.121-2.121-2.121 2.12.681.682h-4.193l.682-.681-2.122-2.121-2.12 2.12.681.682h-4.191l.681-.681-2.12-2.121-2.122 2.12.682.682h-4.192l.682-.681-2.123-2.121-2.121 2.12.681.682h-4.191l.682-.681-2.121-2.121-2.122 2.12.682.682h-4.191l.681-.681-2.12-2.121-2.122 2.12.682.682h-4.194l.682-.681-1.353-1.354v-4.363l1.353-1.354-1.353-1.353v-4.363l1.353-1.356-1.353-1.353v-4.364l1.353-1.353-1.353-1.354v-4.363l1.353-1.354-1.353-1.353v-4.365l1.353-1.354-1.353-1.353v-4.364l1.353-1.353-1.353-1.354v-.539h2.289l.478.479.479-.479h2.83l-1.893 1.893 2.121 2.121 2.121-2.121-1.892-1.893h2.828l.478.479.479-.479h2.828l-1.893 1.893 2.122 2.121 2.12-2.121-1.892-1.893h2.828l.479.479.478-.479h2.828l-1.892 1.893 2.12 2.121 2.124-2.121-1.895-1.893h2.83l.479.479.478-.479h2.829l-1.893 1.893 2.121 2.121 2.121-2.121-1.892-1.893h2.828l.478.479.479-.479h2.828l-1.893 1.893 2.121 2.121 2.122-2.121-1.893-1.893h2.828l.479.479.478-.479h2.83l-1.892 1.893 2.12 2.121 2.122-2.121-1.893-1.893h2.828l.479.479.478-.479h2.828l-1.892 1.893 2.121 2.121 2.121-2.121-1.892-1.893h2.828l.478.479.479-.479h2.828l-1.893 1.893 2.121 2.121 2.121-2.121-1.892-1.893h2.83l.478.479.479-.479h2.828l-1.893 1.893 2.122 2.121 2.12-2.121-1.892-1.893h2.828l.479.479.478-.479h2.828l-1.892 1.893 2.12 2.121 2.122-2.121-1.893-1.893h2.829l.478.479.479-.479h2.83l-1.895 1.893 2.123 2.121 2.121-2.121-1.892-1.893h2.828l.478.479.479-.479h2.828l-1.893 1.893 2.121 2.121 2.122-2.121-1.893-1.893h2.828l.479.479.478-.479h2.828l-1.892 1.893 2.12 2.121 2.122-2.121-1.893-1.893h2.83l.479.479.478-.479h2.829l-1.893 1.893 2.121 2.121 2.121-2.121-1.892-1.893h2.828l.478.479.479-.479zm-3.307 3.307-2.12 2.121 2.12 2.121 2.121-2.121zm-7.07 0-2.123 2.121 2.123 2.121 2.121-2.121zm-7.072 0-2.121 2.121 2.12 2.121 2.122-2.121zm-7.07 0-2.122 2.121 2.121 2.121 2.121-2.121zm-7.073 0-2.121 2.121 2.121 2.121 2.121-2.121zm-7.07 0-2.121 2.121 2.12 2.121 2.122-2.121zm-7.07 0-2.124 2.121 2.123 2.121 2.122-2.121zm-7.073 0-2.12 2.121 2.12 2.121 2.121-2.121zm-7.07 0-2.121 2.121 2.12 2.121 2.122-2.121zm-7.072 0-2.122 2.121 2.122 2.121 2.123-2.121zm-7.07 0-2.122 2.121 2.121 2.121 2.121-2.121zm-7.071 0-2.121 2.121 2.121 2.121 2.121-2.121zm-7.072 0-2.121 2.121 2.12 2.121 2.122-2.121zm-7.07 0-2.122 2.121 2.121 2.121 2.121-2.121zm-7.073 0-2.12 2.121 2.12 2.121 2.123-2.121zm95.461 3.535-2.121 2.121 2.121 2.121 2.121-2.12zm-7.072 0-2.121 2.121 2.12 2.121 2.122-2.12zm-7.07 0-2.122 2.121 2.121 2.121 2.122-2.12zm-7.07 0-2.124 2.121 2.123 2.121 2.121-2.12zm-7.073 0-2.121 2.121 2.12 2.121 2.122-2.12zm-7.07 0-2.122 2.121 2.122 2.121 2.12-2.12zm-7.073 0-2.12 2.121 2.12 2.121 2.121-2.12zm-7.07 0-2.121 2.121 2.121 2.121 2.121-2.12zm-7.07 0-2.121 2.121 2.12 2.121 2.122-2.12zm-7.073 0-2.12 2.121 2.12 2.121 2.122-2.12zm-7.07 0-2.12 2.121 2.12 2.121 2.121-2.12zm-7.072 0-2.121 2.121 2.12 2.121 2.124-2.12zm-7.07 0-2.122 2.121 2.122 2.121 2.12-2.12zm-7.07 0-2.122 2.121 2.121 2.121 2.121-2.12zm95.458 3.535-2.12 2.121 2.12 2.123 2.121-2.123zm-7.07 0-2.123 2.121 2.123 2.123 2.121-2.123zm-7.072 0-2.121 2.121 2.12 2.123 2.122-2.123zm-7.07 0-2.122 2.121 2.121 2.123 2.121-2.123zm-7.073 0-2.121 2.121 2.121 2.123 2.121-2.123zm-7.07 0-2.121 2.121 2.12 2.123 2.122-2.123zm-7.07 0-2.124 2.121 2.123 2.123 2.122-2.123zm-7.073 0-2.12 2.121 2.12 2.123 2.121-2.123zm-7.07 0-2.121 2.121 2.12 2.123 2.122-2.123zm-7.072 0-2.122 2.121 2.122 2.123 2.123-2.123zm-7.07 0-2.122 2.121 2.121 2.123 2.121-2.123zm-7.071 0-2.121 2.121 2.121 2.123 2.121-2.123zm-7.072 0-2.121 2.121 2.12 2.123 2.122-2.123zm-7.07 0-2.122 2.121 2.121 2.123 2.121-2.123zm-7.073 0-2.12 2.121 2.12 2.123 2.123-2.123zm95.461 3.537-2.121 2.121 2.121 2.122 2.121-2.122zm-7.072 0-2.121 2.121 2.12 2.122 2.122-2.122zm-7.07 0-2.122 2.121 2.121 2.122 2.122-2.122zm-7.07 0-2.124 2.121 2.123 2.122 2.121-2.122zm-7.073 0-2.121 2.121 2.12 2.122 2.122-2.122zm-7.07 0-2.122 2.121 2.122 2.122 2.12-2.122zm-7.073 0-2.12 2.121 2.12 2.122 2.121-2.122zm-7.07 0-2.121 2.121 2.121 2.122 2.121-2.122zm-7.07 0-2.121 2.121 2.12 2.122 2.122-2.122zm-7.073 0-2.12 2.121 2.12 2.122 2.122-2.122zm-7.07 0-2.12 2.121 2.12 2.122 2.121-2.122zm-7.072 0-2.121 2.121 2.12 2.122 2.124-2.122zm-7.07 0-2.122 2.121 2.122 2.122 2.12-2.122zm-7.07 0-2.122 2.121 2.121 2.122 2.121-2.122zm95.458 3.535-2.12 2.122 2.12 2.12 2.121-2.12zm-7.07 0-2.123 2.122 2.123 2.12 2.121-2.12zm-7.072 0-2.121 2.122 2.12 2.12 2.122-2.12zm-7.07 0-2.122 2.122 2.121 2.12 2.121-2.12zm-7.073 0-2.121 2.122 2.121 2.12 2.121-2.12zm-7.07 0-2.121 2.122 2.12 2.12 2.122-2.12zm-7.07 0-2.124 2.122 2.123 2.12 2.122-2.12zm-7.073 0-2.12 2.122 2.12 2.12 2.121-2.12zm-7.07 0-2.121 2.122 2.12 2.12 2.122-2.12zm-7.072 0-2.122 2.122 2.122 2.12 2.123-2.12zm-7.07 0-2.122 2.122 2.121 2.12 2.121-2.12zm-7.071 0-2.121 2.122 2.121 2.12 2.121-2.12zm-7.072 0-2.121 2.122 2.12 2.12 2.122-2.12zm-7.07 0-2.122 2.122 2.121 2.12 2.121-2.12zm-7.073 0-2.12 2.122 2.12 2.12 2.123-2.12zm95.461 3.536-2.121 2.12 2.121 2.122 2.121-2.121zm-7.072 0-2.121 2.12 2.12 2.122 2.122-2.121zm-7.07 0-2.122 2.12 2.121 2.122 2.122-2.121zm-7.07 0-2.124 2.12 2.123 2.122 2.121-2.121zm-7.073 0-2.121 2.12 2.12 2.122 2.122-2.121zm-7.07 0-2.122 2.12 2.122 2.122 2.12-2.121zm-7.073 0-2.12 2.12 2.12 2.122 2.121-2.121zm-7.07 0-2.121 2.12 2.121 2.122 2.121-2.121zm-7.07 0-2.121 2.12 2.12 2.122 2.122-2.121zm-7.073 0-2.12 2.12 2.12 2.122 2.122-2.121zm-7.07 0-2.12 2.12 2.12 2.122 2.121-2.121zm-7.072 0-2.121 2.12 2.12 2.122 2.124-2.121zm-7.07 0-2.122 2.12 2.122 2.122 2.12-2.121zm-7.07 0-2.122 2.12 2.121 2.122 2.121-2.121zm95.458 3.535-2.12 2.12 2.12 2.122 2.121-2.121zm-7.07 0-2.123 2.12 2.123 2.122 2.121-2.121zm-7.072 0-2.121 2.12 2.12 2.122 2.122-2.121zm-7.07 0-2.122 2.12 2.121 2.122 2.121-2.121zm-7.073 0-2.121 2.12 2.121 2.122 2.121-2.121zm-7.07 0-2.121 2.12 2.12 2.122 2.122-2.121zm-7.07 0-2.124 2.12 2.123 2.122 2.122-2.121zm-7.073 0-2.12 2.12 2.12 2.122 2.121-2.121zm-7.07 0-2.121 2.12 2.12 2.122 2.122-2.121zm-7.072 0-2.122 2.12 2.122 2.122 2.123-2.121zm-7.07 0-2.122 2.12 2.121 2.122 2.121-2.121zm-7.071 0-2.121 2.12 2.121 2.122 2.121-2.121zm-7.072 0-2.121 2.12 2.12 2.122 2.122-2.121zm-7.07 0-2.122 2.12 2.121 2.122 2.121-2.121zm-7.073 0-2.12 2.12 2.12 2.122 2.123-2.121zm95.461 3.535-2.121 2.121 2.121 2.123 2.121-2.123zm-7.072 0-2.121 2.121 2.12 2.123 2.122-2.123zm-7.07 0-2.122 2.121 2.121 2.123 2.122-2.123zm-7.07 0-2.124 2.121 2.123 2.123 2.121-2.123zm-7.073 0-2.121 2.121 2.12 2.123 2.122-2.123zm-7.07 0-2.122 2.121 2.122 2.123 2.12-2.123zm-7.073 0-2.12 2.121 2.12 2.123 2.121-2.123zm-7.07 0-2.121 2.121 2.121 2.123 2.121-2.123zm-7.07 0-2.121 2.121 2.12 2.123 2.122-2.123zm-7.073 0-2.12 2.121 2.12 2.123 2.122-2.123zm-7.07 0-2.12 2.121 2.12 2.123 2.121-2.123zm-7.072 0-2.121 2.121 2.12 2.123 2.124-2.123zm-7.07 0-2.122 2.121 2.122 2.123 2.12-2.123zm-7.07 0-2.122 2.121 2.121 2.123 2.121-2.123zm95.458 3.535-2.12 2.123 2.12 2.121 2.121-2.12zm-7.07 0-2.123 2.123 2.123 2.121 2.121-2.12zm-7.072 0-2.121 2.123 2.12 2.121 2.122-2.12zm-7.07 0-2.122 2.123 2.121 2.121 2.121-2.12zm-7.073 0-2.121 2.123 2.121 2.121 2.121-2.12zm-7.07 0-2.121 2.123 2.12 2.121 2.122-2.12zm-7.07 0-2.124 2.123 2.123 2.121 2.122-2.12zm-7.073 0-2.12 2.123 2.12 2.121 2.121-2.12zm-7.07 0-2.121 2.123 2.12 2.121 2.122-2.12zm-7.072 0-2.122 2.123 2.122 2.121 2.123-2.12zm-7.07 0-2.122 2.123 2.121 2.121 2.121-2.12zm-7.071 0-2.121 2.123 2.121 2.121 2.121-2.12zm-7.072 0-2.121 2.123 2.12 2.121 2.122-2.12zm-7.07 0-2.122 2.123 2.121 2.121 2.121-2.12zm-7.073 0-2.12 2.123 2.12 2.121 2.123-2.12zm95.461 3.537-2.121 2.121 2.121 2.121 2.121-2.12zm-7.072 0-2.121 2.121 2.12 2.121 2.122-2.12zm-7.07 0-2.122 2.121 2.121 2.121 2.122-2.12zm-7.07 0-2.124 2.121 2.123 2.121 2.121-2.12zm-7.073 0-2.121 2.121 2.12 2.121 2.122-2.12zm-7.07 0-2.122 2.121 2.122 2.121 2.12-2.12zm-7.073 0-2.12 2.121 2.12 2.121 2.121-2.12zm-7.07 0-2.121 2.121 2.121 2.121 2.121-2.12zm-7.07 0-2.121 2.121 2.12 2.121 2.122-2.12zm-7.073 0-2.12 2.121 2.12 2.121 2.122-2.12zm-7.07 0-2.12 2.121 2.12 2.121 2.121-2.12zm-7.072 0-2.121 2.121 2.12 2.121 2.124-2.12zm-7.07 0-2.122 2.121 2.122 2.121 2.12-2.12zm-7.07 0-2.122 2.121 2.121 2.121 2.121-2.12zm95.458 3.535-2.12 2.121 2.12 2.122 2.121-2.122zm-7.07 0-2.123 2.121 2.123 2.122 2.121-2.122zm-7.072 0-2.121 2.121 2.12 2.122 2.122-2.122zm-7.07 0-2.122 2.121 2.121 2.122 2.121-2.122zm-7.073 0-2.121 2.121 2.121 2.122 2.121-2.122zm-7.07 0-2.121 2.121 2.12 2.122 2.122-2.122zm-7.07 0-2.124 2.121 2.123 2.122 2.122-2.122zm-7.073 0-2.12 2.121 2.12 2.122 2.121-2.122zm-7.07 0-2.121 2.121 2.12 2.122 2.122-2.122zm-7.072 0-2.122 2.121 2.122 2.122 2.123-2.122zm-7.07 0-2.122 2.121 2.121 2.122 2.121-2.122zm-7.071 0-2.121 2.121 2.121 2.122 2.121-2.122zm-7.072 0-2.121 2.121 2.12 2.122 2.122-2.122zm-7.07 0-2.122 2.121 2.121 2.122 2.121-2.122zm-7.073 0-2.12 2.121 2.12 2.122 2.123-2.122z"
           style={{
+            display: "inline",
             fill: "url(#linearGradient16893)",
             stroke: "none",
             strokeWidth: 1.35227,
@@ -4618,6 +4897,7 @@ const SvgComponent = (props) => (
           id="rect12396-4-2"
           d="m2117.206 2298.74-.898.899 1.469 1.468v4.133l-1.47 1.469 1.47 1.469v4.133l-1.47 1.47 1.47 1.469v4.133l-1.47 1.469 1.47 1.468v4.133l-1.47 1.469 1.47 1.469v4.134l-1.47 1.47 1.47 1.468v4.133l-1.47 1.468 1.47 1.47v4.132l-1.47 1.469 1.47 1.47v3.135h-1.83l1.068-1.068-2.121-2.121-2.123 2.12 1.07 1.07h-4.967l1.069-1.07-2.122-2.12-2.12 2.12 1.068 1.07h-4.965l1.068-1.07-2.12-2.12-2.122 2.12 1.069 1.07h-4.967l1.07-1.07-2.123-2.12-2.121 2.12 1.068 1.07h-4.965l1.069-1.07-2.121-2.12-2.121 2.12 1.068 1.07h-4.965l1.068-1.07-2.12-2.12-2.122 2.12 1.069 1.07h-4.967l1.068-1.07-1.81-1.81v-3.45l1.81-1.811-1.81-1.81v-3.45l1.81-1.81-1.81-1.811v-3.45l1.81-1.81-1.81-1.813v-3.449l1.81-1.81-1.81-1.81v-3.45l1.81-1.81-1.81-1.811v-3.451l1.81-1.81-1.81-1.811v-3.45l1.81-1.81-1.81-1.81v-2.624h2.002l-.899.899 2.123 2.12 2.121-2.12-.898-.899h4.625l-.899.899 2.122 2.12 2.12-2.12-.898-.899h4.625l-.898.899 2.12 2.12 2.122-2.12-.899-.899h4.627l-.898.899 2.121 2.12 2.121-2.12-.898-.899h4.625l-.899.899 2.121 2.12 2.122-2.12-.899-.899h4.625l-.898.899 2.12 2.12 2.124-2.12-.899-.899zm-2.312 2.313-2.123 2.12 2.123 2.122 2.12-2.121zm-7.072 0-2.122 2.12 2.122 2.122 2.12-2.121zm-7.07 0-2.122 2.12 2.121 2.122 2.121-2.121zm-7.073 0-2.121 2.12 2.12 2.122 2.124-2.121zm-7.07 0-2.121 2.12 2.12 2.122 2.122-2.121zm-7.07 0-2.122 2.12 2.121 2.122 2.121-2.121zm31.818 3.535-2.121 2.121 2.12 2.121 2.124-2.121zm-7.07 0-2.122 2.121 2.121 2.121 2.122-2.121zm-7.07 0-2.122 2.121 2.121 2.121 2.121-2.121zm-7.073 0-2.121 2.121 2.12 2.121 2.122-2.121zm-7.07 0-2.122 2.121 2.122 2.121 2.12-2.121zm-7.07 0-2.124 2.121 2.123 2.121 2.121-2.121zm38.89 3.535-2.123 2.121 2.123 2.121 2.12-2.12zm-7.072 0-2.122 2.121 2.122 2.121 2.12-2.12zm-7.07 0-2.122 2.121 2.121 2.121 2.121-2.12zm-7.073 0-2.121 2.121 2.12 2.121 2.124-2.12zm-7.07 0-2.121 2.121 2.12 2.121 2.122-2.12zm-7.07 0-2.122 2.121 2.121 2.121 2.121-2.12zm31.818 3.535-2.121 2.123 2.12 2.121 2.124-2.12zm-7.07 0-2.122 2.123 2.121 2.121 2.122-2.12zm-7.07 0-2.122 2.123 2.121 2.121 2.121-2.12zm-7.073 0-2.121 2.123 2.12 2.121 2.122-2.12zm-7.07 0-2.122 2.123 2.122 2.121 2.12-2.12zm-7.07 0-2.124 2.123 2.123 2.121 2.121-2.12zm38.89 3.537-2.123 2.121 2.123 2.121 2.12-2.12zm-7.072 0-2.122 2.121 2.122 2.121 2.12-2.12zm-7.07 0-2.122 2.121 2.121 2.121 2.121-2.12zm-7.073 0-2.121 2.121 2.12 2.121 2.124-2.12zm-7.07 0-2.121 2.121 2.12 2.121 2.122-2.12zm-7.07 0-2.122 2.121 2.121 2.121 2.121-2.12zm31.818 3.535-2.121 2.122 2.12 2.12 2.124-2.12zm-7.07 0-2.122 2.122 2.121 2.12 2.122-2.12zm-7.07 0-2.122 2.122 2.121 2.12 2.121-2.12zm-7.073 0-2.121 2.122 2.12 2.12 2.122-2.12zm-7.07 0-2.122 2.122 2.122 2.12 2.12-2.12zm-7.07 0-2.124 2.122 2.123 2.12 2.121-2.12zm38.89 3.536-2.123 2.12 2.123 2.122 2.12-2.121zm-7.072 0-2.122 2.12 2.122 2.122 2.12-2.121zm-7.07 0-2.122 2.12 2.121 2.122 2.121-2.121zm-7.073 0-2.121 2.12 2.12 2.122 2.124-2.121zm-7.07 0-2.121 2.12 2.12 2.122 2.122-2.121zm-7.07 0-2.122 2.12 2.121 2.122 2.121-2.121zm31.818 3.535-2.121 2.12 2.12 2.122 2.124-2.121zm-7.07 0-2.122 2.12 2.121 2.122 2.122-2.121zm-7.07 0-2.122 2.12 2.121 2.122 2.121-2.121zm-7.073 0-2.121 2.12 2.12 2.122 2.122-2.121zm-7.07 0-2.122 2.12 2.122 2.122 2.12-2.121zm-7.07 0-2.124 2.12 2.123 2.122 2.121-2.121zm38.89 3.535-2.123 2.123 2.123 2.121 2.12-2.121zm-7.072 0-2.122 2.123 2.122 2.121 2.12-2.121zm-7.07 0-2.122 2.123 2.121 2.121 2.121-2.121zm-7.073 0-2.121 2.123 2.12 2.121 2.124-2.121zm-7.07 0-2.121 2.123 2.12 2.121 2.122-2.121zm-7.07 0-2.122 2.123 2.121 2.121 2.121-2.121zm31.818 3.537-2.121 2.121 2.12 2.121 2.124-2.12zm-7.07 0-2.122 2.121 2.121 2.121 2.122-2.12zm-7.07 0-2.122 2.121 2.121 2.121 2.121-2.12zm-7.073 0-2.121 2.121 2.12 2.121 2.122-2.12zm-7.07 0-2.122 2.121 2.122 2.121 2.12-2.12zm-7.07 0-2.124 2.121 2.123 2.121 2.121-2.12zm38.89 3.535-2.123 2.121 2.123 2.121 2.12-2.12zm-7.072 0-2.122 2.121 2.122 2.121 2.12-2.12zm-7.07 0-2.122 2.121 2.121 2.121 2.121-2.12zm-7.073 0-2.121 2.121 2.12 2.121 2.124-2.12zm-7.07 0-2.121 2.121 2.12 2.121 2.122-2.12zm-7.07 0-2.122 2.121 2.121 2.121 2.121-2.12zm31.818 3.535-2.121 2.121 2.12 2.122 2.124-2.122zm-7.07 0-2.122 2.121 2.121 2.122 2.122-2.122zm-7.07 0-2.122 2.121 2.121 2.122 2.121-2.122zm-7.073 0-2.121 2.121 2.12 2.122 2.122-2.122zm-7.07 0-2.122 2.121 2.122 2.122 2.12-2.122zm-7.07 0-2.124 2.121 2.123 2.122 2.121-2.122zm38.89 3.536-2.123 2.12 2.123 2.122 2.12-2.121zm-7.072 0-2.122 2.12 2.122 2.122 2.12-2.121zm-7.07 0-2.122 2.12 2.121 2.122 2.121-2.121zm-7.073 0-2.121 2.12 2.12 2.122 2.124-2.121zm-7.07 0-2.121 2.12 2.12 2.122 2.122-2.121zm-7.07 0-2.122 2.12 2.121 2.122 2.121-2.121zm31.818 3.535-2.121 2.12 2.12 2.124 2.124-2.123zm-7.07 0-2.122 2.12 2.121 2.124 2.122-2.123zm-7.07 0-2.122 2.12 2.121 2.124 2.121-2.123zm-7.073 0-2.121 2.12 2.12 2.124 2.122-2.123zm-7.07 0-2.122 2.12 2.122 2.124 2.12-2.123zm-7.07 0-2.124 2.12 2.123 2.124 2.121-2.123z"
           style={{
+            display: "inline",
             fill: "url(#linearGradient16151)",
             stroke: "none",
             strokeWidth: 0.972546,
@@ -4643,6 +4923,7 @@ const SvgComponent = (props) => (
           id="rect12396-1-1-1"
           d="M1961.198 2400.263v1.655l-1.655-1.655zm-2.084 0-1.907 1.907 2.121 2.123 1.87-1.871v2.83l-.456.455.456.455v2.828l-1.87-1.87-2.12 2.122 2.12 2.121 1.87-1.87v2.829l-.456.455.456.455v2.828l-1.87-1.869-2.12 2.121 2.12 2.121 1.87-1.869v2.828l-.456.455.456.455v2.83l-1.87-1.87-2.12 2.122 2.12 2.122 1.87-1.87v2.828l-.456.456.456.455v2.828l-1.87-1.87-2.12 2.122 2.12 2.12 1.87-1.868v2.828l-.456.455.456.455v2.828l-1.87-1.869-2.12 2.121 2.12 2.121 1.87-1.869v2.828l-.456.455.456.455v2.83l-1.87-1.869-2.12 2.121 2.12 2.121 1.87-1.869v2.828l-.456.455.456.456v2.828l-1.87-1.87-2.12 2.122 2.12 2.12 1.87-1.868v2.828l-.456.455.456.455v2.828l-1.87-1.87-2.12 2.122 2.12 2.123 1.87-1.871v2.83l-.456.455.456.455v2.828l-1.87-1.869-2.12 2.121 2.12 2.121 1.87-1.869v2.828l-.456.455.456.456v2.828l-1.87-1.87-2.12 2.122 2.12 2.12 1.87-1.868v2.828l-.456.455.456.455v2.83l-1.87-1.87-2.12 2.122 2.12 2.12 1.87-1.868v2.828l-.456.455.456.455v2.828l-1.87-1.869-2.12 2.121 2.12 2.121 1.87-1.869v2.828l-.456.455.456.455v2.829l-1.87-1.87-2.12 2.121 2.12 2.122 1.87-1.87v2.83l-.456.456.456.455v2.828l-1.87-1.87-2.12 2.122 2.12 2.12 1.87-1.868v2.828l-.456.455.456.455v2.828l-1.87-1.87-2.12 2.122 2.12 2.121 1.87-1.869v2.828l-.456.455.456.455v2.83l-1.87-1.87-2.12 2.122 2.12 2.121 1.87-1.869v2.828l-.456.455.456.456v2.828l-1.87-1.87-2.12 2.122 2.12 2.12 1.87-1.868v2.828l-.456.455.456.455v2.828l-1.87-1.87-2.12 2.122 2.12 2.121 1.87-1.87v2.83l-.456.456.456.455v2.828l-1.87-1.869-2.12 2.121 2.12 2.121 1.87-1.869v2.828l-.456.455.456.455v2.829l-1.87-1.87-2.12 2.122 2.12 2.12 1.87-1.869v2.829l-.456.455.456.455v2.83l-1.87-1.871-2.12 2.123 2.12 2.12 1.87-1.868v2.828l-.041.04h-3.657l-1.707-1.706-1.707 1.707h-3.656l-1.709-1.707-1.707 1.707h-3.656l-1.707-1.707-1.707 1.707h-3.657l-1.707-1.707-1.707 1.707h-3.658l-1.707-1.707-1.707 1.707h-3.656l-1.707-1.707-1.707 1.707h-2.533v-1.705l.705.705 2.12-2.121-2.12-2.123-.705.705v-4.239l.705.706 2.12-2.122-2.12-2.12-.705.704v-4.238l.705.705 2.12-2.12-2.12-2.122-.705.705v-4.24l.705.705 2.12-2.121-2.12-2.121-.705.705v-4.238l.705.705 2.12-2.121-2.12-2.122-.705.706v-4.239l.705.705 2.12-2.12-2.12-2.124-.705.705v-4.238l.705.705 2.12-2.121-2.12-2.121-.705.705v-4.238l.705.705 2.12-2.121-2.12-2.121-.705.705v-4.24l.705.704 2.12-2.12-2.12-2.122-.705.705v-4.238l.705.705 2.12-2.121-2.12-2.121-.705.705v-4.238l.705.705 2.12-2.121-2.12-2.121-.705.705v-4.24l.705.705 2.12-2.121-2.12-2.122-.705.705v-4.238l.705.705 2.12-2.12-2.12-2.122-.705.705v-4.238l.705.705 2.12-2.123-2.12-2.121-.705.705v-4.238l.705.705 2.12-2.121-2.12-2.121-.705.705v-4.239l.705.705 2.12-2.12-2.12-2.122-.705.705v-4.24l.705.705 2.12-2.121-2.12-2.121-.705.705v-4.238l.705.705 2.12-2.121-2.12-2.121-.705.705v-4.239l.705.706 2.12-2.122-2.12-2.123-.705.705v-4.238l.705.705 2.12-2.12-2.12-2.122-.705.705v-4.238l.705.705 2.12-2.121-2.12-2.121-.705.705v-4.238l.705.705 2.12-2.123-1.906-1.907h2.829l.492.493.492-.493h2.828l-1.906 1.907 2.121 2.123 2.121-2.123-1.906-1.907h2.828l.492.493.492-.493h2.83l-1.908 1.907 2.123 2.123 2.121-2.123-1.906-1.907h2.828l.492.493.493-.493h2.828l-1.907 1.907 2.121 2.123 2.122-2.123-1.907-1.907h2.828l.493.493.492-.493h2.828l-1.906 1.907 2.12 2.123 2.122-2.123-1.906-1.907h2.828l.492.493.492-.493h2.83l-1.906 1.907 2.121 2.123 2.121-2.123-1.906-1.907h2.828l.492.493.492-.493zm-42.426 0-.49.49v-.49zm39.105 3.32-2.12 2.124 2.12 2.12 2.121-2.12zm-7.072 0-2.121 2.124 2.121 2.12 2.123-2.12zm-7.07 0-2.121 2.124 2.12 2.12 2.122-2.12zm-7.07 0-2.122 2.124 2.121 2.12 2.121-2.12zm-7.073 0-2.121 2.124 2.121 2.12 2.121-2.12zm-7.07 0-2.121 2.124 2.12 2.12 2.122-2.12zm31.82 3.538-2.121 2.12 2.121 2.122 2.121-2.121zm-7.072 0-2.121 2.12 2.12 2.122 2.122-2.121zm-7.07 0-2.122 2.12 2.121 2.122 2.122-2.121zm-7.07 0-2.124 2.12 2.123 2.122 2.121-2.121zm-7.073 0-2.121 2.12 2.121 2.122 2.121-2.121zm31.82 3.535-2.12 2.121 2.12 2.121 2.121-2.121zm-7.072 0-2.121 2.121 2.121 2.121 2.123-2.121zm-7.07 0-2.121 2.121 2.12 2.121 2.122-2.121zm-7.07 0-2.122 2.121 2.121 2.121 2.121-2.121zm-7.073 0-2.121 2.121 2.121 2.121 2.121-2.121zm-7.07 0-2.121 2.121 2.12 2.121 2.122-2.121zm31.82 3.535-2.121 2.121 2.121 2.121 2.121-2.12zm-7.072 0-2.121 2.121 2.12 2.121 2.122-2.12zm-7.07 0-2.122 2.121 2.121 2.121 2.122-2.12zm-7.07 0-2.124 2.121 2.123 2.121 2.121-2.12zm-7.073 0-2.121 2.121 2.121 2.121 2.121-2.12zm31.82 3.535-2.12 2.121 2.12 2.121 2.121-2.12zm-7.072 0-2.121 2.121 2.121 2.121 2.123-2.12zm-7.07 0-2.121 2.121 2.12 2.121 2.122-2.12zm-7.07 0-2.122 2.121 2.121 2.121 2.121-2.12zm-7.073 0-2.121 2.121 2.121 2.121 2.121-2.12zm-7.07 0-2.121 2.121 2.12 2.121 2.122-2.12zm31.82 3.535-2.121 2.123 2.121 2.122 2.121-2.122zm-7.072 0-2.121 2.123 2.12 2.122 2.122-2.122zm-7.07 0-2.122 2.123 2.121 2.122 2.122-2.122zm-7.07 0-2.124 2.123 2.123 2.122 2.121-2.122zm-7.073 0-2.121 2.123 2.121 2.122 2.121-2.122zm31.82 3.537-2.12 2.122 2.12 2.12 2.121-2.12zm-7.072 0-2.121 2.122 2.121 2.12 2.123-2.12zm-7.07 0-2.121 2.122 2.12 2.12 2.122-2.12zm-7.07 0-2.122 2.122 2.121 2.12 2.121-2.12zm-7.073 0-2.121 2.122 2.121 2.12 2.121-2.12zm-7.07 0-2.121 2.122 2.12 2.12 2.122-2.12zm31.82 3.536-2.121 2.12 2.121 2.122 2.121-2.121zm-7.072 0-2.121 2.12 2.12 2.122 2.122-2.121zm-7.07 0-2.122 2.12 2.121 2.122 2.122-2.121zm-7.07 0-2.124 2.12 2.123 2.122 2.121-2.121zm-7.073 0-2.121 2.12 2.121 2.122 2.121-2.121zm31.82 3.535-2.12 2.12 2.12 2.122 2.121-2.121zm-7.072 0-2.121 2.12 2.121 2.122 2.123-2.121zm-7.07 0-2.121 2.12 2.12 2.122 2.122-2.121zm-7.07 0-2.122 2.12 2.121 2.122 2.121-2.121zm-7.073 0-2.121 2.12 2.121 2.122 2.121-2.121zm-7.07 0-2.121 2.12 2.12 2.122 2.122-2.121zm31.82 3.535-2.121 2.121 2.121 2.121 2.121-2.12zm-7.072 0-2.121 2.121 2.12 2.121 2.122-2.12zm-7.07 0-2.122 2.121 2.121 2.121 2.122-2.12zm-7.07 0-2.124 2.121 2.123 2.121 2.121-2.12zm-7.073 0-2.121 2.121 2.121 2.121 2.121-2.12zm31.82 3.535-2.12 2.121 2.12 2.123 2.121-2.123zm-7.072 0-2.121 2.121 2.121 2.123 2.123-2.123zm-7.07 0-2.121 2.121 2.12 2.123 2.122-2.123zm-7.07 0-2.122 2.121 2.121 2.123 2.121-2.123zm-7.073 0-2.121 2.121 2.121 2.123 2.121-2.123zm-7.07 0-2.121 2.121 2.12 2.123 2.122-2.123zm31.82 3.537-2.121 2.121 2.121 2.121 2.121-2.12zm-7.072 0-2.121 2.121 2.12 2.121 2.122-2.12zm-7.07 0-2.122 2.121 2.121 2.121 2.122-2.12zm-7.07 0-2.124 2.121 2.123 2.121 2.121-2.12zm-7.073 0-2.121 2.121 2.121 2.121 2.121-2.12zm31.82 3.535-2.12 2.121 2.12 2.122 2.121-2.122zm-7.072 0-2.121 2.121 2.121 2.122 2.123-2.122zm-7.07 0-2.121 2.121 2.12 2.122 2.122-2.122zm-7.07 0-2.122 2.121 2.121 2.122 2.121-2.122zm-7.073 0-2.121 2.121 2.121 2.122 2.121-2.122zm-7.07 0-2.121 2.121 2.12 2.122 2.122-2.122zm31.82 3.536-2.121 2.12 2.121 2.122 2.121-2.121zm-7.072 0-2.121 2.12 2.12 2.122 2.122-2.121zm-7.07 0-2.122 2.12 2.121 2.122 2.122-2.121zm-7.07 0-2.124 2.12 2.123 2.122 2.121-2.121zm-7.073 0-2.121 2.12 2.121 2.122 2.121-2.121zm31.82 3.535-2.12 2.12 2.12 2.122 2.121-2.121zm-7.072 0-2.121 2.12 2.121 2.122 2.123-2.121zm-7.07 0-2.121 2.12 2.12 2.122 2.122-2.121zm-7.07 0-2.122 2.12 2.121 2.122 2.121-2.121zm-7.073 0-2.121 2.12 2.121 2.122 2.121-2.121zm-7.07 0-2.121 2.12 2.12 2.122 2.122-2.121zm31.82 3.535-2.121 2.121 2.121 2.123 2.121-2.123zm-7.072 0-2.121 2.121 2.12 2.123 2.122-2.123zm-7.07 0-2.122 2.121 2.121 2.123 2.122-2.123zm-7.07 0-2.124 2.121 2.123 2.123 2.121-2.123zm-7.073 0-2.121 2.121 2.121 2.123 2.121-2.123zm31.82 3.537-2.12 2.121 2.12 2.121 2.121-2.12zm-7.072 0-2.121 2.121 2.121 2.121 2.123-2.12zm-7.07 0-2.121 2.121 2.12 2.121 2.122-2.12zm-7.07 0-2.122 2.121 2.121 2.121 2.121-2.12zm-7.073 0-2.121 2.121 2.121 2.121 2.121-2.12zm-7.07 0-2.121 2.121 2.12 2.121 2.122-2.12zm31.82 3.535-2.121 2.121 2.121 2.121 2.121-2.12zm-7.072 0-2.121 2.121 2.12 2.121 2.122-2.12zm-7.07 0-2.122 2.121 2.121 2.121 2.122-2.12zm-7.07 0-2.124 2.121 2.123 2.121 2.121-2.12zm-7.073 0-2.121 2.121 2.121 2.121 2.121-2.12zm31.82 3.535-2.12 2.121 2.12 2.121 2.121-2.12zm-7.072 0-2.121 2.121 2.121 2.121 2.123-2.12zm-7.07 0-2.121 2.121 2.12 2.121 2.122-2.12zm-7.07 0-2.122 2.121 2.121 2.121 2.121-2.12zm-7.073 0-2.121 2.121 2.121 2.121 2.121-2.12zm-7.07 0-2.121 2.121 2.12 2.121 2.122-2.12zm31.82 3.535-2.121 2.122 2.121 2.12 2.121-2.12zm-7.072 0-2.121 2.122 2.12 2.12 2.122-2.12zm-7.07 0-2.122 2.122 2.121 2.12 2.122-2.12zm-7.07 0-2.124 2.122 2.123 2.12 2.121-2.12zm-7.073 0-2.121 2.122 2.121 2.12 2.121-2.12zm31.82 3.536-2.12 2.12 2.12 2.124 2.121-2.123zm-7.072 0-2.121 2.12 2.121 2.124 2.123-2.123zm-7.07 0-2.121 2.12 2.12 2.124 2.122-2.123zm-7.07 0-2.122 2.12 2.121 2.124 2.121-2.123zm-7.073 0-2.121 2.12 2.121 2.124 2.121-2.123zm-7.07 0-2.121 2.12 2.12 2.124 2.122-2.123zm31.82 3.537-2.121 2.12 2.121 2.122 2.121-2.121zm-7.072 0-2.121 2.12 2.12 2.122 2.122-2.121zm-7.07 0-2.122 2.12 2.121 2.122 2.122-2.121zm-7.07 0-2.124 2.12 2.123 2.122 2.121-2.121zm-7.073 0-2.121 2.12 2.121 2.122 2.121-2.121zm31.82 3.535-2.12 2.121 2.12 2.121 2.121-2.121zm-7.072 0-2.121 2.121 2.121 2.121 2.123-2.121zm-7.07 0-2.121 2.121 2.12 2.121 2.122-2.121zm-7.07 0-2.122 2.121 2.121 2.121 2.121-2.121zm-7.073 0-2.121 2.121 2.121 2.121 2.121-2.121zm-7.07 0-2.121 2.121 2.12 2.121 2.122-2.121zm31.82 3.535-2.121 2.121 2.121 2.121 2.121-2.12zm-7.072 0-2.121 2.121 2.12 2.121 2.122-2.12zm-7.07 0-2.122 2.121 2.121 2.121 2.122-2.12zm-7.07 0-2.124 2.121 2.123 2.121 2.121-2.12zm-7.073 0-2.121 2.121 2.121 2.121 2.121-2.12zm31.82 3.535-2.12 2.121 2.12 2.121 2.121-2.12zm-7.072 0-2.121 2.121 2.121 2.121 2.123-2.12zm-7.07 0-2.121 2.121 2.12 2.121 2.122-2.12zm-7.07 0-2.122 2.121 2.121 2.121 2.121-2.12zm-7.073 0-2.121 2.121 2.121 2.121 2.121-2.12zm-7.07 0-2.121 2.121 2.12 2.121 2.122-2.12zm31.82 3.535-2.121 2.121 2.121 2.121 2.121-2.12zm-7.072 0-2.121 2.121 2.12 2.121 2.122-2.12zm-7.07 0-2.122 2.121 2.121 2.121 2.122-2.12zm-7.07 0-2.124 2.121 2.123 2.121 2.121-2.12zm-7.073 0-2.121 2.121 2.121 2.121 2.121-2.12zm31.82 3.535-2.12 2.124 2.12 2.12 2.121-2.12zm-7.072 0-2.121 2.124 2.121 2.12 2.123-2.12zm-7.07 0-2.121 2.124 2.12 2.12 2.122-2.12zm-7.07 0-2.122 2.124 2.121 2.12 2.121-2.12zm-7.073 0-2.121 2.124 2.121 2.12 2.121-2.12zm-7.07 0-2.121 2.124 2.12 2.12 2.122-2.12zm31.82 3.538-2.121 2.12 2.121 2.122 2.121-2.121zm-7.072 0-2.121 2.12 2.12 2.122 2.122-2.121zm-7.07 0-2.122 2.12 2.121 2.122 2.122-2.121zm-7.07 0-2.124 2.12 2.123 2.122 2.121-2.121zm-7.073 0-2.121 2.12 2.121 2.122 2.121-2.121zm31.82 3.535-2.12 2.12 2.12 2.122 2.121-2.121zm-7.072 0-2.121 2.12 2.121 2.122 2.123-2.121zm-7.07 0-2.121 2.12 2.12 2.122 2.122-2.121zm-7.07 0-2.122 2.12 2.121 2.122 2.121-2.121zm-7.073 0-2.121 2.12 2.121 2.122 2.121-2.121zm-7.07 0-2.121 2.12 2.12 2.122 2.122-2.121zm31.82 3.535-2.121 2.121 2.121 2.121 2.121-2.121zm-7.072 0-2.121 2.121 2.12 2.121 2.122-2.121zm-7.07 0-2.122 2.121 2.121 2.121 2.122-2.121zm-7.07 0-2.124 2.121 2.123 2.121 2.121-2.121zm-7.073 0-2.121 2.121 2.121 2.121 2.121-2.121zm31.82 3.535-2.12 2.121 2.12 2.121 2.121-2.12zm-7.072 0-2.121 2.121 2.121 2.121 2.123-2.12zm-7.07 0-2.121 2.121 2.12 2.121 2.122-2.12zm-7.07 0-2.122 2.121 2.121 2.121 2.121-2.12zm-7.073 0-2.121 2.121 2.121 2.121 2.121-2.12zm-7.07 0-2.121 2.121 2.12 2.121 2.122-2.12zm31.82 3.535-2.121 2.123 2.121 2.121 2.121-2.12zm-7.072 0-2.121 2.123 2.12 2.121 2.122-2.12zm-7.07 0-2.122 2.123 2.121 2.121 2.122-2.12zm-7.07 0-2.124 2.123 2.123 2.121 2.121-2.12zm-7.073 0-2.121 2.123 2.121 2.121 2.121-2.12zm31.82 3.537-2.12 2.121 2.12 2.121 2.121-2.12zm-7.072 0-2.121 2.121 2.121 2.121 2.123-2.12zm-7.07 0-2.121 2.121 2.12 2.121 2.122-2.12zm-7.07 0-2.122 2.121 2.121 2.121 2.121-2.12zm-7.073 0-2.121 2.121 2.121 2.121 2.121-2.12zm-7.07 0-2.121 2.121 2.12 2.121 2.122-2.12zm31.82 3.535-2.121 2.122 2.121 2.12 2.121-2.12zm-7.072 0-2.121 2.122 2.12 2.12 2.122-2.12zm-7.07 0-2.122 2.122 2.121 2.12 2.122-2.12zm-7.07 0-2.124 2.122 2.123 2.12 2.121-2.12zm-7.073 0-2.121 2.122 2.121 2.12 2.121-2.12zm31.82 3.536-2.12 2.12 2.12 2.122 2.121-2.121zm-7.072 0-2.121 2.12 2.121 2.122 2.123-2.121zm-7.07 0-2.121 2.12 2.12 2.122 2.122-2.121zm-7.07 0-2.122 2.12 2.121 2.122 2.121-2.121zm-7.073 0-2.121 2.12 2.121 2.122 2.121-2.121zm-7.07 0-2.121 2.12 2.12 2.122 2.122-2.121zm31.82 3.535-2.121 2.12 2.121 2.122 2.121-2.121zm-7.072 0-2.121 2.12 2.12 2.122 2.122-2.121zm-7.07 0-2.122 2.12 2.121 2.122 2.122-2.121zm-7.07 0-2.124 2.12 2.123 2.122 2.121-2.121zm-7.073 0-2.121 2.12 2.121 2.122 2.121-2.121zm31.82 3.535-2.12 2.123 2.12 2.121 2.121-2.121zm-7.072 0-2.121 2.123 2.121 2.121 2.123-2.121zm-7.07 0-2.121 2.123 2.12 2.121 2.122-2.121zm-7.07 0-2.122 2.123 2.121 2.121 2.121-2.121zm-7.073 0-2.121 2.123 2.121 2.121 2.121-2.121zm-7.07 0-2.121 2.123 2.12 2.121 2.122-2.121zm31.82 3.537-2.121 2.121 2.121 2.121 2.121-2.12zm-7.072 0-2.121 2.121 2.12 2.121 2.122-2.12zm-7.07 0-2.122 2.121 2.121 2.121 2.122-2.12zm-7.07 0-2.124 2.121 2.123 2.121 2.121-2.12zm-7.073 0-2.121 2.121 2.121 2.121 2.121-2.12zm31.82 3.535-2.12 2.121 2.12 2.121 2.121-2.12zm-7.072 0-2.121 2.121 2.121 2.121 2.123-2.12zm-7.07 0-2.121 2.121 2.12 2.121 2.122-2.12zm-7.07 0-2.122 2.121 2.121 2.121 2.121-2.12zm-7.073 0-2.121 2.121 2.121 2.121 2.121-2.12zm-7.07 0-2.121 2.121 2.12 2.121 2.122-2.12zm31.82 3.535-2.121 2.121 2.121 2.122 2.121-2.122zm-7.072 0-2.121 2.121 2.12 2.122 2.122-2.122zm-7.07 0-2.122 2.121 2.121 2.122 2.122-2.122zm-7.07 0-2.124 2.121 2.123 2.122 2.121-2.122zm-7.073 0-2.121 2.121 2.121 2.122 2.121-2.122zm31.82 3.536-2.12 2.12 2.12 2.122 2.121-2.121zm-7.072 0-2.121 2.12 2.121 2.122 2.123-2.121zm-7.07 0-2.121 2.12 2.12 2.122 2.122-2.121zm-7.07 0-2.122 2.12 2.121 2.122 2.121-2.121zm-7.073 0-2.121 2.12 2.121 2.122 2.121-2.121zm-7.07 0-2.121 2.12 2.12 2.122 2.122-2.121zm31.82 3.535-2.121 2.123 2.121 2.12 2.121-2.12zm-7.072 0-2.121 2.123 2.12 2.12 2.122-2.12zm-7.07 0-2.122 2.123 2.121 2.12 2.122-2.12zm-7.07 0-2.124 2.123 2.123 2.12 2.121-2.12zm-7.073 0-2.121 2.123 2.121 2.12 2.121-2.12z"
           style={{
+            display: "inline",
             fill: "url(#linearGradient14683)",
             stroke: "none",
             strokeWidth: 1.62485,

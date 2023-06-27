@@ -3,7 +3,7 @@ import aperture from "../components/svgs/tooltip/aperture-wheel.svg";
 import bscaf2 from "../components/svgs/tooltip/beamsplitter-caf2.svg";
 import bsznse from "../components/svgs/tooltip/beamsplitter-znse.svg";
 import fcc from "../components/svgs/tooltip/fixed-corner-cube.svg";
-import fm from "../components/svgs/tooltip/fixed-mirror.svg";
+import fm from "../components/svgs/tooltip/flat-mirror.svg";
 import gauge from "../components/svgs/tooltip/pressure-gauge.svg";
 import globar from "../components/svgs/tooltip/globar.svg";
 import insb from "../components/svgs/tooltip/insb.svg";
@@ -13,19 +13,14 @@ import mct from "../components/svgs/tooltip/mct.svg";
 import pm from "../components/svgs/tooltip/parabolic-mirror.svg";
 import pmh from "../components/svgs/tooltip/parabolic-mirror-hole.svg";
 import pump from "../components/svgs/tooltip/pump.svg";
-import sample from "../components/svgs/tooltip/sample-compartment.svg";
+import samplecaf2 from "../components/svgs/tooltip/sample-compartment-caf2.svg";
+import sampleznse from "../components/svgs/tooltip/sample-compartment-znse.svg";
 import tungsten from "../components/svgs/tooltip/tungsten.svg";
 
 const flatRotatableMirror = {
   image: fm,
   title: "Flat Rotatable Mirror",
   text: "Gold plated flat rotatable mirror that reflects radiation from the source to the parabolic mirror.",
-};
-
-const parabolicMirror = {
-  image: pm,
-  title: "Parabolic Mirror",
-  text: "Gold plated parabolic mirror that focuses reflected radiation onto the detector.",
 };
 
 const parabolicMirrorHole = {
@@ -50,12 +45,12 @@ export const toolTips = {
   "beamsplitter-caf2": {
     image: bscaf2,
     title: "Beamsplitter (AR_CaF₂)",
-    text: "TODO",
+    text: "AntiReflective (AR) coated calcium fluoride (CaF₂) beamsplitter, which has good transmittance and reflectance in the mid-to-near-infrared region.",
   },
   "beamsplitter-znse": {
     image: bsznse,
     title: "Beamsplitter (AR_ZnSe)",
-    text: "TODO",
+    text: "AntiReflective (AR) coated zinc selenide (ZnSe) beamsplitter, which has good transmittance and reflectance in the far-to-mid-infrared region.",
   },
 
   "fixed-corner-cube": {
@@ -77,8 +72,8 @@ export const toolTips = {
 
   "pressure-gauge": {
     image: gauge,
-    title: "Pressure Gauge",
-    text: "TODO",
+    title: "Manometer",
+    text: "Digital pressure gauge (0-2 bar).",
   },
   globar: {
     image: globar,
@@ -112,8 +107,16 @@ export const toolTips = {
   },
 
   // parabolic mirrors
-  "parabolic-mirror-1": parabolicMirror,
-  "parabolic-mirror-2": parabolicMirror,
+  "parabolic-mirror-1": {
+    image: pm,
+    title: "Parabolic Mirror",
+    text: "Gold plated parabolic mirror that focuses reflected radiation onto the aperture wheel.",
+  },
+  "parabolic-mirror-2": {
+    image: pm,
+    title: "Parabolic Mirror",
+    text: "Gold plated parabolic mirror that focuses reflected radiation onto the detector.",
+  },
 
   // parabolic mirrors with hole
   "parabolic-mirror-hole-1": parabolicMirrorHole,
@@ -124,11 +127,19 @@ export const toolTips = {
     title: "Rotary Pump",
     text: "The rotary pump is used to evacuate the sample cell. The exhaust gas flows to the rooftop.",
   },
-  "sample-compartment": {
-    image: sample,
-    title: "Sample Compartment",
-    text: "This is a pyrex sample cell that has two valves for controlling gas flow into (right) and out from (right) it. There are uncoated salt windows on either end which can be either zinc selenide (ZnSe), which has good transmittance in the far-to-mid-infrared region (in particular, below 1100 cm⁻¹), or calcium fluoride (CaF2), which has good transmittance in the mid-to-near-infrared region.",
+
+  // sample compartments
+  "sample-compartment-caf2": {
+    image: samplecaf2,
+    title: "Sample Compartment (CaF₂)",
+    text: "This is a pyrex sample cell that has two valves for controlling gas flow into (right) and out from (right) it. The uncoated salt windows on either end are calcium fluoride (CaF2), which has good transmittance in the mid-to-near-infrared region.",
   },
+  "sample-compartment-znse": {
+    image: sampleznse,
+    title: "Sample Compartment (ZnSe)",
+    text: "This is a pyrex sample cell that has two valves for controlling gas flow into (right) and out from (right) it. The uncoated salt windows on either end are zinc selenide (ZnSe), which has good transmittance in the far-to-mid-infrared region (in particular, below 1100 cm⁻¹).",
+  },
+
   tungsten: {
     image: tungsten,
     title: "Tungsten",
