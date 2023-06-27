@@ -1,7 +1,11 @@
 import Save from "../components/Save";
 import { Open } from "../components/Open";
 import Print from "../components/Print";
+import Toggle_Mode  from "../functions/fetchURL.js";
 
+
+// This file controls what shows up in the menu bar. To remove something
+// from the menu bar, either remove the code or comment it out
 export const menuItems = [
   {
     label: "File",
@@ -300,4 +304,14 @@ export const menuItems = [
       },
     ],
   },
+  {
+    label: "Developer Tools",
+    submenu: [
+      {
+        label: `Scan Delay Toggle`,
+        action: Toggle_Mode
+      },
+    ]
+  }
+  
 ];
