@@ -42,7 +42,6 @@ export default function InstrumentWindow() {
   ];
 
   const handleClick = (event) => {
-    console.log(event.target.parentElement.id);
     if (!badID.includes(event.target.parentElement.id)) {
       setElement(event.target.parentElement.id);
       setToggled(!toggled);
@@ -89,9 +88,9 @@ export default function InstrumentWindow() {
       />
 
       {element && (
-        <Dialog className="popup" onClose={handleClick} open={toggled}>
+        <Dialog className="popup-tooltip" onClose={handleClick} open={toggled}>
           <h2>{toolTips[element].title}</h2>
-          <img src={toolTips[element].image} className="example-image" alt="" />
+          <img src={toolTips[element].image} alt="" />
           <p>{toolTips[element].text}</p>
         </Dialog>
       )}
