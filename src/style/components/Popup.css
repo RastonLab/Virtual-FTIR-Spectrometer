@@ -4,13 +4,7 @@
   text-align: center;
   padding: 20px 0;
   text-decoration: underline;
-}
-
-.popup h2 {
-  font-family: "Montserrat";
-  text-align: center;
-  /* padding: 10px 0; */
-  text-decoration: underline;
+  background-color: pink;
 }
 
 .popup p {
