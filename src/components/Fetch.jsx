@@ -24,6 +24,17 @@ import {
   updateWaveMinSaved,
 } from "../features/parameterSlice";
 import { updateAbsorbanceData } from "../features/absorbanceDataSlice";
+import * as mode from "../functions/fetchURL.js";
+
+const OPD = {
+  1:1,
+  0.5:2,
+  0.25:4,
+  0.125:8,
+  0.0625:16,
+  0.03125:32,
+  0.015625:64
+}
 
 // this component reaches out to the flask server with user parameters and receives X and Y coordinates to graph
 export default function Fetch({ type, params, fetchURL, buttonText }) {
@@ -36,6 +47,7 @@ export default function Fetch({ type, params, fetchURL, buttonText }) {
     dispatch(activateProgress());
 
     let body = "";
+    let delay = 0; // Default value => immediate
 
     if (type.localeCompare("background") === 0 || type.localeCompare("spectrum") === 0) {
       // Allows the user to generate new absorbance data (there was a recursive issue in the Absorbance Plotly)
@@ -53,6 +65,13 @@ export default function Fetch({ type, params, fetchURL, buttonText }) {
         return;
       }
 
+      // Leaves delay as Immediate if DEVELOPER_MODE is false
+      if (!mode.DEVELOPER_MODE) {
+        // Calculate time the scan would take
+        delay = (OPD[params.resolution] * params.scan) * 1000 // 1000 is to convert to milliseconds
+      }
+     
+      
       // calculate medium if set to "Air"
       let mole = 1;
       let pressure = params.pressure;
@@ -129,7 +148,9 @@ export default function Fetch({ type, params, fetchURL, buttonText }) {
               console.log("not processed or background");
               break;
           }
-          dispatch(deactivateProgress());
+          setTimeout(() =>{
+            dispatch(deactivateProgress());
+          }, delay)
         }
         // display error message
         else {

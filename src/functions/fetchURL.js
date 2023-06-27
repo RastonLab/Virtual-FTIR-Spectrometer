@@ -8,3 +8,10 @@ export const BACKGROUND = "https://api.ftir.rastonlab.org/background";
 
 // export const SPECTRUM = "http://localhost:5000/spectrum";
 export const SPECTRUM = "https://api.ftir.rastonlab.org/spectrum";
+
+// If false, will add artificial delay for background and sample scans
+export let DEVELOPER_MODE = false;
+
+export default function Toggle_Mode() {
+    DEVELOPER_MODE = !DEVELOPER_MODE;
+}
