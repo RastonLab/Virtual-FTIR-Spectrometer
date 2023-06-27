@@ -40,7 +40,7 @@ export default function Dropdown({ dictionary, formLabel, store }) {
           value={store}
           label={formLabel}
           onChange={handleChange}
-          sx={{ maxWidth: "100px" }}
+          sx={{ maxWidth: "120px" }}
         >
           {dictionary.map((option) => (
             <MenuItem key={option.value} value={option.value}>
