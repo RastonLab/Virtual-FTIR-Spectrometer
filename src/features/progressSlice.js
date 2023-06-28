@@ -8,15 +8,13 @@ const progressSlice = createSlice({
   name: "progress",
   initialState,
   reducers: {
-    activateProgress: (state) => {
-      state.progress = true;
-    },
-    deactivateProgress: (state) => {
-      state.progress = false;
+    // payload is a boolean to activate or deactivate the spinner
+    setProgress: (state, { payload }) => {
+      state.progress = payload;
     },
   },
 });
 
-export const { activateProgress, deactivateProgress } = progressSlice.actions;
+export const { setProgress } = progressSlice.actions;
 
 export default progressSlice.reducer;

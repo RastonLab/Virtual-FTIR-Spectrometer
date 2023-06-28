@@ -8,10 +8,7 @@ import { useDispatch, useSelector } from "react-redux";
 
 // redux slices
 import { setError } from "../features/errorSlice";
-import {
-  activateProgress,
-  deactivateProgress,
-} from "../features/progressSlice";
+import { setProgress } from "../features/progressSlice";
 import { updateBackgroundData } from "../features/backgroundDataSlice";
 import { updateSpectrumData } from "../features/spectrumDataSlice";
 import { updatePeaksData } from "../features/peaksDataSlice";
@@ -39,8 +36,8 @@ export default function Fetch({ type, params, fetchURL, buttonText }) {
 
   const fetchLinode = async () => {
     // remove any errors (if existing) and start a progress spinner
-    dispatch(setError([false, "empty"]));
-    dispatch(activateProgress());
+    dispatch(setError([false, null]));
+    dispatch(setProgress(true));
 
     let body = "";
     let delay = 0; // Default value => immediate
@@ -57,7 +54,7 @@ export default function Fetch({ type, params, fetchURL, buttonText }) {
 
       // error occurred in checkParams, display error message to user
       if (errorMessage) {
-        dispatch(deactivateProgress());
+        dispatch(setProgress(false));
         dispatch(setError([true, String(errorMessage)]));
         return;
       }
@@ -103,7 +100,7 @@ export default function Fetch({ type, params, fetchURL, buttonText }) {
         threshold: params.threshold,
       });
     } else {
-      dispatch(deactivateProgress());
+      dispatch(setProgress(false));
       dispatch(setError([true, "Invalid Request Type"]));
       return;
     }
@@ -142,19 +139,19 @@ export default function Fetch({ type, params, fetchURL, buttonText }) {
               break;
           }
           setTimeout(() => {
-            dispatch(deactivateProgress());
+            dispatch(setProgress(false));
           }, delay);
         }
         // display error message
         else {
           console.log("not success");
-          dispatch(deactivateProgress());
+          dispatch(setProgress(false));
           dispatch(setError([true, String(data.text)]));
         }
       }
       // connection was unsuccessful
       else {
-        dispatch(deactivateProgress());
+        dispatch(setProgress(false));
         dispatch(setError([true, String(data.text)]));
       }
     } catch (error) {
@@ -170,7 +167,7 @@ export default function Fetch({ type, params, fetchURL, buttonText }) {
           console.log(error);
           break;
       }
-      dispatch(deactivateProgress());
+      dispatch(setProgress(false));
       dispatch(setError([true, errorMessage]));
     }
   };
