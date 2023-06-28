@@ -217,7 +217,7 @@ export const AbsorbancePlotly = forwardRef((props, ref) => {
           <div className="absorb-col">
             {/* Data Display */}
             {(progress && <div id="spinner" />)}
-            {!progress && !error && (
+            {peaksData && !progress && !error && (
                 <div id="data">
                   <h1>Absorbance Peaks</h1>
                   <div className="display">
