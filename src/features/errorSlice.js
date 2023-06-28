@@ -13,7 +13,6 @@ const errorSlice = createSlice({
     //   boolean: `true` or `false` to set or unset the error
     //   string: text associated with a particular error
     setError: (state, { payload }) => {
-      console.log(payload);
       state.error = payload[0];
       state.errorText = payload[1];
     },
