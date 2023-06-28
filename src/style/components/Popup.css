@@ -6,6 +6,12 @@
   text-decoration: underline;
 }
 
+.popup h2 {
+  font-family: "Montserrat";
+  text-align: center;
+  text-decoration: underline;
+}
+
 .popup p {
   font-family: "Roboto";
   pointer-events: none;
