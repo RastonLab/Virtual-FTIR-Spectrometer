@@ -10,7 +10,7 @@ const backgroundDataSlice = createSlice({
   name: "backgroundData",
   initialState,
   reducers: {
-    updateBackgroundData: (state, { payload }) => {
+    setBackgroundData: (state, { payload }) => {
       state.backgroundData = payload;
     },
 
@@ -24,7 +24,7 @@ const backgroundDataSlice = createSlice({
   },
 });
 
-export const { updateBackgroundData, setBackgroundWave } =
+export const { setBackgroundData, setBackgroundWave } =
   backgroundDataSlice.actions;
 
 export default backgroundDataSlice.reducer;

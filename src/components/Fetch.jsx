@@ -10,7 +10,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { setError } from "../features/errorSlice";
 import { setProgress } from "../features/progressSlice";
 import {
-  updateBackgroundData,
+  setBackgroundData,
   setBackgroundWave,
 } from "../features/backgroundDataSlice";
 import {
@@ -128,7 +128,7 @@ export default function Fetch({ type, params, fetchURL, buttonText }) {
               dispatch(setProcessedWave([params.waveMin, params.waveMax]));
               break;
             case "background":
-              dispatch(updateBackgroundData(data));
+              dispatch(setBackgroundData(data));
               dispatch(setBackgroundWave([params.waveMin, params.waveMax]));
               break;
             case "find_peaks":
