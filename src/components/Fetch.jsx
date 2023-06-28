@@ -9,10 +9,15 @@ import { useDispatch, useSelector } from "react-redux";
 // redux slices
 import { setError } from "../features/errorSlice";
 import { setProgress } from "../features/progressSlice";
-import { updateBackgroundData } from "../features/backgroundDataSlice";
-import { updateSpectrumData } from "../features/spectrumDataSlice";
+import {
+  updateBackgroundData,
+  setBackgroundWave,
+} from "../features/backgroundDataSlice";
+import {
+  updateSpectrumData,
+  setProcessedWave,
+} from "../features/spectrumDataSlice";
 import { updatePeaksData } from "../features/peaksDataSlice";
-import { setWaveSaved } from "../features/parameterSlice";
 import { updateAbsorbanceData } from "../features/absorbanceDataSlice";
 import * as mode from "../functions/fetchURL.js";
 
@@ -120,11 +125,11 @@ export default function Fetch({ type, params, fetchURL, buttonText }) {
           switch (type) {
             case "spectrum":
               dispatch(updateSpectrumData(data));
-              dispatch(setWaveSaved([params.waveMin, params.waveMax]));
+              dispatch(setProcessedWave([params.waveMin, params.waveMax]));
               break;
             case "background":
               dispatch(updateBackgroundData(data));
-              dispatch(setWaveSaved([params.waveMin, params.waveMax]));
+              dispatch(setBackgroundWave([params.waveMin, params.waveMax]));
               break;
             case "find_peaks":
               dispatch(updatePeaksData(data));

@@ -11,10 +11,10 @@ import "../style/components/Plotly.css";
 
 // this component uses the plotly library to graph processed spectrum data
 export const ProcessedPlotly = forwardRef((props, ref) => {
-  const { spectrumData } = useSelector((store) => store.spectrumData);
-  const { waveMaxSaved, waveMinSaved } = useSelector(
-    (store) => store.parameter
+  const { spectrumData, processedWaveMin, processedWaveMax } = useSelector(
+    (store) => store.spectrumData
   );
+
   if (spectrumData) {
     // https://github.com/suzil/radis-app/blob/main/frontend/src/components/CalcSpectrumPlot.tsx
     return (
@@ -35,7 +35,7 @@ export const ProcessedPlotly = forwardRef((props, ref) => {
               title: "Processed Spectrum",
               font: { family: "Roboto", color: "#000" },
               xaxis: {
-                range: [waveMinSaved, waveMaxSaved],
+                range: [processedWaveMin, processedWaveMax],
                 title: { text: "Wavenumber (cm⁻¹)" },
                 rangeslider: {
                   autorange: true,
