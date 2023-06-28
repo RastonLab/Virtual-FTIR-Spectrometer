@@ -9,7 +9,7 @@ import Typography from "@mui/material/Typography";
 import { useDispatch } from "react-redux";
 
 // redux slice
-import { updateScan } from "../../features/parameterSlice";
+import { setScan } from "../../features/parameterSlice";
 
 export default function SingleInputSlider({
   formLabel,
@@ -23,7 +23,7 @@ export default function SingleInputSlider({
   const handleSliderChange = (event, newValue) => {
     switch (formLabel) {
       case "Scans":
-        dispatch(updateScan(newValue));
+        dispatch(setScan(newValue));
         break;
       default:
     }
@@ -33,9 +33,7 @@ export default function SingleInputSlider({
     switch (formLabel) {
       case "Scans":
         dispatch(
-          updateScan(
-            event.target.value === "" ? "" : Number(event.target.value)
-          )
+          setScan(event.target.value === "" ? "" : Number(event.target.value))
         );
         break;
       default:
@@ -46,14 +44,14 @@ export default function SingleInputSlider({
     if (store < min) {
       switch (formLabel) {
         case "Scans":
-          dispatch(updateScan(min));
+          dispatch(setScan(min));
           break;
         default:
       }
     } else if (store > max) {
       switch (formLabel) {
         case "Scans":
-          dispatch(updateScan(max));
+          dispatch(setScan(max));
           break;
         default:
       }

@@ -6,7 +6,7 @@ import TextField from "@mui/material/TextField";
 import { useDispatch } from "react-redux";
 
 // redux store
-import { updatePressure } from "../../features/parameterSlice";
+import { setPressure } from "../../features/parameterSlice";
 
 export default function TextFieldUnit({
   formLabel,
@@ -23,7 +23,7 @@ export default function TextFieldUnit({
     switch (formLabel) {
       case "Pressure":
         dispatch(
-          updatePressure(
+          setPressure(
             event.target.value === "" ? "" : Number(event.target.value)
           )
         );

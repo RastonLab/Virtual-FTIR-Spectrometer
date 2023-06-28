@@ -8,18 +8,18 @@ import { setError } from "../features/errorSlice";
 import { updateBackgroundData } from "../features/backgroundDataSlice";
 import { updateSpectrumData } from "../features/spectrumDataSlice";
 import {
-  updateBeamsplitter,
-  updateDetector,
-  updateMedium,
-  updateMolecule,
-  updatePressure,
-  updateResolution,
-  updateScan,
-  updateSource,
-  updateWaveMax,
-  updateWaveMin,
-  updateWindow,
-  updateZeroFill,
+  setBeamsplitter,
+  setDetector,
+  setMedium,
+  setMolecule,
+  setPressure,
+  setResolution,
+  setScan,
+  setSource,
+  setWaveMax,
+  setWaveMin,
+  setWindow,
+  setZeroFill,
 } from "../features/parameterSlice";
 
 // style
@@ -77,18 +77,18 @@ export const Open = () => {
       }
 
       // Load parameters into the store
-      dispatch(updateWaveMin(parseFloat(parameters[0])));
-      dispatch(updateWaveMax(parseFloat(parameters[1])));
-      dispatch(updateMolecule(parameters[2]));
-      dispatch(updatePressure(parseFloat(parameters[3])));
-      dispatch(updateResolution(parseFloat(parameters[4])));
-      dispatch(updateScan(parseFloat(parameters[5])));
-      dispatch(updateZeroFill(parseFloat(parameters[6])));
-      dispatch(updateSource(parseFloat(parameters[7])));
-      dispatch(updateBeamsplitter(parameters[8]));
-      dispatch(updateWindow(parameters[9]));
-      dispatch(updateDetector(parameters[10]));
-      dispatch(updateMedium(parameters[11]));
+      dispatch(setWaveMin(parseFloat(parameters[0])));
+      dispatch(setWaveMax(parseFloat(parameters[1])));
+      dispatch(setMolecule(parameters[2]));
+      dispatch(setPressure(parseFloat(parameters[3])));
+      dispatch(setResolution(parseFloat(parameters[4])));
+      dispatch(setScan(parseFloat(parameters[5])));
+      dispatch(setZeroFill(parseFloat(parameters[6])));
+      dispatch(setSource(parseFloat(parameters[7])));
+      dispatch(setBeamsplitter(parameters[8]));
+      dispatch(setWindow(parameters[9]));
+      dispatch(setDetector(parameters[10]));
+      dispatch(setMedium(parameters[11]));
 
       const xData = [];
       const yData = [];

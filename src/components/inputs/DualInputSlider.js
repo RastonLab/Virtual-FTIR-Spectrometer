@@ -8,7 +8,7 @@ import Typography from "@mui/material/Typography";
 import { useDispatch } from "react-redux";
 
 // redux slice
-import { updateWaveMin, updateWaveMax } from "../../features/parameterSlice";
+import { setWaveMin, setWaveMax } from "../../features/parameterSlice";
 
 export default function DualInputSlider({
   formLabel,
@@ -23,8 +23,8 @@ export default function DualInputSlider({
   const handleSliderChange = (event, newValue) => {
     switch (formLabel) {
       case "Wavenumber range (cm⁻¹)":
-        dispatch(updateWaveMin(newValue[0]));
-        dispatch(updateWaveMax(newValue[1]));
+        dispatch(setWaveMin(newValue[0]));
+        dispatch(setWaveMax(newValue[1]));
         break;
       default:
     }
@@ -34,7 +34,7 @@ export default function DualInputSlider({
     switch (formLabel) {
       case "Wavenumber range (cm⁻¹)":
         dispatch(
-          updateWaveMin(
+          setWaveMin(
             event.target.value === "" ? "" : Number(event.target.value)
           )
         );
@@ -47,7 +47,7 @@ export default function DualInputSlider({
     switch (formLabel) {
       case "Wavenumber range (cm⁻¹)":
         dispatch(
-          updateWaveMax(
+          setWaveMax(
             event.target.value === "" ? "" : Number(event.target.value)
           )
         );
@@ -63,7 +63,7 @@ export default function DualInputSlider({
     if (storeMin < min) {
       switch (formLabel) {
         case "Wavenumber range (cm⁻¹)":
-          dispatch(updateWaveMin(min));
+          dispatch(setWaveMin(min));
           break;
         default:
       }
@@ -71,7 +71,7 @@ export default function DualInputSlider({
     if (storeMax > max) {
       switch (formLabel) {
         case "Wavenumber range (cm⁻¹)":
-          dispatch(updateWaveMax(max));
+          dispatch(setWaveMax(max));
           break;
         default:
       }

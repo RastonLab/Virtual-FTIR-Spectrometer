@@ -12,10 +12,7 @@ import { setProgress } from "../features/progressSlice";
 import { updateBackgroundData } from "../features/backgroundDataSlice";
 import { updateSpectrumData } from "../features/spectrumDataSlice";
 import { updatePeaksData } from "../features/peaksDataSlice";
-import {
-  updateWaveMaxSaved,
-  updateWaveMinSaved,
-} from "../features/parameterSlice";
+import { setWaveSaved } from "../features/parameterSlice";
 import { updateAbsorbanceData } from "../features/absorbanceDataSlice";
 import * as mode from "../functions/fetchURL.js";
 
@@ -123,13 +120,11 @@ export default function Fetch({ type, params, fetchURL, buttonText }) {
           switch (type) {
             case "spectrum":
               dispatch(updateSpectrumData(data));
-              dispatch(updateWaveMinSaved(params.waveMin));
-              dispatch(updateWaveMaxSaved(params.waveMax));
+              dispatch(setWaveSaved([params.waveMin, params.waveMax]));
               break;
             case "background":
               dispatch(updateBackgroundData(data));
-              dispatch(updateWaveMinSaved(params.waveMin));
-              dispatch(updateWaveMaxSaved(params.waveMax));
+              dispatch(setWaveSaved([params.waveMin, params.waveMax]));
               break;
             case "find_peaks":
               dispatch(updatePeaksData(data));
