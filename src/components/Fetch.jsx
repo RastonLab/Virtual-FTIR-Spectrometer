@@ -9,10 +9,7 @@ import { useDispatch, useSelector } from "react-redux";
 // redux slices
 import { setError } from "../features/errorSlice";
 import { setProgress } from "../features/progressSlice";
-import {
-  setBackgroundData,
-  setBackgroundWave,
-} from "../features/backgroundDataSlice";
+import { setBackgroundData } from "../features/backgroundDataSlice";
 import { setSpectrumData } from "../features/spectrumDataSlice";
 import { updatePeaksData } from "../features/peaksDataSlice";
 import { updateAbsorbanceData } from "../features/absorbanceDataSlice";
@@ -124,8 +121,9 @@ export default function Fetch({ type, params, fetchURL, buttonText }) {
               dispatch(setSpectrumData([data, params.waveMin, params.waveMax]));
               break;
             case "background":
-              dispatch(setBackgroundData(data));
-              dispatch(setBackgroundWave([params.waveMin, params.waveMax]));
+              dispatch(
+                setBackgroundData([data, params.waveMin, params.waveMax])
+              );
               break;
             case "find_peaks":
               dispatch(updatePeaksData(data));

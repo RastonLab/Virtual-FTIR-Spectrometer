@@ -10,21 +10,18 @@ const backgroundDataSlice = createSlice({
   name: "backgroundData",
   initialState,
   reducers: {
-    setBackgroundData: (state, { payload }) => {
-      state.backgroundData = payload;
-    },
-
-    // payload is a list [number, number]
+    // payload is a list [object, number, number]
+    //   object: x and y coordinates
     //   number: waveMin
     //   number: waveMax
-    setBackgroundWave: (state, { payload }) => {
-      state.backgroundWaveMin = payload[0];
-      state.backgroundWaveMax = payload[1];
+    setBackgroundData: (state, { payload }) => {
+      state.backgroundData = payload[0];
+      state.backgroundWaveMin = payload[1];
+      state.backgroundWaveMax = payload[2];
     },
   },
 });
 
-export const { setBackgroundData, setBackgroundWave } =
-  backgroundDataSlice.actions;
+export const { setBackgroundData } = backgroundDataSlice.actions;
 
 export default backgroundDataSlice.reducer;
