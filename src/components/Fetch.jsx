@@ -12,7 +12,7 @@ import { setProgress } from "../features/progressSlice";
 import { setBackgroundData } from "../features/backgroundDataSlice";
 import { setSpectrumData } from "../features/spectrumDataSlice";
 import { updatePeaksData } from "../features/peaksDataSlice";
-import { updateAbsorbanceData } from "../features/absorbanceDataSlice";
+import { setAbsorbanceData } from "../features/absorbanceDataSlice";
 import * as mode from "../functions/fetchURL.js";
 
 const OPD = {
@@ -43,7 +43,7 @@ export default function Fetch({ type, params, fetchURL, buttonText }) {
       type.localeCompare("spectrum") === 0
     ) {
       // Allows the user to generate new absorbance data (there was a recursive issue in the Absorbance Plotly)
-      dispatch(updateAbsorbanceData(null));
+      dispatch(setAbsorbanceData(null));
 
       // validate the user parameters
       let errorMessage = checkParams(params);

@@ -15,7 +15,7 @@ import TextField from "@mui/material/TextField";
 import { useSelector, useDispatch } from "react-redux";
 
 // redux slice
-import { updateAbsorbanceData } from "../features/absorbanceDataSlice";
+import { setAbsorbanceData } from "../features/absorbanceDataSlice";
 
 // style
 import "../style/components/Plotly.css";
@@ -55,7 +55,7 @@ export const AbsorbancePlotly = forwardRef((props, ref) => {
     }
 
     dispatch(
-      updateAbsorbanceData({
+      setAbsorbanceData({
         x: spectrumData.x,
         y: newY,
       })
