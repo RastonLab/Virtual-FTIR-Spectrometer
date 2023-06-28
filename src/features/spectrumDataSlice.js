@@ -10,7 +10,7 @@ const spectrumDataSlice = createSlice({
   name: "spectrumData",
   initialState,
   reducers: {
-    updateSpectrumData: (state, { payload }) => {
+    setSpectrumData: (state, { payload }) => {
       state.spectrumData = payload;
     },
 
@@ -24,7 +24,6 @@ const spectrumDataSlice = createSlice({
   },
 });
 
-export const { updateSpectrumData, setProcessedWave } =
-  spectrumDataSlice.actions;
+export const { setSpectrumData, setProcessedWave } = spectrumDataSlice.actions;
 
 export default spectrumDataSlice.reducer;
