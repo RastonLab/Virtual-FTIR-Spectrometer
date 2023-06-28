@@ -9,9 +9,9 @@ import { useDispatch } from "react-redux";
 
 // redux slice
 import {
-  updateMolecule,
-  updateResolution,
-  updateZeroFill,
+  setMolecule,
+  setResolution,
+  setZeroFill,
 } from "../../features/parameterSlice";
 
 export default function Dropdown({ dictionary, formLabel, store }) {
@@ -20,13 +20,13 @@ export default function Dropdown({ dictionary, formLabel, store }) {
   const handleChange = (event) => {
     switch (formLabel) {
       case "Molecule":
-        dispatch(updateMolecule(event.target.value));
+        dispatch(setMolecule(event.target.value));
         break;
       case "Resolution":
-        dispatch(updateResolution(event.target.value));
+        dispatch(setResolution(event.target.value));
         break;
       case "Zero Fill":
-        dispatch(updateZeroFill(event.target.value));
+        dispatch(setZeroFill(event.target.value));
         break;
       default:
     }

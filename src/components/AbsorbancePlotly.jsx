@@ -15,7 +15,7 @@ import TextField from "@mui/material/TextField";
 import { useSelector, useDispatch } from "react-redux";
 
 // redux slice
-import { updateAbsorbanceData } from "../features/absorbanceDataSlice";
+import { setAbsorbanceData } from "../features/absorbanceDataSlice";
 
 // style
 import "../style/components/Plotly.css";
@@ -26,9 +26,8 @@ export const AbsorbancePlotly = forwardRef((props, ref) => {
   const { absorbanceData } = useSelector((store) => store.absorbanceData);
   const { backgroundData } = useSelector((store) => store.backgroundData);
   const { peaksData } = useSelector((store) => store.peaksData);
-  const { spectrumData } = useSelector((store) => store.spectrumData);
-  const { waveMaxSaved, waveMinSaved } = useSelector(
-    (store) => store.parameter
+  const { spectrumData, processedWaveMin, processedWaveMax } = useSelector(
+    (store) => store.spectrumData
   );
   const { progress } = useSelector((store) => store.progress);
   const { error, errorText } = useSelector((store) => store.error);
@@ -36,8 +35,8 @@ export const AbsorbancePlotly = forwardRef((props, ref) => {
   const dispatch = useDispatch();
 
   const [threshold, setThreshold] = useState(0);
-  const [lowerBound, setLowerBound] = useState(waveMinSaved);
-  const [upperBound, setUpperBound] = useState(waveMaxSaved);
+  const [lowerBound, setLowerBound] = useState(processedWaveMin);
+  const [upperBound, setUpperBound] = useState(processedWaveMax);
 
   if (spectrumData && backgroundData && !absorbanceData) {
     const newY = [spectrumData.x.length];
@@ -56,7 +55,7 @@ export const AbsorbancePlotly = forwardRef((props, ref) => {
     }
 
     dispatch(
-      updateAbsorbanceData({
+      setAbsorbanceData({
         x: spectrumData.x,
         y: newY,
       })
@@ -84,7 +83,7 @@ export const AbsorbancePlotly = forwardRef((props, ref) => {
               title: "Absorbance Spectrum",
               font: { family: "Roboto", color: "#000" },
               xaxis: {
-                range: [waveMinSaved, waveMaxSaved],
+                range: [processedWaveMin, processedWaveMax],
                 title: { text: "Wavenumber (cm⁻¹)" },
                 rangeslider: {
                   autorange: true,
@@ -131,8 +130,8 @@ export const AbsorbancePlotly = forwardRef((props, ref) => {
                   }}
                   InputProps={{
                     inputProps: {
-                      min: waveMinSaved,
-                      max: waveMaxSaved,
+                      min: processedWaveMin,
+                      max: processedWaveMax,
                       // step: 0.0001,
                     },
                   }}
@@ -159,9 +158,8 @@ export const AbsorbancePlotly = forwardRef((props, ref) => {
                   }}
                   InputProps={{
                     inputProps: {
-                      min: waveMinSaved,
-                      max: waveMaxSaved,
-                      // step: 0.0001,
+                      min: processedWaveMin,
+                      max: processedWaveMax,
                     },
                   }}
                 />
@@ -216,28 +214,27 @@ export const AbsorbancePlotly = forwardRef((props, ref) => {
           {/* Displays data from the server if there were no errors */}
           <div className="absorb-col">
             {/* Data Display */}
-            {(progress && <div id="spinner" />)}
+            {progress && <div id="spinner" />}
             {peaksData && !progress && !error && (
-                <div id="data">
-                  <h1>Absorbance Peaks</h1>
-                  <div className="display">
-                    {Object.keys(peaksData.peaks).map((key) => {
-                      return (
-                        <p id="peaks">{`Peak: ${key} Intensity: ${peaksData.peaks[key]}`}</p>
-                      );
-                    })}
-                  </div>
+              <div id="data">
+                <h1>Absorbance Peaks</h1>
+                <div className="display">
+                  {Object.keys(peaksData.peaks).map((key) => {
+                    return (
+                      <p id="peaks">{`Peak: ${key} Intensity: ${peaksData.peaks[key]}`}</p>
+                    );
+                  })}
                 </div>
-              )
-            }
+              </div>
+            )}
           </div>
           {/* End Data Display */}
 
           {/* Error Display */}
           {error && (
-          <div id="error">
-            <p style={{ fontSize: 30 }}>{errorText}</p>
-          </div>
+            <div id="error">
+              <p style={{ fontSize: 30 }}>{errorText}</p>
+            </div>
           )}
           {/* End Error Display */}
         </div>

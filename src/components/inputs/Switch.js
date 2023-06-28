@@ -12,11 +12,11 @@ import { useDispatch } from "react-redux";
 
 // redux slice
 import {
-  updateBeamsplitter,
-  updateDetector,
-  updateMedium,
-  updateSource,
-  updateWindow,
+  setBeamsplitter,
+  setDetector,
+  setMedium,
+  setSource,
+  setWindow,
 } from "../../features/parameterSlice";
 
 export default function Switch({
@@ -33,28 +33,28 @@ export default function Switch({
     switch (formLabel) {
       case "Source":
         newAlignment
-          ? dispatch(updateSource(optionTwoData))
-          : dispatch(updateSource(optionOneData));
+          ? dispatch(setSource(optionTwoData))
+          : dispatch(setSource(optionOneData));
         break;
       case "Beamsplitter":
         newAlignment
-          ? dispatch(updateBeamsplitter(optionTwoData))
-          : dispatch(updateBeamsplitter(optionOneData));
+          ? dispatch(setBeamsplitter(optionTwoData))
+          : dispatch(setBeamsplitter(optionOneData));
         break;
       case "Cell Window":
         newAlignment
-          ? dispatch(updateWindow(optionTwoData))
-          : dispatch(updateWindow(optionOneData));
+          ? dispatch(setWindow(optionTwoData))
+          : dispatch(setWindow(optionOneData));
         break;
       case "Detector":
         newAlignment
-          ? dispatch(updateDetector(optionTwoData))
-          : dispatch(updateDetector(optionOneData));
+          ? dispatch(setDetector(optionTwoData))
+          : dispatch(setDetector(optionOneData));
         break;
       case "Medium":
         newAlignment
-          ? dispatch(updateMedium(optionTwoData))
-          : dispatch(updateMedium(optionOneData));
+          ? dispatch(setMedium(optionTwoData))
+          : dispatch(setMedium(optionOneData));
         break;
       default:
     }

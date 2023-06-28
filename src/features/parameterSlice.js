@@ -21,66 +21,63 @@ const parameterSlice = createSlice({
   name: "parameter",
   initialState,
   reducers: {
-    updateBeamsplitter: (state, { payload }) => {
+    setBeamsplitter: (state, { payload }) => {
       state.beamsplitter = payload;
     },
-    updateDetector: (state, { payload }) => {
+    setDetector: (state, { payload }) => {
       state.detector = payload;
     },
-    updateMedium: (state, { payload }) => {
+    setMedium: (state, { payload }) => {
       state.medium = payload;
     },
-    updateMolecule: (state, { payload }) => {
+    setMolecule: (state, { payload }) => {
       state.molecule = payload;
     },
-    updatePressure: (state, { payload }) => {
+    setPressure: (state, { payload }) => {
       state.pressure = payload;
     },
-    updateResolution: (state, { payload }) => {
+    setResolution: (state, { payload }) => {
       state.resolution = payload;
     },
-    updateScan: (state, { payload }) => {
+    setScan: (state, { payload }) => {
       state.scan = payload;
     },
-    updateSource: (state, { payload }) => {
+    setSource: (state, { payload }) => {
       state.source = payload;
     },
-    updateWaveMin: (state, { payload }) => {
+    setWaveMin: (state, { payload }) => {
       state.waveMin = payload;
     },
-    updateWaveMinSaved: (state, { payload }) => {
-      state.waveMinSaved = payload;
-    },
-    updateWaveMax: (state, { payload }) => {
+    setWaveMax: (state, { payload }) => {
       state.waveMax = payload;
     },
-    updateWaveMaxSaved: (state, { payload }) => {
-      state.waveMaxSaved = payload;
+    setWaveSaved: (state, { payload }) => {
+      state.waveMinSaved = payload[0];
+      state.waveMaxSaved = payload[1];
     },
-    updateWindow: (state, { payload }) => {
+    setWindow: (state, { payload }) => {
       state.window = payload;
     },
-    updateZeroFill: (state, { payload }) => {
+    setZeroFill: (state, { payload }) => {
       state.zeroFill = payload;
     },
   },
 });
 
 export const {
-  updateBeamsplitter,
-  updateDetector,
-  updateMedium,
-  updateMolecule,
-  updatePressure,
-  updateResolution,
-  updateScan,
-  updateSource,
-  updateWaveMin,
-  updateWaveMinSaved,
-  updateWaveMax,
-  updateWaveMaxSaved,
-  updateWindow,
-  updateZeroFill,
+  setBeamsplitter,
+  setDetector,
+  setMedium,
+  setMolecule,
+  setPressure,
+  setResolution,
+  setScan,
+  setSource,
+  setWaveMin,
+  setWaveMax,
+  setWaveSaved,
+  setWindow,
+  setZeroFill,
 } = parameterSlice.actions;
 
 export default parameterSlice.reducer;

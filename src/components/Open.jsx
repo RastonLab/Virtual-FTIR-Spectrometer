@@ -4,12 +4,23 @@ import { useState } from "react";
 import { useDispatch } from "react-redux";
 
 // redux slices
-import { deactivateError } from "../features/errorSlice";
-import { updateBackgroundData } from "../features/backgroundDataSlice";
-import { updateSpectrumData } from "../features/spectrumDataSlice";
-import { updateBeamsplitter, updateDetector, updateMedium, updateMolecule,
-  updatePressure, updateResolution, updateScan, updateSource, updateWaveMax,
-  updateWaveMin, updateWindow, updateZeroFill } from "../features/parameterSlice";
+import { setError } from "../features/errorSlice";
+import { setBackgroundData } from "../features/backgroundDataSlice";
+import { setSpectrumData } from "../features/spectrumDataSlice";
+import {
+  setBeamsplitter,
+  setDetector,
+  setMedium,
+  setMolecule,
+  setPressure,
+  setResolution,
+  setScan,
+  setSource,
+  setWaveMax,
+  setWaveMin,
+  setWindow,
+  setZeroFill,
+} from "../features/parameterSlice";
 
 // style
 import "../style/components/Open.css";
@@ -52,10 +63,8 @@ export const Open = () => {
     let specType = rawData.substring(0, index);
 
     rawData = rawData.substring(index + 1);
-    
 
     if (specType.includes("Sample") || specType.includes("Background")) {
-
       // Gathers Parameters
       const parameters = [];
       while (parmLine.indexOf(":") > 0) {
@@ -67,53 +76,60 @@ export const Open = () => {
         parameters.push(param);
       }
 
-      
       // Load parameters into the store
-      dispatch(updateWaveMin(parseFloat(parameters[0])));
-      dispatch(updateWaveMax(parseFloat(parameters[1])));
-      dispatch(updateMolecule(parameters[2]));
-      dispatch(updatePressure(parseFloat(parameters[3])));
-      dispatch(updateResolution(parseFloat(parameters[4])));
-      dispatch(updateScan(parseFloat(parameters[5])));
-      dispatch(updateZeroFill(parseFloat(parameters[6])));
-      dispatch(updateSource(parseFloat(parameters[7])));
-      dispatch(updateBeamsplitter(parameters[8]));
-      dispatch(updateWindow(parameters[9]));
-      dispatch(updateDetector(parameters[10]));
-      dispatch(updateMedium(parameters[11]));
+      dispatch(setWaveMin(parseFloat(parameters[0])));
+      dispatch(setWaveMax(parseFloat(parameters[1])));
+      dispatch(setMolecule(parameters[2]));
+      dispatch(setPressure(parseFloat(parameters[3])));
+      dispatch(setResolution(parseFloat(parameters[4])));
+      dispatch(setScan(parseFloat(parameters[5])));
+      dispatch(setZeroFill(parseFloat(parameters[6])));
+      dispatch(setSource(parseFloat(parameters[7])));
+      dispatch(setBeamsplitter(parameters[8]));
+      dispatch(setWindow(parameters[9]));
+      dispatch(setDetector(parameters[10]));
+      dispatch(setMedium(parameters[11]));
 
       const xData = [];
       const yData = [];
 
       while (index >= 0) {
-
         index = rawData.indexOf("\n");
         let line = rawData.substring(0, index);
 
         let comma = line.indexOf(",");
         let x = line.substring(1, comma); // Also removes " charater from the begining of both strings to allow for number parsing
         let y = line.substring(comma + 2);
-        
+
         xData.push(parseFloat(x));
         yData.push(parseFloat(y));
 
         rawData = rawData.substring(index + 1);
       }
 
-
       if (specType.includes("Background")) {
-        dispatch(updateBackgroundData({ x: xData, y: yData }));
+        dispatch(
+          setBackgroundData([
+            { x: xData, y: yData },
+            parseFloat(parameters[0]),
+            parseFloat(parameters[1]),
+          ])
+        );
       } else if (specType.includes("Sample")) {
-        dispatch(updateSpectrumData({ x: xData, y: yData }));
+        dispatch(
+          setSpectrumData([
+            { x: xData, y: yData },
+            parseFloat(parameters[0]),
+            parseFloat(parameters[1]),
+          ])
+        );
       }
-    
-      dispatch(deactivateError);
+
+      dispatch(setError([false, null]));
       toggleSucess(true);
     } else {
       toggleBadFile(true);
     }
-
-    
   };
 
   return (

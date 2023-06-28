@@ -11,9 +11,8 @@ import "../style/components/Plotly.css";
 
 // this component uses the plotly library to graph background sample data
 export default function BackgroundPlotly() {
-  const { backgroundData } = useSelector((store) => store.backgroundData);
-  const { waveMaxSaved, waveMinSaved } = useSelector(
-    (store) => store.parameter
+  const { backgroundData, backgroundWaveMin, backgroundWaveMax } = useSelector(
+    (store) => store.backgroundData
   );
 
   if (backgroundData) {
@@ -35,7 +34,7 @@ export default function BackgroundPlotly() {
               title: "Background Spectrum",
               font: { family: "Roboto", color: "#000" },
               xaxis: {
-                range: [waveMinSaved, waveMaxSaved],
+                range: [backgroundWaveMin, backgroundWaveMax],
                 title: { text: "Wavenumber (cm⁻¹)" },
                 rangeslider: {
                   autorange: true,

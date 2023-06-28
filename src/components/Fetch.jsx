@@ -7,34 +7,23 @@ import checkParams from "../functions/checkParams";
 import { useDispatch, useSelector } from "react-redux";
 
 // redux slices
-import {
-  activateError,
-  deactivateError,
-  updateErrorText,
-} from "../features/errorSlice";
-import {
-  activateProgress,
-  deactivateProgress,
-} from "../features/progressSlice";
-import { updateBackgroundData } from "../features/backgroundDataSlice";
-import { updateSpectrumData } from "../features/spectrumDataSlice";
-import { updatePeaksData } from "../features/peaksDataSlice";
-import {
-  updateWaveMaxSaved,
-  updateWaveMinSaved,
-} from "../features/parameterSlice";
-import { updateAbsorbanceData } from "../features/absorbanceDataSlice";
+import { setError } from "../features/errorSlice";
+import { setProgress } from "../features/progressSlice";
+import { setBackgroundData } from "../features/backgroundDataSlice";
+import { setSpectrumData } from "../features/spectrumDataSlice";
+import { setPeaksData } from "../features/peaksDataSlice";
+import { setAbsorbanceData } from "../features/absorbanceDataSlice";
 import * as mode from "../functions/fetchURL.js";
 
 const OPD = {
-  1:1,
-  0.5:2,
-  0.25:4,
-  0.125:8,
-  0.0625:16,
-  0.03125:32,
-  0.015625:64
-}
+  1: 1,
+  0.5: 2,
+  0.25: 4,
+  0.125: 8,
+  0.0625: 16,
+  0.03125: 32,
+  0.015625: 64,
+};
 
 // this component reaches out to the flask server with user parameters and receives X and Y coordinates to graph
 export default function Fetch({ type, params, fetchURL, buttonText }) {
@@ -43,35 +32,35 @@ export default function Fetch({ type, params, fetchURL, buttonText }) {
 
   const fetchLinode = async () => {
     // remove any errors (if existing) and start a progress spinner
-    dispatch(deactivateError());
-    dispatch(activateProgress());
+    dispatch(setError([false, null]));
+    dispatch(setProgress(true));
 
     let body = "";
     let delay = 0; // Default value => immediate
 
-    if (type.localeCompare("background") === 0 || type.localeCompare("spectrum") === 0) {
+    if (
+      type.localeCompare("background") === 0 ||
+      type.localeCompare("spectrum") === 0
+    ) {
       // Allows the user to generate new absorbance data (there was a recursive issue in the Absorbance Plotly)
-      dispatch(updateAbsorbanceData(null));
-
+      dispatch(setAbsorbanceData(null));
 
       // validate the user parameters
       let errorMessage = checkParams(params);
 
       // error occurred in checkParams, display error message to user
       if (errorMessage) {
-        dispatch(deactivateProgress());
-        dispatch(activateError());
-        dispatch(updateErrorText(String(errorMessage)));
+        dispatch(setProgress(false));
+        dispatch(setError([true, String(errorMessage)]));
         return;
       }
 
       // Leaves delay as Immediate if DEVELOPER_MODE is false
       if (!mode.DEVELOPER_MODE) {
         // Calculate time the scan would take
-        delay = (OPD[params.resolution] * params.scan) * 1000 // 1000 is to convert to milliseconds
+        delay = OPD[params.resolution] * params.scan * 1000; // 1000 is to convert to milliseconds
       }
-     
-      
+
       // calculate medium if set to "Air"
       let mole = 1;
       let pressure = params.pressure;
@@ -98,7 +87,6 @@ export default function Fetch({ type, params, fetchURL, buttonText }) {
         window: params.window,
         zeroFill: params.zeroFill,
       });
-
     } else if (type.localeCompare("find_peaks") === 0) {
       body = JSON.stringify({
         x: params.x,
@@ -107,11 +95,9 @@ export default function Fetch({ type, params, fetchURL, buttonText }) {
         upperbound: params.upperBound,
         threshold: params.threshold,
       });
-
     } else {
-      dispatch(deactivateProgress());
-      dispatch(activateError());
-      dispatch(updateErrorText("Invalid Request Type"));
+      dispatch(setProgress(false));
+      dispatch(setError([true, "Invalid Request Type"]));
       return;
     }
 
@@ -132,39 +118,35 @@ export default function Fetch({ type, params, fetchURL, buttonText }) {
         if (data.success) {
           switch (type) {
             case "spectrum":
-              dispatch(updateSpectrumData(data));
-              dispatch(updateWaveMinSaved(params.waveMin));
-              dispatch(updateWaveMaxSaved(params.waveMax));
+              dispatch(setSpectrumData([data, params.waveMin, params.waveMax]));
               break;
             case "background":
-              dispatch(updateBackgroundData(data));
-              dispatch(updateWaveMinSaved(params.waveMin));
-              dispatch(updateWaveMaxSaved(params.waveMax));
+              dispatch(
+                setBackgroundData([data, params.waveMin, params.waveMax])
+              );
               break;
             case "find_peaks":
-              dispatch(updatePeaksData(data));
+              dispatch(setPeaksData(data));
               break;
             default:
               console.log("not processed or background");
               break;
           }
-          setTimeout(() =>{
-            dispatch(deactivateProgress());
-          }, delay)
+          setTimeout(() => {
+            dispatch(setProgress(false));
+          }, delay);
         }
         // display error message
         else {
           console.log("not success");
-          dispatch(deactivateProgress());
-          dispatch(activateError());
-          dispatch(updateErrorText(String(data.text)));
+          dispatch(setProgress(false));
+          dispatch(setError([true, String(data.text)]));
         }
       }
       // connection was unsuccessful
       else {
-        dispatch(deactivateProgress());
-        dispatch(activateError());
-        dispatch(updateErrorText(String(data.text)));
+        dispatch(setProgress(false));
+        dispatch(setError([true, String(data.text)]));
       }
     } catch (error) {
       // error occurred when reaching out to server
@@ -179,9 +161,8 @@ export default function Fetch({ type, params, fetchURL, buttonText }) {
           console.log(error);
           break;
       }
-      dispatch(deactivateProgress());
-      dispatch(activateError());
-      dispatch(updateErrorText(errorMessage));
+      dispatch(setProgress(false));
+      dispatch(setError([true, errorMessage]));
     }
   };
 

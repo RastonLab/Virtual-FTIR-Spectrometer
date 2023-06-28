@@ -9,19 +9,16 @@ const errorSlice = createSlice({
   name: "error",
   initialState,
   reducers: {
-    activateError: (state) => {
-      state.error = true;
-    },
-    deactivateError: (state) => {
-      state.error = false;
-    },
-    updateErrorText: (state, { payload }) => {
-      state.errorText = payload;
+    // payload is a list [boolean, string]
+    //   boolean: `true` or `false` to set or unset the error
+    //   string: text associated with a particular error
+    setError: (state, { payload }) => {
+      state.error = payload[0];
+      state.errorText = payload[1];
     },
   },
 });
 
-export const { activateError, deactivateError, updateErrorText } =
-  errorSlice.actions;
+export const { setError } = errorSlice.actions;
 
 export default errorSlice.reducer;
