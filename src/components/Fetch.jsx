@@ -11,7 +11,7 @@ import { setError } from "../features/errorSlice";
 import { setProgress } from "../features/progressSlice";
 import { setBackgroundData } from "../features/backgroundDataSlice";
 import { setSpectrumData } from "../features/spectrumDataSlice";
-import { updatePeaksData } from "../features/peaksDataSlice";
+import { setPeaksData } from "../features/peaksDataSlice";
 import { setAbsorbanceData } from "../features/absorbanceDataSlice";
 import * as mode from "../functions/fetchURL.js";
 
@@ -126,7 +126,7 @@ export default function Fetch({ type, params, fetchURL, buttonText }) {
               );
               break;
             case "find_peaks":
-              dispatch(updatePeaksData(data));
+              dispatch(setPeaksData(data));
               break;
             default:
               console.log("not processed or background");

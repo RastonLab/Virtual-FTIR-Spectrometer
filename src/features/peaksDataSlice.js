@@ -8,12 +8,12 @@ const peaksDataSlice = createSlice({
   name: "peaksData",
   initialState,
   reducers: {
-    updatePeaksData: (state, { payload }) => {
+    setPeaksData: (state, { payload }) => {
       state.peaksData = payload;
     },
   },
 });
 
-export const { updatePeaksData } = peaksDataSlice.actions;
+export const { setPeaksData } = peaksDataSlice.actions;
 
 export default peaksDataSlice.reducer;
