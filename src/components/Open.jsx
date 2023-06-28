@@ -4,12 +4,23 @@ import { useState } from "react";
 import { useDispatch } from "react-redux";
 
 // redux slices
-import { deactivateError } from "../features/errorSlice";
+import { setError } from "../features/errorSlice";
 import { updateBackgroundData } from "../features/backgroundDataSlice";
 import { updateSpectrumData } from "../features/spectrumDataSlice";
-import { updateBeamsplitter, updateDetector, updateMedium, updateMolecule,
-  updatePressure, updateResolution, updateScan, updateSource, updateWaveMax,
-  updateWaveMin, updateWindow, updateZeroFill } from "../features/parameterSlice";
+import {
+  updateBeamsplitter,
+  updateDetector,
+  updateMedium,
+  updateMolecule,
+  updatePressure,
+  updateResolution,
+  updateScan,
+  updateSource,
+  updateWaveMax,
+  updateWaveMin,
+  updateWindow,
+  updateZeroFill,
+} from "../features/parameterSlice";
 
 // style
 import "../style/components/Open.css";
@@ -52,10 +63,8 @@ export const Open = () => {
     let specType = rawData.substring(0, index);
 
     rawData = rawData.substring(index + 1);
-    
 
     if (specType.includes("Sample") || specType.includes("Background")) {
-
       // Gathers Parameters
       const parameters = [];
       while (parmLine.indexOf(":") > 0) {
@@ -67,7 +76,6 @@ export const Open = () => {
         parameters.push(param);
       }
 
-      
       // Load parameters into the store
       dispatch(updateWaveMin(parseFloat(parameters[0])));
       dispatch(updateWaveMax(parseFloat(parameters[1])));
@@ -86,34 +94,30 @@ export const Open = () => {
       const yData = [];
 
       while (index >= 0) {
-
         index = rawData.indexOf("\n");
         let line = rawData.substring(0, index);
 
         let comma = line.indexOf(",");
         let x = line.substring(1, comma); // Also removes " charater from the begining of both strings to allow for number parsing
         let y = line.substring(comma + 2);
-        
+
         xData.push(parseFloat(x));
         yData.push(parseFloat(y));
 
         rawData = rawData.substring(index + 1);
       }
 
-
       if (specType.includes("Background")) {
         dispatch(updateBackgroundData({ x: xData, y: yData }));
       } else if (specType.includes("Sample")) {
         dispatch(updateSpectrumData({ x: xData, y: yData }));
       }
-    
-      dispatch(deactivateError);
+
+      dispatch(setError([false, null]));
       toggleSucess(true);
     } else {
       toggleBadFile(true);
     }
-
-    
   };
 
   return (
