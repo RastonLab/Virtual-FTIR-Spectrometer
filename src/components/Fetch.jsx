@@ -13,10 +13,7 @@ import {
   setBackgroundData,
   setBackgroundWave,
 } from "../features/backgroundDataSlice";
-import {
-  setSpectrumData,
-  setProcessedWave,
-} from "../features/spectrumDataSlice";
+import { setSpectrumData } from "../features/spectrumDataSlice";
 import { updatePeaksData } from "../features/peaksDataSlice";
 import { updateAbsorbanceData } from "../features/absorbanceDataSlice";
 import * as mode from "../functions/fetchURL.js";
@@ -124,8 +121,7 @@ export default function Fetch({ type, params, fetchURL, buttonText }) {
         if (data.success) {
           switch (type) {
             case "spectrum":
-              dispatch(setSpectrumData(data));
-              dispatch(setProcessedWave([params.waveMin, params.waveMax]));
+              dispatch(setSpectrumData([data, params.waveMin, params.waveMax]));
               break;
             case "background":
               dispatch(setBackgroundData(data));

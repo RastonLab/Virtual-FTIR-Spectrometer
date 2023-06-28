@@ -110,7 +110,13 @@ export const Open = () => {
       if (specType.includes("Background")) {
         dispatch(setBackgroundData({ x: xData, y: yData }));
       } else if (specType.includes("Sample")) {
-        dispatch(setSpectrumData({ x: xData, y: yData }));
+        dispatch(
+          setSpectrumData([
+            { x: xData, y: yData },
+            parseFloat(parameters[0]),
+            parseFloat(parameters[1]),
+          ])
+        );
       }
 
       dispatch(setError([false, null]));
