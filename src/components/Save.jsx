@@ -162,7 +162,7 @@ export default function Save() {
           </button>
         )}
 
-        {spectrumData && backgroundData && (
+        {absorbanceData && (
           <button className="button" onClick={absorbCSV}>
             Absorbance Spectrum Data
           </button>
