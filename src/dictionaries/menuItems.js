@@ -3,7 +3,6 @@ import { Open } from "../components/Open";
 import Print from "../components/Print";
 import Toggle_Mode  from "../functions/fetchURL.js";
 import CancelScan from "../components/CancelScan";
-import Fetch from "../components/Fetch";
 
 // This file controls what shows up in the menu bar. To remove something
 // from the menu bar, either remove the code or comment it out
