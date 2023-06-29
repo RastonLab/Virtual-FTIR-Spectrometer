@@ -25,6 +25,8 @@ const OPD = {
   0.015625: 64,
 };
 
+export let sleepID = 0;
+
 // this component reaches out to the flask server with user parameters and receives X and Y coordinates to graph
 export default function Fetch({ type, params, fetchURL, buttonText }) {
   const dispatch = useDispatch();
@@ -118,23 +120,25 @@ export default function Fetch({ type, params, fetchURL, buttonText }) {
         if (data.success) {
           switch (type) {
             case "spectrum":
-              dispatch(setSpectrumData([data, params.waveMin, params.waveMax]));
+              sleepID = setTimeout(() => {
+                dispatch(setProgress(false));
+                dispatch(setSpectrumData([data, params.waveMin, params.waveMax]));
+              }, delay);
               break;
             case "background":
-              dispatch(
-                setBackgroundData([data, params.waveMin, params.waveMax])
-              );
+              sleepID = setTimeout(() => {
+                dispatch(setProgress(false));
+                dispatch(setBackgroundData([data, params.waveMin, params.waveMax]));
+              }, delay);
               break;
             case "find_peaks":
+              dispatch(setProgress(false))
               dispatch(setPeaksData(data));
               break;
             default:
               console.log("not processed or background");
               break;
           }
-          setTimeout(() => {
-            dispatch(setProgress(false));
-          }, delay);
         }
         // display error message
         else {
