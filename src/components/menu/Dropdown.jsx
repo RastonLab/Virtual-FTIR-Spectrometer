@@ -23,7 +23,7 @@ const Dropdown = ({ submenus, dropdown }) => {
               />
             </li>
           );
-        } else {
+        } else if (submenu.link) {
           return (
             <li key={index} className="menu-items">
               <Link to={submenu.link ?? "#"} onClick={submenu.action}>
@@ -31,6 +31,8 @@ const Dropdown = ({ submenus, dropdown }) => {
               </Link>
             </li>
           );
+        } else {
+          return (submenu.component)
         }
       })}
     </ul>
