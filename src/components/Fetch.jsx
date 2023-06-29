@@ -43,7 +43,7 @@ export default function Fetch({ type, params, fetchURL, buttonText }) {
       type.localeCompare("spectrum") === 0
     ) {
       // Allows the user to generate new absorbance data (there was a recursive issue in the Absorbance Plotly)
-      dispatch(setAbsorbanceData(null));
+      dispatch(setAbsorbanceData([null, null, null]));
 
       // validate the user parameters
       let errorMessage = checkParams(params);

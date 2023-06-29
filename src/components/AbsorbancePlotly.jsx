@@ -55,10 +55,14 @@ export const AbsorbancePlotly = forwardRef((props, ref) => {
     }
 
     dispatch(
-      setAbsorbanceData({
-        x: spectrumData.x,
-        y: newY,
-      })
+      setAbsorbanceData([
+        {
+          x: spectrumData.x,
+          y: newY,
+        },
+        processedWaveMin,
+        processedWaveMax,
+      ])
     );
   }
 
