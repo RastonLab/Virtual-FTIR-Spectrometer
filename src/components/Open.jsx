@@ -32,20 +32,20 @@ export const Open = () => {
   const dispatch = useDispatch();
 
   // setup FileReader
-  const filereader = new FileReader();
+  const fileReader = new FileReader();
 
   const [data, setData] = useState();
   // const [filename, setFilename] = useState();
-  const [sucess, toggleSucess] = useState(false);
+  const [success, toggleSuccess] = useState(false);
   const [badFile, toggleBadFile] = useState(false);
 
   const changeHandler = (event) => {
     if (event.target.files[0]) {
-      filereader.onload = function (e) {
+      fileReader.onload = function (e) {
         setData(e.target.result);
         // setFilename(event.target.files[0].name);
       };
-      filereader.readAsText(event.target.files[0]);
+      fileReader.readAsText(event.target.files[0]);
     }
   };
 
@@ -68,7 +68,9 @@ export const Open = () => {
       // Gathers Parameters
       const parameters = [];
       while (parmLine.indexOf(":") > 0) {
-        let paramStart = parmLine.indexOf(":") + 2; // The Additional 2 accounts for the colon inself and the following space
+        // the additional 2 accounts for the colon itself and the following space
+        let paramStart = parmLine.indexOf(":") + 2;
+
         parmLine = parmLine.substring(paramStart);
         let paramEnd = parmLine.indexOf(" ");
         let param = parmLine.substring(0, paramEnd);
@@ -96,9 +98,10 @@ export const Open = () => {
       while (index >= 0) {
         index = rawData.indexOf("\n");
         let line = rawData.substring(0, index);
-
         let comma = line.indexOf(",");
-        let x = line.substring(1, comma); // Also removes " charater from the begining of both strings to allow for number parsing
+
+        // also removes " character from the beginning of both strings to allow for number parsing
+        let x = line.substring(1, comma);
         let y = line.substring(comma + 2);
 
         xData.push(parseFloat(x));
@@ -126,7 +129,7 @@ export const Open = () => {
       }
 
       dispatch(setError([false, null]));
-      toggleSucess(true);
+      toggleSuccess(true);
     } else {
       toggleBadFile(true);
     }
@@ -139,7 +142,7 @@ export const Open = () => {
           Select a File
           <input type="file" name="file" onChange={changeHandler} />
         </label>
-        <h2>{sucess && "Upload Sucessful!"}</h2>
+        <h2>{success && "Upload Successful!"}</h2>
         <h2>{badFile && "Cannot Upload File"}</h2>
         <button className="button" onClick={handleSubmission}>
           Upload
