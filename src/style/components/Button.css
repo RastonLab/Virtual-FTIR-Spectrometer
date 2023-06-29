@@ -15,11 +15,12 @@ background-color: #212529;
 
 .button:hover {
 background-color: #002ead;
+color: black;
 background: linear-gradient(90deg, red, orange, yellow, green, blue, purple);
 }
 
 .button:hover:disabled {
 cursor: not-allowed;
-background-color: #212529;
+color: white;
 background: #212529;
 }
