@@ -182,7 +182,7 @@ export default function ExperimentalSetup() {
                 zeroFill,
               }}
               fetchURL={fetchURL.BACKGROUND}
-              buttonText={"Collect Background Sample"}
+              buttonText={"Collect Background Spectrum"}
             />
             <Fetch
               type="spectrum"
@@ -201,7 +201,7 @@ export default function ExperimentalSetup() {
                 zeroFill,
               }}
               fetchURL={fetchURL.SPECTRUM}
-              buttonText="Collect Processed Spectrum"
+              buttonText="Collect Sample Spectrum"
             />
           </div>
         </div>

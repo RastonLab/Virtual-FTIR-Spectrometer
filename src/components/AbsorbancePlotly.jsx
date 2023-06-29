@@ -55,10 +55,14 @@ export const AbsorbancePlotly = forwardRef((props, ref) => {
     }
 
     dispatch(
-      setAbsorbanceData({
-        x: spectrumData.x,
-        y: newY,
-      })
+      setAbsorbanceData([
+        {
+          x: spectrumData.x,
+          y: newY,
+        },
+        processedWaveMin,
+        processedWaveMax,
+      ])
     );
   }
 
@@ -221,7 +225,10 @@ export const AbsorbancePlotly = forwardRef((props, ref) => {
                 <div className="display">
                   {Object.keys(peaksData.peaks).map((key) => {
                     return (
-                      <p id="peaks">{`Peak: ${key} Intensity: ${peaksData.peaks[key]}`}</p>
+                      <p
+                        id="peaks"
+                        key={key}
+                      >{`Peak: ${key} Intensity: ${peaksData.peaks[key]}`}</p>
                     );
                   })}
                 </div>
