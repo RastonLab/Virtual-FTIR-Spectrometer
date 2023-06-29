@@ -1,7 +1,7 @@
 import Save from "../components/Save";
 import { Open } from "../components/Open";
 import Print from "../components/Print";
-import Toggle_Mode  from "../functions/fetchURL.js";
+import Toggle_Mode from "../functions/fetchURL";
 import CancelScan from "../components/CancelScan";
 
 // This file controls what shows up in the menu bar. To remove something
@@ -299,7 +299,7 @@ export const menuItems = [
     submenu: [
       {
         label: `Scan Delay Toggle`,
-        action: Toggle_Mode
+        component: <button onClick={Toggle_Mode}>Scan Time Toggle</button>
       },
     ]
   }
