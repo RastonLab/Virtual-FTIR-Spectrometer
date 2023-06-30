@@ -122,14 +122,14 @@ export default function Fetch({ type, params, fetchURL, buttonText }) {
         if (data.success) {
           switch (type) {
             case "sample":
-              dispatch(setSampleData([null, null, null]));
+              dispatch(setSampleData([null]));
               sleepID = setTimeout(() => {
                 dispatch(setProgress(false));
                 dispatch(setSampleData([data, params.waveMin, params.waveMax]));
               }, delay);
               break;
             case "background":
-              dispatch(setBackgroundData([null, null, null]));
+              dispatch(setBackgroundData([null]));
               sleepID = setTimeout(() => {
                 dispatch(setProgress(false));
                 dispatch(
