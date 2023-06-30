@@ -9,13 +9,13 @@ import { useSelector } from "react-redux";
 // style
 import "../style/components/Plotly.css";
 
-// this component uses the plotly library to graph processed spectrum data
-export const ProcessedPlotly = forwardRef((props, ref) => {
-  const { spectrumData, processedWaveMin, processedWaveMax } = useSelector(
-    (store) => store.spectrumData
+// this component uses the plotly library to graph sample spectrum data
+export const SamplePlotly = forwardRef((props, ref) => {
+  const { sampleData, sampleWaveMin, sampleWaveMax } = useSelector(
+    (store) => store.sampleData
   );
 
-  if (spectrumData) {
+  if (sampleData) {
     // https://github.com/suzil/radis-app/blob/main/frontend/src/components/CalcSpectrumPlot.tsx
     return (
       <>
@@ -25,17 +25,17 @@ export const ProcessedPlotly = forwardRef((props, ref) => {
             className="plotly"
             data={[
               {
-                x: spectrumData.x,
-                y: spectrumData.y,
+                x: sampleData.x,
+                y: sampleData.y,
                 type: "scatter",
                 marker: { color: "#f50057" },
               },
             ]}
             layout={{
-              title: "Processed Spectrum",
+              title: "Sample Spectrum",
               font: { family: "Roboto", color: "#000" },
               xaxis: {
-                range: [processedWaveMin, processedWaveMax],
+                range: [sampleWaveMin, sampleWaveMax],
                 title: { text: "Wavenumber (cm⁻¹)" },
                 rangeslider: {
                   autorange: true,

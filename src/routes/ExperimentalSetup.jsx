@@ -1,7 +1,7 @@
 import React from "react";
 
 // components
-import { ProcessedPlotly } from "../components/ProcessedPlotly";
+import { SamplePlotly } from "../components/SamplePlotly";
 import BackgroundPlotly from "../components/BackgroundPlotly";
 import Fetch from "../components/Fetch";
 
@@ -185,7 +185,7 @@ export default function ExperimentalSetup() {
               buttonText={"Collect Background Spectrum"}
             />
             <Fetch
-              type="spectrum"
+              type="sample"
               params={{
                 beamsplitter,
                 detector,
@@ -200,7 +200,7 @@ export default function ExperimentalSetup() {
                 window,
                 zeroFill,
               }}
-              fetchURL={fetchURL.SPECTRUM}
+              fetchURL={fetchURL.SAMPLE}
               buttonText="Collect Sample Spectrum"
             />
           </div>
@@ -214,7 +214,7 @@ export default function ExperimentalSetup() {
           </div>
         )}
         {!progress && !error && <BackgroundPlotly />}
-        {!progress && !error && <ProcessedPlotly />}
+        {!progress && !error && <SamplePlotly />}
       </div>
     </div>
   );

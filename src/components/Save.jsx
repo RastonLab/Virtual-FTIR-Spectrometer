@@ -29,7 +29,7 @@ export default function Save() {
   const { absorbanceData } = useSelector((store) => store.absorbanceData);
   const { backgroundData } = useSelector((store) => store.backgroundData);
   const { peaksData } = useSelector((store) => store.peaksData);
-  const { spectrumData } = useSelector((store) => store.spectrumData);
+  const { sampleData } = useSelector((store) => store.sampleData);
 
   const [data, setData] = useState();
   const [printSample, setPrintSample] = useState(false);
@@ -57,8 +57,8 @@ export default function Save() {
     const specType = ["Spectrum Type: Sample Spectrum"];
     newData.push(specType);
 
-    for (let i = 0; i < spectrumData.x.length; i++) {
-      newData.push([spectrumData.x[i], spectrumData.y[i]]);
+    for (let i = 0; i < sampleData.x.length; i++) {
+      newData.push([sampleData.x[i], sampleData.y[i]]);
     }
 
     setData(newData);
@@ -87,9 +87,9 @@ export default function Save() {
     const specType = ["Spectrum Type: Transmittance Spectrum"];
     newData.push(specType);
 
-    for (let i = 0; i < spectrumData.x.length; i++) {
-      let newY = spectrumData.y[i] / backgroundData.y[i];
-      newData.push([spectrumData.x[i], newY]);
+    for (let i = 0; i < sampleData.x.length; i++) {
+      let newY = sampleData.y[i] / backgroundData.y[i];
+      newData.push([sampleData.x[i], newY]);
     }
 
     setData(newData);
@@ -135,16 +135,16 @@ export default function Save() {
 
       <h1>Save Data</h1>
 
-      {spectrumData && backgroundData && (
+      {sampleData && backgroundData && (
         <h3>What data would you like to save?</h3>
       )}
 
-      {(!spectrumData || !backgroundData) && (
+      {(!sampleData || !backgroundData) && (
         <h3>There is currently no data to save</h3>
       )}
 
       <div className="save-col">
-        {spectrumData && (
+        {sampleData && (
           <button className="button" onClick={sampleCSV}>
             Sample Spectrum Data
           </button>
@@ -156,7 +156,7 @@ export default function Save() {
           </button>
         )}
 
-        {spectrumData && backgroundData && (
+        {sampleData && backgroundData && (
           <button className="button" onClick={transCSV}>
             Transmittance Spectrum Data
           </button>

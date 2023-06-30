@@ -7,7 +7,7 @@ import errorReducer from "../features/errorSlice";
 import parameterReducer from "../features/parameterSlice";
 import peaksDataReducer from "../features/peaksDataSlice";
 import progressReducer from "../features/progressSlice";
-import spectrumDataReducer from "../features/spectrumDataSlice";
+import sampleDataReducer from "../features/sampleDataSlice";
 
 export const store = configureStore({
   reducer: {
@@ -17,6 +17,6 @@ export const store = configureStore({
     parameter: parameterReducer,
     peaksData: peaksDataReducer,
     progress: progressReducer,
-    spectrumData: spectrumDataReducer,
+    sampleData: sampleDataReducer,
   },
 });

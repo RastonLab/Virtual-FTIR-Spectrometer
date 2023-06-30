@@ -2,7 +2,7 @@ import React, { useState } from "react";
 
 // components
 import { Dialog } from "@mui/material";
-import { ProcessedPlotly } from "../components/ProcessedPlotly";
+import { SamplePlotly } from "../components/SamplePlotly";
 import Electronics from "../components/Electronics";
 import Main from "../components/svgs/InstrumentSVG";
 
@@ -19,7 +19,7 @@ export default function InstrumentWindow() {
   const { beamsplitter, detector, source, window } = useSelector(
     (store) => store.parameter
   );
-  const { spectrumData } = useSelector((store) => store.spectrumData);
+  const { sampleData } = useSelector((store) => store.sampleData);
   const [toggled, setToggled] = useState(false);
   const [element, setElement] = useState();
 
@@ -55,10 +55,10 @@ export default function InstrumentWindow() {
           <Electronics />
         </div>
         <div id="spectrum">
-          {spectrumData ? (
-            <ProcessedPlotly />
+          {sampleData ? (
+            <SamplePlotly />
           ) : (
-            <p>Please generate a processed spectrum and return here</p>
+            <p>Please generate a sample spectrum and return here</p>
           )}
         </div>
       </div>

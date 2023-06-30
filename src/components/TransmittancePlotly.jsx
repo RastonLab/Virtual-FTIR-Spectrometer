@@ -9,29 +9,29 @@ import { useSelector } from "react-redux";
 // style
 import "../style/components/Plotly.css";
 
-// this component uses the plotly library to graph processed spectrum data
+// this component uses the plotly library to graph transmittance spectrum data
 export const TransmittancePlotly = forwardRef((props, ref) => {
   const { backgroundData } = useSelector((store) => store.backgroundData);
-  const { spectrumData } = useSelector((store) => store.spectrumData);
+  const { sampleData } = useSelector((store) => store.sampleData);
   const { waveMaxSaved, waveMinSaved } = useSelector(
     (store) => store.parameter
   );
-  //   const newX = spectrumData.x / backgroundData.x;
-  const newY = [spectrumData.x.length];
+  //   const newX = sampleData.x / backgroundData.x;
+  const newY = [sampleData.x.length];
 
-  for (let i = 0; i < spectrumData.x.length; i++) {
-    newY[i] = spectrumData.y[i] / backgroundData.y[i];
+  for (let i = 0; i < sampleData.x.length; i++) {
+    newY[i] = sampleData.y[i] / backgroundData.y[i];
 
     if (newY[i] > 2) {
       newY[i] = 2;
     }
-    
+
     if (newY[i] < -2) {
       newY[i] = -2;
     }
   }
 
-  if (spectrumData) {
+  if (sampleData) {
     // https://github.com/suzil/radis-app/blob/main/frontend/src/components/CalcSpectrumPlot.tsx
     return (
       <>
@@ -41,7 +41,7 @@ export const TransmittancePlotly = forwardRef((props, ref) => {
             className="plotly"
             data={[
               {
-                x: spectrumData.x,
+                x: sampleData.x,
                 y: newY,
                 type: "scatter",
                 marker: { color: "#f50057" },

@@ -21,13 +21,13 @@ import { setAbsorbanceData } from "../features/absorbanceDataSlice";
 import "../style/components/Plotly.css";
 import "../style/components/Absorbance.css";
 
-// this component uses the plotly library to graph processed spectrum data
+// this component uses the plotly library to graph absorbance spectrum data
 export const AbsorbancePlotly = forwardRef((props, ref) => {
   const { absorbanceData } = useSelector((store) => store.absorbanceData);
   const { backgroundData } = useSelector((store) => store.backgroundData);
   const { peaksData } = useSelector((store) => store.peaksData);
-  const { spectrumData, processedWaveMin, processedWaveMax } = useSelector(
-    (store) => store.spectrumData
+  const { sampleData, sampleWaveMin, sampleWaveMax } = useSelector(
+    (store) => store.sampleData
   );
   const { progress } = useSelector((store) => store.progress);
   const { error, errorText } = useSelector((store) => store.error);
@@ -35,15 +35,14 @@ export const AbsorbancePlotly = forwardRef((props, ref) => {
   const dispatch = useDispatch();
 
   const [threshold, setThreshold] = useState(0);
-  const [lowerBound, setLowerBound] = useState(processedWaveMin);
-  const [upperBound, setUpperBound] = useState(processedWaveMax);
+  const [lowerBound, setLowerBound] = useState(sampleWaveMin);
+  const [upperBound, setUpperBound] = useState(sampleWaveMax);
 
-  if (spectrumData && backgroundData && !absorbanceData) {
-    const newY = [spectrumData.x.length];
+  if (sampleData && backgroundData && !absorbanceData) {
+    const newY = [sampleData.x.length];
 
-    for (let i = 0; i < spectrumData.x.length; i++) {
-      newY[i] =
-        -1 * Math.log(Math.abs(spectrumData.y[i] / backgroundData.y[i]));
+    for (let i = 0; i < sampleData.x.length; i++) {
+      newY[i] = -1 * Math.log(Math.abs(sampleData.y[i] / backgroundData.y[i]));
 
       if (newY[i] > 5) {
         newY[i] = 5;
@@ -57,11 +56,11 @@ export const AbsorbancePlotly = forwardRef((props, ref) => {
     dispatch(
       setAbsorbanceData([
         {
-          x: spectrumData.x,
+          x: sampleData.x,
           y: newY,
         },
-        processedWaveMin,
-        processedWaveMax,
+        sampleWaveMin,
+        sampleWaveMax,
       ])
     );
   }
@@ -87,7 +86,7 @@ export const AbsorbancePlotly = forwardRef((props, ref) => {
               title: "Absorbance Spectrum",
               font: { family: "Roboto", color: "#000" },
               xaxis: {
-                range: [processedWaveMin, processedWaveMax],
+                range: [sampleWaveMin, sampleWaveMax],
                 title: { text: "Wavenumber (cm⁻¹)" },
                 rangeslider: {
                   autorange: true,
@@ -134,8 +133,8 @@ export const AbsorbancePlotly = forwardRef((props, ref) => {
                   }}
                   InputProps={{
                     inputProps: {
-                      min: processedWaveMin,
-                      max: processedWaveMax,
+                      min: sampleWaveMin,
+                      max: sampleWaveMax,
                       // step: 0.0001,
                     },
                   }}
@@ -162,8 +161,8 @@ export const AbsorbancePlotly = forwardRef((props, ref) => {
                   }}
                   InputProps={{
                     inputProps: {
-                      min: processedWaveMin,
-                      max: processedWaveMax,
+                      min: sampleWaveMin,
+                      max: sampleWaveMax,
                     },
                   }}
                 />
