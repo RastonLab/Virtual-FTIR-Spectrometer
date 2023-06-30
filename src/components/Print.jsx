@@ -1,7 +1,7 @@
 import { React, useRef, useState } from "react";
 
 // components
-import { ProcessedPlotly } from "./ProcessedPlotly";
+import { SamplePlotly } from "./SamplePlotly";
 import { useReactToPrint } from "react-to-print";
 import ExperimentalSetup from "../routes/ExperimentalSetup";
 
@@ -58,12 +58,16 @@ export default function Print() {
           </RadioGroup>
         </FormControl>
 
-        <button id="print-button" className="button print-row" onClick={handlePrint}>
+        <button
+          id="print-button"
+          className="button print-row"
+          onClick={handlePrint}
+        >
           Print
         </button>
       </div>
       <div style={{ display: "none" }}>
-        {printOptions === "graph" && <ProcessedPlotly ref={componentRef} />}
+        {printOptions === "graph" && <SamplePlotly ref={componentRef} />}
 
         {printOptions === "both" && <ExperimentalSetup ref={componentRef} />}
       </div>

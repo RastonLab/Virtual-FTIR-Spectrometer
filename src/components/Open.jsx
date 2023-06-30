@@ -6,7 +6,7 @@ import { useDispatch } from "react-redux";
 // redux slices
 import { setError } from "../features/errorSlice";
 import { setBackgroundData } from "../features/backgroundDataSlice";
-import { setSpectrumData } from "../features/spectrumDataSlice";
+import { setSampleData } from "../features/sampleDataSlice";
 import {
   setBeamsplitter,
   setDetector,
@@ -120,7 +120,7 @@ export const Open = () => {
         );
       } else if (specType.includes("Sample")) {
         dispatch(
-          setSpectrumData([
+          setSampleData([
             { x: xData, y: yData },
             parseFloat(parameters[0]),
             parseFloat(parameters[1]),

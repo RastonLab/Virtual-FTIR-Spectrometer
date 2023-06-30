@@ -10,7 +10,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { setError } from "../features/errorSlice";
 import { setProgress } from "../features/progressSlice";
 import { setBackgroundData } from "../features/backgroundDataSlice";
-import { setSpectrumData } from "../features/spectrumDataSlice";
+import { setSampleData } from "../features/sampleDataSlice";
 import { setPeaksData } from "../features/peaksDataSlice";
 import { setAbsorbanceData } from "../features/absorbanceDataSlice";
 import * as mode from "../functions/fetchURL.js";
@@ -42,7 +42,7 @@ export default function Fetch({ type, params, fetchURL, buttonText }) {
 
     if (
       type.localeCompare("background") === 0 ||
-      type.localeCompare("spectrum") === 0
+      type.localeCompare("sample") === 0
     ) {
       // Allows the user to generate new absorbance data (there was a recursive issue in the Absorbance Plotly)
       dispatch(setAbsorbanceData([null, null, null]));
@@ -119,24 +119,26 @@ export default function Fetch({ type, params, fetchURL, buttonText }) {
         // determine where to store received data
         if (data.success) {
           switch (type) {
-            case "spectrum":
+            case "sample":
               sleepID = setTimeout(() => {
                 dispatch(setProgress(false));
-                dispatch(setSpectrumData([data, params.waveMin, params.waveMax]));
+                dispatch(setSampleData([data, params.waveMin, params.waveMax]));
               }, delay);
               break;
             case "background":
               sleepID = setTimeout(() => {
                 dispatch(setProgress(false));
-                dispatch(setBackgroundData([data, params.waveMin, params.waveMax]));
+                dispatch(
+                  setBackgroundData([data, params.waveMin, params.waveMax])
+                );
               }, delay);
               break;
             case "find_peaks":
-              dispatch(setProgress(false))
+              dispatch(setProgress(false));
               dispatch(setPeaksData(data));
               break;
             default:
-              console.log("not processed or background");
+              console.log("not sample or background");
               break;
           }
         }
