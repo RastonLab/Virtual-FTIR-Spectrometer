@@ -31,15 +31,6 @@ export const menuItems = [
     ],
   },
   {
-    label: "Scan Tools",
-    submenu: [
-      {
-        label: "Cancel Scan",
-        component: <CancelScan/>
-      },
-    ],
-  },
-  {
     label: "Window",
     submenu: [
       {
@@ -53,6 +44,23 @@ export const menuItems = [
       {
         label: "Spectrum",
         link: "/spectrum",
+      },
+    ],
+  },
+  {
+    label: "Measure",
+    submenu: [
+      {
+        label: "Collect Background Sample",
+        component: <button disabled="True">"Collect Background Spectrum"</button>
+      },
+      {
+        label: "Collect Processed",
+        component: <button disabled="True">"Collect Sample Spectrum"</button>
+      },
+      {
+        label: "Cancel Scan",
+        component: <CancelScan/>
       },
     ],
   },

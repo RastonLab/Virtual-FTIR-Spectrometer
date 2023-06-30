@@ -29,6 +29,8 @@ export let sleepID = 0;
 
 // this component reaches out to the flask server with user parameters and receives X and Y coordinates to graph
 export default function Fetch({ type, params, fetchURL, buttonText }) {
+    // TODO: if no params, use store
+  
   const dispatch = useDispatch();
   const { progress } = useSelector((store) => store.progress);
 
@@ -120,12 +122,14 @@ export default function Fetch({ type, params, fetchURL, buttonText }) {
         if (data.success) {
           switch (type) {
             case "spectrum":
+              dispatch(setSpectrumData([null]));
               sleepID = setTimeout(() => {
                 dispatch(setProgress(false));
                 dispatch(setSpectrumData([data, params.waveMin, params.waveMax]));
               }, delay);
               break;
             case "background":
+              dispatch(setBackgroundData([null]));
               sleepID = setTimeout(() => {
                 dispatch(setProgress(false));
                 dispatch(setBackgroundData([data, params.waveMin, params.waveMax]));

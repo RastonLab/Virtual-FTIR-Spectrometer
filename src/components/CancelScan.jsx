@@ -8,7 +8,7 @@ export default function CancelScan() {
     const { progress } = useSelector((store) => store.progress);
 
     return (
-        <button className="button" onClick={() => {clearTimeout(sleepID); dispatch(setProgress(false));}} disabled={!progress}>
+        <button onClick={() => {clearTimeout(sleepID); dispatch(setProgress(false));}} disabled={!progress}>
           Cancel Scan
         </button>
     );
