@@ -28,7 +28,7 @@ const OPD = {
 export let sleepID = 0;
 
 // this component reaches out to the flask server with user parameters and receives X and Y coordinates to graph
-export default function Fetch({ type, params, fetchURL, buttonText }) {
+export default function Fetch({ type, params, fetchURL, buttonText, buttonStyle }) {
     // TODO: if no params, use store
   
   const dispatch = useDispatch();
@@ -196,7 +196,7 @@ export default function Fetch({ type, params, fetchURL, buttonText }) {
   };
 
   return (
-    <button className="button" disabled={progress} onClick={fetchLinode}>
+    <button className={buttonStyle} disabled={progress} onClick={fetchLinode}>
       {buttonText}
     </button>
   );

@@ -210,6 +210,7 @@ export const AbsorbancePlotly = forwardRef((props, ref) => {
               }}
               fetchURL={fetchURL.FIND_PEAKS}
               buttonText={"Find Peaks"}
+              buttonStyle={"button"}
             />
             {/* End Fetch Peaks */}
           </div>
