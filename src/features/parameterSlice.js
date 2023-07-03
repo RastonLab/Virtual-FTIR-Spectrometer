@@ -8,7 +8,7 @@ const initialState = {
   pressure: 0.001,
   resolution: 1,
   scan: 1,
-  source: 3100,
+  source: 1200,
   waveMin: 1900,
   waveMinSaved: null,
   waveMax: 2300,
