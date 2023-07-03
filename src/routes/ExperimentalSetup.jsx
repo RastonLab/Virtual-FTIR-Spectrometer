@@ -113,9 +113,9 @@ export default function ExperimentalSetup() {
             <Switch
               formLabel={"Source"}
               optionOneLabel={"Globar"}
-              optionOneData={1700}
+              optionOneData={1000}
               optionTwoLabel={"Tungsten"}
-              optionTwoData={3100}
+              optionTwoData={300}
               store={source}
             />
           </div>
