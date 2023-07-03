@@ -33,7 +33,7 @@ export default function Fetch({ type, params, fetchURL, buttonText }) {
   
   const dispatch = useDispatch();
   const { progress } = useSelector((store) => store.progress);
-  let {beamsplitter, detector, medium, base_pressure, molecule, resolution, scan, 
+  let {beamsplitter, detector, medium, pressure, molecule, resolution, scan, 
     source, waveMax, waveMin, window, zeroFill} 
     = useSelector((store) => store.parameter)
 
@@ -67,7 +67,7 @@ export default function Fetch({ type, params, fetchURL, buttonText }) {
         detector = params.detector
         medium = params.medium
         molecule = params.molecule
-        base_pressure = params.pressure
+        pressure = params.pressure
         resolution = params.resolution
         scan = params.scan
         source = params.source
@@ -86,12 +86,12 @@ export default function Fetch({ type, params, fetchURL, buttonText }) {
 
       // calculate medium if set to "Air"
       let mole = 1;
-      let pressure = base_pressure;
+      let pressure_param = pressure;
 
       if (medium === "Air") {
         const air_pressure = 1.01325;
-        mole = base_pressure / air_pressure;
-        pressure = air_pressure;
+        mole = pressure / air_pressure;
+        pressure_param = air_pressure;
       }
 
       // Construct message body
@@ -101,7 +101,7 @@ export default function Fetch({ type, params, fetchURL, buttonText }) {
         medium: medium,
         mole: mole,
         molecule: molecule,
-        pressure: pressure,
+        pressure: pressure_param,
         resolution: resolution,
         scan: scan,
         source: source,
@@ -144,7 +144,7 @@ export default function Fetch({ type, params, fetchURL, buttonText }) {
               dispatch(setSampleData([null, null, null]));
               sleepID = setTimeout(() => {
                 dispatch(setProgress(false));
-                dispatch(setSampleData([data, params.waveMin, params.waveMax]));
+                dispatch(setSampleData([data, waveMin, waveMax]));
               }, delay);
               break;
             case "background":
@@ -152,7 +152,7 @@ export default function Fetch({ type, params, fetchURL, buttonText }) {
               sleepID = setTimeout(() => {
                 dispatch(setProgress(false));
                 dispatch(
-                  setBackgroundData([data, params.waveMin, params.waveMax])
+                  setBackgroundData([data, waveMin, waveMax])
                 );
               }, delay);
               break;
