@@ -183,6 +183,7 @@ export default function ExperimentalSetup() {
               }}
               fetchURL={fetchURL.BACKGROUND}
               buttonText={"Collect Background Spectrum"}
+              buttonStyle={"button"}
             />
             <Fetch
               type="sample"
@@ -202,6 +203,7 @@ export default function ExperimentalSetup() {
               }}
               fetchURL={fetchURL.SAMPLE}
               buttonText="Collect Sample Spectrum"
+              buttonStyle={"button"}
             />
           </div>
         </div>

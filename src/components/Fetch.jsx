@@ -28,11 +28,14 @@ const OPD = {
 export let sleepID = 0;
 
 // this component reaches out to the flask server with user parameters and receives X and Y coordinates to graph
-export default function Fetch({ type, params, fetchURL, buttonText }) {
+export default function Fetch({ type, params, fetchURL, buttonText, buttonStyle }) {
     // TODO: if no params, use store
   
   const dispatch = useDispatch();
   const { progress } = useSelector((store) => store.progress);
+  let {beamsplitter, detector, medium, pressure, molecule, resolution, scan, 
+    source, waveMax, waveMin, window, zeroFill} 
+    = useSelector((store) => store.parameter)
 
   const fetchLinode = async () => {
     // remove any errors (if existing) and start a progress spinner
@@ -49,47 +52,63 @@ export default function Fetch({ type, params, fetchURL, buttonText }) {
       // Allows the user to generate new absorbance data (there was a recursive issue in the Absorbance Plotly)
       dispatch(setAbsorbanceData([null, null, null]));
 
-      // validate the user parameters
-      let errorMessage = checkParams(params);
+      if (params) {
+        // validate the user parameters
+        let errorMessage = checkParams(params);
 
-      // error occurred in checkParams, display error message to user
-      if (errorMessage) {
-        dispatch(setProgress(false));
-        dispatch(setError([true, String(errorMessage)]));
-        return;
+        // error occurred in checkParams, display error message to user
+        if (errorMessage) {
+          dispatch(setProgress(false));
+          dispatch(setError([true, String(errorMessage)]));
+          return;
+        }
+
+        beamsplitter = params.beamsplitter
+        detector = params.detector
+        medium = params.medium
+        molecule = params.molecule
+        pressure = params.pressure
+        resolution = params.resolution
+        scan = params.scan
+        source = params.source
+        waveMax = params.waveMax
+        waveMin = params.waveMin
+        window = params.window
+        zeroFill = params.zeroFill
+
       }
 
       // Leaves delay as Immediate if DEVELOPER_MODE is false
       if (!mode.DEVELOPER_MODE) {
         // Calculate time the scan would take
-        delay = OPD[params.resolution] * params.scan * 1000; // 1000 is to convert to milliseconds
+        delay = OPD[resolution] * scan * 1000; // 1000 is to convert to milliseconds
       }
 
       // calculate medium if set to "Air"
       let mole = 1;
-      let pressure = params.pressure;
+      let pressure_param = pressure;
 
-      if (params.medium === "Air") {
+      if (medium === "Air") {
         const air_pressure = 1.01325;
-        mole = params.pressure / air_pressure;
-        pressure = air_pressure;
+        mole = pressure / air_pressure;
+        pressure_param = air_pressure;
       }
 
       // Construct message body
       body = JSON.stringify({
-        beamsplitter: params.beamsplitter,
-        detector: params.detector,
-        medium: params.medium,
+        beamsplitter: beamsplitter,
+        detector: detector,
+        medium: medium,
         mole: mole,
-        molecule: params.molecule,
-        pressure: pressure,
-        resolution: params.resolution,
-        scan: params.scan,
-        source: params.source,
-        waveMax: params.waveMax,
-        waveMin: params.waveMin,
-        window: params.window,
-        zeroFill: params.zeroFill,
+        molecule: molecule,
+        pressure: pressure_param,
+        resolution: resolution,
+        scan: scan,
+        source: source,
+        waveMax: waveMax,
+        waveMin: waveMin,
+        window: window,
+        zeroFill: zeroFill,
       });
     } else if (type.localeCompare("find_peaks") === 0) {
       body = JSON.stringify({
@@ -125,7 +144,7 @@ export default function Fetch({ type, params, fetchURL, buttonText }) {
               dispatch(setSampleData([null, null, null]));
               sleepID = setTimeout(() => {
                 dispatch(setProgress(false));
-                dispatch(setSampleData([data, params.waveMin, params.waveMax]));
+                dispatch(setSampleData([data, waveMin, waveMax]));
               }, delay);
               break;
             case "background":
@@ -133,7 +152,7 @@ export default function Fetch({ type, params, fetchURL, buttonText }) {
               sleepID = setTimeout(() => {
                 dispatch(setProgress(false));
                 dispatch(
-                  setBackgroundData([data, params.waveMin, params.waveMax])
+                  setBackgroundData([data, waveMin, waveMax])
                 );
               }, delay);
               break;
@@ -177,7 +196,7 @@ export default function Fetch({ type, params, fetchURL, buttonText }) {
   };
 
   return (
-    <button className="button" disabled={progress} onClick={fetchLinode}>
+    <button className={buttonStyle} disabled={progress} onClick={fetchLinode}>
       {buttonText}
     </button>
   );
