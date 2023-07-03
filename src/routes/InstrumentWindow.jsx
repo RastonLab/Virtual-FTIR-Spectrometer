@@ -6,6 +6,8 @@ import { SamplePlotly } from "../components/SamplePlotly";
 import Electronics from "../components/Electronics";
 import Main from "../components/svgs/InstrumentSVG";
 
+import CloseButton from "../components/CloseButton";
+
 // dictionaries
 import { toolTips } from "../dictionaries/svgLibrary";
 
@@ -89,11 +91,18 @@ export default function InstrumentWindow() {
 
       {element && (
         <Dialog className="popup-tooltip" onClose={handleClick} open={toggled}>
-          <h2>{toolTips[element].title}</h2>
+          <CloseButton id="customized-dialog-title" onClose={handleClick}>
+            <h2>{toolTips[element].title}</h2>
+          </CloseButton>
           <img src={toolTips[element].image} alt="" />
           <p>{toolTips[element].text}</p>
         </Dialog>
       )}
+      {/* {element && (
+        <Popup label="" title={}>
+
+        </Popup>
+      )} */}
     </div>
   );
 }
