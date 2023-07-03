@@ -147,18 +147,18 @@ export default function Fetch({ type, params, fetchURL, buttonText, buttonStyle 
           switch (type) {
             case "sample":
               dispatch(setSampleData([null, null, null]));
+              nav("/instrument", -1)
               sleepID = setTimeout(() => {
                 dispatch(setProgress(false));
                 dispatch(setSampleData([data, waveMin, waveMax]));
-                nav("/instrument", -1)
               }, delay);
               break;
             case "background":
               dispatch(setBackgroundData([null, null, null]));
+              nav("/instrument", -1)
               sleepID = setTimeout(() => {
                 dispatch(setProgress(false));
                 dispatch(setBackgroundData([data, waveMin, waveMax]));
-                nav("/instrument", -1)
               }, delay);
               break;
             case "find_peaks":
