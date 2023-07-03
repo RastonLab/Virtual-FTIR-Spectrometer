@@ -115,7 +115,7 @@ export default function ExperimentalSetup() {
               optionOneLabel={"Globar"}
               optionOneData={1000}
               optionTwoLabel={"Tungsten"}
-              optionTwoData={300}
+              optionTwoData={3000}
               store={source}
             />
           </div>
