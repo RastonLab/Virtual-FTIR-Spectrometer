@@ -1,8 +1,9 @@
 import Save from "../components/Save";
 import { Open } from "../components/Open";
 import Print from "../components/Print";
-import Toggle_Mode from "../functions/fetchURL";
+import * as fetchURL from "../functions/fetchURL";
 import CancelScan from "../components/CancelScan";
+import Fetch from "../components/Fetch";
 
 // This file controls what shows up in the menu bar. To remove something
 // from the menu bar, either remove the code or comment it out
@@ -52,11 +53,11 @@ export const menuItems = [
     submenu: [
       {
         label: "Collect Background Sample",
-        component: <button disabled="True">"Collect Background Spectrum"</button>
+        component: <Fetch type="background" fetchURL={fetchURL.BACKGROUND} buttonText={"Collect Background Spectrum"}/>
       },
       {
         label: "Collect Processed",
-        component: <button disabled="True">"Collect Sample Spectrum"</button>
+        component: <Fetch type="sample" fetchURL={fetchURL.SAMPLE} buttonText={"Collect Sample Spectrum"}/>
       },
       {
         label: "Cancel Scan",
@@ -307,7 +308,7 @@ export const menuItems = [
     submenu: [
       {
         label: `Scan Delay Toggle`,
-        component: <button onClick={Toggle_Mode}>Scan Time Toggle</button>
+        component: <button onClick={fetchURL.Toggle_Mode}>Scan Time Toggle</button>
       },
     ]
   }
