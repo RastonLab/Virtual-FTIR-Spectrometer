@@ -9,7 +9,8 @@ export const BACKGROUND = "https://api.ftir.rastonlab.org/background";
 // export const SAMPLE = "http://localhost:5000/spectrum";
 export const SAMPLE = "https://api.ftir.rastonlab.org/spectrum";
 
-// If false, will add artificial delay for background and sample scans
+// If true, will not add artificial delay for background and sample scans
+// and will not take you to the instrument window after running a scan
 export let DEVELOPER_MODE = false;
 
 export function Toggle_Mode() {
