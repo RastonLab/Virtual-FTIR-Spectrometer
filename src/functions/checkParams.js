@@ -52,9 +52,9 @@ export default function checkParams(params) {
   }
 
   // check if source is correct
-  if (params.source !== 1700 && params.source !== 3100) {
-    return "source is not valid (globar = 1700 or tungsten = 3100)";
-  }
+  // if (params.source !== 1700 && params.source !== 3100) {
+  //   return "source is not valid (globar = 1700 or tungsten = 3100)";
+  // }
 
   // check if beamsplitter is correct
   if (params.beamsplitter !== "AR_CaF2" && params.beamsplitter !== "AR_ZnSe") {
