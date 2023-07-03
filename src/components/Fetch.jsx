@@ -14,6 +14,7 @@ import { setSampleData } from "../features/sampleDataSlice";
 import { setPeaksData } from "../features/peaksDataSlice";
 import { setAbsorbanceData } from "../features/absorbanceDataSlice";
 import * as mode from "../functions/fetchURL.js";
+import { useNavigate } from "react-router-dom";
 
 const OPD = {
   1: 1,
@@ -29,13 +30,17 @@ export let sleepID = 0;
 
 // this component reaches out to the flask server with user parameters and receives X and Y coordinates to graph
 export default function Fetch({ type, params, fetchURL, buttonText, buttonStyle }) {
-    // TODO: if no params, use store
   
   const dispatch = useDispatch();
   const { progress } = useSelector((store) => store.progress);
   let {beamsplitter, detector, medium, pressure, molecule, resolution, scan, 
     source, waveMax, waveMin, window, zeroFill} 
     = useSelector((store) => store.parameter)
+  
+  let nav = useNavigate();
+  if (mode.DEVELOPER_MODE) {
+    nav = (route, num) => {};
+  }
 
   const fetchLinode = async () => {
     // remove any errors (if existing) and start a progress spinner
@@ -145,15 +150,15 @@ export default function Fetch({ type, params, fetchURL, buttonText, buttonStyle 
               sleepID = setTimeout(() => {
                 dispatch(setProgress(false));
                 dispatch(setSampleData([data, waveMin, waveMax]));
+                nav("/instrument", -1)
               }, delay);
               break;
             case "background":
               dispatch(setBackgroundData([null, null, null]));
               sleepID = setTimeout(() => {
                 dispatch(setProgress(false));
-                dispatch(
-                  setBackgroundData([data, waveMin, waveMax])
-                );
+                dispatch(setBackgroundData([data, waveMin, waveMax]));
+                nav("/instrument", -1)
               }, delay);
               break;
             case "find_peaks":
