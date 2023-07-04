@@ -13,10 +13,11 @@ import { setBackgroundData } from "../features/backgroundDataSlice";
 import { setSampleData } from "../features/sampleDataSlice";
 import { setPeaksData } from "../features/peaksDataSlice";
 import { setAbsorbanceData } from "../features/absorbanceDataSlice";
+import { setSpinner } from "../features/spinnerSlice";
 import * as mode from "../functions/fetchURL.js";
 import { useNavigate } from "react-router-dom";
 
-const OPD = {
+ export const OPD = {
   1: 1,
   0.5: 2,
   0.25: 4,
@@ -56,6 +57,7 @@ export default function Fetch({ type, params, fetchURL, buttonText, buttonStyle 
     ) {
       // Allows the user to generate new absorbance data (there was a recursive issue in the Absorbance Plotly)
       dispatch(setAbsorbanceData([null, null, null]));
+      dispatch(setSpinner(true));
 
       if (params) {
         // validate the user parameters
@@ -147,7 +149,8 @@ export default function Fetch({ type, params, fetchURL, buttonText, buttonStyle 
           switch (type) {
             case "sample":
               dispatch(setSampleData([null, null, null]));
-              nav("/instrument", -1)
+              nav("/instrument", -1);
+              dispatch(setSpinner(false));
               sleepID = setTimeout(() => {
                 dispatch(setProgress(false));
                 dispatch(setSampleData([data, waveMin, waveMax]));
@@ -155,7 +158,8 @@ export default function Fetch({ type, params, fetchURL, buttonText, buttonStyle 
               break;
             case "background":
               dispatch(setBackgroundData([null, null, null]));
-              nav("/instrument", -1)
+              nav("/instrument", -1);
+              dispatch(setSpinner(false));
               sleepID = setTimeout(() => {
                 dispatch(setProgress(false));
                 dispatch(setBackgroundData([data, waveMin, waveMax]));
