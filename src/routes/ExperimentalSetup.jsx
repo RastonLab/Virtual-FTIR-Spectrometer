@@ -26,6 +26,7 @@ import { useSelector } from "react-redux";
 // style
 import "../style/routes/ExperimentalSetup.css";
 import "../style/components/Button.css";
+import { Box, CircularProgress } from "@mui/material";
 
 export default function ExperimentalSetup() {
   const {
@@ -46,6 +47,7 @@ export default function ExperimentalSetup() {
   // progress and error values
   const { progress } = useSelector((store) => store.progress);
   const { error, errorText } = useSelector((store) => store.error);
+  const { spinner } = useSelector((store) => store.spinner);
 
   return (
     <div id="experimental-setup">
@@ -209,7 +211,11 @@ export default function ExperimentalSetup() {
         </div>
       </div>
       <div id="graph-and-error" className="exp-col">
-        {progress && <div id="spinner" />}
+        {spinner && 
+          <Box sx={{ display: 'flex'}}>
+            <CircularProgress size={200}/>
+          </Box>
+        }
         {error && (
           <div id="error">
             <p style={{ fontSize: 30 }}>{errorText}</p>
