@@ -6,6 +6,8 @@ import { SamplePlotly } from "../components/SamplePlotly";
 import Electronics from "../components/Electronics";
 import Main from "../components/svgs/InstrumentSVG";
 
+import { Box, CircularProgress } from "@mui/material";
+
 import CloseButton from "../components/CloseButton";
 
 // dictionaries
@@ -22,6 +24,7 @@ export default function InstrumentWindow() {
     (store) => store.parameter
   );
   const { sampleData } = useSelector((store) => store.sampleData);
+  const { progress } = useSelector((store) => store.progress);
   const [toggled, setToggled] = useState(false);
   const [element, setElement] = useState();
 
@@ -57,10 +60,18 @@ export default function InstrumentWindow() {
           <Electronics />
         </div>
         <div id="spectrum">
-          {sampleData ? (
+          {!sampleData && !progress &&
+            <p>Please generate a sample spectrum and return here</p>   
+          }
+          {progress ? (
+            <>
+              <h2>Processing Sample...</h2>
+              <Box sx={{padding: 20}}>
+                <CircularProgress size={100}/>
+              </Box>
+            </>
+            ) : (
             <SamplePlotly />
-          ) : (
-            <p>Please generate a sample spectrum and return here</p>
           )}
         </div>
       </div>
@@ -98,11 +109,6 @@ export default function InstrumentWindow() {
           <p>{toolTips[element].text}</p>
         </Dialog>
       )}
-      {/* {element && (
-        <Popup label="" title={}>
-
-        </Popup>
-      )} */}
     </div>
   );
 }
