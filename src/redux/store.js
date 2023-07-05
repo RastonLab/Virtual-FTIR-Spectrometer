@@ -8,6 +8,7 @@ import parameterReducer from "../features/parameterSlice";
 import peaksDataReducer from "../features/peaksDataSlice";
 import progressReducer from "../features/progressSlice";
 import sampleDataReducer from "../features/sampleDataSlice";
+import spinnerReducer from "../features/spinnerSlice";
 
 export const store = configureStore({
   reducer: {
@@ -18,5 +19,6 @@ export const store = configureStore({
     peaksData: peaksDataReducer,
     progress: progressReducer,
     sampleData: sampleDataReducer,
+    spinner: spinnerReducer
   },
 });
