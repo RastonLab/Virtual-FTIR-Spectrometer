@@ -6,8 +6,6 @@ import { SamplePlotly } from "../components/SamplePlotly";
 import Electronics from "../components/Electronics";
 import Main from "../components/svgs/InstrumentSVG";
 
-import { Box, CircularProgress } from "@mui/material";
-
 import CloseButton from "../components/CloseButton";
 
 // dictionaries
@@ -19,6 +17,7 @@ import { useSelector } from "react-redux";
 // style
 import "../style/routes/InstrumentWindow.css";
 import "../style/components/Button.css";
+import Spinner from "../components/Spinner";
 
 export default function InstrumentWindow() {
   const { beamsplitter, detector, source, window } = useSelector(
@@ -67,22 +66,7 @@ export default function InstrumentWindow() {
           {progress ? (
             <>
               <h2>Processing Sample...</h2>
-              <Box sx={{display: 'flex', flexDirection: "column", alignItems: "center", padding: 15}}>
-                <CircularProgress variant="indeterminate" value={100} sx={{'svg circle': { stroke: 'url(#my_gradient)' } }} size={100}/>
-                <svg>
-                    <defs>
-                        <linearGradient id='my_gradient' x1='80%' y1='0%' x2='0%' y2='50%'>
-                            <stop offset='0%' stopColor='rgba(255, 0, 0, 1)' />
-                            <stop offset='10%' stopColor='rgba(255, 165, 0, 1)'/>
-                            <stop offset='30%' stopColor='rgba(255, 255, 0, 1)'/>
-                            <stop offset='50%' stopColor='rgba(0, 170, 0, 1)'/>
-                            <stop offset='70%' stopColor='rgba(0, 221, 255, 1)'/>
-                            <stop offset='90%' stopColor='rgba(0, 0, 255, 1)'/>
-                            <stop offset='100%' stopColor='rgba(147, 1, 205, 1)' />
-                        </linearGradient>
-                    </defs>
-                </svg>
-              </Box>
+              <Spinner spinnerType="determinate" size={100} />
             </>
             ) : (
             <SamplePlotly />
