@@ -66,7 +66,7 @@ export default function InstrumentWindow() {
           {progress ? (
             <>
               <h2>Processing Sample...</h2>
-              <Spinner spinnerType="determinate" size={100} />
+              <Spinner variant="determinate" value={75} />
             </>
             ) : (
             <SamplePlotly />

@@ -1,11 +1,10 @@
 import { Box, CircularProgress } from "@mui/material";
 
-export default function Spinner(spinnerType, size) {
-
+export default function Spinner(props) {
 
     return (
     <Box sx={{display: 'flex', flexDirection: "column", alignItems: "center", padding: 15}}>
-    <CircularProgress variant="indeterminate" value={100} sx={{'svg circle': { stroke: 'url(#my_gradient)' } }} size={100}/>
+    <CircularProgress {...props} size={100} sx={{'svg circle': { stroke: 'url(#my_gradient)' } }} />
     <svg>
         <defs>
             <linearGradient id='my_gradient' x1='80%' y1='0%' x2='0%' y2='50%'>

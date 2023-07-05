@@ -212,7 +212,7 @@ export default function ExperimentalSetup() {
       </div>
       <div id="graph-and-error" className="exp-col">
         {spinner && 
-          <Spinner spinnerType="indeterminate" size={200} />
+          <Spinner variant="indeterminate" />
         }
         {error && (
           <div id="error">
