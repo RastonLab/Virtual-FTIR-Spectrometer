@@ -19,8 +19,10 @@ import "../style/routes/InstrumentWindow.css";
 import "../style/components/Button.css";
 import Spinner from "../components/Spinner";
 
+import { OPD } from "../components/Fetch";
+
 export default function InstrumentWindow() {
-  const { beamsplitter, detector, source, window } = useSelector(
+  const { beamsplitter, detector, source, window, resolution, scan } = useSelector(
     (store) => store.parameter
   );
   const { sampleData } = useSelector((store) => store.sampleData);
@@ -53,6 +55,8 @@ export default function InstrumentWindow() {
     }
   };
 
+  const delay = OPD[resolution] * scan * 1000; // 1000 is to convert to milliseconds
+
   return (
     <div id="instrument-window">
       <div id="instrument-accessories">
@@ -66,7 +70,7 @@ export default function InstrumentWindow() {
           {progress ? (
             <>
               <h2>Processing Sample...</h2>
-              <Spinner variant="indeterminate" />
+              <Spinner variant="determinate" timer={delay} size={100} />
             </>
             ) : (
             <SamplePlotly />
