@@ -59,7 +59,7 @@ export default function ExperimentalSetup() {
               storeMin={waveMin}
               storeMax={waveMax}
               min={400}
-              max={12500}
+              max={8000}
               step={10}
             />
           </div>
