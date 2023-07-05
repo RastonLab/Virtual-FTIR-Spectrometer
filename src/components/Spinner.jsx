@@ -13,7 +13,7 @@ export default function Spinner(props) {
       return () => {
         clearInterval(timer);
       };
-    }, []);
+    }, [props.timer]);
 
     return (
     <Box sx={{display: 'flex', flexDirection: "column", alignItems: "center", padding: 15}}>
