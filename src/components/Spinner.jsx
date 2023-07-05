@@ -1,4 +1,5 @@
 import { Box, CircularProgress } from "@mui/material";
+import Typography from '@mui/material/Typography';
 import React from "react";
 
 export default function Spinner(props) {
@@ -18,6 +19,12 @@ export default function Spinner(props) {
     return (
     <Box sx={{display: 'flex', flexDirection: "column", alignItems: "center", padding: 15}}>
     <CircularProgress {...props} value={timer} sx={{'svg circle': { stroke: 'url(#my_gradient)' } }} />
+    { props.timer &&
+        <Typography variant="caption" component="div" color="inherit" fontFamily="inherit" fontSize={20} fontWeight={650}>
+            {Math.round(timer)}%
+        </Typography>
+    }
+
     <svg>
         <defs>
             <linearGradient id='my_gradient' x1='80%' y1='0%' x2='0%' y2='50%'>
