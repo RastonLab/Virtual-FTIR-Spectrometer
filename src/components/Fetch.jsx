@@ -66,6 +66,7 @@ export default function Fetch({ type, params, fetchURL, buttonText, buttonStyle 
         // error occurred in checkParams, display error message to user
         if (errorMessage) {
           dispatch(setProgress(false));
+          dispatch(setSpinner(false));
           dispatch(setError([true, String(errorMessage)]));
           return;
         }
@@ -127,6 +128,7 @@ export default function Fetch({ type, params, fetchURL, buttonText, buttonStyle 
       });
     } else {
       dispatch(setProgress(false));
+      dispatch(setSpinner(false));
       dispatch(setError([true, "Invalid Request Type"]));
       return;
     }
@@ -178,12 +180,14 @@ export default function Fetch({ type, params, fetchURL, buttonText, buttonStyle 
         else {
           console.log("not success");
           dispatch(setProgress(false));
+          dispatch(setSpinner(false));
           dispatch(setError([true, String(data.text)]));
         }
       }
       // connection was unsuccessful
       else {
         dispatch(setProgress(false));
+        dispatch(setSpinner(false));
         dispatch(setError([true, String(data.text)]));
       }
     } catch (error) {
@@ -200,6 +204,7 @@ export default function Fetch({ type, params, fetchURL, buttonText, buttonStyle 
           break;
       }
       dispatch(setProgress(false));
+      dispatch(setSpinner(false));
       dispatch(setError([true, errorMessage]));
     }
   };

@@ -1,6 +1,7 @@
 import { useDispatch, useSelector } from "react-redux";
 import { sleepID } from "./Fetch";
 import { setProgress } from "../features/progressSlice";
+import { setSpinner } from "../features/spinnerSlice";
 
 export default function CancelScan() {
 
@@ -8,7 +9,7 @@ export default function CancelScan() {
     const { progress } = useSelector((store) => store.progress);
 
     return (
-        <button onClick={() => {clearTimeout(sleepID); dispatch(setProgress(false));}} disabled={!progress}>
+        <button onClick={() => {clearTimeout(sleepID); dispatch(setProgress(false)); dispatch(setSpinner(false));        }} disabled={!progress}>
           Cancel Scan
         </button>
     );

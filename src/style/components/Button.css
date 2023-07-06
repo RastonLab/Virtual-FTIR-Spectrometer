@@ -16,7 +16,7 @@ background-color: #212529;
 .button:hover {
 background-color: #002ead;
 color: black;
-background: linear-gradient(90deg, red, orange, yellow, green, blue, purple);
+background: linear-gradient(90deg, red, orange, yellow, rgb(0, 170, 0), rgb(0, 221, 255), blue, rgb(147, 1, 205));
 }
 
 .button:hover:disabled {
