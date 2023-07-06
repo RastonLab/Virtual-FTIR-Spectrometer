@@ -26,7 +26,7 @@ import { useSelector } from "react-redux";
 // style
 import "../style/routes/ExperimentalSetup.css";
 import "../style/components/Button.css";
-import { Box, CircularProgress } from "@mui/material";
+import Spinner from "../components/Spinner";
 
 export default function ExperimentalSetup() {
   const {
@@ -59,7 +59,7 @@ export default function ExperimentalSetup() {
               storeMin={waveMin}
               storeMax={waveMax}
               min={400}
-              max={12500}
+              max={8000}
               step={10}
             />
           </div>
@@ -212,9 +212,7 @@ export default function ExperimentalSetup() {
       </div>
       <div id="graph-and-error" className="exp-col">
         {spinner && 
-          <Box sx={{ display: 'flex'}}>
-            <CircularProgress size={200}/>
-          </Box>
+          <Spinner variant="indeterminate" />
         }
         {error && (
           <div id="error">
