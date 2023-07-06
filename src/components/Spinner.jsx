@@ -1,10 +1,23 @@
 import { Box, CircularProgress } from "@mui/material";
+import React from "react";
 
 export default function Spinner(props) {
 
+    const [timer, setTimer] = React.useState(0);
+
+    React.useEffect(() => {
+      const timer = setInterval(() => {
+        setTimer((prevProgress) => (prevProgress >= 100 ? 0 : prevProgress + 1));
+      }, props.timer / 100);
+  
+      return () => {
+        clearInterval(timer);
+      };
+    }, [props.timer]);
+
     return (
     <Box sx={{display: 'flex', flexDirection: "column", alignItems: "center", padding: 15}}>
-    <CircularProgress {...props} size={100} sx={{'svg circle': { stroke: 'url(#my_gradient)' } }} />
+    <CircularProgress {...props} value={timer} sx={{'svg circle': { stroke: 'url(#my_gradient)' } }} />
     <svg>
         <defs>
             <linearGradient id='my_gradient' x1='80%' y1='0%' x2='0%' y2='50%'>
