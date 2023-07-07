@@ -3,18 +3,18 @@ import { createSlice } from "@reduxjs/toolkit";
 const initialState = {
   beamsplitter: "AR_ZnSe",
   detector: "MCT",
-  medium: "Vacuum",
-  molecule: "CO",
-  pressure: 0.001,
-  resolution: 1,
-  scan: 1,
+  medium: "Air",
+  molecule: "HCN",
+  pressure: 0.1,
+  resolution: 0.125,
+  scan: 16,
   source: 1200,
-  waveMin: 1900,
+  waveMin: 400,
   waveMinSaved: null,
-  waveMax: 2300,
+  waveMax: 4000,
   waveMaxSaved: null,
-  window: "CaF2",
-  zeroFill: 0,
+  window: "ZnSe",
+  zeroFill: 1,
 };
 
 const parameterSlice = createSlice({
