@@ -57,7 +57,7 @@ export default function Fetch({ type, params, fetchURL, buttonText, buttonStyle 
     ) {
       // Allows the user to generate new absorbance data (there was a recursive issue in the Absorbance Plotly)
       dispatch(setAbsorbanceData([null, null, null]));
-      dispatch(setSpinner(true));
+      dispatch(setSpinner(true)); // Turns on the "waiting" spinner
 
       if (params) {
         // validate the user parameters
@@ -152,7 +152,7 @@ export default function Fetch({ type, params, fetchURL, buttonText, buttonStyle 
             case "sample":
               dispatch(setSampleData([null, null, null]));
               nav("/instrument", -1);
-              dispatch(setSpinner(false));
+              dispatch(setSpinner(false)); // Turns off "waiting" spinner
               sleepID = setTimeout(() => {
                 dispatch(setProgress(false));
                 dispatch(setSampleData([data, waveMin, waveMax]));
@@ -161,7 +161,7 @@ export default function Fetch({ type, params, fetchURL, buttonText, buttonStyle 
             case "background":
               dispatch(setBackgroundData([null, null, null]));
               nav("/instrument", -1);
-              dispatch(setSpinner(false));
+              dispatch(setSpinner(false)); // Turns off "waiting" spinner
               sleepID = setTimeout(() => {
                 dispatch(setProgress(false));
                 dispatch(setBackgroundData([data, waveMin, waveMax]));
