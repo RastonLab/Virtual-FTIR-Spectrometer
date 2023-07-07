@@ -125,9 +125,9 @@ export default function ExperimentalSetup() {
           <div className="parameter">
             <Switch
               formLabel={"Beamsplitter"}
-              optionOneLabel={"AR_ZnSe"}
+              optionOneLabel={"AR-ZnSe"}
               optionOneData={"AR_ZnSe"}
-              optionTwoLabel={"AR_CaF₂"}
+              optionTwoLabel={"AR-CaF₂"}
               optionTwoData={"AR_CaF2"}
               store={beamsplitter}
             />
