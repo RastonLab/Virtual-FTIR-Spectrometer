@@ -9,7 +9,7 @@ export default function checkParams(params) {
     return "min wavenumber is out of range (400 - 12500)";
   }
 
-  if (params.waveMax > 8000) {
+  if (params.waveMax > 12500) {
     return "max wavenumber is out of range (400 - 12500)";
   }
 
