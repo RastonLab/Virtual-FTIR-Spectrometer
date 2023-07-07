@@ -17,8 +17,8 @@ export const store = configureStore({
     error: errorReducer,
     parameter: parameterReducer,
     peaksData: peaksDataReducer,
-    progress: progressReducer,
+    progress: progressReducer,      // For when we are simulating scans
     sampleData: sampleDataReducer,
-    spinner: spinnerReducer
+    spinner: spinnerReducer         // For when we are reaching out to the server
   },
 });
