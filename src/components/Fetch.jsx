@@ -14,6 +14,7 @@ import { setSampleData } from "../features/sampleDataSlice";
 import { setPeaksData } from "../features/peaksDataSlice";
 import { setAbsorbanceData } from "../features/absorbanceDataSlice";
 import { setSpinner } from "../features/spinnerSlice";
+import { setTimer } from "../features/timerSlice";
 import * as mode from "../functions/fetchURL.js";
 import { useNavigate } from "react-router-dom";
 
@@ -58,6 +59,7 @@ export default function Fetch({ type, params, fetchURL, buttonText, buttonStyle 
       // Allows the user to generate new absorbance data (there was a recursive issue in the Absorbance Plotly)
       dispatch(setAbsorbanceData([null, null, null]));
       dispatch(setSpinner(true)); // Turns on the "waiting" spinner
+      dispatch(setTimer(0));
 
       if (params) {
         // validate the user parameters

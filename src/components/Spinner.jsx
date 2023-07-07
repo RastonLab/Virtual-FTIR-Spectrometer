@@ -1,27 +1,35 @@
 import { Box, CircularProgress } from "@mui/material";
 import Typography from '@mui/material/Typography';
 import React from "react";
+import { useSelector, useDispatch } from "react-redux";
+import { setTimer } from "../features/timerSlice";
 
 export default function Spinner(props) {
 
-    const [timer, setTimer] = React.useState(0);
+    const dispatch = useDispatch();
 
+    const { timer } = useSelector((store) => store.timer);
+    const [delay, setDelay] = React.useState(timer);
+
+    // Updates the value of the 
     React.useEffect(() => {
-      const timer = setInterval(() => {
-        setTimer((prevProgress) => (prevProgress >= 100 ? 0 : prevProgress + 1));
+      const timer_interval = setInterval(() => {
+        setDelay((prevProgress) => (prevProgress >= 100 ? 0 : prevProgress + 1));
       }, props.timer / 100);
   
+      dispatch(setTimer(delay))
+
       return () => {
-        clearInterval(timer);
+        clearInterval(timer_interval);
       };
-    }, [props.timer]);
+    }, [props.timer, delay, dispatch]);
 
     return (
     <Box sx={{display: 'flex', flexDirection: "column", alignItems: "center", padding: 15}}>
-    <CircularProgress {...props} value={timer} sx={{'svg circle': { stroke: 'url(#my_gradient)' } }} />
+    <CircularProgress {...props} value={delay} sx={{'svg circle': { stroke: 'url(#my_gradient)' } }} />
     { props.timer &&
         <Typography variant="caption" component="div" color="inherit" fontFamily="inherit" fontSize={20} fontWeight={650}>
-            {Math.round(timer)}%
+            {Math.round(delay)}%
         </Typography>
     }
 
