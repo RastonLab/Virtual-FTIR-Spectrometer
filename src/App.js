@@ -17,8 +17,10 @@ export default function App() {
   return (
     <div>
       <div className="nav-area">
-        <RLLogo className="logo" width={55} height={55} viewBox="0 0 100 100" />
-        <Link className="logo" to="/">
+        <a className="logolink" target="_blank" rel="noreferrer" href="https://www.rastonlab.org/">
+          <RLLogo width={50} height={50} viewBox="0 0 100 100" />
+        </a>
+        <Link className="logo" to="/" >
           FTIR-SIS
         </Link>
 
