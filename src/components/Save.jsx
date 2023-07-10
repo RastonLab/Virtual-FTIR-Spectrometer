@@ -52,7 +52,9 @@ export default function Save() {
 
     setData(newData);
     setFilename("sample data.csv");
-    csvLink.current.link.click()
+    setTimeout(() => {
+      csvLink.current.link.click();
+    }, 500);
   };
 
   const backCSV = () => {
@@ -67,7 +69,9 @@ export default function Save() {
 
     setData(newData);
     setFilename("background data.csv");
-    csvLink.current.link.click()
+    setTimeout(() => {
+      csvLink.current.link.click();
+    }, 500);  
   };
 
   const transCSV = () => {
@@ -83,7 +87,9 @@ export default function Save() {
 
     setData(newData);
     setFilename("transmittance data.csv");
-    csvLink.current.link.click()
+    setTimeout(() => {
+      csvLink.current.link.click();
+    }, 500);  
   };
 
   const absorbCSV = () => {
@@ -99,7 +105,9 @@ export default function Save() {
 
     setData(newData);
     setFilename("absorbance data.csv");
-    csvLink.current.link.click()
+    setTimeout(() => {
+      csvLink.current.link.click();
+    }, 500);  
   };
 
   const peaksCSV = () => {
@@ -111,7 +119,9 @@ export default function Save() {
 
     setData(newData);
     setFilename("peaks data.csv");
-    csvLink.current.link.click()
+    setTimeout(() => {
+      csvLink.current.link.click();
+    }, 500);  
   };
 
   return (
