@@ -22,9 +22,8 @@ import Spinner from "../components/Spinner";
 import { OPD } from "../components/Fetch";
 
 export default function InstrumentWindow() {
-  const { beamsplitter, detector, source, window, resolution, scan } = useSelector(
-    (store) => store.parameter
-  );
+  const { beamsplitter, detector, source, window, resolution, scan } =
+    useSelector((store) => store.parameter);
   const { sampleData } = useSelector((store) => store.sampleData);
   const { progress } = useSelector((store) => store.progress);
   const [toggled, setToggled] = useState(false);
@@ -64,15 +63,15 @@ export default function InstrumentWindow() {
           <Electronics />
         </div>
         <div id="spectrum">
-          {!sampleData && !progress &&
-            <p>Please generate a sample spectrum and return here</p>   
-          }
+          {!sampleData && !progress && (
+            <p>Please generate a sample spectrum and return here</p>
+          )}
           {progress ? (
             <>
               <h2>Processing Sample...</h2>
               <Spinner variant="determinate" timer={delay} size={100} />
             </>
-            ) : (
+          ) : (
             <SamplePlotly />
           )}
         </div>
@@ -93,8 +92,8 @@ export default function InstrumentWindow() {
         }}
         // ternary used to show/hide source laser and mirror in the Main SVG
         source={{
-          globar: source === 1700 ? "inline" : "none",
-          tungsten: source === 3100 ? "inline" : "none",
+          globar: source === 1200 ? "inline" : "none",
+          tungsten: source === 3400 ? "inline" : "none",
         }}
         window={{
           caf2: window === "CaF2" ? "inline" : "none",
