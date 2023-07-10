@@ -1,3 +1,4 @@
+// SVG Imports
 import apd from "../components/svgs/tooltip/apd.svg";
 import aperture from "../components/svgs/tooltip/aperture-wheel.svg";
 import bscaf2 from "../components/svgs/tooltip/beamsplitter-caf2.svg";
@@ -16,6 +17,15 @@ import pump from "../components/svgs/tooltip/pump.svg";
 import samplecaf2 from "../components/svgs/tooltip/sample-compartment-caf2.svg";
 import sampleznse from "../components/svgs/tooltip/sample-compartment-znse.svg";
 import tungsten from "../components/svgs/tooltip/tungsten.svg";
+
+// Graph Imports
+import AR_CaF2_graph from "./description_graphs/AR_CaF2_py.png";
+import AR_ZnSe_graph from "./description_graphs/AR_ZnSe_py.png";
+import blackbody_graph from "./description_graphs/Blackbody.png";
+import CaF2_graph from "./description_graphs/CaF2_py.png";
+import InSb_graph from "./description_graphs/InSb_py.png";
+import MCT_graph from "./description_graphs/MCT_py.png";
+import ZnSe_graph from "./description_graphs/ZnSe_py.png";
 
 // Not in the toolTip Object because it is is used multiple times
 const flatRotatableMirrorSource = {
@@ -52,25 +62,25 @@ export const toolTips = {
   // beamsplitters
   "beamsplitter-caf2": {
     image: bscaf2,
-    title: "Beamsplitter (AR_CaF₂)",
+    title: "Beamsplitter (AR-CaF₂)",
     text: (
       <div>
         <p>
           AntiReflective (AR) coated calcium fluoride (CaF₂) beamsplitter, which has good transmittance and reflectance in the mid-to-near-infrared region. The following plot shows the transmittance spectrum of a 3 mm thick AR coated CaF2 beamsplitter.
         </p>
-        {/* TODO Add image */}
+        <img src={AR_CaF2_graph} alt="a graph showing the AR-CaF2 transmittance spectrum" />
       </div>
     )
   },
   "beamsplitter-znse": {
     image: bsznse,
-    title: "Beamsplitter (AR_ZnSe)",
+    title: "Beamsplitter (AR-ZnSe)",
     text: (
       <div>
         <p>
           AntiReflective (AR) coated zinc selenide (ZnSe) beamsplitter, which has good transmittance and reflectance in the mid-infrared region. The following plot shows the transmittance spectrum of a 3 mm thick AR coated ZnSe beamsplitter.
         </p>
-        {/* TODO Add image */}
+        <img src={AR_ZnSe_graph} alt="a graph showing the AR-ZnSe transmittance spectrum" /> 
       </div>
     )
   },
@@ -92,9 +102,9 @@ export const toolTips = {
 
   // flat rotatable mirrors
   "flat-rotatable-mirror-insb": flatRotatableMirrorDetector,
-  "flat-rotatable-mirror-globar": flatRotatableMirror,
+  "flat-rotatable-mirror-globar": flatRotatableMirrorSource,
   "flat-rotatable-mirror-mct": flatRotatableMirrorDetector,
-  "flat-rotatable-mirror-tungsten": flatRotatableMirror,
+  "flat-rotatable-mirror-tungsten": flatRotatableMirrorSource,
 
   "pressure-gauge": {
     image: gauge,
@@ -114,7 +124,7 @@ export const toolTips = {
         <p>
           Liquid nitrogen cooled Indium Antimonide (InSb) detector with a sapphire window. This is a semiconductor detector that utilizes a photoelectric-like effect in order to convert light into electricity. The output current is proportional to the infrared intensity. It is more sensitive than the MCT detector above ~1800 cm⁻¹. The following plot shows the InSb detector response spectrum.
         </p>
-        {/* TODO Add image */}
+        <img src={InSb_graph} alt="a graph showing the InSb detector response spectrum" />
       </div>
     ),
   },
@@ -152,7 +162,7 @@ export const toolTips = {
         <p>
           Liquid nitrogen cooled Mercury-Cadmium-Telluride (MCT) detector with a zinc selenide (ZnSe) window. This is a semiconductor detector that utilizes a photoelectric-like effect in order to convert light into electricity. The output current is proportional to the infrared intensity. It is more sensitive than the InSb detector below ~1800 cm⁻¹. The following plot shows the MCT detector response spectrum.
         </p>
-        {/* TODO Add image */}
+        <img src={MCT_graph} alt="a graph showing the MCT detector response spectrum" />
       </div>
     ),
   },
@@ -197,7 +207,7 @@ export const toolTips = {
         <p>
          Pyrex sample cell that has two valves for controlling gas flow in (right) and out (left) from it. The medium (space inside) can either be “vacuum” or “air”. When vacuum is selected, the pressure of the selected molecule is equal to the total pressure inside the cell. When air is selected, the pressure of the selected molecule is equal to the partial pressure inside the cell (the rest is filled with air to a total pressure of 1 atm or 1.01325 bar). The uncoated salt windows on either end of the cell are calcium fluoride (CaF2), which has good transmittance in the mid-to-near-infrared region. The following plot shows the transmittance spectrum of one of the 2 mm thick CaF2 windows that this cell is equipped with.
         </p>
-        {/* TODO Add image */}
+        <img src={CaF2_graph} alt="a graph of the CaF2 transmittance spectrum" />
       </div>
     ),
   },
@@ -209,7 +219,7 @@ export const toolTips = {
         <p>
           Pyrex sample cell that has two valves for controlling gas flow in (right) and out (left) from it. The medium (space inside) can either be “vacuum” or “air”. When vacuum is selected, the pressure of the selected molecule is equal to the total pressure inside the cell. When air is selected, the pressure of the selected molecule is equal to the partial pressure inside the cell (the rest is filled with air to a total pressure of 1 atm or 1.01325 bar). The uncoated salt windows on either end of the cell are zinc selenide (ZnSe), which has good transmittance in the mid-infrared region (above 500 cm⁻¹). The following plot shows the transmittance spectrum of one of the 2 mm thick ZnSe windows that this cell is equipped with.
         </p>
-        {/* TODO Add image */}
+        <img src={ZnSe_graph} alt="a graph showing the ZnSe transmittance spectrum" />
       </div>
     ),
   },
@@ -224,7 +234,7 @@ export const toolTips = {
           </blockquote>
           where h is Planck’s constant, c is the speed of light, ṽ is the wavenumber, kB is Boltzmann’s constant, and T is the temperature. The following plot shows normalized blackbody emission spectra at 1200 K (globar; blue) and 3400 K (tungsten; red) that was calculated using the above formula.
         </p>
-        {/* TODO add image */}
+        <img src={blackbody_graph} alt="a graph showing the blackbody emission spectra" />
       </div>
     )
   },
