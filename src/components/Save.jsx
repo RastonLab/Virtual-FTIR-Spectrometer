@@ -169,7 +169,7 @@ export default function Save() {
           </button>
         )}
 
-        <CSVLink data={data} filename={filename} className="hidden" ref={csvLink} target="_blank" />
+        <CSVLink data={data} headers={header} filename={filename} className="hidden" ref={csvLink} target="_blank" />
       </div>
     </div>
   );
