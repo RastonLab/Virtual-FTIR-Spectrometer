@@ -17,12 +17,14 @@ import samplecaf2 from "../components/svgs/tooltip/sample-compartment-caf2.svg";
 import sampleznse from "../components/svgs/tooltip/sample-compartment-znse.svg";
 import tungsten from "../components/svgs/tooltip/tungsten.svg";
 
+// Not in the toolTip Object because it is is used multiple times
 const flatRotatableMirror = {
   image: fm,
   title: "Flat Rotatable Mirror",
   text: "Gold plated flat rotatable mirror that reflects radiation from the source to the parabolic mirror.",
 };
 
+// Not in the toolTip Object because it is is used multiple times
 const parabolicMirrorHole = {
   image: pmh,
   title: "Parabolic Mirror With Hole",
@@ -51,6 +53,10 @@ export const toolTips = {
     image: bsznse,
     title: "Beamsplitter (AR_ZnSe)",
     text: "AntiReflective (AR) coated zinc selenide (ZnSe) beamsplitter, which has good transmittance and reflectance in the far-to-mid-infrared region.",
+  },
+  "detector-compartment": {
+    title: "Detector Compartment",
+    text: "This is the where the infrared radiation is detected. The detectors this FTIR is equipped with cover the mid (400-4000 cm-1) and near infrared (4000-12500 cm-1) ranges."
   },
 
   "fixed-corner-cube": {
@@ -84,6 +90,22 @@ export const toolTips = {
     image: insb,
     title: "InSb",
     text: "Liquid nitrogen cooled Indium Antimonide (InSb) detector with a sapphire window. This is a semiconductor detector that utilizes a photoelectric-like effect in order to convert light into electricity. The output current is proportional to the infrared intensity. It is more sensitive than MCT in the mid- and near-infrared regions (above ~1500 cm⁻¹).",
+  },
+  "interferometer-compartment": {
+    title: "Interferometer Compartment",
+    text: (
+      <div>
+        <p>
+          This compartment houses a Michelson interferometer which lies at the heart of the FTIR spectrometer. It consists of a beamsplitter, a movable mirror, and a stationary mirror. The beamsplitter divides both the laser beam and infrared beam into two. These beams reflect of a stationary mirror and movable mirror after which they recombine at the beamsplitter. When both mirrors are at the same distance from the beamsplitter there is zero path difference (ZPD) and the recombined beams constructively interfere (so the incoming and outgoing beams are the same). When the distances are different, there will be a wavelength dependent interference effect in the recombined beams.
+        </p>
+        <p>
+          The interference is constructive when crests (troughs) in the electromagnetic wave overlap with crests (troughs). This occurs when the optical path difference (OPD) between the mirrors is equal to a multiple of the wavelength [OPD = n·]. Conversely, when the OPD is a multiple of half of the wavelength, destructive interference occurs [OPD = (n+1/2)·]. When the movable mirror is scanned, an oscillating signal appears in the interferogram (which is a plot of the signal against the OPD). For the laser beam, this oscillating signal is simply a sine wave, because it is a monochromatic source (there is no wavelength dependence). The infrared beam, on the other hand, consists of broadband radiation, and so the interference pattern that is detected is more complicated.
+        </p>
+        <p>
+          The Fourier transform of an interferogram gives rise to a frequency domain spectrum. For the laser beam, the spectrum is a single peak at the resonant frequency of the laser (632.82 nm or 15802 cm-1). For the infrared beam, the spectrum typically consists of many peaks at the resonance frequency of the molecule. In this gas phase FTIR SIS, the resonance frequencies correspond to the spacing between quantized rotational-vibrational energy levels. Note that the HeNe laser allows for a very accurate and precise determination of the OPD, which results in precise determination of rotational-vibrational energy level spacings.
+        </p>
+      </div>
+    )
   },
   laser: {
     image: laser,
@@ -132,14 +154,28 @@ export const toolTips = {
   "sample-compartment-caf2": {
     image: samplecaf2,
     title: "Sample Compartment (CaF₂)",
-    text: "This is a pyrex sample cell that has two valves for controlling gas flow into (right) and out from (right) it. The uncoated salt windows on either end are calcium fluoride (CaF2), which has good transmittance in the mid-to-near-infrared region.",
+    text: "This compartment houses the sample cell within which the infrared radiation is focused. In a typical FTIR spectrometer, this gas cell can be switched out so that other sample types can be analyzed, such as KBr pellets.",
   },
   "sample-compartment-znse": {
     image: sampleznse,
     title: "Sample Compartment (ZnSe)",
-    text: "This is a pyrex sample cell that has two valves for controlling gas flow into (right) and out from (right) it. The uncoated salt windows on either end are zinc selenide (ZnSe), which has good transmittance in the far-to-mid-infrared region (in particular, below 1100 cm⁻¹).",
+    text: "This compartment houses the sample cell within which the infrared radiation is focused. In a typical FTIR spectrometer, this gas cell can be switched out so that other sample types can be analyzed, such as KBr pellets.",
   },
-
+  "source-compartment": {
+    title: "Source Compartment",
+    text: (
+      <div>
+        <p>
+          This is where infrared radiation is generated. The energy density (B) emitted from both a globar and tungsten source are well approximated by Planck's law, which is given by
+          <blockquote>
+            ADD MATH HERE
+          </blockquote>
+          where h is Planck’s constant, c is the speed of light, ṽ is the wavenumber, kB is Boltzmann’s constant, and T is the temperature. The following plot shows normalized blackbody emission spectra at 1200 K (globar; blue) and 3400 K (tungsten; red) that was calculated using the above formula.
+        </p>
+        {/* TODO add image */}
+      </div>
+    )
+  },
   tungsten: {
     image: tungsten,
     title: "Tungsten",
