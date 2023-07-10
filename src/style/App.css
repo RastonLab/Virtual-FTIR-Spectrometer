@@ -26,6 +26,7 @@
 .nav-area {
   display: flex;
   align-items: center;
+  /* justify-content: left; */
   width: 100%;
   margin: 0 auto;
   padding: 0 20px;
@@ -39,7 +40,7 @@
   text-decoration: none;
   font-size: 25px;
   color: inherit;
-  margin-right: 20px;
+  margin: 0 20px 0 20px;
   font-family: "Montserrat";
 }
 
@@ -47,3 +48,9 @@
   display: flex;
   list-style: none;
 }
+
+.logolink {
+  display: inherit;
+  align-items: center;
+}
+
