@@ -18,10 +18,16 @@ import sampleznse from "../components/svgs/tooltip/sample-compartment-znse.svg";
 import tungsten from "../components/svgs/tooltip/tungsten.svg";
 
 // Not in the toolTip Object because it is is used multiple times
-const flatRotatableMirror = {
+const flatRotatableMirrorSource = {
   image: fm,
   title: "Flat Rotatable Mirror",
-  text: "Gold plated flat rotatable mirror that reflects radiation from the source to the parabolic mirror.",
+  text: "Gold plated flat rotatable mirror that reflects radiation from the infrared source to the parabolic mirror.",
+};
+
+const flatRotatableMirrorDetector = {
+  image: fm,
+  title: "Flat Rotatable Mirror",
+  text: "Gold plated flat rotatable mirror that reflects radiation towards a detector.",
 };
 
 // Not in the toolTip Object because it is is used multiple times
@@ -35,24 +41,38 @@ export const toolTips = {
   apd: {
     image: apd,
     title: "Avalanche Photodiode",
-    text: "This is a semiconductor detector that utilizes a photoelectric-like effect in order to convert light into electricity. The output current is proportional to the laser power, which is low (high) when destructive (constructive) interference occurs.",
+    text: "Semiconductor detector that utilizes a photoelectric-like effect in order to convert light into electricity. The output current (signal) is proportional to the laser power, which is low (high) when destructive (constructive) interference occurs. This signal is used to very accurately and precisely determine the movable corner-cube mirror’s displacement.",
   },
   "aperture-wheel": {
     image: aperture,
     title: "Aperture Wheel",
-    text: "This is a black wheel with apertures (holes) of different sizes. Smaller apertures allow for higher resolution at a cost of increased attenuation (blocking) of radiation.",
+    text: "Black wheel with apertures (holes) of different sizes. Smaller apertures allow for higher resolution at a cost of increased attenuation (blocking) of radiation.",
   },
 
   // beamsplitters
   "beamsplitter-caf2": {
     image: bscaf2,
     title: "Beamsplitter (AR_CaF₂)",
-    text: "AntiReflective (AR) coated calcium fluoride (CaF₂) beamsplitter, which has good transmittance and reflectance in the mid-to-near-infrared region.",
+    text: (
+      <div>
+        <p>
+          AntiReflective (AR) coated calcium fluoride (CaF₂) beamsplitter, which has good transmittance and reflectance in the mid-to-near-infrared region. The following plot shows the transmittance spectrum of a 3 mm thick AR coated CaF2 beamsplitter.
+        </p>
+        {/* TODO Add image */}
+      </div>
+    )
   },
   "beamsplitter-znse": {
     image: bsznse,
     title: "Beamsplitter (AR_ZnSe)",
-    text: "AntiReflective (AR) coated zinc selenide (ZnSe) beamsplitter, which has good transmittance and reflectance in the far-to-mid-infrared region.",
+    text: (
+      <div>
+        <p>
+          AntiReflective (AR) coated zinc selenide (ZnSe) beamsplitter, which has good transmittance and reflectance in the mid-infrared region. The following plot shows the transmittance spectrum of a 3 mm thick AR coated ZnSe beamsplitter.
+        </p>
+        {/* TODO Add image */}
+      </div>
+    )
   },
   "detector-compartment": {
     title: "Detector Compartment",
@@ -62,7 +82,7 @@ export const toolTips = {
   "fixed-corner-cube": {
     image: fcc,
     title: "Fixed Corner Cube",
-    text: "Gold coated corner-cube. This component reflects back a return beam that is parallel to the incident beam.",
+    text: "Gold coated corner-cube. This component reflects back a return beam that is parallel to the incident one.",
   },
   "fixed-mirror": {
     image: fm,
@@ -71,25 +91,32 @@ export const toolTips = {
   },
 
   // flat rotatable mirrors
-  "flat-rotatable-mirror-insb": flatRotatableMirror,
+  "flat-rotatable-mirror-insb": flatRotatableMirrorDetector,
   "flat-rotatable-mirror-globar": flatRotatableMirror,
-  "flat-rotatable-mirror-mct": flatRotatableMirror,
+  "flat-rotatable-mirror-mct": flatRotatableMirrorDetector,
   "flat-rotatable-mirror-tungsten": flatRotatableMirror,
 
   "pressure-gauge": {
     image: gauge,
     title: "Manometer",
-    text: "Digital pressure gauge (0-2 bar).",
+    text: "Pressure gauge (0-2 bar) with digital display.",
   },
   globar: {
     image: globar,
     title: "Globar",
-    text: 'Globar heating element which produces radiation at a temperature of 1700 K. Its spectrum is very well approximated by Planck\'s law. Radiation is produced by passing a relatively large current through the material, which is silicon carbide (SiC). Note, the word “globar” is a portmanteau word which blends together "glow" and "bar".',
+    text: 'Globar heating element which produces radiation at a temperature of 1200 K. The word “globar” is a portmanteau word which blends together "glow" and "bar". Radiation is produced by passing a relatively large current through the material, which is silicon carbide (SiC).',
   },
   insb: {
     image: insb,
     title: "InSb",
-    text: "Liquid nitrogen cooled Indium Antimonide (InSb) detector with a sapphire window. This is a semiconductor detector that utilizes a photoelectric-like effect in order to convert light into electricity. The output current is proportional to the infrared intensity. It is more sensitive than MCT in the mid- and near-infrared regions (above ~1500 cm⁻¹).",
+    text: (
+      <div>
+        <p>
+          Liquid nitrogen cooled Indium Antimonide (InSb) detector with a sapphire window. This is a semiconductor detector that utilizes a photoelectric-like effect in order to convert light into electricity. The output current is proportional to the infrared intensity. It is more sensitive than the MCT detector above ~1800 cm⁻¹. The following plot shows the InSb detector response spectrum.
+        </p>
+        {/* TODO Add image */}
+      </div>
+    ),
   },
   "interferometer-compartment": {
     title: "Interferometer Compartment",
@@ -110,7 +137,7 @@ export const toolTips = {
   laser: {
     image: laser,
     title: "Laser",
-    text: "Helium-neon (HeNe) laser. This is a source of coherent, monochromatic light, with a wavelength of 632.8 nm.",
+    text: "Helium-neon (HeNe) reference laser that is used for calibration. This is a source of coherent, monochromatic light, with a primary wavelength of 632.816 nm.",
   },
   lecture: {
     image: lecture,
@@ -120,12 +147,19 @@ export const toolTips = {
   mct: {
     image: mct,
     title: "MCT",
-    text: "Liquid nitrogen cooled Mercury-Cadmium-Telluride (MCT) detector with a sapphire window. This is a semiconductor detector that utilizes a photoelectric-like effect in order to convert light into electricity. The output current is proportional to the infrared intensity. It is more sensitive than InSb in the far-infrared region (below ~1500 cm⁻¹).",
+    text: (
+      <div>
+        <p>
+          Liquid nitrogen cooled Mercury-Cadmium-Telluride (MCT) detector with a zinc selenide (ZnSe) window. This is a semiconductor detector that utilizes a photoelectric-like effect in order to convert light into electricity. The output current is proportional to the infrared intensity. It is more sensitive than the InSb detector below ~1800 cm⁻¹. The following plot shows the MCT detector response spectrum.
+        </p>
+        {/* TODO Add image */}
+      </div>
+    ),
   },
   "movable-corner-cube": {
     image: fcc,
     title: "Movable Corner Cube",
-    text: "Gold coated movable corner-cube. This component reflects back a return beam that is parallel to the incident beam and moves a distance that is inversely proportional to the resolution.",
+    text: "Gold coated movable corner-cube. This component reflects back a return beam that is parallel to the incident beam and moves a distance (OPD/2) that is inversely proportional to the resolution.",
   },
 
   // parabolic mirrors
@@ -147,19 +181,37 @@ export const toolTips = {
   pump: {
     image: pump,
     title: "Rotary Pump",
-    text: "The rotary pump is used to evacuate the sample cell. The exhaust gas flows to the rooftop.",
+    text: "Rotary pump that is used to evacuate the sample cell. The exhaust gas flows into the fume hood exhaust system.",
   },
 
   // sample compartments
+  "sample-compartment-base": {
+    title: "Sample Compartment",
+    text: "This compartment houses the sample cell within which the infrared radiation is focused. In a typical FTIR spectrometer, this gas cell can be switched out so that other sample types can be analyzed, such as KBr pellets."
+  },
   "sample-compartment-caf2": {
     image: samplecaf2,
-    title: "Sample Compartment (CaF₂)",
-    text: "This compartment houses the sample cell within which the infrared radiation is focused. In a typical FTIR spectrometer, this gas cell can be switched out so that other sample types can be analyzed, such as KBr pellets.",
+    title: "Sample Cell (CaF₂)",
+    text: (
+      <div>
+        <p>
+         Pyrex sample cell that has two valves for controlling gas flow in (right) and out (left) from it. The medium (space inside) can either be “vacuum” or “air”. When vacuum is selected, the pressure of the selected molecule is equal to the total pressure inside the cell. When air is selected, the pressure of the selected molecule is equal to the partial pressure inside the cell (the rest is filled with air to a total pressure of 1 atm or 1.01325 bar). The uncoated salt windows on either end of the cell are calcium fluoride (CaF2), which has good transmittance in the mid-to-near-infrared region. The following plot shows the transmittance spectrum of one of the 2 mm thick CaF2 windows that this cell is equipped with.
+        </p>
+        {/* TODO Add image */}
+      </div>
+    ),
   },
   "sample-compartment-znse": {
     image: sampleznse,
-    title: "Sample Compartment (ZnSe)",
-    text: "This compartment houses the sample cell within which the infrared radiation is focused. In a typical FTIR spectrometer, this gas cell can be switched out so that other sample types can be analyzed, such as KBr pellets.",
+    title: "Sample Cell (ZnSe)",
+    text: (
+      <div>
+        <p>
+          Pyrex sample cell that has two valves for controlling gas flow in (right) and out (left) from it. The medium (space inside) can either be “vacuum” or “air”. When vacuum is selected, the pressure of the selected molecule is equal to the total pressure inside the cell. When air is selected, the pressure of the selected molecule is equal to the partial pressure inside the cell (the rest is filled with air to a total pressure of 1 atm or 1.01325 bar). The uncoated salt windows on either end of the cell are zinc selenide (ZnSe), which has good transmittance in the mid-infrared region (above 500 cm⁻¹). The following plot shows the transmittance spectrum of one of the 2 mm thick ZnSe windows that this cell is equipped with.
+        </p>
+        {/* TODO Add image */}
+      </div>
+    ),
   },
   "source-compartment": {
     title: "Source Compartment",
