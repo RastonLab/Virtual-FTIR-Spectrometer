@@ -1,7 +1,7 @@
-import { useState } from "react";
+import { useRef, useState } from "react";
 
 // components
-import { CSVDownload } from "react-csv";
+import { CSVLink } from "react-csv";
 
 // redux
 import { useSelector } from "react-redux";
@@ -31,27 +31,16 @@ export default function Save() {
   const { peaksData } = useSelector((store) => store.peaksData);
   const { sampleData } = useSelector((store) => store.sampleData);
 
-  const [data, setData] = useState();
-  const [printSample, setPrintSample] = useState(false);
-  const [printBack, setPrintBack] = useState(false);
-  const [printTrans, setPrintTrans] = useState(false);
-  const [printAbsorb, setPrintAbsorb] = useState(false);
-  const [printPeaks, setPrintPeaks] = useState(false);
+  const [data, setData] = useState("");
+  const [filename, setFilename] = useState("");
   const header = [
     `Spectrum details | Min Wavenumber: ${waveMin} Max Wavenumber: ${waveMax} Molecule: ${molecule} Pressure: ${pressure} Resolution: ${resolution} Number of Scans: ${scan} Zero Fill: ${zeroFill} Source: ${source} Beamsplitter: ${beamsplitter} Cell Window: ${window} Detector: ${detector} Medium: ${medium} `,
   ];
   // ^^ extra space at the end allows for uniform file reading
 
-  const resetPrints = () => {
-    setPrintSample(false);
-    setPrintBack(false);
-    setPrintTrans(false);
-    setPrintAbsorb(false);
-    setPrintPeaks(false);
-  };
+  const csvLink = useRef();
 
   const sampleCSV = () => {
-    resetPrints();
     let newData = [];
 
     const specType = ["Spectrum Type: Sample Spectrum"];
@@ -62,11 +51,13 @@ export default function Save() {
     }
 
     setData(newData);
-    setPrintSample(true);
+    setFilename("sample data.csv");
+    setTimeout(() => {
+      csvLink.current.link.click();
+    }, 500);
   };
 
   const backCSV = () => {
-    resetPrints();
     let newData = [];
 
     const specType = ["Spectrum Type: Background Spectrum"];
@@ -77,11 +68,13 @@ export default function Save() {
     }
 
     setData(newData);
-    setPrintBack(true);
+    setFilename("background data.csv");
+    setTimeout(() => {
+      csvLink.current.link.click();
+    }, 500);  
   };
 
   const transCSV = () => {
-    resetPrints();
     let newData = [];
 
     const specType = ["Spectrum Type: Transmittance Spectrum"];
@@ -93,11 +86,13 @@ export default function Save() {
     }
 
     setData(newData);
-    setPrintTrans(true);
+    setFilename("transmittance data.csv");
+    setTimeout(() => {
+      csvLink.current.link.click();
+    }, 500);  
   };
 
   const absorbCSV = () => {
-    resetPrints();
     let newData = [];
 
     const specType = ["Spectrum Type: Absorbance Spectrum"];
@@ -109,11 +104,13 @@ export default function Save() {
     }
 
     setData(newData);
-    setPrintAbsorb(true);
+    setFilename("absorbance data.csv");
+    setTimeout(() => {
+      csvLink.current.link.click();
+    }, 500);  
   };
 
   const peaksCSV = () => {
-    resetPrints();
     let newData = [];
 
     for (const [peak, intensity] of Object.entries(peaksData.peaks)) {
@@ -121,33 +118,31 @@ export default function Save() {
     }
 
     setData(newData);
-    setPrintPeaks(true);
+    setFilename("peaks data.csv");
+    setTimeout(() => {
+      csvLink.current.link.click();
+    }, 500);  
   };
 
   return (
     <div>
-      {/* NOTE: cannot control filenames at the moment */}
-      {printSample && <CSVDownload headers={header} data={data} target="." />}
-      {printBack && <CSVDownload headers={header} data={data} target="." />}
-      {printTrans && <CSVDownload headers={header} data={data} target="." />}
-      {printAbsorb && <CSVDownload headers={header} data={data} target="." />}
-      {printPeaks && <CSVDownload headers={header} data={data} target="." />}
-
       <h1>Save Data</h1>
 
-      {sampleData && backgroundData && (
+      {(sampleData || backgroundData) && (
         <h3>What data would you like to save?</h3>
       )}
 
-      {(!sampleData || !backgroundData) && (
+      {(!sampleData && !backgroundData) && (
         <h3>There is currently no data to save</h3>
       )}
 
       <div className="save-col">
         {sampleData && (
-          <button className="button" onClick={sampleCSV}>
-            Sample Spectrum Data
-          </button>
+          <>
+            <button className="button" onClick={sampleCSV}>
+              Sample Spectrum Data
+            </button>
+          </>
         )}
 
         {backgroundData && (
@@ -173,6 +168,8 @@ export default function Save() {
             Peaks Data
           </button>
         )}
+
+        <CSVLink data={data} headers={header} filename={filename} className="hidden" ref={csvLink} target="_blank" />
       </div>
     </div>
   );
