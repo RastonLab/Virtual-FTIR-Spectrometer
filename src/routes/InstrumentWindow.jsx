@@ -3,7 +3,6 @@ import React, { useState } from "react";
 // components
 import { Dialog } from "@mui/material";
 import { SamplePlotly } from "../components/SamplePlotly";
-import Electronics from "../components/Electronics";
 import Main from "../components/svgs/InstrumentSVG";
 
 import CloseButton from "../components/CloseButton";
@@ -22,8 +21,16 @@ import Spinner from "../components/Spinner";
 import { OPD } from "../components/Fetch";
 
 export default function InstrumentWindow() {
-  const { beamsplitter, detector, source, window, resolution, scan } =
-    useSelector((store) => store.parameter);
+  const {
+    beamsplitter,
+    detector,
+    source,
+    window,
+    resolution,
+    scan,
+    waveMin,
+    waveMax,
+  } = useSelector((store) => store.parameter);
   const { sampleData } = useSelector((store) => store.sampleData);
   const { progress } = useSelector((store) => store.progress);
   const [toggled, setToggled] = useState(false);
@@ -59,9 +66,6 @@ export default function InstrumentWindow() {
   return (
     <div id="instrument-window">
       <div id="instrument-accessories">
-        <div id="readout">
-          <Electronics />
-        </div>
         <div id="spectrum">
           {!sampleData && !progress && (
             <p>Please generate a sample spectrum and return here</p>
@@ -95,10 +99,15 @@ export default function InstrumentWindow() {
           globar: source === 1200 ? "inline" : "none",
           tungsten: source === 3400 ? "inline" : "none",
         }}
+        // ternary used to show/hide cell window in the Main SVG
         window={{
           caf2: window === "CaF2" ? "inline" : "none",
           znse: window === "ZnSe" ? "inline" : "none",
         }}
+        opd={resolution}
+        scan={scan}
+        range={`${waveMin} - ${waveMax} cm⁻¹`}
+        resolution={resolution}
       />
 
       {element && (
