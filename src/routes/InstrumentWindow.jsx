@@ -21,16 +21,8 @@ import Spinner from "../components/Spinner";
 import { OPD } from "../components/Fetch";
 
 export default function InstrumentWindow() {
-  const {
-    beamsplitter,
-    detector,
-    source,
-    window,
-    resolution,
-    scan,
-    waveMin,
-    waveMax,
-  } = useSelector((store) => store.parameter);
+  const { beamsplitter, detector, source, window, resolution, scan } =
+    useSelector((store) => store.parameter);
   const { sampleData } = useSelector((store) => store.sampleData);
   const { progress } = useSelector((store) => store.progress);
   const [toggled, setToggled] = useState(false);
@@ -50,11 +42,17 @@ export default function InstrumentWindow() {
     "instrument-window",
     "instrument",
     "mct-laser",
+    "opd-value",
+    "range-value",
     "rays",
+    "readout",
+    "resolution-value",
+    "scan-value",
     "tungsten-laser",
   ];
 
   const handleClick = (event) => {
+    console.log(event.target.parentElement.id);
     if (!badID.includes(event.target.parentElement.id)) {
       setElement(event.target.parentElement.id);
       setToggled(!toggled);
@@ -104,10 +102,6 @@ export default function InstrumentWindow() {
           caf2: window === "CaF2" ? "inline" : "none",
           znse: window === "ZnSe" ? "inline" : "none",
         }}
-        opd={resolution}
-        scan={scan}
-        range={`${waveMin} - ${waveMax} cm⁻¹`}
-        resolution={resolution}
       />
 
       {element && (
