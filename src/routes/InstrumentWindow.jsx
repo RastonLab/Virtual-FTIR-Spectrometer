@@ -21,16 +21,8 @@ import Spinner from "../components/Spinner";
 import { OPD } from "../components/Fetch";
 
 export default function InstrumentWindow() {
-  const {
-    beamsplitter,
-    detector,
-    source,
-    window,
-    resolution,
-    scan,
-    waveMin,
-    waveMax,
-  } = useSelector((store) => store.parameter);
+  const { beamsplitter, detector, source, window, resolution, scan } =
+    useSelector((store) => store.parameter);
   const { sampleData } = useSelector((store) => store.sampleData);
   const { progress } = useSelector((store) => store.progress);
   const [toggled, setToggled] = useState(false);
