@@ -50,18 +50,11 @@ export default function App() {
       <AppBar className="nav-area" position="static">
         <Container maxWidth="xl">
           <Toolbar disableGutters>
-            <a className="logolink" target="_blank" rel="noreferrer" href="https://www.rastonlab.org/">
-              <RLLogo width={50} height={50} viewBox="0 0 100 100" />
-            </a>
-            <Link className="logo" to="/" >
-              FTIR-SIS
-            </Link>
-
             {/* Start Small Menu */}
             <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
               <IconButton
                 size="large"
-                aria-label="account of current user"
+                aria-label="Menu and Navigation"
                 aria-controls="menu-appbar"
                 aria-haspopup="true"
                 onClick={handleOpenNavMenu}
@@ -98,7 +91,7 @@ export default function App() {
                     {page.label}
                   </Button>
                   <Menu
-                  sx={{ mt: '45px' }}
+                  sx={{ mt: '45px', display:{ xs: 'flex', md: 'none' } }}
                   id="menu-appbar"
                   anchorEl={anchorFileMenu}
                   anchorOrigin={{
@@ -107,8 +100,8 @@ export default function App() {
                   }}
                   keepMounted
                   transformOrigin={{
-                    vertical: 'top',
-                    horizontal: 'right',
+                    vertical: 'right',
+                    horizontal: 'top',
                   }}
                   open={Boolean(anchorFileMenu)}
                   onClose={handleCloseOptionsMenu}
@@ -143,25 +136,16 @@ export default function App() {
               </Menu>
             </Box>
             {/* End Small Menu */}
-            {/* <AdbIcon sx={{ display: { xs: 'flex', md: 'none' }, mr: 1 }} />
-            <Typography
-              variant="h5"
-              noWrap
-              component="a"
-              href=""
-              sx={{
-                mr: 2,
-                display: { xs: 'flex', md: 'none' },
-                flexGrow: 1,
-                fontFamily: 'monospace',
-                fontWeight: 700,
-                letterSpacing: '.3rem',
-                color: 'inherit',
-                textDecoration: 'none',
-              }}
-            >
-              LOGO
-            </Typography> */}
+
+            {/* Start Logo and Title */}
+            <a className="logolink" target="_blank" rel="noreferrer" href="https://www.rastonlab.org/">
+              <RLLogo width={50} height={50} viewBox="0 0 100 100" />
+            </a>
+            <Link className="logo" to="/" >
+              FTIR-SIS
+            </Link>
+            {/* End Logo and Title */}
+
             {/* Start Full Sized Menu */}
             <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
               {menuItems.map((page) => (
@@ -175,7 +159,7 @@ export default function App() {
                     {page.label}
                   </Button>
                   <Menu
-                  sx={{ mt: '45px' }}
+                  sx={{ mt: '45px', display:{ xs: 'none', md: 'flex' } }}
                   id="menu-appbar"
                   anchorEl={anchorFileMenu}
                   anchorOrigin={{
