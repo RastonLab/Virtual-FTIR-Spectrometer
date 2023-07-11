@@ -50,7 +50,12 @@ export default function InstrumentWindow() {
     "instrument-window",
     "instrument",
     "mct-laser",
+    "opd-value",
+    "range-value",
     "rays",
+    "readout",
+    "resolution-value",
+    "scan-value",
     "tungsten-laser",
   ];
 
