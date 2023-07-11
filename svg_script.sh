@@ -6,13 +6,13 @@ echo "-------------------------------"
 
 echo
 
-echo -n "removing width={}..."
+echo -n "removing width..."
 sed -i '0,/width={/{//d}' ./src/components/svgs/InstrumentSVG.jsx
-printf "%-11s DONE\n"
+printf "%-14s DONE\n"
 
-echo -n "removing height={}..."
+echo -n "removing height..."
 sed -i '0,/height={/{//d}' ./src/components/svgs/InstrumentSVG.jsx
-printf "%-10s DONE\n"
+printf "%-13s DONE\n"
 
 echo -n "updating ZnSe beamsplitter..."
 sed -i 's/"props.beamsplitter.znse"/props.beamsplitter.znse/g' ./src/components/svgs/InstrumentSVG.jsx
@@ -44,8 +44,23 @@ printf "%-6s DONE\n"
 
 echo -n  "updating MCT detector..."
 sed -i 's/"props.detector.mct"/props.detector.mct/g' ./src/components/svgs/InstrumentSVG.jsx
-
 printf "%-7s DONE\n"
+
+echo -n  "updating OPD readout..."
+sed -i 's/"props.opd"/props.opd/g' ./src/components/svgs/InstrumentSVG.jsx
+printf "%-8s DONE\n"
+
+echo -n  "updating scans readout..."
+sed -i 's/"props.scan"/props.scan/g' ./src/components/svgs/InstrumentSVG.jsx
+printf "%-6s DONE\n"
+
+echo -n  "updating range readout..."
+sed -i 's/"props.range"/props.range/g' ./src/components/svgs/InstrumentSVG.jsx
+printf "%-6s DONE\n"
+
+echo -n  "updating resolution readout..."
+sed -i 's/"props.resolution"/props.resolution/g' ./src/components/svgs/InstrumentSVG.jsx
+printf "%-1s DONE\n"
 
 echo
 
