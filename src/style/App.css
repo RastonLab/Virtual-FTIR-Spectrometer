@@ -30,8 +30,7 @@
   width: 100%;
   margin: 0 auto;
   padding: 0 20px;
-  height: 58px;
-  background-color: #1d2022;
+  background-color: #1d2022 !important;
   color: white;
   z-index: 1;
 }
@@ -54,3 +53,36 @@
   align-items: center;
 }
 
+.menu-items {
+  background-color: #1d2022 !important;
+}
+
+.menu-items:hover {
+  background-color: #2b3032 !important;
+  color: rgb(246, 176, 106);
+}
+
+.dropdown_items, .MuiMenu-list {
+  display: block;
+  color: white;
+  background-color: #1d2022 !important;
+  padding: 0.7rem 1rem !important;
+  position: relative;
+  font-size: 16px;
+}
+
+.dropdown-items a {
+  font-size: inherit !important;
+  color: inherit !important;
+  text-decoration: none;
+}
+
+.dropdown-items button {
+  color: inherit !important;
+  font-size: inherit !important;
+  padding: 0.5rem 0.2rem;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  width: 100%;
+}
