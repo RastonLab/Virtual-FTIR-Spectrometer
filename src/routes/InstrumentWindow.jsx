@@ -60,6 +60,7 @@ export default function InstrumentWindow() {
   ];
 
   const handleClick = (event) => {
+    console.log(event.target.parentElement.id);
     if (!badID.includes(event.target.parentElement.id)) {
       setElement(event.target.parentElement.id);
       setToggled(!toggled);
@@ -109,10 +110,6 @@ export default function InstrumentWindow() {
           caf2: window === "CaF2" ? "inline" : "none",
           znse: window === "ZnSe" ? "inline" : "none",
         }}
-        opd={resolution}
-        scan={scan}
-        range={`${waveMin} - ${waveMax} cm⁻¹`}
-        resolution={resolution}
       />
 
       {element && (
