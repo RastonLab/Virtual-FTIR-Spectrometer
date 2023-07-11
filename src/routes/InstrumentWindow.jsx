@@ -3,7 +3,6 @@ import React, { useState } from "react";
 // components
 import { Dialog } from "@mui/material";
 import { SamplePlotly } from "../components/SamplePlotly";
-import Electronics from "../components/Electronics";
 import Main from "../components/svgs/InstrumentSVG";
 
 import CloseButton from "../components/CloseButton";
@@ -67,9 +66,6 @@ export default function InstrumentWindow() {
   return (
     <div id="instrument-window">
       <div id="instrument-accessories">
-        {/* <div id="readout">
-          <Electronics />
-        </div> */}
         <div id="spectrum">
           {!sampleData && !progress && (
             <p>Please generate a sample spectrum and return here</p>
