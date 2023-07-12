@@ -19,8 +19,16 @@ import "../style/routes/InstrumentWindow.css";
 import "../style/components/Button.css";
 
 export default function InstrumentWindow() {
-  const { beamsplitter, detector, source, window, resolution, scan } =
-    useSelector((store) => store.parameter);
+  const {
+    beamsplitter,
+    detector,
+    source,
+    window,
+    resolution,
+    scan,
+    waveMin,
+    waveMax,
+  } = useSelector((store) => store.parameter);
   const { sampleData } = useSelector((store) => store.sampleData);
   const { progress } = useSelector((store) => store.progress);
   const [toggled, setToggled] = useState(false);
@@ -100,6 +108,10 @@ export default function InstrumentWindow() {
           caf2: window === "CaF2" ? "inline" : "none",
           znse: window === "ZnSe" ? "inline" : "none",
         }}
+        opd={OPD[resolution] * scan}
+        scan={scan}
+        range={`${waveMin} - ${waveMax}`}
+        resolution={resolution}
       />
 
       {element && (
