@@ -2,10 +2,11 @@ import React, { useState } from "react";
 
 // components
 import { Dialog } from "@mui/material";
+import { OPD } from "../components/Fetch";
 import { SamplePlotly } from "../components/SamplePlotly";
-import Main from "../components/svgs/InstrumentSVG";
-
 import CloseButton from "../components/CloseButton";
+import Main from "../components/svgs/InstrumentSVG";
+import Spinner from "../components/Spinner";
 
 // dictionaries
 import { toolTips } from "../dictionaries/svgLibrary";
@@ -16,9 +17,6 @@ import { useSelector } from "react-redux";
 // style
 import "../style/routes/InstrumentWindow.css";
 import "../style/components/Button.css";
-import Spinner from "../components/Spinner";
-
-import { OPD } from "../components/Fetch";
 
 export default function InstrumentWindow() {
   const { beamsplitter, detector, source, window, resolution, scan } =
@@ -105,12 +103,10 @@ export default function InstrumentWindow() {
       />
 
       {element && (
-        <Dialog className="popup-tooltip" onClose={handleClick} open={toggled}>
+        <Dialog onClose={handleClick} open={toggled}>
           <CloseButton id="customized-dialog-title" onClose={handleClick}>
-            <h2>{toolTips[element].title}</h2>
+            {toolTips[element].text}
           </CloseButton>
-          <img src={toolTips[element].image} alt="" />
-          <p>{toolTips[element].text}</p>
         </Dialog>
       )}
     </div>

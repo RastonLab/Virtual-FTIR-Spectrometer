@@ -57,10 +57,15 @@ g {
 }
 
 /* ---------- tooltip ---------- */
-.popup-tooltip h2 {
+
+.popup-tooltip {
+  display: flex;
+  flex-direction: column;
+}
+
+.popup-tooltip h1 {
   font-family: "Montserrat";
   text-align: center;
-  padding: 20px 0;
   text-decoration: underline;
 }
 
