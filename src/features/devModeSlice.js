@@ -8,7 +8,6 @@ const devModeSlice = createSlice({
   name: "devMode",
   initialState,
   reducers: {
-    // payload is a boolean to activate or deactivate the spinner
     setDevMode: (state, { payload }) => {
       state.devMode = payload;
     },

@@ -6,7 +6,24 @@ export default function DevMode() {
     const { devMode } = useSelector((store) => store.devMode);
     const dispatch = useDispatch();
 
+    const toggleDevMode = () => {
+        if (devMode) {
+            dispatch(setDevMode(false));
+        } else {
+            dispatch(setDevMode(true));
+        }
+    }
+
     return (
-      <button onClick={dispatch(setDevMode(!devMode))}>Toggle Developer Mode</button>
+      <button 
+        style={{ 
+            backgroundColor: devMode ? "rgb(246, 176, 106)" : "inherit",
+            color: devMode ? "black" : "inherit"
+        }}
+       className="button"
+       onClick={toggleDevMode}
+      >
+        Toggle Developer Mode
+    </button>
     );
   }
