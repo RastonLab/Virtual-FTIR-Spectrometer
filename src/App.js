@@ -17,44 +17,27 @@ import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
 import IconButton from '@mui/material/IconButton';
-import Menu from '@mui/material/Menu';
 import MenuIcon from '@mui/icons-material/Menu';
 import Container from '@mui/material/Container';
-import Button from '@mui/material/Button';
 import DevMode from "./components/DevMode";
 import { Accordion, AccordionDetails, AccordionSummary, Drawer } from "@mui/material";
 
 export default function App() {
 
-  const [anchorElNav, setAnchorElNav] = React.useState(null);
-  const [anchorFileMenu, setAnchorFileMenu] = React.useState(null);
-  const [menuOptions, setMenuOptions] = React.useState(null);
+  const [expanded, setExpanded] = useState("");
+  const [drawer, setDrawer] = useState(false);
 
-  const [expanded, setExpanded] = React.useState("");
-  const [drawer, setDrawer] = React.useState(false);
-
-  const handleChange = (panel) => (event, newExpanded) => {
+  const handleChange = (panel) => (newExpanded) => {
     setExpanded(newExpanded ? panel : false);
   };
 
-  const handleOpenNavMenu = (event) => {
-    setAnchorElNav(event.currentTarget);
+  const handleOpenNavMenu = () => {
     setDrawer(true);
   };
-  // const handleOpenOptionsMenu = (event, page) => { 
-  //   setAnchorFileMenu(event.currentTarget);
-  //   setMenuOptions(page.submenu)
-  // };
 
   const handleCloseNavMenu = () => {
-    setAnchorElNav(null);
     setDrawer(false);
   };
-
-  // const handleCloseOptionsMenu = () => {
-  //   setAnchorFileMenu(null);
-  //   setMenuOptions(null);
-  // };
 
   return (  
     <div>  
