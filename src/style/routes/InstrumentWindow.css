@@ -73,8 +73,13 @@ g {
   margin: 20px;
   height: auto;
   width: auto;
-  max-height: 350px;
   max-width: 500px;
+  max-height: 350px;
+}
+
+.tooltip-graph {
+  width: 500px;
+  height: auto;
 }
 
 .popup-tooltip p {
@@ -84,8 +89,8 @@ g {
   padding: 3% 3%;
 }
 
-.popup-tooltip .MuiDialog-paper {
+.MuiDialog-paper {
   align-items: center;
-  width: 50%;
+  width: 50vw;
   height: auto;
 }

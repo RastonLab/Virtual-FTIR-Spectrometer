@@ -129,6 +129,7 @@ export const toolTips = {
           beamsplitter.
         </p>
         <img
+          className="tooltip-graph"
           src={AR_CaF2_graph}
           alt="a graph showing the AR-CaF2 transmittance spectrum"
         />
@@ -150,6 +151,7 @@ export const toolTips = {
           coated ZnSe beamsplitter.
         </p>
         <img
+          className="tooltip-graph"
           src={AR_ZnSe_graph}
           alt="a graph showing the AR-ZnSe transmittance spectrum"
         />
@@ -273,6 +275,7 @@ export const toolTips = {
         </p>
 
         <img
+          className="tooltip-graph"
           src={InSb_graph}
           alt="a graph showing the InSb detector response spectrum"
         />
@@ -378,6 +381,7 @@ export const toolTips = {
         </p>
 
         <img
+          className="tooltip-graph"
           src={MCT_graph}
           alt="a graph showing the MCT detector response spectrum"
         />
@@ -488,6 +492,7 @@ export const toolTips = {
         </p>
 
         <img
+          className="tooltip-graph"
           src={CaF2_graph}
           alt="a graph of the CaF2 transmittance spectrum"
         />
@@ -517,6 +522,7 @@ export const toolTips = {
         </p>
 
         <img
+          className="tooltip-graph"
           src={ZnSe_graph}
           alt="a graph showing the ZnSe transmittance spectrum"
         />
@@ -542,6 +548,7 @@ export const toolTips = {
         </p>
 
         <img
+          className="tooltip-graph"
           src={blackbody_graph}
           alt="a graph showing the blackbody emission spectra"
         />
