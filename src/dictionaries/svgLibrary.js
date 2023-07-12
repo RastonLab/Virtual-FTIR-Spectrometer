@@ -1,4 +1,4 @@
-// SVG Imports
+// svg imports
 import apd from "../components/svgs/tooltip/apd.svg";
 import aperture from "../components/svgs/tooltip/aperture-wheel.svg";
 import bscaf2 from "../components/svgs/tooltip/beamsplitter-caf2.svg";
@@ -18,7 +18,7 @@ import samplecaf2 from "../components/svgs/tooltip/sample-cell-caf2.svg";
 import sampleznse from "../components/svgs/tooltip/sample-cell-znse.svg";
 import tungsten from "../components/svgs/tooltip/tungsten.svg";
 
-// Graph Imports
+// graph imports
 import AR_CaF2_graph from "./description_graphs/AR_CaF2_py.png";
 import AR_ZnSe_graph from "./description_graphs/AR_ZnSe_py.png";
 import blackbody_graph from "./description_graphs/Blackbody.png";
@@ -28,7 +28,7 @@ import MCT_graph from "./description_graphs/MCT_py.png";
 import sourceCompartmentGraph from "./description_graphs/source-compartment-formula.png";
 import ZnSe_graph from "./description_graphs/ZnSe_py.png";
 
-// Not in the toolTip Object because it is used multiple times
+// not in the tooltip object because it is used multiple times
 const flatRotatableMirrorSource = {
   text: (
     <div className="popup-tooltip">
@@ -44,7 +44,7 @@ const flatRotatableMirrorSource = {
   ),
 };
 
-// Not in the toolTip Object because it is used multiple times
+// not in the tooltip object because it is used multiple times
 const flatRotatableMirrorDetector = {
   text: (
     <div className="popup-tooltip">
@@ -60,7 +60,7 @@ const flatRotatableMirrorDetector = {
   ),
 };
 
-// Not in the toolTip Object because it is used multiple times
+// not in the tooltip object because it is used multiple times
 const parabolicMirrorHole = {
   text: (
     <div className="popup-tooltip">
@@ -413,7 +413,7 @@ export const toolTips = {
         <img src={pm} alt="Parabolic Mirror SVG" />
 
         <p>
-          Gold plated parabolic mirror that focuses reflected radiation onto the
+          Gold plated parabolic mirror that focuses reflected radiation into the
           aperture wheel.
         </p>
       </div>
@@ -481,14 +481,15 @@ export const toolTips = {
           Pyrex sample cell that has two valves for controlling gas flow in
           (right) and out (left) from it. The medium (space inside) can either
           be “vacuum” or “air”. When vacuum is selected, the pressure of the
-          selected molecule is equal to the total pressure inside the cell. When
-          air is selected, the pressure of the selected molecule is equal to the
-          partial pressure inside the cell (the rest is filled with air to a
-          total pressure of 1 atm or 1.01325 bar). The uncoated salt windows on
-          either end of the cell are calcium fluoride (CaF<sub>2</sub>), which
-          has good transmittance in the mid-to-near-infrared region. The
-          following plot shows the transmittance spectrum of one of the 2 mm
-          thick CaF<sub>2</sub> windows that this cell is equipped with.
+          selected molecule is equal to the <i>total</i> pressure inside the
+          cell. When air is selected, the pressure of the selected molecule is
+          equal to the partial pressure inside the cell (the rest is filled with
+          air to a total pressure of 1 atm or 1.01325 bar). The uncoated salt
+          windows on either end of the cell are calcium fluoride (CaF
+          <sub>2</sub>), which has good transmittance in the
+          mid-to-near-infrared region. The following plot shows the
+          transmittance spectrum of one of the 2 mm thick CaF<sub>2</sub>{" "}
+          windows that this cell is equipped with.
         </p>
 
         <img
@@ -511,14 +512,14 @@ export const toolTips = {
           Pyrex sample cell that has two valves for controlling gas flow in
           (right) and out (left) from it. The medium (space inside) can either
           be “vacuum” or “air”. When vacuum is selected, the pressure of the
-          selected molecule is equal to the total pressure inside the cell. When
-          air is selected, the pressure of the selected molecule is equal to the
-          partial pressure inside the cell (the rest is filled with air to a
-          total pressure of 1 atm or 1.01325 bar). The uncoated salt windows on
-          either end of the cell are zinc selenide (ZnSe), which has good
-          transmittance in the mid-infrared region (above 500 cm<sup>-1</sup>).
-          The following plot shows the transmittance spectrum of one of the 2 mm
-          thick ZnSe windows that this cell is equipped with.
+          selected molecule is equal to the <i>total</i> pressure inside the
+          cell. When air is selected, the pressure of the selected molecule is
+          equal to the partial pressure inside the cell (the rest is filled with
+          air to a total pressure of 1 atm or 1.01325 bar). The uncoated salt
+          windows on either end of the cell are zinc selenide (ZnSe), which has
+          good transmittance in the mid-infrared region (above 500 cm
+          <sup>-1</sup>). The following plot shows the transmittance spectrum of
+          one of the 2 mm thick ZnSe windows that this cell is equipped with.
         </p>
 
         <img
@@ -536,12 +537,16 @@ export const toolTips = {
         <h1>Source Compartment</h1>
 
         <p>
-          This is where infrared radiation is generated. The energy density (B)
-          emitted from both a globar and tungsten source are well approximated
-          by Planck's law, which is given by
-          <img src={sourceCompartmentGraph} alt="" />
-          where h is Planck's constant, c is the speed of light, ṽ is the
-          wavenumber, kB is Boltzmann's constant, and T is the temperature. The
+          This is where infrared radiation is generated. The energy density (
+          <i>B</i>) emitted from both a globar and tungsten source are well
+          approximated by Planck's law, which is given by
+          <img src={sourceCompartmentGraph} alt="Planck's Law formula" />
+          where <i>h</i> is Planck's constant, <i>c</i> is the speed of light,{" "}
+          <i>ṽ</i> is the wavenumber,{" "}
+          <i>
+            k<sub>B</sub>
+          </i>{" "}
+          is Boltzmann's constant, and <i>T</i> is the temperature. The
           following plot shows normalized blackbody emission spectra at 1200 K
           (globar; blue) and 3400 K (tungsten; red) that was calculated using
           the above formula.
@@ -564,10 +569,10 @@ export const toolTips = {
         <img src={tungsten} alt="Tungsten SVG" />
 
         <p>
-          Tungsten lamp which produces radiation at a temperature of 3100 K. Its
-          spectrum is well approximated by Planck's law. Radiation is produced
-          by passing a current through a tungsten (W) filament, which is in an
-          evacuated bulb.
+          Tungsten lamp which produces radiation at a temperature of 3400 K.
+          Radiation is produced by passing a current through a tungsten (W)
+          filament which is in an evacuated quartz bulb. The bulb contains trace
+          amounts of bromine to keep the inner quartz surface clean.
         </p>
       </div>
     ),
