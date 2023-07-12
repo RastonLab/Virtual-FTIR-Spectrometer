@@ -62,6 +62,10 @@ echo -n  "updating resolution readout..."
 sed -i 's/"props.resolution"/props.resolution/g' ./src/components/svgs/InstrumentSVG.jsx
 printf "%-1s DONE\n"
 
+echo -n  "updating molecule on lecture..."
+sed -i 's/"props.molecule"/props.molecule/g' ./src/components/svgs/InstrumentSVG.jsx
+printf "%-0s DONE\n"
+
 echo
 
 echo "----------------------------"

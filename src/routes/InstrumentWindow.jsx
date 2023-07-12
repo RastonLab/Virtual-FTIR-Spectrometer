@@ -22,12 +22,13 @@ export default function InstrumentWindow() {
   const {
     beamsplitter,
     detector,
-    source,
-    window,
+    molecule,
     resolution,
     scan,
-    waveMin,
+    source,
     waveMax,
+    waveMin,
+    window,
   } = useSelector((store) => store.parameter);
   const { sampleData } = useSelector((store) => store.sampleData);
   const { progress } = useSelector((store) => store.progress);
@@ -50,6 +51,7 @@ export default function InstrumentWindow() {
     "instrument",
     "mct-laser",
     "opd-value",
+    "molecule-value",
     "range-value",
     "rays",
     "readout",
@@ -113,6 +115,7 @@ export default function InstrumentWindow() {
         scan={scan}
         range={`${waveMin} - ${waveMax}`}
         resolution={resolution}
+        molecule={molecule}
       />
 
       {element && (
