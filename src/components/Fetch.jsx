@@ -35,6 +35,7 @@ export default function Fetch({ type, params, fetchURL, buttonText, buttonStyle 
   
   const dispatch = useDispatch();
   const { progress } = useSelector((store) => store.progress);
+  const {devMode } = useSelector((store) => store.devMode)
   let {beamsplitter, detector, medium, pressure, molecule, resolution, scan, 
     source, waveMax, waveMin, window, zeroFill} 
     = useSelector((store) => store.parameter)
@@ -89,7 +90,7 @@ export default function Fetch({ type, params, fetchURL, buttonText, buttonStyle 
       }
 
       // Leaves delay as Immediate if DEVELOPER_MODE is false
-      if (!mode.DEVELOPER_MODE) {
+      if (!devMode) {
         // Calculate time the scan would take
         delay = OPD[resolution] * scan * 1000; // 1000 is to convert to milliseconds
       }
@@ -153,7 +154,7 @@ export default function Fetch({ type, params, fetchURL, buttonText, buttonStyle 
           switch (type) {
             case "sample":
               dispatch(setSampleData([null, null, null]));
-              nav("/instrument", -1);
+              devMode ? console.log("devMode") : nav("/instrument", -1);
               dispatch(setSpinner(false)); // Turns off "waiting" spinner
               sleepID = setTimeout(() => {
                 dispatch(setProgress(false));
@@ -162,7 +163,7 @@ export default function Fetch({ type, params, fetchURL, buttonText, buttonStyle 
               break;
             case "background":
               dispatch(setBackgroundData([null, null, null]));
-              nav("/instrument", -1);
+              devMode ? console.log("devMode") : nav("/instrument", -1);
               dispatch(setSpinner(false)); // Turns off "waiting" spinner
               sleepID = setTimeout(() => {
                 dispatch(setProgress(false));
