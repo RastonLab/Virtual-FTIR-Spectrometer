@@ -130,7 +130,10 @@ export default function App() {
               expanded={expanded === page.label}
               onChange={handleChange(page.label)}
               onMouseLeave={handleChange("")}
-              sx={{display: { xs: 'none', lg: 'block' }}}
+              sx={{
+                display: { xs: 'none', lg: 'block' },
+                boxShadow: "none"
+              }}
               disableGutters
             >
               <AccordionSummary
