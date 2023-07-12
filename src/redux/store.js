@@ -11,6 +11,8 @@ import sampleDataReducer from "../features/sampleDataSlice";
 import spinnerReducer from "../features/spinnerSlice";
 import timerReducer from "../features/timerSlice";
 
+import devModeReducer from "../features/devModeSlice";
+
 export const store = configureStore({
   reducer: {
     absorbanceData: absorbanceDataReducer,
@@ -21,6 +23,7 @@ export const store = configureStore({
     progress: progressReducer,      // For when we are simulating scans
     sampleData: sampleDataReducer,
     spinner: spinnerReducer,        // For when we are reaching out to the server
-    timer: timerReducer             // For keeping track of how long the instrument window spiner has been running
+    timer: timerReducer,            // For keeping track of how long the instrument window spiner has been running
+    devMode: devModeReducer
   },
 });

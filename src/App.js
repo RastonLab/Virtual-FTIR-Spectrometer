@@ -21,6 +21,7 @@ import Menu from '@mui/material/Menu';
 import MenuIcon from '@mui/icons-material/Menu';
 import Container from '@mui/material/Container';
 import Button from '@mui/material/Button';
+import DevMode from "./components/DevMode";
 
 export default function App() {
 
@@ -203,6 +204,7 @@ export default function App() {
               ))}
             </Box>
             {/* End Full Sized Menu */}
+            <DevMode />
           </Toolbar>
         </Container>
       </AppBar>

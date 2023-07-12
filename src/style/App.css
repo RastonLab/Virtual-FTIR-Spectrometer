@@ -53,10 +53,6 @@
   align-items: center;
 }
 
-.menu-items {
-  background-color: #1d2022 !important;
-}
-
 .menu-items:hover {
   background-color: #2b3032 !important;
   color: rgb(246, 176, 106);
