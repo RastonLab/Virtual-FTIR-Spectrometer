@@ -61,24 +61,34 @@ g {
 .popup-tooltip {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .popup-tooltip h1 {
+  font-size: 30px;
   font-family: "Montserrat";
   text-align: center;
   text-decoration: underline;
 }
 
-.popup-tooltip img {
-  margin: 20px;
+.tooltip-svg {
   height: auto;
   width: auto;
-  max-width: 500px;
-  max-height: 350px;
+
+  max-width: 300px;
+  max-height: 300px;
+
+  padding: 10px;
 }
 
 .tooltip-graph {
   width: 500px;
+  height: auto;
+}
+
+.tooltip-planck {
+  width: 400px;
   height: auto;
 }
 
@@ -90,7 +100,9 @@ g {
 }
 
 .MuiDialog-paper {
-  align-items: center;
   width: 50vw;
   height: auto;
+
+  padding: 0;
+  margin: 0;
 }
