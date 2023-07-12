@@ -53,15 +53,27 @@ export const menuItems = [
     submenu: [
       {
         label: "Collect Background Sample",
-        component: <Fetch type="background" fetchURL={fetchURL.BACKGROUND} buttonText={"Collect Background Spectrum"}/>
+        component: (
+          <Fetch
+            type="background"
+            fetchURL={fetchURL.BACKGROUND}
+            buttonText={"Collect Background Spectrum"}
+          />
+        ),
       },
       {
         label: "Collect Processed",
-        component: <Fetch type="sample" fetchURL={fetchURL.SAMPLE} buttonText={"Collect Sample Spectrum"}/>
+        component: (
+          <Fetch
+            type="sample"
+            fetchURL={fetchURL.SAMPLE}
+            buttonText={"Collect Sample Spectrum"}
+          />
+        ),
       },
       {
         label: "Cancel Scan",
-        component: <CancelScan/>
+        component: <CancelScan />,
       },
     ],
   },
@@ -225,7 +237,7 @@ export const menuItems = [
               <blockquote>
                 # Min Wavenumber: 1900 Max Wavenumber: 2300 Molecule: CO
                 Pressure: 0.001 Resolution: 1 Number of Scans: 1 Zero Fill: 0
-                Source: 3100 Beamsplitter: AR_ZnSe Cell Window: CaF2 Detector:
+                Source: 3400 Beamsplitter: AR_ZnSe Cell Window: CaF2 Detector:
                 MCT
               </blockquote>
               <br />
@@ -308,9 +320,10 @@ export const menuItems = [
     submenu: [
       {
         label: `Scan Delay Toggle`,
-        component: <button onClick={fetchURL.Toggle_Mode}>Scan Time Toggle</button>
+        component: (
+          <button onClick={fetchURL.Toggle_Mode}>Scan Time Toggle</button>
+        ),
       },
-    ]
-  }
-  
+    ],
+  },
 ];

@@ -57,19 +57,39 @@ g {
 }
 
 /* ---------- tooltip ---------- */
-.popup-tooltip h2 {
+
+.popup-tooltip {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.popup-tooltip h1 {
+  font-size: 30px;
   font-family: "Montserrat";
   text-align: center;
-  padding: 20px 0;
   text-decoration: underline;
 }
 
-.popup-tooltip img {
-  margin: 20px;
+.tooltip-svg {
   height: auto;
   width: auto;
-  max-height: 350px;
-  max-width: 500px;
+
+  max-width: 300px;
+  max-height: 300px;
+
+  padding: 10px;
+}
+
+.tooltip-graph {
+  width: 500px;
+  height: auto;
+}
+
+.tooltip-planck {
+  width: 400px;
+  height: auto;
 }
 
 .popup-tooltip p {
@@ -79,8 +99,10 @@ g {
   padding: 3% 3%;
 }
 
-.popup-tooltip .MuiDialog-paper {
-  align-items: center;
-  width: 50%;
+.MuiDialog-paper {
+  width: 50vw;
   height: auto;
+
+  padding: 0;
+  margin: 0;
 }

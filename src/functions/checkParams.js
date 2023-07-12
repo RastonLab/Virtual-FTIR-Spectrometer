@@ -42,8 +42,8 @@ export default function checkParams(params) {
   }
 
   // check if the number of scans is correct
-  if (params.numScan < 1 || params.numScan > 30000) {
-    return "number of scans is out of range (1 - 30000)";
+  if (params.numScan < 1 || params.numScan > 256) {
+    return "number of scans is out of range (1 - 256)";
   }
 
   // check if the zero fill is correct
@@ -52,9 +52,9 @@ export default function checkParams(params) {
   }
 
   // check if source is correct
-  // if (params.source !== 1700 && params.source !== 3100) {
-  //   return "source is not valid (globar = 1700 or tungsten = 3100)";
-  // }
+  if (params.source !== 1200 && params.source !== 3400) {
+    return "source is not valid (globar = 1200 or tungsten = 3400)";
+  }
 
   // check if beamsplitter is correct
   if (params.beamsplitter !== "AR_CaF2" && params.beamsplitter !== "AR_ZnSe") {
