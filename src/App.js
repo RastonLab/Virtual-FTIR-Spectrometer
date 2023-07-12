@@ -43,9 +43,16 @@ export default function App() {
     <div>  
       <AppBar className="nav-area" position="static">
         <Container maxWidth="xl">
-          <Toolbar disableGutters>
+          <Toolbar
+            sx={{  
+              alignItems: "flex-start",
+              padding: "10px",
+              margin: "0",
+              justifySelf: "left"
+            }}
+          >
             {/* Start Small Menu */}
-            <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
+            <Box sx={{ flexGrow: 0.1, display: { xs: 'flex', lg: 'none' } }}>
               <IconButton
                 size="large"
                 aria-label="Menu and Navigation"
@@ -123,7 +130,8 @@ export default function App() {
               expanded={expanded === page.label}
               onChange={handleChange(page.label)}
               onMouseLeave={handleChange("")}
-              sx={{display: { xs: 'none', md: 'block' }}}
+              sx={{display: { xs: 'none', lg: 'block' }}}
+              disableGutters
             >
               <AccordionSummary
                 className="menu-items"
