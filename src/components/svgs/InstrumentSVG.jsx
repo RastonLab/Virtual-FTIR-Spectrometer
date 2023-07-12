@@ -1885,36 +1885,6 @@ const SvgComponent = (props) => (
           }}
         />
       </linearGradient>
-      <linearGradient
-        xlinkHref="#linearGradient11659"
-        id="linearGradient11661"
-        x1={14.063}
-        x2={21.063}
-        y1={-4.875}
-        y2={-4.875}
-        gradientTransform="matrix(4.55249 0 0 4.55249 -2871.609 3235.253)"
-        gradientUnits="userSpaceOnUse"
-      />
-      <linearGradient
-        xlinkHref="#linearGradient11659"
-        id="linearGradient10403"
-        x1={12.563}
-        x2={22.563}
-        y1={2.375}
-        y2={2.375}
-        gradientTransform="matrix(4.55249 0 0 4.55249 -2871.609 3235.253)"
-        gradientUnits="userSpaceOnUse"
-      />
-      <linearGradient
-        xlinkHref="#linearGradient11673"
-        id="linearGradient11675"
-        x1={21}
-        x2={24}
-        y1={-4.625}
-        y2={-4.625}
-        gradientTransform="matrix(4.55249 0 0 4.55249 -2871.609 3235.253)"
-        gradientUnits="userSpaceOnUse"
-      />
       <linearGradient id="linearGradient11673">
         <stop
           id="stop11671"
@@ -1957,36 +1927,6 @@ const SvgComponent = (props) => (
           }}
         />
       </linearGradient>
-      <linearGradient
-        xlinkHref="#linearGradient11659"
-        id="linearGradient11706"
-        x1={15.563}
-        x2={19.563}
-        y1={-10.125}
-        y2={-10.125}
-        gradientTransform="matrix(4.55249 0 0 4.55249 -2871.609 3235.253)"
-        gradientUnits="userSpaceOnUse"
-      />
-      <linearGradient
-        xlinkHref="#linearGradient11659"
-        id="linearGradient12498"
-        x1={12.563}
-        x2={22.563}
-        y1={-11.375}
-        y2={-11.375}
-        gradientTransform="matrix(6.37348 0 0 4.55249 -2903.59 3235.253)"
-        gradientUnits="userSpaceOnUse"
-      />
-      <linearGradient
-        xlinkHref="#linearGradient12517"
-        id="linearGradient12519"
-        x1={3}
-        x2={33}
-        y1={40.375}
-        y2={40.375}
-        gradientTransform="matrix(0 -4.55249 4.55249 0 3237.53 2870.328)"
-        gradientUnits="userSpaceOnUse"
-      />
       <linearGradient id="linearGradient12517">
         <stop
           id="stop12513"
@@ -2029,16 +1969,6 @@ const SvgComponent = (props) => (
           }}
         />
       </linearGradient>
-      <linearGradient
-        xlinkHref="#linearGradient15520"
-        id="linearGradient15522"
-        x1={5.65}
-        x2={30.547}
-        y1={48.21}
-        y2={48.21}
-        gradientTransform="matrix(4.55249 0 0 4.55249 -2863.71 3243.886)"
-        gradientUnits="userSpaceOnUse"
-      />
       <linearGradient id="linearGradient15520">
         <stop
           id="stop15516"
@@ -2716,6 +2646,76 @@ const SvgComponent = (props) => (
         y1={-188.953}
         y2={-102.395}
         gradientTransform="matrix(.15683 0 0 .17227 544.543 444.138)"
+        gradientUnits="userSpaceOnUse"
+      />
+      <linearGradient
+        xlinkHref="#linearGradient11659"
+        id="linearGradient11661-2"
+        x1={14.063}
+        x2={21.063}
+        y1={-4.875}
+        y2={-4.875}
+        gradientTransform="matrix(7.59226 0 0 7.59226 -164.849 174.507)"
+        gradientUnits="userSpaceOnUse"
+      />
+      <linearGradient
+        xlinkHref="#linearGradient11659"
+        id="linearGradient10403-8"
+        x1={12.563}
+        x2={22.563}
+        y1={2.375}
+        y2={2.375}
+        gradientTransform="matrix(7.59226 0 0 7.59226 -164.849 174.507)"
+        gradientUnits="userSpaceOnUse"
+      />
+      <linearGradient
+        xlinkHref="#linearGradient11673"
+        id="linearGradient11675-6"
+        x1={21}
+        x2={24}
+        y1={-4.625}
+        y2={-4.625}
+        gradientTransform="matrix(7.59226 0 0 7.59226 -164.849 174.507)"
+        gradientUnits="userSpaceOnUse"
+      />
+      <linearGradient
+        xlinkHref="#linearGradient11659"
+        id="linearGradient11706-4"
+        x1={15.563}
+        x2={19.563}
+        y1={-10.125}
+        y2={-10.125}
+        gradientTransform="matrix(7.59226 0 0 7.59226 -164.849 174.507)"
+        gradientUnits="userSpaceOnUse"
+      />
+      <linearGradient
+        xlinkHref="#linearGradient11659"
+        id="linearGradient12498-9"
+        x1={12.563}
+        x2={22.563}
+        y1={-11.375}
+        y2={-11.375}
+        gradientTransform="matrix(10.62916 0 0 7.59226 -218.184 174.507)"
+        gradientUnits="userSpaceOnUse"
+      />
+      <linearGradient
+        xlinkHref="#linearGradient12517"
+        id="linearGradient12519-0"
+        x1={3}
+        x2={33}
+        y1={40.375}
+        y2={40.375}
+        gradientTransform="matrix(7.59226 0 0 7.59226 -162.713 178.302)"
+        gradientUnits="userSpaceOnUse"
+      />
+      <linearGradient
+        xlinkHref="#linearGradient15520"
+        id="linearGradient15522-4"
+        x1={5.65}
+        x2={30.547}
+        y1={48.21}
+        y2={48.21}
+        gradientTransform="matrix(7.59226 0 0 7.59226 -162.349 178.663)"
         gradientUnits="userSpaceOnUse"
       />
       <filter
@@ -4394,102 +4394,6 @@ const SvgComponent = (props) => (
           }}
         />
       </g>
-      <g
-        id="lecture"
-        transform="matrix(1.66772 0 0 1.66772 -2816.29 -2052.516)"
-      >
-        <path
-          id="rect5963"
-          d="M-2807.589 3191.436h31.867v43.249h-31.867z"
-          style={{
-            fill: "url(#linearGradient11661)",
-            fillOpacity: 1,
-            strokeWidth: 0.194914,
-          }}
-          transform="rotate(-90)"
-        />
-        <path
-          id="rect4162"
-          d="M-2814.418 3234.684h45.525v22.762h-45.525z"
-          style={{
-            fill: "url(#linearGradient10403)",
-            fillOpacity: 1,
-            strokeWidth: 0.117477,
-          }}
-          transform="rotate(-90)"
-        />
-        <rect
-          id="rect5181"
-          width={45.525}
-          height={0.455}
-          x={-2814.418}
-          y={3240.794}
-          ry={0}
-          style={{
-            fill: "#a0a0a0",
-            fillOpacity: 1,
-            strokeWidth: 0.049984,
-          }}
-          transform="rotate(-90)"
-        />
-        <path
-          id="rect8157"
-          d="M-2776.006 3202.817h13.657v22.762h-13.657z"
-          style={{
-            fill: "url(#linearGradient11675)",
-            fillOpacity: 1,
-            strokeWidth: 0.170623,
-          }}
-          transform="rotate(-90)"
-        />
-        <path
-          id="rect8161"
-          d="M-2800.76 3186.883h18.21v4.552h-18.21z"
-          style={{
-            fill: "url(#linearGradient11706)",
-            fillOpacity: 1,
-            strokeWidth: 0.362494,
-          }}
-          transform="rotate(-90)"
-        />
-        <rect
-          id="rect9017"
-          width={63.735}
-          height={6.829}
-          x={-2823.523}
-          y={3180.055}
-          ry={2.276}
-          style={{
-            fill: "url(#linearGradient12498)",
-            fillOpacity: 1,
-            strokeWidth: 0.238872,
-          }}
-          transform="rotate(-90)"
-        />
-        <path
-          id="rect234"
-          d="M3318.495 2720.096a67.877 68.287 0 0 0-67.877 68.287 67.877 68.287 0 0 0 67.877 68.288 67.877 68.287 0 0 0 1.106-.08c.26.022.511.08.778.08h262.616c5.019 0 9.06-4.061 9.06-9.105V2729.2c0-5.044-4.041-9.105-9.06-9.105h-262.616c-.123 0-.24.03-.363.036a67.877 68.287 0 0 0-1.521-.036z"
-          style={{
-            fill: "url(#linearGradient12519)",
-            fillOpacity: 1,
-            strokeWidth: 0.232347,
-          }}
-        />
-        <rect
-          id="rect1697-1"
-          width={113.346}
-          height={235.352}
-          x={-2837.99}
-          y={3345.685}
-          ry={3.362}
-          style={{
-            fill: "url(#linearGradient15522)",
-            fillOpacity: 1,
-            strokeWidth: 4.26287,
-          }}
-          transform="rotate(-89.873) skewX(.01)"
-        />
-      </g>
       <g id="pump" transform="translate(2509.775 2588.72) scale(1.28845)">
         <rect
           id="rect50079-5"
@@ -5929,6 +5833,127 @@ const SvgComponent = (props) => (
         >
           <tspan id="tspan4101" x={-98.612} y={-129.906}>
             {props.opd}
+          </tspan>
+        </text>
+      </g>
+      <g id="lecture" transform="rotate(-90 2488.174 83.486)">
+        <path
+          id="rect5963-2"
+          d="M-58.082 101.431h53.146v72.126h-53.146z"
+          style={{
+            fill: "url(#linearGradient11661-2)",
+            fillOpacity: 1,
+            strokeWidth: 0.325061,
+          }}
+        />
+        <path
+          id="rect4162-5"
+          d="M-69.47 173.557H6.453v37.961H-69.47z"
+          style={{
+            fill: "url(#linearGradient10403-8)",
+            fillOpacity: 1,
+            strokeWidth: 0.195918,
+          }}
+        />
+        <rect
+          id="rect5181-2"
+          width={75.923}
+          height={0.759}
+          x={-69.47}
+          y={183.746}
+          ry={0}
+          style={{
+            fill: "#a0a0a0",
+            fillOpacity: 1,
+            strokeWidth: 0.0833591,
+          }}
+        />
+        <path
+          id="rect8157-1"
+          d="M-5.411 120.412h22.777v37.961H-5.411z"
+          style={{
+            fill: "url(#linearGradient11675-6)",
+            fillOpacity: 1,
+            strokeWidth: 0.284551,
+          }}
+        />
+        <path
+          id="rect8161-9"
+          d="M-46.694 93.838h30.369v7.592h-30.369z"
+          style={{
+            fill: "url(#linearGradient11706-4)",
+            fillOpacity: 1,
+            strokeWidth: 0.604537,
+          }}
+        />
+        <rect
+          id="rect9017-6"
+          width={106.292}
+          height={11.388}
+          x={-84.655}
+          y={82.451}
+          ry={3.796}
+          style={{
+            fill: "url(#linearGradient12498-9)",
+            fillOpacity: 1,
+            strokeWidth: 0.398371,
+          }}
+        />
+        <path
+          id="rect234-8"
+          d="M87.831 313.33a113.884 113.2 0 0 0-113.883-113.2 113.884 113.2 0 0 0-113.884 113.2 113.884 113.2 0 0 0 .133 1.844c-.037.435-.133.853-.133 1.298V754.44c0 8.37 6.772 15.11 15.184 15.11H72.647c8.412 0 15.184-6.74 15.184-15.11V316.472c0-.206-.05-.4-.06-.605a113.884 113.2 0 0 0 .06-2.538z"
+          style={{
+            fill: "url(#linearGradient12519-0)",
+            fillOpacity: 1,
+            strokeWidth: 0.387489,
+          }}
+        />
+        <rect
+          id="rect1697-1-4"
+          width={189.028}
+          height={392.5}
+          x={-119.454}
+          y={348.434}
+          ry={5.607}
+          style={{
+            fill: "url(#linearGradient15522-4)",
+            fillOpacity: 1,
+            strokeWidth: 7.10926,
+          }}
+          transform="rotate(.127) skewX(.01)"
+        />
+        <text
+          xmlSpace="preserve"
+          id="molecule-value"
+          x={542.6}
+          y={25.267}
+          style={{
+            fontSize: "97.7207px",
+            lineHeight: 0,
+            fontFamily: "sans-serif",
+            InkscapeFontSpecification: "&quot",
+            textAlign: "center",
+            dominantBaseline: "central",
+            textAnchor: "middle",
+            display: "inline",
+            fill: "#000",
+            strokeWidth: 34.3549,
+            strokeLinecap: "square",
+            strokeLinejoin: "round",
+            paintOrder: "fill markers stroke",
+          }}
+          transform="rotate(90)"
+        >
+          <tspan
+            id="tspan877"
+            x={542.6}
+            y={25.267}
+            style={{
+              fontSize: "97.7207px",
+              strokeWidth: 34.3549,
+            }}
+          >
+            {props.molecule}
           </tspan>
         </text>
       </g>
