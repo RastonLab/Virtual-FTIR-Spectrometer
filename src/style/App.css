@@ -40,7 +40,9 @@
   font-size: 25px;
   color: inherit;
   margin: 0 20px 0 20px;
+  padding-top: 10px;
   font-family: "Montserrat";
+  /* align-self: center !important; */
 }
 
 .menus {
@@ -50,21 +52,30 @@
 
 .logolink {
   display: inherit;
-  align-items: center;
+}
+
+.menu-items {
+  background-color: #1d2022 !important;
+  color: white !important;
 }
 
 .menu-items:hover {
   background-color: #2b3032 !important;
-  color: rgb(246, 176, 106);
+  color: rgb(246, 176, 106) !important;
 }
 
-.dropdown_items, .MuiMenu-list {
+.MuiDrawer-paper {
+  background-color: #1d2022 !important;
+}
+
+.dropdown_items, .MuiAccordionDetails-root {
   display: block;
   color: white;
   background-color: #1d2022 !important;
-  padding: 0.7rem 1rem !important;
+  /* padding: 0.7rem 1rem !important; */
   position: relative;
   font-size: 16px;
+  width: 10rem;
 }
 
 .dropdown-items a {
@@ -81,4 +92,9 @@
   background-color: transparent;
   cursor: pointer;
   width: 100%;
+}
+
+.dropdown-items p {
+  padding: 0.5rem 0.2rem;
+  text-align: center;
 }
