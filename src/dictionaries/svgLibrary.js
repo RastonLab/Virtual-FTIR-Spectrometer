@@ -34,7 +34,7 @@ const flatRotatableMirrorSource = {
     <div className="popup-tooltip">
       <h1>Flat Rotatable Mirror</h1>
 
-      <img src={fm} alt="Flat Rotatable Mirror SVG" />
+      <img className="tooltip-svg" src={fm} alt="Flat Rotatable Mirror SVG" />
 
       <p>
         Gold plated flat rotatable mirror that reflects radiation from the
@@ -50,7 +50,7 @@ const flatRotatableMirrorDetector = {
     <div className="popup-tooltip">
       <h1>Flat Rotatable Mirror</h1>
 
-      <img src={fm} alt="Flat Rotatable Mirror SVG" />
+      <img className="tooltip-svg" src={fm} alt="Flat Rotatable Mirror SVG" />
 
       <p>
         Gold plated flat rotatable mirror that reflects radiation towards a
@@ -66,7 +66,11 @@ const parabolicMirrorHole = {
     <div className="popup-tooltip">
       <h1>Parabolic Mirror With Hole</h1>
 
-      <img src={pmh} alt="Parabolic Mirror With Hole SVG" />
+      <img
+        className="tooltip-svg"
+        src={pmh}
+        alt="Parabolic Mirror With Hole SVG"
+      />
 
       <p>
         Gold plated parabolic mirror with centered hole for the laser beam to
@@ -82,7 +86,7 @@ export const toolTips = {
       <div className="popup-tooltip">
         <h1>Avalanche Photodiode</h1>
 
-        <img src={apd} alt="Avalanche Photodiode SVG" />
+        <img className="tooltip-svg" src={apd} alt="Avalanche Photodiode SVG" />
 
         <p>
           Semiconductor detector that utilizes a photoelectric-like effect in
@@ -101,7 +105,7 @@ export const toolTips = {
       <div className="popup-tooltip">
         <h1>Aperture Wheel</h1>
 
-        <img src={aperture} alt="Aperture Wheel SVG" />
+        <img className="tooltip-svg" src={aperture} alt="Aperture Wheel SVG" />
 
         <p>
           Black wheel with apertures (holes) of different sizes. Smaller
@@ -119,7 +123,11 @@ export const toolTips = {
           Beamsplitter (AR-CaF<sub>2</sub>)
         </h1>
 
-        <img src={bscaf2} alt="Beamsplitter (AR-CaF2) SVG" />
+        <img
+          className="tooltip-svg"
+          src={bscaf2}
+          alt="Beamsplitter (AR-CaF2) SVG"
+        />
 
         <p>
           AntiReflective (AR) coated calcium fluoride (CaF<sub>2</sub>)
@@ -142,7 +150,11 @@ export const toolTips = {
       <div className="popup-tooltip">
         <h1>Beamsplitter (AR-ZnSe)</h1>
 
-        <img src={bsznse} alt="Beamsplitter (AR-ZnSe) SVG" />
+        <img
+          className="tooltip-svg"
+          src={bsznse}
+          alt="Beamsplitter (AR-ZnSe) SVG"
+        />
 
         <p>
           AntiReflective (AR) coated zinc selenide (ZnSe) beamsplitter, which
@@ -178,7 +190,7 @@ export const toolTips = {
       <div className="popup-tooltip">
         <h1>Fixed Corner Cube</h1>
 
-        <img src={fcc} alt="Fixed Corner Cube SVG" />
+        <img className="tooltip-svg" src={fcc} alt="Fixed Corner Cube SVG" />
 
         <p>
           Gold coated corner-cube. This component reflects back a return beam
@@ -193,7 +205,7 @@ export const toolTips = {
       <div className="popup-tooltip">
         <h1>Fixed Mirror</h1>
 
-        <img src={fm} alt="Fixed Mirror SVG" />
+        <img className="tooltip-svg" src={fm} alt="Fixed Mirror SVG" />
 
         <p>Gold coated flat mirror.</p>
       </div>
@@ -234,7 +246,7 @@ export const toolTips = {
       <div className="popup-tooltip">
         <h1>Manometer</h1>
 
-        <img src={gauge} alt="Manometer SVG" />
+        <img className="tooltip-svg" src={gauge} alt="Manometer SVG" />
 
         <p>Pressure gauge (0-2 bar) with digital display.</p>
       </div>
@@ -246,7 +258,7 @@ export const toolTips = {
       <div className="popup-tooltip">
         <h1>Globar</h1>
 
-        <img src={globar} alt="Globar SVG" />
+        <img className="tooltip-svg" src={globar} alt="Globar SVG" />
 
         <p>
           Globar heating element which produces radiation at a temperature of
@@ -263,7 +275,7 @@ export const toolTips = {
       <div className="popup-tooltip">
         <h1>InSb</h1>
 
-        <img src={insb} alt="InSb SVG" />
+        <img className="tooltip-svg" src={insb} alt="InSb SVG" />
 
         <p>
           Liquid nitrogen cooled Indium Antimonide (InSb) detector with a
@@ -337,7 +349,7 @@ export const toolTips = {
       <div className="popup-tooltip">
         <h1>Laser</h1>
 
-        <img src={laser} alt="Laser SVG" />
+        <img className="tooltip-svg" src={laser} alt="Laser SVG" />
 
         <p>
           Helium-neon (HeNe) reference laser that is used for calibration. This
@@ -353,7 +365,7 @@ export const toolTips = {
       <div className="popup-tooltip">
         <h1>Lecture Bottle</h1>
 
-        <img src={lecture} alt="Lecture Bottle SVG" />
+        <img className="tooltip-svg" src={lecture} alt="Lecture Bottle SVG" />
 
         <p>
           This lecture bottle contains gas that can be loaded into the sample
@@ -368,7 +380,7 @@ export const toolTips = {
       <div className="popup-tooltip">
         <h1>MCT</h1>
 
-        <img src={mct} alt="MCT SVG" />
+        <img className="tooltip-svg" src={mct} alt="MCT SVG" />
 
         <p>
           Liquid nitrogen cooled Mercury-Cadmium-Telluride (MCT) detector with a
@@ -394,7 +406,7 @@ export const toolTips = {
       <div className="popup-tooltip">
         <h1>Movable Corner Cube</h1>
 
-        <img src={fcc} alt="Movable Corner Cube SVG" />
+        <img className="tooltip-svg" src={fcc} alt="Movable Corner Cube SVG" />
 
         <p>
           Gold coated movable corner-cube. This component reflects back a return
@@ -410,7 +422,7 @@ export const toolTips = {
       <div className="popup-tooltip">
         <h1>Parabolic Mirror</h1>
 
-        <img src={pm} alt="Parabolic Mirror SVG" />
+        <img className="tooltip-svg" src={pm} alt="Parabolic Mirror SVG" />
 
         <p>
           Gold plated parabolic mirror that focuses reflected radiation into the
@@ -425,7 +437,7 @@ export const toolTips = {
       <div className="popup-tooltip">
         <h1>Parabolic Mirror</h1>
 
-        <img src={pm} alt="Parabolic Mirror SVG" />
+        <img className="tooltip-svg" src={pm} alt="Parabolic Mirror SVG" />
 
         <p>
           Gold plated parabolic mirror that focuses reflected radiation onto the
@@ -443,7 +455,7 @@ export const toolTips = {
       <div className="popup-tooltip">
         <h1>Rotary Pump</h1>
 
-        <img src={pump} alt="Rotary Pump SVG" />
+        <img className="tooltip-svg" src={pump} alt="Rotary Pump SVG" />
 
         <p>
           Rotary pump that is used to evacuate the sample cell. The exhaust gas
@@ -475,7 +487,11 @@ export const toolTips = {
           Sample Cell (CaF<sub>2</sub>)
         </h1>
 
-        <img src={samplecaf2} alt="Sample Cell (CaF2) SVG" />
+        <img
+          className="tooltip-svg"
+          src={samplecaf2}
+          alt="Sample Cell (CaF2) SVG"
+        />
 
         <p>
           Pyrex sample cell that has two valves for controlling gas flow in
@@ -506,7 +522,11 @@ export const toolTips = {
       <div className="popup-tooltip">
         <h1>Sample Cell (ZnSe)</h1>
 
-        <img src={sampleznse} alt="Sample Cell (ZnSe) SVG" />
+        <img
+          className="tooltip-svg"
+          src={sampleznse}
+          alt="Sample Cell (ZnSe) SVG"
+        />
 
         <p>
           Pyrex sample cell that has two valves for controlling gas flow in
@@ -540,7 +560,15 @@ export const toolTips = {
           This is where infrared radiation is generated. The energy density (
           <i>B</i>) emitted from both a globar and tungsten source are well
           approximated by Planck's law, which is given by
-          <img src={sourceCompartmentGraph} alt="Planck's Law formula" />
+        </p>
+
+        <img
+          className="tooltip-planck"
+          src={sourceCompartmentGraph}
+          alt="Planck's Law formula"
+        />
+
+        <p>
           where <i>h</i> is Planck's constant, <i>c</i> is the speed of light,{" "}
           <i>ṽ</i> is the wavenumber,{" "}
           <i>
@@ -566,7 +594,7 @@ export const toolTips = {
       <div className="popup-tooltip">
         <h1>Tungsten</h1>
 
-        <img src={tungsten} alt="Tungsten SVG" />
+        <img className="tooltip-svg" src={tungsten} alt="Tungsten SVG" />
 
         <p>
           Tungsten lamp which produces radiation at a temperature of 3400 K.
