@@ -2777,7 +2777,7 @@ const SvgComponent = (props) => (
         gradientUnits="userSpaceOnUse"
       />
     </defs>
-    <g id="ftir" transform="translate(82.464 -98.408)">
+    <g id="ftir" transform="translate(134.636 -86.616)">
       <path
         id="source-chamber"
         d="M-20.864 160.863v15h.002v590h473v-15h-458v-575h721.75v575h-89.25v15h104.25v-605h-.246z"
@@ -2951,7 +2951,7 @@ const SvgComponent = (props) => (
         />
         <path
           id="rect14491-7-9-2-3-29"
-          d="M1453.213 382.155v670.04l-94.658-93.725V286.012Z"
+          d="M1453.498 382.155v670.04l-94.658-93.725V286.012Z"
           style={{
             opacity: 0.65,
             fill: "#ff6638",
@@ -3954,7 +3954,7 @@ const SvgComponent = (props) => (
         />
       </g>
       <g
-        id="sample-compartment-znse"
+        id="sample-cell-znse"
         style={{
           display: props.window.znse,
         }}
@@ -4174,7 +4174,7 @@ const SvgComponent = (props) => (
         />
       </g>
       <g
-        id="sample-compartment-caf2"
+        id="sample-cell-caf2"
         style={{
           display: props.window.caf2,
         }}
@@ -5236,7 +5236,7 @@ const SvgComponent = (props) => (
           }}
         />
       </g>
-      <g id="info-source-chamber">
+      <g id="source-compartment" transform="translate(-826.752)">
         <circle
           id="path1416"
           cx={768.388}
@@ -5259,7 +5259,30 @@ const SvgComponent = (props) => (
           }}
         />
       </g>
-      <g id="info-cell-chamber">
+      <g id="interferometer-compartment" transform="translate(732.61 102.554)">
+        <circle
+          id="path1416-0"
+          cx={768.388}
+          cy={803.364}
+          r={37.5}
+          style={{
+            fill: "#e3dbdb",
+            strokeWidth: 20.2139,
+            strokeLinecap: "square",
+            strokeLinejoin: "round",
+            paintOrder: "fill markers stroke",
+          }}
+        />
+        <path
+          id="path1457-5"
+          d="M768.388 765.864c-20.7 0-37.5 16.8-37.5 37.5s16.8 37.5 37.5 37.5 37.5-16.8 37.5-37.5-16.8-37.5-37.5-37.5zm0 5.769c17.515 0 31.73 14.215 31.73 31.73 0 17.516-14.215 31.731-31.73 31.731s-31.73-14.215-31.73-31.73c0-17.516 14.215-31.731 31.73-31.731zm-.723 8.654a6.49 6.49 0 0 0-6.49 6.49 6.49 6.49 0 1 0 12.98 0 6.49 6.49 0 0 0-6.49-6.49zm6.875 17.307-17.691.637v2.927c2.574-.083 6.227-.525 6.207 2.29v17.777c-.141 1.408-.598 2.145-2.496 2.203l-3.176.059v2.953h22.543v-2.953l-2.89-.059c-1.798-.185-2.537-.628-2.497-2.203z"
+          style={{
+            fill: "#4b4b4b",
+            strokeWidth: 0.576923,
+          }}
+        />
+      </g>
+      <g id="sample-compartment">
         <circle
           id="path1416-5"
           cx={1574.093}
@@ -5282,7 +5305,7 @@ const SvgComponent = (props) => (
           }}
         />
       </g>
-      <g id="info-detector-chamber">
+      <g id="detector-compartment">
         <circle
           id="path1416-5-9"
           cx={3489.091}
