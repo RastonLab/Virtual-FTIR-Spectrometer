@@ -199,7 +199,7 @@ export default function Fetch({ type, params, fetchURL, buttonText, buttonStyle 
 
       switch (error.message) {
         case "Failed to fetch":
-          errorMessage = "client is unable to reach server";
+          errorMessage = "We could not collect your data at this time. Please wait a few moments and try again.";
           break;
         default:
           errorMessage = "unhandled error";
