@@ -19,10 +19,20 @@ import "../style/routes/InstrumentWindow.css";
 import "../style/components/Button.css";
 
 export default function InstrumentWindow() {
-  const { beamsplitter, detector, source, window, resolution, scan } =
-    useSelector((store) => store.parameter);
+  const {
+    beamsplitter,
+    detector,
+    molecule,
+    resolution,
+    scan,
+    source,
+    waveMax,
+    waveMin,
+    window,
+  } = useSelector((store) => store.parameter);
   const { sampleData } = useSelector((store) => store.sampleData);
   const { progress } = useSelector((store) => store.progress);
+  const { devMode } = useSelector((store) => store.devMode);
   const [toggled, setToggled] = useState(false);
   const [element, setElement] = useState();
 
@@ -41,6 +51,7 @@ export default function InstrumentWindow() {
     "instrument",
     "mct-laser",
     "opd-value",
+    "molecule-value",
     "range-value",
     "rays",
     "readout",
@@ -66,7 +77,7 @@ export default function InstrumentWindow() {
           {!sampleData && !progress && (
             <p>Please generate a sample spectrum and return here</p>
           )}
-          {progress ? (
+          {(progress && !devMode) ? (
             <>
               <h2>Processing Sample...</h2>
               <Spinner variant="determinate" timer={delay} size={100} />
@@ -100,6 +111,11 @@ export default function InstrumentWindow() {
           caf2: window === "CaF2" ? "inline" : "none",
           znse: window === "ZnSe" ? "inline" : "none",
         }}
+        opd={OPD[resolution] * scan}
+        scan={scan}
+        range={`${waveMin} - ${waveMax}`}
+        resolution={resolution}
+        molecule={molecule}
       />
 
       {element && (

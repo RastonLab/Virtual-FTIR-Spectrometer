@@ -35,6 +35,7 @@ export default function Fetch({ type, params, fetchURL, buttonText, buttonStyle 
   
   const dispatch = useDispatch();
   const { progress } = useSelector((store) => store.progress);
+  const {devMode } = useSelector((store) => store.devMode)
   let {beamsplitter, detector, medium, pressure, molecule, resolution, scan, 
     source, waveMax, waveMin, window, zeroFill} 
     = useSelector((store) => store.parameter)
@@ -89,7 +90,7 @@ export default function Fetch({ type, params, fetchURL, buttonText, buttonStyle 
       }
 
       // Leaves delay as Immediate if DEVELOPER_MODE is false
-      if (!mode.DEVELOPER_MODE) {
+      if (!devMode) {
         // Calculate time the scan would take
         delay = OPD[resolution] * scan * 1000; // 1000 is to convert to milliseconds
       }
@@ -131,7 +132,7 @@ export default function Fetch({ type, params, fetchURL, buttonText, buttonStyle 
     } else {
       dispatch(setProgress(false));
       dispatch(setSpinner(false));
-      dispatch(setError([true, "Invalid Request Type"]));
+      dispatch(setError([true, `Invalid Request Type. Received "${type}": expected sample, background, or find_peaks`]));
       return;
     }
 
@@ -153,7 +154,7 @@ export default function Fetch({ type, params, fetchURL, buttonText, buttonStyle 
           switch (type) {
             case "sample":
               dispatch(setSampleData([null, null, null]));
-              nav("/instrument", -1);
+              devMode ? console.log("devMode") : nav("/instrument", -1);
               dispatch(setSpinner(false)); // Turns off "waiting" spinner
               sleepID = setTimeout(() => {
                 dispatch(setProgress(false));
@@ -162,7 +163,7 @@ export default function Fetch({ type, params, fetchURL, buttonText, buttonStyle 
               break;
             case "background":
               dispatch(setBackgroundData([null, null, null]));
-              nav("/instrument", -1);
+              devMode ? console.log("devMode") : nav("/instrument", -1);
               dispatch(setSpinner(false)); // Turns off "waiting" spinner
               sleepID = setTimeout(() => {
                 dispatch(setProgress(false));
@@ -174,7 +175,7 @@ export default function Fetch({ type, params, fetchURL, buttonText, buttonStyle 
               dispatch(setPeaksData(data));
               break;
             default:
-              console.log("not sample or background");
+              console.log(`Invalid Request Type. Received: "${type}" expected sample, background, or find_peaks`);
               break;
           }
         }
@@ -194,17 +195,17 @@ export default function Fetch({ type, params, fetchURL, buttonText, buttonStyle 
       }
     } catch (error) {
       // error occurred when reaching out to server
-      let errorMessage = null;
+      let errorMessage = "We could not collect your data at this time. Please wait a few moments and try again.";
+      console.log(error);
 
-      switch (error.message) {
-        case "Failed to fetch":
-          errorMessage = "client is unable to reach server";
-          break;
-        default:
-          errorMessage = "unhandled error";
-          console.log(error);
-          break;
-      }
+      // switch (error.message) {
+      //   case "Failed to fetch":
+      //     errorMessage = "We could not collect your data at this time. Please wait a few moments and try again.";
+      //     break;
+      //   default:
+      //     errorMessage = "unhandled error";
+      //     break;
+      // }
       dispatch(setProgress(false));
       dispatch(setSpinner(false));
       dispatch(setError([true, errorMessage]));

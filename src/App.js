@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 
 // components
 import { ReactComponent as RLLogo } from "./components/svgs/RastonLabLogo.svg";
@@ -17,41 +17,42 @@ import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
 import IconButton from '@mui/material/IconButton';
-import Menu from '@mui/material/Menu';
 import MenuIcon from '@mui/icons-material/Menu';
 import Container from '@mui/material/Container';
-import Button from '@mui/material/Button';
+import DevMode from "./components/DevMode";
+import { Accordion, AccordionDetails, AccordionSummary, Drawer } from "@mui/material";
 
 export default function App() {
 
-  const [anchorElNav, setAnchorElNav] = React.useState(null);
-  const [anchorFileMenu, setAnchorFileMenu] = React.useState(null);
-  const [menuOptions, setMenuOptions] = React.useState(null);
+  const [expanded, setExpanded] = useState("");
+  const [drawer, setDrawer] = useState(false);
 
-  const handleOpenNavMenu = (event) => {
-    setAnchorElNav(event.currentTarget);
+  const handleChange = (panel) => (newExpanded) => {
+    setExpanded(newExpanded ? panel : false);
   };
-  const handleOpenOptionsMenu = (event, page) => { 
-    setAnchorFileMenu(event.currentTarget);
-    setMenuOptions(page.submenu)
+
+  const handleOpenNavMenu = () => {
+    setDrawer(true);
   };
 
   const handleCloseNavMenu = () => {
-    setAnchorElNav(null);
-  };
-
-  const handleCloseOptionsMenu = () => {
-    setAnchorFileMenu(null);
-    setMenuOptions(null);
+    setDrawer(false);
   };
 
   return (  
     <div>  
       <AppBar className="nav-area" position="static">
         <Container maxWidth="xl">
-          <Toolbar disableGutters>
+          <Toolbar
+            sx={{  
+              alignItems: "flex-start",
+              padding: "10px",
+              margin: "0",
+              justifySelf: "left"
+            }}
+          >
             {/* Start Small Menu */}
-            <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
+            <Box sx={{ flexGrow: 0.1, display: { xs: 'flex', lg: 'none' } }}>
               <IconButton
                 size="large"
                 aria-label="Menu and Navigation"
@@ -60,80 +61,56 @@ export default function App() {
                 onClick={handleOpenNavMenu}
                 color="inherit"
               >
-                <MenuIcon />
+              <MenuIcon />
               </IconButton>
-              <Menu
-                id="menu-appbar"
-                anchorEl={anchorElNav}
-                anchorOrigin={{
-                  vertical: 'bottom',
-                  horizontal: 'left',
-                }}
-                keepMounted
-                transformOrigin={{
-                  vertical: 'top',
-                  horizontal: 'left',
-                }}
-                open={Boolean(anchorElNav)}
+              <Drawer
+                open={drawer}
+                anchor={"left"}
                 onClose={handleCloseNavMenu}
-                sx={{
-                  display: { xs: 'block', md: 'none' },
-                }}
               >
+                <Box>
                 {menuItems.map((page) => (
-                <>
-                  <Button
-                    key={page.label}
-                    onMouseEnter={(e) => handleOpenOptionsMenu(e, page)}
-                    sx={{ my: 2, color: "white", display: 'block', width: "100%" }}
-                    className="menu-items"
+                  <Accordion
+                    square
+                    expanded={expanded === page.label}
+                    onChange={handleChange(page.label)}
+                    onMouseLeave={handleChange("")}
+                    disableGutters
                   >
-                    {page.label}
-                  </Button>
-                  <Menu
-                  sx={{ mt: '45px', display:{ xs: 'flex', md: 'none' } }}
-                  id="menu-appbar"
-                  anchorEl={anchorFileMenu}
-                  anchorOrigin={{
-                    vertical: 'top',
-                    horizontal: 'right',
-                  }}
-                  keepMounted
-                  transformOrigin={{
-                    vertical: 'right',
-                    horizontal: 'top',
-                  }}
-                  open={Boolean(anchorFileMenu)}
-                  onClose={handleCloseOptionsMenu}
-                  className="dropdown-items"
-                  >
-                    {menuOptions && menuOptions.map((submenu) => {
-                      if (submenu.button) {
-                        return (
-                          <li key={submenu}  >
-                            <Popup
-                              label={submenu.label}
-                              title={submenu.title}
-                              text={submenu.text}
-                            />
-                          </li>
-                        );
-                      } else if (submenu.link) {
-                        return (
-                          <li key={submenu} style={{padding: "0.3rem 0.2rem"}} >
-                            <Link to={submenu.link ?? "#"}>
-                              {submenu.label}
-                            </Link>
-                          </li>
-                        );
-                      } else {
-                        return (<ul>{submenu.component}</ul>)
-                      }
-                    })}
-                  </Menu>
-                </>
-              ))}
-              </Menu>
+                    <AccordionSummary
+                      className="menu-items"
+                    >
+                      {page.label}
+                    </AccordionSummary>
+                    <AccordionDetails
+                      className="dropdown-items"
+                    >
+                      {page.submenu.map((submenu) => {
+                        if (submenu.button) {
+                          return (
+                              <Popup
+                                label={submenu.label}
+                                title={submenu.title}
+                                text={submenu.text}
+                              />
+                          );
+                        } else if (submenu.link) {
+                          return (
+                            <p>
+                              <Link to={submenu.link ?? "#"} onClick={submenu.action}>
+                                {submenu.label}
+                              </Link>
+                            </p>
+                          );
+                        } else {
+                          return (<ul>{submenu.component}</ul>)
+                        }
+                      })}
+                    </AccordionDetails>
+                  </Accordion>
+                ))}
+                </Box>
+              </Drawer>
             </Box>
             {/* End Small Menu */}
 
@@ -142,67 +119,64 @@ export default function App() {
               <RLLogo width={50} height={50} viewBox="0 0 100 100" />
             </a>
             <Link className="logo" to="/" >
-              FTIR-SIS
+              <span className="red"   >F</span>
+              <span className="orange">T</span>
+              <span className="yellow">I</span>
+              <span className="green" >R</span>
+              <span className="teal"  >-</span>
+              <span className="blue"  >S</span>
+              <span className="indigo">I</span>
+              <span className="purple">S</span>
             </Link>
             {/* End Logo and Title */}
 
             {/* Start Full Sized Menu */}
-            <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
-              {menuItems.map((page) => (
-                <>
-                  <Button
-                    key={page.label}
-                    onClick={(e) => handleOpenOptionsMenu(e, page)}
-                    sx={{ my: 2, color: 'white', display: 'block' }}
-                    className="menu-items"
-                  >
-                    {page.label}
-                  </Button>
-                  <Menu
-                  sx={{ mt: '45px', display:{ xs: 'none', md: 'flex' } }}
-                  id="menu-appbar"
-                  anchorEl={anchorFileMenu}
-                  anchorOrigin={{
-                    vertical: 'top',
-                    horizontal: 'right',
-                  }}
-                  keepMounted
-                  transformOrigin={{
-                    vertical: 'top',
-                    horizontal: 'right',
-                  }}
-                  open={Boolean(anchorFileMenu)}
-                  onClose={handleCloseOptionsMenu}
-                  className="dropdown-items"
-                  >
-                    {menuOptions && menuOptions.map((submenu) => {
-                      if (submenu.button) {
-                        return (
-                          <li key={submenu}  >
-                            <Popup
-                              label={submenu.label}
-                              title={submenu.title}
-                              text={submenu.text}
-                            />
-                          </li>
-                        );
-                      } else if (submenu.link) {
-                        return (
-                          <li key={submenu}  >
-                            <Link to={submenu.link ?? "#"} onClick={submenu.action}>
-                              {submenu.label}
-                            </Link>
-                          </li>
-                        );
-                      } else {
-                        return (<ul>{submenu.component}</ul>)
-                      }
-                    })}
-                  </Menu>
-                </>
-              ))}
-            </Box>
+            {menuItems.map((page) => (
+            <Accordion
+              square
+              expanded={expanded === page.label}
+              onChange={handleChange(page.label)}
+              onMouseLeave={handleChange("")}
+              sx={{
+                display: { xs: 'none', lg: 'block' },
+                boxShadow: "none"
+              }}
+              disableGutters
+            >
+              <AccordionSummary
+                className="menu-items"
+              >
+                {page.label}
+              </AccordionSummary>
+              <AccordionDetails
+                className="dropdown-items"
+              >
+                {page.submenu.map((submenu) => {
+                  if (submenu.button) {
+                    return (
+                        <Popup
+                          label={submenu.label}
+                          title={submenu.title}
+                          text={submenu.text}
+                        />
+                    );
+                  } else if (submenu.link) {
+                    return (
+                      <p>
+                        <Link to={submenu.link ?? "#"} onClick={submenu.action}>
+                          {submenu.label}
+                        </Link>
+                      </p>
+                    );
+                  } else {
+                    return (<ul>{submenu.component}</ul>)
+                  }
+                })}
+              </AccordionDetails>
+            </Accordion>
+            ))}
             {/* End Full Sized Menu */}
+            <DevMode />
           </Toolbar>
         </Container>
       </AppBar>

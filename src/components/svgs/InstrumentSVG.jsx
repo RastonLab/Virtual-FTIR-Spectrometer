@@ -1885,36 +1885,6 @@ const SvgComponent = (props) => (
           }}
         />
       </linearGradient>
-      <linearGradient
-        xlinkHref="#linearGradient11659"
-        id="linearGradient11661"
-        x1={14.063}
-        x2={21.063}
-        y1={-4.875}
-        y2={-4.875}
-        gradientTransform="matrix(4.55249 0 0 4.55249 -2871.609 3235.253)"
-        gradientUnits="userSpaceOnUse"
-      />
-      <linearGradient
-        xlinkHref="#linearGradient11659"
-        id="linearGradient10403"
-        x1={12.563}
-        x2={22.563}
-        y1={2.375}
-        y2={2.375}
-        gradientTransform="matrix(4.55249 0 0 4.55249 -2871.609 3235.253)"
-        gradientUnits="userSpaceOnUse"
-      />
-      <linearGradient
-        xlinkHref="#linearGradient11673"
-        id="linearGradient11675"
-        x1={21}
-        x2={24}
-        y1={-4.625}
-        y2={-4.625}
-        gradientTransform="matrix(4.55249 0 0 4.55249 -2871.609 3235.253)"
-        gradientUnits="userSpaceOnUse"
-      />
       <linearGradient id="linearGradient11673">
         <stop
           id="stop11671"
@@ -1957,36 +1927,6 @@ const SvgComponent = (props) => (
           }}
         />
       </linearGradient>
-      <linearGradient
-        xlinkHref="#linearGradient11659"
-        id="linearGradient11706"
-        x1={15.563}
-        x2={19.563}
-        y1={-10.125}
-        y2={-10.125}
-        gradientTransform="matrix(4.55249 0 0 4.55249 -2871.609 3235.253)"
-        gradientUnits="userSpaceOnUse"
-      />
-      <linearGradient
-        xlinkHref="#linearGradient11659"
-        id="linearGradient12498"
-        x1={12.563}
-        x2={22.563}
-        y1={-11.375}
-        y2={-11.375}
-        gradientTransform="matrix(6.37348 0 0 4.55249 -2903.59 3235.253)"
-        gradientUnits="userSpaceOnUse"
-      />
-      <linearGradient
-        xlinkHref="#linearGradient12517"
-        id="linearGradient12519"
-        x1={3}
-        x2={33}
-        y1={40.375}
-        y2={40.375}
-        gradientTransform="matrix(0 -4.55249 4.55249 0 3237.53 2870.328)"
-        gradientUnits="userSpaceOnUse"
-      />
       <linearGradient id="linearGradient12517">
         <stop
           id="stop12513"
@@ -2029,16 +1969,6 @@ const SvgComponent = (props) => (
           }}
         />
       </linearGradient>
-      <linearGradient
-        xlinkHref="#linearGradient15520"
-        id="linearGradient15522"
-        x1={5.65}
-        x2={30.547}
-        y1={48.21}
-        y2={48.21}
-        gradientTransform="matrix(4.55249 0 0 4.55249 -2863.71 3243.886)"
-        gradientUnits="userSpaceOnUse"
-      />
       <linearGradient id="linearGradient15520">
         <stop
           id="stop15516"
@@ -2716,6 +2646,76 @@ const SvgComponent = (props) => (
         y1={-188.953}
         y2={-102.395}
         gradientTransform="matrix(.15683 0 0 .17227 544.543 444.138)"
+        gradientUnits="userSpaceOnUse"
+      />
+      <linearGradient
+        xlinkHref="#linearGradient11659"
+        id="linearGradient11661-2"
+        x1={14.063}
+        x2={21.063}
+        y1={-4.875}
+        y2={-4.875}
+        gradientTransform="matrix(7.59226 0 0 7.59226 -164.849 174.507)"
+        gradientUnits="userSpaceOnUse"
+      />
+      <linearGradient
+        xlinkHref="#linearGradient11659"
+        id="linearGradient10403-8"
+        x1={12.563}
+        x2={22.563}
+        y1={2.375}
+        y2={2.375}
+        gradientTransform="matrix(7.59226 0 0 7.59226 -164.849 174.507)"
+        gradientUnits="userSpaceOnUse"
+      />
+      <linearGradient
+        xlinkHref="#linearGradient11673"
+        id="linearGradient11675-6"
+        x1={21}
+        x2={24}
+        y1={-4.625}
+        y2={-4.625}
+        gradientTransform="matrix(7.59226 0 0 7.59226 -164.849 174.507)"
+        gradientUnits="userSpaceOnUse"
+      />
+      <linearGradient
+        xlinkHref="#linearGradient11659"
+        id="linearGradient11706-4"
+        x1={15.563}
+        x2={19.563}
+        y1={-10.125}
+        y2={-10.125}
+        gradientTransform="matrix(7.59226 0 0 7.59226 -164.849 174.507)"
+        gradientUnits="userSpaceOnUse"
+      />
+      <linearGradient
+        xlinkHref="#linearGradient11659"
+        id="linearGradient12498-9"
+        x1={12.563}
+        x2={22.563}
+        y1={-11.375}
+        y2={-11.375}
+        gradientTransform="matrix(10.62916 0 0 7.59226 -218.184 174.507)"
+        gradientUnits="userSpaceOnUse"
+      />
+      <linearGradient
+        xlinkHref="#linearGradient12517"
+        id="linearGradient12519-0"
+        x1={3}
+        x2={33}
+        y1={40.375}
+        y2={40.375}
+        gradientTransform="matrix(7.59226 0 0 7.59226 -162.713 178.302)"
+        gradientUnits="userSpaceOnUse"
+      />
+      <linearGradient
+        xlinkHref="#linearGradient15520"
+        id="linearGradient15522-4"
+        x1={5.65}
+        x2={30.547}
+        y1={48.21}
+        y2={48.21}
+        gradientTransform="matrix(7.59226 0 0 7.59226 -162.349 178.663)"
         gradientUnits="userSpaceOnUse"
       />
       <filter
@@ -4394,102 +4394,6 @@ const SvgComponent = (props) => (
           }}
         />
       </g>
-      <g
-        id="lecture"
-        transform="matrix(1.66772 0 0 1.66772 -2816.29 -2052.516)"
-      >
-        <path
-          id="rect5963"
-          d="M-2807.589 3191.436h31.867v43.249h-31.867z"
-          style={{
-            fill: "url(#linearGradient11661)",
-            fillOpacity: 1,
-            strokeWidth: 0.194914,
-          }}
-          transform="rotate(-90)"
-        />
-        <path
-          id="rect4162"
-          d="M-2814.418 3234.684h45.525v22.762h-45.525z"
-          style={{
-            fill: "url(#linearGradient10403)",
-            fillOpacity: 1,
-            strokeWidth: 0.117477,
-          }}
-          transform="rotate(-90)"
-        />
-        <rect
-          id="rect5181"
-          width={45.525}
-          height={0.455}
-          x={-2814.418}
-          y={3240.794}
-          ry={0}
-          style={{
-            fill: "#a0a0a0",
-            fillOpacity: 1,
-            strokeWidth: 0.049984,
-          }}
-          transform="rotate(-90)"
-        />
-        <path
-          id="rect8157"
-          d="M-2776.006 3202.817h13.657v22.762h-13.657z"
-          style={{
-            fill: "url(#linearGradient11675)",
-            fillOpacity: 1,
-            strokeWidth: 0.170623,
-          }}
-          transform="rotate(-90)"
-        />
-        <path
-          id="rect8161"
-          d="M-2800.76 3186.883h18.21v4.552h-18.21z"
-          style={{
-            fill: "url(#linearGradient11706)",
-            fillOpacity: 1,
-            strokeWidth: 0.362494,
-          }}
-          transform="rotate(-90)"
-        />
-        <rect
-          id="rect9017"
-          width={63.735}
-          height={6.829}
-          x={-2823.523}
-          y={3180.055}
-          ry={2.276}
-          style={{
-            fill: "url(#linearGradient12498)",
-            fillOpacity: 1,
-            strokeWidth: 0.238872,
-          }}
-          transform="rotate(-90)"
-        />
-        <path
-          id="rect234"
-          d="M3318.495 2720.096a67.877 68.287 0 0 0-67.877 68.287 67.877 68.287 0 0 0 67.877 68.288 67.877 68.287 0 0 0 1.106-.08c.26.022.511.08.778.08h262.616c5.019 0 9.06-4.061 9.06-9.105V2729.2c0-5.044-4.041-9.105-9.06-9.105h-262.616c-.123 0-.24.03-.363.036a67.877 68.287 0 0 0-1.521-.036z"
-          style={{
-            fill: "url(#linearGradient12519)",
-            fillOpacity: 1,
-            strokeWidth: 0.232347,
-          }}
-        />
-        <rect
-          id="rect1697-1"
-          width={113.346}
-          height={235.352}
-          x={-2837.99}
-          y={3345.685}
-          ry={3.362}
-          style={{
-            fill: "url(#linearGradient15522)",
-            fillOpacity: 1,
-            strokeWidth: 4.26287,
-          }}
-          transform="rotate(-89.873) skewX(.01)"
-        />
-      </g>
       <g id="pump" transform="translate(2509.775 2588.72) scale(1.28845)">
         <rect
           id="rect50079-5"
@@ -5327,6 +5231,731 @@ const SvgComponent = (props) => (
             strokeWidth: 0.576923,
           }}
         />
+      </g>
+      <g id="readout" transform="translate(2521.392 428.024)">
+        <path
+          id="background"
+          d="M-478.382-333.76V180.945H1036.325v-514.707H278.97Z"
+          style={{
+            fill: "#1d2022",
+            fillOpacity: 1,
+            stroke: "#daa520",
+            strokeWidth: 15.2934,
+            strokeLinecap: "square",
+            strokeLinejoin: "round",
+            strokeDasharray: "none",
+            strokeOpacity: 1,
+            paintOrder: "fill markers stroke",
+          }}
+        />
+        <path
+          id="path3782"
+          d="M470.48 21.53h-12.048L435.09-6.22H422.01v27.75h-9.282v-69.797h19.547q6.328 0 10.547.844 4.219.797 7.594 2.906 3.797 2.39 5.906 6.047 2.156 3.61 2.156 9.187 0 7.547-3.797 12.657-3.796 5.062-10.453 7.64zm-21.704-50.156q0-3-1.078-5.297-1.031-2.344-3.469-3.938-2.015-1.36-4.781-1.875-2.766-.562-6.516-.562h-10.921v26.343h9.375q4.406 0 7.687-.75 3.281-.796 5.578-2.906 2.11-1.969 3.094-4.5 1.031-2.578 1.031-6.515z"
+          style={{
+            fontSize: 96,
+            InkscapeFontSpecification: "&quot",
+            fill: "#fff",
+            strokeWidth: 15,
+            strokeLinecap: "square",
+            strokeLinejoin: "round",
+            paintOrder: "fill markers stroke",
+          }}
+        />
+        <path
+          id="path3784"
+          d="M520.26-3.736h-38.578q0 4.828 1.454 8.438 1.453 3.562 3.984 5.86 2.437 2.25 5.766 3.374 3.375 1.125 7.406 1.125 5.344 0 10.734-2.11 5.438-2.156 7.735-4.218h.468v9.61q-4.453 1.874-9.093 3.14-4.641 1.266-9.75 1.266-13.032 0-20.344-7.032-7.313-7.078-7.313-20.062 0-12.844 6.985-20.39 7.03-7.548 18.468-7.548 10.594 0 16.313 6.188 5.766 6.187 5.766 17.578zm-8.578-6.75q-.046-6.937-3.515-10.734-3.422-3.797-10.453-3.797-7.078 0-11.297 4.172-4.172 4.172-4.735 10.36z"
+          style={{
+            fontSize: 96,
+            InkscapeFontSpecification: "&quot",
+            fill: "#fff",
+            strokeWidth: 15,
+            strokeLinecap: "square",
+            strokeLinejoin: "round",
+            paintOrder: "fill markers stroke",
+          }}
+        />
+        <path
+          id="path3786"
+          d="M571.026 6.436q0 7.172-5.953 11.766-5.906 4.593-16.172 4.593-5.812 0-10.687-1.359-4.828-1.406-8.11-3.047V8.5h.469q4.172 3.14 9.281 5.015 5.11 1.828 9.797 1.828 5.813 0 9.094-1.875 3.281-1.875 3.281-5.906 0-3.094-1.781-4.687-1.781-1.594-6.844-2.72-1.875-.421-4.922-.984-3-.562-5.484-1.218-6.89-1.828-9.797-5.344-2.86-3.563-2.86-8.719 0-3.234 1.313-6.094 1.36-2.859 4.078-5.109 2.625-2.203 6.657-3.469 4.078-1.312 9.093-1.312 4.688 0 9.469 1.172 4.828 1.125 8.016 2.765v9.422h-.47q-3.374-2.484-8.202-4.172-4.828-1.734-9.469-1.734-4.828 0-8.156 1.875-3.328 1.828-3.328 5.484 0 3.235 2.015 4.875 1.969 1.641 6.375 2.672 2.438.563 5.438 1.125 3.047.563 5.062 1.031 6.14 1.407 9.469 4.829 3.328 3.468 3.328 9.187z"
+          style={{
+            fontSize: 96,
+            InkscapeFontSpecification: "&quot",
+            fill: "#fff",
+            strokeWidth: 15,
+            strokeLinecap: "square",
+            strokeLinejoin: "round",
+            paintOrder: "fill markers stroke",
+          }}
+        />
+        <path
+          id="path3788"
+          d="M628.26-4.626q0 12.796-6.562 20.203-6.562 7.406-17.578 7.406-11.11 0-17.672-7.406-6.516-7.407-6.516-20.203 0-12.797 6.516-20.204 6.563-7.453 17.672-7.453 11.016 0 17.578 7.453 6.563 7.407 6.563 20.204zm-9.093 0q0-10.172-3.985-15.094-3.984-4.969-11.062-4.969-7.172 0-11.156 4.969-3.938 4.922-3.938 15.094 0 9.843 3.985 14.953 3.984 5.062 11.109 5.062 7.031 0 11.016-5.015 4.03-5.063 4.03-15z"
+          style={{
+            fontSize: 96,
+            InkscapeFontSpecification: "&quot",
+            fill: "#fff",
+            strokeWidth: 15,
+            strokeLinecap: "square",
+            strokeLinejoin: "round",
+            paintOrder: "fill markers stroke",
+          }}
+        />
+        <path
+          id="path3790"
+          d="M650.807 21.53h-8.812v-72.938h8.812z"
+          style={{
+            fontSize: 96,
+            InkscapeFontSpecification: "&quot",
+            fill: "#fff",
+            strokeWidth: 15,
+            strokeLinecap: "square",
+            strokeLinejoin: "round",
+            paintOrder: "fill markers stroke",
+          }}
+        />
+        <path
+          id="path3792"
+          d="M711.651 21.53h-8.812v-5.813q-4.453 3.516-8.532 5.391-4.078 1.875-9 1.875-8.25 0-12.843-5.016-4.594-5.062-4.594-14.812V-30.83h8.812v29.813q0 3.984.375 6.844.375 2.812 1.594 4.828 1.266 2.062 3.281 3 2.016.937 5.86.937 3.422 0 7.453-1.78 4.078-1.782 7.594-4.548V-30.83h8.812z"
+          style={{
+            fontSize: 96,
+            InkscapeFontSpecification: "&quot",
+            fill: "#fff",
+            strokeWidth: 15,
+            strokeLinecap: "square",
+            strokeLinejoin: "round",
+            paintOrder: "fill markers stroke",
+          }}
+        />
+        <path
+          id="path3794"
+          d="M756.182 21.061q-2.484.656-5.437 1.078-2.906.422-5.203.422-8.016 0-12.188-4.312-4.172-4.313-4.172-13.829v-27.843h-5.953v-7.407h5.953v-15.046h8.813v15.046h18.187v7.407h-18.187V.437q0 4.124.187 6.468.188 2.297 1.313 4.312 1.031 1.875 2.812 2.766 1.829.844 5.532.844 2.156 0 4.5-.61 2.343-.656 3.375-1.078h.468z"
+          style={{
+            fontSize: 96,
+            InkscapeFontSpecification: "&quot",
+            fill: "#fff",
+            strokeWidth: 15,
+            strokeLinecap: "square",
+            strokeLinejoin: "round",
+            paintOrder: "fill markers stroke",
+          }}
+        />
+        <path
+          id="path3796"
+          d="M776.292-39.595h-9.938v-9.14h9.938zm-.563 61.125h-8.812v-52.36h8.812z"
+          style={{
+            fontSize: 96,
+            InkscapeFontSpecification: "&quot",
+            fill: "#fff",
+            strokeWidth: 15,
+            strokeLinecap: "square",
+            strokeLinejoin: "round",
+            paintOrder: "fill markers stroke",
+          }}
+        />
+        <path
+          id="path3798"
+          d="M837.792-4.626q0 12.796-6.563 20.203-6.562 7.406-17.578 7.406-11.11 0-17.672-7.406-6.515-7.407-6.515-20.203 0-12.797 6.515-20.204 6.563-7.453 17.672-7.453 11.016 0 17.578 7.453 6.563 7.407 6.563 20.204zm-9.094 0q0-10.172-3.984-15.094-3.985-4.969-11.063-4.969-7.172 0-11.156 4.969-3.938 4.922-3.938 15.094 0 9.843 3.985 14.953 3.984 5.062 11.11 5.062 7.03 0 11.015-5.015 4.031-5.063 4.031-15z"
+          style={{
+            fontSize: 96,
+            InkscapeFontSpecification: "&quot",
+            fill: "#fff",
+            strokeWidth: 15,
+            strokeLinecap: "square",
+            strokeLinejoin: "round",
+            paintOrder: "fill markers stroke",
+          }}
+        />
+        <path
+          id="path3800"
+          d="M895.214 21.53H886.4V-8.283q0-3.609-.422-6.75-.422-3.187-1.547-4.968-1.171-1.97-3.375-2.907-2.203-.984-5.718-.984-3.61 0-7.547 1.781-3.938 1.781-7.547 4.547V21.53h-8.813v-52.36h8.813v5.813q4.125-3.422 8.531-5.344 4.406-1.922 9.047-1.922 8.484 0 12.938 5.11 4.453 5.11 4.453 14.718z"
+          style={{
+            fontSize: 96,
+            InkscapeFontSpecification: "&quot",
+            fill: "#fff",
+            strokeWidth: 15,
+            strokeLinecap: "square",
+            strokeLinejoin: "round",
+            paintOrder: "fill markers stroke",
+          }}
+        />
+        <path
+          id="resolution-text-box"
+          d="M303.971 63.592h700v100h-700z"
+          style={{
+            fill: "#fff",
+            fillOpacity: 1,
+            stroke: "none",
+            strokeWidth: 13.7634,
+            strokeLinecap: "square",
+            strokeLinejoin: "round",
+            strokeDasharray: "none",
+            strokeOpacity: 1,
+            paintOrder: "fill markers stroke",
+          }}
+        />
+        <text
+          xmlSpace="preserve"
+          id="resolution-value"
+          x={651.388}
+          y={120.094}
+          style={{
+            fontStyle: "normal",
+            fontVariant: "normal",
+            fontWeight: 400,
+            fontStretch: "normal",
+            fontSize: "85.3333px",
+            fontFamily: "sans-serif",
+            InkscapeFontSpecification: "&quot",
+            fontVariantLigatures: "normal",
+            fontVariantCaps: "normal",
+            fontVariantNumeric: "normal",
+            fontVariantEastAsian: "normal",
+            dominantBaseline: "central",
+            textAnchor: "middle",
+            fill: "#000",
+            fillOpacity: 1,
+            stroke: "none",
+            strokeWidth: 15,
+            strokeLinecap: "square",
+            strokeLinejoin: "round",
+            strokeDasharray: "none",
+            strokeOpacity: 1,
+            paintOrder: "fill markers stroke",
+          }}
+        >
+          <tspan id="tspan4131" x={651.388} y={120.094}>
+            {props.resolution}
+          </tspan>
+        </text>
+        <path
+          id="path3748"
+          d="M-272.409 18.39h-12.047l-23.343-27.75h-13.079v27.75h-9.28v-69.798h19.546q6.328 0 10.547.844 4.219.797 7.594 2.906 3.797 2.391 5.906 6.047 2.156 3.61 2.156 9.188 0 7.547-3.797 12.656-3.796 5.062-10.453 7.64zm-21.703-50.157q0-3-1.078-5.297-1.031-2.344-3.469-3.937-2.015-1.36-4.781-1.875-2.766-.563-6.516-.563h-10.921v26.344h9.375q4.406 0 7.687-.75 3.281-.797 5.578-2.906 2.11-1.97 3.094-4.5 1.031-2.579 1.031-6.516z"
+          style={{
+            fontSize: 96,
+            lineHeight: 0,
+            InkscapeFontSpecification: "&quot",
+            fill: "#fff",
+            strokeWidth: 15,
+            strokeLinecap: "square",
+            strokeLinejoin: "round",
+            paintOrder: "fill markers stroke",
+          }}
+        />
+        <path
+          id="path3750"
+          d="M-225.3 18.39h-8.765V12.81q-1.172.797-3.188 2.25-1.968 1.406-3.843 2.25-2.203 1.078-5.063 1.781-2.86.75-6.703.75-7.078 0-12-4.687-4.922-4.688-4.922-11.953 0-5.953 2.531-9.61 2.579-3.703 7.313-5.812 4.781-2.11 11.484-2.86t14.391-1.125v-1.359q0-3-1.078-4.969-1.031-1.968-3-3.093-1.875-1.079-4.5-1.454t-5.485-.375q-3.468 0-7.734.938-4.266.89-8.812 2.625h-.47v-8.953q2.579-.703 7.454-1.547t9.61-.844q5.53 0 9.609.938 4.125.89 7.125 3.093 2.953 2.157 4.5 5.579 1.547 3.421 1.547 8.484zm-8.765-12.891V-9.08q-4.031.235-9.516.704-5.437.468-8.625 1.359-3.796 1.078-6.14 3.375-2.344 2.25-2.344 6.234 0 4.5 2.719 6.797 2.719 2.25 8.297 2.25 4.64 0 8.484-1.781 3.844-1.828 7.125-4.36z"
+          style={{
+            fontSize: 96,
+            lineHeight: 0,
+            InkscapeFontSpecification: "&quot",
+            fill: "#fff",
+            strokeWidth: 15,
+            strokeLinecap: "square",
+            strokeLinejoin: "round",
+            paintOrder: "fill markers stroke",
+          }}
+        />
+        <path
+          id="path3752"
+          d="M-164.55 18.39h-8.812v-29.813q0-3.61-.422-6.75-.422-3.188-1.547-4.969-1.172-1.969-3.375-2.906-2.203-.985-5.718-.985-3.61 0-7.547 1.782-3.938 1.78-7.547 4.546V18.39h-8.813v-52.36h8.813v5.813q4.125-3.422 8.531-5.343 4.406-1.922 9.047-1.922 8.484 0 12.937 5.11 4.454 5.108 4.454 14.718z"
+          style={{
+            fontSize: 96,
+            lineHeight: 0,
+            InkscapeFontSpecification: "&quot",
+            fill: "#fff",
+            strokeWidth: 15,
+            strokeLinecap: "square",
+            strokeLinejoin: "round",
+            paintOrder: "fill markers stroke",
+          }}
+        />
+        <path
+          id="path3754"
+          d="M-105.112 12.436q0 13.313-6.047 19.547t-18.61 6.234q-4.171 0-8.155-.609-3.938-.563-7.782-1.64v-9h.47q2.155.843 6.843 2.062 4.687 1.265 9.375 1.265 4.5 0 7.453-1.078 2.953-1.078 4.594-3 1.64-1.828 2.344-4.406.703-2.578.703-5.766v-4.78q-3.985 3.187-7.641 4.78-3.61 1.547-9.234 1.547-9.375 0-14.907-6.75-5.484-6.797-5.484-19.125 0-6.75 1.875-11.625 1.922-4.922 5.203-8.484 3.047-3.328 7.406-5.156 4.36-1.875 8.672-1.875 4.547 0 7.594.937 3.094.89 6.516 2.766l.562-2.25h8.25zM-113.924 4v-28.547q-3.516-1.594-6.563-2.25-3-.703-6-.703-7.266 0-11.437 4.875-4.172 4.875-4.172 14.156 0 8.812 3.094 13.36 3.093 4.546 10.265 4.546 3.844 0 7.688-1.453 3.89-1.5 7.125-3.984z"
+          style={{
+            fontSize: 96,
+            lineHeight: 0,
+            InkscapeFontSpecification: "&quot",
+            fill: "#fff",
+            strokeWidth: 15,
+            strokeLinecap: "square",
+            strokeLinejoin: "round",
+            paintOrder: "fill markers stroke",
+          }}
+        />
+        <path
+          id="path3756"
+          d="M-43.94-6.876h-38.578q0 4.828 1.453 8.437 1.453 3.563 3.984 5.86 2.438 2.25 5.766 3.374 3.375 1.125 7.406 1.125 5.344 0 10.735-2.109 5.437-2.156 7.734-4.219h.469v9.61q-4.453 1.875-9.094 3.14-4.64 1.266-9.75 1.266-13.031 0-20.344-7.031-7.312-7.078-7.312-20.063 0-12.844 6.984-20.39 7.031-7.547 18.469-7.547 10.594 0 16.312 6.187 5.766 6.188 5.766 17.578zm-8.578-6.75q-.047-6.938-3.516-10.735-3.422-3.797-10.453-3.797-7.078 0-11.297 4.172-4.172 4.172-4.734 10.36z"
+          style={{
+            fontSize: 96,
+            lineHeight: 0,
+            InkscapeFontSpecification: "&quot",
+            fill: "#fff",
+            strokeWidth: 15,
+            strokeLinecap: "square",
+            strokeLinejoin: "round",
+            paintOrder: "fill markers stroke",
+          }}
+        />
+        <path
+          id="path3758"
+          d="M18.966 23.264H11.81Q6.279 16.92 3.216 9.42.154 1.92.154-7.486q0-9.406 3.062-16.906 3.063-7.5 8.594-13.844h7.156v.313q-2.531 2.281-4.844 5.281-2.28 2.969-4.25 6.937-1.875 3.844-3.062 8.47-1.156 4.624-1.156 9.75 0 5.343 1.125 9.78 1.156 4.438 3.093 8.438 1.875 3.844 4.282 6.937 2.406 3.125 4.812 5.282z"
+          style={{
+            fontSize: 64,
+            lineHeight: 0,
+            InkscapeFontSpecification: "&quot",
+            fill: "#fff",
+            strokeWidth: 15,
+            strokeLinecap: "square",
+            strokeLinejoin: "round",
+            paintOrder: "fill markers stroke",
+          }}
+        />
+        <path
+          id="path3760"
+          d="M55.154 8.202q-2.938 1.406-5.594 2.187-2.625.781-5.594.781-3.781 0-6.937-1.093-3.157-1.125-5.407-3.375-2.28-2.25-3.53-5.688-1.25-3.437-1.25-8.031 0-8.563 4.687-13.438 4.718-4.875 12.437-4.875 3 0 5.875.844 2.906.844 5.313 2.063v6.531h-.313q-2.687-2.094-5.562-3.219-2.844-1.125-5.563-1.125-5 0-7.906 3.375-2.875 3.344-2.875 9.844 0 6.312 2.812 9.719 2.844 3.375 7.97 3.375 1.78 0 3.624-.469t3.313-1.219q1.281-.656 2.406-1.375 1.125-.75 1.781-1.281h.313z"
+          style={{
+            fontSize: 64,
+            lineHeight: 0,
+            InkscapeFontSpecification: "&quot",
+            fill: "#fff",
+            strokeWidth: 15,
+            strokeLinecap: "square",
+            strokeLinejoin: "round",
+            paintOrder: "fill markers stroke",
+          }}
+        />
+        <path
+          id="path3762"
+          d="M113.623 10.39h-5.876V-9.487q0-2.25-.218-4.344-.188-2.093-.844-3.343-.719-1.344-2.063-2.032-1.343-.687-3.874-.687-2.47 0-4.938 1.25-2.469 1.219-4.938 3.125.094.719.157 1.687.062.938.062 1.875V10.39h-5.875V-9.486q0-2.312-.219-4.375-.187-2.094-.843-3.344-.719-1.343-2.063-2-1.344-.687-3.875-.687-2.406 0-4.844 1.187-2.406 1.188-4.812 3.032v26.062h-5.875v-34.906h5.875v3.875q2.75-2.281 5.469-3.563 2.75-1.28 5.843-1.28 3.563 0 6.032 1.5 2.5 1.5 3.718 4.155 3.563-3 6.5-4.312 2.938-1.344 6.282-1.344 5.75 0 8.469 3.5 2.75 3.469 2.75 9.719z"
+          style={{
+            fontSize: 64,
+            lineHeight: 0,
+            InkscapeFontSpecification: "&quot",
+            fill: "#fff",
+            strokeWidth: 15,
+            strokeLinecap: "square",
+            strokeLinejoin: "round",
+            paintOrder: "fill markers stroke",
+          }}
+        />
+        <path
+          id="path3764"
+          d="M142.81-20.455h-20.344v-3.093h20.344Z"
+          style={{
+            fontSize: 64,
+            lineHeight: 0,
+            InkscapeFontSpecification: "&quot",
+            fill: "#fff",
+            strokeWidth: 15,
+            strokeLinecap: "square",
+            strokeLinejoin: "round",
+            paintOrder: "fill markers stroke",
+          }}
+        />
+        <path
+          id="path3766"
+          d="M174.716-7.298h-19.219v-3.813h7.313v-17.75h-7.563v-3.5q1.407 0 3.094-.187 1.688-.219 2.625-.594 1.156-.5 1.844-1.188.688-.687.781-1.937h4.219v25.156h6.906z"
+          style={{
+            fontSize: 64,
+            lineHeight: 0,
+            InkscapeFontSpecification: "&quot",
+            fill: "#fff",
+            strokeWidth: 15,
+            strokeLinecap: "square",
+            strokeLinejoin: "round",
+            paintOrder: "fill markers stroke",
+          }}
+        />
+        <path
+          id="path3768"
+          d="M204.248-7.486q0 9.406-3.063 16.906-3.063 7.5-8.594 13.844h-7.156v-.312q2.406-2.157 4.813-5.282 2.437-3.093 4.28-6.937 1.938-4 3.063-8.438 1.156-4.437 1.156-9.78 0-5.126-1.156-9.75-1.156-4.626-3.062-8.47-1.969-3.968-4.281-6.937-2.282-3-4.813-5.281v-.313h7.156q5.531 6.344 8.594 13.844 3.063 7.5 3.063 16.906z"
+          style={{
+            fontSize: 64,
+            lineHeight: 0,
+            InkscapeFontSpecification: "&quot",
+            fill: "#fff",
+            strokeWidth: 15,
+            strokeLinecap: "square",
+            strokeLinejoin: "round",
+            paintOrder: "fill markers stroke",
+          }}
+        />
+        <path
+          id="range-text-box"
+          d="M-446.029 63.592h700v100h-700z"
+          style={{
+            fill: "#fff",
+            fillOpacity: 1,
+            stroke: "none",
+            strokeWidth: 13.7634,
+            strokeLinecap: "square",
+            strokeLinejoin: "round",
+            strokeDasharray: "none",
+            strokeOpacity: 1,
+            paintOrder: "fill markers stroke",
+          }}
+        />
+        <text
+          xmlSpace="preserve"
+          id="range-value"
+          x={-98.612}
+          y={120.094}
+          style={{
+            fontStyle: "normal",
+            fontVariant: "normal",
+            fontWeight: 400,
+            fontStretch: "normal",
+            fontSize: "85.3333px",
+            fontFamily: "sans-serif",
+            InkscapeFontSpecification: "&quot",
+            fontVariantLigatures: "normal",
+            fontVariantCaps: "normal",
+            fontVariantNumeric: "normal",
+            fontVariantEastAsian: "normal",
+            dominantBaseline: "central",
+            textAnchor: "middle",
+            fill: "#000",
+            fillOpacity: 1,
+            stroke: "none",
+            strokeWidth: 15,
+            strokeLinecap: "square",
+            strokeLinejoin: "round",
+            strokeDasharray: "none",
+            strokeOpacity: 1,
+            paintOrder: "fill markers stroke",
+          }}
+        >
+          <tspan id="tspan4121" x={-98.612} y={120.094}>
+            {props.range}
+          </tspan>
+        </text>
+        <path
+          id="path3732"
+          d="M570.862-240.267q0 4.078-1.922 8.063-1.875 3.984-5.297 6.75-3.75 3-8.765 4.687-4.969 1.688-12 1.688-7.547 0-13.594-1.407-6-1.406-12.234-4.172v-11.625h.656q5.297 4.407 12.234 6.797 6.938 2.39 13.031 2.39 8.625 0 13.407-3.234 4.828-3.234 4.828-8.624 0-4.641-2.297-6.844-2.25-2.203-6.89-3.422-3.516-.938-7.641-1.547-4.078-.61-8.672-1.547-9.281-1.969-13.781-6.703-4.454-4.781-4.454-12.422 0-8.765 7.407-14.344 7.406-5.625 18.797-5.625 7.359 0 13.5 1.407 6.14 1.406 10.875 3.468v10.97h-.657q-3.984-3.376-10.5-5.579-6.468-2.25-13.265-2.25-7.453 0-12 3.094-4.5 3.094-4.5 7.969 0 4.359 2.25 6.843 2.25 2.485 7.922 3.797 3 .656 8.53 1.594 5.532.937 9.376 1.922 7.781 2.062 11.719 6.234 3.937 4.172 3.937 11.672z"
+          style={{
+            fontSize: 96,
+            InkscapeFontSpecification: "&quot",
+            fill: "#fff",
+            strokeWidth: 15,
+            strokeLinecap: "square",
+            strokeLinejoin: "round",
+            paintOrder: "fill markers stroke",
+          }}
+        />
+        <path
+          id="path3734"
+          d="M623.784-223.626q-4.406 2.109-8.39 3.28-3.938 1.173-8.391 1.173-5.672 0-10.407-1.64-4.734-1.688-8.109-5.063-3.422-3.375-5.297-8.532-1.875-5.156-1.875-12.047 0-12.843 7.031-20.156 7.079-7.312 18.657-7.312 4.5 0 8.812 1.265 4.36 1.266 7.969 3.094v9.797h-.469q-4.031-3.14-8.344-4.828-4.265-1.688-8.343-1.688-7.5 0-11.86 5.063-4.312 5.016-4.312 14.766 0 9.468 4.219 14.578 4.265 5.062 11.953 5.062 2.672 0 5.437-.703 2.766-.703 4.969-1.828 1.922-.985 3.61-2.063 1.687-1.125 2.671-1.922h.469z"
+          style={{
+            fontSize: 96,
+            InkscapeFontSpecification: "&quot",
+            fill: "#fff",
+            strokeWidth: 15,
+            strokeLinecap: "square",
+            strokeLinejoin: "round",
+            paintOrder: "fill markers stroke",
+          }}
+        />
+        <path
+          id="path3736"
+          d="M675.768-220.345h-8.765v-5.578q-1.172.797-3.188 2.25-1.969 1.406-3.844 2.25-2.203 1.078-5.062 1.781-2.86.75-6.703.75-7.078 0-12-4.688-4.922-4.687-4.922-11.953 0-5.953 2.531-9.609 2.578-3.703 7.313-5.813 4.781-2.109 11.484-2.859t14.39-1.125v-1.36q0-3-1.077-4.968-1.032-1.969-3-3.094-1.875-1.078-4.5-1.453t-5.485-.375q-3.469 0-7.734.938-4.266.89-8.813 2.625h-.468v-8.954q2.578-.703 7.453-1.546 4.875-.844 9.61-.844 5.53 0 9.608.937 4.125.891 7.125 3.094 2.954 2.156 4.5 5.578 1.547 3.422 1.547 8.485zm-8.765-12.89v-14.579q-4.032.234-9.516.703-5.437.469-8.625 1.36-3.797 1.078-6.14 3.375-2.344 2.25-2.344 6.234 0 4.5 2.718 6.797 2.72 2.25 8.297 2.25 4.641 0 8.485-1.781 3.843-1.829 7.125-4.36z"
+          style={{
+            fontSize: 96,
+            InkscapeFontSpecification: "&quot",
+            fill: "#fff",
+            strokeWidth: 15,
+            strokeLinecap: "square",
+            strokeLinejoin: "round",
+            paintOrder: "fill markers stroke",
+          }}
+        />
+        <path
+          id="path3738"
+          d="M736.518-220.345h-8.812v-29.813q0-3.609-.422-6.75-.422-3.187-1.547-4.968-1.172-1.97-3.375-2.907-2.203-.984-5.719-.984-3.609 0-7.547 1.781-3.937 1.781-7.546 4.547v39.094h-8.813v-52.36h8.813v5.813q4.125-3.422 8.53-5.344 4.407-1.922 9.048-1.922 8.484 0 12.937 5.11 4.453 5.11 4.453 14.719z"
+          style={{
+            fontSize: 96,
+            InkscapeFontSpecification: "&quot",
+            fill: "#fff",
+            strokeWidth: 15,
+            strokeLinecap: "square",
+            strokeLinejoin: "round",
+            paintOrder: "fill markers stroke",
+          }}
+        />
+        <path
+          id="path3740"
+          d="M790.893-235.439q0 7.172-5.953 11.766-5.906 4.594-16.172 4.594-5.812 0-10.687-1.36-4.828-1.406-8.11-3.047v-9.89h.47q4.171 3.14 9.28 5.015 5.11 1.828 9.797 1.828 5.813 0 9.094-1.875 3.281-1.875 3.281-5.906 0-3.094-1.78-4.687-1.782-1.594-6.845-2.72-1.875-.421-4.922-.984-3-.562-5.484-1.218-6.89-1.828-9.797-5.344-2.86-3.563-2.86-8.719 0-3.234 1.313-6.094 1.36-2.859 4.078-5.109 2.625-2.203 6.657-3.469 4.078-1.312 9.093-1.312 4.688 0 9.47 1.172 4.827 1.125 8.015 2.765v9.422h-.469q-3.375-2.484-8.203-4.172-4.828-1.734-9.469-1.734-4.828 0-8.156 1.875-3.328 1.828-3.328 5.484 0 3.235 2.015 4.875 1.97 1.641 6.375 2.672 2.438.563 5.438 1.125 3.047.563 5.062 1.031 6.141 1.407 9.47 4.829 3.327 3.468 3.327 9.187z"
+          style={{
+            fontSize: 96,
+            InkscapeFontSpecification: "&quot",
+            fill: "#fff",
+            strokeWidth: 15,
+            strokeLinecap: "square",
+            strokeLinejoin: "round",
+            paintOrder: "fill markers stroke",
+          }}
+        />
+        <path
+          id="scan-text-box"
+          d="M303.971-186.408h700v100h-700z"
+          style={{
+            fill: "#fff",
+            fillOpacity: 1,
+            stroke: "none",
+            strokeWidth: 13.7634,
+            strokeLinecap: "square",
+            strokeLinejoin: "round",
+            strokeDasharray: "none",
+            strokeOpacity: 1,
+            paintOrder: "fill markers stroke",
+          }}
+        />
+        <text
+          xmlSpace="preserve"
+          id="scan-value"
+          x={651.388}
+          y={-129.906}
+          style={{
+            fontStyle: "normal",
+            fontVariant: "normal",
+            fontWeight: 400,
+            fontStretch: "normal",
+            fontSize: "85.3333px",
+            fontFamily: "sans-serif",
+            InkscapeFontSpecification: "&quot",
+            fontVariantLigatures: "normal",
+            fontVariantCaps: "normal",
+            fontVariantNumeric: "normal",
+            fontVariantEastAsian: "normal",
+            dominantBaseline: "central",
+            textAnchor: "middle",
+            fill: "#000",
+            fillOpacity: 1,
+            stroke: "none",
+            strokeWidth: 15,
+            strokeLinecap: "square",
+            strokeLinejoin: "round",
+            strokeDasharray: "none",
+            strokeOpacity: 1,
+            paintOrder: "fill markers stroke",
+          }}
+        >
+          <tspan id="tspan4111" x={651.388} y={-129.906}>
+            {props.scan}
+          </tspan>
+        </text>
+        <path
+          id="path3722"
+          d="M-138.216-281.939q4.266 4.688 6.516 11.485 2.296 6.796 2.296 15.421t-2.343 15.47q-2.297 6.796-6.469 11.343-4.313 4.734-10.219 7.125-5.86 2.39-13.406 2.39-7.36 0-13.406-2.437-6-2.438-10.219-7.078-4.219-4.64-6.516-11.39-2.25-6.75-2.25-15.423 0-8.53 2.25-15.28 2.25-6.798 6.563-11.626 4.125-4.594 10.219-7.031 6.14-2.438 13.359-2.438 7.5 0 13.453 2.485 6 2.437 10.172 6.984zm-.844 26.906q0-13.593-6.094-20.953-6.093-7.406-16.64-7.406-10.64 0-16.734 7.406-6.047 7.36-6.047 20.953 0 13.735 6.187 21.047 6.188 7.266 16.594 7.266 10.406 0 16.547-7.266 6.187-7.312 6.187-21.047z"
+          style={{
+            fontSize: 96,
+            fontFamily: "sans-serif",
+            InkscapeFontSpecification: "&quot",
+            fill: "#fff",
+            strokeWidth: 15,
+            strokeLinecap: "square",
+            strokeLinejoin: "round",
+            paintOrder: "fill markers stroke",
+          }}
+        />
+        <path
+          id="path3724"
+          d="M-69.029-268.86q0 4.64-1.64 8.624-1.594 3.938-4.5 6.844-3.61 3.61-8.531 5.438-4.922 1.78-12.422 1.78h-9.282v26.016h-9.28v-69.797h18.937q6.281 0 10.64 1.079 4.36 1.03 7.735 3.28 3.984 2.673 6.14 6.657 2.203 3.985 2.203 10.078zm-9.656.234q0-3.61-1.265-6.282-1.266-2.671-3.844-4.359-2.25-1.453-5.156-2.063-2.86-.656-7.266-.656h-9.188v27.89h7.829q5.625 0 9.14-.984 3.516-1.03 5.719-3.234 2.203-2.25 3.094-4.734.937-2.485.937-5.578z"
+          style={{
+            fontSize: 96,
+            fontFamily: "sans-serif",
+            InkscapeFontSpecification: "&quot",
+            fill: "#fff",
+            strokeWidth: 15,
+            strokeLinecap: "square",
+            strokeLinejoin: "round",
+            paintOrder: "fill markers stroke",
+          }}
+        />
+        <path
+          id="path3726"
+          d="M2.175-254.986q0 9.516-4.172 17.25-4.125 7.735-11.016 12-4.781 2.953-10.687 4.266-5.86 1.312-15.47 1.312h-17.624v-69.797h17.437q10.22 0 16.22 1.5 6.046 1.454 10.218 4.032 7.125 4.453 11.11 11.86 3.984 7.405 3.984 17.577zm-9.704-.14q0-8.204-2.859-13.829-2.86-5.625-8.531-8.859-4.125-2.344-8.766-3.234-4.64-.938-11.11-.938h-8.718v53.86h8.719q6.703 0 11.672-.985 5.015-.984 9.187-3.656 5.203-3.328 7.781-8.766 2.625-5.437 2.625-13.593z"
+          style={{
+            fontSize: 96,
+            fontFamily: "sans-serif",
+            InkscapeFontSpecification: "&quot",
+            fill: "#fff",
+            strokeWidth: 15,
+            strokeLinecap: "square",
+            strokeLinejoin: "round",
+            paintOrder: "fill markers stroke",
+          }}
+        />
+        <path
+          id="opd-text-box"
+          d="M-446.029-186.408h700v100h-700z"
+          style={{
+            fill: "#fff",
+            fillOpacity: 1,
+            stroke: "none",
+            strokeWidth: 13.7634,
+            strokeLinecap: "square",
+            strokeLinejoin: "round",
+            strokeDasharray: "none",
+            strokeOpacity: 1,
+            paintOrder: "fill markers stroke",
+          }}
+        />
+        <text
+          xmlSpace="preserve"
+          id="opd-value"
+          x={-98.612}
+          y={-129.906}
+          style={{
+            fontStyle: "normal",
+            fontVariant: "normal",
+            fontWeight: 400,
+            fontStretch: "normal",
+            fontSize: "85.3333px",
+            fontFamily: "sans-serif",
+            InkscapeFontSpecification: "&quot",
+            fontVariantLigatures: "normal",
+            fontVariantCaps: "normal",
+            fontVariantNumeric: "normal",
+            fontVariantEastAsian: "normal",
+            dominantBaseline: "central",
+            textAnchor: "middle",
+            fill: "#000",
+            fillOpacity: 1,
+            stroke: "none",
+            strokeWidth: 15,
+            strokeLinecap: "square",
+            strokeLinejoin: "round",
+            strokeDasharray: "none",
+            strokeOpacity: 1,
+            paintOrder: "fill markers stroke",
+          }}
+        >
+          <tspan id="tspan4101" x={-98.612} y={-129.906}>
+            {props.opd}
+          </tspan>
+        </text>
+      </g>
+      <g id="lecture" transform="rotate(-90 2488.174 83.486)">
+        <path
+          id="rect5963-2"
+          d="M-58.082 101.431h53.146v72.126h-53.146z"
+          style={{
+            fill: "url(#linearGradient11661-2)",
+            fillOpacity: 1,
+            strokeWidth: 0.325061,
+          }}
+        />
+        <path
+          id="rect4162-5"
+          d="M-69.47 173.557H6.453v37.961H-69.47z"
+          style={{
+            fill: "url(#linearGradient10403-8)",
+            fillOpacity: 1,
+            strokeWidth: 0.195918,
+          }}
+        />
+        <rect
+          id="rect5181-2"
+          width={75.923}
+          height={0.759}
+          x={-69.47}
+          y={183.746}
+          ry={0}
+          style={{
+            fill: "#a0a0a0",
+            fillOpacity: 1,
+            strokeWidth: 0.0833591,
+          }}
+        />
+        <path
+          id="rect8157-1"
+          d="M-5.411 120.412h22.777v37.961H-5.411z"
+          style={{
+            fill: "url(#linearGradient11675-6)",
+            fillOpacity: 1,
+            strokeWidth: 0.284551,
+          }}
+        />
+        <path
+          id="rect8161-9"
+          d="M-46.694 93.838h30.369v7.592h-30.369z"
+          style={{
+            fill: "url(#linearGradient11706-4)",
+            fillOpacity: 1,
+            strokeWidth: 0.604537,
+          }}
+        />
+        <rect
+          id="rect9017-6"
+          width={106.292}
+          height={11.388}
+          x={-84.655}
+          y={82.451}
+          ry={3.796}
+          style={{
+            fill: "url(#linearGradient12498-9)",
+            fillOpacity: 1,
+            strokeWidth: 0.398371,
+          }}
+        />
+        <path
+          id="rect234-8"
+          d="M87.831 313.33a113.884 113.2 0 0 0-113.883-113.2 113.884 113.2 0 0 0-113.884 113.2 113.884 113.2 0 0 0 .133 1.844c-.037.435-.133.853-.133 1.298V754.44c0 8.37 6.772 15.11 15.184 15.11H72.647c8.412 0 15.184-6.74 15.184-15.11V316.472c0-.206-.05-.4-.06-.605a113.884 113.2 0 0 0 .06-2.538z"
+          style={{
+            fill: "url(#linearGradient12519-0)",
+            fillOpacity: 1,
+            strokeWidth: 0.387489,
+          }}
+        />
+        <rect
+          id="rect1697-1-4"
+          width={189.028}
+          height={392.5}
+          x={-119.454}
+          y={348.434}
+          ry={5.607}
+          style={{
+            fill: "url(#linearGradient15522-4)",
+            fillOpacity: 1,
+            strokeWidth: 7.10926,
+          }}
+          transform="rotate(.127) skewX(.01)"
+        />
+        <text
+          xmlSpace="preserve"
+          id="molecule-value"
+          x={542.6}
+          y={25.267}
+          style={{
+            fontSize: "97.7207px",
+            lineHeight: 0,
+            fontFamily: "sans-serif",
+            InkscapeFontSpecification: "&quot",
+            textAlign: "center",
+            dominantBaseline: "central",
+            textAnchor: "middle",
+            display: "inline",
+            fill: "#000",
+            strokeWidth: 34.3549,
+            strokeLinecap: "square",
+            strokeLinejoin: "round",
+            paintOrder: "fill markers stroke",
+          }}
+          transform="rotate(90)"
+        >
+          <tspan
+            id="tspan877"
+            x={542.6}
+            y={25.267}
+            style={{
+              fontSize: "97.7207px",
+              strokeWidth: 34.3549,
+            }}
+          >
+            {props.molecule}
+          </tspan>
+        </text>
       </g>
     </g>
   </svg>
