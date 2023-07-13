@@ -132,7 +132,7 @@ export default function Fetch({ type, params, fetchURL, buttonText, buttonStyle 
     } else {
       dispatch(setProgress(false));
       dispatch(setSpinner(false));
-      dispatch(setError([true, "Invalid Request Type"]));
+      dispatch(setError([true, `Invalid Request Type. Received "${type}": expected sample, background, or find_peaks`]));
       return;
     }
 
@@ -175,7 +175,7 @@ export default function Fetch({ type, params, fetchURL, buttonText, buttonStyle 
               dispatch(setPeaksData(data));
               break;
             default:
-              console.log("not sample or background");
+              console.log(`Invalid Request Type. Received: "${type}" expected sample, background, or find_peaks`);
               break;
           }
         }
@@ -195,17 +195,17 @@ export default function Fetch({ type, params, fetchURL, buttonText, buttonStyle 
       }
     } catch (error) {
       // error occurred when reaching out to server
-      let errorMessage = null;
+      let errorMessage = "We could not collect your data at this time. Please wait a few moments and try again.";
+      console.log(error);
 
-      switch (error.message) {
-        case "Failed to fetch":
-          errorMessage = "client is unable to reach server";
-          break;
-        default:
-          errorMessage = "unhandled error";
-          console.log(error);
-          break;
-      }
+      // switch (error.message) {
+      //   case "Failed to fetch":
+      //     errorMessage = "We could not collect your data at this time. Please wait a few moments and try again.";
+      //     break;
+      //   default:
+      //     errorMessage = "unhandled error";
+      //     break;
+      // }
       dispatch(setProgress(false));
       dispatch(setSpinner(false));
       dispatch(setError([true, errorMessage]));
