@@ -1,8 +1,0 @@
-# .svgo.yml
-plugins:
-  - cleanupIDs: false
-  - convertStyleToAttrs: false # allows style="display:variable" to exist
-  - removeDimensions: true # this deletes width/height and adds it to the viewBox
-  - removeHiddenElems: false
-  - removeViewBox: false
-  - resuePaths: true
