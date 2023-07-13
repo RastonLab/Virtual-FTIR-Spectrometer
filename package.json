@@ -25,8 +25,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "svgo": "svgo --config=.svgo.yml --multipass --pretty -f  ./src/components/svgs/tooltip",
-    "svgr": "./svg_script.sh"
+    "svgo": "svgo --config=.svgo.yml --multipass --pretty -f ./src/components/svgs/tooltip",
+    "svgr": "svgo --config=.svgo.yml -q --multipass --pretty src/components/svgs/instrument-window.svg ; npx @svgr/cli src/components/svgs/instrument-window.svg > src/components/svgs/InstrumentSVG.jsx --no-svgo ; scripts/svg_props.sh ; rm src/components/svgs/instrument-window.svg"
   },
   "eslintConfig": {
     "extends": [
@@ -45,5 +45,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@svgr/cli": "^8.0.1"
   }
 }
