@@ -119,7 +119,14 @@ export default function App() {
               <RLLogo width={50} height={50} viewBox="0 0 100 100" />
             </a>
             <Link className="logo" to="/" >
-              FTIR-SIS
+              <span className="red"   >F</span>
+              <span className="orange">T</span>
+              <span className="yellow">I</span>
+              <span className="green" >R</span>
+              <span className="teal"  >-</span>
+              <span className="blue"  >S</span>
+              <span className="indigo">I</span>
+              <span className="purple">S</span>
             </Link>
             {/* End Logo and Title */}
 
@@ -130,7 +137,10 @@ export default function App() {
               expanded={expanded === page.label}
               onChange={handleChange(page.label)}
               onMouseLeave={handleChange("")}
-              sx={{display: { xs: 'none', lg: 'block' }}}
+              sx={{
+                display: { xs: 'none', lg: 'block' },
+                boxShadow: "none"
+              }}
               disableGutters
             >
               <AccordionSummary

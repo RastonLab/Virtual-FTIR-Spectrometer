@@ -98,3 +98,35 @@
   padding: 0.5rem 0.2rem;
   text-align: center;
 }
+
+.red {
+  color: hsl(0, 80%, 50%);
+}
+
+.orange {
+  color: hsl(39, 80%, 50%);
+}
+
+.yellow {
+  color: hsl(60, 80%, 50%);
+}
+
+.green {
+  color: hsl(110, 80%, 50%);
+}
+
+.teal {
+  color: hsl(174, 80%, 50%);
+}
+
+.blue {
+  color: hsl(240, 80%, 50%);
+}
+
+.indigo {
+  color: hsl(275, 80%, 50%);
+}
+
+.purple {
+  color: hsl(300, 80%, 50%);
+}
