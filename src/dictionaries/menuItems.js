@@ -4,6 +4,7 @@ import Print from "../components/Print";
 import * as fetchURL from "../functions/fetchURL";
 import CancelScan from "../components/CancelScan";
 import Fetch from "../components/Fetch";
+// import DevMode from "../components/DevMode";
 
 // This file controls what shows up in the menu bar. To remove something
 // from the menu bar, either remove the code or comment it out
@@ -315,15 +316,13 @@ export const menuItems = [
       },
     ],
   },
-  {
-    label: "Developer Tools",
-    submenu: [
-      {
-        label: `Scan Delay Toggle`,
-        component: (
-          <button onClick={fetchURL.Toggle_Mode}>Scan Time Toggle</button>
-        ),
-      },
-    ],
-  },
+  // {
+  //   label: "Developer Tools",
+  //   submenu: [
+  //     {
+  //       label: `Scan Delay Toggle`,
+  //       component: <DevMode />,
+  //     },
+  //   ],
+  // },
 ];

@@ -32,6 +32,7 @@ export default function InstrumentWindow() {
   } = useSelector((store) => store.parameter);
   const { sampleData } = useSelector((store) => store.sampleData);
   const { progress } = useSelector((store) => store.progress);
+  const { devMode } = useSelector((store) => store.devMode);
   const [toggled, setToggled] = useState(false);
   const [element, setElement] = useState();
 
@@ -76,7 +77,7 @@ export default function InstrumentWindow() {
           {!sampleData && !progress && (
             <p>Please generate a sample spectrum and return here</p>
           )}
-          {progress ? (
+          {(progress && !devMode) ? (
             <>
               <h2>Processing Sample...</h2>
               <Spinner variant="determinate" timer={delay} size={100} />
