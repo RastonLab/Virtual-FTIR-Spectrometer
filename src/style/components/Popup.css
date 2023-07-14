@@ -1,4 +1,8 @@
 /* ---------- popup ---------- */
+.popup .MuiDialog-paper {
+  height: 80% !important;
+}
+
 .popup h1 {
   font-family: "Montserrat";
   text-align: center;
@@ -25,9 +29,4 @@
 
 .popup li {
   padding: 1.5% 0;
-}
-
-.MuiDialog-paper {
-  width: 100%;
-  height: 80%;
 }
