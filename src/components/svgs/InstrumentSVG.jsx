@@ -5419,7 +5419,7 @@ const SvgInstrumentWindow = (props) => (
           }}
         >
           <tspan id="tspan4131" x={653.93} y={120.094}>
-            {"0123456789"}
+            {props.resolution}
           </tspan>
         </text>
         <path
@@ -5623,7 +5623,7 @@ const SvgInstrumentWindow = (props) => (
           }}
         >
           <tspan id="tspan4121" x={-96.07} y={120.094}>
-            {"0123456789"}
+            {props.range}
           </tspan>
         </text>
         <path
@@ -5738,7 +5738,7 @@ const SvgInstrumentWindow = (props) => (
           }}
         >
           <tspan id="tspan4111" x={653.93} y={-129.906}>
-            {"0123456789"}
+            {props.scan}
           </tspan>
         </text>
         <path
@@ -5830,7 +5830,7 @@ const SvgInstrumentWindow = (props) => (
           }}
         >
           <tspan id="tspan4101" x={-96.07} y={-129.906}>
-            {"0123456789"}
+            {props.opd}
           </tspan>
         </text>
       </g>

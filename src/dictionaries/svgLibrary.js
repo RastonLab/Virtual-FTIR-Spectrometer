@@ -3,13 +3,13 @@ import apd from "../components/svgs/tooltip/apd.svg";
 import aperture from "../components/svgs/tooltip/aperture-wheel.svg";
 import bscaf2 from "../components/svgs/tooltip/beamsplitter-caf2.svg";
 import bsznse from "../components/svgs/tooltip/beamsplitter-znse.svg";
-import fcc from "../components/svgs/tooltip/fixed-corner-cube.svg";
+import cc from "../components/svgs/tooltip/corner-cube.svg";
 import fm from "../components/svgs/tooltip/flat-mirror.svg";
-import gauge from "../components/svgs/tooltip/pressure-gauge.svg";
 import globar from "../components/svgs/tooltip/globar.svg";
 import insb from "../components/svgs/tooltip/insb.svg";
 import laser from "../components/svgs/tooltip/laser.svg";
 import lecture from "../components/svgs/tooltip/lecture.svg";
+import manometer from "../components/svgs/tooltip/manometer.svg";
 import mct from "../components/svgs/tooltip/mct.svg";
 import pm from "../components/svgs/tooltip/parabolic-mirror.webp";
 import pmh from "../components/svgs/tooltip/parabolic-mirror-hole.webp";
@@ -190,7 +190,7 @@ export const toolTips = {
       <div className="popup-tooltip">
         <h1>Fixed Corner Cube</h1>
 
-        <img className="tooltip-svg" src={fcc} alt="Fixed Corner Cube SVG" />
+        <img className="tooltip-svg" src={cc} alt="Fixed Corner Cube SVG" />
 
         <p>
           Gold coated corner-cube. This component reflects back a return beam
@@ -344,7 +344,7 @@ export const toolTips = {
       <div className="popup-tooltip">
         <h1>Manometer</h1>
 
-        <img className="tooltip-svg" src={gauge} alt="Manometer SVG" />
+        <img className="tooltip-svg" src={manometer} alt="Manometer SVG" />
 
         <p>Pressure gauge (0-2 bar) with digital display.</p>
       </div>
@@ -382,7 +382,7 @@ export const toolTips = {
       <div className="popup-tooltip">
         <h1>Movable Corner Cube</h1>
 
-        <img className="tooltip-svg" src={fcc} alt="Movable Corner Cube SVG" />
+        <img className="tooltip-svg" src={cc} alt="Movable Corner Cube SVG" />
 
         <p>
           Gold coated movable corner-cube. This component reflects back a return

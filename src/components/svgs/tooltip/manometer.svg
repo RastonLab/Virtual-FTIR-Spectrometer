@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" id="svg5" version="1.1" viewBox="0 0 258.427 300">
+  <defs id="defs2">
+    <linearGradient id="linearGradient29180">
+      <stop id="stop29176" offset=".053" style="stop-color:#b3b3b3;stop-opacity:1"/>
+      <stop id="stop29184" offset=".25" style="stop-color:#d2d2d2;stop-opacity:1"/>
+      <stop id="stop29186" offset=".5" style="stop-color:#9c9c9c;stop-opacity:1"/>
+      <stop id="stop29188" offset=".75" style="stop-color:#afafaf;stop-opacity:1"/>
+      <stop id="stop29190" offset=".95" style="stop-color:#d0d0d0;stop-opacity:1"/>
+    </linearGradient>
+    <linearGradient id="linearGradient29166">
+      <stop id="stop29162" offset=".05" style="stop-color:#b3b3b3;stop-opacity:1"/>
+      <stop id="stop29170" offset=".25" style="stop-color:#d2d2d2;stop-opacity:1"/>
+      <stop id="stop29172" offset=".5" style="stop-color:#9c9c9c;stop-opacity:1"/>
+      <stop id="stop29174" offset=".75" style="stop-color:#afafaf;stop-opacity:1"/>
+      <stop id="stop29164" offset=".95" style="stop-color:#d0d0d0;stop-opacity:1"/>
+    </linearGradient>
+    <linearGradient id="linearGradient9133">
+      <stop id="stop9129" offset=".1" style="stop-color:#b3b3b3;stop-opacity:1"/>
+      <stop id="stop11476" offset=".25" style="stop-color:#d2d2d2;stop-opacity:1"/>
+      <stop id="stop11478" offset=".4" style="stop-color:#9c9c9c;stop-opacity:1"/>
+      <stop id="stop11480" offset=".6" style="stop-color:#afafaf;stop-opacity:1"/>
+      <stop id="stop11482" offset=".75" style="stop-color:#d0d0d0;stop-opacity:1"/>
+      <stop id="stop9131" offset=".95" style="stop-color:#989898;stop-opacity:1"/>
+    </linearGradient>
+    <linearGradient xlink:href="#linearGradient9133" id="linearGradient9135" x1="0" x2="114.631" y1="57.5" y2="57.5" gradientTransform="scale(2.2472)" gradientUnits="userSpaceOnUse"/>
+    <linearGradient xlink:href="#linearGradient29166" id="linearGradient29168" x1="45" x2="70" y1="125.563" y2="125.563" gradientTransform="scale(2.2472)" gradientUnits="userSpaceOnUse"/>
+    <linearGradient xlink:href="#linearGradient29180" id="linearGradient29182" x1="47.5" x2="67.5" y1="115.585" y2="115.585" gradientTransform="scale(2.2472)" gradientUnits="userSpaceOnUse"/>
+  </defs>
+  <g id="pressure-gauge">
+    <path id="rect29156" d="M106.742 254.124h44.944v11.236h-44.944z" style="fill:url(#linearGradient29182);fill-opacity:1;stroke:none;stroke-width:.116854;stroke-dasharray:none;stroke-opacity:1"/>
+    <path id="rect29158" d="M101.124 264.326h56.18V300h-56.18z" style="fill:url(#linearGradient29168);fill-opacity:1;stroke:none;stroke-width:.352591;stroke-dasharray:none;stroke-opacity:1"/>
+    <circle id="path234-8" cx="129.213" cy="129.213" r="129.213" style="fill:url(#linearGradient9135);fill-opacity:1;stroke-width:6.51225"/>
+    <circle id="path234" cx="129.213" cy="129.213" r="112.36" style="fill:#fbe631;fill-opacity:1;stroke-width:5.66283"/>
+    <rect id="rect3310-9" width="38.059" height="22.111" x="4.805" y="243.973" ry="10.693" style="fill:#fff;fill-opacity:1;stroke:#000;stroke-width:1.1236;stroke-dasharray:none;stroke-opacity:1" transform="scale(-1 1) rotate(45)"/>
+    <path id="rect8596-7" d="m163.482 200.868 6.694-6.694-.67-.67-6.028 6.029-6.028-6.028-.67.67 6.697 6.693.002-.004z" style="fill:#000;fill-opacity:1;stroke:none;stroke-width:.189453;stroke-dasharray:none;stroke-opacity:1"/>
+    <rect id="rect1700" width="163.821" height="75.858" x="47.303" y="68.813" ry="0" style="fill:#8e9b81;fill-opacity:1;stroke:#000;stroke-width:2.79384;stroke-dasharray:none;stroke-opacity:1"/>
+    <rect id="rect3310" width="36.844" height="21.404" x="187.398" y="60.893" ry="10.351" style="fill:#fff;fill-opacity:1;stroke:#000;stroke-width:1.0877;stroke-dasharray:none;stroke-opacity:1" transform="rotate(44.972)"/>
+    <path id="rect8596" d="m95.502 192.948-6.694 6.694.67.669 6.028-6.028 6.028 6.028.67-.67-6.697-6.693-.001.004z" style="fill:#000;fill-opacity:1;stroke:none;stroke-width:.188764;stroke-dasharray:none;stroke-opacity:1"/>
+    <rect id="rect3310-1" width="38.202" height="22.472" x="179.775" y="-140.449" ry="10.868" style="fill:#fff;fill-opacity:1;stroke:#000;stroke-width:1.1236;stroke-dasharray:none;stroke-opacity:1" transform="rotate(90)"/>
+    <path id="rect8923" d="M124.719 201.124h8.989v1.124h-8.989z" style="fill:#000;fill-opacity:1;stroke:none;stroke-width:.0544912;stroke-dasharray:none;stroke-opacity:1"/>
+    <path id="rect8923-7" d="M124.719 198.315h8.989v1.124h-8.989z" style="fill:#000;fill-opacity:1;stroke:none;stroke-width:.0544912;stroke-dasharray:none;stroke-opacity:1"/>
+    <path id="rect8923-6" d="M124.719 195.506h8.989v1.124h-8.989z" style="fill:#000;fill-opacity:1;stroke:none;stroke-width:.0544912;stroke-dasharray:none;stroke-opacity:1"/>
+    <path id="path9023" d="M129.213 191.011a7.865 7.865 0 0 0-7.865 7.865 7.865 7.865 0 0 0 7.865 7.866 7.865 7.865 0 0 0 7.866-7.866 7.865 7.865 0 0 0-7.866-7.865zm0 1.124a6.742 6.742 0 0 1 6.742 6.741 6.742 6.742 0 0 1-6.742 6.742 6.742 6.742 0 0 1-6.741-6.742 6.742 6.742 0 0 1 6.741-6.741z" style="fill:#000;fill-opacity:1;stroke:none;stroke-width:.319142;stroke-dasharray:none;stroke-opacity:1"/>
+    <path id="path32292" d="M60.537 64.29v-7.987h2.943q1.633 0 2.622 1.158.989 1.153.989 2.85t-1.018 2.839q-1.019 1.14-2.915 1.14zm1.48-1.176h1.2q.966 0 1.638-.725.673-.726.673-2.16 0-1.17-.59-1.978-.586-.813-1.551-.813h-1.37z" style="font-size:5.33333px;font-family:&quot;Franklin Gothic Medium&quot;;-inkscape-font-specification:&quot;Franklin Gothic Medium, &quot;;stroke-width:.116854"/>
+    <path id="path32294" d="M69.865 64.29h-1.44v-7.987h1.44z" style="font-size:5.33333px;font-family:&quot;Franklin Gothic Medium&quot;;-inkscape-font-specification:&quot;Franklin Gothic Medium, &quot;;stroke-width:.116854"/>
+    <path id="path32296" d="M77.683 60.206v4.085h-.638l-.439-1.077q-.696 1.2-2.159 1.2-1.633 0-2.44-1.241-.802-1.24-.802-2.873 0-1.727.895-2.92.902-1.2 2.517-1.2 1.205 0 1.984.702.778.696.983 1.738l-1.253.222q-.35-1.463-1.68-1.463-.848 0-1.386.691-.533.69-.533 2.124 0 3.026 1.896 3.026.738 0 1.218-.51.485-.508.485-1.345h-1.65v-1.159z" style="font-size:5.33333px;font-family:&quot;Franklin Gothic Medium&quot;;-inkscape-font-specification:&quot;Franklin Gothic Medium, &quot;;stroke-width:.116854"/>
+    <path id="path32298" d="M80.756 64.29h-1.44v-7.987h1.44Z" style="font-size:5.33333px;font-family:&quot;Franklin Gothic Medium&quot;;-inkscape-font-specification:&quot;Franklin Gothic Medium, &quot;;stroke-width:.116854"/>
+    <path id="path32300" d="M85.303 64.29h-1.545v-6.753h-2.125v-1.234h5.794v1.234h-2.124z" style="font-size:5.33333px;font-family:&quot;Franklin Gothic Medium&quot;;-inkscape-font-specification:&quot;Franklin Gothic Medium, &quot;;stroke-width:.116854"/>
+    <path id="path32302" d="M93.952 64.29h-1.54l-.637-1.901h-3.072l-.627 1.902h-1.228l2.65-7.988h1.774zm-2.563-3.054-1.165-3.564-1.164 3.564z" style="font-size:5.33333px;font-family:&quot;Franklin Gothic Medium&quot;;-inkscape-font-specification:&quot;Franklin Gothic Medium, &quot;;stroke-width:.116854"/>
+    <path id="path32304" d="M99.827 64.29h-4.915v-7.987h1.515v6.683h3.4z" style="font-size:5.33333px;font-family:&quot;Franklin Gothic Medium&quot;;-inkscape-font-specification:&quot;Franklin Gothic Medium, &quot;;stroke-width:.116854"/>
+    <path id="path32306" d="M105.322 64.29h-1.44v-7.987h3.272q1.399 0 2.072.708.679.702.679 1.662 0 1.094-.732 1.773-.731.679-1.855.679h-1.996zm0-4.4h1.703q.668 0 1.019-.328.35-.327.35-.872 0-.491-.327-.842-.322-.352-1.17-.352h-1.575z" style="font-size:5.33333px;font-family:&quot;Franklin Gothic Medium&quot;;-inkscape-font-specification:&quot;Franklin Gothic Medium, &quot;;stroke-width:.116854"/>
+    <path id="path32308" d="M117.29 64.29h-1.522l-1.24-3.282h-2.025v3.283h-1.44v-7.988h3.465q1.445 0 2.124.655.679.65.679 1.685 0 1.54-1.44 2.119zm-4.787-4.435h1.79q.779 0 1.16-.328.38-.328.38-.901 0-.527-.375-.849-.374-.327-1.047-.327h-1.908z" style="font-size:5.33333px;font-family:&quot;Franklin Gothic Medium&quot;;-inkscape-font-specification:&quot;Franklin Gothic Medium, &quot;;stroke-width:.116854"/>
+    <path id="path32310" d="M123.955 64.29h-5.19v-7.987h5.138v1.188h-3.699v2.165h2.973v1.159h-2.973v2.235h3.751z" style="font-size:5.33333px;font-family:&quot;Franklin Gothic Medium&quot;;-inkscape-font-specification:&quot;Franklin Gothic Medium, &quot;;stroke-width:.116854"/>
+    <path id="path32312" d="m124.36 62.365 1.398-.298q.251 1.188 1.931 1.188.767 0 1.176-.304.416-.305.416-.755 0-.328-.187-.603-.188-.281-.802-.439l-1.528-.398q-.784-.205-1.158-.462-.375-.264-.603-.738-.222-.474-.222-1.012 0-1.07.795-1.715.796-.65 2.037-.65 1.03 0 1.837.451.814.451 1.036 1.276l-1.37.34q-.315-.908-1.474-.908-.673 0-1.03.281-.35.281-.35.714 0 .685 1.111.96l1.358.34q1.234.31 1.656.918.421.603.421 1.335 0 1.176-.89 1.855-.883.673-2.293.673-1.188 0-2.084-.498-.89-.497-1.182-1.55z" style="font-size:5.33333px;font-family:&quot;Franklin Gothic Medium&quot;;-inkscape-font-specification:&quot;Franklin Gothic Medium, &quot;;stroke-width:.116854"/>
+    <path id="path32314" d="m131.206 62.365 1.399-.298q.251 1.188 1.93 1.188.768 0 1.177-.304.416-.305.416-.755 0-.328-.188-.603-.187-.281-.801-.439l-1.528-.398q-.784-.205-1.158-.462-.375-.264-.603-.738-.223-.474-.223-1.012 0-1.07.796-1.715.796-.65 2.037-.65 1.03 0 1.837.451.814.451 1.036 1.276l-1.37.34q-.315-.908-1.474-.908-.673 0-1.03.281-.351.281-.351.714 0 .685 1.112.96l1.358.34q1.234.31 1.656.918.421.603.421 1.335 0 1.176-.89 1.855-.883.673-2.293.673-1.188 0-2.084-.498-.89-.497-1.182-1.55z" style="font-size:5.33333px;font-family:&quot;Franklin Gothic Medium&quot;;-inkscape-font-specification:&quot;Franklin Gothic Medium, &quot;;stroke-width:.116854"/>
+    <path id="path32316" d="M144.373 56.303v5.132q0 1.042-.234 1.603-.234.562-.907.972-.667.404-1.633.404-.977 0-1.609-.352-.626-.35-.901-.96-.275-.614-.275-1.562v-5.237h1.469v5.132q0 1.053.439 1.387.444.328 1.03.328.672 0 1.076-.352.404-.357.404-1.363v-5.132z" style="font-size:5.33333px;font-family:&quot;Franklin Gothic Medium&quot;;-inkscape-font-specification:&quot;Franklin Gothic Medium, &quot;;stroke-width:.116854"/>
+    <path id="path32318" d="M152.244 64.29h-1.521l-1.24-3.282h-2.026v3.283h-1.44v-7.988h3.465q1.446 0 2.124.655.68.65.68 1.685 0 1.54-1.44 2.119zm-4.787-4.435h1.791q.778 0 1.159-.328.38-.328.38-.901 0-.527-.374-.849-.375-.327-1.048-.327h-1.908z" style="font-size:5.33333px;font-family:&quot;Franklin Gothic Medium&quot;;-inkscape-font-specification:&quot;Franklin Gothic Medium, &quot;;stroke-width:.116854"/>
+    <path id="path32320" d="M158.91 64.29h-5.191v-7.987h5.138v1.188h-3.698v2.165h2.972v1.159h-2.972v2.235h3.75z" style="font-size:5.33333px;font-family:&quot;Franklin Gothic Medium&quot;;-inkscape-font-specification:&quot;Franklin Gothic Medium, &quot;;stroke-width:.116854"/>
+    <path id="path32322" d="M169.21 60.206v4.085h-.639l-.438-1.077q-.697 1.2-2.16 1.2-1.633 0-2.44-1.241-.802-1.24-.802-2.873 0-1.727.896-2.92.9-1.2 2.516-1.2 1.205 0 1.984.702.778.696.983 1.738l-1.252.222q-.352-1.463-1.68-1.463-.849 0-1.387.691-.532.69-.532 2.124 0 3.026 1.896 3.026.737 0 1.217-.51.486-.508.486-1.345h-1.65v-1.159z" style="font-size:5.33333px;font-family:&quot;Franklin Gothic Medium&quot;;-inkscape-font-specification:&quot;Franklin Gothic Medium, &quot;;stroke-width:.116854"/>
+    <path id="path32324" d="M177.168 64.29h-1.539l-.638-1.901h-3.072l-.626 1.902h-1.23l2.652-7.988h1.773zm-2.563-3.054-1.165-3.564-1.164 3.564z" style="font-size:5.33333px;font-family:&quot;Franklin Gothic Medium&quot;;-inkscape-font-specification:&quot;Franklin Gothic Medium, &quot;;stroke-width:.116854"/>
+    <path id="path32326" d="M183.36 56.303v5.132q0 1.042-.234 1.603-.235.562-.908.972-.667.404-1.632.404-.978 0-1.61-.352-.626-.35-.9-.96-.276-.614-.276-1.562v-5.237h1.47v5.132q0 1.053.438 1.387.445.328 1.03.328.673 0 1.077-.352.403-.357.403-1.363v-5.132z" style="font-size:5.33333px;font-family:&quot;Franklin Gothic Medium&quot;;-inkscape-font-specification:&quot;Franklin Gothic Medium, &quot;;stroke-width:.116854"/>
+    <path id="path32328" d="M191.067 60.206v4.085h-.638l-.439-1.077q-.696 1.2-2.16 1.2-1.632 0-2.44-1.241-.801-1.24-.801-2.873 0-1.727.895-2.92.901-1.2 2.516-1.2 1.206 0 1.984.702.778.696.983 1.738l-1.252.222q-.351-1.463-1.68-1.463-.848 0-1.387.691-.532.69-.532 2.124 0 3.026 1.896 3.026.737 0 1.217-.51.486-.508.486-1.345h-1.65v-1.159z" style="font-size:5.33333px;font-family:&quot;Franklin Gothic Medium&quot;;-inkscape-font-specification:&quot;Franklin Gothic Medium, &quot;;stroke-width:.116854"/>
+    <path id="path32330" d="M197.89 64.29h-5.19v-7.987h5.138v1.188h-3.699v2.165h2.973v1.159h-2.973v2.235h3.751z" style="font-size:5.33333px;font-family:&quot;Franklin Gothic Medium&quot;;-inkscape-font-specification:&quot;Franklin Gothic Medium, &quot;;stroke-width:.116854"/>
+  </g>
+</svg>
