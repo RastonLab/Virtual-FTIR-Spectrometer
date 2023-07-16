@@ -6,14 +6,6 @@ echo "-------------------------------"
 
 echo
 
-echo -n "removing width..."
-sed -i '0,/width={/{//d}' ./src/components/svgs/InstrumentSVG.jsx
-printf "%-14s DONE\n"
-
-echo -n "removing height..."
-sed -i '0,/height={/{//d}' ./src/components/svgs/InstrumentSVG.jsx
-printf "%-13s DONE\n"
-
 echo -n "updating ZnSe beamsplitter..."
 sed -i 's/"props.beamsplitter.znse"/props.beamsplitter.znse/g' ./src/components/svgs/InstrumentSVG.jsx
 printf "%-2s DONE\n"
