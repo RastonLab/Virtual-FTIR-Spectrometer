@@ -100,7 +100,7 @@ export const toolTips = {
     ),
   },
 
-  "aperture-wheel": {
+  aperture: {
     text: (
       <div className="popup-tooltip">
         <h1>Aperture Wheel</h1>
@@ -216,42 +216,6 @@ export const toolTips = {
   "flat-rotatable-mirror-globar": flatRotatableMirrorSource,
   "flat-rotatable-mirror-mct": flatRotatableMirrorDetector,
   "flat-rotatable-mirror-tungsten": flatRotatableMirrorSource,
-
-  "info-cell-chamber": {
-    text: (
-      <div className="popup-tooltip">
-        <h1>Cell Chamber</h1>
-      </div>
-    ),
-  },
-
-  "info-detector-chamber": {
-    text: (
-      <div className="popup-tooltip">
-        <h1>Detector Chamber</h1>
-      </div>
-    ),
-  },
-
-  "info-source-chamber": {
-    text: (
-      <div className="popup-tooltip">
-        <h1>Source Chamber</h1>
-      </div>
-    ),
-  },
-
-  "pressure-gauge": {
-    text: (
-      <div className="popup-tooltip">
-        <h1>Manometer</h1>
-
-        <img className="tooltip-svg" src={gauge} alt="Manometer SVG" />
-
-        <p>Pressure gauge (0-2 bar) with digital display.</p>
-      </div>
-    ),
-  },
 
   globar: {
     text: (
@@ -375,6 +339,18 @@ export const toolTips = {
     ),
   },
 
+  manometer: {
+    text: (
+      <div className="popup-tooltip">
+        <h1>Manometer</h1>
+
+        <img className="tooltip-svg" src={gauge} alt="Manometer SVG" />
+
+        <p>Pressure gauge (0-2 bar) with digital display.</p>
+      </div>
+    ),
+  },
+
   mct: {
     text: (
       <div className="popup-tooltip">
@@ -465,21 +441,6 @@ export const toolTips = {
     ),
   },
 
-  "sample-compartment": {
-    text: (
-      <div className="popup-tooltip">
-        <h1>Sample Compartment</h1>
-
-        <p>
-          This compartment houses the sample cell within which the infrared
-          radiation is focused. In a typical FTIR spectrometer, this gas cell
-          can be switched out so that other sample types can be analyzed, such
-          as KBr pellets.
-        </p>
-      </div>
-    ),
-  },
-
   "sample-cell-caf2": {
     text: (
       <div className="popup-tooltip">
@@ -547,6 +508,21 @@ export const toolTips = {
           src={ZnSe_graph}
           alt="a graph showing the ZnSe transmittance spectrum"
         />
+      </div>
+    ),
+  },
+
+  "sample-compartment": {
+    text: (
+      <div className="popup-tooltip">
+        <h1>Sample Compartment</h1>
+
+        <p>
+          This compartment houses the sample cell within which the infrared
+          radiation is focused. In a typical FTIR spectrometer, this gas cell
+          can be switched out so that other sample types can be analyzed, such
+          as KBr pellets.
+        </p>
       </div>
     ),
   },
