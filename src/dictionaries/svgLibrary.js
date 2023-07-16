@@ -3,13 +3,13 @@ import apd from "../components/svgs/tooltip/apd.svg";
 import aperture from "../components/svgs/tooltip/aperture-wheel.svg";
 import bscaf2 from "../components/svgs/tooltip/beamsplitter-caf2.svg";
 import bsznse from "../components/svgs/tooltip/beamsplitter-znse.svg";
-import fcc from "../components/svgs/tooltip/fixed-corner-cube.svg";
+import cc from "../components/svgs/tooltip/corner-cube.svg";
 import fm from "../components/svgs/tooltip/flat-mirror.svg";
-import gauge from "../components/svgs/tooltip/pressure-gauge.svg";
 import globar from "../components/svgs/tooltip/globar.svg";
 import insb from "../components/svgs/tooltip/insb.svg";
 import laser from "../components/svgs/tooltip/laser.svg";
 import lecture from "../components/svgs/tooltip/lecture.svg";
+import manometer from "../components/svgs/tooltip/manometer.svg";
 import mct from "../components/svgs/tooltip/mct.svg";
 import pm from "../components/svgs/tooltip/parabolic-mirror.webp";
 import pmh from "../components/svgs/tooltip/parabolic-mirror-hole.webp";
@@ -100,7 +100,7 @@ export const toolTips = {
     ),
   },
 
-  "aperture-wheel": {
+  aperture: {
     text: (
       <div className="popup-tooltip">
         <h1>Aperture Wheel</h1>
@@ -190,7 +190,7 @@ export const toolTips = {
       <div className="popup-tooltip">
         <h1>Fixed Corner Cube</h1>
 
-        <img className="tooltip-svg" src={fcc} alt="Fixed Corner Cube SVG" />
+        <img className="tooltip-svg" src={cc} alt="Fixed Corner Cube SVG" />
 
         <p>
           Gold coated corner-cube. This component reflects back a return beam
@@ -216,42 +216,6 @@ export const toolTips = {
   "flat-rotatable-mirror-globar": flatRotatableMirrorSource,
   "flat-rotatable-mirror-mct": flatRotatableMirrorDetector,
   "flat-rotatable-mirror-tungsten": flatRotatableMirrorSource,
-
-  "info-cell-chamber": {
-    text: (
-      <div className="popup-tooltip">
-        <h1>Cell Chamber</h1>
-      </div>
-    ),
-  },
-
-  "info-detector-chamber": {
-    text: (
-      <div className="popup-tooltip">
-        <h1>Detector Chamber</h1>
-      </div>
-    ),
-  },
-
-  "info-source-chamber": {
-    text: (
-      <div className="popup-tooltip">
-        <h1>Source Chamber</h1>
-      </div>
-    ),
-  },
-
-  "pressure-gauge": {
-    text: (
-      <div className="popup-tooltip">
-        <h1>Manometer</h1>
-
-        <img className="tooltip-svg" src={gauge} alt="Manometer SVG" />
-
-        <p>Pressure gauge (0-2 bar) with digital display.</p>
-      </div>
-    ),
-  },
 
   globar: {
     text: (
@@ -375,6 +339,18 @@ export const toolTips = {
     ),
   },
 
+  manometer: {
+    text: (
+      <div className="popup-tooltip">
+        <h1>Manometer</h1>
+
+        <img className="tooltip-svg" src={manometer} alt="Manometer SVG" />
+
+        <p>Pressure gauge (0-2 bar) with digital display.</p>
+      </div>
+    ),
+  },
+
   mct: {
     text: (
       <div className="popup-tooltip">
@@ -406,7 +382,7 @@ export const toolTips = {
       <div className="popup-tooltip">
         <h1>Movable Corner Cube</h1>
 
-        <img className="tooltip-svg" src={fcc} alt="Movable Corner Cube SVG" />
+        <img className="tooltip-svg" src={cc} alt="Movable Corner Cube SVG" />
 
         <p>
           Gold coated movable corner-cube. This component reflects back a return
@@ -460,21 +436,6 @@ export const toolTips = {
         <p>
           Rotary pump that is used to evacuate the sample cell. The exhaust gas
           flows into the fume hood exhaust system.
-        </p>
-      </div>
-    ),
-  },
-
-  "sample-compartment": {
-    text: (
-      <div className="popup-tooltip">
-        <h1>Sample Compartment</h1>
-
-        <p>
-          This compartment houses the sample cell within which the infrared
-          radiation is focused. In a typical FTIR spectrometer, this gas cell
-          can be switched out so that other sample types can be analyzed, such
-          as KBr pellets.
         </p>
       </div>
     ),
@@ -547,6 +508,21 @@ export const toolTips = {
           src={ZnSe_graph}
           alt="a graph showing the ZnSe transmittance spectrum"
         />
+      </div>
+    ),
+  },
+
+  "sample-compartment": {
+    text: (
+      <div className="popup-tooltip">
+        <h1>Sample Compartment</h1>
+
+        <p>
+          This compartment houses the sample cell within which the infrared
+          radiation is focused. In a typical FTIR spectrometer, this gas cell
+          can be switched out so that other sample types can be analyzed, such
+          as KBr pellets.
+        </p>
       </div>
     ),
   },

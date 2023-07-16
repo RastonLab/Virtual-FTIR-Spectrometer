@@ -3204,10 +3204,7 @@ const SvgInstrumentWindow = (props) => (
         id="sample-chamber"
         d="M1611.593 1664.928v369h15v-354h1215v354h15v-354h580v615h-580v-100h-15v100h-1215v-100h-15v115h1839.998v-645H1626.593Z"
       />
-      <g
-        id="aperture-wheel"
-        transform="matrix(.99919 0 0 1.14723 -318.324 -79.428)"
-      >
+      <g id="aperture" transform="matrix(.99919 0 0 1.14723 -318.324 -79.428)">
         <path
           id="rect2792"
           d="M771.766 713.694h173v33h-173z"
@@ -3563,10 +3560,7 @@ const SvgInstrumentWindow = (props) => (
           }}
         />
       </g>
-      <g
-        id="pressure-gauge"
-        transform="translate(2143.182 1781.672) scale(.76667)"
-      >
+      <g id="manometer" transform="translate(2143.182 1781.672) scale(.76667)">
         <path
           id="rect29156"
           d="M106.742 254.124h44.944v11.236h-44.944z"
@@ -5396,7 +5390,7 @@ const SvgInstrumentWindow = (props) => (
         <text
           xmlSpace="preserve"
           id="resolution-value"
-          x={651.388}
+          x={653.93}
           y={120.094}
           style={{
             fontStyle: "normal",
@@ -5412,6 +5406,7 @@ const SvgInstrumentWindow = (props) => (
             fontVariantEastAsian: "normal",
             dominantBaseline: "central",
             textAnchor: "middle",
+            display: "inline",
             fill: "#000",
             fillOpacity: 1,
             stroke: "none",
@@ -5423,7 +5418,7 @@ const SvgInstrumentWindow = (props) => (
             paintOrder: "fill markers stroke",
           }}
         >
-          <tspan id="tspan4131" x={651.388} y={120.094}>
+          <tspan id="tspan4131" x={653.93} y={120.094}>
             {props.resolution}
           </tspan>
         </text>
@@ -5599,7 +5594,7 @@ const SvgInstrumentWindow = (props) => (
         <text
           xmlSpace="preserve"
           id="range-value"
-          x={-98.612}
+          x={-96.07}
           y={120.094}
           style={{
             fontStyle: "normal",
@@ -5615,6 +5610,7 @@ const SvgInstrumentWindow = (props) => (
             fontVariantEastAsian: "normal",
             dominantBaseline: "central",
             textAnchor: "middle",
+            display: "inline",
             fill: "#000",
             fillOpacity: 1,
             stroke: "none",
@@ -5626,7 +5622,7 @@ const SvgInstrumentWindow = (props) => (
             paintOrder: "fill markers stroke",
           }}
         >
-          <tspan id="tspan4121" x={-98.612} y={120.094}>
+          <tspan id="tspan4121" x={-96.07} y={120.094}>
             {props.range}
           </tspan>
         </text>
@@ -5713,7 +5709,7 @@ const SvgInstrumentWindow = (props) => (
         <text
           xmlSpace="preserve"
           id="scan-value"
-          x={651.388}
+          x={653.93}
           y={-129.906}
           style={{
             fontStyle: "normal",
@@ -5729,6 +5725,7 @@ const SvgInstrumentWindow = (props) => (
             fontVariantEastAsian: "normal",
             dominantBaseline: "central",
             textAnchor: "middle",
+            display: "inline",
             fill: "#000",
             fillOpacity: 1,
             stroke: "none",
@@ -5740,7 +5737,7 @@ const SvgInstrumentWindow = (props) => (
             paintOrder: "fill markers stroke",
           }}
         >
-          <tspan id="tspan4111" x={651.388} y={-129.906}>
+          <tspan id="tspan4111" x={653.93} y={-129.906}>
             {props.scan}
           </tspan>
         </text>
@@ -5804,7 +5801,7 @@ const SvgInstrumentWindow = (props) => (
         <text
           xmlSpace="preserve"
           id="opd-value"
-          x={-98.612}
+          x={-96.07}
           y={-129.906}
           style={{
             fontStyle: "normal",
@@ -5820,6 +5817,7 @@ const SvgInstrumentWindow = (props) => (
             fontVariantEastAsian: "normal",
             dominantBaseline: "central",
             textAnchor: "middle",
+            display: "inline",
             fill: "#000",
             fillOpacity: 1,
             stroke: "none",
@@ -5831,7 +5829,7 @@ const SvgInstrumentWindow = (props) => (
             paintOrder: "fill markers stroke",
           }}
         >
-          <tspan id="tspan4101" x={-98.612} y={-129.906}>
+          <tspan id="tspan4101" x={-96.07} y={-129.906}>
             {props.opd}
           </tspan>
         </text>

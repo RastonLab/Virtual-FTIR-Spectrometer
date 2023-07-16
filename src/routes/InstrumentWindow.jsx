@@ -61,7 +61,6 @@ export default function InstrumentWindow() {
   ];
 
   const handleClick = (event) => {
-    console.log(event.target.parentElement.id);
     if (!badID.includes(event.target.parentElement.id)) {
       setElement(event.target.parentElement.id);
       setToggled(!toggled);
@@ -77,7 +76,7 @@ export default function InstrumentWindow() {
           {!sampleData && !progress && (
             <p>Please generate a sample spectrum and return here</p>
           )}
-          {(progress && !devMode) ? (
+          {progress && !devMode ? (
             <>
               <h2>Processing Sample...</h2>
               <Spinner variant="determinate" timer={delay} size={100} />
