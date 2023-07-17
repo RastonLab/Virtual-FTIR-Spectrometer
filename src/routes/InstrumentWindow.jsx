@@ -3,7 +3,6 @@ import React, { useState } from "react";
 // components
 import { Dialog } from "@mui/material";
 import { OPD } from "../components/Fetch";
-import { SamplePlotly } from "../components/SamplePlotly";
 import CloseButton from "../components/CloseButton";
 import Main from "../components/svgs/InstrumentSVG";
 import Spinner from "../components/Spinner";
@@ -30,7 +29,6 @@ export default function InstrumentWindow() {
     waveMin,
     window,
   } = useSelector((store) => store.parameter);
-  const { sampleData } = useSelector((store) => store.sampleData);
   const { progress } = useSelector((store) => store.progress);
   const { devMode } = useSelector((store) => store.devMode);
   const [toggled, setToggled] = useState(false);
@@ -71,22 +69,6 @@ export default function InstrumentWindow() {
 
   return (
     <div id="instrument-window">
-      <div id="instrument-accessories">
-        <div id="spectrum">
-          {!sampleData && !progress && (
-            <p>Please generate a sample spectrum and return here</p>
-          )}
-          {progress && !devMode ? (
-            <>
-              <h2>Processing Sample...</h2>
-              <Spinner variant="determinate" timer={delay} size={100} />
-            </>
-          ) : (
-            <SamplePlotly />
-          )}
-        </div>
-      </div>
-
       <Main
         id="instrument"
         onClick={handleClick}
@@ -116,6 +98,15 @@ export default function InstrumentWindow() {
         resolution={resolution}
         molecule={molecule}
       />
+
+      <div id="instrument-spinner">
+        {progress && !devMode && (
+          <>
+            <h2>Processing Sample...</h2>
+            <Spinner variant="determinate" timer={delay} size={100} />
+          </>
+        )}
+      </div>
 
       {element && (
         <Dialog onClose={handleClick} open={toggled}>
