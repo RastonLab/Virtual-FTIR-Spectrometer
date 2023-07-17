@@ -185,6 +185,19 @@ export const toolTips = {
     ),
   },
 
+  display: {
+    text: (
+      <div className="popup-tooltip">
+        <h1>Spectrum Display</h1>
+
+        <p>
+          TODO - Will show spectrum window in popup or redirect you to that
+          page.
+        </p>
+      </div>
+    ),
+  },
+
   "fixed-corner-cube": {
     text: (
       <div className="popup-tooltip">
