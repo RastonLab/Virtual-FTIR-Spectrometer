@@ -10,50 +10,22 @@ import { useDispatch } from "react-redux";
 // redux slice
 import { setWaveMin, setWaveMax } from "../../features/parameterSlice";
 
-export default function DualInputSlider({
-  formLabel,
-  storeMin,
-  storeMax,
-  min,
-  max,
-  step,
-}) {
+export default function Wavenumber({ storeMin, storeMax, min, max, step }) {
   const dispatch = useDispatch();
 
   const handleSliderChange = (event, newValue) => {
-    switch (formLabel) {
-      case "Wavenumber range (cm⁻¹)":
-        dispatch(setWaveMin(newValue[0]));
-        dispatch(setWaveMax(newValue[1]));
-        break;
-      default:
-    }
+    dispatch(setWaveMin(newValue[0]));
+    dispatch(setWaveMax(newValue[1]));
   };
 
   const handleInputChangeMin = (event) => {
-    switch (formLabel) {
-      case "Wavenumber range (cm⁻¹)":
-        dispatch(
-          setWaveMin(
-            event.target.value === "" ? "" : Number(event.target.value)
-          )
-        );
-        break;
-      default:
-    }
+    setWaveMin(event.target.value === "" ? "" : Number(event.target.value));
   };
 
   const handleInputChangeMax = (event) => {
-    switch (formLabel) {
-      case "Wavenumber range (cm⁻¹)":
-        dispatch(
-          setWaveMax(
-            event.target.value === "" ? "" : Number(event.target.value)
-          )
-        );
-        break;
-      default:
-    }
+    dispatch(
+      setWaveMax(event.target.value === "" ? "" : Number(event.target.value))
+    );
   };
 
   const handleBlur = () => {
@@ -61,27 +33,17 @@ export default function DualInputSlider({
       return;
     }
     if (storeMin < min) {
-      switch (formLabel) {
-        case "Wavenumber range (cm⁻¹)":
-          dispatch(setWaveMin(min));
-          break;
-        default:
-      }
+      dispatch(setWaveMin(min));
     }
     if (storeMax > max) {
-      switch (formLabel) {
-        case "Wavenumber range (cm⁻¹)":
-          dispatch(setWaveMax(max));
-          break;
-        default:
-      }
+      dispatch(setWaveMax(max));
     }
   };
 
   return (
     <div>
       <Typography id="input-slider" gutterBottom>
-        {formLabel}
+        Wavenumber range (cm⁻¹)
       </Typography>
 
       <Grid container spacing={2} alignItems="center">

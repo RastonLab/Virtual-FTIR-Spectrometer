@@ -8,37 +8,22 @@ import Select from "@mui/material/Select";
 import { useDispatch } from "react-redux";
 
 // redux slice
-import {
-  setMolecule,
-  setResolution,
-  setZeroFill,
-} from "../../features/parameterSlice";
+import { setResolution } from "../../features/parameterSlice";
 
-export default function Dropdown({ dictionary, formLabel, store }) {
+export default function Resolution({ dictionary, store }) {
   const dispatch = useDispatch();
 
   const handleChange = (event) => {
-    switch (formLabel) {
-      case "Molecule":
-        dispatch(setMolecule(event.target.value));
-        break;
-      case "Resolution":
-        dispatch(setResolution(event.target.value));
-        break;
-      case "Zero Fill":
-        dispatch(setZeroFill(event.target.value));
-        break;
-      default:
-    }
+    dispatch(setResolution(event.target.value));
   };
 
   return (
     <div>
       <FormControl fullWidth>
-        <InputLabel>{formLabel}</InputLabel>
+        <InputLabel>Resolution</InputLabel>
         <Select
           value={store}
-          label={formLabel}
+          label="Resolution"
           onChange={handleChange}
           sx={{ maxWidth: "120px" }}
         >

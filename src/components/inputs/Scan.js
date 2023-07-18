@@ -11,57 +11,31 @@ import { useDispatch } from "react-redux";
 // redux slice
 import { setScan } from "../../features/parameterSlice";
 
-export default function SingleInputSlider({
-  formLabel,
-  store,
-  min,
-  max,
-  step,
-}) {
+export default function Scan({ store, min, max, step }) {
   const dispatch = useDispatch();
 
   const handleSliderChange = (event, newValue) => {
-    switch (formLabel) {
-      case "Scans":
-        dispatch(setScan(newValue));
-        break;
-      default:
-    }
+    dispatch(setScan(newValue));
   };
 
   const handleInputChange = (event) => {
-    switch (formLabel) {
-      case "Scans":
-        dispatch(
-          setScan(event.target.value === "" ? "" : Number(event.target.value))
-        );
-        break;
-      default:
-    }
+    dispatch(
+      setScan(event.target.value === "" ? "" : Number(event.target.value))
+    );
   };
 
   const handleBlur = () => {
     if (store < min) {
-      switch (formLabel) {
-        case "Scans":
-          dispatch(setScan(min));
-          break;
-        default:
-      }
+      dispatch(setScan(min));
     } else if (store > max) {
-      switch (formLabel) {
-        case "Scans":
-          dispatch(setScan(max));
-          break;
-        default:
-      }
+      dispatch(setScan(max));
     }
   };
 
   return (
     <div>
       <Typography id="input-slider" gutterBottom>
-        {formLabel}
+        Number of Scans
       </Typography>
 
       <Grid container spacing={2} alignItems="center">

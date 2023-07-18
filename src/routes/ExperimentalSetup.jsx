@@ -4,6 +4,7 @@ import React from "react";
 import { SamplePlotly } from "../components/SamplePlotly";
 import BackgroundPlotly from "../components/BackgroundPlotly";
 import Fetch from "../components/Fetch";
+import Spinner from "../components/Spinner";
 
 // dictionaries
 import { molecules } from "../dictionaries/moleculeDict";
@@ -14,11 +15,17 @@ import { zeroFills } from "../dictionaries/zeroFillDict";
 import * as fetchURL from "../functions/fetchURL";
 
 // inputs
-import Dropdown from "../components/inputs/Dropdown";
-import DualInputSlider from "../components/inputs/DualInputSlider";
-import SingleInputSlider from "../components/inputs/SingleInputSlider";
-import Switch from "../components/inputs/Switch";
-import TextFieldUnit from "../components/inputs/TextFieldUnit";
+import Wavenumber from "../components/inputs/Wavenumber";
+import Pressure from "../components/inputs/Pressure";
+import Scan from "../components/inputs/Scan";
+import Molecule from "../components/inputs/Molecule";
+import Resolution from "../components/inputs/Resolution";
+import ZeroFill from "../components/inputs/ZeroFill";
+import Source from "../components/inputs/Source";
+import Beamsplitter from "../components/inputs/Beamsplitter";
+import CellWindow from "../components/inputs/CellWindow";
+import Detector from "../components/inputs/Detector";
+import Medium from "../components/inputs/Medium";
 
 // redux
 import { useSelector } from "react-redux";
@@ -26,7 +33,6 @@ import { useSelector } from "react-redux";
 // style
 import "../style/routes/ExperimentalSetup.css";
 import "../style/components/Button.css";
-import Spinner from "../components/Spinner";
 
 export default function ExperimentalSetup() {
   const {
@@ -45,8 +51,8 @@ export default function ExperimentalSetup() {
   } = useSelector((store) => store.parameter);
 
   // progress and error values
-  const { progress } = useSelector((store) => store.progress);
   const { error, errorText } = useSelector((store) => store.error);
+  const { progress } = useSelector((store) => store.progress);
   const { spinner } = useSelector((store) => store.spinner);
 
   return (
@@ -54,8 +60,7 @@ export default function ExperimentalSetup() {
       <div id="form">
         <div className="exp-col">
           <div className="parameter">
-            <DualInputSlider
-              formLabel={"Wavenumber range (cm⁻¹)"}
+            <Wavenumber
               storeMin={waveMin}
               storeMax={waveMax}
               min={400}
@@ -65,103 +70,62 @@ export default function ExperimentalSetup() {
           </div>
 
           <div className="parameter">
-            <TextFieldUnit
-              formLabel={"Pressure"}
-              store={pressure}
-              placeholder={"Enter pressure"}
-              unit={"Bar"}
-              min={0.0001}
-              max={10}
-              step={0.0001}
-            />
+            <Pressure store={pressure} min={0.0001} max={10} step={0.0001} />
           </div>
 
           <div className="parameter">
-            <SingleInputSlider
-              formLabel={"Scans"}
-              store={scan}
-              min={1}
-              max={256}
-              step={10}
-            />
+            <Scan store={scan} min={1} max={256} step={10} />
           </div>
 
           <div className="parameter">
-            <Dropdown
-              dictionary={molecules}
-              formLabel={"Molecule"}
-              store={molecule}
-            />
+            <Molecule dictionary={molecules} store={molecule} />
           </div>
 
           <div className="parameter">
-            <Dropdown
-              dictionary={resolutions}
-              formLabel={"Resolution"}
-              store={resolution}
-            />
+            <Resolution dictionary={resolutions} store={resolution} />
           </div>
 
           <div className="parameter">
-            <Dropdown
-              dictionary={zeroFills}
-              formLabel={"Zero Fill"}
-              store={zeroFill}
-            />
+            <ZeroFill dictionary={zeroFills} store={zeroFill} />
           </div>
         </div>
         <div className="exp-col">
           <div className="parameter">
-            <Switch
-              formLabel={"Source"}
-              optionOneLabel={"Globar"}
-              optionOneData={1200}
-              optionTwoLabel={"Tungsten"}
-              optionTwoData={3400}
+            <Source
+              optionOneData={1200} // globar
+              optionTwoData={3400} // tungsten
               store={source}
             />
           </div>
 
           <div className="parameter">
-            <Switch
-              formLabel={"Beamsplitter"}
-              optionOneLabel={"AR-ZnSe"}
-              optionOneData={"AR_ZnSe"}
-              optionTwoLabel={"AR-CaF₂"}
-              optionTwoData={"AR_CaF2"}
+            <Beamsplitter
+              optionOneData={"AR_ZnSe"} // ar_znse
+              optionTwoData={"AR_CaF2"} // ar_caf2
               store={beamsplitter}
             />
           </div>
 
           <div className="parameter">
-            <Switch
-              formLabel={"Cell Window"}
-              optionOneLabel={"ZnSe"}
-              optionOneData={"ZnSe"}
-              optionTwoLabel={"CaF₂"}
-              optionTwoData={"CaF2"}
+            <CellWindow
+              optionOneData={"ZnSe"} // znse
+              optionTwoData={"CaF2"} // caf2
               store={window}
             />
           </div>
 
           <div className="parameter">
-            <Switch
-              formLabel={"Detector"}
-              optionOneLabel={"MCT"}
-              optionOneData={"MCT"}
-              optionTwoLabel={"InSb"}
-              optionTwoData={"InSb"}
+            <Detector
+              optionOneData={"MCT"} // mct
+              optionTwoData={"InSb"} // insb
               store={detector}
             />
           </div>
 
           <div className="parameter">
-            <Switch
-              formLabel={"Medium"}
-              optionOneLabel={"Vacuum"}
-              optionOneData={"Vacuum"}
-              optionTwoLabel={"Air"}
-              optionTwoData={"Air"}
+            <Medium
+              optionOneData={"Vacuum"} // vacuum
+              optionTwoData={"Air"} // air
               store={medium}
             />
           </div>
@@ -211,9 +175,7 @@ export default function ExperimentalSetup() {
         </div>
       </div>
       <div id="graph-and-error" className="exp-col">
-        {spinner && 
-          <Spinner variant="indeterminate" size={200} />
-        }
+        {spinner && <Spinner variant="indeterminate" size={200} />}
         {error && (
           <div id="error">
             <p style={{ fontSize: 30 }}>{errorText}</p>
