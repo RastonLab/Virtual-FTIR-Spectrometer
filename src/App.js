@@ -42,7 +42,7 @@ export default function App() {
   return (  
     <div>  
       <AppBar className="nav-area" position="static">
-        <Container maxWidth="xl">
+        <Container maxWidth="xl" sx={{paddingLeft: {xs: 0}}}>
           <Toolbar
             sx={{  
               alignItems: "flex-start",
