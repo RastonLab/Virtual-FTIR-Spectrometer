@@ -35,6 +35,7 @@
 
   .popup .MuiDialog-paper {
     width: 100%;
+    padding: 0 4px;
   }
 
   /* .popup h1, */
