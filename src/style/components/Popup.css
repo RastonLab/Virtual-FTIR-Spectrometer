@@ -30,3 +30,24 @@
 .popup li {
   padding: 1.5% 0;
 }
+
+@media screen and (max-width: 700px) {
+
+  .popup .MuiDialog-paper {
+    width: 100%;
+    padding: 0 4px;
+  }
+
+  /* .popup h1, */
+  .popup h2 {
+    font-size: 20px;
+  }
+
+  .popup p {
+    font-size: 14px;
+  }
+
+  .popup li {
+    font-size: 14px;
+  }
+}
