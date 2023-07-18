@@ -140,4 +140,8 @@
   .dropdown_items, .MuiAccordionDetails-root {
     font-size: 14px;
   }
+
+  .nav-area {
+    padding: 0;
+  }
 }
