@@ -28,6 +28,8 @@ import MCT_graph from "./description_graphs/MCT_py.png";
 import sourceCompartmentGraph from "./description_graphs/source-compartment-formula.png";
 import ZnSe_graph from "./description_graphs/ZnSe_py.png";
 
+import SpectrumWindow from "../routes/SpectrumWindow"
+
 // not in the tooltip object because it is used multiple times
 const flatRotatableMirrorSource = {
   text: (
@@ -187,13 +189,9 @@ export const toolTips = {
 
   display: {
     text: (
-      <div className="popup-tooltip">
+      <div className="popup-tooltip popup-spectra">
         <h1>Spectrum Display</h1>
-
-        <p>
-          TODO - Will show spectrum window in popup or redirect you to that
-          page.
-        </p>
+        <SpectrumWindow/>
       </div>
     ),
   },
