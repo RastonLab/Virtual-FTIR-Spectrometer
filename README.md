@@ -58,11 +58,11 @@ Licensed under **_TODO_**
 
 - [MUI](https://mui.com/): React user interface component library (Licensed [MIT](https://github.com/mui/material-ui/blob/master/LICENSE))
 
-- [Plotly.js](https://github.com/plotly/plotly.js): Javascript data visualization library (Licensed [MIT](https://github.com/plotly/plotly.js/blob/master/LICENSE))
+- [Plotly.js](https://github.com/plotly/plotly.js): JavaScript data visualization library (Licensed [MIT](https://github.com/plotly/plotly.js/blob/master/LICENSE))
 
 - [Radis](https://radis.github.io/): Spectra generation (Licensed [LGPL-3.0](https://github.com/radis/radis/blob/develop/LICENSE))
 
-- [React](https://react.dev/): Javascript library for building user interfaces (Licensed [MIT](https://github.com/facebook/react/blob/main/LICENSE))
+- [React](https://react.dev/): JavaScript library for building user interfaces (Licensed [MIT](https://github.com/facebook/react/blob/main/LICENSE))
 
 - [React CSV](https://github.com/react-csv/react-csv): React components to build CSV files on the fly (Licensed [MIT](https://github.com/react-csv/react-csv/blob/master/LICENSE.txt))
 
