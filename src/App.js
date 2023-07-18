@@ -67,6 +67,7 @@ export default function App() {
                 open={drawer}
                 anchor={"left"}
                 onClose={handleCloseNavMenu}
+                className="mini-menu"
               >
                 <Box>
                 {menuItems.map((page) => (
