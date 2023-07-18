@@ -85,7 +85,7 @@ g {
   padding: 3% 3%;
 }
 
-.MuiDialog-paper {
+.tooltip-popup .MuiDialog-paper {
   width: 50vw;
   height: auto;
 

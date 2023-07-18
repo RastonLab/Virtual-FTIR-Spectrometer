@@ -1,6 +1,6 @@
 # Virtual-FTIR-Spectrometer
 
-The Raston Lab's **Fourier Transform InfraRed - Scientific Instrument Simulator** (FTIR-SIS) was designed to emulate a student's classroom experience with a FTIR spectrometer. The web application focuses on both spectra generation and a simplified top-down view of the components that make up the spectrometer.
+The Raston Lab's **Fourier Transform InfraRed - Scientific Instrument Simulator** (FTIR-SIS) was designed to emulate a student's classroom experience with an FTIR spectrometer. The web application focuses on both spectra generation and a simplified top-down view of the components that make up the spectrometer.
 
 This project uses [React](https://github.com/facebook/react) for the frontend and [Flask](https://github.com/pallets/flask/) for the backend. The backend is located in a separate [repository](https://github.com/RastonLab/Virtual-FTIR-Functions).
 
@@ -30,7 +30,7 @@ This project uses [React](https://github.com/facebook/react) for the frontend an
 
 ## Usage
 
-The intended audience for this application are undergraduate chemistry students studying spectroscopy. The following screenshots are not exhaustive but acknowledge most of the main features:
+The intended audience for this application is undergraduate chemistry students studying spectroscopy. The following screenshots are not exhaustive but acknowledge most of the main features:
 
 - Experimental Setup (spectrometer parameters)
 
@@ -54,13 +54,15 @@ Licensed under **_TODO_**
 
 **Relevant third-party tools and resources we depend on:**
 
+- [GitHub Pages Deploy Action](https://github.com/JamesIves/github-pages-deploy-action): GitHub Action used to automate deployment of web applications to GitHub Pages (Licensed [MIT](https://github.com/JamesIves/github-pages-deploy-action/blob/dev/LICENSE))
+
 - [MUI](https://mui.com/): React user interface component library (Licensed [MIT](https://github.com/mui/material-ui/blob/master/LICENSE))
 
-- [Plotly.js](https://github.com/plotly/plotly.js): Javascript data visualization library (Licensed [MIT](https://github.com/plotly/plotly.js/blob/master/LICENSE))
+- [Plotly.js](https://github.com/plotly/plotly.js): JavaScript data visualization library (Licensed [MIT](https://github.com/plotly/plotly.js/blob/master/LICENSE))
 
 - [Radis](https://radis.github.io/): Spectra generation (Licensed [LGPL-3.0](https://github.com/radis/radis/blob/develop/LICENSE))
 
-- [React](https://react.dev/): Javascript library for building user interfaces (Licensed [MIT](https://github.com/facebook/react/blob/main/LICENSE))
+- [React](https://react.dev/): JavaScript library for building user interfaces (Licensed [MIT](https://github.com/facebook/react/blob/main/LICENSE))
 
 - [React CSV](https://github.com/react-csv/react-csv): React components to build CSV files on the fly (Licensed [MIT](https://github.com/react-csv/react-csv/blob/master/LICENSE.txt))
 

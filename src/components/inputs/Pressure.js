@@ -8,36 +8,21 @@ import { useDispatch } from "react-redux";
 // redux store
 import { setPressure } from "../../features/parameterSlice";
 
-export default function TextFieldUnit({
-  formLabel,
-  store,
-  placeholder,
-  unit,
-  min,
-  max,
-  step,
-}) {
+export default function Pressure({ store, min, max, step }) {
   const dispatch = useDispatch();
 
   const handleTextChange = (event) => {
-    switch (formLabel) {
-      case "Pressure":
-        dispatch(
-          setPressure(
-            event.target.value === "" ? "" : Number(event.target.value)
-          )
-        );
-        break;
-      default:
-    }
+    dispatch(
+      setPressure(event.target.value === "" ? "" : Number(event.target.value))
+    );
   };
 
   return (
     <div>
       <TextField
         sx={{ maxWidth: "175px" }}
-        label={formLabel}
-        placeholder={placeholder}
+        label="Pressure"
+        placeholder="Enter pressure"
         type="number"
         value={store}
         onChange={handleTextChange}
@@ -47,7 +32,7 @@ export default function TextFieldUnit({
             max: max,
             step: step,
           },
-          endAdornment: <InputAdornment position="end">{unit}</InputAdornment>,
+          endAdornment: <InputAdornment position="end">Bar</InputAdornment>,
         }}
       />
     </div>
