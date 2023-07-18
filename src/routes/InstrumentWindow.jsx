@@ -109,7 +109,7 @@ export default function InstrumentWindow() {
       </div>
 
       {element && (
-        <Dialog onClose={handleClick} open={toggled}>
+        <Dialog onClose={handleClick} open={toggled} fullScreen={element === "display" ?  true : false}>
           <CloseButton id="customized-dialog-title" onClose={handleClick}>
             {toolTips[element].text}
           </CloseButton>
