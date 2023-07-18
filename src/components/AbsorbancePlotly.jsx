@@ -3,6 +3,7 @@ import React, { forwardRef, useState } from "react";
 // components
 import Fetch from "./Fetch";
 import Plot from "react-plotly.js";
+import Spinner from "./Spinner";
 
 // functions
 import * as fetchURL from "../functions/fetchURL";
@@ -218,7 +219,7 @@ export const AbsorbancePlotly = forwardRef((props, ref) => {
           {/* Displays data from the server if there were no errors */}
           <div className="absorb-col">
             {/* Data Display */}
-            {progress && <div id="spinner" />}
+            {progress && <Spinner variant="indeterminate" size={100}  />}
             {peaksData && !progress && !error && (
               <div id="data">
                 <h1>Absorbance Peaks</h1>
