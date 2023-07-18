@@ -24,12 +24,14 @@ import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu';
 import Container from '@mui/material/Container';
 import DevMode from "./components/DevMode";
-import { Accordion, AccordionDetails, AccordionSummary, Drawer } from "@mui/material";
+import { Accordion, AccordionDetails, AccordionSummary, Drawer, Popover } from "@mui/material";
 
 export default function App() {
 
   const [expanded, setExpanded] = useState("");
   const [drawer, setDrawer] = useState(false);
+  const [gitHubPopover, setGutHubPopover] = useState(false);
+  const [infoPopover, setInfoPopover] = useState(false);
 
   const handleChange = (panel) => (newExpanded) => {
     setExpanded(newExpanded ? panel : false);
@@ -42,6 +44,22 @@ export default function App() {
   const handleCloseNavMenu = () => {
     setDrawer(false);
   };
+
+  const openGitHubPopover = (event) => {
+    setGutHubPopover(event.currentTarget);
+  }
+
+  const closeGitHubPopover = () => {
+    setGutHubPopover(null);
+  }
+
+  const openInfoPopover = (event) => {
+    setInfoPopover(event.currentTarget);
+  }
+
+  const closeInfoPopover = () => {
+    setInfoPopover(null);
+  }
 
   return (  
     <div>  
@@ -183,8 +201,55 @@ export default function App() {
             {/* End Full Sized Menu */}
             <div className="left-cluster">
               <DevMode />
-              <GitHub className="icon" sx={{fontSize: "35px"}} />
-              <InfoIcon className="icon" sx={{fontSize: "38px"}} />
+              <GitHub className="icon" sx={{fontSize: "35px"}} onMouseEnter={openGitHubPopover} onMouseLeave={closeGitHubPopover} />
+              <InfoIcon className="icon" sx={{fontSize: "38px"}} onMouseEnter={openInfoPopover} onMouseLeave={closeInfoPopover} />
+
+              <Popover
+                sx={{pointerEvents: 'none'}}
+                open={Boolean(gitHubPopover)}
+                anchorEl={gitHubPopover}
+                anchorOrigin={{
+                  vertical: 'bottom',
+                  horizontal: 'center',
+                }}
+                transformOrigin={{
+                  vertical: 'top',
+                  horizontal: 'right',
+                }}
+              >
+                If you are interested in the code behind <br /> this project check out our 
+                <a
+                href="https://github.com/RastonLab/Virtual-FTIR-Spectrometer#readme"
+                target="_blank"
+                rel="noreferrer"
+                >
+                  GitHub!
+                </a>
+              </Popover>
+
+              <Popover
+                sx={{pointerEvents: 'none'}}
+                open={Boolean(infoPopover)}
+                anchorEl={infoPopover}
+                anchorOrigin={{
+                  vertical: 'bottom',
+                  horizontal: 'center',
+                }}
+                transformOrigin={{
+                  vertical: 'top',
+                  horizontal: 'right',
+                }}
+              >
+                A core part of this project is 
+                <a 
+                  href="https://github.com/radis/radis#readme" 
+                  target="_blank" 
+                  rel="noreferrer"
+                >
+                   RADIS
+                </a>
+              </Popover>
+
             </div>
           </Toolbar>
         </Container>
