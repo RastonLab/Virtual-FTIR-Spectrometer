@@ -46,7 +46,7 @@ The intended audience for this application is undergraduate chemistry students s
 
 ## Contributing
 
-This project is intended to be a project for recruited undergraduate students, but pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
+Upkeep of this project is intended for recruited undergraduate students, but pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
 ## License
 
