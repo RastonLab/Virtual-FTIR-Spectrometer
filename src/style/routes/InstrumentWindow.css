@@ -11,8 +11,8 @@
 #instrument-spinner {
   display: flex;
   flex-direction: column;
-
   align-items: center;
+  min-width: 36%;
 }
 
 @media only screen and (max-width: 1200px) {

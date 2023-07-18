@@ -30,6 +30,7 @@ export default function InstrumentWindow() {
     window,
   } = useSelector((store) => store.parameter);
   const { progress } = useSelector((store) => store.progress);
+  const { spinner } = useSelector((store) => store.spinner);
   const { devMode } = useSelector((store) => store.devMode);
   const [toggled, setToggled] = useState(false);
   const [element, setElement] = useState();
@@ -69,45 +70,48 @@ export default function InstrumentWindow() {
 
   return (
     <div id="instrument-window">
-      <Main
-        id="instrument"
-        onClick={handleClick}
-        // ternary used to show/hide beamsplitter in the Main SVG
-        beamsplitter={{
-          caf2: beamsplitter === "AR_CaF2" ? "inline" : "none",
-          znse: beamsplitter === "AR_ZnSe" ? "inline" : "none",
-        }}
-        // ternary used to show/hide detector laser and mirror in the Main SVG
-        detector={{
-          insb: detector === "InSb" ? "inline" : "none",
-          mct: detector === "MCT" ? "inline" : "none",
-        }}
-        // ternary used to show/hide source laser and mirror in the Main SVG
-        source={{
-          globar: source === 1200 ? "inline" : "none",
-          tungsten: source === 3400 ? "inline" : "none",
-        }}
-        // ternary used to show/hide cell window in the Main SVG
-        window={{
-          caf2: window === "CaF2" ? "inline" : "none",
-          znse: window === "ZnSe" ? "inline" : "none",
-        }}
-        opd={OPD[resolution] * scan}
-        scan={scan}
-        range={`${waveMin} - ${waveMax}`}
-        resolution={resolution}
-        molecule={molecule}
-      />
+        <Main
+          id="instrument"
+          onClick={handleClick}
+          // ternary used to show/hide beamsplitter in the Main SVG
+          beamsplitter={{
+            caf2: beamsplitter === "AR_CaF2" ? "inline" : "none",
+            znse: beamsplitter === "AR_ZnSe" ? "inline" : "none",
+          }}
+          // ternary used to show/hide detector laser and mirror in the Main SVG
+          detector={{
+            insb: detector === "InSb" ? "inline" : "none",
+            mct: detector === "MCT" ? "inline" : "none",
+          }}
+          // ternary used to show/hide source laser and mirror in the Main SVG
+          source={{
+            globar: source === 1200 ? "inline" : "none",
+            tungsten: source === 3400 ? "inline" : "none",
+          }}
+          // ternary used to show/hide cell window in the Main SVG
+          window={{
+            caf2: window === "CaF2" ? "inline" : "none",
+            znse: window === "ZnSe" ? "inline" : "none",
+          }}
+          opd={OPD[resolution] * scan}
+          scan={scan}
+          range={`${waveMin} - ${waveMax}`}
+          resolution={resolution}
+          molecule={molecule}
+        />
 
-      <div id="instrument-spinner">
-        {progress && !devMode && (
-          <>
-            <h2>Processing Sample...</h2>
-            <Spinner variant="determinate" timer={delay} size={100} />
-          </>
-        )}
-      </div>
-
+        <div id="instrument-spinner">
+          <h1>Scan Progress</h1>
+          {spinner && (
+            <Spinner variant="indeterminate" size={100} />
+          )}
+          {progress && !spinner && !devMode && (
+            <>
+              <h2>Processing Sample...</h2>
+              <Spinner variant="determinate" timer={delay} size={100} />
+            </>
+          )}
+        </div>
       {element && (
         <Dialog onClose={handleClick} open={toggled} fullScreen={element === "display" ?  true : false}>
           <CloseButton id="customized-dialog-title" onClose={handleClick}>
