@@ -145,3 +145,7 @@
     padding: 0;
   }
 }
+
+.mini-menu .MuiDrawer-paper {
+  background-color: #1d2022 !important;
+}
