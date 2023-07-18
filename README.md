@@ -1,117 +1,81 @@
 # Virtual-FTIR-Spectrometer
 
-This web application is intended to provide users with an overview of the anatomy of a Fourier Transform InfraRed (FTIR) spectrometer. The application also allows users to experiment with the spectrometer's parameters and observing its graphed output.
+The Raston Lab's **Fourier Transform InfraRed - Scientific Instrument Simulator** (FTIR-SIS) was designed to emulate a student's classroom experience with a FTIR spectrometer. The web application focuses on both spectra generation and a simplified top-down view of the components that make up the spectrometer.
 
-The web application is accessible at: https://rastonlab.github.io/Virtual-FTIR-Spectrometer/
+This project uses [React](https://github.com/facebook/react) for the frontend and [Flask](https://github.com/pallets/flask/) for the backend. The backend is located in a separate [repository](https://github.com/RastonLab/Virtual-FTIR-Functions).
 
-# Usage
+## Installation
 
-## File
+**NOTE:** The following setup steps are for the frontend, not the backend API.
 
-The `File` menu allows the user to import and export data with the web application.
+1. Clone the repository
 
-### Open
+2. Move into the cloned repository's directory
 
-The `open` menu item allows users to upload and open a `.CSV` file to the web application. This allows the user to upload parameters, as well as data points that will be displayed to the user in `spectrum` window.
+   ```bash
+   cd Virtual-FTIR-Spectrometer
+   ```
 
-The first line of parameters will look like this:
+3. Install all `npm` dependencies
 
-```
-# Min Wavenumber: 1900 Max Wavenumber: 2300 Molecule: CO Pressure: 0.001 Resolution: 1 Number of Scans: 1 Zero Fill: 0 Source: 3100 Beamsplitter: AR_ZnSe Cell Window: CaF2 Detector: MCT
-```
+   ```bash
+   npm install
+   ```
 
-The following excerpt is an example of what datapoints look like:
+4. Run the server locally
 
-```
-5261.723152266546 0.0008834386851116477
-5260.388874661239 0.0008841243897027239
-5259.055273581491 0.0008805861620592779
-5257.722348512898 0.0008855626861862154
-5256.390098941579 0.0008759330608779286
-```
+   ```bash
+   npm start
+   ```
 
-### Save
+## Usage
 
-The `save` menu item allows users to save a `.CSV` file from the web application. This file hols the users selected parameters, as well as the data points that were displayed to the user in the `spectrum` window.
+The intended audience for this application are undergraduate chemistry students studying spectroscopy. The following screenshots are not exhaustive but acknowledge most of the main features:
 
-These files are named like: `[min-wavenumber]-[max-wavenumber]-spectrum.csv`
+- Experimental Setup (spectrometer parameters)
 
-### Print
+**_TODO_**
 
-The `print` menu item allows users to print just a graph of the data points or both the graph and user parameters. Once the user selects the items they want printed, the browsers print preview will be displayed to the user.
+- Instrument Window (top-down view of simplified spectrometer)
 
-## Collect
+**_TODO_**
 
-TODO
+- Spectrum Window (plotted spectra)
 
-### Acquire Background Sample
+**_TODO_**
 
-TODO
+## Contributing
 
-### Stop Acquisition
+This project is intended to be a project for recruited undergraduate students, but pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
-TODO
+## License
 
-## Window
+Licensed under **_TODO_**
 
-The `Window` menu allows the user to view and interact with different pieces of the virtual spectrometer.
+**Relevant third-party tools and resources we depend on:**
 
-### Experimental Setup
+- [MUI](https://mui.com/): React user interface component library (Licensed [MIT](https://github.com/mui/material-ui/blob/master/LICENSE))
 
-The `experimental setup` menu item allows users to view modifiable parameters, run the virtual spectrometer with those parameters, and to view a graphed output based on those parameters.
+- [Plotly.js](https://github.com/plotly/plotly.js): Javascript data visualization library (Licensed [MIT](https://github.com/plotly/plotly.js/blob/master/LICENSE))
 
-### Instrument
+- [Radis](https://radis.github.io/): Spectra generation (Licensed [LGPL-3.0](https://github.com/radis/radis/blob/develop/LICENSE))
 
-The `instrument` menu item allows users to view and interact with a top-down view of the virtual instrument. The interactive instrument is made up of many images that when clicked, display a popup to the user. The popup contains a more detailed image as well as a description of the selected component.
+- [React](https://react.dev/): Javascript library for building user interfaces (Licensed [MIT](https://github.com/facebook/react/blob/main/LICENSE))
 
-This menu item also displays some of the user selected parameters in a display titled `Electronics` and `Readouts`. The user is unable to change the parameters from the `instrument` window. Parameters must be changed in the `experimental setup` menu item.
+- [React CSV](https://github.com/react-csv/react-csv): React components to build CSV files on the fly (Licensed [MIT](https://github.com/react-csv/react-csv/blob/master/LICENSE.txt))
 
-### Spectrum
+- [React Router](https://github.com/remix-run/react-router): Declarative routing for React (Licensed [MIT](https://github.com/remix-run/react-router/blob/main/LICENSE.md))
 
-The `spectrum` menu item allows users to view a full page graph on the spectrometers output.
+- [React to Print](https://github.com/gregnb/react-to-print): React components for printing in the browser (Licensed [MIT](https://github.com/gregnb/react-to-print/blob/master/LICENSE))
 
-## Help
+- [Redux Toolkit](https://github.com/reduxjs/redux-toolkit): Library for updating and managing application state (Licensed [MIT](https://github.com/reduxjs/redux-toolkit/blob/master/LICENSE))
 
-TODO
+- [SVGO](https://github.com/svg/svgo): Node.js tool for optimizing SVG files (Licensed [MIT](https://github.com/svg/svgo/blob/main/LICENSE))
 
-### Tutorial
+- [SVGOMG](https://github.com/jakearchibald/svgomg): Web GUI for SVGO (Licensed [MIT](https://github.com/jakearchibald/svgomg/blob/main/LICENSE.md))
 
-TODO
+- [SVGR](https://github.com/gregberge/svgr): Tool for transforming SVGs into React components (Licensed [MIT](https://github.com/gregberge/svgr/blob/main/LICENSE))
 
-### Usage
+**Inspiration from:**
 
-TODO
-
-### About
-
-TODO
-
-# Running locally
-
-The virtual spectrometer is made up of two programs.
-
-- [Virtual-FTIR-Spectrometer](https://github.com/RastonLab/Virtual-FTIR-Spectrometer)
-
-  - This repository contains the front-end of the program using the React JavaScript library.
-
-- [Virtual-FTIR-Functions](https://github.com/RastonLab/Virtual-FTIR-Functions)
-
-  - This repository contains the back-end of the program using the Flask web framework written in Python.
-
-## Front-end
-
-TODO
-
-## Back-end
-
-TODO
-
-# Architecture
-
-## GitHub Pages
-
-The front-end of this project is hosted using [GitHub Pages](https://pages.github.com/). This allows us to have automatic updates to the live website after commits and pull requests are made to the central repository. These updates are automatically handled using [GitHub Actions](https://github.com/features/actions). Specifically, [GitHub Pages Deploy Action](https://github.com/JamesIves/github-pages-deploy-action) by James Ives. A simplified tutorial of this can be found on the [Raston Lab Wiki](https://github.com/RastonLab/.github/wiki/Tutorials#how-to-setup-a-github-action-to-host-a-react-application-on-github-pages)!
-
-## EC2
-
-The back-end of this project is hosted using [Amazon Web Services Elastic Compute Cloud (EC2)](https://aws.amazon.com/ec2/). EC2 is a service that allows customers to rent virtual computers. We utilize this service by renting a Ubuntu system that hosts our [Flask web service](flask.palletsprojects.com) using [gunicorn](https://gunicorn.org/) and [NGINX](https://www.nginx.com/). A simplified tutorial of our EC2 setup can be found on the [Raston Lab Wiki](https://github.com/RastonLab/.github/wiki/AWS-EC2-Flask-Application-Setup)!
+- [Radis app](https://www.radis.app/): Inspiration for user interface components like the dual slider for the wavenumber range (Licensed [LGPL-3.0](https://github.com/suzil/radis-app/blob/main/LICENSE))

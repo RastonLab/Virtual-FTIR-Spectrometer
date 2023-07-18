@@ -3,35 +3,21 @@
   display: flex;
 }
 
-#instrument-accessories {
-  display: flex;
-  flex-direction: column;
-  flex-grow: 1;
-}
-
-#readout {
-  display: flex;
-  flex-direction: column;
-}
-
-#spectrum {
-  display: flex;
-  flex-direction: column;
-}
-
 #instrument {
-  height: 94vh;
+  height: 90vh;
   flex-grow: 1;
+}
+
+#instrument-spinner {
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
 }
 
 @media only screen and (max-width: 1200px) {
   #instrument-window {
     flex-direction: column;
-  }
-
-  #readout {
-    flex-direction: column;
-    max-width: 100%;
   }
 
   #instrument {
