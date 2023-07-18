@@ -13,6 +13,10 @@ import { Outlet, Link } from "react-router-dom";
 // style
 import "./style/App.css";
 
+// Icons
+import InfoIcon from '@mui/icons-material/Info';
+import { GitHub } from "@mui/icons-material";
+
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
@@ -177,7 +181,11 @@ export default function App() {
             </Accordion>
             ))}
             {/* End Full Sized Menu */}
-            <DevMode />
+            <div className="left-cluster">
+              <DevMode />
+              <GitHub className="icon" sx={{fontSize: "35px"}} />
+              <InfoIcon className="icon" sx={{fontSize: "38px"}} />
+            </div>
           </Toolbar>
         </Container>
       </AppBar>

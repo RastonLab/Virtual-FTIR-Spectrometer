@@ -99,6 +99,18 @@
   text-align: center;
 }
 
+.left-cluster {
+  display: flex;
+  flex-grow: 1;
+  justify-content: right;
+}
+
+.icon {
+  margin: 0 4px;
+  align-self: center;
+  justify-self: right;
+}
+
 .red {
   color: hsl(0, 80%, 50%);
 }
