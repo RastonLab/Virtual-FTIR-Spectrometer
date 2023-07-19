@@ -14,21 +14,22 @@ import { Outlet, Link } from "react-router-dom";
 import "./style/App.css";
 
 // Icons
-import InfoIcon from '@mui/icons-material/Info';
+import InfoIcon from "@mui/icons-material/Info";
 import { GitHub } from "@mui/icons-material";
 
-import AppBar from '@mui/material/AppBar';
-import Box from '@mui/material/Box';
-import Toolbar from '@mui/material/Toolbar';
-import IconButton from '@mui/material/IconButton';
-import MenuIcon from '@mui/icons-material/Menu';
-import Container from '@mui/material/Container';
+import AppBar from "@mui/material/AppBar";
+import Box from "@mui/material/Box";
+import Toolbar from "@mui/material/Toolbar";
+import IconButton from "@mui/material/IconButton";
+import MenuIcon from "@mui/icons-material/Menu";
+import Container from "@mui/material/Container";
 import DevMode from "./components/DevMode";
 import {
   Accordion,
   AccordionDetails,
   AccordionSummary,
   Drawer,
+  Popover,
 } from "@mui/material";
 
 export default function App() {
@@ -49,27 +50,26 @@ export default function App() {
     setDrawer(false);
   };
 
-
   const openGitHubPopover = (event) => {
     setGutHubPopover(event.currentTarget);
-  }
+  };
 
   const closeGitHubPopover = () => {
     setGutHubPopover(null);
-  }
+  };
 
   const openInfoPopover = (event) => {
     setInfoPopover(event.currentTarget);
-  }
+  };
 
   const closeInfoPopover = () => {
     setInfoPopover(null);
-  }
+  };
 
-  return (  
-    <div>  
-      <AppBar className="nav-area" position="static" >
-        <Container maxWidth="xl" sx={{paddingLeft: {xs: 0}}}>
+  return (
+    <div>
+      <AppBar className="nav-area" position="static">
+        <Container maxWidth="xl" sx={{ paddingLeft: { xs: 0 } }}>
           <Toolbar
             sx={{
               alignItems: "flex-start",
@@ -221,50 +221,61 @@ export default function App() {
                 target="_blank"
                 rel="noreferrer"
               >
-                <GitHub className="icon" sx={{fontSize: "35px"}} onMouseEnter={openGitHubPopover} onMouseLeave={closeGitHubPopover} />
+                <GitHub
+                  className="icon"
+                  sx={{ fontSize: "35px" }}
+                  onMouseEnter={openGitHubPopover}
+                  onMouseLeave={closeGitHubPopover}
+                />
               </a>
 
-              <a 
-                  href="https://github.com/radis/radis#readme" 
-                  target="_blank" 
-                  rel="noreferrer"
+              <a
+                href="https://github.com/radis/radis#readme"
+                target="_blank"
+                rel="noreferrer"
               >
-                <InfoIcon className="icon" sx={{fontSize: "38px"}} onMouseEnter={openInfoPopover} onMouseLeave={closeInfoPopover} />
+                <InfoIcon
+                  className="icon"
+                  sx={{ fontSize: "38px" }}
+                  onMouseEnter={openInfoPopover}
+                  onMouseLeave={closeInfoPopover}
+                />
               </a>
 
               {/* Icon Popovers */}
               <Popover
-                sx={{pointerEvents: 'none'}}
+                sx={{ pointerEvents: "none" }}
                 open={Boolean(gitHubPopover)}
                 anchorEl={gitHubPopover}
                 anchorOrigin={{
-                  vertical: 'bottom',
-                  horizontal: 'center',
+                  vertical: "bottom",
+                  horizontal: "center",
                 }}
                 transformOrigin={{
-                  vertical: 'top',
-                  horizontal: 'right',
+                  vertical: "top",
+                  horizontal: "right",
                 }}
               >
-                If you are interested in the code and tools<br /> behind this project check out our GitHub!
+                If you are interested in the code and tools
+                <br /> behind this project check out our GitHub!
               </Popover>
 
               <Popover
-                sx={{pointerEvents: 'none'}}
+                sx={{ pointerEvents: "none" }}
                 open={Boolean(infoPopover)}
                 anchorEl={infoPopover}
                 anchorOrigin={{
-                  vertical: 'bottom',
-                  horizontal: 'center',
+                  vertical: "bottom",
+                  horizontal: "center",
                 }}
                 transformOrigin={{
-                  vertical: 'top',
-                  horizontal: 'right',
+                  vertical: "top",
+                  horizontal: "right",
                 }}
               >
-                A core part of this project is RADIS. <br /> Find out more about RADIS here!
+                A core part of this project is RADIS. <br /> Find out more about
+                RADIS here!
               </Popover>
-
             </div>
           </Toolbar>
         </Container>
