@@ -63,7 +63,7 @@ export default function App() {
 
   return (  
     <div>  
-      <AppBar className="nav-area" position="static">
+      <AppBar className="nav-area" position="static" >
         <Container maxWidth="xl" sx={{paddingLeft: {xs: 0}}}>
           <Toolbar
             sx={{  
@@ -201,9 +201,24 @@ export default function App() {
             {/* End Full Sized Menu */}
             <div className="left-cluster">
               <DevMode />
-              <GitHub className="icon" sx={{fontSize: "35px"}} onMouseEnter={openGitHubPopover} onMouseLeave={closeGitHubPopover} />
-              <InfoIcon className="icon" sx={{fontSize: "38px"}} onMouseEnter={openInfoPopover} onMouseLeave={closeInfoPopover} />
+              {/* Icons */}
+              <a
+                href="https://github.com/RastonLab/Virtual-FTIR-Spectrometer#readme"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <GitHub className="icon" sx={{fontSize: "35px"}} onMouseEnter={openGitHubPopover} onMouseLeave={closeGitHubPopover} />
+              </a>
 
+              <a 
+                  href="https://github.com/radis/radis#readme" 
+                  target="_blank" 
+                  rel="noreferrer"
+              >
+                <InfoIcon className="icon" sx={{fontSize: "38px"}} onMouseEnter={openInfoPopover} onMouseLeave={closeInfoPopover} />
+              </a>
+
+              {/* Icon Popovers */}
               <Popover
                 sx={{pointerEvents: 'none'}}
                 open={Boolean(gitHubPopover)}
@@ -217,14 +232,7 @@ export default function App() {
                   horizontal: 'right',
                 }}
               >
-                If you are interested in the code behind <br /> this project check out our 
-                <a
-                href="https://github.com/RastonLab/Virtual-FTIR-Spectrometer#readme"
-                target="_blank"
-                rel="noreferrer"
-                >
-                  GitHub!
-                </a>
+                If you are interested in the code and tools<br /> behind this project check out our GitHub!
               </Popover>
 
               <Popover
@@ -240,14 +248,7 @@ export default function App() {
                   horizontal: 'right',
                 }}
               >
-                A core part of this project is 
-                <a 
-                  href="https://github.com/radis/radis#readme" 
-                  target="_blank" 
-                  rel="noreferrer"
-                >
-                   RADIS
-                </a>
+                A core part of this project is RADIS. <br /> Find out more about RADIS here!
               </Popover>
 
             </div>
