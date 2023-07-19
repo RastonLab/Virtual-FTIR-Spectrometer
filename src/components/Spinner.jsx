@@ -13,15 +13,17 @@ export default function Spinner(props) {
 
     // Updates the value of the 
     React.useEffect(() => {
-      const timer_interval = setInterval(() => {
-        setDelay((prevProgress) => (prevProgress >= 100 ? 0 : prevProgress + 1));
-      }, props.timer / 100);
+      if (props.timer) {
+        const timer_interval = setInterval(() => {
+          setDelay((prevProgress) => (prevProgress >= 100 ? 0 : prevProgress + 1));
+        }, props.timer / 100);
+    
+        dispatch(setTimer(delay))
   
-      dispatch(setTimer(delay))
-
-      return () => {
-        clearInterval(timer_interval);
-      };
+        return () => {
+          clearInterval(timer_interval);
+        };
+      }
     }, [props.timer, delay, dispatch]);
 
     return (

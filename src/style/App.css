@@ -64,7 +64,7 @@
   color: rgb(246, 176, 106) !important;
 }
 
-.MuiDrawer-paper {
+.mini-menu .MuiDrawer-paper {
   background-color: #1d2022 !important;
 }
 
@@ -97,6 +97,18 @@
 .dropdown-items p {
   padding: 0.5rem 0.2rem;
   text-align: center;
+}
+
+.left-cluster {
+  display: flex;
+  flex-grow: 1;
+  justify-content: right;
+}
+
+.icon {
+  margin: 0 4px;
+  align-self: center;
+  justify-self: right;
 }
 
 .red {
@@ -144,4 +156,8 @@
   .nav-area {
     padding: 0;
   }
+}
+
+.mini-menu .MuiDrawer-paper {
+  background-color: #1d2022 !important;
 }
