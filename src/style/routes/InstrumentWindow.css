@@ -42,8 +42,28 @@ g {
   pointer-events: all;
 }
 
-/* ---------- tooltip ---------- */
+/* ---------- svg animation ---------- */
+#movable-corner-cube {
+  transition: transform 5s ease;
+}
 
+#ray-top {
+  transition: d 5s ease;
+}
+
+#ray-middle {
+  transition: transform 5s ease;
+}
+
+#ray-bottom {
+  transition: d 5s ease;
+}
+
+#rect6675 {
+  transition: d 5s ease;
+}
+
+/* ---------- tooltip ---------- */
 .popup-tooltip {
   display: flex;
   flex-direction: column;

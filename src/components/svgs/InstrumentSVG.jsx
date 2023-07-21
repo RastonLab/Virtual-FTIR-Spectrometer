@@ -2718,41 +2718,6 @@ const SvgInstrumentWindow = (props) => (
         gradientTransform="translate(-162.349 178.663) scale(7.59226)"
         gradientUnits="userSpaceOnUse"
       />
-      <linearGradient id="linearGradient894">
-        <stop
-          id="stop890"
-          offset={0}
-          style={{
-            stopColor: "#0ff",
-            stopOpacity: 1,
-          }}
-        />
-        <stop
-          id="stop945"
-          offset={0.5}
-          style={{
-            stopColor: "#00f",
-            stopOpacity: 1,
-          }}
-        />
-        <stop
-          id="stop892"
-          offset={1}
-          style={{
-            stopColor: "#00007f",
-            stopOpacity: 1,
-          }}
-        />
-      </linearGradient>
-      <linearGradient
-        xlinkHref="#linearGradient894"
-        id="linearGradient896"
-        x1={54.221}
-        x2={282.78}
-        y1={35.206}
-        y2={206.206}
-        gradientUnits="userSpaceOnUse"
-      />
       <filter
         id="filter29365"
         width={2.492}
@@ -2820,14 +2785,11 @@ const SvgInstrumentWindow = (props) => (
       <g id="beams">
         <path
           id="rect6675"
-          d="M344.494 1210.539h1713.303v10H344.494z"
+          d="M1406.494 991.284v10h651.235v209.254H344.494v10H2067.73V991.284z"
           style={{
             fill: "red",
             fillRule: "evenodd",
-            stroke: "none",
             strokeWidth: 16.4017,
-            strokeDasharray: "none",
-            strokeOpacity: 1,
           }}
         />
         <path
@@ -2837,28 +2799,6 @@ const SvgInstrumentWindow = (props) => (
             fill: "red",
             fillRule: "evenodd",
             strokeWidth: 18.3655,
-          }}
-          transform="rotate(-90)"
-        />
-        <path
-          id="rect6675-4-0"
-          d="M1406.495 991.284h651.214v10h-651.214z"
-          style={{
-            fill: "red",
-            fillRule: "evenodd",
-            strokeWidth: 10.1119,
-          }}
-        />
-        <path
-          id="rect6675-3-6"
-          d="M-1210.542 2057.73h209.282v10h-209.282z"
-          style={{
-            fill: "red",
-            fillRule: "evenodd",
-            stroke: "none",
-            strokeWidth: 5.73242,
-            strokeDasharray: "none",
-            strokeOpacity: 1,
           }}
           transform="rotate(-90)"
         />
@@ -2889,8 +2829,8 @@ const SvgInstrumentWindow = (props) => (
           }}
         />
         <path
-          id="rect14491-7-9-2-3-0"
-          d="m1164.195-2120.56 94.356 95.49v1442.153l-94.356 89.932z"
+          id="ray-bottom"
+          d="m1164.195-2120.56 94.356 93.733v1443.91l-94.356 89.932z"
           style={{
             opacity: 0.65,
             fill: "#ff6638",
@@ -2901,8 +2841,8 @@ const SvgInstrumentWindow = (props) => (
           transform="rotate(90)"
         />
         <path
-          id="rect14491-7-9-2-3-7"
-          d="M1042.09-2114.01h127.395l94.208 94.154h-315.73Z"
+          id="ray-middle"
+          d="M1047.808-2120.56h116.387l94.356 93.733H953.417Z"
           style={{
             opacity: 0.65,
             fill: "#ff6638",
@@ -2913,8 +2853,8 @@ const SvgInstrumentWindow = (props) => (
           transform="rotate(90)"
         />
         <path
-          id="rect14491-7-9-2-3-5"
-          d="m953.417-2026.826 94.391-91.072v670.662l-94.391 95.49z"
+          id="ray-top"
+          d="m953.417-2026.826 94.391-93.734v673.324l-94.391 95.49z"
           style={{
             opacity: 0.65,
             fill: "#ff6638",
@@ -3239,7 +3179,10 @@ const SvgInstrumentWindow = (props) => (
         id="sample-chamber"
         d="M1611.593 1664.928v369h15v-354h1215v354h15v-354h580v615h-580v-100h-15v100h-1215v-100h-15v115h1839.998v-645H1626.593Z"
       />
-      <g id="aperture" transform="matrix(.99919 0 0 1.14723 -318.324 -79.428)">
+      <g
+        id="aperture-wheel"
+        transform="matrix(.99919 0 0 1.14723 -318.324 -79.428)"
+      >
         <path
           id="rect2792"
           d="M771.766 713.694h173v33h-173z"
@@ -3595,7 +3538,10 @@ const SvgInstrumentWindow = (props) => (
           }}
         />
       </g>
-      <g id="manometer" transform="translate(2143.182 1781.672) scale(.76667)">
+      <g
+        id="pressure-gauge"
+        transform="translate(2143.182 1781.672) scale(.76667)"
+      >
         <path
           id="rect29156"
           d="M106.742 254.124h44.944v11.236h-44.944z"
@@ -4651,7 +4597,13 @@ const SvgInstrumentWindow = (props) => (
           }}
         />
       </g>
-      <g id="movable-corner-cube" transform="rotate(135 900.985 1021.051)">
+      <g
+        id="movable-corner-cube"
+        style={{
+          display: "inline",
+        }}
+        transform="rotate(135 903.611 1022.14)"
+      >
         <path
           id="rect17548-4"
           d="M0 365h55V55h310V0H0v55Z"
@@ -5425,7 +5377,7 @@ const SvgInstrumentWindow = (props) => (
         <text
           xmlSpace="preserve"
           id="resolution-value"
-          x={653.93}
+          x={651.388}
           y={120.094}
           style={{
             fontStyle: "normal",
@@ -5441,7 +5393,6 @@ const SvgInstrumentWindow = (props) => (
             fontVariantEastAsian: "normal",
             dominantBaseline: "central",
             textAnchor: "middle",
-            display: "inline",
             fill: "#000",
             fillOpacity: 1,
             stroke: "none",
@@ -5453,7 +5404,7 @@ const SvgInstrumentWindow = (props) => (
             paintOrder: "fill markers stroke",
           }}
         >
-          <tspan id="tspan4131" x={653.93} y={120.094}>
+          <tspan id="tspan4131" x={651.388} y={120.094}>
             {props.resolution}
           </tspan>
         </text>
@@ -5629,7 +5580,7 @@ const SvgInstrumentWindow = (props) => (
         <text
           xmlSpace="preserve"
           id="range-value"
-          x={-96.07}
+          x={-98.612}
           y={120.094}
           style={{
             fontStyle: "normal",
@@ -5645,7 +5596,6 @@ const SvgInstrumentWindow = (props) => (
             fontVariantEastAsian: "normal",
             dominantBaseline: "central",
             textAnchor: "middle",
-            display: "inline",
             fill: "#000",
             fillOpacity: 1,
             stroke: "none",
@@ -5657,7 +5607,7 @@ const SvgInstrumentWindow = (props) => (
             paintOrder: "fill markers stroke",
           }}
         >
-          <tspan id="tspan4121" x={-96.07} y={120.094}>
+          <tspan id="tspan4121" x={-98.612} y={120.094}>
             {props.range}
           </tspan>
         </text>
@@ -5744,7 +5694,7 @@ const SvgInstrumentWindow = (props) => (
         <text
           xmlSpace="preserve"
           id="scan-value"
-          x={653.93}
+          x={651.388}
           y={-129.906}
           style={{
             fontStyle: "normal",
@@ -5760,7 +5710,6 @@ const SvgInstrumentWindow = (props) => (
             fontVariantEastAsian: "normal",
             dominantBaseline: "central",
             textAnchor: "middle",
-            display: "inline",
             fill: "#000",
             fillOpacity: 1,
             stroke: "none",
@@ -5772,7 +5721,7 @@ const SvgInstrumentWindow = (props) => (
             paintOrder: "fill markers stroke",
           }}
         >
-          <tspan id="tspan4111" x={653.93} y={-129.906}>
+          <tspan id="tspan4111" x={651.388} y={-129.906}>
             {props.scan}
           </tspan>
         </text>
@@ -5836,7 +5785,7 @@ const SvgInstrumentWindow = (props) => (
         <text
           xmlSpace="preserve"
           id="opd-value"
-          x={-96.07}
+          x={-98.612}
           y={-129.906}
           style={{
             fontStyle: "normal",
@@ -5852,7 +5801,6 @@ const SvgInstrumentWindow = (props) => (
             fontVariantEastAsian: "normal",
             dominantBaseline: "central",
             textAnchor: "middle",
-            display: "inline",
             fill: "#000",
             fillOpacity: 1,
             stroke: "none",
@@ -5864,7 +5812,7 @@ const SvgInstrumentWindow = (props) => (
             paintOrder: "fill markers stroke",
           }}
         >
-          <tspan id="tspan4101" x={-96.07} y={-129.906}>
+          <tspan id="tspan4101" x={-98.612} y={-129.906}>
             {props.opd}
           </tspan>
         </text>
@@ -5989,88 +5937,6 @@ const SvgInstrumentWindow = (props) => (
             {props.molecule}
           </tspan>
         </text>
-      </g>
-      <g id="display" transform="translate(-199.02 1846.819) scale(3.48016)">
-        <path
-          id="rect32404"
-          d="M54.679 259.208h226.996v10.266H54.679z"
-          style={{
-            fill: "#afafaf",
-            fillOpacity: 1,
-            stroke: "#000",
-            strokeWidth: 1.14064,
-            strokeLinecap: "square",
-            strokeLinejoin: "miter",
-            strokeDasharray: "none",
-            strokeOpacity: 1,
-            paintOrder: "normal",
-          }}
-        />
-        <path
-          id="rect30947"
-          d="M111.271 225.078h113.812l55.35 33.062H55.921Z"
-          style={{
-            fill: "#afafaf",
-            fillOpacity: 1,
-            stroke: "#000",
-            strokeWidth: 0.999991,
-            strokeLinecap: "square",
-            strokeDasharray: "none",
-          }}
-        />
-        <path
-          id="path29347"
-          d="M247.517 225.079a79.278 27.374 0 0 1-39.639 23.706 79.278 27.374 0 0 1-79.277 0 79.278 27.374 0 0 1-39.64-23.706h79.278z"
-          style={{
-            fill: "#afafaf",
-            fillOpacity: 1,
-            stroke: "#000",
-            strokeWidth: 1.14058,
-            strokeLinecap: "square",
-            strokeLinejoin: "miter",
-            strokeDasharray: "none",
-            strokeOpacity: 1,
-            paintOrder: "normal",
-          }}
-        />
-        <rect
-          id="rect5909-1"
-          width={296.578}
-          height={222.433}
-          x={20.211}
-          y={9.489}
-          rx={28.517}
-          ry={28.517}
-          style={{
-            fill: "#bec3c9",
-            fillOpacity: 1,
-            stroke: "#000",
-            strokeWidth: 3.42205,
-            strokeLinecap: "butt",
-            strokeLinejoin: "miter",
-            strokeDasharray: "none",
-            strokeOpacity: 1,
-            paintOrder: "normal",
-          }}
-        />
-        <rect
-          id="rect5909"
-          width={228.137}
-          height={171.103}
-          x={54.432}
-          y={35.155}
-          rx={28.517}
-          ry={28.517}
-          style={{
-            fill: "url(#linearGradient896)",
-            fillOpacity: 1,
-            stroke: "#000",
-            strokeWidth: 3.42205,
-            strokeLinecap: "square",
-            strokeDasharray: "none",
-            strokeOpacity: 1,
-          }}
-        />
       </g>
     </g>
   </svg>
