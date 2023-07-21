@@ -4,12 +4,15 @@ import React, { useState } from "react";
 import { Dialog, Drawer } from "@mui/material";
 import { OPD } from "../components/Fetch";
 import CloseButton from "../components/CloseButton";
+import ExperimentalSetup from "../routes/ExperimentalSetup";
 import Main from "../components/svgs/InstrumentSVG";
 import Spinner from "../components/Spinner";
-import ExperimentalSetup from "../routes/ExperimentalSetup"
 
 // dictionaries
 import { toolTips } from "../dictionaries/svgLibrary";
+
+// functions
+import { animateCornerCube } from "../functions/animation";
 
 // redux
 import { useSelector } from "react-redux";
@@ -17,8 +20,6 @@ import { useSelector } from "react-redux";
 // style
 import "../style/routes/InstrumentWindow.css";
 import "../style/components/Button.css";
-
-import { animateCornerCube } from "../functions/animation";
 
 export default function InstrumentWindow() {
   const {
@@ -73,7 +74,7 @@ export default function InstrumentWindow() {
 
   const toggleDrawer = () => {
     setDrawerOpen(!drawerOpen);
-  }
+  };
 
   const delay = OPD[resolution] * scan * 1000; // 1000 is to convert to milliseconds
 
@@ -109,22 +110,23 @@ export default function InstrumentWindow() {
         molecule={molecule}
       />
 
-        <div id="instrument-spinner">
-          <h1>Scan Progress</h1>
-          <button className="button" onClick={toggleDrawer}>
-            Experiment Settings
-          </button>
-          {spinner && (
-            <Spinner variant="indeterminate" size={100} />
-          )}
-          {progress && !spinner && !devMode && (
-            <>
-              <h2>Processing Sample...</h2>
-              <Spinner variant="determinate" timer={delay} size={100} />
-            </>
-          )}
-        </div>
-      
+      <div id="instrument-spinner">
+        <h1>Scan Progress</h1>
+        <button className="button" onClick={toggleDrawer}>
+          Experiment Settings
+        </button>
+        <button className="button" onClick={animateCornerCube}>
+          Animate!
+        </button>
+        {spinner && <Spinner variant="indeterminate" size={100} />}
+        {progress && !spinner && !devMode && (
+          <>
+            <h2>Processing Sample...</h2>
+            <Spinner variant="determinate" timer={delay} size={100} />
+          </>
+        )}
+      </div>
+
       <Drawer
         anchor="right"
         open={drawerOpen}
@@ -147,8 +149,6 @@ export default function InstrumentWindow() {
           </CloseButton>
         </Dialog>
       )}
-
-      <button onClick={() => animateCornerCube()}>Hello!</button>
     </div>
   );
 }
