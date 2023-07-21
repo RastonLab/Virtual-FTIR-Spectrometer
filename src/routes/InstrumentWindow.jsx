@@ -9,7 +9,7 @@ import Main from "../images/InstrumentSVG";
 import Spinner from "../components/Spinner";
 
 // dictionaries
-import { toolTips } from "../dictionaries/svgLibrary";
+import { toolTips } from "../dictionaries/tooltips";
 
 // functions
 import { animateCornerCube } from "../functions/animation";
