@@ -44,15 +44,26 @@ g {
 
 /* ---------- svg animation ---------- */
 #movable-corner-cube {
-  transition: transform 2s ease;
+  transition: transform 5s ease;
 }
 
-#rect14491-7-9-2-3-5 {
-  transition: d 2s ease;
+#ray-top {
+  transition: d 5s ease;
+}
+
+#ray-middle {
+  transition: transform 5s ease;
+}
+
+#ray-bottom {
+  transition: d 5s ease;
+}
+
+#rect6675 {
+  transition: d 5s ease;
 }
 
 /* ---------- tooltip ---------- */
-
 .popup-tooltip {
   display: flex;
   flex-direction: column;
