@@ -5,7 +5,7 @@ import { Dialog, Drawer } from "@mui/material";
 import { OPD } from "../components/Fetch";
 import CloseButton from "../components/CloseButton";
 import ExperimentalSetup from "../routes/ExperimentalSetup";
-import Main from "../components/svgs/InstrumentSVG";
+import Main from "../images/InstrumentSVG";
 import Spinner from "../components/Spinner";
 
 // dictionaries
