@@ -2913,18 +2913,6 @@ const SvgInstrumentWindow = (props) => (
           transform="rotate(90)"
         />
         <path
-          id="rect14491-7-9-2-3-5"
-          d="m953.417-2026.826 94.391-91.072v670.662l-94.391 95.49z"
-          style={{
-            opacity: 0.65,
-            fill: "#ff6638",
-            strokeWidth: 0.920739,
-            strokeLinecap: "square",
-            paintOrder: "fill markers stroke",
-          }}
-          transform="rotate(90)"
-        />
-        <path
           id="rect14491-7-9-2-3-6"
           d="m292.557-1363.255 94.659-93.352v353.825l-94.659-93.353z"
           style={{
@@ -3005,6 +2993,20 @@ const SvgInstrumentWindow = (props) => (
             strokeLinecap: "square",
             paintOrder: "fill markers stroke",
           }}
+        />
+      </g>
+      <g id="ray-top">
+        <path
+          id="rect14491-7-9-2-3-5"
+          d="m953.417-2026.826 94.391-91.072v670.662l-94.391 95.49z"
+          style={{
+            opacity: 0.65,
+            fill: "#ff6638",
+            strokeWidth: 0.920739,
+            strokeLinecap: "square",
+            paintOrder: "fill markers stroke",
+          }}
+          transform="rotate(90)"
         />
       </g>
       <g id="laser" transform="translate(-40.354 -228.052) scale(3.74451)">

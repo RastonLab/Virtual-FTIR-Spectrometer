@@ -42,6 +42,15 @@ g {
   pointer-events: all;
 }
 
+/* ---------- svg animation ---------- */
+#movable-corner-cube {
+  transition: transform 2s ease;
+}
+
+#rect14491-7-9-2-3-5 {
+  transition: d 2s ease;
+}
+
 /* ---------- tooltip ---------- */
 
 .popup-tooltip {
