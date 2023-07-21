@@ -1,5 +1,8 @@
 import React from "react";
 
+// constants
+import * as mode from "../dictionaries/constants";
+
 // functions
 import checkParams from "../functions/checkParams";
 
@@ -15,7 +18,7 @@ import { setPeaksData } from "../redux/peaksDataSlice";
 import { setAbsorbanceData } from "../redux/absorbanceDataSlice";
 import { setSpinner } from "../redux/spinnerSlice";
 import { setTimer } from "../redux/timerSlice";
-import * as mode from "../functions/fetchURL.js";
+// import * as mode from "../functions/fetchURL.js";
 import { useNavigate } from "react-router-dom";
 
 export const OPD = {

@@ -5,8 +5,8 @@ import Fetch from "./Fetch";
 import Plot from "react-plotly.js";
 import Spinner from "./Spinner";
 
-// functions
-import * as fetchURL from "../functions/fetchURL";
+// constants
+import * as fetchURL from "../dictionaries/constants";
 
 // mui
 import Box from "@mui/material/Box";

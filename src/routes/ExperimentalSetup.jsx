@@ -6,13 +6,13 @@ import BackgroundPlotly from "../components/BackgroundPlotly";
 import Fetch from "../components/Fetch";
 import Spinner from "../components/Spinner";
 
+// constants
+import * as fetchURL from "../dictionaries/constants";
+
 // dictionaries
 import { molecules } from "../dictionaries/molecule";
 import { resolutions } from "../dictionaries/resolution";
 import { zeroFills } from "../dictionaries/zeroFill";
-
-// functions
-import * as fetchURL from "../functions/fetchURL";
 
 // inputs
 import Wavenumber from "../components/inputs/Wavenumber";
