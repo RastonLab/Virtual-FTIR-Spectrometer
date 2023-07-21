@@ -3538,10 +3538,7 @@ const SvgInstrumentWindow = (props) => (
           }}
         />
       </g>
-      <g
-        id="pressure-gauge"
-        transform="translate(2143.182 1781.672) scale(.76667)"
-      >
+      <g id="manometer" transform="translate(2143.182 1781.672) scale(.76667)">
         <path
           id="rect29156"
           d="M106.742 254.124h44.944v11.236h-44.944z"
