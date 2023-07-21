@@ -4,12 +4,15 @@ import React, { useState } from "react";
 import { Dialog, Drawer } from "@mui/material";
 import { OPD } from "../components/Fetch";
 import CloseButton from "../components/CloseButton";
+import ExperimentalSetup from "../routes/ExperimentalSetup";
 import Main from "../components/svgs/InstrumentSVG";
 import Spinner from "../components/Spinner";
-import ExperimentalSetup from "../routes/ExperimentalSetup"
 
 // dictionaries
 import { toolTips } from "../dictionaries/svgLibrary";
+
+// functions
+import { animateCornerCube } from "../functions/animation";
 
 // redux
 import { useSelector } from "react-redux";
@@ -71,58 +74,59 @@ export default function InstrumentWindow() {
 
   const toggleDrawer = () => {
     setDrawerOpen(!drawerOpen);
-  }
+  };
 
   const delay = OPD[resolution] * scan * 1000; // 1000 is to convert to milliseconds
 
   return (
     <div id="instrument-window">
-        <Main
-          id="instrument"
-          onClick={handleClick}
-          // ternary used to show/hide beamsplitter in the Main SVG
-          beamsplitter={{
-            caf2: beamsplitter === "AR_CaF2" ? "inline" : "none",
-            znse: beamsplitter === "AR_ZnSe" ? "inline" : "none",
-          }}
-          // ternary used to show/hide detector laser and mirror in the Main SVG
-          detector={{
-            insb: detector === "InSb" ? "inline" : "none",
-            mct: detector === "MCT" ? "inline" : "none",
-          }}
-          // ternary used to show/hide source laser and mirror in the Main SVG
-          source={{
-            globar: source === 1200 ? "inline" : "none",
-            tungsten: source === 3400 ? "inline" : "none",
-          }}
-          // ternary used to show/hide cell window in the Main SVG
-          window={{
-            caf2: window === "CaF2" ? "inline" : "none",
-            znse: window === "ZnSe" ? "inline" : "none",
-          }}
-          opd={OPD[resolution] * scan}
-          scan={scan}
-          range={`${waveMin} - ${waveMax}`}
-          resolution={resolution}
-          molecule={molecule}
-        />
+      <Main
+        id="instrument"
+        onClick={handleClick}
+        // ternary used to show/hide beamsplitter in the Main SVG
+        beamsplitter={{
+          caf2: beamsplitter === "AR_CaF2" ? "inline" : "none",
+          znse: beamsplitter === "AR_ZnSe" ? "inline" : "none",
+        }}
+        // ternary used to show/hide detector laser and mirror in the Main SVG
+        detector={{
+          insb: detector === "InSb" ? "inline" : "none",
+          mct: detector === "MCT" ? "inline" : "none",
+        }}
+        // ternary used to show/hide source laser and mirror in the Main SVG
+        source={{
+          globar: source === 1200 ? "inline" : "none",
+          tungsten: source === 3400 ? "inline" : "none",
+        }}
+        // ternary used to show/hide cell window in the Main SVG
+        window={{
+          caf2: window === "CaF2" ? "inline" : "none",
+          znse: window === "ZnSe" ? "inline" : "none",
+        }}
+        opd={OPD[resolution] * scan}
+        scan={scan}
+        range={`${waveMin} - ${waveMax}`}
+        resolution={resolution}
+        molecule={molecule}
+      />
 
-        <div id="instrument-spinner">
-          <h1>Scan Progress</h1>
-          <button className="button" onClick={toggleDrawer}>
-            Experiment Settings
-          </button>
-          {spinner && (
-            <Spinner variant="indeterminate" size={100} />
-          )}
-          {progress && !spinner && !devMode && (
-            <>
-              <h2>Processing Sample...</h2>
-              <Spinner variant="determinate" timer={delay} size={100} />
-            </>
-          )}
-        </div>
-      
+      <div id="instrument-spinner">
+        <h1>Scan Progress</h1>
+        <button className="button" onClick={toggleDrawer}>
+          Experiment Settings
+        </button>
+        <button className="button" onClick={animateCornerCube}>
+          Animate!
+        </button>
+        {spinner && <Spinner variant="indeterminate" size={100} />}
+        {progress && !spinner && !devMode && (
+          <>
+            <h2>Processing Sample...</h2>
+            <Spinner variant="determinate" timer={delay} size={100} />
+          </>
+        )}
+      </div>
+
       <Drawer
         anchor="right"
         open={drawerOpen}
@@ -135,7 +139,11 @@ export default function InstrumentWindow() {
       </Drawer>
 
       {element && (
-        <Dialog onClose={handleClick} open={toggled} fullScreen={element === "display" ?  true : false}>
+        <Dialog
+          onClose={handleClick}
+          open={toggled}
+          fullScreen={element === "display" ? true : false}
+        >
           <CloseButton id="customized-dialog-title" onClose={handleClick}>
             {toolTips[element].text}
           </CloseButton>
