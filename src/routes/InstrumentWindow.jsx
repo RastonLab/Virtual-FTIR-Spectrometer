@@ -1,11 +1,12 @@
 import React, { useState } from "react";
 
 // components
-import { Dialog } from "@mui/material";
+import { Dialog, Drawer } from "@mui/material";
 import { OPD } from "../components/Fetch";
 import CloseButton from "../components/CloseButton";
 import Main from "../components/svgs/InstrumentSVG";
 import Spinner from "../components/Spinner";
+import ExperimentalSetup from "../routes/ExperimentalSetup"
 
 // dictionaries
 import { toolTips } from "../dictionaries/svgLibrary";
@@ -68,6 +69,12 @@ export default function InstrumentWindow() {
     }
   };
 
+  const [drawerOpen, setDrawerOpen] = useState(false);
+
+  const toggleDrawer = () => {
+    setDrawerOpen(!drawerOpen);
+  }
+
   const delay = OPD[resolution] * scan * 1000; // 1000 is to convert to milliseconds
 
   return (
@@ -102,16 +109,33 @@ export default function InstrumentWindow() {
         molecule={molecule}
       />
 
-      <div id="instrument-spinner">
-        <h1>Scan Progress</h1>
-        {spinner && <Spinner variant="indeterminate" size={100} />}
-        {progress && !spinner && !devMode && (
-          <>
-            <h2>Processing Sample...</h2>
-            <Spinner variant="determinate" timer={delay} size={100} />
-          </>
-        )}
-      </div>
+        <div id="instrument-spinner">
+          <h1>Scan Progress</h1>
+          <button className="button" onClick={toggleDrawer}>
+            Experiment Settings
+          </button>
+          {spinner && (
+            <Spinner variant="indeterminate" size={100} />
+          )}
+          {progress && !spinner && !devMode && (
+            <>
+              <h2>Processing Sample...</h2>
+              <Spinner variant="determinate" timer={delay} size={100} />
+            </>
+          )}
+        </div>
+      
+      <Drawer
+        anchor="right"
+        open={drawerOpen}
+        onClose={toggleDrawer}
+        className="settings"
+      >
+        <CloseButton onClose={toggleDrawer}>
+          <ExperimentalSetup />
+        </CloseButton>
+      </Drawer>
+
       {element && (
         <Dialog
           onClose={handleClick}

@@ -13,6 +13,10 @@ import { Outlet, Link } from "react-router-dom";
 // style
 import "./style/App.css";
 
+// Icons
+import InfoIcon from "@mui/icons-material/Info";
+import { GitHub } from "@mui/icons-material";
+
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
 import Toolbar from "@mui/material/Toolbar";
@@ -25,11 +29,14 @@ import {
   AccordionDetails,
   AccordionSummary,
   Drawer,
+  Popover,
 } from "@mui/material";
 
 export default function App() {
   const [expanded, setExpanded] = useState("");
   const [drawer, setDrawer] = useState(false);
+  const [gitHubPopover, setGutHubPopover] = useState(false);
+  const [infoPopover, setInfoPopover] = useState(false);
 
   const handleChange = (panel) => (newExpanded) => {
     setExpanded(newExpanded ? panel : false);
@@ -41,6 +48,22 @@ export default function App() {
 
   const handleCloseNavMenu = () => {
     setDrawer(false);
+  };
+
+  const openGitHubPopover = (event) => {
+    setGutHubPopover(event.currentTarget);
+  };
+
+  const closeGitHubPopover = () => {
+    setGutHubPopover(null);
+  };
+
+  const openInfoPopover = (event) => {
+    setInfoPopover(event.currentTarget);
+  };
+
+  const closeInfoPopover = () => {
+    setInfoPopover(null);
   };
 
   return (
@@ -71,6 +94,7 @@ export default function App() {
                 open={drawer}
                 anchor={"left"}
                 onClose={handleCloseNavMenu}
+                className="mini-menu"
               >
                 <Box>
                   {menuItems.map((page) => (
@@ -189,7 +213,70 @@ export default function App() {
               </Accordion>
             ))}
             {/* End Full Sized Menu */}
-            <DevMode />
+            <div className="left-cluster">
+              <DevMode />
+              {/* Icons */}
+              <a
+                href="https://github.com/RastonLab/Virtual-FTIR-Spectrometer#readme"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <GitHub
+                  className="icon"
+                  sx={{ fontSize: "35px" }}
+                  onMouseEnter={openGitHubPopover}
+                  onMouseLeave={closeGitHubPopover}
+                />
+              </a>
+
+              <a
+                href="https://github.com/radis/radis#readme"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <InfoIcon
+                  className="icon"
+                  sx={{ fontSize: "38px" }}
+                  onMouseEnter={openInfoPopover}
+                  onMouseLeave={closeInfoPopover}
+                />
+              </a>
+
+              {/* Icon Popovers */}
+              <Popover
+                sx={{ pointerEvents: "none" }}
+                open={Boolean(gitHubPopover)}
+                anchorEl={gitHubPopover}
+                anchorOrigin={{
+                  vertical: "bottom",
+                  horizontal: "center",
+                }}
+                transformOrigin={{
+                  vertical: "top",
+                  horizontal: "right",
+                }}
+              >
+                If you are interested in the code and tools
+                <br /> behind this project check out our GitHub!
+              </Popover>
+
+              <Popover
+                sx={{ pointerEvents: "none" }}
+                open={Boolean(infoPopover)}
+                anchorEl={infoPopover}
+                anchorOrigin={{
+                  vertical: "bottom",
+                  horizontal: "center",
+                }}
+                transformOrigin={{
+                  vertical: "top",
+                  horizontal: "right",
+                }}
+              >
+                A core part of this project is RADIS. <br /> Find out more about
+                RADIS here!
+              </Popover>
+            </div>
           </Toolbar>
         </Container>
       </AppBar>

@@ -135,3 +135,11 @@ g {
     width: 250px;
   }
 }
+
+.settings #graph-and-error {
+  display: none;
+}
+
+.settings #experimental-setup {
+  justify-content: center;
+}

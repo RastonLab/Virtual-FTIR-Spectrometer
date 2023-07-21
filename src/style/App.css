@@ -24,7 +24,7 @@
 
 /* ---------- navigation / menu bar ---------- */
 .nav-area {
-  display: flex;
+  /* display: flex; */
   align-items: center;
   /* justify-content: left; */
   width: 100%;
@@ -64,7 +64,7 @@
   color: rgb(246, 176, 106) !important;
 }
 
-.MuiDrawer-paper {
+.mini-menu .MuiDrawer-paper {
   background-color: #1d2022 !important;
 }
 
@@ -97,6 +97,24 @@
 .dropdown-items p {
   padding: 0.5rem 0.2rem;
   text-align: center;
+}
+
+.left-cluster {
+  display: flex;
+  flex-grow: 1;
+  justify-content: right;
+}
+
+.icon {
+  margin: 0 4px;
+}
+
+a .icon {
+  color: white;
+}
+
+.left-cluster a {
+  padding-top: 8px;
 }
 
 .red {
@@ -144,4 +162,8 @@
   .nav-area {
     padding: 0;
   }
+}
+
+.mini-menu .MuiDrawer-paper {
+  background-color: #1d2022 !important;
 }
