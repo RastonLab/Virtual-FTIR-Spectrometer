@@ -1,17 +1,17 @@
 import { configureStore } from "@reduxjs/toolkit";
 
 // reducers
-import absorbanceDataReducer from "../features/absorbanceDataSlice";
-import backgroundDataReducer from "../features/backgroundDataSlice";
-import errorReducer from "../features/errorSlice";
-import parameterReducer from "../features/parameterSlice";
-import peaksDataReducer from "../features/peaksDataSlice";
-import progressReducer from "../features/progressSlice";
-import sampleDataReducer from "../features/sampleDataSlice";
-import spinnerReducer from "../features/spinnerSlice";
-import timerReducer from "../features/timerSlice";
+import absorbanceDataReducer from "../redux/absorbanceDataSlice";
+import backgroundDataReducer from "../redux/backgroundDataSlice";
+import errorReducer from "../redux/errorSlice";
+import parameterReducer from "../redux/parameterSlice";
+import peaksDataReducer from "../redux/peaksDataSlice";
+import progressReducer from "../redux/progressSlice";
+import sampleDataReducer from "../redux/sampleDataSlice";
+import spinnerReducer from "../redux/spinnerSlice";
+import timerReducer from "../redux/timerSlice";
 
-import devModeReducer from "../features/devModeSlice";
+import devModeReducer from "../redux/devModeSlice";
 
 export const store = configureStore({
   reducer: {
@@ -20,10 +20,10 @@ export const store = configureStore({
     error: errorReducer,
     parameter: parameterReducer,
     peaksData: peaksDataReducer,
-    progress: progressReducer,      // For when we are simulating scans
+    progress: progressReducer, // For when we are simulating scans
     sampleData: sampleDataReducer,
-    spinner: spinnerReducer,        // For when we are reaching out to the server
-    timer: timerReducer,            // For keeping track of how long the instrument window spiner has been running
-    devMode: devModeReducer
+    spinner: spinnerReducer, // For when we are reaching out to the server
+    timer: timerReducer, // For keeping track of how long the instrument window spiner has been running
+    devMode: devModeReducer,
   },
 });

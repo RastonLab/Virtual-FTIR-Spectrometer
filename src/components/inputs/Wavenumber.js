@@ -8,7 +8,7 @@ import Typography from "@mui/material/Typography";
 import { useDispatch } from "react-redux";
 
 // redux slice
-import { setWaveMin, setWaveMax } from "../../features/parameterSlice";
+import { setWaveMin, setWaveMax } from "../../redux/parameterSlice";
 
 export default function Wavenumber({ storeMin, storeMax, min, max, step }) {
   const dispatch = useDispatch();

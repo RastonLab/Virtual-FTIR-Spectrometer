@@ -11,7 +11,7 @@ import Typography from "@mui/material/Typography";
 import { useDispatch } from "react-redux";
 
 // redux slice
-import { setWindow } from "../../features/parameterSlice";
+import { setWindow } from "../../redux/parameterSlice";
 
 export default function CellWindow({ optionOneData, optionTwoData, store }) {
   const dispatch = useDispatch();

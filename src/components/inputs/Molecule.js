@@ -8,7 +8,7 @@ import Select from "@mui/material/Select";
 import { useDispatch } from "react-redux";
 
 // redux slice
-import { setMolecule } from "../../features/parameterSlice";
+import { setMolecule } from "../../redux/parameterSlice";
 
 export default function Molecule({ dictionary, store }) {
   const dispatch = useDispatch();

@@ -16,7 +16,7 @@ import TextField from "@mui/material/TextField";
 import { useSelector, useDispatch } from "react-redux";
 
 // redux slice
-import { setAbsorbanceData } from "../features/absorbanceDataSlice";
+import { setAbsorbanceData } from "../redux/absorbanceDataSlice";
 
 // style
 import "../style/components/Plotly.css";
@@ -219,7 +219,7 @@ export const AbsorbancePlotly = forwardRef((props, ref) => {
           {/* Displays data from the server if there were no errors */}
           <div className="absorb-col">
             {/* Data Display */}
-            {progress && <Spinner variant="indeterminate" size={100}  />}
+            {progress && <Spinner variant="indeterminate" size={100} />}
             {peaksData && !progress && !error && (
               <div id="data">
                 <h1>Absorbance Peaks</h1>

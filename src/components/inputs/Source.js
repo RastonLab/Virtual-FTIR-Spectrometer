@@ -11,7 +11,7 @@ import Typography from "@mui/material/Typography";
 import { useDispatch } from "react-redux";
 
 // redux slice
-import { setSource } from "../../features/parameterSlice";
+import { setSource } from "../../redux/parameterSlice";
 
 export default function Source({ optionOneData, optionTwoData, store }) {
   const dispatch = useDispatch();

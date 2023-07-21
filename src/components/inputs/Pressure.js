@@ -6,7 +6,7 @@ import TextField from "@mui/material/TextField";
 import { useDispatch } from "react-redux";
 
 // redux store
-import { setPressure } from "../../features/parameterSlice";
+import { setPressure } from "../../redux/parameterSlice";
 
 export default function Pressure({ store, min, max, step }) {
   const dispatch = useDispatch();

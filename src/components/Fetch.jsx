@@ -7,18 +7,18 @@ import checkParams from "../functions/checkParams";
 import { useDispatch, useSelector } from "react-redux";
 
 // redux slices
-import { setError } from "../features/errorSlice";
-import { setProgress } from "../features/progressSlice";
-import { setBackgroundData } from "../features/backgroundDataSlice";
-import { setSampleData } from "../features/sampleDataSlice";
-import { setPeaksData } from "../features/peaksDataSlice";
-import { setAbsorbanceData } from "../features/absorbanceDataSlice";
-import { setSpinner } from "../features/spinnerSlice";
-import { setTimer } from "../features/timerSlice";
+import { setError } from "../redux/errorSlice";
+import { setProgress } from "../redux/progressSlice";
+import { setBackgroundData } from "../redux/backgroundDataSlice";
+import { setSampleData } from "../redux/sampleDataSlice";
+import { setPeaksData } from "../redux/peaksDataSlice";
+import { setAbsorbanceData } from "../redux/absorbanceDataSlice";
+import { setSpinner } from "../redux/spinnerSlice";
+import { setTimer } from "../redux/timerSlice";
 import * as mode from "../functions/fetchURL.js";
 import { useNavigate } from "react-router-dom";
 
- export const OPD = {
+export const OPD = {
   1: 1,
   0.5: 2,
   0.25: 4,
@@ -31,15 +31,31 @@ import { useNavigate } from "react-router-dom";
 export let sleepID = 0;
 
 // this component reaches out to the flask server with user parameters and receives X and Y coordinates to graph
-export default function Fetch({ type, params, fetchURL, buttonText, buttonStyle }) {
-  
+export default function Fetch({
+  type,
+  params,
+  fetchURL,
+  buttonText,
+  buttonStyle,
+}) {
   const dispatch = useDispatch();
   const { progress } = useSelector((store) => store.progress);
-  const {devMode } = useSelector((store) => store.devMode)
-  let {beamsplitter, detector, medium, pressure, molecule, resolution, scan, 
-    source, waveMax, waveMin, window, zeroFill} 
-    = useSelector((store) => store.parameter)
-  
+  const { devMode } = useSelector((store) => store.devMode);
+  let {
+    beamsplitter,
+    detector,
+    medium,
+    pressure,
+    molecule,
+    resolution,
+    scan,
+    source,
+    waveMax,
+    waveMin,
+    window,
+    zeroFill,
+  } = useSelector((store) => store.parameter);
+
   let nav = useNavigate();
   if (mode.DEVELOPER_MODE) {
     nav = (route, num) => {};
@@ -74,19 +90,18 @@ export default function Fetch({ type, params, fetchURL, buttonText, buttonStyle 
           return;
         }
 
-        beamsplitter = params.beamsplitter
-        detector = params.detector
-        medium = params.medium
-        molecule = params.molecule
-        pressure = params.pressure
-        resolution = params.resolution
-        scan = params.scan
-        source = params.source
-        waveMax = params.waveMax
-        waveMin = params.waveMin
-        window = params.window
-        zeroFill = params.zeroFill
-
+        beamsplitter = params.beamsplitter;
+        detector = params.detector;
+        medium = params.medium;
+        molecule = params.molecule;
+        pressure = params.pressure;
+        resolution = params.resolution;
+        scan = params.scan;
+        source = params.source;
+        waveMax = params.waveMax;
+        waveMin = params.waveMin;
+        window = params.window;
+        zeroFill = params.zeroFill;
       }
 
       // Leaves delay as Immediate if DEVELOPER_MODE is false
@@ -132,7 +147,12 @@ export default function Fetch({ type, params, fetchURL, buttonText, buttonStyle 
     } else {
       dispatch(setProgress(false));
       dispatch(setSpinner(false));
-      dispatch(setError([true, `Invalid Request Type. Received "${type}": expected sample, background, or find_peaks`]));
+      dispatch(
+        setError([
+          true,
+          `Invalid Request Type. Received "${type}": expected sample, background, or find_peaks`,
+        ])
+      );
       return;
     }
 
@@ -175,7 +195,9 @@ export default function Fetch({ type, params, fetchURL, buttonText, buttonStyle 
               dispatch(setPeaksData(data));
               break;
             default:
-              console.log(`Invalid Request Type. Received: "${type}" expected sample, background, or find_peaks`);
+              console.log(
+                `Invalid Request Type. Received: "${type}" expected sample, background, or find_peaks`
+              );
               break;
           }
         }
@@ -195,7 +217,8 @@ export default function Fetch({ type, params, fetchURL, buttonText, buttonStyle 
       }
     } catch (error) {
       // error occurred when reaching out to server
-      let errorMessage = "We could not collect your data at this time. Please wait a few moments and try again.";
+      let errorMessage =
+        "We could not collect your data at this time. Please wait a few moments and try again.";
       console.log(error);
 
       // switch (error.message) {
