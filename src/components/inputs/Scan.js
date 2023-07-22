@@ -9,7 +9,7 @@ import Typography from "@mui/material/Typography";
 import { useDispatch } from "react-redux";
 
 // redux slice
-import { setScan } from "../../features/parameterSlice";
+import { setScan } from "../../redux/parameterSlice";
 
 export default function Scan({ store, min, max, step }) {
   const dispatch = useDispatch();

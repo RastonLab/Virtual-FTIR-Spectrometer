@@ -11,7 +11,7 @@ import Typography from "@mui/material/Typography";
 import { useDispatch } from "react-redux";
 
 // redux slice
-import { setDetector } from "../../features/parameterSlice";
+import { setDetector } from "../../redux/parameterSlice";
 
 export default function Detector({ optionOneData, optionTwoData, store }) {
   const dispatch = useDispatch();

@@ -1,34 +1,34 @@
 // svg imports
-import apd from "../components/svgs/tooltip/apd.svg";
-import aperture from "../components/svgs/tooltip/aperture-wheel.svg";
-import bscaf2 from "../components/svgs/tooltip/beamsplitter-caf2.svg";
-import bsznse from "../components/svgs/tooltip/beamsplitter-znse.svg";
-import cc from "../components/svgs/tooltip/corner-cube.svg";
-import fm from "../components/svgs/tooltip/flat-mirror.svg";
-import globar from "../components/svgs/tooltip/globar.svg";
-import insb from "../components/svgs/tooltip/insb.svg";
-import laser from "../components/svgs/tooltip/laser.svg";
-import lecture from "../components/svgs/tooltip/lecture.svg";
-import manometer from "../components/svgs/tooltip/manometer.svg";
-import mct from "../components/svgs/tooltip/mct.svg";
-import pm from "../components/svgs/tooltip/parabolic-mirror.webp";
-import pmh from "../components/svgs/tooltip/parabolic-mirror-hole.webp";
-import pump from "../components/svgs/tooltip/pump.svg";
-import samplecaf2 from "../components/svgs/tooltip/sample-cell-caf2.svg";
-import sampleznse from "../components/svgs/tooltip/sample-cell-znse.svg";
-import tungsten from "../components/svgs/tooltip/tungsten.svg";
+import apd from "../images/tooltips/apd.svg";
+import aperture from "../images/tooltips/aperture-wheel.svg";
+import bscaf2 from "../images/tooltips/beamsplitter-caf2.svg";
+import bsznse from "../images/tooltips/beamsplitter-znse.svg";
+import cc from "../images/tooltips/corner-cube.svg";
+import fm from "../images/tooltips/flat-mirror.svg";
+import globar from "../images/tooltips/globar.svg";
+import insb from "../images/tooltips/insb.svg";
+import laser from "../images/tooltips/laser.svg";
+import lecture from "../images/tooltips/lecture.svg";
+import manometer from "../images/tooltips/manometer.svg";
+import mct from "../images/tooltips/mct.svg";
+import pm from "../images/tooltips/parabolic-mirror.webp";
+import pmh from "../images/tooltips/parabolic-mirror-hole.webp";
+import pump from "../images/tooltips/pump.svg";
+import samplecaf2 from "../images/tooltips/sample-cell-caf2.svg";
+import sampleznse from "../images/tooltips/sample-cell-znse.svg";
+import tungsten from "../images/tooltips/tungsten.svg";
 
 // graph imports
-import AR_CaF2_graph from "./description_graphs/AR_CaF2_py.png";
-import AR_ZnSe_graph from "./description_graphs/AR_ZnSe_py.png";
-import blackbody_graph from "./description_graphs/Blackbody.png";
-import CaF2_graph from "./description_graphs/CaF2_py.png";
-import InSb_graph from "./description_graphs/InSb_py.png";
-import MCT_graph from "./description_graphs/MCT_py.png";
-import sourceCompartmentGraph from "./description_graphs/source-compartment-formula.png";
-import ZnSe_graph from "./description_graphs/ZnSe_py.png";
+import AR_CaF2_graph from "../images/graphs/AR_CaF2_py.png";
+import AR_ZnSe_graph from "../images/graphs/AR_ZnSe_py.png";
+import blackbody_graph from "../images/graphs/Blackbody.png";
+import CaF2_graph from "../images/graphs/CaF2_py.png";
+import InSb_graph from "../images/graphs/InSb_py.png";
+import MCT_graph from "../images/graphs/MCT_py.png";
+import source_formula from "../images/other/Source_Formula.png";
+import ZnSe_graph from "../images/graphs/ZnSe_py.png";
 
-import SpectrumWindow from "../routes/SpectrumWindow"
+import SpectrumWindow from "../routes/SpectrumWindow";
 
 // not in the tooltip object because it is used multiple times
 const flatRotatableMirrorSource = {
@@ -191,7 +191,7 @@ export const toolTips = {
     text: (
       <div className="popup-tooltip popup-spectra">
         <h1>Spectrum Display</h1>
-        <SpectrumWindow/>
+        <SpectrumWindow />
       </div>
     ),
   },
@@ -551,7 +551,7 @@ export const toolTips = {
 
         <img
           className="tooltip-planck"
-          src={sourceCompartmentGraph}
+          src={source_formula}
           alt="Planck's Law formula"
         />
 

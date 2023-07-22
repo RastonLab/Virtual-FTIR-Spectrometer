@@ -8,7 +8,7 @@ import Select from "@mui/material/Select";
 import { useDispatch } from "react-redux";
 
 // redux slice
-import { setResolution } from "../../features/parameterSlice";
+import { setResolution } from "../../redux/parameterSlice";
 
 export default function Resolution({ dictionary, store }) {
   const dispatch = useDispatch();
