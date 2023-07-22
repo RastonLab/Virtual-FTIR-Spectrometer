@@ -1,7 +1,7 @@
 // dictionaries
-import { molecules } from "../dictionaries/moleculeDict";
-import { resolutions } from "../dictionaries/resolutionDict";
-import { zeroFills } from "../dictionaries/zeroFillDict";
+import { molecules } from "../dictionaries/molecule";
+import { resolutions } from "../dictionaries/resolution";
+import { zeroFills } from "../dictionaries/zeroFill";
 
 export default function checkParams(params) {
   // check if wavenumbers are correct

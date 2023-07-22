@@ -11,7 +11,7 @@ import Typography from "@mui/material/Typography";
 import { useDispatch } from "react-redux";
 
 // redux slice
-import { setBeamsplitter } from "../../features/parameterSlice";
+import { setBeamsplitter } from "../../redux/parameterSlice";
 
 export default function Beamsplitter({ optionOneData, optionTwoData, store }) {
   const dispatch = useDispatch();

@@ -5,11 +5,11 @@ import { Dialog, Drawer } from "@mui/material";
 import { OPD } from "../components/Fetch";
 import CloseButton from "../components/CloseButton";
 import ExperimentalSetup from "../routes/ExperimentalSetup";
-import Main from "../components/svgs/InstrumentSVG";
+import Main from "../images/InstrumentSVG";
 import Spinner from "../components/Spinner";
 
 // dictionaries
-import { toolTips } from "../dictionaries/svgLibrary";
+import { toolTips } from "../dictionaries/tooltips";
 
 // functions
 import { animateCornerCube } from "../functions/animation";
@@ -64,6 +64,7 @@ export default function InstrumentWindow() {
   ];
 
   const handleClick = (event) => {
+    console.log(event.target.parentElement.id);
     if (!badID.includes(event.target.parentElement.id)) {
       setElement(event.target.parentElement.id);
       setToggled(!toggled);

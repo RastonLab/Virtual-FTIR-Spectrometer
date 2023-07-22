@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 // components
-import { ReactComponent as RLLogo } from "./components/svgs/RastonLabLogo.svg";
+import { ReactComponent as RLLogo } from "./images/RastonLabLogo.svg";
 import Popup from "./components/Popup";
 
 // dictionary

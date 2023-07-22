@@ -8,7 +8,7 @@ import Select from "@mui/material/Select";
 import { useDispatch } from "react-redux";
 
 // redux slice
-import { setZeroFill } from "../../features/parameterSlice";
+import { setZeroFill } from "../../redux/parameterSlice";
 
 export default function ZeroFill({ dictionary, store }) {
   const dispatch = useDispatch();

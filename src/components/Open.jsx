@@ -4,9 +4,9 @@ import { useState } from "react";
 import { useDispatch } from "react-redux";
 
 // redux slices
-import { setError } from "../features/errorSlice";
-import { setBackgroundData } from "../features/backgroundDataSlice";
-import { setSampleData } from "../features/sampleDataSlice";
+import { setError } from "../redux/errorSlice";
+import { setBackgroundData } from "../redux/backgroundDataSlice";
+import { setSampleData } from "../redux/sampleDataSlice";
 import {
   setBeamsplitter,
   setDetector,
@@ -20,7 +20,7 @@ import {
   setWaveMin,
   setWindow,
   setZeroFill,
-} from "../features/parameterSlice";
+} from "../redux/parameterSlice";
 
 // style
 import "../style/components/Open.css";
