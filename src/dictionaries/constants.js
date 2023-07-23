@@ -41,3 +41,14 @@ export const BAD_ID = [
   "scan-value",
   "tungsten-laser",
 ];
+
+// OPD values used to calculate a scans length
+export const OPD = {
+  1: 1,
+  0.5: 2,
+  0.25: 4,
+  0.125: 8,
+  0.0625: 16,
+  0.03125: 32,
+  0.015625: 64,
+};

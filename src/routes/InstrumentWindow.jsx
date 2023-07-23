@@ -2,14 +2,13 @@ import React, { useState } from "react";
 
 // components
 import { Dialog, Drawer } from "@mui/material";
-import { OPD } from "../components/Fetch";
 import CloseButton from "../components/CloseButton";
 import ExperimentalSetup from "../routes/ExperimentalSetup";
 import Main from "../images/InstrumentSVG";
 import Spinner from "../components/Spinner";
 
 // constants
-import { BAD_ID } from "../dictionaries/constants";
+import { BAD_ID, OPD } from "../dictionaries/constants";
 
 // dictionaries
 import { toolTips } from "../dictionaries/tooltips";
