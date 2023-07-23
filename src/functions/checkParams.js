@@ -1,5 +1,5 @@
 // constants
-import { PARAMETER_VALUE } from "../dictionaries/constants";
+import { PARAMETER_LABEL, PARAMETER_VALUE } from "../dictionaries/constants";
 
 // dictionaries
 import { molecules } from "../dictionaries/molecule";
@@ -34,7 +34,7 @@ export default function checkParams(params) {
     params.medium !== PARAMETER_VALUE.mediumVacuum &&
     params.medium !== PARAMETER_VALUE.mediumAir
   ) {
-    return `Medium ${params.medium} is not valid. Should be Vacuum or Air.`;
+    return `Medium ${params.medium} is not valid. Should be ${PARAMETER_LABEL.mediumVacuum} or ${PARAMETER_LABEL.mediumAir}.`;
   }
 
   // check if the pressure is correct
@@ -70,7 +70,7 @@ export default function checkParams(params) {
     params.beamsplitter !== PARAMETER_VALUE.beamsplitterCaF2 &&
     params.beamsplitter !== PARAMETER_VALUE.beamsplitterZnSe
   ) {
-    return `Beamsplitter ${params.beamsplitter} is not valid. Should be either AR-CaF2 or AR-ZnSe.`;
+    return `Beamsplitter ${params.beamsplitter} is not valid. Should be either ${PARAMETER_LABEL.beamsplitterCaF2} or ${PARAMETER_LABEL.beamsplitterZnSe}.`;
   }
 
   // check if cell window is correct
@@ -78,7 +78,7 @@ export default function checkParams(params) {
     params.window !== PARAMETER_VALUE.cellWindowZnSe &&
     params.window !== PARAMETER_VALUE.cellWindowCaF2
   ) {
-    return `Cell Window ${params.window} is not valid. Should be either ZnSe or CaF2.`;
+    return `Cell Window ${params.window} is not valid. Should be either ${PARAMETER_LABEL.cellWindowZnSe} or ${PARAMETER_LABEL.cellWindowCaF2}.`;
   }
 
   // check if detector is correct
@@ -86,7 +86,7 @@ export default function checkParams(params) {
     params.detector !== PARAMETER_VALUE.detectorInSb &&
     params.detector !== PARAMETER_VALUE.detectorMCT
   ) {
-    return `Detector ${params.detector} is not valid. Should be either InSb or MCT.`;
+    return `Detector ${params.detector} is not valid. Should be either ${PARAMETER_LABEL.detectorInSb} or ${PARAMETER_LABEL.detectorMCT}.`;
   }
 
   return false;

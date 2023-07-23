@@ -66,3 +66,17 @@ export const PARAMETER_VALUE = {
   sourceGlobar: 1200,
   sourceTungsten: 3400,
 };
+
+// frontend labels associated with user parameters/inputs
+export const PARAMETER_LABEL = {
+  beamsplitterZnSe: "AR-ZnSe",
+  beamsplitterCaF2: "AR-CaF₂",
+  cellWindowZnSe: "ZnSe",
+  cellWindowCaF2: "CaF₂",
+  detectorMCT: "MCT",
+  detectorInSb: "InSb",
+  mediumVacuum: "Vacuum",
+  mediumAir: "Air",
+  sourceGlobar: "Globar",
+  sourceTungsten: "Tungsten",
+};
