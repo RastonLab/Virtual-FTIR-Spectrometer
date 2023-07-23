@@ -1,6 +1,9 @@
 // components
 import { SwitchStyle } from "./SwitchStyle";
 
+// constants
+import { PARAMETER_LABEL } from "../../dictionaries/constants";
+
 // mui
 import FormControl from "@mui/material/FormControl";
 import FormLabel from "@mui/material/FormLabel";
@@ -30,13 +33,13 @@ export default function Source({ optionOneData, optionTwoData, store }) {
     <FormControl component="fieldset">
       <FormLabel component="legend">Source</FormLabel>
       <Stack direction="row" spacing={1} alignItems="center">
-        <Typography>Globar</Typography>
+        <Typography>{PARAMETER_LABEL.sourceGlobar}</Typography>
         <SwitchStyle
           {...label}
           onChange={handleChange}
           checked={store === optionTwoData ? true : false}
         />
-        <Typography>Tungsten</Typography>
+        <Typography>{PARAMETER_LABEL.sourceTungsten}</Typography>
       </Stack>
     </FormControl>
   );

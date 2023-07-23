@@ -1,6 +1,9 @@
 // components
 import { SwitchStyle } from "./SwitchStyle";
 
+// constants
+import { PARAMETER_LABEL } from "../../dictionaries/constants";
+
 // mui
 import FormControl from "@mui/material/FormControl";
 import FormLabel from "@mui/material/FormLabel";
@@ -30,13 +33,13 @@ export default function Medium({ optionOneData, optionTwoData, store }) {
     <FormControl component="fieldset">
       <FormLabel component="legend">Medium</FormLabel>
       <Stack direction="row" spacing={1} alignItems="center">
-        <Typography>Vacuum</Typography>
+        <Typography>{PARAMETER_LABEL.mediumVacuum}</Typography>
         <SwitchStyle
           {...label}
           onChange={handleChange}
           checked={store === optionTwoData ? true : false}
         />
-        <Typography>Air</Typography>
+        <Typography>{PARAMETER_LABEL.mediumAir}</Typography>
       </Stack>
     </FormControl>
   );
