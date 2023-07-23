@@ -8,6 +8,9 @@ import ExperimentalSetup from "../routes/ExperimentalSetup";
 import Main from "../images/InstrumentSVG";
 import Spinner from "../components/Spinner";
 
+// constants
+import { BAD_ID } from "../dictionaries/constants";
+
 // dictionaries
 import { toolTips } from "../dictionaries/tooltips";
 
@@ -39,33 +42,9 @@ export default function InstrumentWindow() {
   const [toggled, setToggled] = useState(false);
   const [element, setElement] = useState();
 
-  const badID = [
-    "beam-globar",
-    "beam-insb",
-    "beam-mct",
-    "beam-tungsten",
-    "beams",
-    "ftir",
-    "globar-laser",
-    "hose-1",
-    "hose-2",
-    "insb-laser",
-    "instrument-window",
-    "instrument",
-    "mct-laser",
-    "opd-value",
-    "molecule-value",
-    "range-value",
-    "rays",
-    "readout",
-    "resolution-value",
-    "scan-value",
-    "tungsten-laser",
-  ];
-
   const handleClick = (event) => {
     console.log(event.target.parentElement.id);
-    if (!badID.includes(event.target.parentElement.id)) {
+    if (!BAD_ID.includes(event.target.parentElement.id)) {
       setElement(event.target.parentElement.id);
       setToggled(!toggled);
     }

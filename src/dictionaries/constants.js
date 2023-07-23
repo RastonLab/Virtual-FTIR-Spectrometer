@@ -16,3 +16,28 @@ export let DEVELOPER_MODE = false;
 export function Toggle_Mode() {
   DEVELOPER_MODE = !DEVELOPER_MODE;
 }
+
+// svg ids that are not associated with tooltips but can be selected
+export const BAD_ID = [
+  "beam-globar",
+  "beam-insb",
+  "beam-mct",
+  "beam-tungsten",
+  "beams",
+  "ftir",
+  "globar-laser",
+  "hose-1",
+  "hose-2",
+  "insb-laser",
+  "instrument-window",
+  "instrument",
+  "mct-laser",
+  "opd-value",
+  "molecule-value",
+  "range-value",
+  "rays",
+  "readout",
+  "resolution-value",
+  "scan-value",
+  "tungsten-laser",
+];
