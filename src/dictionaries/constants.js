@@ -52,3 +52,17 @@ export const OPD = {
   0.03125: 32,
   0.015625: 64,
 };
+
+// backend values associated with user parameters/inputs
+export const PARAMETER_VALUE = {
+  beamsplitterZnSe: "AR_ZnSe",
+  beamsplitterCaF2: "AR_CaF2",
+  cellWindowZnSe: "ZnSe",
+  cellWindowCaF2: "CaF2",
+  detectorMCT: "MCT",
+  detectorInSb: "InSb",
+  mediumVacuum: "Vacuum",
+  mediumAir: "Air",
+  sourceGlobar: 1200,
+  sourceTungsten: 3400,
+};

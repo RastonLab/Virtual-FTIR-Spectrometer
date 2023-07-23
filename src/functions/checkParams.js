@@ -1,3 +1,6 @@
+// constants
+import { PARAMETER_VALUE } from "../dictionaries/constants";
+
 // dictionaries
 import { molecules } from "../dictionaries/molecule";
 import { resolutions } from "../dictionaries/resolution";
@@ -27,7 +30,10 @@ export default function checkParams(params) {
   }
 
   // check if the medium is correct
-  if (params.medium !== "Vacuum" && params.medium !== "Air") {
+  if (
+    params.medium !== PARAMETER_VALUE.mediumVacuum &&
+    params.medium !== PARAMETER_VALUE.mediumAir
+  ) {
     return `Medium ${params.medium} is not valid. Should be Vacuum or Air.`;
   }
 
@@ -52,22 +58,34 @@ export default function checkParams(params) {
   }
 
   // check if source is correct
-  if (params.source !== 1200 && params.source !== 3400) {
-    return `Source Temperature ${params.source} k is not valid for globar (1200 k) or tungsten (3400 k)`;
+  if (
+    params.source !== PARAMETER_VALUE.sourceGlobar &&
+    params.source !== PARAMETER_VALUE.sourceTungsten
+  ) {
+    return `Source Temperature ${params.source} k is not valid for globar (${PARAMETER_VALUE.sourceGlobar} k) or tungsten (${PARAMETER_VALUE.sourceTungsten} k)`;
   }
 
   // check if beamsplitter is correct
-  if (params.beamsplitter !== "AR_CaF2" && params.beamsplitter !== "AR_ZnSe") {
+  if (
+    params.beamsplitter !== PARAMETER_VALUE.beamsplitterCaF2 &&
+    params.beamsplitter !== PARAMETER_VALUE.beamsplitterZnSe
+  ) {
     return `Beamsplitter ${params.beamsplitter} is not valid. Should be either AR-CaF2 or AR-ZnSe.`;
   }
 
   // check if cell window is correct
-  if (params.window !== "ZnSe" && params.window !== "CaF2") {
+  if (
+    params.window !== PARAMETER_VALUE.cellWindowZnSe &&
+    params.window !== PARAMETER_VALUE.cellWindowCaF2
+  ) {
     return `Cell Window ${params.window} is not valid. Should be either ZnSe or CaF2.`;
   }
 
   // check if detector is correct
-  if (params.detector !== "InSb" && params.detector !== "MCT") {
+  if (
+    params.detector !== PARAMETER_VALUE.detectorInSb &&
+    params.detector !== PARAMETER_VALUE.detectorMCT
+  ) {
     return `Detector ${params.detector} is not valid. Should be either InSb or MCT.`;
   }
 

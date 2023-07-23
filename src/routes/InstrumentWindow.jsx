@@ -8,7 +8,7 @@ import Main from "../images/InstrumentSVG";
 import Spinner from "../components/Spinner";
 
 // constants
-import { BAD_ID, OPD } from "../dictionaries/constants";
+import { BAD_ID, OPD, PARAMETER_VALUE } from "../dictionaries/constants";
 
 // dictionaries
 import { toolTips } from "../dictionaries/tooltips";
@@ -64,23 +64,30 @@ export default function InstrumentWindow() {
         onClick={handleClick}
         // ternary used to show/hide beamsplitter in the Main SVG
         beamsplitter={{
-          caf2: beamsplitter === "AR_CaF2" ? "inline" : "none",
-          znse: beamsplitter === "AR_ZnSe" ? "inline" : "none",
+          caf2:
+            beamsplitter === PARAMETER_VALUE.beamsplitterCaF2
+              ? "inline"
+              : "none",
+          znse:
+            beamsplitter === PARAMETER_VALUE.beamsplitterZnSe
+              ? "inline"
+              : "none",
         }}
         // ternary used to show/hide detector laser and mirror in the Main SVG
         detector={{
-          insb: detector === "InSb" ? "inline" : "none",
-          mct: detector === "MCT" ? "inline" : "none",
+          insb: detector === PARAMETER_VALUE.detectorInSb ? "inline" : "none",
+          mct: detector === PARAMETER_VALUE.detectorMCT ? "inline" : "none",
         }}
         // ternary used to show/hide source laser and mirror in the Main SVG
         source={{
-          globar: source === 1200 ? "inline" : "none",
-          tungsten: source === 3400 ? "inline" : "none",
+          globar: source === PARAMETER_VALUE.sourceGlobar ? "inline" : "none",
+          tungsten:
+            source === PARAMETER_VALUE.sourceTungsten ? "inline" : "none",
         }}
         // ternary used to show/hide cell window in the Main SVG
         window={{
-          caf2: window === "CaF2" ? "inline" : "none",
-          znse: window === "ZnSe" ? "inline" : "none",
+          caf2: window === PARAMETER_VALUE.cellWindowCaF2 ? "inline" : "none",
+          znse: window === PARAMETER_VALUE.cellWindowZnSe ? "inline" : "none",
         }}
         opd={OPD[resolution] * scan}
         scan={scan}
