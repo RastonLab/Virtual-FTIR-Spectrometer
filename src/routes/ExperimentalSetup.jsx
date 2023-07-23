@@ -7,7 +7,7 @@ import Fetch from "../components/Fetch";
 import Spinner from "../components/Spinner";
 
 // constants
-import * as fetchURL from "../dictionaries/constants";
+import { BACKGROUND, SAMPLE } from "../dictionaries/constants";
 
 // dictionaries
 import { molecules } from "../dictionaries/molecule";
@@ -147,7 +147,7 @@ export default function ExperimentalSetup() {
                 window,
                 zeroFill,
               }}
-              fetchURL={fetchURL.BACKGROUND}
+              fetchURL={BACKGROUND}
               buttonText={"Collect Background Spectrum"}
               buttonStyle={"button"}
             />
@@ -167,7 +167,7 @@ export default function ExperimentalSetup() {
                 window,
                 zeroFill,
               }}
-              fetchURL={fetchURL.SAMPLE}
+              fetchURL={SAMPLE}
               buttonText="Collect Sample Spectrum"
               buttonStyle={"button"}
             />

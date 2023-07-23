@@ -6,7 +6,7 @@ import Plot from "react-plotly.js";
 import Spinner from "./Spinner";
 
 // constants
-import * as fetchURL from "../dictionaries/constants";
+import { FIND_PEAKS } from "../dictionaries/constants";
 
 // mui
 import Box from "@mui/material/Box";
@@ -209,7 +209,7 @@ export const AbsorbancePlotly = forwardRef((props, ref) => {
                 upperBound: upperBound,
                 threshold: threshold,
               }}
-              fetchURL={fetchURL.FIND_PEAKS}
+              fetchURL={FIND_PEAKS}
               buttonText={"Find Peaks"}
               buttonStyle={"button"}
             />
