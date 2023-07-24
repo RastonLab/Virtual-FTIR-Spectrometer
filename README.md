@@ -44,6 +44,86 @@ The intended audience for this application is undergraduate chemistry students s
 
 **_TODO_**
 
+## Notes
+
+The following sections will be about more complex features and implementations that new programmers to the project may need more explication.
+
+### Redux Toolkit
+
+Redux Toolkit is used to provide centralized state between different components and routes withing the application. An official [Redux Toolkit tutorial](https://redux-toolkit.js.org/tutorials/quick-start) and a [FreeCodeCamp Redux Toolkit course](https://www.freecodecamp.org/news/learn-redux-toolkit-the-recommended-way-to-use-redux) was used to setup state in our application.
+
+### SVG
+
+#### SVG Diagrams
+
+One of the major features of this project is the interactive SVG that students can use to learn more about the spectrometer. All SVG assets can be found in an accompanying [GitHub repository](https://github.com/RastonLab/Virtual-Instrument-Diagrams).
+
+#### SVG Optimization and Components
+
+SVGs created in Inkscape have tags that are not supported in default React. Because of this, we need to _optimize_ the SVG by removing these tags. This optimization can be done easily in [SVGOMG's GUI](https://jakearchibald.github.io/svgomg/) (just remember to update the settings to not cleanup IDs).
+
+We have implemented a solution that automates the optimization and/ or translation from native SVG to `.jsx` (allows for finer-grain control using JavaScript). (For both of the commands listed below, `svgo.config.js` is used to change some of the default `SVGO` settings.)
+
+- To optimize tooltip SVGs, place the SVGs in the `src/images/tooltips/` directory and run `npm run svgo`.
+
+- To optimize and translate the Instrument Window SVG, place the SVG into the `src/images/` directory and run `npm run svgr`. This command will remove the `.svg` file from the directory.
+
+#### SVG Tooltips
+
+When certain parts of the Instrument Window are clicked, a popup with additional image(s) and a description will appear. The underlying component behind this is the [MUI Dialog](https://mui.com/material-ui/react-dialog/).
+
+In the SVG, components are collated by setting group IDs (the `<g>` element). In JavaScript, the SVG is setup with an `onClick` listener that will target the parent element's ID (`event.target.parentElement.id`), which is the group's ID. A dictionary (`src/dictionaries/tooltips.js`) is used to store and format text and images associated with each tooltip.
+
+A simplified version of this code is shown below:
+
+```js
+// InstrumentWindow.jsx
+import React, { useState } from "react";
+
+// components
+import { Dialog } from "@mui/material";
+import MySVG from "../images/InstrumentSVG";
+
+// constants
+import { BAD_ID } from "../dictionaries/constants";
+
+// dictionaries - holds contents of the tooltips
+import { tooltips } from "../dictionaries/tooltips";
+
+// style
+import "../style/routes/InstrumentWindow.css";
+
+export default function InstrumentWindow() {
+  const [toggled, setToggled] = useState(false);
+  const [element, setElement] = useState();
+
+  // looks at click event and determines ID selected
+  //   some IDs are considered "bad" (do not have tooltips)
+  const handleClick = (event) => {
+    if (!BAD_ID.includes(event.target.parentElement.id)) {
+      setElement(event.target.parentElement.id);
+      setToggled(!toggled);
+    }
+  };
+
+  return (
+    <div>
+      <MySVG onClick={handleClick} />
+
+      {element && (
+        <Dialog
+          onClose={handleClick}
+          open={toggled}
+          fullScreen={element === "display" ? true : false}
+        >
+          {toolTips[element].text}
+        </Dialog>
+      )}
+    </div>
+  );
+}
+```
+
 ## Contributing
 
 Upkeep of this project is intended for recruited undergraduate students, but pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
@@ -79,5 +159,7 @@ Licensed under **_TODO_**
 - [SVGR](https://github.com/gregberge/svgr): Tool for transforming SVGs into React components (Licensed [MIT](https://github.com/gregberge/svgr/blob/main/LICENSE))
 
 **Inspiration from:**
+
+- [Make a README](https://www.makeareadme.com/): Inspiration for README.md template (Licensed [MIT](https://github.com/dguo/make-a-readme/blob/main/LICENSE))
 
 - [Radis app](https://www.radis.app/): Inspiration for user interface components like the dual slider for the wavenumber range (Licensed [LGPL-3.0](https://github.com/suzil/radis-app/blob/main/LICENSE))
