@@ -96,7 +96,7 @@ export default function Fetch({
         zeroFill = params.zeroFill;
       }
 
-      // Leaves delay as Immediate if DEVELOPER_MODE is false
+      // Leaves delay as Immediate if in devMode
       if (!devMode) {
         // Calculate time the scan would take
         delay = OPD[resolution] * scan * 1000; // 1000 is to convert to milliseconds
@@ -129,9 +129,26 @@ export default function Fetch({
         zeroFill: zeroFill,
       });
     } else if (type.localeCompare("find_peaks") === 0) {
+
+      let startIndex = params.x.findIndex((element) => {
+        return element >= params.lowerBound;
+      });
+
+      if (startIndex === -1) {
+        startIndex = 0;
+      }
+
+      let endIndex = params.x.findIndex((element) => {
+        return element >= params.upperBound;
+      });
+
+      if (endIndex === -1) {
+        endIndex = params.x.length - 1
+      }
+
       body = JSON.stringify({
-        x: params.x,
-        y: params.y,
+        x: params.x.slice(startIndex, endIndex + 1),
+        y: params.y.slice(startIndex, endIndex + 1),
         lowerbound: params.lowerBound,
         upperbound: params.upperBound,
         threshold: params.threshold,
