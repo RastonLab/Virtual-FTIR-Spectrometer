@@ -1,7 +1,7 @@
 import React from "react";
 
 // constants
-import { DEVELOPER_MODE, OPD } from "../dictionaries/constants";
+import { OPD } from "../dictionaries/constants";
 
 // functions
 import checkParams from "../functions/checkParams";
@@ -49,7 +49,7 @@ export default function Fetch({
   } = useSelector((store) => store.parameter);
 
   let nav = useNavigate();
-  if (DEVELOPER_MODE) {
+  if (devMode) {
     nav = (route, num) => {};
   }
 
