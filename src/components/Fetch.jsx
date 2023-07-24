@@ -49,7 +49,7 @@ export default function Fetch({
   } = useSelector((store) => store.parameter);
 
   let nav = useNavigate();
-  if (devMode) {
+  if (!devMode) {
     nav = (route, num) => {};
   }
 
