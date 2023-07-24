@@ -68,6 +68,10 @@ We have implemented a solution that automates the optimization and/ or translati
 
 - To optimize and translate the Instrument Window SVG, place the SVG into the `src/images/` directory and run `npm run svgr`. This command will remove the `.svg` file from the directory.
 
+#### SVG Interactivity and Animation
+
+**_TODO_**
+
 #### SVG Tooltips
 
 When certain parts of the Instrument Window are clicked, a popup with additional image(s) and a description will appear. The underlying component behind this is the [MUI Dialog](https://mui.com/material-ui/react-dialog/).
