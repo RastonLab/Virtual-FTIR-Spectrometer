@@ -1,7 +1,7 @@
 import React from "react";
 
 // constants
-import * as mode from "../dictionaries/constants";
+import { DEVELOPER_MODE, OPD } from "../dictionaries/constants";
 
 // functions
 import checkParams from "../functions/checkParams";
@@ -18,18 +18,7 @@ import { setPeaksData } from "../redux/peaksDataSlice";
 import { setAbsorbanceData } from "../redux/absorbanceDataSlice";
 import { setSpinner } from "../redux/spinnerSlice";
 import { setTimer } from "../redux/timerSlice";
-// import * as mode from "../functions/fetchURL.js";
 import { useNavigate } from "react-router-dom";
-
-export const OPD = {
-  1: 1,
-  0.5: 2,
-  0.25: 4,
-  0.125: 8,
-  0.0625: 16,
-  0.03125: 32,
-  0.015625: 64,
-};
 
 export let sleepID = 0;
 
@@ -60,7 +49,7 @@ export default function Fetch({
   } = useSelector((store) => store.parameter);
 
   let nav = useNavigate();
-  if (mode.DEVELOPER_MODE) {
+  if (DEVELOPER_MODE) {
     nav = (route, num) => {};
   }
 

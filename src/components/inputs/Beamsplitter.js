@@ -1,6 +1,9 @@
 // components
 import { SwitchStyle } from "./SwitchStyle";
 
+// constants
+import { PARAMETER_LABEL } from "../../dictionaries/constants";
+
 // mui
 import FormControl from "@mui/material/FormControl";
 import FormLabel from "@mui/material/FormLabel";
@@ -30,13 +33,13 @@ export default function Beamsplitter({ optionOneData, optionTwoData, store }) {
     <FormControl component="fieldset">
       <FormLabel component="legend">Beamsplitter</FormLabel>
       <Stack direction="row" spacing={1} alignItems="center">
-        <Typography>AR-ZnSe</Typography>
+        <Typography>{PARAMETER_LABEL.beamsplitterZnSe}</Typography>
         <SwitchStyle
           {...label}
           onChange={handleChange}
           checked={store === optionTwoData ? true : false}
         />
-        <Typography>AR-CaF₂</Typography>
+        <Typography>{PARAMETER_LABEL.beamsplitterCaF2}</Typography>
       </Stack>
     </FormControl>
   );

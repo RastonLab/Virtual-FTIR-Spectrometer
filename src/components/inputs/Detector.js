@@ -1,6 +1,9 @@
 // components
 import { SwitchStyle } from "./SwitchStyle";
 
+// constants
+import { PARAMETER_LABEL } from "../../dictionaries/constants";
+
 // mui
 import FormControl from "@mui/material/FormControl";
 import FormLabel from "@mui/material/FormLabel";
@@ -30,13 +33,13 @@ export default function Detector({ optionOneData, optionTwoData, store }) {
     <FormControl component="fieldset">
       <FormLabel component="legend">Detector</FormLabel>
       <Stack direction="row" spacing={1} alignItems="center">
-        <Typography>MCT</Typography>
+        <Typography>{PARAMETER_LABEL.detectorMCT}</Typography>
         <SwitchStyle
           {...label}
           onChange={handleChange}
           checked={store === optionTwoData ? true : false}
         />
-        <Typography>InSb</Typography>
+        <Typography>{PARAMETER_LABEL.detectorInSb}</Typography>
       </Stack>
     </FormControl>
   );

@@ -7,7 +7,7 @@ import Fetch from "../components/Fetch";
 import Spinner from "../components/Spinner";
 
 // constants
-import * as fetchURL from "../dictionaries/constants";
+import { BACKGROUND, PARAMETER_VALUE, SAMPLE } from "../dictionaries/constants";
 
 // dictionaries
 import { molecules } from "../dictionaries/molecule";
@@ -92,40 +92,40 @@ export default function ExperimentalSetup() {
         <div className="exp-col">
           <div className="parameter">
             <Source
-              optionOneData={1200} // globar
-              optionTwoData={3400} // tungsten
+              optionOneData={PARAMETER_VALUE.sourceGlobar}
+              optionTwoData={PARAMETER_VALUE.sourceTungsten}
               store={source}
             />
           </div>
 
           <div className="parameter">
             <Beamsplitter
-              optionOneData={"AR_ZnSe"} // ar_znse
-              optionTwoData={"AR_CaF2"} // ar_caf2
+              optionOneData={PARAMETER_VALUE.beamsplitterZnSe}
+              optionTwoData={PARAMETER_VALUE.beamsplitterCaF2}
               store={beamsplitter}
             />
           </div>
 
           <div className="parameter">
             <CellWindow
-              optionOneData={"ZnSe"} // znse
-              optionTwoData={"CaF2"} // caf2
+              optionOneData={PARAMETER_VALUE.cellWindowZnSe}
+              optionTwoData={PARAMETER_VALUE.cellWindowCaF2}
               store={window}
             />
           </div>
 
           <div className="parameter">
             <Detector
-              optionOneData={"MCT"} // mct
-              optionTwoData={"InSb"} // insb
+              optionOneData={PARAMETER_VALUE.detectorMCT}
+              optionTwoData={PARAMETER_VALUE.detectorInSb}
               store={detector}
             />
           </div>
 
           <div className="parameter">
             <Medium
-              optionOneData={"Vacuum"} // vacuum
-              optionTwoData={"Air"} // air
+              optionOneData={PARAMETER_VALUE.mediumVacuum}
+              optionTwoData={PARAMETER_VALUE.mediumAir}
               store={medium}
             />
           </div>
@@ -147,7 +147,7 @@ export default function ExperimentalSetup() {
                 window,
                 zeroFill,
               }}
-              fetchURL={fetchURL.BACKGROUND}
+              fetchURL={BACKGROUND}
               buttonText={"Collect Background Spectrum"}
               buttonStyle={"button"}
             />
@@ -167,7 +167,7 @@ export default function ExperimentalSetup() {
                 window,
                 zeroFill,
               }}
-              fetchURL={fetchURL.SAMPLE}
+              fetchURL={SAMPLE}
               buttonText="Collect Sample Spectrum"
               buttonStyle={"button"}
             />

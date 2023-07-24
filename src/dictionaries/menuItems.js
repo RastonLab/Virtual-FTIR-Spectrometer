@@ -3,10 +3,9 @@ import { Open } from "../components/Open";
 import Print from "../components/Print";
 import CancelScan from "../components/CancelScan";
 import Fetch from "../components/Fetch";
-// import DevMode from "../components/DevMode";
 
 // constants
-import * as fetchURL from "../dictionaries/constants";
+import { BACKGROUND, SAMPLE } from "../dictionaries/constants";
 
 // This file controls what shows up in the menu bar. To remove something
 // from the menu bar, either remove the code or comment it out
@@ -59,7 +58,7 @@ export const menuItems = [
         component: (
           <Fetch
             type="background"
-            fetchURL={fetchURL.BACKGROUND}
+            fetchURL={BACKGROUND}
             buttonText={"Collect Background Spectrum"}
           />
         ),
@@ -69,7 +68,7 @@ export const menuItems = [
         component: (
           <Fetch
             type="sample"
-            fetchURL={fetchURL.SAMPLE}
+            fetchURL={SAMPLE}
             buttonText={"Collect Sample Spectrum"}
           />
         ),

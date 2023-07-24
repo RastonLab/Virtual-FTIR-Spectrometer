@@ -1,6 +1,9 @@
 // components
 import { SwitchStyle } from "./SwitchStyle";
 
+// constants
+import { PARAMETER_LABEL } from "../../dictionaries/constants";
+
 // mui
 import FormControl from "@mui/material/FormControl";
 import FormLabel from "@mui/material/FormLabel";
@@ -30,13 +33,13 @@ export default function CellWindow({ optionOneData, optionTwoData, store }) {
     <FormControl component="fieldset">
       <FormLabel component="legend">Cell Window</FormLabel>
       <Stack direction="row" spacing={1} alignItems="center">
-        <Typography>ZnSe</Typography>
+        <Typography>{PARAMETER_LABEL.cellWindowZnSe}</Typography>
         <SwitchStyle
           {...label}
           onChange={handleChange}
           checked={store === optionTwoData ? true : false}
         />
-        <Typography>CaF₂</Typography>
+        <Typography>{PARAMETER_LABEL.cellWindowCaF2}</Typography>
       </Stack>
     </FormControl>
   );
