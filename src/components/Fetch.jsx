@@ -18,6 +18,8 @@ import { setPeaksData } from "../redux/peaksDataSlice";
 import { setAbsorbanceData } from "../redux/absorbanceDataSlice";
 import { setSpinner } from "../redux/spinnerSlice";
 import { setTimer } from "../redux/timerSlice";
+import { setLectureBottle } from "../redux/lectureBottleSlice"
+
 import { useNavigate } from "react-router-dom";
 
 export let sleepID = 0;
@@ -100,6 +102,13 @@ export default function Fetch({
       if (!devMode) {
         // Calculate time the scan would take
         delay = OPD[resolution] * scan * 1000; // 1000 is to convert to milliseconds
+      }
+
+      // Controls the Label and valve on the Lecture Bottle
+      if (type.localeCompare("background") === 0 ) {
+        dispatch(setLectureBottle(false));
+      } else if (type.localeCompare("sample") === 0 ) {
+        dispatch(setLectureBottle(true));
       }
 
       // calculate medium if set to "Air"

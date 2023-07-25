@@ -39,6 +39,7 @@ export default function InstrumentWindow() {
   const { progress } = useSelector((store) => store.progress);
   const { spinner } = useSelector((store) => store.spinner);
   const { devMode } = useSelector((store) => store.devMode);
+  const { lectureBottleInUse } = useSelector((store) => store.lectureBottle);
   const [toggled, setToggled] = useState(false);
   const [element, setElement] = useState();
 
@@ -94,7 +95,7 @@ export default function InstrumentWindow() {
         scan={scan}
         range={`${waveMin} - ${waveMax}`}
         resolution={resolution}
-        molecule={molecule_labels[molecule]}
+        molecule={lectureBottleInUse ? molecule_labels[molecule] : ""}
       />
 
       <div id="instrument-spinner">
