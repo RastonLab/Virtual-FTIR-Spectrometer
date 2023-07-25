@@ -8,12 +8,12 @@ const lectureBottleSlice = createSlice({
   name: "lectureBottle",
   initialState,
   reducers: {
-    setDevMode: (state, { payload }) => {
+    setLectureBottle: (state, { payload }) => {
       state.lectureBottleInUse = payload;
     },
   },
 });
 
-export const { setDevMode } = lectureBottleSlice.actions;
+export const { setLectureBottle } = lectureBottleSlice.actions;
 
 export default lectureBottleSlice.reducer;
