@@ -12,12 +12,14 @@ import spinnerReducer from "../redux/spinnerSlice";
 import timerReducer from "../redux/timerSlice";
 
 import devModeReducer from "../redux/devModeSlice";
+import lectureBottleReducer from "./lectureBottleSlice";
 
 export const store = configureStore({
   reducer: {
     absorbanceData: absorbanceDataReducer,
     backgroundData: backgroundDataReducer,
     error: errorReducer,
+    lectureBottle: lectureBottleReducer,
     parameter: parameterReducer,
     peaksData: peaksDataReducer,
     progress: progressReducer, // For when we are simulating scans
