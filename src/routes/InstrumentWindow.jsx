@@ -12,6 +12,7 @@ import { BAD_ID, OPD, PARAMETER_VALUE } from "../dictionaries/constants";
 
 // dictionaries
 import { toolTips } from "../dictionaries/tooltips";
+import { molecule_labels } from "../dictionaries/molecule";
 
 // functions
 import { animateCornerCube } from "../functions/animation";
@@ -93,7 +94,7 @@ export default function InstrumentWindow() {
         scan={scan}
         range={`${waveMin} - ${waveMax}`}
         resolution={resolution}
-        molecule={molecule}
+        molecule={molecule_labels[molecule]}
       />
 
       <div id="instrument-spinner">
