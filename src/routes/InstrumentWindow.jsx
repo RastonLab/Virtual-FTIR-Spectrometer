@@ -12,6 +12,7 @@ import { BAD_ID, OPD, PARAMETER_VALUE } from "../dictionaries/constants";
 
 // dictionaries
 import { toolTips } from "../dictionaries/tooltips";
+import { molecule_labels } from "../dictionaries/molecule";
 
 // functions
 import { animateCornerCube } from "../functions/animation";
@@ -38,6 +39,7 @@ export default function InstrumentWindow() {
   const { progress } = useSelector((store) => store.progress);
   const { spinner } = useSelector((store) => store.spinner);
   const { devMode } = useSelector((store) => store.devMode);
+  const { lectureBottleInUse } = useSelector((store) => store.lectureBottle);
   const [toggled, setToggled] = useState(false);
   const [element, setElement] = useState();
 
@@ -93,7 +95,7 @@ export default function InstrumentWindow() {
         scan={scan}
         range={`${waveMin} - ${waveMax}`}
         resolution={resolution}
-        molecule={molecule}
+        molecule={lectureBottleInUse ? molecule_labels[molecule] : ""}
       />
 
       <div id="instrument-spinner">
@@ -108,7 +110,7 @@ export default function InstrumentWindow() {
         {progress && !spinner && !devMode && (
           <>
             <h2>Processing Sample...</h2>
-            <Spinner variant="determinate" timer={delay} size={100} />
+            <Spinner variant="determinate" timer={delay} scans={scan} size={100} />
           </>
         )}
       </div>
