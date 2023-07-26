@@ -22,6 +22,8 @@ import {
   detectorInteractivity,
   sourceInteractivity,
   textInteractivity,
+  pumpValveInteractivity,
+  lectureValveInteractivity,
 } from "../functions/animation";
 
 // redux
@@ -35,6 +37,7 @@ export default function InstrumentWindow() {
   const {
     beamsplitter,
     detector,
+    medium,
     molecule,
     resolution,
     scan,
@@ -76,7 +79,18 @@ export default function InstrumentWindow() {
 
     cellWindowInteractivity(window);
 
-    textInteractivity(lectureBottleInUse ? molecule_labels[molecule] : "", OPD, resolution, scan, waveMax, waveMin);
+    textInteractivity(
+      lectureBottleInUse ? molecule_labels[molecule] : "",
+      OPD,
+      resolution,
+      scan,
+      waveMax,
+      waveMin
+    );
+
+    pumpValveInteractivity(medium);
+
+    lectureValveInteractivity(lectureBottleInUse);
   });
 
   return (
@@ -95,7 +109,13 @@ export default function InstrumentWindow() {
         {progress && !spinner && !devMode && (
           <>
             <h2>Processing Sample...</h2>
-            <Spinner variant="determinate" timer={delay} scans={scan} size={100} />
+            <Spinner
+              variant="determinate"
+              timer={delay}
+              scans={scan}
+              size={100}
+              opd={OPD[resolution]}
+            />
           </>
         )}
       </div>

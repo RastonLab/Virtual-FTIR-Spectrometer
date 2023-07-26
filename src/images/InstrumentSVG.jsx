@@ -9,6 +9,84 @@ const SvgInstrumentWindow = (props) => (
     {...props}
   >
     <defs id="defs6711">
+      <linearGradient id="linearGradient15">
+        <stop
+          id="stop12"
+          offset={0.25}
+          style={{
+            stopColor: "#737373",
+            stopOpacity: 1,
+          }}
+        />
+        <stop
+          id="stop13"
+          offset={0.5}
+          style={{
+            stopColor: "#606060",
+            stopOpacity: 1,
+          }}
+        />
+        <stop
+          id="stop15"
+          offset={0.95}
+          style={{
+            stopColor: "#777",
+            stopOpacity: 1,
+          }}
+        />
+      </linearGradient>
+      <linearGradient id="linearGradient10">
+        <stop
+          id="stop7"
+          offset={0.25}
+          style={{
+            stopColor: "#737373",
+            stopOpacity: 1,
+          }}
+        />
+        <stop
+          id="stop8"
+          offset={0.5}
+          style={{
+            stopColor: "#606060",
+            stopOpacity: 1,
+          }}
+        />
+        <stop
+          id="stop10"
+          offset={0.95}
+          style={{
+            stopColor: "#777",
+            stopOpacity: 1,
+          }}
+        />
+      </linearGradient>
+      <linearGradient id="linearGradient5">
+        <stop
+          id="stop2"
+          offset={0.25}
+          style={{
+            stopColor: "#737373",
+            stopOpacity: 1,
+          }}
+        />
+        <stop
+          id="stop3"
+          offset={0.5}
+          style={{
+            stopColor: "#606060",
+            stopOpacity: 1,
+          }}
+        />
+        <stop
+          id="stop5"
+          offset={0.95}
+          style={{
+            stopColor: "#777",
+            stopOpacity: 1,
+          }}
+        />
+      </linearGradient>
       <linearGradient id="linearGradient13434">
         <stop
           id="stop13430"
@@ -1420,14 +1498,6 @@ const SvgInstrumentWindow = (props) => (
       </linearGradient>
       <linearGradient id="linearGradient18591">
         <stop
-          id="stop18589"
-          offset={0.05}
-          style={{
-            stopColor: "#949494",
-            stopOpacity: 1,
-          }}
-        />
-        <stop
           id="stop18587"
           offset={0.25}
           style={{
@@ -1440,14 +1510,6 @@ const SvgInstrumentWindow = (props) => (
           offset={0.5}
           style={{
             stopColor: "#606060",
-            stopOpacity: 1,
-          }}
-        />
-        <stop
-          id="stop18583"
-          offset={0.75}
-          style={{
-            stopColor: "#969696",
             stopOpacity: 1,
           }}
         />
@@ -2467,7 +2529,7 @@ const SvgInstrumentWindow = (props) => (
         gradientUnits="userSpaceOnUse"
       />
       <linearGradient
-        xlinkHref="#linearGradient18591"
+        xlinkHref="#linearGradient10"
         id="linearGradient3037"
         x1={12.563}
         x2={22.563}
@@ -2497,7 +2559,7 @@ const SvgInstrumentWindow = (props) => (
         gradientUnits="userSpaceOnUse"
       />
       <linearGradient
-        xlinkHref="#linearGradient18591"
+        xlinkHref="#linearGradient5"
         id="linearGradient12498-2-4"
         x1={12.563}
         x2={22.563}
@@ -2619,7 +2681,7 @@ const SvgInstrumentWindow = (props) => (
         gradientUnits="userSpaceOnUse"
       />
       <linearGradient
-        xlinkHref="#linearGradient18591"
+        xlinkHref="#linearGradient15"
         id="linearGradient1738"
         x1={12.563}
         x2={22.563}
@@ -3927,439 +3989,125 @@ const SvgInstrumentWindow = (props) => (
           }}
         />
       </g>
-      <g
-        id="sample-cell-znse"
-        transform="translate(-5087.448 -3368.296) scale(13.08022)"
-      >
+      <g id="lecture" transform="rotate(-90 2488.174 83.486)">
         <path
-          id="rect5963-3-5-4"
-          d="M-550.753-433.552h3.007v4.079h-3.007z"
+          id="rect5963-2"
+          d="M-58.082 101.431h53.146v72.126h-53.146z"
           style={{
-            fill: "url(#linearGradient1728)",
+            fill: "url(#linearGradient11661-2)",
             fillOpacity: 1,
-            strokeWidth: 0.0183868,
+            strokeWidth: 0.325061,
           }}
-          transform="scale(-1)"
         />
         <path
-          id="rect4162-5-2-5"
-          d="M-551.397-429.473h4.295v2.147h-4.295z"
+          id="rect4162-5"
+          d="M-69.47 173.557H6.453v37.961H-69.47z"
           style={{
-            fill: "url(#linearGradient1730)",
+            fill: "url(#linearGradient10403-8)",
             fillOpacity: 1,
-            strokeWidth: 0.0110817,
+            strokeWidth: 0.195918,
           }}
-          transform="scale(-1)"
         />
         <rect
-          id="rect5181-6-1-3"
-          width={4.295}
-          height={0.043}
-          x={-551.397}
-          y={-428.896}
+          id="rect5181-2"
+          width={75.923}
+          height={0.759}
+          x={-69.47}
+          y={183.746}
           ry={0}
           style={{
             fill: "#a0a0a0",
             fillOpacity: 1,
-            strokeWidth: 0.00471508,
-          }}
-          transform="scale(-1)"
-        />
-        <path
-          id="rect9017-5-3-5"
-          d="M548.806 430.577a1.089 1.088 0 0 0-.643 1.056l-2.119.946a.256.256 0 0 0-.13.339l.105.234c.058.13.21.188.34.13l2.118-.945a1.089 1.088 0 0 0 1.216.227 1.089 1.088 0 0 0 .643-1.057l2.119-.945a.256.256 0 0 0 .13-.34l-.105-.234a.256.256 0 0 0-.34-.13l-2.118.946a1.089 1.088 0 0 0-1.216-.227z"
-          style={{
-            fill: "url(#linearGradient1732)",
-            fillOpacity: 1,
-            stroke: "none",
-            strokeWidth: 0.0269209,
-            strokeDasharray: "none",
-            strokeOpacity: 1,
+            strokeWidth: 0.0833591,
           }}
         />
         <path
-          id="rect5963-3-1-0-1"
-          d="M-572.973-433.552h3.007v4.079h-3.007z"
+          id="rect8157-1"
+          d="M-5.411 120.412h22.777v37.961H-5.411z"
           style={{
-            fill: "url(#linearGradient1734)",
+            fill: "url(#linearGradient11675-6)",
             fillOpacity: 1,
-            strokeWidth: 0.0183868,
+            strokeWidth: 0.284551,
           }}
-          transform="scale(-1)"
         />
         <path
-          id="rect4162-5-4-9-8"
-          d="M-573.617-429.473h4.295v2.147h-4.295z"
+          id="rect8161-9"
+          d="M-46.694 93.838h30.369v7.592h-30.369z"
           style={{
-            fill: "url(#linearGradient1736)",
+            fill: "url(#linearGradient11706-4)",
             fillOpacity: 1,
-            strokeWidth: 0.0110817,
+            strokeWidth: 0.604537,
           }}
-          transform="scale(-1)"
         />
         <rect
-          id="rect5181-6-8-4-3"
-          width={4.295}
-          height={0.043}
-          x={-573.617}
-          y={-428.896}
-          ry={0}
+          id="rect9017-6"
+          width={106.292}
+          height={11.388}
+          x={-84.655}
+          y={82.451}
+          ry={3.796}
           style={{
-            fill: "#a0a0a0",
+            fill: "url(#linearGradient12498-9)",
             fillOpacity: 1,
-            strokeWidth: 0.00471508,
-          }}
-          transform="scale(-1)"
-        />
-        <path
-          id="rect9017-5-0-2-7"
-          d="M571.026 430.577a1.089 1.088 0 0 0-.643 1.056l-2.119.946a.256.256 0 0 0-.13.339l.105.234c.058.13.21.188.34.13l2.118-.945a1.089 1.088 0 0 0 1.216.227 1.089 1.088 0 0 0 .643-1.057l2.119-.945a.256.256 0 0 0 .13-.34l-.105-.234a.256.256 0 0 0-.34-.13l-2.118.946a1.089 1.088 0 0 0-1.216-.227z"
-          style={{
-            fill: "url(#linearGradient1738)",
-            fillOpacity: 1,
-            stroke: "none",
-            strokeWidth: 0.0269209,
-            strokeDasharray: "none",
-            strokeOpacity: 1,
+            strokeWidth: 0.398371,
           }}
         />
         <path
-          id="rect7077-3-6"
-          d="M524.536 411.933h71.647v14.53h-71.647z"
+          id="rect234-8"
+          d="M87.831 313.33a113.884 113.2 0 0 0-113.883-113.2 113.884 113.2 0 0 0-113.884 113.2 113.884 113.2 0 0 0 .133 1.844c-.037.435-.133.853-.133 1.298V754.44c0 8.37 6.772 15.11 15.184 15.11H72.647c8.412 0 15.184-6.74 15.184-15.11V316.472c0-.206-.05-.4-.06-.605a113.884 113.2 0 0 0 .06-2.538z"
           style={{
-            fill: "none",
+            fill: "url(#linearGradient12519-0)",
             fillOpacity: 1,
-            stroke: "#000",
-            strokeWidth: 1.72705,
+            strokeWidth: 0.387489,
+          }}
+        />
+        <rect
+          id="rect1697-1-4"
+          width={189.028}
+          height={392.5}
+          x={-119.454}
+          y={348.434}
+          ry={5.607}
+          style={{
+            fill: "url(#linearGradient15522-4)",
+            fillOpacity: 1,
+            strokeWidth: 7.10926,
+          }}
+          transform="rotate(.127) skewX(.01)"
+        />
+        <text
+          xmlSpace="preserve"
+          id="molecule-value"
+          x={542.6}
+          y={25.267}
+          style={{
+            fontSize: "97.7207px",
+            lineHeight: 0,
+            fontFamily: "sans-serif",
+            InkscapeFontSpecification: "&quot",
+            textAlign: "center",
+            dominantBaseline: "central",
+            textAnchor: "middle",
+            fill: "#000",
+            strokeWidth: 34.3549,
             strokeLinecap: "square",
-            strokeDasharray: "none",
-            strokeOpacity: 1,
-            paintOrder: "markers stroke fill",
+            strokeLinejoin: "round",
+            paintOrder: "fill markers stroke",
           }}
-        />
-        <rect
-          id="cell-left-znse"
-          width={2.776}
-          height={15.067}
-          x={523.677}
-          y={411.664}
-          ry={0.391}
-          style={{
-            fill: "url(#linearGradient1740)",
-            fillOpacity: 1,
-            stroke: "none",
-            strokeWidth: 1.13341,
-            strokeDasharray: "none",
-            strokeOpacity: 1,
-            paintOrder: "markers stroke fill",
-          }}
-        />
-        <rect
-          id="cell-right-znse"
-          width={2.776}
-          height={15.067}
-          x={594.275}
-          y={411.664}
-          ry={0.391}
-          style={{
-            fill: "url(#linearGradient1744)",
-            fillOpacity: 1,
-            stroke: "none",
-            strokeWidth: 1.13341,
-            strokeDasharray: "none",
-            strokeOpacity: 1,
-            paintOrder: "markers stroke fill",
-          }}
-        />
-        <rect
-          id="rect6170-0-6"
-          width={4.258}
-          height={3.19}
-          x={593.587}
-          y={424.93}
-          ry={0.522}
-          style={{
-            fill: "#009ee0",
-            fillOpacity: 1,
-            stroke: "#000",
-            strokeWidth: 1.08274,
-            strokeLinecap: "square",
-            strokeDasharray: "none",
-            strokeOpacity: 1,
-            paintOrder: "markers stroke fill",
-          }}
-        />
-        <rect
-          id="rect6168-3-2"
-          width={4.258}
-          height={3.19}
-          x={593.587}
-          y={410.275}
-          ry={0.522}
-          style={{
-            fill: "#009ee0",
-            fillOpacity: 1,
-            stroke: "#000",
-            strokeWidth: 1.08274,
-            strokeLinecap: "square",
-            strokeDasharray: "none",
-            strokeOpacity: 1,
-            paintOrder: "markers stroke fill",
-          }}
-        />
-        <rect
-          id="rect10251-9-7"
-          width={4.258}
-          height={3.19}
-          x={522.883}
-          y={424.93}
-          ry={0.522}
-          style={{
-            fill: "#009ee0",
-            fillOpacity: 1,
-            stroke: "#000",
-            strokeWidth: 1.08274,
-            strokeLinecap: "square",
-            strokeDasharray: "none",
-            strokeOpacity: 1,
-            paintOrder: "markers stroke fill",
-          }}
-        />
-        <rect
-          id="rect8256-0-9-4"
-          width={4.258}
-          height={3.19}
-          x={522.883}
-          y={410.275}
-          ry={0.522}
-          style={{
-            fill: "#009ee0",
-            fillOpacity: 1,
-            stroke: "#000",
-            strokeWidth: 1.08275,
-            strokeLinecap: "square",
-            strokeDasharray: "none",
-            strokeOpacity: 1,
-            paintOrder: "markers stroke fill",
-          }}
-        />
-      </g>
-      <g
-        id="sample-cell-caf2"
-        transform="translate(-5087.448 -3368.296) scale(13.08022)"
-      >
-        <path
-          id="rect5963-3-5"
-          d="M-550.753-433.552h3.007v4.079h-3.007z"
-          style={{
-            fill: "url(#linearGradient3033)",
-            fillOpacity: 1,
-            strokeWidth: 0.0183868,
-          }}
-          transform="scale(-1)"
-        />
-        <path
-          id="rect4162-5-2"
-          d="M-551.397-429.473h4.295v2.147h-4.295z"
-          style={{
-            fill: "url(#linearGradient3035)",
-            fillOpacity: 1,
-            strokeWidth: 0.0110817,
-          }}
-          transform="scale(-1)"
-        />
-        <rect
-          id="rect5181-6-1"
-          width={4.295}
-          height={0.043}
-          x={-551.397}
-          y={-428.896}
-          ry={0}
-          style={{
-            fill: "#a0a0a0",
-            fillOpacity: 1,
-            strokeWidth: 0.00471508,
-          }}
-          transform="scale(-1)"
-        />
-        <path
-          id="rect9017-5-3"
-          d="M548.806 430.577a1.089 1.088 0 0 0-.643 1.056l-2.119.946a.256.256 0 0 0-.13.339l.105.234c.058.13.21.188.34.13l2.118-.945a1.089 1.088 0 0 0 1.216.227 1.089 1.088 0 0 0 .643-1.057l2.119-.945a.256.256 0 0 0 .13-.34l-.105-.234a.256.256 0 0 0-.34-.13l-2.118.946a1.089 1.088 0 0 0-1.216-.227z"
-          style={{
-            fill: "url(#linearGradient3037)",
-            fillOpacity: 1,
-            stroke: "none",
-            strokeWidth: 0.0269209,
-            strokeDasharray: "none",
-            strokeOpacity: 1,
-          }}
-        />
-        <path
-          id="rect5963-3-1-0"
-          d="M-572.973-433.552h3.007v4.079h-3.007z"
-          style={{
-            fill: "url(#linearGradient11661-6-6)",
-            fillOpacity: 1,
-            strokeWidth: 0.0183868,
-          }}
-          transform="scale(-1)"
-        />
-        <path
-          id="rect4162-5-4-9"
-          d="M-573.617-429.473h4.295v2.147h-4.295z"
-          style={{
-            fill: "url(#linearGradient10403-5-4)",
-            fillOpacity: 1,
-            strokeWidth: 0.0110817,
-          }}
-          transform="scale(-1)"
-        />
-        <rect
-          id="rect5181-6-8-4"
-          width={4.295}
-          height={0.043}
-          x={-573.617}
-          y={-428.896}
-          ry={0}
-          style={{
-            fill: "#a0a0a0",
-            fillOpacity: 1,
-            strokeWidth: 0.00471508,
-          }}
-          transform="scale(-1)"
-        />
-        <path
-          id="rect9017-5-0-2"
-          d="M571.026 430.577a1.089 1.088 0 0 0-.643 1.056l-2.119.946a.256.256 0 0 0-.13.339l.105.234c.058.13.21.188.34.13l2.118-.945a1.089 1.088 0 0 0 1.216.227 1.089 1.088 0 0 0 .643-1.057l2.119-.945a.256.256 0 0 0 .13-.34l-.105-.234a.256.256 0 0 0-.34-.13l-2.118.946a1.089 1.088 0 0 0-1.216-.227z"
-          style={{
-            fill: "url(#linearGradient12498-2-4)",
-            fillOpacity: 1,
-            stroke: "none",
-            strokeWidth: 0.0269209,
-            strokeDasharray: "none",
-            strokeOpacity: 1,
-          }}
-        />
-        <path
-          id="rect7077-3"
-          d="M524.536 411.933h71.647v14.53h-71.647z"
-          style={{
-            fill: "none",
-            fillOpacity: 1,
-            stroke: "#000",
-            strokeWidth: 1.72705,
-            strokeLinecap: "square",
-            strokeDasharray: "none",
-            strokeOpacity: 1,
-            paintOrder: "markers stroke fill",
-          }}
-        />
-        <rect
-          id="cell-left-caf2"
-          width={2.776}
-          height={15.067}
-          x={523.677}
-          y={411.664}
-          ry={0.391}
-          style={{
-            fill: "url(#linearGradient32969-4)",
-            fillOpacity: 1,
-            stroke: "none",
-            strokeWidth: 1.13341,
-            strokeDasharray: "none",
-            strokeOpacity: 1,
-            paintOrder: "markers stroke fill",
-          }}
-        />
-        <rect
-          id="cell-right-caf2"
-          width={2.776}
-          height={15.067}
-          x={594.275}
-          y={411.664}
-          ry={0.391}
-          style={{
-            fill: "url(#linearGradient5760-6)",
-            fillOpacity: 1,
-            stroke: "none",
-            strokeWidth: 1.13341,
-            strokeDasharray: "none",
-            strokeOpacity: 1,
-            paintOrder: "markers stroke fill",
-          }}
-        />
-        <rect
-          id="rect6170-0"
-          width={4.258}
-          height={3.19}
-          x={593.587}
-          y={424.93}
-          ry={0.522}
-          style={{
-            fill: "#009ee0",
-            fillOpacity: 1,
-            stroke: "#000",
-            strokeWidth: 1.08274,
-            strokeLinecap: "square",
-            strokeDasharray: "none",
-            strokeOpacity: 1,
-            paintOrder: "markers stroke fill",
-          }}
-        />
-        <rect
-          id="rect6168-3"
-          width={4.258}
-          height={3.19}
-          x={593.587}
-          y={410.275}
-          ry={0.522}
-          style={{
-            fill: "#009ee0",
-            fillOpacity: 1,
-            stroke: "#000",
-            strokeWidth: 1.08274,
-            strokeLinecap: "square",
-            strokeDasharray: "none",
-            strokeOpacity: 1,
-            paintOrder: "markers stroke fill",
-          }}
-        />
-        <rect
-          id="rect10251-9"
-          width={4.258}
-          height={3.19}
-          x={522.883}
-          y={424.93}
-          ry={0.522}
-          style={{
-            fill: "#009ee0",
-            fillOpacity: 1,
-            stroke: "#000",
-            strokeWidth: 1.08274,
-            strokeLinecap: "square",
-            strokeDasharray: "none",
-            strokeOpacity: 1,
-            paintOrder: "markers stroke fill",
-          }}
-        />
-        <rect
-          id="rect8256-0-9"
-          width={4.258}
-          height={3.19}
-          x={522.883}
-          y={410.275}
-          ry={0.522}
-          style={{
-            fill: "#009ee0",
-            fillOpacity: 1,
-            stroke: "#000",
-            strokeWidth: 1.08275,
-            strokeLinecap: "square",
-            strokeDasharray: "none",
-            strokeOpacity: 1,
-            paintOrder: "markers stroke fill",
-          }}
-        />
+          transform="rotate(90)"
+        >
+          <tspan
+            id="tspan877"
+            x={542.6}
+            y={25.267}
+            style={{
+              fontSize: "97.7207px",
+              strokeWidth: 34.3549,
+            }}
+          >
+            {"molecule"}
+          </tspan>
+        </text>
       </g>
       <g id="pump" transform="translate(2509.775 2588.72) scale(1.28845)">
         <rect
@@ -4531,171 +4279,6 @@ const SvgInstrumentWindow = (props) => (
             paintOrder: "markers stroke fill",
           }}
           transform="matrix(1.40904 0 0 1.2279 -416.801 56.274)"
-        />
-      </g>
-      <g id="fixed-mirror">
-        <path
-          id="rect2866-5-59"
-          d="M-1799.277 279.521h210v7h-210z"
-          style={{
-            fill: "url(#linearGradient10461)",
-            fillOpacity: 1,
-            fillRule: "evenodd",
-            strokeWidth: 0.952,
-            strokeDasharray: "none",
-          }}
-          transform="rotate(-135)"
-        />
-        <path
-          id="rect2866-9"
-          d="M-1799.277 244.521h210v35h-210z"
-          style={{
-            fill: "url(#linearGradient10463)",
-            fillOpacity: 1,
-            fillRule: "evenodd",
-            strokeWidth: 0.952,
-            strokeDasharray: "none",
-          }}
-          transform="rotate(-135)"
-        />
-      </g>
-      <g id="fixed-corner-cube" transform="rotate(45 487.155 1608.651)">
-        <path
-          id="rect17548"
-          d="M0 0v365h55V55h310V0H55Z"
-          style={{
-            opacity: 1,
-            fill: "url(#linearGradient13410)",
-            fillOpacity: 1,
-            stroke: "none",
-            strokeWidth: 1.68749,
-            strokeLinecap: "square",
-            strokeDasharray: "none",
-            paintOrder: "fill markers stroke",
-          }}
-        />
-        <path
-          id="rect2866-5-5"
-          d="M55 55v310h7V62h303v-7H62Z"
-          style={{
-            fill: "url(#linearGradient13426)",
-            fillOpacity: 1,
-            fillRule: "evenodd",
-            stroke: "none",
-            strokeWidth: 1.15667,
-            strokeDasharray: "none",
-          }}
-        />
-      </g>
-      <g id="movable-corner-cube" transform="rotate(135 903.611 1022.14)">
-        <path
-          id="rect17548-4"
-          d="M0 365h55V55h310V0H0v55Z"
-          style={{
-            opacity: 1,
-            fill: "url(#linearGradient13392)",
-            fillOpacity: 1,
-            stroke: "none",
-            strokeWidth: 1.68749,
-            strokeLinecap: "square",
-            strokeDasharray: "none",
-            paintOrder: "fill markers stroke",
-          }}
-        />
-        <path
-          id="rect2866-5-5-8"
-          d="M55 365h7V62h303v-7H55v7z"
-          style={{
-            fill: "url(#linearGradient13436)",
-            fillOpacity: 1,
-            fillRule: "evenodd",
-            stroke: "none",
-            strokeWidth: 1.15667,
-            strokeDasharray: "none",
-          }}
-        />
-      </g>
-      <g id="beam-insb">
-        <path
-          id="path-insb"
-          d="m3164.329 1929.583 117.532-150.45 52.155 23.879z"
-          style={{
-            opacity: 0.65,
-            fill: "#ff6638",
-            fillOpacity: 1,
-            strokeWidth: 2.21179,
-            strokeLinecap: "square",
-            paintOrder: "fill markers stroke",
-          }}
-        />
-      </g>
-      <g
-        id="flat-rotatable-mirror-insb"
-        transform="rotate(-22.5 3301.691 1794.086)"
-      >
-        <path
-          id="rect2866-5-0-8"
-          d="M3497.272-1073.665h210v7h-210z"
-          style={{
-            fill: "url(#linearGradient5024)",
-            fillOpacity: 1,
-            fillRule: "evenodd",
-            strokeWidth: 0.952,
-            strokeDasharray: "none",
-          }}
-          transform="rotate(45)"
-        />
-        <path
-          id="rect2866-3-6"
-          d="M3497.272-1108.665h210v35h-210z"
-          style={{
-            fill: "url(#linearGradient5026)",
-            fillOpacity: 1,
-            fillRule: "evenodd",
-            strokeWidth: 0.952,
-            strokeDasharray: "none",
-          }}
-          transform="rotate(45)"
-        />
-      </g>
-      <g id="beam-mct">
-        <path
-          id="path-mct"
-          d="m3080.987 1793.841 204.992-23.953 53.564 54.457z"
-          style={{
-            opacity: 0.65,
-            fill: "#ff6638",
-            fillOpacity: 1,
-            strokeWidth: 2.21179,
-            strokeLinecap: "square",
-            paintOrder: "fill markers stroke",
-          }}
-        />
-      </g>
-      <g id="flat-rotatable-mirror-mct">
-        <path
-          id="rect2866-5-0"
-          d="M3497.272-1073.665h210v7h-210z"
-          style={{
-            fill: "url(#linearGradient10998)",
-            fillOpacity: 1,
-            fillRule: "evenodd",
-            strokeWidth: 0.952,
-            strokeDasharray: "none",
-          }}
-          transform="rotate(45)"
-        />
-        <path
-          id="rect2866-3"
-          d="M3497.272-1108.665h210v35h-210z"
-          style={{
-            fill: "url(#linearGradient11000)",
-            fillOpacity: 1,
-            fillRule: "evenodd",
-            strokeWidth: 0.952,
-            strokeDasharray: "none",
-          }}
-          transform="rotate(45)"
         />
       </g>
       <g id="hose-2" transform="matrix(-1 0 0 1 4482.777 2.625)">
@@ -4912,6 +4495,605 @@ const SvgInstrumentWindow = (props) => (
             strokeDasharray: "none",
             paintOrder: "markers stroke fill",
           }}
+        />
+      </g>
+      <g
+        id="sample-cell-znse"
+        transform="translate(-5087.448 -3368.296) scale(13.08022)"
+      >
+        <path
+          id="rect5963-3-5-4"
+          d="M-550.753-433.552h3.007v4.079h-3.007z"
+          style={{
+            fill: "url(#linearGradient1728)",
+            fillOpacity: 1,
+            strokeWidth: 0.0183868,
+          }}
+          transform="scale(-1)"
+        />
+        <path
+          id="rect4162-5-2-5"
+          d="M-551.397-429.473h4.295v2.147h-4.295z"
+          style={{
+            fill: "url(#linearGradient1730)",
+            fillOpacity: 1,
+            strokeWidth: 0.0110817,
+          }}
+          transform="scale(-1)"
+        />
+        <rect
+          id="rect5181-6-1-3"
+          width={4.295}
+          height={0.043}
+          x={-551.397}
+          y={-428.896}
+          ry={0}
+          style={{
+            fill: "#a0a0a0",
+            fillOpacity: 1,
+            strokeWidth: 0.00471508,
+          }}
+          transform="scale(-1)"
+        />
+        <path
+          id="znse-valve-left"
+          d="M548.806 430.577a1.089 1.088 0 0 0-.643 1.056l-2.119.946a.256.256 0 0 0-.13.339l.105.234c.058.13.21.188.34.13l2.118-.945a1.089 1.088 0 0 0 1.216.227 1.089 1.088 0 0 0 .643-1.057l2.119-.945a.256.256 0 0 0 .13-.34l-.105-.234a.256.256 0 0 0-.34-.13l-2.118.946a1.089 1.088 0 0 0-1.216-.227z"
+          style={{
+            fill: "url(#linearGradient1732)",
+            fillOpacity: 1,
+            stroke: "none",
+            strokeWidth: 0.0269209,
+            strokeDasharray: "none",
+            strokeOpacity: 1,
+          }}
+        />
+        <path
+          id="rect5963-3-1-0-1"
+          d="M-572.973-433.552h3.007v4.079h-3.007z"
+          style={{
+            fill: "url(#linearGradient1734)",
+            fillOpacity: 1,
+            strokeWidth: 0.0183868,
+          }}
+          transform="scale(-1)"
+        />
+        <path
+          id="rect4162-5-4-9-8"
+          d="M-573.617-429.473h4.295v2.147h-4.295z"
+          style={{
+            fill: "url(#linearGradient1736)",
+            fillOpacity: 1,
+            strokeWidth: 0.0110817,
+          }}
+          transform="scale(-1)"
+        />
+        <rect
+          id="rect5181-6-8-4-3"
+          width={4.295}
+          height={0.043}
+          x={-573.617}
+          y={-428.896}
+          ry={0}
+          style={{
+            fill: "#a0a0a0",
+            fillOpacity: 1,
+            strokeWidth: 0.00471508,
+          }}
+          transform="scale(-1)"
+        />
+        <path
+          id="znse-valve-right"
+          d="M571.026 430.577a1.089 1.088 0 0 0-.643 1.056l-2.119.946a.256.256 0 0 0-.13.339l.105.234c.058.13.21.188.34.13l2.118-.945a1.089 1.088 0 0 0 1.216.227 1.089 1.088 0 0 0 .643-1.057l2.119-.945a.256.256 0 0 0 .13-.34l-.105-.234a.256.256 0 0 0-.34-.13l-2.118.946a1.089 1.088 0 0 0-1.216-.227z"
+          style={{
+            fill: "url(#linearGradient1738)",
+            fillOpacity: 1,
+            stroke: "none",
+            strokeWidth: 0.0269209,
+            strokeDasharray: "none",
+            strokeOpacity: 1,
+          }}
+        />
+        <path
+          id="rect7077-3-6"
+          d="M524.536 411.933h71.647v14.53h-71.647z"
+          style={{
+            fill: "none",
+            fillOpacity: 1,
+            stroke: "#000",
+            strokeWidth: 1.72705,
+            strokeLinecap: "square",
+            strokeDasharray: "none",
+            strokeOpacity: 1,
+            paintOrder: "markers stroke fill",
+          }}
+        />
+        <rect
+          id="cell-left-znse"
+          width={2.776}
+          height={15.067}
+          x={523.677}
+          y={411.664}
+          ry={0.391}
+          style={{
+            fill: "url(#linearGradient1740)",
+            fillOpacity: 1,
+            stroke: "none",
+            strokeWidth: 1.13341,
+            strokeDasharray: "none",
+            strokeOpacity: 1,
+            paintOrder: "markers stroke fill",
+          }}
+        />
+        <rect
+          id="cell-right-znse"
+          width={2.776}
+          height={15.067}
+          x={594.275}
+          y={411.664}
+          ry={0.391}
+          style={{
+            fill: "url(#linearGradient1744)",
+            fillOpacity: 1,
+            stroke: "none",
+            strokeWidth: 1.13341,
+            strokeDasharray: "none",
+            strokeOpacity: 1,
+            paintOrder: "markers stroke fill",
+          }}
+        />
+        <rect
+          id="rect6170-0-6"
+          width={4.258}
+          height={3.19}
+          x={593.587}
+          y={424.93}
+          ry={0.522}
+          style={{
+            fill: "#009ee0",
+            fillOpacity: 1,
+            stroke: "#000",
+            strokeWidth: 1.08274,
+            strokeLinecap: "square",
+            strokeDasharray: "none",
+            strokeOpacity: 1,
+            paintOrder: "markers stroke fill",
+          }}
+        />
+        <rect
+          id="rect6168-3-2"
+          width={4.258}
+          height={3.19}
+          x={593.587}
+          y={410.275}
+          ry={0.522}
+          style={{
+            fill: "#009ee0",
+            fillOpacity: 1,
+            stroke: "#000",
+            strokeWidth: 1.08274,
+            strokeLinecap: "square",
+            strokeDasharray: "none",
+            strokeOpacity: 1,
+            paintOrder: "markers stroke fill",
+          }}
+        />
+        <rect
+          id="rect10251-9-7"
+          width={4.258}
+          height={3.19}
+          x={522.883}
+          y={424.93}
+          ry={0.522}
+          style={{
+            fill: "#009ee0",
+            fillOpacity: 1,
+            stroke: "#000",
+            strokeWidth: 1.08274,
+            strokeLinecap: "square",
+            strokeDasharray: "none",
+            strokeOpacity: 1,
+            paintOrder: "markers stroke fill",
+          }}
+        />
+        <rect
+          id="rect8256-0-9-4"
+          width={4.258}
+          height={3.19}
+          x={522.883}
+          y={410.275}
+          ry={0.522}
+          style={{
+            fill: "#009ee0",
+            fillOpacity: 1,
+            stroke: "#000",
+            strokeWidth: 1.08275,
+            strokeLinecap: "square",
+            strokeDasharray: "none",
+            strokeOpacity: 1,
+            paintOrder: "markers stroke fill",
+          }}
+        />
+      </g>
+      <g
+        id="sample-cell-caf2"
+        transform="translate(-5087.448 -3368.296) scale(13.08022)"
+      >
+        <path
+          id="rect5963-3-5"
+          d="M-550.753-433.552h3.007v4.079h-3.007z"
+          style={{
+            fill: "url(#linearGradient3033)",
+            fillOpacity: 1,
+            strokeWidth: 0.0183868,
+          }}
+          transform="scale(-1)"
+        />
+        <path
+          id="rect4162-5-2"
+          d="M-551.397-429.473h4.295v2.147h-4.295z"
+          style={{
+            fill: "url(#linearGradient3035)",
+            fillOpacity: 1,
+            strokeWidth: 0.0110817,
+          }}
+          transform="scale(-1)"
+        />
+        <rect
+          id="rect5181-6-1"
+          width={4.295}
+          height={0.043}
+          x={-551.397}
+          y={-428.896}
+          ry={0}
+          style={{
+            fill: "#a0a0a0",
+            fillOpacity: 1,
+            strokeWidth: 0.00471508,
+          }}
+          transform="scale(-1)"
+        />
+        <path
+          id="caf2-valve-left"
+          d="M548.806 430.577a1.089 1.088 0 0 0-.643 1.056l-2.119.946a.256.256 0 0 0-.13.339l.105.234c.058.13.21.188.34.13l2.118-.945a1.089 1.088 0 0 0 1.216.227 1.089 1.088 0 0 0 .643-1.057l2.119-.945a.256.256 0 0 0 .13-.34l-.105-.234a.256.256 0 0 0-.34-.13l-2.118.946a1.089 1.088 0 0 0-1.216-.227z"
+          style={{
+            fill: "url(#linearGradient3037)",
+            fillOpacity: 1,
+            stroke: "none",
+            strokeWidth: 0.0269209,
+            strokeDasharray: "none",
+            strokeOpacity: 1,
+          }}
+        />
+        <path
+          id="rect5963-3-1-0"
+          d="M-572.973-433.552h3.007v4.079h-3.007z"
+          style={{
+            fill: "url(#linearGradient11661-6-6)",
+            fillOpacity: 1,
+            strokeWidth: 0.0183868,
+          }}
+          transform="scale(-1)"
+        />
+        <path
+          id="rect4162-5-4-9"
+          d="M-573.617-429.473h4.295v2.147h-4.295z"
+          style={{
+            fill: "url(#linearGradient10403-5-4)",
+            fillOpacity: 1,
+            strokeWidth: 0.0110817,
+          }}
+          transform="scale(-1)"
+        />
+        <rect
+          id="rect5181-6-8-4"
+          width={4.295}
+          height={0.043}
+          x={-573.617}
+          y={-428.896}
+          ry={0}
+          style={{
+            fill: "#a0a0a0",
+            fillOpacity: 1,
+            strokeWidth: 0.00471508,
+          }}
+          transform="scale(-1)"
+        />
+        <path
+          id="caf2-valve-right"
+          d="M571.026 430.577a1.089 1.088 0 0 0-.643 1.056l-2.119.946a.256.256 0 0 0-.13.339l.105.234c.058.13.21.188.34.13l2.118-.945a1.089 1.088 0 0 0 1.216.227 1.089 1.088 0 0 0 .643-1.057l2.119-.945a.256.256 0 0 0 .13-.34l-.105-.234a.256.256 0 0 0-.34-.13l-2.118.946a1.089 1.088 0 0 0-1.216-.227z"
+          style={{
+            fill: "url(#linearGradient12498-2-4)",
+            fillOpacity: 1,
+            stroke: "none",
+            strokeWidth: 0.0269209,
+            strokeDasharray: "none",
+            strokeOpacity: 1,
+          }}
+        />
+        <path
+          id="rect7077-3"
+          d="M524.536 411.933h71.647v14.53h-71.647z"
+          style={{
+            fill: "none",
+            fillOpacity: 1,
+            stroke: "#000",
+            strokeWidth: 1.72705,
+            strokeLinecap: "square",
+            strokeDasharray: "none",
+            strokeOpacity: 1,
+            paintOrder: "markers stroke fill",
+          }}
+        />
+        <rect
+          id="cell-left-caf2"
+          width={2.776}
+          height={15.067}
+          x={523.677}
+          y={411.664}
+          ry={0.391}
+          style={{
+            fill: "url(#linearGradient32969-4)",
+            fillOpacity: 1,
+            stroke: "none",
+            strokeWidth: 1.13341,
+            strokeDasharray: "none",
+            strokeOpacity: 1,
+            paintOrder: "markers stroke fill",
+          }}
+        />
+        <rect
+          id="cell-right-caf2"
+          width={2.776}
+          height={15.067}
+          x={594.275}
+          y={411.664}
+          ry={0.391}
+          style={{
+            fill: "url(#linearGradient5760-6)",
+            fillOpacity: 1,
+            stroke: "none",
+            strokeWidth: 1.13341,
+            strokeDasharray: "none",
+            strokeOpacity: 1,
+            paintOrder: "markers stroke fill",
+          }}
+        />
+        <rect
+          id="rect6170-0"
+          width={4.258}
+          height={3.19}
+          x={593.587}
+          y={424.93}
+          ry={0.522}
+          style={{
+            fill: "#009ee0",
+            fillOpacity: 1,
+            stroke: "#000",
+            strokeWidth: 1.08274,
+            strokeLinecap: "square",
+            strokeDasharray: "none",
+            strokeOpacity: 1,
+            paintOrder: "markers stroke fill",
+          }}
+        />
+        <rect
+          id="rect6168-3"
+          width={4.258}
+          height={3.19}
+          x={593.587}
+          y={410.275}
+          ry={0.522}
+          style={{
+            fill: "#009ee0",
+            fillOpacity: 1,
+            stroke: "#000",
+            strokeWidth: 1.08274,
+            strokeLinecap: "square",
+            strokeDasharray: "none",
+            strokeOpacity: 1,
+            paintOrder: "markers stroke fill",
+          }}
+        />
+        <rect
+          id="rect10251-9"
+          width={4.258}
+          height={3.19}
+          x={522.883}
+          y={424.93}
+          ry={0.522}
+          style={{
+            fill: "#009ee0",
+            fillOpacity: 1,
+            stroke: "#000",
+            strokeWidth: 1.08274,
+            strokeLinecap: "square",
+            strokeDasharray: "none",
+            strokeOpacity: 1,
+            paintOrder: "markers stroke fill",
+          }}
+        />
+        <rect
+          id="rect8256-0-9"
+          width={4.258}
+          height={3.19}
+          x={522.883}
+          y={410.275}
+          ry={0.522}
+          style={{
+            fill: "#009ee0",
+            fillOpacity: 1,
+            stroke: "#000",
+            strokeWidth: 1.08275,
+            strokeLinecap: "square",
+            strokeDasharray: "none",
+            strokeOpacity: 1,
+            paintOrder: "markers stroke fill",
+          }}
+        />
+      </g>
+      <g id="fixed-mirror">
+        <path
+          id="rect2866-5-59"
+          d="M-1799.277 279.521h210v7h-210z"
+          style={{
+            fill: "url(#linearGradient10461)",
+            fillOpacity: 1,
+            fillRule: "evenodd",
+            strokeWidth: 0.952,
+            strokeDasharray: "none",
+          }}
+          transform="rotate(-135)"
+        />
+        <path
+          id="rect2866-9"
+          d="M-1799.277 244.521h210v35h-210z"
+          style={{
+            fill: "url(#linearGradient10463)",
+            fillOpacity: 1,
+            fillRule: "evenodd",
+            strokeWidth: 0.952,
+            strokeDasharray: "none",
+          }}
+          transform="rotate(-135)"
+        />
+      </g>
+      <g id="fixed-corner-cube" transform="rotate(45 487.155 1608.651)">
+        <path
+          id="rect17548"
+          d="M0 0v365h55V55h310V0H55Z"
+          style={{
+            opacity: 1,
+            fill: "url(#linearGradient13410)",
+            fillOpacity: 1,
+            stroke: "none",
+            strokeWidth: 1.68749,
+            strokeLinecap: "square",
+            strokeDasharray: "none",
+            paintOrder: "fill markers stroke",
+          }}
+        />
+        <path
+          id="rect2866-5-5"
+          d="M55 55v310h7V62h303v-7H62Z"
+          style={{
+            fill: "url(#linearGradient13426)",
+            fillOpacity: 1,
+            fillRule: "evenodd",
+            stroke: "none",
+            strokeWidth: 1.15667,
+            strokeDasharray: "none",
+          }}
+        />
+      </g>
+      <g id="movable-corner-cube" transform="rotate(135 903.611 1022.14)">
+        <path
+          id="rect17548-4"
+          d="M0 365h55V55h310V0H0v55Z"
+          style={{
+            opacity: 1,
+            fill: "url(#linearGradient13392)",
+            fillOpacity: 1,
+            stroke: "none",
+            strokeWidth: 1.68749,
+            strokeLinecap: "square",
+            strokeDasharray: "none",
+            paintOrder: "fill markers stroke",
+          }}
+        />
+        <path
+          id="rect2866-5-5-8"
+          d="M55 365h7V62h303v-7H55v7z"
+          style={{
+            fill: "url(#linearGradient13436)",
+            fillOpacity: 1,
+            fillRule: "evenodd",
+            stroke: "none",
+            strokeWidth: 1.15667,
+            strokeDasharray: "none",
+          }}
+        />
+      </g>
+      <g id="beam-insb">
+        <path
+          id="path-insb"
+          d="m3164.329 1929.583 117.532-150.45 52.155 23.879z"
+          style={{
+            opacity: 0.65,
+            fill: "#ff6638",
+            fillOpacity: 1,
+            strokeWidth: 2.21179,
+            strokeLinecap: "square",
+            paintOrder: "fill markers stroke",
+          }}
+        />
+      </g>
+      <g
+        id="flat-rotatable-mirror-insb"
+        transform="rotate(-22.5 3301.691 1794.086)"
+      >
+        <path
+          id="rect2866-5-0-8"
+          d="M3497.272-1073.665h210v7h-210z"
+          style={{
+            fill: "url(#linearGradient5024)",
+            fillOpacity: 1,
+            fillRule: "evenodd",
+            strokeWidth: 0.952,
+            strokeDasharray: "none",
+          }}
+          transform="rotate(45)"
+        />
+        <path
+          id="rect2866-3-6"
+          d="M3497.272-1108.665h210v35h-210z"
+          style={{
+            fill: "url(#linearGradient5026)",
+            fillOpacity: 1,
+            fillRule: "evenodd",
+            strokeWidth: 0.952,
+            strokeDasharray: "none",
+          }}
+          transform="rotate(45)"
+        />
+      </g>
+      <g id="beam-mct">
+        <path
+          id="path-mct"
+          d="m3080.987 1793.841 204.992-23.953 53.564 54.457z"
+          style={{
+            opacity: 0.65,
+            fill: "#ff6638",
+            fillOpacity: 1,
+            strokeWidth: 2.21179,
+            strokeLinecap: "square",
+            paintOrder: "fill markers stroke",
+          }}
+        />
+      </g>
+      <g id="flat-rotatable-mirror-mct">
+        <path
+          id="rect2866-5-0"
+          d="M3497.272-1073.665h210v7h-210z"
+          style={{
+            fill: "url(#linearGradient10998)",
+            fillOpacity: 1,
+            fillRule: "evenodd",
+            strokeWidth: 0.952,
+            strokeDasharray: "none",
+          }}
+          transform="rotate(45)"
+        />
+        <path
+          id="rect2866-3"
+          d="M3497.272-1108.665h210v35h-210z"
+          style={{
+            fill: "url(#linearGradient11000)",
+            fillOpacity: 1,
+            fillRule: "evenodd",
+            strokeWidth: 0.952,
+            strokeDasharray: "none",
+          }}
+          transform="rotate(45)"
         />
       </g>
       <g id="mct" transform="matrix(5.74061 0 0 4.90046 -4820.832 -780.073)">
@@ -5775,126 +5957,6 @@ const SvgInstrumentWindow = (props) => (
         >
           <tspan id="tspan4101" x={-98.612} y={-129.906}>
             {"opd"}
-          </tspan>
-        </text>
-      </g>
-      <g id="lecture" transform="rotate(-90 2488.174 83.486)">
-        <path
-          id="rect5963-2"
-          d="M-58.082 101.431h53.146v72.126h-53.146z"
-          style={{
-            fill: "url(#linearGradient11661-2)",
-            fillOpacity: 1,
-            strokeWidth: 0.325061,
-          }}
-        />
-        <path
-          id="rect4162-5"
-          d="M-69.47 173.557H6.453v37.961H-69.47z"
-          style={{
-            fill: "url(#linearGradient10403-8)",
-            fillOpacity: 1,
-            strokeWidth: 0.195918,
-          }}
-        />
-        <rect
-          id="rect5181-2"
-          width={75.923}
-          height={0.759}
-          x={-69.47}
-          y={183.746}
-          ry={0}
-          style={{
-            fill: "#a0a0a0",
-            fillOpacity: 1,
-            strokeWidth: 0.0833591,
-          }}
-        />
-        <path
-          id="rect8157-1"
-          d="M-5.411 120.412h22.777v37.961H-5.411z"
-          style={{
-            fill: "url(#linearGradient11675-6)",
-            fillOpacity: 1,
-            strokeWidth: 0.284551,
-          }}
-        />
-        <path
-          id="rect8161-9"
-          d="M-46.694 93.838h30.369v7.592h-30.369z"
-          style={{
-            fill: "url(#linearGradient11706-4)",
-            fillOpacity: 1,
-            strokeWidth: 0.604537,
-          }}
-        />
-        <rect
-          id="rect9017-6"
-          width={106.292}
-          height={11.388}
-          x={-84.655}
-          y={82.451}
-          ry={3.796}
-          style={{
-            fill: "url(#linearGradient12498-9)",
-            fillOpacity: 1,
-            strokeWidth: 0.398371,
-          }}
-        />
-        <path
-          id="rect234-8"
-          d="M87.831 313.33a113.884 113.2 0 0 0-113.883-113.2 113.884 113.2 0 0 0-113.884 113.2 113.884 113.2 0 0 0 .133 1.844c-.037.435-.133.853-.133 1.298V754.44c0 8.37 6.772 15.11 15.184 15.11H72.647c8.412 0 15.184-6.74 15.184-15.11V316.472c0-.206-.05-.4-.06-.605a113.884 113.2 0 0 0 .06-2.538z"
-          style={{
-            fill: "url(#linearGradient12519-0)",
-            fillOpacity: 1,
-            strokeWidth: 0.387489,
-          }}
-        />
-        <rect
-          id="rect1697-1-4"
-          width={189.028}
-          height={392.5}
-          x={-119.454}
-          y={348.434}
-          ry={5.607}
-          style={{
-            fill: "url(#linearGradient15522-4)",
-            fillOpacity: 1,
-            strokeWidth: 7.10926,
-          }}
-          transform="rotate(.127) skewX(.01)"
-        />
-        <text
-          xmlSpace="preserve"
-          id="molecule-value"
-          x={542.6}
-          y={25.267}
-          style={{
-            fontSize: "97.7207px",
-            lineHeight: 0,
-            fontFamily: "sans-serif",
-            InkscapeFontSpecification: "&quot",
-            textAlign: "center",
-            dominantBaseline: "central",
-            textAnchor: "middle",
-            fill: "#000",
-            strokeWidth: 34.3549,
-            strokeLinecap: "square",
-            strokeLinejoin: "round",
-            paintOrder: "fill markers stroke",
-          }}
-          transform="rotate(90)"
-        >
-          <tspan
-            id="tspan877"
-            x={542.6}
-            y={25.267}
-            style={{
-              fontSize: "97.7207px",
-              strokeWidth: 34.3549,
-            }}
-          >
-            {"molecule"}
           </tspan>
         </text>
       </g>
