@@ -1,7 +1,7 @@
 import React from "react";
 
 // constants
-import { DEVELOPER_MODE, OPD } from "../dictionaries/constants";
+import { OPD } from "../dictionaries/constants";
 
 // functions
 import checkParams from "../functions/checkParams";
@@ -18,6 +18,8 @@ import { setPeaksData } from "../redux/peaksDataSlice";
 import { setAbsorbanceData } from "../redux/absorbanceDataSlice";
 import { setSpinner } from "../redux/spinnerSlice";
 import { setTimer } from "../redux/timerSlice";
+import { setLectureBottle } from "../redux/lectureBottleSlice"
+
 import { useNavigate } from "react-router-dom";
 
 export let sleepID = 0;
@@ -49,7 +51,7 @@ export default function Fetch({
   } = useSelector((store) => store.parameter);
 
   let nav = useNavigate();
-  if (DEVELOPER_MODE) {
+  if (!devMode) {
     nav = (route, num) => {};
   }
 
@@ -96,10 +98,17 @@ export default function Fetch({
         zeroFill = params.zeroFill;
       }
 
-      // Leaves delay as Immediate if DEVELOPER_MODE is false
+      // Leaves delay as Immediate if in devMode
       if (!devMode) {
         // Calculate time the scan would take
         delay = OPD[resolution] * scan * 1000; // 1000 is to convert to milliseconds
+      }
+
+      // Controls the Label and valve on the Lecture Bottle
+      if (type.localeCompare("background") === 0 ) {
+        dispatch(setLectureBottle(false));
+      } else if (type.localeCompare("sample") === 0 ) {
+        dispatch(setLectureBottle(true));
       }
 
       // calculate medium if set to "Air"
@@ -129,9 +138,26 @@ export default function Fetch({
         zeroFill: zeroFill,
       });
     } else if (type.localeCompare("find_peaks") === 0) {
+
+      let startIndex = params.x.findIndex((element) => {
+        return element >= params.lowerBound;
+      });
+
+      if (startIndex === -1) {
+        startIndex = 0;
+      }
+
+      let endIndex = params.x.findIndex((element) => {
+        return element >= params.upperBound;
+      });
+
+      if (endIndex === -1) {
+        endIndex = params.x.length - 1
+      }
+
       body = JSON.stringify({
-        x: params.x,
-        y: params.y,
+        x: params.x.slice(startIndex, endIndex + 1),
+        y: params.y.slice(startIndex, endIndex + 1),
         lowerbound: params.lowerBound,
         upperbound: params.upperBound,
         threshold: params.threshold,
@@ -165,20 +191,34 @@ export default function Fetch({
         if (data.success) {
           switch (type) {
             case "sample":
+
+              // Reset Stored Data
               dispatch(setSampleData([null, null, null]));
+
+              // Only navigate to Instrument Window when !devMode
               devMode ? console.log("devMode") : nav("/instrument", -1);
-              dispatch(setSpinner(false)); // Turns off "waiting" spinner
+              
+              // Turns off "waiting" spinner
+              dispatch(setSpinner(false)); 
+
+              // Delays the appearance of generated data
               sleepID = setTimeout(() => {
-                dispatch(setProgress(false));
                 dispatch(setSampleData([data, waveMin, waveMax]));
               }, delay);
               break;
             case "background":
+
+              // Reset Stored Data
               dispatch(setBackgroundData([null, null, null]));
+
+              // Only navigate to Instrument Window when !devMode
               devMode ? console.log("devMode") : nav("/instrument", -1);
-              dispatch(setSpinner(false)); // Turns off "waiting" spinner
+              
+              // Turns off "waiting" spinner
+              dispatch(setSpinner(false)); 
+
+              // Delays the appearance of generated data
               sleepID = setTimeout(() => {
-                dispatch(setProgress(false));
                 dispatch(setBackgroundData([data, waveMin, waveMax]));
               }, delay);
               break;
