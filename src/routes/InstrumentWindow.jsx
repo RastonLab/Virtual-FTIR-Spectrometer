@@ -110,7 +110,7 @@ export default function InstrumentWindow() {
         {progress && !spinner && !devMode && (
           <>
             <h2>Processing Sample...</h2>
-            <Spinner variant="determinate" timer={delay} size={100} />
+            <Spinner variant="determinate" timer={delay} scans={scan} size={100} />
           </>
         )}
       </div>

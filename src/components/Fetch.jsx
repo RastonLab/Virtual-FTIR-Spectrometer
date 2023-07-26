@@ -191,20 +191,34 @@ export default function Fetch({
         if (data.success) {
           switch (type) {
             case "sample":
+
+              // Reset Stored Data
               dispatch(setSampleData([null, null, null]));
+
+              // Only navigate to Instrument Window when !devMode
               devMode ? console.log("devMode") : nav("/instrument", -1);
-              dispatch(setSpinner(false)); // Turns off "waiting" spinner
+              
+              // Turns off "waiting" spinner
+              dispatch(setSpinner(false)); 
+
+              // Delays the appearance of generated data
               sleepID = setTimeout(() => {
-                dispatch(setProgress(false));
                 dispatch(setSampleData([data, waveMin, waveMax]));
               }, delay);
               break;
             case "background":
+
+              // Reset Stored Data
               dispatch(setBackgroundData([null, null, null]));
+
+              // Only navigate to Instrument Window when !devMode
               devMode ? console.log("devMode") : nav("/instrument", -1);
-              dispatch(setSpinner(false)); // Turns off "waiting" spinner
+              
+              // Turns off "waiting" spinner
+              dispatch(setSpinner(false)); 
+
+              // Delays the appearance of generated data
               sleepID = setTimeout(() => {
-                dispatch(setProgress(false));
                 dispatch(setBackgroundData([data, waveMin, waveMax]));
               }, delay);
               break;
