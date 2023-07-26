@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 // components
 import { Dialog, Drawer } from "@mui/material";
@@ -8,14 +8,21 @@ import Main from "../images/InstrumentSVG";
 import Spinner from "../components/Spinner";
 
 // constants
-import { BAD_ID, OPD, PARAMETER_VALUE } from "../dictionaries/constants";
+import { BAD_ID, OPD } from "../dictionaries/constants";
 
 // dictionaries
 import { toolTips } from "../dictionaries/tooltips";
 import { molecule_labels } from "../dictionaries/molecule";
 
 // functions
-import { animateCornerCube } from "../functions/animation";
+import {
+  animateCornerCube,
+  beamsplitterInteractivity,
+  cellWindowInteractivity,
+  detectorInteractivity,
+  sourceInteractivity,
+  textInteractivity,
+} from "../functions/animation";
 
 // redux
 import { useSelector } from "react-redux";
@@ -59,44 +66,22 @@ export default function InstrumentWindow() {
 
   const delay = OPD[resolution] * scan * 1000; // 1000 is to convert to milliseconds
 
+  // useEffect - wait for components to render then perform interactivity
+  useEffect(() => {
+    beamsplitterInteractivity(beamsplitter);
+
+    detectorInteractivity(detector);
+
+    sourceInteractivity(source);
+
+    cellWindowInteractivity(window);
+
+    textInteractivity(lectureBottleInUse ? molecule_labels[molecule] : "", OPD, resolution, scan, waveMax, waveMin);
+  });
+
   return (
     <div id="instrument-window">
-      <Main
-        id="instrument"
-        onClick={handleClick}
-        // ternary used to show/hide beamsplitter in the Main SVG
-        beamsplitter={{
-          caf2:
-            beamsplitter === PARAMETER_VALUE.beamsplitterCaF2
-              ? "inline"
-              : "none",
-          znse:
-            beamsplitter === PARAMETER_VALUE.beamsplitterZnSe
-              ? "inline"
-              : "none",
-        }}
-        // ternary used to show/hide detector laser and mirror in the Main SVG
-        detector={{
-          insb: detector === PARAMETER_VALUE.detectorInSb ? "inline" : "none",
-          mct: detector === PARAMETER_VALUE.detectorMCT ? "inline" : "none",
-        }}
-        // ternary used to show/hide source laser and mirror in the Main SVG
-        source={{
-          globar: source === PARAMETER_VALUE.sourceGlobar ? "inline" : "none",
-          tungsten:
-            source === PARAMETER_VALUE.sourceTungsten ? "inline" : "none",
-        }}
-        // ternary used to show/hide cell window in the Main SVG
-        window={{
-          caf2: window === PARAMETER_VALUE.cellWindowCaF2 ? "inline" : "none",
-          znse: window === PARAMETER_VALUE.cellWindowZnSe ? "inline" : "none",
-        }}
-        opd={OPD[resolution] * scan}
-        scan={scan}
-        range={`${waveMin} - ${waveMax}`}
-        resolution={resolution}
-        molecule={lectureBottleInUse ? molecule_labels[molecule] : ""}
-      />
+      <Main id="instrument" onClick={handleClick} />
 
       <div id="instrument-spinner">
         <h1>Scan Progress</h1>

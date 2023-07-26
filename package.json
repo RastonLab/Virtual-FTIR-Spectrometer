@@ -26,8 +26,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "svgo": "svgo --config svgo.config.js -f ./src/components/svgs/tooltip",
-    "svgr": "npx @svgr/cli src/components/svgs/instrument-window.svg > src/components/svgs/InstrumentSVG.jsx --svgo-config svgo.config.js ; scripts/svg_props.sh ; rm src/components/svgs/instrument-window.svg"
+    "svgo": "svgo --config svgo.config.js -f ./src/images/tooltips",
+    "svgr": "npx @svgr/cli src/images/instrument-window.svg > src/images/InstrumentSVG.jsx --svgo-config svgo.config.js ; rm src/images/instrument-window.svg"
   },
   "eslintConfig": {
     "extends": [
