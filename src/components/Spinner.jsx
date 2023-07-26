@@ -5,6 +5,8 @@ import { useSelector, useDispatch } from "react-redux";
 import { setTimer } from "../redux/timerSlice";
 import { animateCornerCube } from "../functions/animation";
 
+import { setProgress } from "../redux/progressSlice";
+
 export default function Spinner(props) {
   const dispatch = useDispatch();
 
@@ -15,7 +17,15 @@ export default function Spinner(props) {
   // Updates the value of the
   React.useEffect(() => {
     if (props.timer) {
+
       const timer_interval = setInterval(() => {
+
+        // If the scans are complete, turn off spinner
+        if (delay ===  100) {
+          dispatch(setProgress(false));
+        }
+
+        // Increment Spinner/timer
         setDelay((prevProgress) =>
           prevProgress >= 100 ? 0 : prevProgress + 0.125
         );
@@ -23,8 +33,14 @@ export default function Spinner(props) {
 
       dispatch(setTimer(delay));
 
-      if (delay >= (100 / props.scans) * scansDone) {
-        animateCornerCube();
+      // Keeps track of the number of scans done
+      if (scansDone < props.scans && delay >= (100 / props.scans) * scansDone) {
+
+        // Triggers the animation on even numbered scans
+        if (scansDone % 2 === 0) {
+          animateCornerCube();
+          console.log(scansDone);
+        }
         setScansDone(scansDone + 1);
       }
 
