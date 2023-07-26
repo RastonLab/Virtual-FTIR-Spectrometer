@@ -14,7 +14,14 @@ import { BAD_ID, OPD, PARAMETER_VALUE } from "../dictionaries/constants";
 import { toolTips } from "../dictionaries/tooltips";
 
 // functions
-import { animateCornerCube } from "../functions/animation";
+import {
+  animateCornerCube,
+  beamsplitterInteractivity,
+  cellWindowInteractivity,
+  detectorInteractivity,
+  sourceInteractivity,
+  textInteractivity,
+} from "../functions/animation";
 
 // redux
 import { useSelector } from "react-redux";
@@ -59,70 +66,31 @@ export default function InstrumentWindow() {
 
   // useEffect - wait for components to render then perform interactivity
   useEffect(() => {
-    // ternary used to show/hide beamsplitter in the Main SVG
-    beamsplitter === PARAMETER_VALUE.beamsplitterCaF2
-      ? (document.getElementById("beamsplitter-caf2").style.display = "inline")
-      : (document.getElementById("beamsplitter-caf2").style.display = "none");
-    beamsplitter === PARAMETER_VALUE.beamsplitterZnSe
-      ? (document.getElementById("beamsplitter-znse").style.display = "inline")
-      : (document.getElementById("beamsplitter-znse").style.display = "none");
+    beamsplitterInteractivity(
+      beamsplitter,
+      PARAMETER_VALUE.beamsplitterCaF2,
+      PARAMETER_VALUE.beamsplitterZnSe
+    );
 
-    // ternary used to show/hide detector laser and mirror in the Main SVG
-    detector === PARAMETER_VALUE.detectorInSb
-      ? (document.getElementById("flat-rotatable-mirror-insb").style.display =
-          "inline")
-      : (document.getElementById("flat-rotatable-mirror-insb").style.display =
-          "none");
-    detector === PARAMETER_VALUE.detectorInSb
-      ? (document.getElementById("beam-insb").style.display = "inline")
-      : (document.getElementById("beam-insb").style.display = "none");
-    detector === PARAMETER_VALUE.detectorMCT
-      ? (document.getElementById("flat-rotatable-mirror-mct").style.display =
-          "inline")
-      : (document.getElementById("flat-rotatable-mirror-mct").style.display =
-          "none");
-    detector === PARAMETER_VALUE.detectorMCT
-      ? (document.getElementById("beam-mct").style.display = "inline")
-      : (document.getElementById("beam-mct").style.display = "none");
+    detectorInteractivity(
+      detector,
+      PARAMETER_VALUE.detectorInSb,
+      PARAMETER_VALUE.detectorMCT
+    );
 
-    // ternary used to show/hide source laser and mirror in the Main SVG
-    source === PARAMETER_VALUE.sourceGlobar
-      ? (document.getElementById("flat-rotatable-mirror-globar").style.display =
-          "inline")
-      : (document.getElementById("flat-rotatable-mirror-globar").style.display =
-          "none");
-    source === PARAMETER_VALUE.sourceGlobar
-      ? (document.getElementById("beam-globar").style.display = "inline")
-      : (document.getElementById("beam-globar").style.display = "none");
-    source === PARAMETER_VALUE.sourceTungsten
-      ? (document.getElementById(
-          "flat-rotatable-mirror-tungsten"
-        ).style.display = "inline")
-      : (document.getElementById(
-          "flat-rotatable-mirror-tungsten"
-        ).style.display = "none");
-    source === PARAMETER_VALUE.sourceTungsten
-      ? (document.getElementById("beam-tungsten").style.display = "inline")
-      : (document.getElementById("beam-tungsten").style.display = "none");
+    sourceInteractivity(
+      source,
+      PARAMETER_VALUE.sourceGlobar,
+      PARAMETER_VALUE.sourceTungsten
+    );
 
-    // ternary used to show/hide cell window in the Main SVG
-    window === PARAMETER_VALUE.cellWindowCaF2
-      ? (document.getElementById("sample-cell-caf2").style.display = "inline")
-      : (document.getElementById("sample-cell-caf2").style.display = "none");
-    window === PARAMETER_VALUE.cellWindowZnSe
-      ? (document.getElementById("sample-cell-znse").style.display = "inline")
-      : (document.getElementById("sample-cell-znse").style.display = "none");
+    cellWindowInteractivity(
+      window,
+      PARAMETER_VALUE.cellWindowCaF2,
+      PARAMETER_VALUE.cellWindowZnSe
+    );
 
-    // readout panel
-    document.getElementById("opd-value").textContent = OPD[resolution] * scan;
-    document.getElementById("scan-value").textContent = scan;
-    document.getElementById(
-      "range-value"
-    ).textContent = `${waveMin} - ${waveMax}`;
-    document.getElementById("resolution-value").textContent = resolution;
-
-    // lecture bottle
-    document.getElementById("molecule-value").textContent = molecule;
+    textInteractivity(molecule, OPD, resolution, scan, waveMax, waveMin);
   });
 
   return (
