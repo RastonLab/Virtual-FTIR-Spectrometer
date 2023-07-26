@@ -54,6 +54,7 @@ export default function ExperimentalSetup() {
   const { error, errorText } = useSelector((store) => store.error);
   const { progress } = useSelector((store) => store.progress);
   const { spinner } = useSelector((store) => store.spinner);
+  const { devMode } = useSelector((store) => store.devMode);
 
   return (
     <div id="experimental-setup">
@@ -176,13 +177,13 @@ export default function ExperimentalSetup() {
       </div>
       <div id="graph-and-error" className="exp-col">
         {spinner && <Spinner variant="indeterminate" size={200} />}
-        {error && (
+        {error && devMode && (
           <div id="error">
             <p style={{ fontSize: 30 }}>{errorText}</p>
           </div>
         )}
-        {!progress && !error && <BackgroundPlotly />}
-        {!progress && !error && <SamplePlotly />}
+        {!progress && !error && devMode && <BackgroundPlotly />}
+        {!progress && !error && devMode && <SamplePlotly />}
       </div>
     </div>
   );

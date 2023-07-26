@@ -9,14 +9,6 @@ export const BACKGROUND = "https://api.ftir.rastonlab.org/background";
 // export const SAMPLE = "http://localhost:5000/spectrum";
 export const SAMPLE = "https://api.ftir.rastonlab.org/spectrum";
 
-// If true, will not add artificial delay for background and sample scans
-// and will not take you to the instrument window after running a scan
-export let DEVELOPER_MODE = false;
-
-export function Toggle_Mode() {
-  DEVELOPER_MODE = !DEVELOPER_MODE;
-}
-
 // svg ids that are not associated with tooltips but can be selected
 export const BAD_ID = [
   "beam-globar",
