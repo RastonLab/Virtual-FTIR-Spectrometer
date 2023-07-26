@@ -3201,10 +3201,7 @@ const SvgInstrumentWindow = (props) => (
         id="sample-chamber"
         d="M1611.593 1664.928v369h15v-354h1215v354h15v-354h580v615h-580v-100h-15v100h-1215v-100h-15v115h1839.998v-645H1626.593Z"
       />
-      <g
-        id="aperture-wheel"
-        transform="matrix(.99919 0 0 1.14723 -318.324 -79.428)"
-      >
+      <g id="aperture" transform="matrix(.99919 0 0 1.14723 -318.324 -79.428)">
         <path
           id="rect2792"
           d="M771.766 713.694h173v33h-173z"
