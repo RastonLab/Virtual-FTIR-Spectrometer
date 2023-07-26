@@ -1,3 +1,5 @@
+import { PARAMETER_VALUE } from "../dictionaries/constants";
+
 export function animateCornerCube() {
   const mcc = document.getElementById("movable-corner-cube");
   const rayTop = document.getElementById("ray-top");
@@ -68,78 +70,62 @@ export function animateCornerCube() {
   }
 }
 
-export function beamsplitterInteractivity(beamsplitter, caf2Value, znseValue) {
+export function beamsplitterInteractivity(beamsplitter) {
   const caf2 = document.getElementById("beamsplitter-caf2");
   const znse = document.getElementById("beamsplitter-znse");
+  const caf2Value = PARAMETER_VALUE.beamsplitterCaF2;
+  const znseValue = PARAMETER_VALUE.beamsplitterZnSe;
 
   // ternary used to show/hide beamsplitter in the Main SVG
-  beamsplitter === caf2Value
-    ? (caf2.style.display = "inline")
-    : (caf2.style.display = "none");
-  beamsplitter === znseValue
-    ? (znse.style.display = "inline")
-    : (znse.style.display = "none");
+  caf2.style.display = beamsplitter === caf2Value ? "inline" : "none";
+  znse.style.display = beamsplitter === znseValue ? "inline" : "none";
 }
 
-export function detectorInteractivity(detector, insbValue, mctValue) {
+export function detectorInteractivity(detector) {
   const insbMirror = document.getElementById("flat-rotatable-mirror-insb");
   const mctMirror = document.getElementById("flat-rotatable-mirror-mct");
   const insbBeam = document.getElementById("beam-insb");
   const mctBeam = document.getElementById("beam-mct");
+  const insbValue = PARAMETER_VALUE.detectorInSb;
+  const mctValue = PARAMETER_VALUE.detectorMCT;
 
   // ternary used to show/hide detector mirrors in the Main SVG
-  detector === insbValue
-    ? (insbMirror.style.display = "inline")
-    : (insbMirror.style.display = "none");
-  detector === insbValue
-    ? (insbBeam.style.display = "inline")
-    : (insbBeam.style.display = "none");
+  insbMirror.style.display = detector === insbValue ? "inline" : "none";
+  insbBeam.style.display = detector === insbValue ? "inline" : "none";
 
   // ternary used to show/hide detector beams in the Main SVG
-  detector === mctValue
-    ? (mctMirror.style.display = "inline")
-    : (mctMirror.style.display = "none");
-  detector === mctValue
-    ? (mctBeam.style.display = "inline")
-    : (mctBeam.style.display = "none");
+  mctMirror.style.display = detector === mctValue ? "inline" : "none";
+  mctBeam.style.display = detector === mctValue ? "inline" : "none";
 }
 
-export function sourceInteractivity(source, globarValue, tungstenValue) {
+export function sourceInteractivity(source) {
   const globarMirror = document.getElementById("flat-rotatable-mirror-globar");
   const tungstenMirror = document.getElementById(
     "flat-rotatable-mirror-tungsten"
   );
   const globarBeam = document.getElementById("beam-globar");
   const tungstenBeam = document.getElementById("beam-tungsten");
+  const globarValue = PARAMETER_VALUE.sourceGlobar;
+  const tungstenValue = PARAMETER_VALUE.sourceTungsten;
 
   // ternary used to show/hide source mirrors in the Main SVG
-  source === globarValue
-    ? (globarMirror.style.display = "inline")
-    : (globarMirror.style.display = "none");
-  source === globarValue
-    ? (globarBeam.style.display = "inline")
-    : (globarBeam.style.display = "none");
+  globarMirror.style.display = source === globarValue ? "inline" : "none";
+  globarBeam.style.display = source === globarValue ? "inline" : "none";
 
   // ternary used to show/hide source beams in the Main SVG
-  source === tungstenValue
-    ? (tungstenMirror.style.display = "inline")
-    : (tungstenMirror.style.display = "none");
-  source === tungstenValue
-    ? (tungstenBeam.style.display = "inline")
-    : (tungstenBeam.style.display = "none");
+  tungstenMirror.style.display = source === tungstenValue ? "inline" : "none";
+  tungstenBeam.style.display = source === tungstenValue ? "inline" : "none";
 }
 
-export function cellWindowInteractivity(window, caf2Value, znseValue) {
+export function cellWindowInteractivity(window) {
   const caf2 = document.getElementById("sample-cell-caf2");
   const znse = document.getElementById("sample-cell-znse");
+  const caf2Value = PARAMETER_VALUE.cellWindowCaF2;
+  const znseValue = PARAMETER_VALUE.cellWindowZnSe;
 
   // ternary used to show/hide cell window in the Main SVG
-  window === caf2Value
-    ? (caf2.style.display = "inline")
-    : (caf2.style.display = "none");
-  window === znseValue
-    ? (znse.style.display = "inline")
-    : (znse.style.display = "none");
+  caf2.style.display = window === caf2Value ? "inline" : "none";
+  znse.style.display = window === znseValue ? "inline" : "none";
 }
 
 export function textInteractivity(
@@ -157,7 +143,7 @@ export function textInteractivity(
   const moleculeText = document.getElementById("molecule-value");
 
   // set text in the readout panel
-  opdText.textContent = opd[resolution] * scan;
+  opdText.textContent = opd[resolution];
   scanText.textContent = scan;
   rangeText.textContent = `${waveMin} - ${waveMax}`;
   resolutionText.textContent = resolution;

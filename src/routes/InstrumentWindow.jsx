@@ -8,7 +8,7 @@ import Main from "../images/InstrumentSVG";
 import Spinner from "../components/Spinner";
 
 // constants
-import { BAD_ID, OPD, PARAMETER_VALUE } from "../dictionaries/constants";
+import { BAD_ID, OPD } from "../dictionaries/constants";
 
 // dictionaries
 import { toolTips } from "../dictionaries/tooltips";
@@ -66,29 +66,13 @@ export default function InstrumentWindow() {
 
   // useEffect - wait for components to render then perform interactivity
   useEffect(() => {
-    beamsplitterInteractivity(
-      beamsplitter,
-      PARAMETER_VALUE.beamsplitterCaF2,
-      PARAMETER_VALUE.beamsplitterZnSe
-    );
+    beamsplitterInteractivity(beamsplitter);
 
-    detectorInteractivity(
-      detector,
-      PARAMETER_VALUE.detectorInSb,
-      PARAMETER_VALUE.detectorMCT
-    );
+    detectorInteractivity(detector);
 
-    sourceInteractivity(
-      source,
-      PARAMETER_VALUE.sourceGlobar,
-      PARAMETER_VALUE.sourceTungsten
-    );
+    sourceInteractivity(source);
 
-    cellWindowInteractivity(
-      window,
-      PARAMETER_VALUE.cellWindowCaF2,
-      PARAMETER_VALUE.cellWindowZnSe
-    );
+    cellWindowInteractivity(window);
 
     textInteractivity(molecule, OPD, resolution, scan, waveMax, waveMin);
   });
