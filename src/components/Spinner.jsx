@@ -26,7 +26,6 @@ export default function Spinner(props) {
       if (delay >= (100 / props.scans) * scansDone) {
         animateCornerCube();
         setScansDone(scansDone + 1);
-        console.log(scansDone)
       }
 
       return () => {
@@ -57,8 +56,10 @@ export default function Spinner(props) {
           fontFamily="inherit"
           fontSize={20}
           fontWeight={650}
+          sx={{textAlign: "center"}}
         >
-          {Math.round(delay)}%
+          {Math.round(delay)}% <br />
+          Scans Complete: {scansDone - 1}
         </Typography>
       )}
 
