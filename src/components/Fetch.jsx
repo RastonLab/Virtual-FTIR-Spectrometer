@@ -51,7 +51,7 @@ export default function Fetch({
   } = useSelector((store) => store.parameter);
 
   let nav = useNavigate();
-  if (!devMode) {
+  if (devMode) {
     nav = (route, num) => {};
   }
 
@@ -203,6 +203,7 @@ export default function Fetch({
 
               // Delays the appearance of generated data
               sleepID = setTimeout(() => {
+                devMode ? dispatch(setProgress(false)) : console.log("userMode");
                 dispatch(setSampleData([data, waveMin, waveMax]));
               }, delay);
               break;
@@ -219,6 +220,7 @@ export default function Fetch({
 
               // Delays the appearance of generated data
               sleepID = setTimeout(() => {
+                devMode ? dispatch(setProgress(false)) : console.log("userMode");
                 dispatch(setBackgroundData([data, waveMin, waveMax]));
               }, delay);
               break;
