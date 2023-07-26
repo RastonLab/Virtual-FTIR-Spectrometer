@@ -1,6 +1,6 @@
 import { PARAMETER_VALUE } from "../dictionaries/constants";
 
-export function animateCornerCube() {
+export function animateCornerCube(time) {
   const mcc = document.getElementById("movable-corner-cube");
   const rayTop = document.getElementById("ray-top");
   const rayMiddle = document.getElementById("ray-middle");
@@ -8,6 +8,12 @@ export function animateCornerCube() {
   const laser = document.getElementById("rect6675");
 
   if (mcc) {
+    mcc.style.transition = `all ${time}s ease`;
+    rayTop.style.transition = `all ${time}s ease`;
+    rayMiddle.style.transition = `all ${time}s ease`;
+    rayBottom.style.transition = `all ${time}s ease`;
+    laser.style.transition = `all ${time}s ease`;
+
     // moveable corner cube
     mcc.setAttribute(
       "transform",
@@ -35,38 +41,34 @@ export function animateCornerCube() {
       "M1406.494 991.284v10H3190.73v209.254H344.494v10H3200.73V991.284Z"
     );
 
-    mcc.addEventListener(
-      "transitionend",
-      () => {
-        // moveable corner cube
-        mcc.setAttribute(
-          "transform",
-          "rotate(135 900.985 1021.051) translate(0, 0)"
-        );
+    setTimeout(() => {
+      // moveable corner cube
+      mcc.setAttribute(
+        "transform",
+        "rotate(135 900.985 1021.051) translate(0, 0)"
+      );
 
-        // top ray
-        rayTop.setAttribute(
-          "d",
-          "m953.417-2026.826 94.391-93.734v673.324l-94.391 95.49z"
-        );
+      // top ray
+      rayTop.setAttribute(
+        "d",
+        "m953.417-2026.826 94.391-93.734v673.324l-94.391 95.49z"
+      );
 
-        // middle ray
-        rayMiddle.setAttribute("transform", "rotate(90) translate (0, 0)");
+      // middle ray
+      rayMiddle.setAttribute("transform", "rotate(90) translate (0, 0)");
 
-        // bottom ray
-        rayBottom.setAttribute(
-          "d",
-          "m1164.195-2120.56 94.356 93.733v1443.91l-94.356 89.932z"
-        );
+      // bottom ray
+      rayBottom.setAttribute(
+        "d",
+        "m1164.195-2120.56 94.356 93.733v1443.91l-94.356 89.932z"
+      );
 
-        // laser
-        laser.setAttribute(
-          "d",
-          "M1406.494 991.284v10h651.235v209.254H344.494v10H2067.73V991.284z"
-        );
-      },
-      { once: true }
-    );
+      // laser
+      laser.setAttribute(
+        "d",
+        "M1406.494 991.284v10h651.235v209.254H344.494v10H2067.73V991.284z"
+      );
+    }, time * 1000);
   }
 }
 
@@ -150,4 +152,54 @@ export function textInteractivity(
 
   // set text in the lecture bottle
   moleculeText.textContent = molecule;
+}
+
+export function pumpValveInteractivity(medium) {
+  const caf2ValveLeft = document.getElementById("caf2-valve-left");
+  const znseValveLeft = document.getElementById("znse-valve-left");
+
+  medium === "Air"
+    ? caf2ValveLeft.setAttribute(
+        "d",
+        "M548.806 430.577a1.089 1.088 0 0 0-.643 1.056l-2.119.946a.256.256 0 0 0-.13.339l.105.234c.058.13.21.188.34.13l2.118-.945a1.089 1.088 0 0 0 1.216.227 1.089 1.088 0 0 0 .643-1.057l2.119-.945a.256.256 0 0 0 .13-.34l-.105-.234a.256.256 0 0 0-.34-.13l-2.118.946a1.089 1.088 0 0 0-1.216-.227z"
+      )
+    : caf2ValveLeft.setAttribute(
+        "d",
+        "M548.161 431.567a1.088 1.089 24.24 0 0 .7 1.02l-.008 2.32c0 .142.114.257.256.257l.257.001a.256.256 0 0 0 .257-.256l.008-2.32a1.088 1.089 24.24 0 0 .707-1.015 1.088 1.089 24.24 0 0-.7-1.02l.008-2.32a.256.256 0 0 0-.256-.258h-.256a.256.256 0 0 0-.258.255l-.008 2.32a1.088 1.089 24.24 0 0-.707 1.016z"
+      );
+
+  medium === "Air"
+    ? znseValveLeft.setAttribute(
+        "d",
+        "M548.806 430.577a1.089 1.088 0 0 0-.643 1.056l-2.119.946a.256.256 0 0 0-.13.339l.105.234c.058.13.21.188.34.13l2.118-.945a1.089 1.088 0 0 0 1.216.227 1.089 1.088 0 0 0 .643-1.057l2.119-.945a.256.256 0 0 0 .13-.34l-.105-.234a.256.256 0 0 0-.34-.13l-2.118.946a1.089 1.088 0 0 0-1.216-.227z"
+      )
+    : znseValveLeft.setAttribute(
+        "d",
+        "M548.161 431.567a1.088 1.089 24.24 0 0 .7 1.02l-.008 2.32c0 .142.114.257.256.257l.257.001a.256.256 0 0 0 .257-.256l.008-2.32a1.088 1.089 24.24 0 0 .707-1.015 1.088 1.089 24.24 0 0-.7-1.02l.008-2.32a.256.256 0 0 0-.256-.258h-.256a.256.256 0 0 0-.258.255l-.008 2.32a1.088 1.089 24.24 0 0-.707 1.016z"
+      );
+}
+
+export function lectureValveInteractivity(lectureBottleInUse) {
+  const caf2ValveRight = document.getElementById("caf2-valve-right");
+  const znseValveRight = document.getElementById("znse-valve-right");
+
+  lectureBottleInUse
+    ? caf2ValveRight.setAttribute(
+        "d",
+        "M571.026 430.577a1.089 1.088 0 0 0-.643 1.056l-2.119.946a.256.256 0 0 0-.13.339l.105.234c.058.13.21.188.34.13l2.118-.945a1.089 1.088 0 0 0 1.216.227 1.089 1.088 0 0 0 .643-1.057l2.119-.945a.256.256 0 0 0 .13-.34l-.105-.234a.256.256 0 0 0-.34-.13l-2.118.946a1.089 1.088 0 0 0-1.216-.227z"
+      )
+    : caf2ValveRight.setAttribute(
+        "d",
+        "M570.381 431.571a1.088 1.089 24 0 0 .704 1.017l.002 2.32c0 .143.115.257.257.257h.257a.256.256 0 0 0 .256-.257l-.002-2.32a1.088 1.089 24 0 0 .703-1.019 1.088 1.089 24 0 0-.704-1.017l-.002-2.32a.256.256 0 0 0-.257-.256h-.257a.256.256 0 0 0-.256.257l.002 2.32a1.088 1.089 24 0 0-.703 1.018z"
+      );
+
+  lectureBottleInUse
+    ? znseValveRight.setAttribute(
+        "d",
+        "M571.026 430.577a1.089 1.088 0 0 0-.643 1.056l-2.119.946a.256.256 0 0 0-.13.339l.105.234c.058.13.21.188.34.13l2.118-.945a1.089 1.088 0 0 0 1.216.227 1.089 1.088 0 0 0 .643-1.057l2.119-.945a.256.256 0 0 0 .13-.34l-.105-.234a.256.256 0 0 0-.34-.13l-2.118.946a1.089 1.088 0 0 0-1.216-.227z"
+      )
+    : znseValveRight.setAttribute(
+        "d",
+        "M570.381 431.571a1.088 1.089 24 0 0 .704 1.017l.002 2.32c0 .143.115.257.257.257h.257a.256.256 0 0 0 .256-.257l-.002-2.32a1.088 1.089 24 0 0 .703-1.019 1.088 1.089 24 0 0-.704-1.017l-.002-2.32a.256.256 0 0 0-.257-.256h-.257a.256.256 0 0 0-.256.257l.002 2.32a1.088 1.089 24 0 0-.703 1.018z"
+      );
 }

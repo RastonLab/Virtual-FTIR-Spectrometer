@@ -17,11 +17,9 @@ export default function Spinner(props) {
   // Updates the value of the
   React.useEffect(() => {
     if (props.timer) {
-
       const timer_interval = setInterval(() => {
-
         // If the scans are complete, turn off spinner
-        if (delay ===  100) {
+        if (delay === 100) {
           dispatch(setProgress(false));
         }
 
@@ -35,10 +33,9 @@ export default function Spinner(props) {
 
       // Keeps track of the number of scans done
       if (scansDone < props.scans && delay >= (100 / props.scans) * scansDone) {
-
         // Triggers the animation on even numbered scans
         if (scansDone % 2 === 0) {
-          animateCornerCube();
+          animateCornerCube(props.opd);
           console.log(scansDone);
         }
         setScansDone(scansDone + 1);
@@ -48,7 +45,15 @@ export default function Spinner(props) {
         clearInterval(timer_interval);
       };
     }
-  }, [props.timer, delay, dispatch, scansDone, setScansDone, props.scans]);
+  }, [
+    props.timer,
+    delay,
+    dispatch,
+    scansDone,
+    setScansDone,
+    props.scans,
+    props.opd,
+  ]);
 
   return (
     <Box
@@ -72,7 +77,7 @@ export default function Spinner(props) {
           fontFamily="inherit"
           fontSize={20}
           fontWeight={650}
-          sx={{textAlign: "center"}}
+          sx={{ textAlign: "center" }}
         >
           {Math.round(delay)}% <br />
           Scans Complete: {scansDone - 1}
