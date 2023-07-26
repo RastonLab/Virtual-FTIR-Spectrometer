@@ -1,31 +1,39 @@
 import { Box, CircularProgress } from "@mui/material";
 import Typography from "@mui/material/Typography";
-import React from "react";
+import React, { useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { setTimer } from "../redux/timerSlice";
+import { animateCornerCube } from "../functions/animation";
 
 export default function Spinner(props) {
   const dispatch = useDispatch();
 
   const { timer } = useSelector((store) => store.timer);
   const [delay, setDelay] = React.useState(timer);
+  const [scansDone, setScansDone] = useState(0);
 
   // Updates the value of the
   React.useEffect(() => {
     if (props.timer) {
       const timer_interval = setInterval(() => {
         setDelay((prevProgress) =>
-          prevProgress >= 100 ? 0 : prevProgress + 1
+          prevProgress >= 100 ? 0 : prevProgress + 0.125
         );
-      }, props.timer / 100);
+      }, props.timer / 800);
 
       dispatch(setTimer(delay));
+
+      if (delay >= (100 / props.scans) * scansDone) {
+        animateCornerCube();
+        setScansDone(scansDone + 1);
+        console.log(scansDone)
+      }
 
       return () => {
         clearInterval(timer_interval);
       };
     }
-  }, [props.timer, delay, dispatch]);
+  }, [props.timer, delay, dispatch, scansDone, setScansDone, props.scans]);
 
   return (
     <Box
