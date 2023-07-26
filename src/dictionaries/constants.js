@@ -41,8 +41,8 @@ export const OPD = {
   0.25: 4,
   0.125: 8,
   0.0625: 16,
-  0.03125: 32,
-  0.015625: 64,
+  // 0.03125: 32,
+  // 0.015625: 64,
 };
 
 // backend values associated with user parameters/inputs
