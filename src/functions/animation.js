@@ -15,25 +15,7 @@ export function animateCornerCube(time) {
     laser.style.transition = `all ${time}s ease`;
 
     // moveable corner cube
-    mcc.setAttribute(
-      "transform",
-      "rotate(135 900.985 1021.051) translate(-800, -800)"
-    );
-
-    // top ray
-    rayTop.setAttribute(
-      "d",
-      "m953.417-3217.12 94.391-91.071v1860.955l-94.391 95.49z"
-    );
-
-    // middle ray
-    rayMiddle.setAttribute("transform", "rotate(90) translate (0, -1130)");
-
-    // bottom ray
-    rayBottom.setAttribute(
-      "d",
-      "m1164.195-3310.854 94.356 95.49v2632.447l-94.356 89.932z"
-    );
+    mcc.setAttribute("transform", "translate(1130, 0)");
 
     // laser
     laser.setAttribute(
@@ -41,32 +23,44 @@ export function animateCornerCube(time) {
       "M1406.494 991.284v10H3190.73v209.254H344.494v10H3200.73V991.284Z"
     );
 
+    // top ray
+    rayTop.setAttribute(
+      "d",
+      "m3233.15 953.417 89.492 94.391H1447.236l-95.49-94.391z"
+    );
+
+    // middle ray
+    rayMiddle.setAttribute("transform", "translate (1130, 0)");
+
+    // bottom ray
+    rayBottom.setAttribute(
+      "d",
+      "m3326.56 1164.195-99.733 94.356H582.917l-89.932-94.356z"
+    );
+
     setTimeout(() => {
       // moveable corner cube
-      mcc.setAttribute(
-        "transform",
-        "rotate(135 900.985 1021.051) translate(0, 0)"
-      );
-
-      // top ray
-      rayTop.setAttribute(
-        "d",
-        "m953.417-2026.826 94.391-93.734v673.324l-94.391 95.49z"
-      );
-
-      // middle ray
-      rayMiddle.setAttribute("transform", "rotate(90) translate (0, 0)");
-
-      // bottom ray
-      rayBottom.setAttribute(
-        "d",
-        "m1164.195-2120.56 94.356 93.733v1443.91l-94.356 89.932z"
-      );
+      mcc.setAttribute("transform", "translate(0, 0)");
 
       // laser
       laser.setAttribute(
         "d",
         "M1406.494 991.284v10h651.235v209.254H344.494v10H2067.73V991.284z"
+      );
+
+      // top ray
+      rayTop.setAttribute(
+        "d",
+        "m2026.826 953.417 93.734 94.391h-673.324l-95.49-94.391z"
+      );
+
+      // middle ray
+      rayMiddle.setAttribute("transform", "translate (0, 0)");
+
+      // bottom ray
+      rayBottom.setAttribute(
+        "d",
+        "m2120.56 1164.195-93.733 94.356H582.917l-89.932-94.356z"
       );
     }, time * 1000);
   }

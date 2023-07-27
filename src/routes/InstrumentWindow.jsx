@@ -32,6 +32,8 @@ import { useSelector } from "react-redux";
 import "../style/routes/InstrumentWindow.css";
 import "../style/components/Button.css";
 
+import { animateCornerCube } from "../functions/animation";
+
 export default function InstrumentWindow() {
   const {
     beamsplitter,
@@ -100,6 +102,9 @@ export default function InstrumentWindow() {
         <h1>Scan Progress</h1>
         <button className="button" onClick={toggleDrawer}>
           Experiment Settings
+        </button>
+        <button className="button" onClick={() => animateCornerCube(2)}>
+          ANIMATE
         </button>
         {spinner && <Spinner variant="indeterminate" size={100} />}
         {progress && !spinner && !devMode && (
