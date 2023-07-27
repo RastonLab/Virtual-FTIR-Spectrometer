@@ -1,5 +1,1 @@
-export const zeroFills = {
-  0: "0",
-  1: "1",
-  2: "2",
-};
+export const zeroFills = [0, 1, 2];

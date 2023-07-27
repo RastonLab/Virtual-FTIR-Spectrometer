@@ -43,7 +43,9 @@ export default function checkParams(params) {
   }
 
   // check if the resolution is correct
-  if (!Object.keys(resolutions).includes(params.resolution)) {
+  // console.log("typeof: " + typeof params.resolution);
+  // console.log("typeof2: " + typeof Object.keys(resolutions).at(3));
+  if (!resolutions.includes(params.resolution)) {
     return `Resolution ${params.resolution} is not valid.`;
   }
 
@@ -53,7 +55,7 @@ export default function checkParams(params) {
   }
 
   // check if the zero fill is correct
-  if (!Object.keys(zeroFills).includes(params.zeroFill)) {
+  if (!zeroFills.includes(params.zeroFill)) {
     return `Zero Fill ${params.zeroFill} is not valid.`;
   }
 

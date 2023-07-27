@@ -18,7 +18,7 @@ import { setPeaksData } from "../redux/peaksDataSlice";
 import { setAbsorbanceData } from "../redux/absorbanceDataSlice";
 import { setSpinner } from "../redux/spinnerSlice";
 import { setTimer } from "../redux/timerSlice";
-import { setLectureBottle } from "../redux/lectureBottleSlice"
+import { setLectureBottle } from "../redux/lectureBottleSlice";
 
 import { useNavigate } from "react-router-dom";
 
@@ -105,9 +105,9 @@ export default function Fetch({
       }
 
       // Controls the Label and valve on the Lecture Bottle
-      if (type.localeCompare("background") === 0 ) {
+      if (type.localeCompare("background") === 0) {
         dispatch(setLectureBottle(false));
-      } else if (type.localeCompare("sample") === 0 ) {
+      } else if (type.localeCompare("sample") === 0) {
         dispatch(setLectureBottle(true));
       }
 
@@ -138,7 +138,6 @@ export default function Fetch({
         zeroFill: zeroFill,
       });
     } else if (type.localeCompare("find_peaks") === 0) {
-
       let startIndex = params.x.findIndex((element) => {
         return element >= params.lowerBound;
       });
@@ -152,7 +151,7 @@ export default function Fetch({
       });
 
       if (endIndex === -1) {
-        endIndex = params.x.length - 1
+        endIndex = params.x.length - 1;
       }
 
       body = JSON.stringify({
@@ -191,36 +190,38 @@ export default function Fetch({
         if (data.success) {
           switch (type) {
             case "sample":
-
               // Reset Stored Data
               dispatch(setSampleData([null, null, null]));
 
               // Only navigate to Instrument Window when !devMode
               devMode ? console.log("devMode") : nav("/instrument", -1);
-              
+
               // Turns off "waiting" spinner
-              dispatch(setSpinner(false)); 
+              dispatch(setSpinner(false));
 
               // Delays the appearance of generated data
               sleepID = setTimeout(() => {
-                devMode ? dispatch(setProgress(false)) : console.log("userMode");
+                devMode
+                  ? dispatch(setProgress(false))
+                  : console.log("userMode");
                 dispatch(setSampleData([data, waveMin, waveMax]));
               }, delay);
               break;
             case "background":
-
               // Reset Stored Data
               dispatch(setBackgroundData([null, null, null]));
 
               // Only navigate to Instrument Window when !devMode
               devMode ? console.log("devMode") : nav("/instrument", -1);
-              
+
               // Turns off "waiting" spinner
-              dispatch(setSpinner(false)); 
+              dispatch(setSpinner(false));
 
               // Delays the appearance of generated data
               sleepID = setTimeout(() => {
-                devMode ? dispatch(setProgress(false)) : console.log("userMode");
+                devMode
+                  ? dispatch(setProgress(false))
+                  : console.log("userMode");
                 dispatch(setBackgroundData([data, waveMin, waveMax]));
               }, delay);
               break;

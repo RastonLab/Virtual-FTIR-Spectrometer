@@ -27,9 +27,9 @@ export default function ZeroFill({ dictionary, store }) {
           onChange={handleChange}
           sx={{ maxWidth: "120px" }}
         >
-          {Object.keys(dictionary).map((option) => (
+          {dictionary.map((option) => (
             <MenuItem key={option} value={option}>
-              {dictionary[option]}
+              {option}
             </MenuItem>
           ))}
         </Select>
