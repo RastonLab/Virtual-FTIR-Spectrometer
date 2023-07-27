@@ -103,9 +103,11 @@ export default function InstrumentWindow() {
         <button className="button" onClick={toggleDrawer}>
           Experiment Settings
         </button>
-        <button className="button" onClick={() => animateCornerCube(2)}>
-          ANIMATE
-        </button>
+        {devMode && (
+          <button className="button" onClick={() => animateCornerCube(4)}>
+            Animate MCC
+          </button>
+        )}
         {spinner && <Spinner variant="indeterminate" size={100} />}
         {progress && !spinner && !devMode && (
           <>
