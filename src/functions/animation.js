@@ -73,8 +73,11 @@ export function animateCornerCube(time) {
 }
 
 export function beamsplitterInteractivity(beamsplitter) {
+  // DOM elements
   const caf2 = document.getElementById("beamsplitter-caf2");
   const znse = document.getElementById("beamsplitter-znse");
+
+  // constant parameter values
   const caf2Value = PARAMETER_VALUE.beamsplitterCaF2;
   const znseValue = PARAMETER_VALUE.beamsplitterZnSe;
 
@@ -84,10 +87,13 @@ export function beamsplitterInteractivity(beamsplitter) {
 }
 
 export function detectorInteractivity(detector) {
+  // DOM elements
   const insbMirror = document.getElementById("flat-rotatable-mirror-insb");
   const mctMirror = document.getElementById("flat-rotatable-mirror-mct");
   const insbBeam = document.getElementById("beam-insb");
   const mctBeam = document.getElementById("beam-mct");
+
+  // constant parameter values
   const insbValue = PARAMETER_VALUE.detectorInSb;
   const mctValue = PARAMETER_VALUE.detectorMCT;
 
@@ -101,12 +107,15 @@ export function detectorInteractivity(detector) {
 }
 
 export function sourceInteractivity(source) {
+  // DOM elements
   const globarMirror = document.getElementById("flat-rotatable-mirror-globar");
   const tungstenMirror = document.getElementById(
     "flat-rotatable-mirror-tungsten"
   );
   const globarBeam = document.getElementById("beam-globar");
   const tungstenBeam = document.getElementById("beam-tungsten");
+
+  // constant parameter values
   const globarValue = PARAMETER_VALUE.sourceGlobar;
   const tungstenValue = PARAMETER_VALUE.sourceTungsten;
 
@@ -120,8 +129,11 @@ export function sourceInteractivity(source) {
 }
 
 export function cellWindowInteractivity(window) {
+  // DOM elements
   const caf2 = document.getElementById("sample-cell-caf2");
   const znse = document.getElementById("sample-cell-znse");
+
+  // constant parameter values
   const caf2Value = PARAMETER_VALUE.cellWindowCaF2;
   const znseValue = PARAMETER_VALUE.cellWindowZnSe;
 
@@ -138,6 +150,7 @@ export function textInteractivity(
   waveMax,
   waveMin
 ) {
+  // DOM elements
   const opdText = document.getElementById("opd-value");
   const scanText = document.getElementById("scan-value");
   const rangeText = document.getElementById("range-value");
@@ -155,6 +168,7 @@ export function textInteractivity(
 }
 
 export function pumpValveInteractivity(medium) {
+  // DOM elements
   const caf2ValveLeft = document.getElementById("caf2-valve-left");
   const znseValveLeft = document.getElementById("znse-valve-left");
 
@@ -180,6 +194,7 @@ export function pumpValveInteractivity(medium) {
 }
 
 export function lectureValveInteractivity(lectureBottleInUse) {
+  // DOM elements
   const caf2ValveRight = document.getElementById("caf2-valve-right");
   const znseValveRight = document.getElementById("znse-valve-right");
 
