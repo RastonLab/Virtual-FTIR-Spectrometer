@@ -43,8 +43,6 @@ export default function checkParams(params) {
   }
 
   // check if the resolution is correct
-  // console.log("typeof: " + typeof params.resolution);
-  // console.log("typeof2: " + typeof Object.keys(resolutions).at(3));
   if (!resolutions.includes(params.resolution)) {
     return `Resolution ${params.resolution} is not valid.`;
   }
