@@ -16,7 +16,6 @@ import { molecule_labels } from "../dictionaries/molecule";
 
 // functions
 import {
-  animateCornerCube,
   beamsplitterInteractivity,
   cellWindowInteractivity,
   detectorInteractivity,
@@ -101,9 +100,6 @@ export default function InstrumentWindow() {
         <h1>Scan Progress</h1>
         <button className="button" onClick={toggleDrawer}>
           Experiment Settings
-        </button>
-        <button className="button" onClick={animateCornerCube}>
-          Animate!
         </button>
         {spinner && <Spinner variant="indeterminate" size={100} />}
         {progress && !spinner && !devMode && (
