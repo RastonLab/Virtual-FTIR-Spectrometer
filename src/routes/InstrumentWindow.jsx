@@ -12,7 +12,7 @@ import { BAD_ID, OPD } from "../dictionaries/constants";
 
 // dictionaries
 import { toolTips } from "../dictionaries/tooltips";
-import { molecule_labels } from "../dictionaries/molecule";
+import { molecules } from "../dictionaries/molecule";
 
 // functions
 import {
@@ -79,7 +79,7 @@ export default function InstrumentWindow() {
     cellWindowInteractivity(window);
 
     textInteractivity(
-      lectureBottleInUse ? molecule_labels[molecule] : "",
+      lectureBottleInUse ? molecules[molecule] : "",
       OPD,
       resolution,
       scan,

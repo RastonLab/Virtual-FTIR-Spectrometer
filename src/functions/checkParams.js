@@ -25,8 +25,8 @@ export default function checkParams(params) {
   }
 
   // check if the molecule is correct
-  if (!molecules.map(({ value }) => value).includes(params.molecule)) {
-    return `${params.molecule} is not a vaild molecule`;
+  if (!Object.keys(molecules).includes(params.molecule)) {
+    return `${params.molecule} is not a valid molecule`;
   }
 
   // check if the medium is correct
@@ -43,18 +43,18 @@ export default function checkParams(params) {
   }
 
   // check if the resolution is correct
-  if (!resolutions.map(({ value }) => value).includes(params.resolution)) {
-    return `Resolution ${params.resolution} is not valid. Should be either 1, 0.5, 0.25, 0.125, 0.0625, 0.03125, or 0.015625.`;
+  if (!Object.keys(resolutions).includes(params.resolution)) {
+    return `Resolution ${params.resolution} is not valid.`;
   }
 
   // check if the number of scans is correct
   if (params.numScan < 1 || params.numScan > 256) {
-    return `Number of Scans ${params.numScan} is not in accepted range (1 - 256)`;
+    return `Number of Scans ${params.numScan} is not valid`;
   }
 
   // check if the zero fill is correct
-  if (!zeroFills.map(({ value }) => value).includes(params.zeroFill)) {
-    return `Zero Fill ${params.zeroFill} is not valid. Should be either 0, 1, or 2`;
+  if (!Object.keys(zeroFills).includes(params.zeroFill)) {
+    return `Zero Fill ${params.zeroFill} is not valid.`;
   }
 
   // check if source is correct

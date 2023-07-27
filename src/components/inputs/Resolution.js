@@ -27,9 +27,9 @@ export default function Resolution({ dictionary, store }) {
           onChange={handleChange}
           sx={{ maxWidth: "120px" }}
         >
-          {dictionary.map((option) => (
-            <MenuItem key={option.value} value={option.value}>
-              {option.label}
+          {Object.keys(dictionary).map((option) => (
+            <MenuItem key={option} value={option}>
+              {dictionary[option]}
             </MenuItem>
           ))}
         </Select>
