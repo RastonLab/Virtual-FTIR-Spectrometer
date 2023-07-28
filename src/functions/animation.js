@@ -1,3 +1,4 @@
+// dictionaries
 import { PARAMETER_VALUE } from "../dictionaries/constants";
 
 export function animateCornerCube(time) {

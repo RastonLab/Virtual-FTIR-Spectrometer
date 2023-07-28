@@ -1,8 +1,9 @@
-import Save from "../components/Save";
+// components
 import { Open } from "../components/Open";
-import Print from "../components/Print";
 import CancelScan from "../components/CancelScan";
 import Fetch from "../components/Fetch";
+import Print from "../components/Print";
+import Save from "../components/Save";
 
 // constants
 import { BACKGROUND, SAMPLE } from "../dictionaries/constants";

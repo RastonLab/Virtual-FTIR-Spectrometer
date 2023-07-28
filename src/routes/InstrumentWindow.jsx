@@ -11,18 +11,19 @@ import Spinner from "../components/Spinner";
 import { BAD_ID, OPD } from "../dictionaries/constants";
 
 // dictionaries
-import { toolTips } from "../dictionaries/tooltips";
+import { tooltips } from "../dictionaries/tooltips";
 import { molecules } from "../dictionaries/molecule";
 
 // functions
 import {
+  animateCornerCube,
   beamsplitterInteractivity,
   cellWindowInteractivity,
   detectorInteractivity,
+  lectureValveInteractivity,
+  pumpValveInteractivity,
   sourceInteractivity,
   textInteractivity,
-  pumpValveInteractivity,
-  lectureValveInteractivity,
 } from "../functions/animation";
 
 // redux
@@ -31,8 +32,6 @@ import { useSelector } from "react-redux";
 // style
 import "../style/routes/InstrumentWindow.css";
 import "../style/components/Button.css";
-
-import { animateCornerCube } from "../functions/animation";
 
 export default function InstrumentWindow() {
   const {
@@ -54,14 +53,6 @@ export default function InstrumentWindow() {
   const [toggled, setToggled] = useState(false);
   const [element, setElement] = useState();
 
-  const handleClick = (event) => {
-    console.log(event.target.parentElement.id);
-    if (!BAD_ID.includes(event.target.parentElement.id)) {
-      setElement(event.target.parentElement.id);
-      setToggled(!toggled);
-    }
-  };
-
   const [drawerOpen, setDrawerOpen] = useState(false);
 
   const toggleDrawer = () => {
@@ -70,16 +61,21 @@ export default function InstrumentWindow() {
 
   const delay = OPD[resolution] * scan * 1000; // 1000 is to convert to milliseconds
 
-  // useEffect - wait for components to render then perform interactivity
+  // find group id when SVG is clicked
+  const handleClick = (event) => {
+    console.log(event.target.parentElement.id);
+    if (!BAD_ID.includes(event.target.parentElement.id)) {
+      setElement(event.target.parentElement.id);
+      setToggled(!toggled);
+    }
+  };
+
+  // useEffect - wait for components to render then perform interactivity/animation
   useEffect(() => {
     beamsplitterInteractivity(beamsplitter);
-
     detectorInteractivity(detector);
-
     sourceInteractivity(source);
-
     cellWindowInteractivity(window);
-
     textInteractivity(
       lectureBottleInUse ? molecules[molecule] : "",
       OPD,
@@ -88,16 +84,16 @@ export default function InstrumentWindow() {
       waveMax,
       waveMin
     );
-
     pumpValveInteractivity(medium);
-
     lectureValveInteractivity(lectureBottleInUse);
   });
 
   return (
     <div id="instrument-window">
+      {/* top-down instrument SVG component */}
       <Main id="instrument" onClick={handleClick} />
 
+      {/* button for settings, progress spinner */}
       <div id="instrument-spinner">
         <h1>Scan Progress</h1>
         <button className="button" onClick={toggleDrawer}>
@@ -123,6 +119,7 @@ export default function InstrumentWindow() {
         )}
       </div>
 
+      {/* MUI drawer that holds experimental setup */}
       <Drawer
         anchor="right"
         open={drawerOpen}
@@ -134,6 +131,7 @@ export default function InstrumentWindow() {
         </CloseButton>
       </Drawer>
 
+      {/* MUI Dialog popup that holds tooltip information */}
       {element && (
         <Dialog
           onClose={handleClick}
@@ -141,7 +139,7 @@ export default function InstrumentWindow() {
           fullScreen={element === "display" ? true : false}
         >
           <CloseButton id="customized-dialog-title" onClose={handleClick}>
-            {toolTips[element].text}
+            {tooltips[element].text}
           </CloseButton>
         </Dialog>
       )}

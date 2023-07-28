@@ -10,16 +10,17 @@ import checkParams from "../functions/checkParams";
 import { useDispatch, useSelector } from "react-redux";
 
 // redux slices
-import { setError } from "../redux/errorSlice";
-import { setProgress } from "../redux/progressSlice";
-import { setBackgroundData } from "../redux/backgroundDataSlice";
-import { setSampleData } from "../redux/sampleDataSlice";
-import { setPeaksData } from "../redux/peaksDataSlice";
 import { setAbsorbanceData } from "../redux/absorbanceDataSlice";
+import { setBackgroundData } from "../redux/backgroundDataSlice";
+import { setError } from "../redux/errorSlice";
+import { setLectureBottle } from "../redux/lectureBottleSlice";
+import { setPeaksData } from "../redux/peaksDataSlice";
+import { setProgress } from "../redux/progressSlice";
+import { setSampleData } from "../redux/sampleDataSlice";
 import { setSpinner } from "../redux/spinnerSlice";
 import { setTimer } from "../redux/timerSlice";
-import { setLectureBottle } from "../redux/lectureBottleSlice";
 
+// router
 import { useNavigate } from "react-router-dom";
 
 export let sleepID = 0;
@@ -33,6 +34,7 @@ export default function Fetch({
   buttonStyle,
 }) {
   const dispatch = useDispatch();
+
   const { progress } = useSelector((store) => store.progress);
   const { devMode } = useSelector((store) => store.devMode);
   let {

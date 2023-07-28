@@ -35,7 +35,6 @@ export const Open = () => {
   const fileReader = new FileReader();
 
   const [data, setData] = useState();
-  // const [filename, setFilename] = useState();
   const [success, toggleSuccess] = useState(false);
   const [badFile, toggleBadFile] = useState(false);
 
@@ -43,7 +42,6 @@ export const Open = () => {
     if (event.target.files[0]) {
       fileReader.onload = function (e) {
         setData(e.target.result);
-        // setFilename(event.target.files[0].name);
       };
       fileReader.readAsText(event.target.files[0]);
     }

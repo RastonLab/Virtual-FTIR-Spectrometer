@@ -16,7 +16,6 @@ export const SamplePlotly = forwardRef((props, ref) => {
   );
 
   if (sampleData) {
-    // https://github.com/suzil/radis-app/blob/main/frontend/src/components/CalcSpectrumPlot.tsx
     return (
       <>
         {

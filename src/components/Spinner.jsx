@@ -1,11 +1,18 @@
-import { Box, CircularProgress } from "@mui/material";
-import Typography from "@mui/material/Typography";
 import React, { useState } from "react";
-import { useSelector, useDispatch } from "react-redux";
-import { setTimer } from "../redux/timerSlice";
+
+// functions
 import { animateCornerCube } from "../functions/animation";
 
+// mui
+import { Box, CircularProgress } from "@mui/material";
+import Typography from "@mui/material/Typography";
+
+// redux
+import { useSelector, useDispatch } from "react-redux";
+
+// redux slice
 import { setProgress } from "../redux/progressSlice";
+import { setTimer } from "../redux/timerSlice";
 
 export default function Spinner(props) {
   const dispatch = useDispatch();

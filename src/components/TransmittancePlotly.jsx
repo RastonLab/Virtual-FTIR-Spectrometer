@@ -16,7 +16,6 @@ export const TransmittancePlotly = forwardRef((props, ref) => {
   const { waveMaxSaved, waveMinSaved } = useSelector(
     (store) => store.parameter
   );
-  //   const newX = sampleData.x / backgroundData.x;
   const newY = [sampleData.x.length];
 
   for (let i = 0; i < sampleData.x.length; i++) {
@@ -32,7 +31,6 @@ export const TransmittancePlotly = forwardRef((props, ref) => {
   }
 
   if (sampleData) {
-    // https://github.com/suzil/radis-app/blob/main/frontend/src/components/CalcSpectrumPlot.tsx
     return (
       <>
         {

@@ -49,7 +49,6 @@ export default function Print() {
               control={<Radio />}
               label="Just the Graph"
             />
-            {/* <FormControlLabel value="input" control={<Radio />} label="Just the Inputs" /> */}
             <FormControlLabel
               value="both"
               control={<Radio />}

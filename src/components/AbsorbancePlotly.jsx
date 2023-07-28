@@ -39,6 +39,7 @@ export const AbsorbancePlotly = forwardRef((props, ref) => {
   const [lowerBound, setLowerBound] = useState(sampleWaveMin);
   const [upperBound, setUpperBound] = useState(sampleWaveMax);
 
+  // if the correct data exists, calculate the absorbance data
   if (sampleData && backgroundData && !absorbanceData) {
     const newY = [sampleData.x.length];
 
@@ -67,7 +68,6 @@ export const AbsorbancePlotly = forwardRef((props, ref) => {
   }
 
   if (absorbanceData) {
-    // https://github.com/suzil/radis-app/blob/main/frontend/src/components/CalcSpectrumPlot.tsx
     return (
       <div className="absorbance">
         <div className="absorb-row">

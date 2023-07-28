@@ -9,14 +9,13 @@ import { useSelector } from "react-redux";
 // style
 import "../style/components/Plotly.css";
 
-// this component uses the plotly library to graph background sample data
+// this component uses the plotly library to graph background spectrum data
 export default function BackgroundPlotly() {
   const { backgroundData, backgroundWaveMin, backgroundWaveMax } = useSelector(
     (store) => store.backgroundData
   );
 
   if (backgroundData) {
-    // https://github.com/suzil/radis-app/blob/main/frontend/src/components/CalcSpectrumPlot.tsx
     return (
       <>
         {
