@@ -134,40 +134,12 @@ export default function ExperimentalSetup() {
           <div className="fetch-zone">
             <Fetch
               type="background"
-              params={{
-                beamsplitter,
-                detector,
-                medium,
-                molecule,
-                pressure,
-                resolution,
-                scan,
-                source,
-                waveMax,
-                waveMin,
-                window,
-                zeroFill,
-              }}
               fetchURL={BACKGROUND}
               buttonText={"Collect Background Spectrum"}
               buttonStyle={"button"}
             />
             <Fetch
               type="sample"
-              params={{
-                beamsplitter,
-                detector,
-                medium,
-                molecule,
-                pressure,
-                resolution,
-                scan,
-                source,
-                waveMax,
-                waveMin,
-                window,
-                zeroFill,
-              }}
               fetchURL={SAMPLE}
               buttonText="Collect Sample Spectrum"
               buttonStyle={"button"}

@@ -26,8 +26,8 @@ export let sleepID = 0;
 
 // this component reaches out to the flask server with user parameters and receives X and Y coordinates to graph
 export default function Fetch({
-  type,
   params,
+  type,
   fetchURL,
   buttonText,
   buttonStyle,
@@ -72,30 +72,28 @@ export default function Fetch({
       dispatch(setSpinner(true)); // Turns on the "waiting" spinner
       dispatch(setTimer(0));
 
-      if (params) {
-        // validate the user parameters
-        let errorMessage = checkParams(params);
+      // validate the user parameters
+      let errorMessage = checkParams({
+        beamsplitter,
+        detector,
+        medium,
+        pressure,
+        molecule,
+        resolution,
+        scan,
+        source,
+        waveMax,
+        waveMin,
+        window,
+        zeroFill,
+      });
 
-        // error occurred in checkParams, display error message to user
-        if (errorMessage) {
-          dispatch(setProgress(false));
-          dispatch(setSpinner(false));
-          dispatch(setError([true, String(errorMessage)]));
-          return;
-        }
-
-        beamsplitter = params.beamsplitter;
-        detector = params.detector;
-        medium = params.medium;
-        molecule = params.molecule;
-        pressure = params.pressure;
-        resolution = params.resolution;
-        scan = params.scan;
-        source = params.source;
-        waveMax = params.waveMax;
-        waveMin = params.waveMin;
-        window = params.window;
-        zeroFill = params.zeroFill;
+      // error occurred in checkParams, display error message to user
+      if (errorMessage) {
+        dispatch(setProgress(false));
+        dispatch(setSpinner(false));
+        dispatch(setError([true, String(errorMessage)]));
+        return;
       }
 
       // Leaves delay as Immediate if in devMode
