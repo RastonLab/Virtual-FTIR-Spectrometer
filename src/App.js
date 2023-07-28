@@ -2,28 +2,18 @@ import React, { useState } from "react";
 
 // components
 import { ReactComponent as RLLogo } from "./images/RastonLabLogo.svg";
+import DevMode from "./components/DevMode";
 import Popup from "./components/Popup";
 
 // dictionary
 import { menuItems } from "./dictionaries/menuItems";
 
-// router
-import { Outlet, Link } from "react-router-dom";
-
-// style
-import "./style/App.css";
-
-// Icons
-import InfoIcon from "@mui/icons-material/Info";
-import { GitHub } from "@mui/icons-material";
-
+// mui
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
-import Toolbar from "@mui/material/Toolbar";
-import IconButton from "@mui/material/IconButton";
-import MenuIcon from "@mui/icons-material/Menu";
 import Container from "@mui/material/Container";
-import DevMode from "./components/DevMode";
+import IconButton from "@mui/material/IconButton";
+import Toolbar from "@mui/material/Toolbar";
 import {
   Accordion,
   AccordionDetails,
@@ -31,6 +21,17 @@ import {
   Drawer,
   Popover,
 } from "@mui/material";
+
+// mui icons
+import InfoIcon from "@mui/icons-material/Info";
+import { GitHub } from "@mui/icons-material";
+import MenuIcon from "@mui/icons-material/Menu";
+
+// router
+import { Outlet, Link } from "react-router-dom";
+
+// style
+import "./style/App.css";
 
 export default function App() {
   const [expanded, setExpanded] = useState("");
