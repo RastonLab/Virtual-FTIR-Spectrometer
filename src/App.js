@@ -33,6 +33,9 @@ import { Outlet, Link } from "react-router-dom";
 // style
 import "./style/App.css";
 
+/**
+ * "Base" of this project. Contains the MenuBar with room for other "routes" to exist on the rest of the page
+ */
 export default function App() {
   const [expanded, setExpanded] = useState("");
   const [drawer, setDrawer] = useState(false);
