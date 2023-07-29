@@ -1,13 +1,19 @@
 // URLs used to react the API either running locally or hosted online
 
-// export const FIND_PEAKS = "http://localhost:5000/find_peaks";
-export const FIND_PEAKS = "https://api.ftir.rastonlab.org/find_peaks";
+export const FIND_PEAKS = "https://cloud.rastonlab.org/ftir/find_peaks"; // main
+// export const FIND_PEAKS = "https://cloud.rastonlab.org/dev/ftir/find_peaks"; // dev
+// export const FIND_PEAKS = "http://localhost:5000/find_peaks"; // local
+// export const FIND_PEAKS = "https://api.ftir.rastonlab.org/find_peaks"; // linode - TODO --> REMOVE
 
-// export const BACKGROUND = "http://localhost:5000/background";
-export const BACKGROUND = "https://api.ftir.rastonlab.org/background";
+export const BACKGROUND = "https://cloud.rastonlab.org/ftir/background"; // main
+// export const BACKGROUND = "https://cloud.rastonlab.org/dev/ftir/background"; // dev
+// export const BACKGROUND = "http://localhost:5000/background"; // local
+// export const BACKGROUND = "https://api.ftir.rastonlab.org/background"; // linode - TODO --> REMOVE
 
-// export const SAMPLE = "http://localhost:5000/spectrum";
-export const SAMPLE = "https://api.ftir.rastonlab.org/spectrum";
+export const SAMPLE = "https://cloud.rastonlab.org/ftir/spectrum"; // main
+// export const SAMPLE = "https://cloud.rastonlab.org/dev/ftir/spectrum"; // dev
+// export const SAMPLE = "http://localhost:5000/spectrum"; // local
+// export const SAMPLE = "https://api.ftir.rastonlab.org/spectrum"; // linode - TODO --> REMOVE
 
 // svg ids that are not associated with tooltips but can be selected
 export const BAD_ID = [
