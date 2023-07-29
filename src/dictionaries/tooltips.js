@@ -83,6 +83,9 @@ const parabolicMirrorHole = {
   ),
 };
 
+/**
+ * Objects with keys associated with the group IDs of the Instrument Window SVG
+ */
 export const tooltips = {
   apd: {
     text: (

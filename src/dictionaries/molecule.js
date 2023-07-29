@@ -1,3 +1,9 @@
+/**
+ * key-value (value-label) pairs for the molecules
+ *
+ * value - the value the server receives
+ * label - the value displayed to the user (allows for subscripts)
+ */
 export const molecules = {
   C2H2: "C₂H₂",
   C2H4: "C₂H₄",

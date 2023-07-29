@@ -8,8 +8,9 @@ import Save from "../components/Save";
 // constants
 import { BACKGROUND, SAMPLE } from "../dictionaries/constants";
 
-// This file controls what shows up in the menu bar. To remove something
-// from the menu bar, either remove the code or comment it out
+/**
+ * Controls what appears in the MenuBar. To remove something, either remove the code or comment it out
+ */
 export const menuItems = [
   {
     label: "File",
