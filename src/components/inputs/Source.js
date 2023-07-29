@@ -16,6 +16,13 @@ import { useDispatch } from "react-redux";
 // redux slice
 import { setSource } from "../../redux/parameterSlice";
 
+/**
+ * A component that contains a MUI Switch for the two detector values
+ *
+ * @param {number} optionOneData - The value passed to the server for option one.
+ * @param {number} optionTwoData - The value passed to the server for option two.
+ * @param {number} store - The current value selected by the user.
+ */
 export default function Source({ optionOneData, optionTwoData, store }) {
   const dispatch = useDispatch();
 

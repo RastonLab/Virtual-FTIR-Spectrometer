@@ -10,6 +10,12 @@ import { useDispatch } from "react-redux";
 // redux slice
 import { setZeroFill } from "../../redux/parameterSlice";
 
+/**
+ * A component that contains a MUI Select (dropdown) for the resolution values
+ *
+ * @param {object} dictionary - The list of pre-selected values.
+ * @param {number} store - The current value selected by the user.
+ */
 export default function ZeroFill({ dictionary, store }) {
   const dispatch = useDispatch();
 
