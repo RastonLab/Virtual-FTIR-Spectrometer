@@ -17,7 +17,9 @@ import {
 import "../style/components/Print.css";
 import "../style/components/Button.css";
 
-// this component is used to print a generated spectrum and user inputs
+/**
+ * A component that is used to print generated spectra and/or its associated inputs
+ */
 export default function Print() {
   const componentRef = useRef();
   const [printOptions, setPrintOptions] = useState("both");

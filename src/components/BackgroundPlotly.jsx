@@ -9,7 +9,9 @@ import { useSelector } from "react-redux";
 // style
 import "../style/components/Plotly.css";
 
-// this component uses the plotly library to graph background spectrum data
+/**
+ * A component that uses Plotly.js to graph background spectrum data
+ */
 export default function BackgroundPlotly() {
   const { backgroundData, backgroundWaveMin, backgroundWaveMax } = useSelector(
     (store) => store.backgroundData

@@ -9,7 +9,9 @@ import { useSelector } from "react-redux";
 // style
 import "../style/components/Plotly.css";
 
-// this component uses the plotly library to graph transmittance spectrum data
+/**
+ * A component that uses Plotly.js to graph transmittance spectrum data
+ */
 export const TransmittancePlotly = forwardRef((props, ref) => {
   const { backgroundData } = useSelector((store) => store.backgroundData);
   const { sampleData } = useSelector((store) => store.sampleData);

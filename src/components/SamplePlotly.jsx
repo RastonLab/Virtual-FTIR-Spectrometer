@@ -9,7 +9,9 @@ import { useSelector } from "react-redux";
 // style
 import "../style/components/Plotly.css";
 
-// this component uses the plotly library to graph sample spectrum data
+/**
+ * A component that uses Plotly.js to graph sample spectrum data
+ */
 export const SamplePlotly = forwardRef((props, ref) => {
   const { sampleData, sampleWaveMin, sampleWaveMax } = useSelector(
     (store) => store.sampleData

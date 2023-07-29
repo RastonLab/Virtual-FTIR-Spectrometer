@@ -22,7 +22,9 @@ import { setAbsorbanceData } from "../redux/absorbanceDataSlice";
 import "../style/components/Plotly.css";
 import "../style/components/Absorbance.css";
 
-// this component uses the plotly library to graph absorbance spectrum data
+/**
+ * A component that uses Plotly.js to graph absorbance spectrum data
+ */
 export const AbsorbancePlotly = forwardRef((props, ref) => {
   const { absorbanceData } = useSelector((store) => store.absorbanceData);
   const { backgroundData } = useSelector((store) => store.backgroundData);

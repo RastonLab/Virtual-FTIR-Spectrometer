@@ -14,6 +14,9 @@ import { useSelector, useDispatch } from "react-redux";
 import { setProgress } from "../redux/progressSlice";
 import { setTimer } from "../redux/timerSlice";
 
+/**
+ * A component that contains an MUI Progress (spinner) to display loading/waiting to the user
+ */
 export default function Spinner(props) {
   const dispatch = useDispatch();
 

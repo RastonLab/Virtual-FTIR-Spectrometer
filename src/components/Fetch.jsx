@@ -25,7 +25,15 @@ import { useNavigate } from "react-router-dom";
 
 export let sleepID = 0;
 
-// this component reaches out to the flask server with user parameters and receives X and Y coordinates to graph
+/**
+ * A component that reaches out to the Flask server with user entered parameters and received X and Y coordinates.
+ *
+ * @param {object} params - The parameters used to find_peaks.
+ * @param {string} type - The type of fetch request that is being performed.
+ * @param {string} fetchURL - The URL used to reach out to the server.
+ * @param {string} buttonText - The text on the button.
+ * @param {string} buttonStyle - The class ID set on the button to determine style.
+ */
 export default function Fetch({
   params,
   type,

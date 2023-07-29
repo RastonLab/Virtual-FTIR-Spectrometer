@@ -10,8 +10,19 @@ import { Dialog } from "@mui/material";
 import "../style/components/Popup.css";
 
 // this component is used to display popup overlays for the instrument and certain menu items
+/**
+ * A component that contains a MUI Dialog (popup) to display information in the File and Help menus
+ *
+ * @param {string} label - The text that appears in the MenuBar.
+ * @param {string} title - The text that appears at the top of the popup.
+ * @param {object} text - The text that appears that the bottom of the popup.
+ */
 export default function Popup({ label, title, text }) {
   const [open, setOpen] = useState(false);
+
+  console.log(label);
+  console.log(title);
+  console.log(text);
 
   const handleClickOpen = () => {
     setOpen(true);

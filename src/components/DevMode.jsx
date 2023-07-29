@@ -4,6 +4,9 @@ import { useDispatch, useSelector } from "react-redux";
 // redux slice
 import { setDevMode } from "../redux/devModeSlice";
 
+/**
+ * A component used in the MenuBar to turn on/off developer mode
+ */
 export default function DevMode() {
   const dispatch = useDispatch();
 

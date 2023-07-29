@@ -3,6 +3,9 @@ import CloseIcon from "@mui/icons-material/Close";
 import DialogTitle from "@mui/material/DialogTitle";
 import IconButton from "@mui/material/IconButton";
 
+/**
+ * A component used in MUI Dialog and Drawer to close those overlays
+ */
 export default function CloseButton(props) {
   const { children, onClose, ...other } = props;
 
