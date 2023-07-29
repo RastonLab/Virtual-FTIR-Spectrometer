@@ -20,10 +20,6 @@ import "../style/components/Popup.css";
 export default function Popup({ label, title, text }) {
   const [open, setOpen] = useState(false);
 
-  console.log(label);
-  console.log(title);
-  console.log(text);
-
   const handleClickOpen = () => {
     setOpen(true);
   };
