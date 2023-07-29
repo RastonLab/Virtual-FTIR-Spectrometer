@@ -68,7 +68,8 @@
   background-color: #1d2022 !important;
 }
 
-.dropdown_items, .MuiAccordionDetails-root {
+.dropdown_items,
+.MuiAccordionDetails-root {
   display: block;
   color: white;
   background-color: #1d2022 !important;
@@ -155,7 +156,8 @@ a .icon {
     font-size: 22px;
   }
 
-  .dropdown_items, .MuiAccordionDetails-root {
+  .dropdown_items,
+  .MuiAccordionDetails-root {
     font-size: 14px;
   }
 

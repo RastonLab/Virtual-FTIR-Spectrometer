@@ -22,7 +22,9 @@ import { setAbsorbanceData } from "../redux/absorbanceDataSlice";
 import "../style/components/Plotly.css";
 import "../style/components/Absorbance.css";
 
-// this component uses the plotly library to graph absorbance spectrum data
+/**
+ * A component that uses Plotly.js to graph absorbance spectrum data
+ */
 export const AbsorbancePlotly = forwardRef((props, ref) => {
   const { absorbanceData } = useSelector((store) => store.absorbanceData);
   const { backgroundData } = useSelector((store) => store.backgroundData);
@@ -39,6 +41,7 @@ export const AbsorbancePlotly = forwardRef((props, ref) => {
   const [lowerBound, setLowerBound] = useState(sampleWaveMin);
   const [upperBound, setUpperBound] = useState(sampleWaveMax);
 
+  // if the correct data exists, calculate the absorbance data
   if (sampleData && backgroundData && !absorbanceData) {
     const newY = [sampleData.x.length];
 
@@ -67,7 +70,6 @@ export const AbsorbancePlotly = forwardRef((props, ref) => {
   }
 
   if (absorbanceData) {
-    // https://github.com/suzil/radis-app/blob/main/frontend/src/components/CalcSpectrumPlot.tsx
     return (
       <div className="absorbance">
         <div className="absorb-row">

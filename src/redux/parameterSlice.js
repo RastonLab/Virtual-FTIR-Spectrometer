@@ -20,6 +20,9 @@ const initialState = {
   zeroFill: 1,
 };
 
+/**
+ * Redux Toolkit slice for setting user input parameters
+ */
 const parameterSlice = createSlice({
   name: "parameter",
   initialState,

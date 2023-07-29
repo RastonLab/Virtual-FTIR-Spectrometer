@@ -1,5 +1,11 @@
+// dictionaries
 import { PARAMETER_VALUE } from "../dictionaries/constants";
 
+/**
+ * Function that moves the moveable corner cube and associated rays/lasers
+ *
+ * @param {number} time - The time (in seconds) that it takes for the animation to move in one direction.
+ */
 export function animateCornerCube(time) {
   const mcc = document.getElementById("movable-corner-cube");
   const rayTop = document.getElementById("ray-top");
@@ -14,122 +20,148 @@ export function animateCornerCube(time) {
     rayBottom.style.transition = `all ${time}s ease`;
     laser.style.transition = `all ${time}s ease`;
 
-    // moveable corner cube
-    mcc.setAttribute(
-      "transform",
-      "rotate(135 900.985 1021.051) translate(-800, -800)"
-    );
+    mcc.setAttribute("transform", "translate(1130, 0)");
 
-    // top ray
-    rayTop.setAttribute(
-      "d",
-      "m953.417-3217.12 94.391-91.071v1860.955l-94.391 95.49z"
-    );
-
-    // middle ray
-    rayMiddle.setAttribute("transform", "rotate(90) translate (0, -1130)");
-
-    // bottom ray
-    rayBottom.setAttribute(
-      "d",
-      "m1164.195-3310.854 94.356 95.49v2632.447l-94.356 89.932z"
-    );
-
-    // laser
     laser.setAttribute(
       "d",
       "M1406.494 991.284v10H3190.73v209.254H344.494v10H3200.73V991.284Z"
     );
 
+    rayTop.setAttribute(
+      "d",
+      "m3233.15 953.417 89.492 94.391H1447.236l-95.49-94.391z"
+    );
+
+    rayMiddle.setAttribute("transform", "translate (1130, 0)");
+
+    rayBottom.setAttribute(
+      "d",
+      "m3326.56 1164.195-99.733 94.356H582.917l-89.932-94.356z"
+    );
+
     setTimeout(() => {
-      // moveable corner cube
-      mcc.setAttribute(
-        "transform",
-        "rotate(135 900.985 1021.051) translate(0, 0)"
-      );
+      mcc.setAttribute("transform", "translate(0, 0)");
 
-      // top ray
-      rayTop.setAttribute(
-        "d",
-        "m953.417-2026.826 94.391-93.734v673.324l-94.391 95.49z"
-      );
-
-      // middle ray
-      rayMiddle.setAttribute("transform", "rotate(90) translate (0, 0)");
-
-      // bottom ray
-      rayBottom.setAttribute(
-        "d",
-        "m1164.195-2120.56 94.356 93.733v1443.91l-94.356 89.932z"
-      );
-
-      // laser
       laser.setAttribute(
         "d",
         "M1406.494 991.284v10h651.235v209.254H344.494v10H2067.73V991.284z"
+      );
+
+      rayTop.setAttribute(
+        "d",
+        "m2026.826 953.417 93.734 94.391h-673.324l-95.49-94.391z"
+      );
+
+      rayMiddle.setAttribute("transform", "translate (0, 0)");
+
+      rayBottom.setAttribute(
+        "d",
+        "m2120.56 1164.195-93.733 94.356H582.917l-89.932-94.356z"
       );
     }, time * 1000);
   }
 }
 
-export function beamsplitterInteractivity(beamsplitter) {
+/**
+ * Function that changes the visibility of the beamsplitter based on user set parameters
+ *
+ * @param {string} store - The current value selected by the user.
+ */
+export function beamsplitterInteractivity(store) {
+  // DOM elements
   const caf2 = document.getElementById("beamsplitter-caf2");
   const znse = document.getElementById("beamsplitter-znse");
+
+  // constant parameter values
   const caf2Value = PARAMETER_VALUE.beamsplitterCaF2;
   const znseValue = PARAMETER_VALUE.beamsplitterZnSe;
 
   // ternary used to show/hide beamsplitter in the Main SVG
-  caf2.style.display = beamsplitter === caf2Value ? "inline" : "none";
-  znse.style.display = beamsplitter === znseValue ? "inline" : "none";
+  caf2.style.display = store === caf2Value ? "inline" : "none";
+  znse.style.display = store === znseValue ? "inline" : "none";
 }
 
-export function detectorInteractivity(detector) {
+/**
+ * Function that changes the visibility of the detector mirrors and beams based on user set parameters
+ *
+ * @param {string} store - The current value selected by the user.
+ */
+export function detectorInteractivity(store) {
+  // DOM elements
   const insbMirror = document.getElementById("flat-rotatable-mirror-insb");
   const mctMirror = document.getElementById("flat-rotatable-mirror-mct");
   const insbBeam = document.getElementById("beam-insb");
   const mctBeam = document.getElementById("beam-mct");
+
+  // constant parameter values
   const insbValue = PARAMETER_VALUE.detectorInSb;
   const mctValue = PARAMETER_VALUE.detectorMCT;
 
   // ternary used to show/hide detector mirrors in the Main SVG
-  insbMirror.style.display = detector === insbValue ? "inline" : "none";
-  insbBeam.style.display = detector === insbValue ? "inline" : "none";
+  insbMirror.style.display = store === insbValue ? "inline" : "none";
+  insbBeam.style.display = store === insbValue ? "inline" : "none";
 
   // ternary used to show/hide detector beams in the Main SVG
-  mctMirror.style.display = detector === mctValue ? "inline" : "none";
-  mctBeam.style.display = detector === mctValue ? "inline" : "none";
+  mctMirror.style.display = store === mctValue ? "inline" : "none";
+  mctBeam.style.display = store === mctValue ? "inline" : "none";
 }
 
-export function sourceInteractivity(source) {
+/**
+ * Function that changes the visibility of the source mirrors and beams based on user set parameters
+ *
+ * @param {number} store - The current value selected by the user.
+ */
+export function sourceInteractivity(store) {
+  // DOM elements
   const globarMirror = document.getElementById("flat-rotatable-mirror-globar");
   const tungstenMirror = document.getElementById(
     "flat-rotatable-mirror-tungsten"
   );
   const globarBeam = document.getElementById("beam-globar");
   const tungstenBeam = document.getElementById("beam-tungsten");
+
+  // constant parameter values
   const globarValue = PARAMETER_VALUE.sourceGlobar;
   const tungstenValue = PARAMETER_VALUE.sourceTungsten;
 
   // ternary used to show/hide source mirrors in the Main SVG
-  globarMirror.style.display = source === globarValue ? "inline" : "none";
-  globarBeam.style.display = source === globarValue ? "inline" : "none";
+  globarMirror.style.display = store === globarValue ? "inline" : "none";
+  globarBeam.style.display = store === globarValue ? "inline" : "none";
 
   // ternary used to show/hide source beams in the Main SVG
-  tungstenMirror.style.display = source === tungstenValue ? "inline" : "none";
-  tungstenBeam.style.display = source === tungstenValue ? "inline" : "none";
+  tungstenMirror.style.display = store === tungstenValue ? "inline" : "none";
+  tungstenBeam.style.display = store === tungstenValue ? "inline" : "none";
 }
 
-export function cellWindowInteractivity(window) {
+/**
+ * Function that changes the visibility of the cell window based on user set parameters
+ *
+ * @param {string} store - The current value selected by the user.
+ */
+export function cellWindowInteractivity(store) {
+  // DOM elements
   const caf2 = document.getElementById("sample-cell-caf2");
   const znse = document.getElementById("sample-cell-znse");
+
+  // constant parameter values
   const caf2Value = PARAMETER_VALUE.cellWindowCaF2;
   const znseValue = PARAMETER_VALUE.cellWindowZnSe;
 
   // ternary used to show/hide cell window in the Main SVG
-  caf2.style.display = window === caf2Value ? "inline" : "none";
-  znse.style.display = window === znseValue ? "inline" : "none";
+  caf2.style.display = store === caf2Value ? "inline" : "none";
+  znse.style.display = store === znseValue ? "inline" : "none";
 }
 
+/**
+ * Function that changes the text of the SVG text elements in the readout panel
+ *
+ * @param {string} molecule - The current value selected by the user.
+ * @param {object} opd - A key-value pair table used in conjunction with the resolution.
+ * @param {number} resolution - The current value selected by the user.
+ * @param {number} scan - The current value selected by the user.
+ * @param {number} waveMax - The current upper bound selected by the user.
+ * @param {number} waveMin - The current lower bound selected by the user.
+ */
 export function textInteractivity(
   molecule,
   opd,
@@ -138,6 +170,7 @@ export function textInteractivity(
   waveMax,
   waveMin
 ) {
+  // DOM elements
   const opdText = document.getElementById("opd-value");
   const scanText = document.getElementById("scan-value");
   const rangeText = document.getElementById("range-value");
@@ -154,7 +187,13 @@ export function textInteractivity(
   moleculeText.textContent = molecule;
 }
 
+/**
+ * Function that changes the orientation of the valve directed to the pump
+ *
+ * @param {string} medium - The current value selected by the user.
+ */
 export function pumpValveInteractivity(medium) {
+  // DOM elements
   const caf2ValveLeft = document.getElementById("caf2-valve-left");
   const znseValveLeft = document.getElementById("znse-valve-left");
 
@@ -179,7 +218,13 @@ export function pumpValveInteractivity(medium) {
       );
 }
 
+/**
+ * Function that changes the orientation of the valve directed to the lecture bottle
+ *
+ * @param {boolean} lectureBottleInUse - The boolean value of if the spectrum collection is sample
+ */
 export function lectureValveInteractivity(lectureBottleInUse) {
+  // DOM elements
   const caf2ValveRight = document.getElementById("caf2-valve-right");
   const znseValveRight = document.getElementById("znse-valve-right");
 

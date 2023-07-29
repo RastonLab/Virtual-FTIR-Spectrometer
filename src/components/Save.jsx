@@ -10,6 +10,9 @@ import { useSelector } from "react-redux";
 import "../style/components/Button.css";
 import "../style/components/Save.css";
 
+/**
+ * A component that is used to save a CSV file of X and Y coordinates and the user parameters that generated that data.
+ */
 export default function Save() {
   const {
     beamsplitter,
@@ -71,7 +74,7 @@ export default function Save() {
     setFilename("background data.csv");
     setTimeout(() => {
       csvLink.current.link.click();
-    }, 500);  
+    }, 500);
   };
 
   const transCSV = () => {
@@ -89,7 +92,7 @@ export default function Save() {
     setFilename("transmittance data.csv");
     setTimeout(() => {
       csvLink.current.link.click();
-    }, 500);  
+    }, 500);
   };
 
   const absorbCSV = () => {
@@ -107,7 +110,7 @@ export default function Save() {
     setFilename("absorbance data.csv");
     setTimeout(() => {
       csvLink.current.link.click();
-    }, 500);  
+    }, 500);
   };
 
   const peaksCSV = () => {
@@ -121,7 +124,7 @@ export default function Save() {
     setFilename("peaks data.csv");
     setTimeout(() => {
       csvLink.current.link.click();
-    }, 500);  
+    }, 500);
   };
 
   return (
@@ -132,7 +135,7 @@ export default function Save() {
         <h3>What data would you like to save?</h3>
       )}
 
-      {(!sampleData && !backgroundData) && (
+      {!sampleData && !backgroundData && (
         <h3>There is currently no data to save</h3>
       )}
 
@@ -169,7 +172,14 @@ export default function Save() {
           </button>
         )}
 
-        <CSVLink data={data} headers={header} filename={filename} className="hidden" ref={csvLink} target="_blank" />
+        <CSVLink
+          data={data}
+          headers={header}
+          filename={filename}
+          className="hidden"
+          ref={csvLink}
+          target="_blank"
+        />
       </div>
     </div>
   );

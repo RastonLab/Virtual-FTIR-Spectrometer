@@ -9,14 +9,15 @@ import { useSelector } from "react-redux";
 // style
 import "../style/components/Plotly.css";
 
-// this component uses the plotly library to graph transmittance spectrum data
+/**
+ * A component that uses Plotly.js to graph transmittance spectrum data
+ */
 export const TransmittancePlotly = forwardRef((props, ref) => {
   const { backgroundData } = useSelector((store) => store.backgroundData);
   const { sampleData } = useSelector((store) => store.sampleData);
   const { waveMaxSaved, waveMinSaved } = useSelector(
     (store) => store.parameter
   );
-  //   const newX = sampleData.x / backgroundData.x;
   const newY = [sampleData.x.length];
 
   for (let i = 0; i < sampleData.x.length; i++) {
@@ -32,7 +33,6 @@ export const TransmittancePlotly = forwardRef((props, ref) => {
   }
 
   if (sampleData) {
-    // https://github.com/suzil/radis-app/blob/main/frontend/src/components/CalcSpectrumPlot.tsx
     return (
       <>
         {

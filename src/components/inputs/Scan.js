@@ -11,7 +11,15 @@ import { useDispatch } from "react-redux";
 // redux slice
 import { setScan } from "../../redux/parameterSlice";
 
-export default function Scan({ store, min, max, step }) {
+/**
+ * A component that contains a MUI SLider and Input for the scan value
+ *
+ * @param {number} min - The minimum accepted value.
+ * @param {number} max - The maximum accepted value.
+ * @param {number} step - The amount the value is incremented or decremented.
+ * @param {number} store - The current value entered by the user.
+ */
+export default function Scan({ min, max, step, store }) {
   const dispatch = useDispatch();
 
   const handleSliderChange = (event, newValue) => {

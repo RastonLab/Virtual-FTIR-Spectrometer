@@ -6,6 +6,9 @@ const initialState = {
   backgroundWaveMax: null,
 };
 
+/**
+ * Redux Toolkit slice for setting background spectrum related data
+ */
 const backgroundDataSlice = createSlice({
   name: "backgroundData",
   initialState,

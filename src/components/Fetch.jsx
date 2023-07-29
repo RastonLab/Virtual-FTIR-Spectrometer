@@ -10,29 +10,39 @@ import checkParams from "../functions/checkParams";
 import { useDispatch, useSelector } from "react-redux";
 
 // redux slices
-import { setError } from "../redux/errorSlice";
-import { setProgress } from "../redux/progressSlice";
-import { setBackgroundData } from "../redux/backgroundDataSlice";
-import { setSampleData } from "../redux/sampleDataSlice";
-import { setPeaksData } from "../redux/peaksDataSlice";
 import { setAbsorbanceData } from "../redux/absorbanceDataSlice";
+import { setBackgroundData } from "../redux/backgroundDataSlice";
+import { setError } from "../redux/errorSlice";
+import { setLectureBottle } from "../redux/lectureBottleSlice";
+import { setPeaksData } from "../redux/peaksDataSlice";
+import { setProgress } from "../redux/progressSlice";
+import { setSampleData } from "../redux/sampleDataSlice";
 import { setSpinner } from "../redux/spinnerSlice";
 import { setTimer } from "../redux/timerSlice";
-import { setLectureBottle } from "../redux/lectureBottleSlice"
 
+// router
 import { useNavigate } from "react-router-dom";
 
 export let sleepID = 0;
 
-// this component reaches out to the flask server with user parameters and receives X and Y coordinates to graph
+/**
+ * A component that reaches out to the Flask server with user entered parameters and received X and Y coordinates.
+ *
+ * @param {object} params - The parameters used to find_peaks.
+ * @param {string} type - The type of fetch request that is being performed.
+ * @param {string} fetchURL - The URL used to reach out to the server.
+ * @param {string} buttonText - The text on the button.
+ * @param {string} buttonStyle - The class ID set on the button to determine style.
+ */
 export default function Fetch({
-  type,
   params,
+  type,
   fetchURL,
   buttonText,
   buttonStyle,
 }) {
   const dispatch = useDispatch();
+
   const { progress } = useSelector((store) => store.progress);
   const { devMode } = useSelector((store) => store.devMode);
   let {
@@ -72,30 +82,28 @@ export default function Fetch({
       dispatch(setSpinner(true)); // Turns on the "waiting" spinner
       dispatch(setTimer(0));
 
-      if (params) {
-        // validate the user parameters
-        let errorMessage = checkParams(params);
+      // validate the user parameters
+      let errorMessage = checkParams({
+        beamsplitter,
+        detector,
+        medium,
+        pressure,
+        molecule,
+        resolution,
+        scan,
+        source,
+        waveMax,
+        waveMin,
+        window,
+        zeroFill,
+      });
 
-        // error occurred in checkParams, display error message to user
-        if (errorMessage) {
-          dispatch(setProgress(false));
-          dispatch(setSpinner(false));
-          dispatch(setError([true, String(errorMessage)]));
-          return;
-        }
-
-        beamsplitter = params.beamsplitter;
-        detector = params.detector;
-        medium = params.medium;
-        molecule = params.molecule;
-        pressure = params.pressure;
-        resolution = params.resolution;
-        scan = params.scan;
-        source = params.source;
-        waveMax = params.waveMax;
-        waveMin = params.waveMin;
-        window = params.window;
-        zeroFill = params.zeroFill;
+      // error occurred in checkParams, display error message to user
+      if (errorMessage) {
+        dispatch(setProgress(false));
+        dispatch(setSpinner(false));
+        dispatch(setError([true, String(errorMessage)]));
+        return;
       }
 
       // Leaves delay as Immediate if in devMode
@@ -105,9 +113,9 @@ export default function Fetch({
       }
 
       // Controls the Label and valve on the Lecture Bottle
-      if (type.localeCompare("background") === 0 ) {
+      if (type.localeCompare("background") === 0) {
         dispatch(setLectureBottle(false));
-      } else if (type.localeCompare("sample") === 0 ) {
+      } else if (type.localeCompare("sample") === 0) {
         dispatch(setLectureBottle(true));
       }
 
@@ -138,7 +146,6 @@ export default function Fetch({
         zeroFill: zeroFill,
       });
     } else if (type.localeCompare("find_peaks") === 0) {
-
       let startIndex = params.x.findIndex((element) => {
         return element >= params.lowerBound;
       });
@@ -152,7 +159,7 @@ export default function Fetch({
       });
 
       if (endIndex === -1) {
-        endIndex = params.x.length - 1
+        endIndex = params.x.length - 1;
       }
 
       body = JSON.stringify({
@@ -191,36 +198,38 @@ export default function Fetch({
         if (data.success) {
           switch (type) {
             case "sample":
-
               // Reset Stored Data
               dispatch(setSampleData([null, null, null]));
 
               // Only navigate to Instrument Window when !devMode
               devMode ? console.log("devMode") : nav("/instrument", -1);
-              
+
               // Turns off "waiting" spinner
-              dispatch(setSpinner(false)); 
+              dispatch(setSpinner(false));
 
               // Delays the appearance of generated data
               sleepID = setTimeout(() => {
-                devMode ? dispatch(setProgress(false)) : console.log("userMode");
+                devMode
+                  ? dispatch(setProgress(false))
+                  : console.log("userMode");
                 dispatch(setSampleData([data, waveMin, waveMax]));
               }, delay);
               break;
             case "background":
-
               // Reset Stored Data
               dispatch(setBackgroundData([null, null, null]));
 
               // Only navigate to Instrument Window when !devMode
               devMode ? console.log("devMode") : nav("/instrument", -1);
-              
+
               // Turns off "waiting" spinner
-              dispatch(setSpinner(false)); 
+              dispatch(setSpinner(false));
 
               // Delays the appearance of generated data
               sleepID = setTimeout(() => {
-                devMode ? dispatch(setProgress(false)) : console.log("userMode");
+                devMode
+                  ? dispatch(setProgress(false))
+                  : console.log("userMode");
                 dispatch(setBackgroundData([data, waveMin, waveMax]));
               }, delay);
               break;
