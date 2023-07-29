@@ -34,6 +34,13 @@ import { useSelector } from "react-redux";
 import "../style/routes/ExperimentalSetup.css";
 import "../style/components/Button.css";
 
+/**
+ * Route that contains:
+ * - User editable parameters
+ * - Buttons to collect spectrum
+ * - Progress spinner
+ * - Background and Sample Plotlys
+ */
 export default function ExperimentalSetup() {
   const {
     beamsplitter,

@@ -3,8 +3,13 @@ import React from "react";
 // style
 import "../style/routes/LandingPage.css";
 
-// https://reactrouter.com/docs/en/v6/getting-started/concepts#defining-routes
-// https://stackoverflow.com/a/72267552/17386696
+/**
+ * React Router "Landing Page" for the project. Currently used as a splash page
+ *
+ * Information used to create this "Landing Page": https://stackoverflow.com/questions/33228589/react-router-adding-in-a-landing-page/72267552#72267552
+ *
+ * @returns
+ */
 export default function LandingPage() {
   return (
     <div id="landing-page">

@@ -75,6 +75,14 @@ const StyledTab = styled((props) => <Tab disableRipple {...props} />)(
   })
 );
 
+/**
+ * Route that contains:
+ * - A tabbed view of all Plotly.js graphs
+ *   - Background
+ *   - Sample
+ *   - Transmittance
+ *   - Absorbance
+ */
 export default function SpectrumWindow() {
   const { backgroundData } = useSelector((store) => store.backgroundData);
   const { sampleData } = useSelector((store) => store.sampleData);

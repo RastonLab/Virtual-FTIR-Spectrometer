@@ -33,6 +33,14 @@ import { useSelector } from "react-redux";
 import "../style/routes/InstrumentWindow.css";
 import "../style/components/Button.css";
 
+/**
+ * Route that contains:
+ * - Instrument Window SVG
+ * - SVG tooltip popups
+ * - MUI Drawer with Experimental Setup
+ * - Animation test button (in devmode)
+ * - Progress spinner
+ */
 export default function InstrumentWindow() {
   const {
     beamsplitter,
