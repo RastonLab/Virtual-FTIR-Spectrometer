@@ -11,8 +11,8 @@ import Spinner from "../components/Spinner";
 import { BAD_ID, OPD } from "../dictionaries/constants";
 
 // dictionaries
-import { toolTips } from "../dictionaries/tooltips";
-import { molecule_labels } from "../dictionaries/molecule";
+import { tooltips } from "../dictionaries/tooltips";
+import { molecules } from "../dictionaries/molecule";
 
 // functions
 import {
@@ -20,10 +20,10 @@ import {
   beamsplitterInteractivity,
   cellWindowInteractivity,
   detectorInteractivity,
+  lectureValveInteractivity,
+  pumpValveInteractivity,
   sourceInteractivity,
   textInteractivity,
-  pumpValveInteractivity,
-  lectureValveInteractivity,
 } from "../functions/animation";
 
 // redux
@@ -33,6 +33,14 @@ import { useSelector } from "react-redux";
 import "../style/routes/InstrumentWindow.css";
 import "../style/components/Button.css";
 
+/**
+ * Route that contains:
+ * - Instrument Window SVG
+ * - SVG tooltip popups
+ * - MUI Drawer with Experimental Setup
+ * - Animation test button (in devmode)
+ * - Progress spinner
+ */
 export default function InstrumentWindow() {
   const {
     beamsplitter,
@@ -53,14 +61,6 @@ export default function InstrumentWindow() {
   const [toggled, setToggled] = useState(false);
   const [element, setElement] = useState();
 
-  const handleClick = (event) => {
-    console.log(event.target.parentElement.id);
-    if (!BAD_ID.includes(event.target.parentElement.id)) {
-      setElement(event.target.parentElement.id);
-      setToggled(!toggled);
-    }
-  };
-
   const [drawerOpen, setDrawerOpen] = useState(false);
 
   const toggleDrawer = () => {
@@ -69,42 +69,49 @@ export default function InstrumentWindow() {
 
   const delay = OPD[resolution] * scan * 1000; // 1000 is to convert to milliseconds
 
-  // useEffect - wait for components to render then perform interactivity
+  // find group id when SVG is clicked
+  const handleClick = (event) => {
+    console.log(event.target.parentElement.id);
+    if (!BAD_ID.includes(event.target.parentElement.id)) {
+      setElement(event.target.parentElement.id);
+      setToggled(!toggled);
+    }
+  };
+
+  // useEffect - wait for components to render then perform interactivity/animation
   useEffect(() => {
     beamsplitterInteractivity(beamsplitter);
-
     detectorInteractivity(detector);
-
     sourceInteractivity(source);
-
     cellWindowInteractivity(window);
-
     textInteractivity(
-      lectureBottleInUse ? molecule_labels[molecule] : "",
+      lectureBottleInUse ? molecules[molecule] : "",
       OPD,
       resolution,
       scan,
       waveMax,
       waveMin
     );
-
     pumpValveInteractivity(medium);
-
     lectureValveInteractivity(lectureBottleInUse);
   });
 
   return (
     <div id="instrument-window">
+      {/* top-down instrument SVG component */}
       <Main id="instrument" onClick={handleClick} />
 
+      {/* button for settings, progress spinner */}
       <div id="instrument-spinner">
         <h1>Scan Progress</h1>
         <button className="button" onClick={toggleDrawer}>
           Experiment Settings
         </button>
-        <button className="button" onClick={animateCornerCube}>
-          Animate!
-        </button>
+        {devMode && (
+          <button className="button" onClick={() => animateCornerCube(4)}>
+            Animate MCC
+          </button>
+        )}
         {spinner && <Spinner variant="indeterminate" size={100} />}
         {progress && !spinner && !devMode && (
           <>
@@ -120,6 +127,7 @@ export default function InstrumentWindow() {
         )}
       </div>
 
+      {/* MUI drawer that holds experimental setup */}
       <Drawer
         anchor="right"
         open={drawerOpen}
@@ -131,6 +139,7 @@ export default function InstrumentWindow() {
         </CloseButton>
       </Drawer>
 
+      {/* MUI Dialog popup that holds tooltip information */}
       {element && (
         <Dialog
           onClose={handleClick}
@@ -138,7 +147,7 @@ export default function InstrumentWindow() {
           fullScreen={element === "display" ? true : false}
         >
           <CloseButton id="customized-dialog-title" onClose={handleClick}>
-            {toolTips[element].text}
+            {tooltips[element].text}
           </CloseButton>
         </Dialog>
       )}

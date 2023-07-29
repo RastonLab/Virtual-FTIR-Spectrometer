@@ -34,6 +34,13 @@ import { useSelector } from "react-redux";
 import "../style/routes/ExperimentalSetup.css";
 import "../style/components/Button.css";
 
+/**
+ * Route that contains:
+ * - User editable parameters
+ * - Buttons to collect spectrum
+ * - Progress spinner
+ * - Background and Sample Plotlys
+ */
 export default function ExperimentalSetup() {
   const {
     beamsplitter,
@@ -50,7 +57,6 @@ export default function ExperimentalSetup() {
     zeroFill,
   } = useSelector((store) => store.parameter);
 
-  // progress and error values
   const { error, errorText } = useSelector((store) => store.error);
   const { progress } = useSelector((store) => store.progress);
   const { spinner } = useSelector((store) => store.spinner);
@@ -58,6 +64,7 @@ export default function ExperimentalSetup() {
 
   return (
     <div id="experimental-setup">
+      {/* user input parameters */}
       <div id="form">
         <div className="exp-col">
           <div className="parameter">
@@ -75,7 +82,7 @@ export default function ExperimentalSetup() {
           </div>
 
           <div className="parameter">
-            <Scan store={scan} min={1} max={256} step={10} />
+            <Scan store={scan} min={1} max={256} step={1} />
           </div>
 
           <div className="parameter">
@@ -131,43 +138,16 @@ export default function ExperimentalSetup() {
             />
           </div>
 
+          {/* buttons to collect spectrum */}
           <div className="fetch-zone">
             <Fetch
               type="background"
-              params={{
-                beamsplitter,
-                detector,
-                medium,
-                molecule,
-                pressure,
-                resolution,
-                scan,
-                source,
-                waveMax,
-                waveMin,
-                window,
-                zeroFill,
-              }}
               fetchURL={BACKGROUND}
               buttonText={"Collect Background Spectrum"}
               buttonStyle={"button"}
             />
             <Fetch
               type="sample"
-              params={{
-                beamsplitter,
-                detector,
-                medium,
-                molecule,
-                pressure,
-                resolution,
-                scan,
-                source,
-                waveMax,
-                waveMin,
-                window,
-                zeroFill,
-              }}
               fetchURL={SAMPLE}
               buttonText="Collect Sample Spectrum"
               buttonStyle={"button"}
@@ -175,6 +155,8 @@ export default function ExperimentalSetup() {
           </div>
         </div>
       </div>
+
+      {/* error message, spinner, and graphs */}
       <div id="graph-and-error" className="exp-col">
         {spinner && <Spinner variant="indeterminate" size={200} />}
         {error && devMode && (

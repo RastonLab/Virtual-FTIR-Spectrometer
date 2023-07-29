@@ -10,6 +10,12 @@ import { useDispatch } from "react-redux";
 // redux slice
 import { setResolution } from "../../redux/parameterSlice";
 
+/**
+ * A component that contains a MUI Select (dropdown) for the resolution values
+ *
+ * @param {object} dictionary - The list of pre-selected values.
+ * @param {number} store - The current value selected by the user.
+ */
 export default function Resolution({ dictionary, store }) {
   const dispatch = useDispatch();
 
@@ -28,8 +34,8 @@ export default function Resolution({ dictionary, store }) {
           sx={{ maxWidth: "120px" }}
         >
           {dictionary.map((option) => (
-            <MenuItem key={option.value} value={option.value}>
-              {option.label}
+            <MenuItem key={option} value={option}>
+              {option}
             </MenuItem>
           ))}
         </Select>

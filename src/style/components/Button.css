@@ -1,32 +1,41 @@
 .button {
-margin: 10px;
-padding: 8px 12px;
-height: auto;
+  margin: 10px;
+  padding: 8px 12px;
+  height: auto;
 
-border-radius: 0.5rem;
-border-style: none;
+  border-radius: 0.5rem;
+  border-style: none;
 
-font-family: "Roboto";
-font-size: 18px;
+  font-family: "Roboto";
+  font-size: 18px;
 
-color: white;
-background-color: #212529;
+  color: white;
+  background-color: #212529;
 }
 
 .button:hover {
-background-color: #002ead;
-color: black;
-background: linear-gradient(90deg, red, orange, yellow, rgb(0, 170, 0), rgb(0, 221, 255), blue, rgb(147, 1, 205));
+  background-color: #002ead;
+  color: black;
+  background: linear-gradient(
+    90deg,
+    red,
+    orange,
+    yellow,
+    rgb(0, 170, 0),
+    rgb(0, 221, 255),
+    blue,
+    rgb(147, 1, 205)
+  );
 }
 
 .button:hover:disabled {
-cursor: not-allowed;
-color: white;
-background: #212529;
+  cursor: not-allowed;
+  color: white;
+  background: #212529;
 }
 
 @media screen and (max-width: 700px) {
-    .button {
-        font-size: 14px;
-    }
+  .button {
+    font-size: 14px;
+  }
 }

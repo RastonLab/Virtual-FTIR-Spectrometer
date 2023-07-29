@@ -4,6 +4,9 @@ const initialState = {
   devMode: false,
 };
 
+/**
+ * Redux Toolkit slice for toggling development mode
+ */
 const devModeSlice = createSlice({
   name: "devMode",
   initialState,

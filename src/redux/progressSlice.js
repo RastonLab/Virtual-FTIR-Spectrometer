@@ -4,6 +4,9 @@ const initialState = {
   progress: false,
 };
 
+/**
+ * Redux Toolkit slice for toggling the progress spinner
+ */
 const progressSlice = createSlice({
   name: "progress",
   initialState,

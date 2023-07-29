@@ -2,6 +2,9 @@ import { styled } from "@mui/material";
 import { pink, blue } from "@mui/material/colors";
 import { Switch } from "@mui/material";
 
+/**
+ * A component that contains custom style elements for a MUI Switch
+ */
 export const SwitchStyle = styled(Switch)(() => ({
   "& .MuiSwitch-switchBase": {
     "&.Mui-checked": {

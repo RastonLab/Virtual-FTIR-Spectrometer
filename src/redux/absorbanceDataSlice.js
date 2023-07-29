@@ -6,6 +6,9 @@ const initialState = {
   absorbanceWaveMax: null,
 };
 
+/**
+ * Redux Toolkit slice for setting absorbance spectrum related data
+ */
 const absorbanceDataSlice = createSlice({
   name: "absorbanceData",
   initialState,

@@ -2479,6 +2479,7 @@ const SvgInstrumentWindow = (props) => (
         x2={365}
         y1={182.5}
         y2={182.5}
+        gradientTransform="rotate(135 903.61 1022.139)"
         gradientUnits="userSpaceOnUse"
       />
       <linearGradient
@@ -2506,6 +2507,7 @@ const SvgInstrumentWindow = (props) => (
         x2={365.001}
         y1={210}
         y2={210}
+        gradientTransform="rotate(135 903.61 1022.139)"
         gradientUnits="userSpaceOnUse"
       />
       <linearGradient
@@ -2927,7 +2929,7 @@ const SvgInstrumentWindow = (props) => (
         />
         <path
           id="ray-bottom"
-          d="m1164.195-2120.56 94.356 93.733v1443.91l-94.356 89.932z"
+          d="m2120.56 1164.195-93.733 94.356H582.917l-89.932-94.356z"
           style={{
             opacity: 0.65,
             fill: "#ff6638",
@@ -2935,11 +2937,10 @@ const SvgInstrumentWindow = (props) => (
             strokeLinecap: "square",
             paintOrder: "fill markers stroke",
           }}
-          transform="rotate(90)"
         />
         <path
           id="ray-middle"
-          d="M1047.808-2120.56h116.387l94.356 93.733H953.417Z"
+          d="M2120.56 1047.808v116.387l-93.733 94.356V953.417Z"
           style={{
             opacity: 0.65,
             fill: "#ff6638",
@@ -2947,11 +2948,10 @@ const SvgInstrumentWindow = (props) => (
             strokeLinecap: "square",
             paintOrder: "fill markers stroke",
           }}
-          transform="rotate(90)"
         />
         <path
           id="ray-top"
-          d="m953.417-2026.826 94.391-93.734v673.324l-94.391 95.49z"
+          d="m2026.826 953.417 93.734 94.391h-673.324l-95.49-94.391z"
           style={{
             opacity: 0.65,
             fill: "#ff6638",
@@ -2959,11 +2959,10 @@ const SvgInstrumentWindow = (props) => (
             strokeLinecap: "square",
             paintOrder: "fill markers stroke",
           }}
-          transform="rotate(90)"
         />
         <path
           id="rect14491-7-9-2-3-6"
-          d="m292.557-1363.255 94.659-93.352v353.825l-94.659-93.353z"
+          d="m1363.255 292.557 93.352 94.659h-353.825l93.353-94.659z"
           style={{
             opacity: 0.65,
             fill: "#ff6638",
@@ -2971,11 +2970,10 @@ const SvgInstrumentWindow = (props) => (
             strokeLinecap: "square",
             paintOrder: "fill markers stroke",
           }}
-          transform="rotate(90)"
         />
         <path
           id="rect14491-7-9-2-3-64"
-          d="M286.832-1202.16h1884.781l-92.64 94.87H380.556Z"
+          d="M1202.16 286.832v1884.781l-94.87-92.64V380.556Z"
           style={{
             opacity: 0.65,
             fill: "#ff6638",
@@ -2983,7 +2981,6 @@ const SvgInstrumentWindow = (props) => (
             strokeLinecap: "square",
             paintOrder: "fill markers stroke",
           }}
-          transform="rotate(90)"
         />
         <path
           id="path3385-0-10"
@@ -3011,7 +3008,7 @@ const SvgInstrumentWindow = (props) => (
         />
         <path
           id="rect14491-7-9-2-3-1"
-          d="m1801.501-3330.484 272.212-16.905 90.217 94.28-397.802-26.303z"
+          d="m3330.484 1801.501 16.905 272.212-94.28 90.217 26.303-397.802z"
           style={{
             opacity: 0.65,
             fill: "#ff6638",
@@ -3019,7 +3016,6 @@ const SvgInstrumentWindow = (props) => (
             strokeLinecap: "square",
             paintOrder: "fill markers stroke",
           }}
-          transform="rotate(90)"
         />
         <path
           id="rect14491-7-9-2-3-29"
@@ -4985,12 +4981,11 @@ const SvgInstrumentWindow = (props) => (
           }}
         />
       </g>
-      <g id="movable-corner-cube" transform="rotate(135 903.611 1022.14)">
+      <g id="movable-corner-cube">
         <path
           id="rect17548-4"
-          d="M0 365h55V55h310V0H0v55Z"
+          d="m2007.228 847.857-38.891 38.891 219.203 219.203-219.203 219.203 38.89 38.89 219.204-219.202 38.89-38.891-38.89-38.89z"
           style={{
-            opacity: 1,
             fill: "url(#linearGradient13392)",
             fillOpacity: 1,
             stroke: "none",
@@ -5002,7 +4997,7 @@ const SvgInstrumentWindow = (props) => (
         />
         <path
           id="rect2866-5-5-8"
-          d="M55 365h7V62h303v-7H55v7z"
+          d="m1968.337 886.748-4.95 4.95 214.253 214.254-214.253 214.254 4.95 4.95 214.253-214.253 4.95-4.95-4.95-4.95z"
           style={{
             fill: "url(#linearGradient13436)",
             fillOpacity: 1,

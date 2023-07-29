@@ -4,6 +4,9 @@ const initialState = {
   peaksData: null,
 };
 
+/**
+ * Redux Toolkit slice for setting peaks data
+ */
 const peaksDataSlice = createSlice({
   name: "peaksData",
   initialState,

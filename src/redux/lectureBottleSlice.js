@@ -4,6 +4,9 @@ const initialState = {
   lectureBottleInUse: true,
 };
 
+/**
+ * Redux Toolkit slice for toggling if the spectrum collection is a sample. Used to determine state of the lecture bottle valve.
+ */
 const lectureBottleSlice = createSlice({
   name: "lectureBottle",
   initialState,

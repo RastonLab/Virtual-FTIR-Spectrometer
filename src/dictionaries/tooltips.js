@@ -1,3 +1,16 @@
+// components
+import SpectrumWindow from "../routes/SpectrumWindow";
+
+// graph imports
+import AR_CaF2_graph from "../images/graphs/AR_CaF2_py.png";
+import AR_ZnSe_graph from "../images/graphs/AR_ZnSe_py.png";
+import blackbody_graph from "../images/graphs/Blackbody.png";
+import CaF2_graph from "../images/graphs/CaF2_py.png";
+import InSb_graph from "../images/graphs/InSb_py.png";
+import MCT_graph from "../images/graphs/MCT_py.png";
+import source_formula from "../images/other/Source_Formula.png";
+import ZnSe_graph from "../images/graphs/ZnSe_py.png";
+
 // svg imports
 import apd from "../images/tooltips/apd.svg";
 import aperture from "../images/tooltips/aperture-wheel.svg";
@@ -17,18 +30,6 @@ import pump from "../images/tooltips/pump.svg";
 import samplecaf2 from "../images/tooltips/sample-cell-caf2.svg";
 import sampleznse from "../images/tooltips/sample-cell-znse.svg";
 import tungsten from "../images/tooltips/tungsten.svg";
-
-// graph imports
-import AR_CaF2_graph from "../images/graphs/AR_CaF2_py.png";
-import AR_ZnSe_graph from "../images/graphs/AR_ZnSe_py.png";
-import blackbody_graph from "../images/graphs/Blackbody.png";
-import CaF2_graph from "../images/graphs/CaF2_py.png";
-import InSb_graph from "../images/graphs/InSb_py.png";
-import MCT_graph from "../images/graphs/MCT_py.png";
-import source_formula from "../images/other/Source_Formula.png";
-import ZnSe_graph from "../images/graphs/ZnSe_py.png";
-
-import SpectrumWindow from "../routes/SpectrumWindow";
 
 // not in the tooltip object because it is used multiple times
 const flatRotatableMirrorSource = {
@@ -82,7 +83,10 @@ const parabolicMirrorHole = {
   ),
 };
 
-export const toolTips = {
+/**
+ * Objects with keys associated with the group IDs of the Instrument Window SVG
+ */
+export const tooltips = {
   apd: {
     text: (
       <div className="popup-tooltip">

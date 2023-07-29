@@ -8,7 +8,15 @@ import { useDispatch } from "react-redux";
 // redux store
 import { setPressure } from "../../redux/parameterSlice";
 
-export default function Pressure({ store, min, max, step }) {
+/**
+ * A component that contains a MUI Text Field for the pressure value
+ *
+ * @param {number} min - The minimum accepted value.
+ * @param {number} max - The maximum accepted value.
+ * @param {number} step - The amount the value is incremented or decremented.
+ * @param {string} store - The current value entered by the user.
+ */
+export default function Pressure({ min, max, step, store }) {
   const dispatch = useDispatch();
 
   const handleTextChange = (event) => {

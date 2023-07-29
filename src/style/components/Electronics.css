@@ -33,7 +33,6 @@
   text-align: center;
   padding-bottom: 20px;
   flex-grow: 1;
-
 }
 
 .electronics-bottom {
@@ -41,7 +40,6 @@
   grid-template-columns: auto auto;
   text-align: center;
   flex-grow: 1;
-
 }
 
 .grid {

@@ -3,7 +3,9 @@ import React from "react";
 // style
 import "../style/components/NotFound.css";
 
-// this component is used to display 404 page not found errors
+/**
+ *  A component that displays text when a Page Not Found (404) error occurs
+ */
 export default function NotFound() {
   return (
     <div id="not-found">

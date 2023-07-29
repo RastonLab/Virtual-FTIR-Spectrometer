@@ -1,12 +1,22 @@
-import { Box, CircularProgress } from "@mui/material";
-import Typography from "@mui/material/Typography";
 import React, { useState } from "react";
-import { useSelector, useDispatch } from "react-redux";
-import { setTimer } from "../redux/timerSlice";
+
+// functions
 import { animateCornerCube } from "../functions/animation";
 
-import { setProgress } from "../redux/progressSlice";
+// mui
+import { Box, CircularProgress } from "@mui/material";
+import Typography from "@mui/material/Typography";
 
+// redux
+import { useSelector, useDispatch } from "react-redux";
+
+// redux slice
+import { setProgress } from "../redux/progressSlice";
+import { setTimer } from "../redux/timerSlice";
+
+/**
+ * A component that contains an MUI Progress (spinner) to display loading/waiting to the user
+ */
 export default function Spinner(props) {
   const dispatch = useDispatch();
 

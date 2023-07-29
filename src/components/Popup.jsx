@@ -1,14 +1,22 @@
 import React, { useState } from "react";
 
+// components
+import CloseButton from "./CloseButton.jsx";
+
 // mui
 import { Dialog } from "@mui/material";
 
 // style
 import "../style/components/Popup.css";
 
-import CloseButton from "./CloseButton.jsx";
-
 // this component is used to display popup overlays for the instrument and certain menu items
+/**
+ * A component that contains a MUI Dialog (popup) to display information in the File and Help menus
+ *
+ * @param {string} label - The text that appears in the MenuBar.
+ * @param {string} title - The text that appears at the top of the popup.
+ * @param {object} text - The text that appears that the bottom of the popup.
+ */
 export default function Popup({ label, title, text }) {
   const [open, setOpen] = useState(false);
 
@@ -22,17 +30,10 @@ export default function Popup({ label, title, text }) {
 
   return (
     <div>
-      <button
-        className="popup-button"
-        onClick={handleClickOpen}
-      >
+      <button className="popup-button" onClick={handleClickOpen}>
         {label}
       </button>
-      <Dialog
-        className="popup"
-        onClose={handleClose}
-        open={open}
-      >
+      <Dialog className="popup" onClose={handleClose} open={open}>
         <CloseButton id="customized-dialog-title" onClose={handleClose}>
           <h2>{title}</h2>
         </CloseButton>

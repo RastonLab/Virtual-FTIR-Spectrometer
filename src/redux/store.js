@@ -3,7 +3,9 @@ import { configureStore } from "@reduxjs/toolkit";
 // reducers
 import absorbanceDataReducer from "../redux/absorbanceDataSlice";
 import backgroundDataReducer from "../redux/backgroundDataSlice";
+import devModeReducer from "../redux/devModeSlice";
 import errorReducer from "../redux/errorSlice";
+import lectureBottleReducer from "./lectureBottleSlice";
 import parameterReducer from "../redux/parameterSlice";
 import peaksDataReducer from "../redux/peaksDataSlice";
 import progressReducer from "../redux/progressSlice";
@@ -11,9 +13,9 @@ import sampleDataReducer from "../redux/sampleDataSlice";
 import spinnerReducer from "../redux/spinnerSlice";
 import timerReducer from "../redux/timerSlice";
 
-import devModeReducer from "../redux/devModeSlice";
-import lectureBottleReducer from "./lectureBottleSlice";
-
+/**
+ * Function that sets the reducers called upon to update state
+ */
 export const store = configureStore({
   reducer: {
     absorbanceData: absorbanceDataReducer,

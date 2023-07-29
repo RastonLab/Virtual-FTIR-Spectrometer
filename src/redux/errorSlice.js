@@ -5,6 +5,9 @@ const initialState = {
   errorText: "",
 };
 
+/**
+ * Redux Toolkit slice for setting error related data
+ */
 const errorSlice = createSlice({
   name: "error",
   initialState,

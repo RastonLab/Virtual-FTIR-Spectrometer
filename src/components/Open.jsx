@@ -26,8 +26,11 @@ import {
 import "../style/components/Open.css";
 import "../style/components/Button.css";
 
-// this component is used to open a CSV file of X and Y coordinates
-// https://dev.to/pankod/how-to-import-csv-file-with-react-4pj2
+/**
+ * A component that is used to open a CSV file of X and Y coordinates. These values are placed into the store
+ *
+ * Tutorial used: https://dev.to/pankod/how-to-import-csv-file-with-react-4pj2
+ */
 export const Open = () => {
   const dispatch = useDispatch();
 
@@ -35,7 +38,6 @@ export const Open = () => {
   const fileReader = new FileReader();
 
   const [data, setData] = useState();
-  // const [filename, setFilename] = useState();
   const [success, toggleSuccess] = useState(false);
   const [badFile, toggleBadFile] = useState(false);
 
@@ -43,7 +45,6 @@ export const Open = () => {
     if (event.target.files[0]) {
       fileReader.onload = function (e) {
         setData(e.target.result);
-        // setFilename(event.target.files[0].name);
       };
       fileReader.readAsText(event.target.files[0]);
     }

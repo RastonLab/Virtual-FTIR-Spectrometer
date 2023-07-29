@@ -10,6 +10,12 @@ import { useDispatch } from "react-redux";
 // redux slice
 import { setMolecule } from "../../redux/parameterSlice";
 
+/**
+ * A component that contains a MUI Select (dropdown) for the molecule values
+ *
+ * @param {object} dictionary - The key-value pairs (value, label).
+ * @param {string} store - The current value selected by the user.
+ */
 export default function Molecule({ dictionary, store }) {
   const dispatch = useDispatch();
 
@@ -27,9 +33,9 @@ export default function Molecule({ dictionary, store }) {
           onChange={handleChange}
           sx={{ maxWidth: "120px" }}
         >
-          {dictionary.map((option) => (
-            <MenuItem key={option.value} value={option.value}>
-              {option.label}
+          {Object.keys(dictionary).map((option) => (
+            <MenuItem key={option} value={option}>
+              {dictionary[option]}
             </MenuItem>
           ))}
         </Select>
