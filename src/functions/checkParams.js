@@ -6,6 +6,12 @@ import { molecules } from "../dictionaries/molecule";
 import { resolutions } from "../dictionaries/resolution";
 import { zeroFills } from "../dictionaries/zeroFill";
 
+/**
+ * Function that confirms that user entered parameters are valid before initiating a fetch request
+ *
+ * @param {object} params - Object that contains all the user input parameters.
+ * @returns False if no issues, error message (string) if true
+ */
 export default function checkParams(params) {
   // check if wavenumbers are correct
   if (params.waveMin < 400) {
