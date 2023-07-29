@@ -6,6 +6,9 @@ const initialState = {
   sampleWaveMax: null,
 };
 
+/**
+ * Redux Toolkit slice for setting sample spectrum related data
+ */
 const sampleDataSlice = createSlice({
   name: "sampleData",
   initialState,

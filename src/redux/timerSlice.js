@@ -4,6 +4,9 @@ const initialState = {
   timer: 0,
 };
 
+/**
+ * Redux Toolkit slice for setting the timer
+ */
 const timerSlice = createSlice({
   name: "timer",
   initialState,
