@@ -68,7 +68,7 @@
   background-color: #1d2022 !important;
 }
 
-.dropdown_items,
+.dropdown,
 .MuiAccordionDetails-root {
   display: block;
   color: white;
@@ -79,13 +79,13 @@
   width: 10rem;
 }
 
-.dropdown-items a {
+.dropdown a {
   font-size: inherit !important;
   color: inherit !important;
   text-decoration: none;
 }
 
-.dropdown-items button {
+.dropdown button {
   color: inherit !important;
   font-size: inherit !important;
   padding: 0.5rem 0.2rem;
@@ -95,9 +95,14 @@
   width: 100%;
 }
 
-.dropdown-items p {
+.dropdown p {
   padding: 0.5rem 0.2rem;
   text-align: center;
+}
+
+.dropdown-items:hover {
+  background-color: #2b3032 !important;
+  color: rgb(246, 176, 106) !important;
 }
 
 .left-cluster {
@@ -156,7 +161,7 @@ a .icon {
     font-size: 22px;
   }
 
-  .dropdown_items,
+  .dropdown,
   .MuiAccordionDetails-root {
     font-size: 14px;
   }
