@@ -6063,6 +6063,42 @@ const SvgInstrumentWindow = (props) => (
           transform="matrix(.3 0 0 .3 58.891 -565.94)"
         />
       </g>
+      <path
+        id="distance-marker"
+        d="M1968.387 680.616c-2.77 0-5 2.23-5 5v140c0 2.77 2.23 5 5 5h11.55c2.77 0 5-2.23 5-5v-60h494.487v-20h-494.486v-60c0-2.77-2.23-5-5-5h-11.551zm1468.205 0c-2.77 0-5 2.23-5 5v60h-496.115v20h496.115v60c0 2.77 2.23 5 5 5h10c2.77 0 5-2.23 5-5v-140c0-2.77-2.23-5-5-5h-10z"
+        style={{
+          fill: "#000",
+          strokeWidth: 0.564622,
+          strokeLinecap: "square",
+        }}
+      />
+      <text
+        xmlSpace="preserve"
+        id="distance-value"
+        x={2708.427}
+        y={762.931}
+        style={{
+          fontStyle: "normal",
+          fontVariant: "normal",
+          fontWeight: 400,
+          fontStretch: "normal",
+          fontSize: 96,
+          fontFamily: "sans-serif",
+          InkscapeFontSpecification: "&quot",
+          fontVariantLigatures: "normal",
+          fontVariantCaps: "normal",
+          fontVariantNumeric: "normal",
+          fontVariantEastAsian: "normal",
+          dominantBaseline: "central",
+          textAnchor: "middle",
+          fill: "#000",
+          strokeLinecap: "square",
+        }}
+      >
+        <tspan id="tspan3" x={2708.427} y={762.931}>
+          {"distance"}
+        </tspan>
+      </text>
     </g>
   </svg>
 );
