@@ -2,7 +2,6 @@
 import { Open } from "../components/Open";
 import CancelScan from "../components/CancelScan";
 import Fetch from "../components/Fetch";
-import Print from "../components/Print";
 import Save from "../components/Save";
 
 // constants
@@ -26,12 +25,6 @@ export const menuItems = [
         button: true,
         title: "",
         text: <Save />,
-      },
-      {
-        label: "Print",
-        button: true,
-        title: "",
-        text: <Print />,
       },
     ],
   },
