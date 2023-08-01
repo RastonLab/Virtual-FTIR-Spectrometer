@@ -6,6 +6,9 @@ import Plot from "react-plotly.js";
 // redux
 import { useSelector } from "react-redux";
 
+// helper function
+import { generateTransmittance } from "../dictionaries/dataFunctions";
+
 // style
 import "../style/components/Plotly.css";
 
@@ -18,19 +21,8 @@ export const TransmittancePlotly = forwardRef((props, ref) => {
   const { waveMaxSaved, waveMinSaved } = useSelector(
     (store) => store.parameter
   );
-  const newY = [sampleData.x.length];
 
-  for (let i = 0; i < sampleData.x.length; i++) {
-    newY[i] = sampleData.y[i] / backgroundData.y[i];
-
-    if (newY[i] > 2) {
-      newY[i] = 2;
-    }
-
-    if (newY[i] < -2) {
-      newY[i] = -2;
-    }
-  }
+  const {transX, transY} = generateTransmittance(backgroundData, sampleData);
 
   if (sampleData) {
     return (
@@ -41,8 +33,8 @@ export const TransmittancePlotly = forwardRef((props, ref) => {
             className="plotly"
             data={[
               {
-                x: sampleData.x,
-                y: newY,
+                x: transX,
+                y: transY,
                 type: "scatter",
                 marker: { color: "#f50057" },
               },
