@@ -70,6 +70,13 @@ We have implemented a solution that automates the optimization and/ or translati
 
 #### SVG Interactivity and Animation
 
+To center text:
+
+```css
+text-anchor: middle;
+dominant-baseline: central;
+```
+
 **_TODO_**
 
 #### SVG Tooltips
