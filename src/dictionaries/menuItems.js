@@ -17,7 +17,7 @@ export const menuItems = [
       {
         label: "Open",
         button: true,
-        title: "Please Select a File",
+        title: "Please Select Sample or Background File",
         text: <Open />,
       },
       {
