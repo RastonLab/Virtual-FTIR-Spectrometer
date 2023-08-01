@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 
+// components
 import Fetch from "./Fetch";
 import Spinner from "./Spinner";
 import { AbsorbancePlotly } from "./AbsorbancePlotly";
@@ -7,25 +8,47 @@ import { AbsorbancePlotly } from "./AbsorbancePlotly";
 // constants
 import { FIND_PEAKS } from "../dictionaries/constants";
 
+// redux slice
+import { setAbsorbanceData } from "../redux/absorbanceDataSlice";
+
+// helper function
+import { generateAbsorbance } from "../dictionaries/dataFunctions";
+
 // mui
 import Box from "@mui/material/Box";
 import TextField from "@mui/material/TextField";
 
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 
 export default function FindPeaks() {
 
-  const { absorbanceData } = useSelector((store) => store.absorbanceData);
-  const { peaksData } = useSelector((store) => store.peaksData);
-  const { sampleWaveMin, sampleWaveMax } = useSelector(
+  const { backgroundData } = useSelector((store) => store.backgroundData);
+  const { sampleData, sampleWaveMin, sampleWaveMax } = useSelector(
     (store) => store.sampleData
   );
+  const { absorbanceData, absorbWaveMin, absorbWaveMax } = useSelector((store) => store.absorbanceData);
+  const { peaksData } = useSelector((store) => store.peaksData);
+
+  const dispatch = useDispatch();
+
   const { progress } = useSelector((store) => store.progress);
   const { error, errorText } = useSelector((store) => store.error);
 
   const [threshold, setThreshold] = useState(0);
   const [lowerBound, setLowerBound] = useState(sampleWaveMin);
   const [upperBound, setUpperBound] = useState(sampleWaveMax);
+
+  // if the correct data exists, calculate the absorbance data
+  if (sampleData && backgroundData && !absorbanceData) {
+
+    dispatch(
+      setAbsorbanceData([
+        generateAbsorbance(backgroundData, sampleData),
+        sampleWaveMin,
+        sampleWaveMax,
+      ])
+    );
+  }
 
   if (absorbanceData) {
     return (
@@ -55,8 +78,8 @@ export default function FindPeaks() {
                 }}
                 InputProps={{
                   inputProps: {
-                    min: sampleWaveMin,
-                    max: sampleWaveMax,
+                    min: absorbWaveMin,
+                    max: absorbWaveMax,
                     // step: 0.0001,
                   },
                 }}
@@ -83,8 +106,8 @@ export default function FindPeaks() {
                 }}
                 InputProps={{
                   inputProps: {
-                    min: sampleWaveMin,
-                    max: sampleWaveMax,
+                    min: absorbWaveMin,
+                    max: absorbWaveMax,
                   },
                 }}
               />

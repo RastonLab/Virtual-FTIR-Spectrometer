@@ -9,6 +9,9 @@ import { useSelector, useDispatch } from "react-redux";
 // redux slice
 import { setAbsorbanceData } from "../redux/absorbanceDataSlice";
 
+// helper function
+import { generateAbsorbance } from "../dictionaries/dataFunctions";
+
 // style
 import "../style/components/Plotly.css";
 import "../style/components/Absorbance.css";
@@ -27,26 +30,10 @@ export const AbsorbancePlotly = forwardRef((props, ref) => {
 
   // if the correct data exists, calculate the absorbance data
   if (sampleData && backgroundData && !absorbanceData) {
-    const newY = [sampleData.x.length];
-
-    for (let i = 0; i < sampleData.x.length; i++) {
-      newY[i] = -1 * Math.log(Math.abs(sampleData.y[i] / backgroundData.y[i]));
-
-      if (newY[i] > 5) {
-        newY[i] = 5;
-      }
-
-      if (newY[i] < -5) {
-        newY[i] = -5;
-      }
-    }
 
     dispatch(
       setAbsorbanceData([
-        {
-          x: sampleData.x,
-          y: newY,
-        },
+        generateAbsorbance(backgroundData, sampleData),
         sampleWaveMin,
         sampleWaveMax,
       ])
