@@ -249,6 +249,12 @@ export function lectureValveInteractivity(lectureBottleInUse) {
       );
 }
 
+/**
+ * Function that changes the visibility of the text on the display based on when the user generates data
+ *
+ * @param {object} background - Holds the X and Y coordinates for the background.
+ * @param {object} sample - Holds the X and Y coordinates for the sample.
+ */
 export function displayInteractivity(background, sample) {
   // DOM elements
   const backgroundText = document.getElementById("ready-background");
