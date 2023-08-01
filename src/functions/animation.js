@@ -248,3 +248,13 @@ export function lectureValveInteractivity(lectureBottleInUse) {
         "M570.381 431.571a1.088 1.089 24 0 0 .704 1.017l.002 2.32c0 .143.115.257.257.257h.257a.256.256 0 0 0 .256-.257l-.002-2.32a1.088 1.089 24 0 0 .703-1.019 1.088 1.089 24 0 0-.704-1.017l-.002-2.32a.256.256 0 0 0-.257-.256h-.257a.256.256 0 0 0-.256.257l.002 2.32a1.088 1.089 24 0 0-.703 1.018z"
       );
 }
+
+export function displayInteractivity(background, sample) {
+  // DOM elements
+  const backgroundText = document.getElementById("ready-background");
+  const sampleText = document.getElementById("ready-sample");
+
+  // ternary used to show/hide display text in the Main SVG
+  backgroundText.style.display = background ? "inline" : "none";
+  sampleText.style.display = sample ? "inline" : "none";
+}

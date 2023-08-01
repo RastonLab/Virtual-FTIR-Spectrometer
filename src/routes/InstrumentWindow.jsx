@@ -20,6 +20,7 @@ import {
   beamsplitterInteractivity,
   cellWindowInteractivity,
   detectorInteractivity,
+  displayInteractivity,
   lectureValveInteractivity,
   pumpValveInteractivity,
   sourceInteractivity,
@@ -58,9 +59,11 @@ export default function InstrumentWindow() {
   const { spinner } = useSelector((store) => store.spinner);
   const { devMode } = useSelector((store) => store.devMode);
   const { lectureBottleInUse } = useSelector((store) => store.lectureBottle);
+  const { backgroundData } = useSelector((store) => store.backgroundData);
+  const { sampleData } = useSelector((store) => store.sampleData);
+
   const [toggled, setToggled] = useState(false);
   const [element, setElement] = useState();
-
   const [drawerOpen, setDrawerOpen] = useState(false);
 
   const toggleDrawer = () => {
@@ -94,6 +97,7 @@ export default function InstrumentWindow() {
     );
     pumpValveInteractivity(medium);
     lectureValveInteractivity(lectureBottleInUse);
+    displayInteractivity(backgroundData, sampleData);
   });
 
   return (
