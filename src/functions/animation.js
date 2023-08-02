@@ -190,14 +190,14 @@ export function textInteractivity(
 /**
  * Function that changes the orientation of the valve directed to the pump
  *
- * @param {string} medium - The current value selected by the user.
+ * @param {boolean} isAir - The value used to determine if the user has selected air.
  */
-export function pumpValveInteractivity(medium) {
+export function pumpValveInteractivity(isAir) {
   // DOM elements
   const caf2ValveLeft = document.getElementById("caf2-valve-left");
   const znseValveLeft = document.getElementById("znse-valve-left");
 
-  medium === "Air"
+  isAir
     ? caf2ValveLeft.setAttribute(
         "d",
         "M548.806 430.577a1.089 1.088 0 0 0-.643 1.056l-2.119.946a.256.256 0 0 0-.13.339l.105.234c.058.13.21.188.34.13l2.118-.945a1.089 1.088 0 0 0 1.216.227 1.089 1.088 0 0 0 .643-1.057l2.119-.945a.256.256 0 0 0 .13-.34l-.105-.234a.256.256 0 0 0-.34-.13l-2.118.946a1.089 1.088 0 0 0-1.216-.227z"
@@ -207,7 +207,7 @@ export function pumpValveInteractivity(medium) {
         "M548.161 431.567a1.088 1.089 24.24 0 0 .7 1.02l-.008 2.32c0 .142.114.257.256.257l.257.001a.256.256 0 0 0 .257-.256l.008-2.32a1.088 1.089 24.24 0 0 .707-1.015 1.088 1.089 24.24 0 0-.7-1.02l.008-2.32a.256.256 0 0 0-.256-.258h-.256a.256.256 0 0 0-.258.255l-.008 2.32a1.088 1.089 24.24 0 0-.707 1.016z"
       );
 
-  medium === "Air"
+  isAir
     ? znseValveLeft.setAttribute(
         "d",
         "M548.806 430.577a1.089 1.088 0 0 0-.643 1.056l-2.119.946a.256.256 0 0 0-.13.339l.105.234c.058.13.21.188.34.13l2.118-.945a1.089 1.088 0 0 0 1.216.227 1.089 1.088 0 0 0 .643-1.057l2.119-.945a.256.256 0 0 0 .13-.34l-.105-.234a.256.256 0 0 0-.34-.13l-2.118.946a1.089 1.088 0 0 0-1.216-.227z"

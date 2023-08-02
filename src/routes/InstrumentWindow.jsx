@@ -97,7 +97,7 @@ export default function InstrumentWindow() {
       waveMax,
       waveMin
     );
-    pumpValveInteractivity(medium);
+    pumpValveInteractivity(medium === PARAMETER_VALUE.mediumAir ? true : false);
     lectureValveInteractivity(lectureBottleInUse);
     displayInteractivity(backgroundData, sampleData);
     distanceInteractivity(progress, OPD[resolution].distance);
