@@ -287,7 +287,7 @@ export function distanceInteractivity(progress, distance) {
 /**
  * Function that changes the visibility and animates "air" molecules in the sample cell
  *
- * @param {*} isAir - The value used to determine if the user has selected air.
+ * @param {boolean} isAir - The value used to determine if the user has selected air.
  * @param {number} time - The number of milliseconds it takes for an animation to loop.
  */
 export function bubblesAnimation(isAir, time) {
