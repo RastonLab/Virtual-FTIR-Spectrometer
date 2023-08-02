@@ -283,3 +283,110 @@ export function distanceInteractivity(progress, distance) {
   // set text in the readout panel
   distanceText.textContent = `${distance} cm`;
 }
+
+/**
+ * Function that changes the visibility and animates "air" molecules in the sample cell
+ *
+ * @param {*} isAir - The value used to determine if the user has selected air.
+ * @param {number} time - The number of milliseconds it takes for an animation to loop.
+ */
+export function bubblesAnimation(isAir, time) {
+  // DOM elements
+  const bubbleOne = document.getElementById("bubble-1");
+  const bubbleTwo = document.getElementById("bubble-2");
+  const bubbleThree = document.getElementById("bubble-3");
+  const bubbleFour = document.getElementById("bubble-4");
+
+  // ternary used to show/hide "air" bubbles
+  bubbleOne.style.display = isAir ? "inline" : "none";
+  bubbleTwo.style.display = isAir ? "inline" : "none";
+  bubbleThree.style.display = isAir ? "inline" : "none";
+  bubbleFour.style.display = isAir ? "inline" : "none";
+
+  if (isAir) {
+    bubbleOne.animate(
+      [
+        // keyframes
+        { transform: "translate(0px, 0px)" },
+        { transform: "translate(200px, -140px)" },
+        { transform: "translate(400px, 0px)" },
+        { transform: "translate(600px, -140px)" },
+        { transform: "translate(800px, 0px)" },
+        { transform: "translate(860px, -50px)" },
+        { transform: "translate(800px, -140px)" },
+        { transform: "translate(600px, 0px)" },
+        { transform: "translate(400px, -140px)" },
+        { transform: "translate(200px, 0px)" },
+        { transform: "translate(0px, -140px)" },
+        { transform: "translate(0px, 0px)" },
+      ],
+      {
+        // timing options
+        duration: time,
+        iterations: Infinity,
+      }
+    );
+
+    bubbleTwo.animate(
+      [
+        // keyframes
+        { transform: "translate(0px, 0px)" },
+        { transform: "translate(-200px, 140px)" },
+        { transform: "translate(-400px, 0px)" },
+        { transform: "translate(-600px, 140px)" },
+        { transform: "translate(-800px, 0px)" },
+        { transform: "translate(-860px, 50px)" },
+        { transform: "translate(-800px, 140px)" },
+        { transform: "translate(-600px, 0px)" },
+        { transform: "translate(-400px, 140px)" },
+        { transform: "translate(-200px, 0px)" },
+        { transform: "translate(0px, 140px)" },
+        { transform: "translate(0px, 0px)" },
+      ],
+      {
+        // timing options
+        duration: time,
+        iterations: Infinity,
+      }
+    );
+
+    bubbleThree.animate(
+      [
+        // keyframes
+        { transform: "translate(0px, 0px)" },
+        { transform: "translate(-100px, -140px)" },
+        { transform: "translate(-200px, 0px)" },
+        { transform: "translate(-300px, -50px)" },
+        { transform: "translate(-400px, -140px)" },
+        { transform: "translate(-500px, 0px)" },
+        { transform: "translate(-600px, -140px)" },
+        { transform: "translate(-700px, 0px)" },
+        { transform: "translate(-800px, -140px)" },
+        { transform: "translate(0px, 0px)" },
+      ],
+      {
+        // timing options
+        duration: time,
+        iterations: Infinity,
+      }
+    );
+
+    bubbleFour.animate(
+      [
+        // keyframes
+        { transform: "translate(0px, 0px)" },
+        { transform: "translate(850px, 30px)" },
+        { transform: "translate(0px, 60px)" },
+        { transform: "translate(850px, 90px)" },
+        { transform: "translate(0px, 120px)" },
+        { transform: "translate(850px, 75px)" },
+        { transform: "translate(0px, 0px)" },
+      ],
+      {
+        // timing options
+        duration: time,
+        iterations: Infinity,
+      }
+    );
+  }
+}

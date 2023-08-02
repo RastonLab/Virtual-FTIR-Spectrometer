@@ -4493,6 +4493,54 @@ const SvgInstrumentWindow = (props) => (
           }}
         />
       </g>
+      <circle
+        id="bubble-4"
+        cx={1810.18}
+        cy={2044.462}
+        r={12.5}
+        style={{
+          fill: "#00f",
+          fillOpacity: 0.5,
+          strokeWidth: 0.362417,
+          strokeLinecap: "square",
+        }}
+      />
+      <circle
+        id="bubble-3"
+        cx={2673.576}
+        cy={2185.016}
+        r={12.5}
+        style={{
+          fill: "#00f",
+          fillOpacity: 0.5,
+          strokeWidth: 0.362417,
+          strokeLinecap: "square",
+        }}
+      />
+      <circle
+        id="bubble-2"
+        cx={2673.511}
+        cy={2043.705}
+        r={12.5}
+        style={{
+          fill: "#00f",
+          fillOpacity: 0.5,
+          strokeWidth: 0.362417,
+          strokeLinecap: "square",
+        }}
+      />
+      <circle
+        id="bubble-1"
+        cx={1811.362}
+        cy={2186.093}
+        r={12.5}
+        style={{
+          fill: "#00f",
+          strokeWidth: 0.362417,
+          strokeLinecap: "square",
+          fillOpacity: 0.5,
+        }}
+      />
       <g
         id="sample-cell-znse"
         transform="translate(-5087.448 -3368.296) scale(13.08022)"
