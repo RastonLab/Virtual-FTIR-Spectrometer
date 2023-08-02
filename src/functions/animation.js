@@ -178,7 +178,7 @@ export function textInteractivity(
   const moleculeText = document.getElementById("molecule-value");
 
   // set text in the readout panel
-  opdText.textContent = opd[resolution];
+  opdText.textContent = opd[resolution].value;
   scanText.textContent = scan;
   rangeText.textContent = `${waveMin} - ${waveMax}`;
   resolutionText.textContent = resolution;
@@ -247,4 +247,37 @@ export function lectureValveInteractivity(lectureBottleInUse) {
         "d",
         "M570.381 431.571a1.088 1.089 24 0 0 .704 1.017l.002 2.32c0 .143.115.257.257.257h.257a.256.256 0 0 0 .256-.257l-.002-2.32a1.088 1.089 24 0 0 .703-1.019 1.088 1.089 24 0 0-.704-1.017l-.002-2.32a.256.256 0 0 0-.257-.256h-.257a.256.256 0 0 0-.256.257l.002 2.32a1.088 1.089 24 0 0-.703 1.018z"
       );
+}
+
+/**
+ * Function that changes the visibility of the text on the display based on when the user generates data
+ *
+ * @param {object} background - Holds the X and Y coordinates for the background.
+ * @param {object} sample - Holds the X and Y coordinates for the sample.
+ */
+export function displayInteractivity(background, sample) {
+  // DOM elements
+  const backgroundText = document.getElementById("ready-background");
+  const sampleText = document.getElementById("ready-sample");
+
+  // ternary used to show/hide display text in the Main SVG
+  backgroundText.style.display = background ? "inline" : "none";
+  sampleText.style.display = sample ? "inline" : "none";
+}
+
+/**
+ *
+ * @param {boolean} spinner - The value of if a scan is currently running. This value is reused to not create repeat code. Progress is only true when a scan is occurring, and this is the only time we want the distance text to appear.
+ */
+export function distanceInteractivity(progress, distance) {
+  // DOM elements
+  const distanceText = document.getElementById("distance-value");
+  const distanceMarker = document.getElementById("distance-marker");
+
+  // ternary used to show/hide distance marker and value
+  distanceText.style.display = progress ? "inline" : "none";
+  distanceMarker.style.display = progress ? "inline" : "none";
+
+  // set text in the readout panel
+  distanceText.textContent = `${distance} cm`;
 }
