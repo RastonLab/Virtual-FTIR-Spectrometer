@@ -42,25 +42,13 @@ g {
   pointer-events: all;
 }
 
-/* ---------- svg animation ---------- */
-#movable-corner-cube {
-  transition: transform 5s ease;
-}
-
-#ray-top {
-  transition: d 5s ease;
-}
-
-#ray-middle {
-  transition: transform 5s ease;
-}
-
-#ray-bottom {
-  transition: d 5s ease;
-}
-
-#rect6675 {
-  transition: d 5s ease;
+/* ---------- svg interactivity and animation ---------- */
+#opd-value,
+#molecule-value,
+#range-value,
+#resolution-value,
+#scan-value {
+  pointer-events: none;
 }
 
 /* ---------- tooltip ---------- */

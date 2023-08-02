@@ -109,7 +109,7 @@ export default function Fetch({
       // Leaves delay as Immediate if in devMode
       if (!devMode) {
         // Calculate time the scan would take
-        delay = OPD[resolution] * scan * 1000; // 1000 is to convert to milliseconds
+        delay = OPD[resolution].value * scan * 1000; // 1000 is to convert to milliseconds
       }
 
       // Controls the Label and valve on the Lecture Bottle

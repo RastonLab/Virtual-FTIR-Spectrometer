@@ -42,13 +42,13 @@ export const BAD_ID = [
 
 // OPD values used to calculate a scans length
 export const OPD = {
-  1: 1,
-  0.5: 2,
-  0.25: 4,
-  0.125: 8,
-  0.0625: 16,
-  // 0.03125: 32,
-  // 0.015625: 64,
+  1: { value: 1, distance: 0.5 },
+  0.5: { value: 2, distance: 1 },
+  0.25: { value: 4, distance: 2 },
+  0.125: { value: 8, distance: 4 },
+  0.0625: { value: 16, distance: 8 },
+  // 0.03125: { value: 32, distance: 16 },
+  // 0.015625: { value: 64, distance: 32 },
 };
 
 // backend values associated with user parameters/inputs
