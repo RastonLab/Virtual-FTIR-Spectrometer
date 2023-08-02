@@ -272,7 +272,6 @@ export function displayInteractivity(background, sample) {
  * @param {number} distance - The distance in centimeters that the mirror would physically move on a real spectrometer.
  */
 export function distanceInteractivity(progress, distance) {
-  console.log(typeof distance);
   // DOM elements
   const distanceText = document.getElementById("distance-value");
   const distanceMarker = document.getElementById("distance-marker");
