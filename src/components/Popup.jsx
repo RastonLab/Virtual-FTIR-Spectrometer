@@ -30,7 +30,7 @@ export default function Popup({ label, title, text }) {
 
   return (
     <div>
-      <button className="popup-button" onClick={handleClickOpen}>
+      <button className="popup-button dropdown-items" onClick={handleClickOpen}>
         {label}
       </button>
       <Dialog className="popup" onClose={handleClose} open={open}>

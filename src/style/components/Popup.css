@@ -1,6 +1,7 @@
 /* ---------- popup ---------- */
 .popup .MuiDialog-paper {
   height: 80% !important;
+  width: 80%;
 }
 
 .popup h1 {

@@ -113,7 +113,7 @@ export default function App() {
                       <AccordionSummary className="menu-items">
                         {page.label}
                       </AccordionSummary>
-                      <AccordionDetails className="dropdown-items">
+                      <AccordionDetails className="dropdown">
                         {page.submenu.map((submenu) => {
                           if (submenu.button) {
                             return (
@@ -126,7 +126,7 @@ export default function App() {
                             );
                           } else if (submenu.link) {
                             return (
-                              <p key={submenu.link}>
+                              <p key={submenu.link} className={"dropdown-items"}>
                                 <Link
                                   to={submenu.link ?? "#"}
                                   onClick={submenu.action}
@@ -137,7 +137,7 @@ export default function App() {
                             );
                           } else {
                             return (
-                              <ul key={submenu.label}>{submenu.component}</ul>
+                              <ul key={submenu.label} className={"dropdown-items"}>{submenu.component}</ul>
                             );
                           }
                         })}
@@ -187,7 +187,7 @@ export default function App() {
                 <AccordionSummary className="menu-items">
                   {page.label}
                 </AccordionSummary>
-                <AccordionDetails className="dropdown-items">
+                <AccordionDetails className="dropdown">
                   {page.submenu.map((submenu) => {
                     if (submenu.button) {
                       return (
@@ -200,7 +200,7 @@ export default function App() {
                       );
                     } else if (submenu.link) {
                       return (
-                        <p key={submenu.link}>
+                        <p key={submenu.link} className={"dropdown-items"}>
                           <Link
                             to={submenu.link ?? "#"}
                             onClick={submenu.action}
@@ -210,7 +210,7 @@ export default function App() {
                         </p>
                       );
                     } else {
-                      return <ul key={submenu.label}>{submenu.component}</ul>;
+                      return <ul key={submenu.label} className={"dropdown-items"}>{submenu.component}</ul>;
                     }
                   })}
                 </AccordionDetails>

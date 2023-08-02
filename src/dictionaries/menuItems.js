@@ -2,7 +2,6 @@
 import { Open } from "../components/Open";
 import CancelScan from "../components/CancelScan";
 import Fetch from "../components/Fetch";
-import Print from "../components/Print";
 import Save from "../components/Save";
 
 // constants
@@ -18,7 +17,7 @@ export const menuItems = [
       {
         label: "Open",
         button: true,
-        title: "Please Select a File",
+        title: "Please Select Sample or Background File",
         text: <Open />,
       },
       {
@@ -26,12 +25,6 @@ export const menuItems = [
         button: true,
         title: "",
         text: <Save />,
-      },
-      {
-        label: "Print",
-        button: true,
-        title: "",
-        text: <Print />,
       },
     ],
   },
