@@ -6,6 +6,7 @@ import Save from "../components/Save";
 
 // constants
 import { BACKGROUND, SAMPLE } from "../dictionaries/constants";
+import FindPeaks from "../components/FindPeaks";
 
 /**
  * Controls what appears in the MenuBar. To remove something, either remove the code or comment it out
@@ -71,6 +72,12 @@ export const menuItems = [
       {
         label: "Cancel Scan",
         component: <CancelScan />,
+      },
+      {
+        label: "Find Peaks",
+        button: true,
+        title: "",
+        text: <FindPeaks />,
       },
     ],
   },

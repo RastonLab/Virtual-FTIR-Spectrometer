@@ -6,6 +6,9 @@ import { CSVLink } from "react-csv";
 // redux
 import { useSelector } from "react-redux";
 
+// helper function
+import { generateTransmittance } from "../dictionaries/dataFunctions";
+
 // style
 import "../style/components/Button.css";
 import "../style/components/Save.css";
@@ -82,10 +85,11 @@ export default function Save() {
 
     const specType = ["Spectrum Type: Transmittance Spectrum"];
     newData.push(specType);
+    
+    const {transX, transY} = generateTransmittance(backgroundData, sampleData);
 
-    for (let i = 0; i < sampleData.x.length; i++) {
-      let newY = sampleData.y[i] / backgroundData.y[i];
-      newData.push([sampleData.x[i], newY]);
+    for (let i = 0; i < transX.length; i++) {
+      newData.push([transX[i], transY[i]]);
     }
 
     setData(newData);
