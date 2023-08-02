@@ -266,10 +266,13 @@ export function displayInteractivity(background, sample) {
 }
 
 /**
+ * Function that changes the visibility and text of the distance marker for the moveable corner cube
  *
- * @param {boolean} spinner - The value of if a scan is currently running. This value is reused to not create repeat code. Progress is only true when a scan is occurring, and this is the only time we want the distance text to appear.
+ * @param {boolean} progress - The value of if a scan is currently running. This value is reused to not create repeat code. Progress is only true when a scan is occurring, and this is the only time we want the distance text to appear.
+ * @param {number} distance - The distance in centimeters that the mirror would physically move on a real spectrometer.
  */
 export function distanceInteractivity(progress, distance) {
+  console.log(typeof distance);
   // DOM elements
   const distanceText = document.getElementById("distance-value");
   const distanceMarker = document.getElementById("distance-marker");
