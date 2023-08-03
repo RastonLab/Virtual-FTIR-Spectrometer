@@ -45,7 +45,7 @@ export default function Spinner(props) {
       if (scansDone < props.scans && delay >= (100 / props.scans) * scansDone) {
         // Triggers the animation on even numbered scans
         if (scansDone % 2 === 0) {
-          animateCornerCube(props.opd);
+          animateCornerCube(props.scans / 2, props.opd);
           console.log(scansDone);
         }
         setScansDone(scansDone + 1);

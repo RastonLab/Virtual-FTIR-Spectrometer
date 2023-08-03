@@ -8,7 +8,7 @@ import Main from "../images/InstrumentSVG";
 import Spinner from "../components/Spinner";
 
 // constants
-import { BAD_ID, OPD } from "../dictionaries/constants";
+import { BAD_ID, OPD, PARAMETER_VALUE } from "../dictionaries/constants";
 
 // dictionaries
 import { tooltips } from "../dictionaries/tooltips";
@@ -18,6 +18,7 @@ import { molecules } from "../dictionaries/molecule";
 import {
   animateCornerCube,
   beamsplitterInteractivity,
+  bubblesAnimation,
   cellWindowInteractivity,
   detectorInteractivity,
   displayInteractivity,
@@ -96,10 +97,11 @@ export default function InstrumentWindow() {
       waveMax,
       waveMin
     );
-    pumpValveInteractivity(medium);
+    pumpValveInteractivity(medium === PARAMETER_VALUE.mediumAir ? true : false);
     lectureValveInteractivity(lectureBottleInUse);
     displayInteractivity(backgroundData, sampleData);
     distanceInteractivity(progress, OPD[resolution].distance);
+    bubblesAnimation(medium === PARAMETER_VALUE.mediumAir ? true : false, 2000);
   });
 
   return (
@@ -114,7 +116,7 @@ export default function InstrumentWindow() {
           Experiment Settings
         </button>
         {devMode && (
-          <button className="button" onClick={() => animateCornerCube(4)}>
+          <button className="button" onClick={() => animateCornerCube(1, 5)}>
             Animate MCC
           </button>
         )}
