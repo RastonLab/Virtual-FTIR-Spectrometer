@@ -22,6 +22,7 @@ export const BAD_ID = [
   "beam-mct",
   "beam-tungsten",
   "beams",
+  "customized-dialog-title",
   "ftir",
   "globar-laser",
   "hose-1",
