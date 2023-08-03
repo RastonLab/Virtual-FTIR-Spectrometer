@@ -8,16 +8,14 @@
 .absorb-row {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
-  width: 90%;
-  align-self: center;
+  /* width: 90%; */
 }
 
 .absorb-col {
   display: flex;
   flex-direction: column;
-  width: 40%;
-  align-self: flex-start;
+  /* width: 90%; */
+  margin: 3% 5%;
 }
 
 .display {

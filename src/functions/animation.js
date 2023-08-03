@@ -4,62 +4,112 @@ import { PARAMETER_VALUE } from "../dictionaries/constants";
 /**
  * Function that moves the moveable corner cube and associated rays/lasers
  *
+ * Examples used and information from: https://developer.mozilla.org/en-US/docs/Web/API/Element/animate
+ *
+ * @param {number} cycles - The number of times the mirror moves out and back. One cycle is equivalent to two scans.
  * @param {number} time - The time (in seconds) that it takes for the animation to move in one direction.
  */
-export function animateCornerCube(time) {
+export function animateCornerCube(cycles, time) {
   const mcc = document.getElementById("movable-corner-cube");
   const rayTop = document.getElementById("ray-top");
   const rayMiddle = document.getElementById("ray-middle");
   const rayBottom = document.getElementById("ray-bottom");
   const laser = document.getElementById("rect6675");
 
-  if (mcc) {
-    mcc.style.transition = `all ${time}s ease`;
-    rayTop.style.transition = `all ${time}s ease`;
-    rayMiddle.style.transition = `all ${time}s ease`;
-    rayBottom.style.transition = `all ${time}s ease`;
-    laser.style.transition = `all ${time}s ease`;
+  const easing = "ease";
 
-    mcc.setAttribute("transform", "translate(1130, 0)");
+  mcc.animate(
+    [
+      // keyframes
+      { transform: "translate(0px, 0px)" },
+      { transform: "translate(1130px, 0px)" },
+      { transform: "translate(0px, 0px)" },
+    ],
+    {
+      // timing options
+      duration: time * 1000,
+      iterations: cycles,
+      easing: easing,
+    }
+  );
 
-    laser.setAttribute(
-      "d",
-      "M1406.494 991.284v10H3190.73v209.254H344.494v10H3200.73V991.284Z"
-    );
+  laser.animate(
+    [
+      // keyframes
+      {
+        d: "path('M1406.494 991.284v10h651.235v209.254H344.494v10H2067.73V991.284z')",
+      },
+      {
+        d: "path('M1406.494 991.284v10H3190.73v209.254H344.494v10H3200.73V991.284Z')",
+      },
+      {
+        d: "path('M1406.494 991.284v10h651.235v209.254H344.494v10H2067.73V991.284z')",
+      },
+    ],
+    {
+      // timing options
+      duration: time * 1000,
+      iterations: cycles,
+      easing: easing,
+    }
+  );
 
-    rayTop.setAttribute(
-      "d",
-      "m3233.15 953.417 89.492 94.391H1447.236l-95.49-94.391z"
-    );
+  rayTop.animate(
+    [
+      // keyframes
+      {
+        d: "path('m2026.826 953.417 93.734 94.391h-673.324l-95.49-94.391z')",
+      },
+      {
+        d: "path('m3233.15 953.417 89.492 94.391H1447.236l-95.49-94.391z')",
+      },
+      {
+        d: "path('m2026.826 953.417 93.734 94.391h-673.324l-95.49-94.391z')",
+      },
+    ],
+    {
+      // timing options
+      duration: time * 1000,
+      iterations: cycles,
+      easing: easing,
+    }
+  );
 
-    rayMiddle.setAttribute("transform", "translate (1130, 0)");
+  rayMiddle.animate(
+    [
+      // keyframes
+      { transform: "translate(0px, 0px)" },
+      { transform: "translate(1130px, 0px)" },
+      { transform: "translate(0px, 0px)" },
+    ],
+    {
+      // timing options
+      duration: time * 1000,
+      iterations: cycles,
+      easing: easing,
+    }
+  );
 
-    rayBottom.setAttribute(
-      "d",
-      "m3326.56 1164.195-99.733 94.356H582.917l-89.932-94.356z"
-    );
-
-    setTimeout(() => {
-      mcc.setAttribute("transform", "translate(0, 0)");
-
-      laser.setAttribute(
-        "d",
-        "M1406.494 991.284v10h651.235v209.254H344.494v10H2067.73V991.284z"
-      );
-
-      rayTop.setAttribute(
-        "d",
-        "m2026.826 953.417 93.734 94.391h-673.324l-95.49-94.391z"
-      );
-
-      rayMiddle.setAttribute("transform", "translate (0, 0)");
-
-      rayBottom.setAttribute(
-        "d",
-        "m2120.56 1164.195-93.733 94.356H582.917l-89.932-94.356z"
-      );
-    }, time * 1000);
-  }
+  rayBottom.animate(
+    [
+      // keyframes
+      {
+        d: "path('m2120.56 1164.195-93.733 94.356H582.917l-89.932-94.356z')",
+      },
+      {
+        d: "path('m3326.56 1164.195-99.733 94.356H582.917l-89.932-94.356z')",
+      },
+      {
+        d: "path('m2120.56 1164.195-93.733 94.356H582.917l-89.932-94.356z')",
+      },
+    ],
+    {
+      // timing options
+      duration: time * 1000,
+      iterations: cycles,
+      easing: easing,
+    }
+  );
 }
 
 /**
@@ -190,14 +240,14 @@ export function textInteractivity(
 /**
  * Function that changes the orientation of the valve directed to the pump
  *
- * @param {string} medium - The current value selected by the user.
+ * @param {boolean} isAir - The value used to determine if the user has selected air.
  */
-export function pumpValveInteractivity(medium) {
+export function pumpValveInteractivity(isAir) {
   // DOM elements
   const caf2ValveLeft = document.getElementById("caf2-valve-left");
   const znseValveLeft = document.getElementById("znse-valve-left");
 
-  medium === "Air"
+  isAir
     ? caf2ValveLeft.setAttribute(
         "d",
         "M548.806 430.577a1.089 1.088 0 0 0-.643 1.056l-2.119.946a.256.256 0 0 0-.13.339l.105.234c.058.13.21.188.34.13l2.118-.945a1.089 1.088 0 0 0 1.216.227 1.089 1.088 0 0 0 .643-1.057l2.119-.945a.256.256 0 0 0 .13-.34l-.105-.234a.256.256 0 0 0-.34-.13l-2.118.946a1.089 1.088 0 0 0-1.216-.227z"
@@ -207,7 +257,7 @@ export function pumpValveInteractivity(medium) {
         "M548.161 431.567a1.088 1.089 24.24 0 0 .7 1.02l-.008 2.32c0 .142.114.257.256.257l.257.001a.256.256 0 0 0 .257-.256l.008-2.32a1.088 1.089 24.24 0 0 .707-1.015 1.088 1.089 24.24 0 0-.7-1.02l.008-2.32a.256.256 0 0 0-.256-.258h-.256a.256.256 0 0 0-.258.255l-.008 2.32a1.088 1.089 24.24 0 0-.707 1.016z"
       );
 
-  medium === "Air"
+  isAir
     ? znseValveLeft.setAttribute(
         "d",
         "M548.806 430.577a1.089 1.088 0 0 0-.643 1.056l-2.119.946a.256.256 0 0 0-.13.339l.105.234c.058.13.21.188.34.13l2.118-.945a1.089 1.088 0 0 0 1.216.227 1.089 1.088 0 0 0 .643-1.057l2.119-.945a.256.256 0 0 0 .13-.34l-.105-.234a.256.256 0 0 0-.34-.13l-2.118.946a1.089 1.088 0 0 0-1.216-.227z"
@@ -266,8 +316,10 @@ export function displayInteractivity(background, sample) {
 }
 
 /**
+ * Function that changes the visibility and text of the distance marker for the moveable corner cube
  *
- * @param {boolean} spinner - The value of if a scan is currently running. This value is reused to not create repeat code. Progress is only true when a scan is occurring, and this is the only time we want the distance text to appear.
+ * @param {boolean} progress - The value of if a scan is currently running. This value is reused to not create repeat code. Progress is only true when a scan is occurring, and this is the only time we want the distance text to appear.
+ * @param {number} distance - The distance in centimeters that the mirror would physically move on a real spectrometer.
  */
 export function distanceInteractivity(progress, distance) {
   // DOM elements
@@ -280,4 +332,111 @@ export function distanceInteractivity(progress, distance) {
 
   // set text in the readout panel
   distanceText.textContent = `${distance} cm`;
+}
+
+/**
+ * Function that changes the visibility and animates "air" molecules in the sample cell
+ *
+ * @param {boolean} isAir - The value used to determine if the user has selected air.
+ * @param {number} time - The number of milliseconds it takes for an animation to loop.
+ */
+export function bubblesAnimation(isAir, time) {
+  // DOM elements
+  const bubbleOne = document.getElementById("bubble-1");
+  const bubbleTwo = document.getElementById("bubble-2");
+  const bubbleThree = document.getElementById("bubble-3");
+  const bubbleFour = document.getElementById("bubble-4");
+
+  // ternary used to show/hide "air" bubbles
+  bubbleOne.style.display = isAir ? "inline" : "none";
+  bubbleTwo.style.display = isAir ? "inline" : "none";
+  bubbleThree.style.display = isAir ? "inline" : "none";
+  bubbleFour.style.display = isAir ? "inline" : "none";
+
+  if (isAir) {
+    bubbleOne.animate(
+      [
+        // keyframes
+        { transform: "translate(0px, 0px)" },
+        { transform: "translate(200px, -140px)" },
+        { transform: "translate(400px, 0px)" },
+        { transform: "translate(600px, -140px)" },
+        { transform: "translate(800px, 0px)" },
+        { transform: "translate(860px, -50px)" },
+        { transform: "translate(800px, -140px)" },
+        { transform: "translate(600px, 0px)" },
+        { transform: "translate(400px, -140px)" },
+        { transform: "translate(200px, 0px)" },
+        { transform: "translate(0px, -140px)" },
+        { transform: "translate(0px, 0px)" },
+      ],
+      {
+        // timing options
+        duration: time,
+        iterations: Infinity,
+      }
+    );
+
+    bubbleTwo.animate(
+      [
+        // keyframes
+        { transform: "translate(0px, 0px)" },
+        { transform: "translate(-200px, 140px)" },
+        { transform: "translate(-400px, 0px)" },
+        { transform: "translate(-600px, 140px)" },
+        { transform: "translate(-800px, 0px)" },
+        { transform: "translate(-860px, 50px)" },
+        { transform: "translate(-800px, 140px)" },
+        { transform: "translate(-600px, 0px)" },
+        { transform: "translate(-400px, 140px)" },
+        { transform: "translate(-200px, 0px)" },
+        { transform: "translate(0px, 140px)" },
+        { transform: "translate(0px, 0px)" },
+      ],
+      {
+        // timing options
+        duration: time,
+        iterations: Infinity,
+      }
+    );
+
+    bubbleThree.animate(
+      [
+        // keyframes
+        { transform: "translate(0px, 0px)" },
+        { transform: "translate(-100px, -140px)" },
+        { transform: "translate(-200px, 0px)" },
+        { transform: "translate(-300px, -50px)" },
+        { transform: "translate(-400px, -140px)" },
+        { transform: "translate(-500px, 0px)" },
+        { transform: "translate(-600px, -140px)" },
+        { transform: "translate(-700px, 0px)" },
+        { transform: "translate(-800px, -140px)" },
+        { transform: "translate(0px, 0px)" },
+      ],
+      {
+        // timing options
+        duration: time,
+        iterations: Infinity,
+      }
+    );
+
+    bubbleFour.animate(
+      [
+        // keyframes
+        { transform: "translate(0px, 0px)" },
+        { transform: "translate(850px, 30px)" },
+        { transform: "translate(0px, 60px)" },
+        { transform: "translate(850px, 90px)" },
+        { transform: "translate(0px, 120px)" },
+        { transform: "translate(850px, 75px)" },
+        { transform: "translate(0px, 0px)" },
+      ],
+      {
+        // timing options
+        duration: time,
+        iterations: Infinity,
+      }
+    );
+  }
 }
