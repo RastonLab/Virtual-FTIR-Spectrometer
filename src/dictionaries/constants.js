@@ -29,6 +29,7 @@ export const BAD_ID = [
   "instrument",
   "mct-laser",
   "opd-value",
+  "manometer-value",
   "molecule-value",
   "range-value",
   "rays",
