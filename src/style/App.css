@@ -45,6 +45,11 @@
   /* align-self: center !important; */
 }
 
+.welcome .MuiDialog-paper {
+  height: auto !important;
+  width: 80%;
+}
+
 .menus {
   display: flex;
   list-style: none;
