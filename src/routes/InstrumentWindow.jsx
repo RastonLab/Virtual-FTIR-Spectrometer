@@ -50,6 +50,7 @@ export default function InstrumentWindow() {
     detector,
     medium,
     molecule,
+    pressure,
     resolution,
     scan,
     source,
@@ -92,6 +93,7 @@ export default function InstrumentWindow() {
     textInteractivity(
       lectureBottleInUse ? molecules[molecule] : "",
       OPD,
+      pressure,
       resolution,
       scan,
       waveMax,

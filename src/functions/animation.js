@@ -215,6 +215,7 @@ export function cellWindowInteractivity(store) {
 export function textInteractivity(
   molecule,
   opd,
+  pressure,
   resolution,
   scan,
   waveMax,
@@ -226,6 +227,7 @@ export function textInteractivity(
   const rangeText = document.getElementById("range-value");
   const resolutionText = document.getElementById("resolution-value");
   const moleculeText = document.getElementById("molecule-value");
+  const pressureText = document.getElementById("pressure-value");
 
   // set text in the readout panel
   opdText.textContent = opd[resolution].value;
@@ -235,6 +237,9 @@ export function textInteractivity(
 
   // set text in the lecture bottle
   moleculeText.textContent = molecule;
+
+  // set text in manometer
+  pressureText.textContent = pressure;
 }
 
 /**
