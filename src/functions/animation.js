@@ -4,62 +4,112 @@ import { PARAMETER_VALUE } from "../dictionaries/constants";
 /**
  * Function that moves the moveable corner cube and associated rays/lasers
  *
+ * Examples used and information from: https://developer.mozilla.org/en-US/docs/Web/API/Element/animate
+ *
+ * @param {number} cycles - The number of times the mirror moves out and back. One cycle is equivalent to two scans.
  * @param {number} time - The time (in seconds) that it takes for the animation to move in one direction.
  */
-export function animateCornerCube(time) {
+export function animateCornerCube(cycles, time) {
   const mcc = document.getElementById("movable-corner-cube");
   const rayTop = document.getElementById("ray-top");
   const rayMiddle = document.getElementById("ray-middle");
   const rayBottom = document.getElementById("ray-bottom");
   const laser = document.getElementById("rect6675");
 
-  if (mcc) {
-    mcc.style.transition = `all ${time}s ease`;
-    rayTop.style.transition = `all ${time}s ease`;
-    rayMiddle.style.transition = `all ${time}s ease`;
-    rayBottom.style.transition = `all ${time}s ease`;
-    laser.style.transition = `all ${time}s ease`;
+  const easing = "ease";
 
-    mcc.setAttribute("transform", "translate(1130, 0)");
+  mcc.animate(
+    [
+      // keyframes
+      { transform: "translate(0px, 0px)" },
+      { transform: "translate(1130px, 0px)" },
+      { transform: "translate(0px, 0px)" },
+    ],
+    {
+      // timing options
+      duration: time * 1000,
+      iterations: cycles,
+      easing: easing,
+    }
+  );
 
-    laser.setAttribute(
-      "d",
-      "M1406.494 991.284v10H3190.73v209.254H344.494v10H3200.73V991.284Z"
-    );
+  laser.animate(
+    [
+      // keyframes
+      {
+        d: "path('M1406.494 991.284v10h651.235v209.254H344.494v10H2067.73V991.284z')",
+      },
+      {
+        d: "path('M1406.494 991.284v10H3190.73v209.254H344.494v10H3200.73V991.284Z')",
+      },
+      {
+        d: "path('M1406.494 991.284v10h651.235v209.254H344.494v10H2067.73V991.284z')",
+      },
+    ],
+    {
+      // timing options
+      duration: time * 1000,
+      iterations: cycles,
+      easing: easing,
+    }
+  );
 
-    rayTop.setAttribute(
-      "d",
-      "m3233.15 953.417 89.492 94.391H1447.236l-95.49-94.391z"
-    );
+  rayTop.animate(
+    [
+      // keyframes
+      {
+        d: "path('m2026.826 953.417 93.734 94.391h-673.324l-95.49-94.391z')",
+      },
+      {
+        d: "path('m3233.15 953.417 89.492 94.391H1447.236l-95.49-94.391z')",
+      },
+      {
+        d: "path('m2026.826 953.417 93.734 94.391h-673.324l-95.49-94.391z')",
+      },
+    ],
+    {
+      // timing options
+      duration: time * 1000,
+      iterations: cycles,
+      easing: easing,
+    }
+  );
 
-    rayMiddle.setAttribute("transform", "translate (1130, 0)");
+  rayMiddle.animate(
+    [
+      // keyframes
+      { transform: "translate(0px, 0px)" },
+      { transform: "translate(1130px, 0px)" },
+      { transform: "translate(0px, 0px)" },
+    ],
+    {
+      // timing options
+      duration: time * 1000,
+      iterations: cycles,
+      easing: easing,
+    }
+  );
 
-    rayBottom.setAttribute(
-      "d",
-      "m3326.56 1164.195-99.733 94.356H582.917l-89.932-94.356z"
-    );
-
-    setTimeout(() => {
-      mcc.setAttribute("transform", "translate(0, 0)");
-
-      laser.setAttribute(
-        "d",
-        "M1406.494 991.284v10h651.235v209.254H344.494v10H2067.73V991.284z"
-      );
-
-      rayTop.setAttribute(
-        "d",
-        "m2026.826 953.417 93.734 94.391h-673.324l-95.49-94.391z"
-      );
-
-      rayMiddle.setAttribute("transform", "translate (0, 0)");
-
-      rayBottom.setAttribute(
-        "d",
-        "m2120.56 1164.195-93.733 94.356H582.917l-89.932-94.356z"
-      );
-    }, time * 1000);
-  }
+  rayBottom.animate(
+    [
+      // keyframes
+      {
+        d: "path('m2120.56 1164.195-93.733 94.356H582.917l-89.932-94.356z')",
+      },
+      {
+        d: "path('m3326.56 1164.195-99.733 94.356H582.917l-89.932-94.356z')",
+      },
+      {
+        d: "path('m2120.56 1164.195-93.733 94.356H582.917l-89.932-94.356z')",
+      },
+    ],
+    {
+      // timing options
+      duration: time * 1000,
+      iterations: cycles,
+      easing: easing,
+    }
+  );
 }
 
 /**

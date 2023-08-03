@@ -116,7 +116,7 @@ export default function InstrumentWindow() {
           Experiment Settings
         </button>
         {devMode && (
-          <button className="button" onClick={() => animateCornerCube(4)}>
+          <button className="button" onClick={() => animateCornerCube(1, 5)}>
             Animate MCC
           </button>
         )}
