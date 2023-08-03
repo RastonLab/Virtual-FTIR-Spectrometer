@@ -11,6 +11,8 @@ import { useDispatch } from "react-redux";
 // redux slice
 import { setScan } from "../../redux/parameterSlice";
 
+import "../../style/components/NumberInputs.css"
+
 /**
  * A component that contains a MUI SLider and Input for the scan value
  *

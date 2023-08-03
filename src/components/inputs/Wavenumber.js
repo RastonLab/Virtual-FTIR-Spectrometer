@@ -10,6 +10,8 @@ import { useDispatch } from "react-redux";
 // redux slice
 import { setWaveMin, setWaveMax } from "../../redux/parameterSlice";
 
+import "../../style/components/NumberInputs.css"
+
 /**
  * A component that contains a MUI Slider and Inputs for the wavenumber values
  *
@@ -50,7 +52,7 @@ export default function Wavenumber({ min, max, step, storeMin, storeMax }) {
     if (storeMin < min) {
       storeMin = min;
     }
-    
+
     if (storeMax > max) {
       storeMax = max;
     }

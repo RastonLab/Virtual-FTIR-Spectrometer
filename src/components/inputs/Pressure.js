@@ -8,6 +8,8 @@ import { useDispatch } from "react-redux";
 // redux store
 import { setPressure } from "../../redux/parameterSlice";
 
+import "../../style/components/NumberInputs.css"
+
 /**
  * A component that contains a MUI Text Field for the pressure value
  *
