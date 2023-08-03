@@ -22,7 +22,24 @@ import { setScan } from "../../redux/parameterSlice";
 export default function Scan({ min, max, step, store }) {
   const dispatch = useDispatch();
 
+  const makeEven = () => {
+    console.log(store);
+    if (store % 2 !== 0) {
+      if (store < max) {
+        store++;
+      } else {
+        store = max;
+      }
+    }
+    dispatch(setScan(store));
+  }
+
   const handleSliderChange = (event, newValue) => {
+
+    if (newValue % 2 !== 0) {
+      newValue++;
+    }
+
     dispatch(setScan(newValue));
   };
 
@@ -30,20 +47,12 @@ export default function Scan({ min, max, step, store }) {
 
     let value = Number(event.target.value);
 
-    if (value % 2 !== 0) {
-      value++;
-    }
-
     dispatch(
       setScan(event.target.value === "" ? "" : value)
     );
   };
 
   const handleBlur = () => {
-
-    if (store % 2 !== 0) {
-      store++;
-    }
 
     if (store < min) {
       dispatch(setScan(min));
@@ -78,7 +87,10 @@ export default function Scan({ min, max, step, store }) {
             value={store}
             size="small"
             onChange={handleInputChange}
-            onBlur={handleBlur}
+            onBlur={() => {
+              handleBlur();
+              makeEven();
+            }}
             inputProps={{
               step: step,
               min: min,

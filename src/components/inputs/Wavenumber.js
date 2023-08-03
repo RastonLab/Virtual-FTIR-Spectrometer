@@ -28,7 +28,9 @@ export default function Wavenumber({ min, max, step, storeMin, storeMax }) {
   };
 
   const handleInputChangeMin = (event) => {
-    setWaveMin(event.target.value === "" ? "" : Number(event.target.value));
+    dispatch(
+      setWaveMin(event.target.value === "" ? "" : Number(event.target.value))
+    );
   };
 
   const handleInputChangeMax = (event) => {
@@ -38,15 +40,23 @@ export default function Wavenumber({ min, max, step, storeMin, storeMax }) {
   };
 
   const handleBlur = () => {
+
     if (storeMin > storeMax) {
-      return;
+      const temp = storeMin;
+      storeMin = storeMax;
+      storeMax = temp;
     }
+
     if (storeMin < min) {
-      dispatch(setWaveMin(min));
+      storeMin = min;
     }
+    
     if (storeMax > max) {
-      dispatch(setWaveMax(max));
+      storeMax = max;
     }
+
+    dispatch(setWaveMin(storeMin));
+    dispatch(setWaveMax(storeMax));
   };
 
   return (

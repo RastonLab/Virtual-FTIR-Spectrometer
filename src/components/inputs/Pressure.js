@@ -19,6 +19,16 @@ import { setPressure } from "../../redux/parameterSlice";
 export default function Pressure({ min, max, step, store }) {
   const dispatch = useDispatch();
 
+  const checkRange = () => {
+    if (store < min) {
+      store = min;
+    } else if (store > max) {
+      store = max;
+    }
+
+    dispatch(setPressure(store));
+  }
+
   const handleTextChange = (event) => {
     dispatch(
       setPressure(event.target.value === "" ? "" : Number(event.target.value))
@@ -34,11 +44,11 @@ export default function Pressure({ min, max, step, store }) {
         type="number"
         value={store}
         onChange={handleTextChange}
+        onBlur={checkRange}
         InputProps={{
           inputProps: {
             min: min,
             max: max,
-            step: step,
           },
           endAdornment: <InputAdornment position="end">Bar</InputAdornment>,
         }}
