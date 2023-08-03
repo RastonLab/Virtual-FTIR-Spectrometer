@@ -81,11 +81,11 @@ export default function App() {
 
   return (
     <div>
-      <Dialog className="popup" open={welcomeOpen} onClose={handleWelcomeClose}>
+      <Dialog className="welcome popup" open={welcomeOpen} onClose={handleWelcomeClose}>
         <CloseButton id="customized-dialog-title" onClose={handleWelcomeClose}/>
         <LandingPage />
       </Dialog>
-      
+
       <AppBar className="nav-area" position="static">
         <Container maxWidth="xl" sx={{ paddingLeft: { xs: 0 } }}>
           <Toolbar
