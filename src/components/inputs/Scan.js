@@ -27,12 +27,24 @@ export default function Scan({ min, max, step, store }) {
   };
 
   const handleInputChange = (event) => {
+
+    let value = Number(event.target.value);
+
+    if (value % 2 !== 0) {
+      value++;
+    }
+
     dispatch(
-      setScan(event.target.value === "" ? "" : Number(event.target.value))
+      setScan(event.target.value === "" ? "" : value)
     );
   };
 
   const handleBlur = () => {
+
+    if (store % 2 !== 0) {
+      store++;
+    }
+
     if (store < min) {
       dispatch(setScan(min));
     } else if (store > max) {
