@@ -113,6 +113,42 @@ export function animateCornerCube(cycles, time) {
 }
 
 /**
+ * Function that stops the current animation of the moveable corner cube and reset its location
+ */
+export function stopCornerCube() {
+  const mcc = document.getElementById("movable-corner-cube");
+  const rayTop = document.getElementById("ray-top");
+  const rayMiddle = document.getElementById("ray-middle");
+  const rayBottom = document.getElementById("ray-bottom");
+  const laser = document.getElementById("rect6675");
+
+  mcc.getAnimations().forEach((animation) => animation.cancel());
+  laser.getAnimations().forEach((animation) => animation.cancel());
+  rayTop.getAnimations().forEach((animation) => animation.cancel());
+  rayMiddle.getAnimations().forEach((animation) => animation.cancel());
+  rayBottom.getAnimations().forEach((animation) => animation.cancel());
+
+  mcc.style.transform = "translate(0px, 0px)";
+
+  laser.setAttribute(
+    "d",
+    "M1406.494 991.284v10h651.235v209.254H344.494v10H2067.73V991.284z"
+  );
+
+  rayTop.setAttribute(
+    "d",
+    "m2026.826 953.417 93.734 94.391h-673.324l-95.49-94.391z"
+  );
+
+  rayMiddle.style.transform = "translate(0px, 0px)";
+
+  rayBottom.setAttribute(
+    "d",
+    "m2120.56 1164.195-93.733 94.356H582.917l-89.932-94.356z"
+  );
+}
+
+/**
  * Function that changes the visibility of the beamsplitter based on user set parameters
  *
  * @param {string} store - The current value selected by the user.

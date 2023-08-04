@@ -1,6 +1,9 @@
 // components
 import { sleepID } from "./Fetch";
 
+// functions
+import { stopCornerCube } from "../functions/animation";
+
 // redux
 import { useDispatch, useSelector } from "react-redux";
 
@@ -19,6 +22,7 @@ export default function CancelScan() {
 
   const handleClick = () => {
     clearTimeout(sleepID);
+    stopCornerCube();
     dispatch(setProgress(false));
     dispatch(setSpinner(false));
     dispatch(setTimer(0));
