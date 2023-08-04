@@ -4,6 +4,8 @@ import CancelScan from "../components/CancelScan";
 import Fetch from "../components/Fetch";
 import Save from "../components/Save";
 
+import { Link } from "react-router-dom";
+
 // constants
 import { BACKGROUND, SAMPLE } from "../dictionaries/constants";
 import FindPeaks from "../components/FindPeaks";
@@ -34,15 +36,33 @@ export const menuItems = [
     submenu: [
       {
         label: "Experimental Setup",
-        link: "/experimental-setup",
+        component: (
+          <Link to="/experimental-setup">
+            <div>
+              Experimental Setup
+            </div>
+          </Link>
+        )
       },
       {
         label: "Instrument",
-        link: "/instrument",
+        component: (
+          <Link to="/instrument">
+            <div>
+              Instrument
+            </div>
+          </Link>
+        )
       },
       {
         label: "Spectrum",
-        link: "/spectrum",
+        component: (
+          <Link to="/spectrum">
+            <div>
+              Spectrum
+            </div>
+          </Link>
+        )
       },
     ],
   },
