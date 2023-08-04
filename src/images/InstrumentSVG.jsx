@@ -3984,6 +3984,34 @@ const SvgInstrumentWindow = (props) => (
             strokeWidth: 0.116854,
           }}
         />
+        <text
+          xmlSpace="preserve"
+          id="pressure-value"
+          x={129.456}
+          y={110.198}
+          style={{
+            fontStyle: "normal",
+            fontVariant: "normal",
+            fontWeight: 400,
+            fontStretch: "normal",
+            fontSize: "45.2174px",
+            fontFamily: "sans-serif",
+            InkscapeFontSpecification: "&quot",
+            fontVariantLigatures: "normal",
+            fontVariantCaps: "normal",
+            fontVariantNumeric: "normal",
+            fontVariantEastAsian: "normal",
+            dominantBaseline: "central",
+            textAnchor: "middle",
+            fill: "#000",
+            fillOpacity: 1,
+            strokeLinecap: "square",
+          }}
+        >
+          <tspan id="tspan1" x={129.456} y={110.198}>
+            {"pressure"}
+          </tspan>
+        </text>
       </g>
       <g id="lecture" transform="rotate(-90 2488.174 83.486)">
         <path

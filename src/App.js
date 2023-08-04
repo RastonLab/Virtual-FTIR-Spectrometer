@@ -45,7 +45,9 @@ export default function App() {
   const [gitHubPopover, setGutHubPopover] = useState(false);
   const [infoPopover, setInfoPopover] = useState(false);
 
-  const [welcomeOpen, setWelcomeOpen] = useState(true);
+  const [welcomeOpen, setWelcomeOpen] = useState(
+    localStorage.getItem("checked") === "true" ? false : true
+  );
 
   const handleChange = (panel) => (newExpanded) => {
     setExpanded(newExpanded ? panel : false);
@@ -77,12 +79,19 @@ export default function App() {
 
   const handleWelcomeClose = () => {
     setWelcomeOpen(false);
-  }
+  };
 
   return (
     <div>
-      <Dialog className="welcome popup" open={welcomeOpen} onClose={handleWelcomeClose}>
-        <CloseButton id="customized-dialog-title" onClose={handleWelcomeClose}/>
+      <Dialog
+        className="welcome popup"
+        open={welcomeOpen}
+        onClose={handleWelcomeClose}
+      >
+        <CloseButton
+          id="customized-dialog-title"
+          onClose={handleWelcomeClose}
+        />
         <LandingPage />
       </Dialog>
 
@@ -138,20 +147,14 @@ export default function App() {
                                 text={submenu.text}
                               />
                             );
-                          } else if (submenu.link) {
-                            return (
-                              <p key={submenu.link} className={"dropdown-items"}>
-                                <Link
-                                  to={submenu.link ?? "#"}
-                                  onClick={submenu.action}
-                                >
-                                  {submenu.label}
-                                </Link>
-                              </p>
-                            );
                           } else {
                             return (
-                              <ul key={submenu.label} className={"dropdown-items"}>{submenu.component}</ul>
+                              <ul
+                                key={submenu.label}
+                                className={"dropdown-items"}
+                              >
+                                {submenu.component}
+                              </ul>
                             );
                           }
                         })}
@@ -212,19 +215,12 @@ export default function App() {
                           text={submenu.text}
                         />
                       );
-                    } else if (submenu.link) {
-                      return (
-                        <p key={submenu.link} className={"dropdown-items"}>
-                          <Link
-                            to={submenu.link ?? "#"}
-                            onClick={submenu.action}
-                          >
-                            {submenu.label}
-                          </Link>
-                        </p>
-                      );
                     } else {
-                      return <ul key={submenu.label} className={"dropdown-items"}>{submenu.component}</ul>;
+                      return (
+                        <ul key={submenu.label} className={"dropdown-items"}>
+                          {submenu.component}
+                        </ul>
+                      );
                     }
                   })}
                 </AccordionDetails>

@@ -82,7 +82,7 @@ export default function ExperimentalSetup() {
           </div>
 
           <div className="parameter">
-            <Scan store={scan} min={1} max={256} step={1} />
+            <Scan store={scan} min={2} max={256} step={2} />
           </div>
 
           <div className="parameter">
