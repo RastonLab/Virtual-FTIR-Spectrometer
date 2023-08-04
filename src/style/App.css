@@ -85,7 +85,7 @@
 }
 
 .dropdown ul {
-  padding: 0.5rem 0.2rem;
+  padding: 0.5rem 0.4rem;
 }
 
 .dropdown a {
@@ -97,7 +97,7 @@
 .dropdown button {
   color: inherit !important;
   font-size: inherit !important;
-  /* padding: 0.5rem 0.2rem; */
+  text-align: left;
   border: none;
   background-color: transparent;
   cursor: pointer;
@@ -105,7 +105,7 @@
 }
 
 .dropdown .popup-button {
-  padding: 0.5rem 0.2rem;
+  padding: 0.5rem 0.4rem;
 }
 
 .dropdown p {
