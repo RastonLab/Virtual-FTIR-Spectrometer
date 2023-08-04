@@ -11,6 +11,8 @@ import { useDispatch } from "react-redux";
 // redux slice
 import { setScan } from "../../redux/parameterSlice";
 
+import "../../style/components/NumberInputs.css"
+
 /**
  * A component that contains a MUI SLider and Input for the scan value
  *
@@ -22,17 +24,38 @@ import { setScan } from "../../redux/parameterSlice";
 export default function Scan({ min, max, step, store }) {
   const dispatch = useDispatch();
 
+  const makeEven = () => {
+    console.log(store);
+    if (store % 2 !== 0) {
+      if (store < max) {
+        store++;
+      } else {
+        store = max;
+      }
+    }
+    dispatch(setScan(store));
+  }
+
   const handleSliderChange = (event, newValue) => {
+
+    if (newValue % 2 !== 0) {
+      newValue++;
+    }
+
     dispatch(setScan(newValue));
   };
 
   const handleInputChange = (event) => {
+
+    let value = Number(event.target.value);
+
     dispatch(
-      setScan(event.target.value === "" ? "" : Number(event.target.value))
+      setScan(event.target.value === "" ? "" : value)
     );
   };
 
   const handleBlur = () => {
+
     if (store < min) {
       dispatch(setScan(min));
     } else if (store > max) {
@@ -66,7 +89,10 @@ export default function Scan({ min, max, step, store }) {
             value={store}
             size="small"
             onChange={handleInputChange}
-            onBlur={handleBlur}
+            onBlur={() => {
+              handleBlur();
+              makeEven();
+            }}
             inputProps={{
               step: step,
               min: min,
