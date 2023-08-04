@@ -34,11 +34,6 @@ export default function LandingPage() {
       <br />
       <p>Please use the navigation bar above to explore the application!</p>
       <br />
-      <p>
-        <b>
-          NOTE: Please use a Chromium based browser for the best experience!
-        </b>
-      </p>
     </div>
   );
 }
