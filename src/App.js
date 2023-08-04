@@ -147,20 +147,6 @@ export default function App() {
                                 text={submenu.text}
                               />
                             );
-                          } else if (submenu.link) {
-                            return (
-                              <p
-                                key={submenu.link}
-                                className={"dropdown-items"}
-                              >
-                                <Link
-                                  to={submenu.link ?? "#"}
-                                  onClick={submenu.action}
-                                >
-                                  {submenu.label}
-                                </Link>
-                              </p>
-                            );
                           } else {
                             return (
                               <ul
@@ -228,17 +214,6 @@ export default function App() {
                           title={submenu.title}
                           text={submenu.text}
                         />
-                      );
-                    } else if (submenu.link) {
-                      return (
-                        <p key={submenu.link} className={"dropdown-items"}>
-                          <Link
-                            to={submenu.link ?? "#"}
-                            onClick={submenu.action}
-                          >
-                            {submenu.label}
-                          </Link>
-                        </p>
                       );
                     } else {
                       return (

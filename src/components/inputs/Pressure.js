@@ -8,6 +8,8 @@ import { useDispatch } from "react-redux";
 // redux store
 import { setPressure } from "../../redux/parameterSlice";
 
+import "../../style/components/NumberInputs.css"
+
 /**
  * A component that contains a MUI Text Field for the pressure value
  *
@@ -18,6 +20,16 @@ import { setPressure } from "../../redux/parameterSlice";
  */
 export default function Pressure({ min, max, step, store }) {
   const dispatch = useDispatch();
+
+  const checkRange = () => {
+    if (store < min) {
+      store = min;
+    } else if (store > max) {
+      store = max;
+    }
+
+    dispatch(setPressure(store));
+  }
 
   const handleTextChange = (event) => {
     dispatch(
@@ -34,11 +46,11 @@ export default function Pressure({ min, max, step, store }) {
         type="number"
         value={store}
         onChange={handleTextChange}
+        onBlur={checkRange}
         InputProps={{
           inputProps: {
             min: min,
             max: max,
-            step: step,
           },
           endAdornment: <InputAdornment position="end">Bar</InputAdornment>,
         }}
