@@ -23,30 +23,6 @@
       <stop id="stop10024" offset=".8" style="stop-color:#d49000;stop-opacity:1"/>
       <stop id="stop10012" offset="1" style="stop-color:#f79e00;stop-opacity:1"/>
     </linearGradient>
-    <linearGradient id="linearGradient17339">
-      <stop id="stop17335" offset="0" style="stop-color:#9a6a00;stop-opacity:1"/>
-      <stop id="stop17343" offset=".2" style="stop-color:#b48100;stop-opacity:1"/>
-      <stop id="stop17345" offset=".4" style="stop-color:#ca9200;stop-opacity:1"/>
-      <stop id="stop17347" offset=".6" style="stop-color:#b78910;stop-opacity:1"/>
-      <stop id="stop17349" offset=".802" style="stop-color:#e7a600;stop-opacity:1"/>
-      <stop id="stop17337" offset="1" style="stop-color:#ca9900;stop-opacity:1"/>
-    </linearGradient>
-    <linearGradient id="linearGradient23891">
-      <stop id="stop23887" offset="0" style="stop-color:#adadad;stop-opacity:1"/>
-      <stop id="stop23895" offset=".2" style="stop-color:#d7d7d7;stop-opacity:1"/>
-      <stop id="stop23897" offset=".4" style="stop-color:#ddd;stop-opacity:1"/>
-      <stop id="stop23899" offset=".6" style="stop-color:#fff;stop-opacity:1"/>
-      <stop id="stop23901" offset=".8" style="stop-color:#e2e2e2;stop-opacity:1"/>
-      <stop id="stop23889" offset="1" style="stop-color:#dadada;stop-opacity:1"/>
-    </linearGradient>
-    <linearGradient id="linearGradient26823">
-      <stop id="stop26811" offset="0" style="stop-color:#e1aa00;stop-opacity:1"/>
-      <stop id="stop26813" offset=".2" style="stop-color:#fdb500;stop-opacity:1"/>
-      <stop id="stop26815" offset=".4" style="stop-color:#ffc21e;stop-opacity:1"/>
-      <stop id="stop26817" offset=".6" style="stop-color:#e6ae14;stop-opacity:1"/>
-      <stop id="stop26819" offset=".802" style="stop-color:#e7a600;stop-opacity:1"/>
-      <stop id="stop26821" offset="1" style="stop-color:#ca9900;stop-opacity:1"/>
-    </linearGradient>
     <linearGradient xlink:href="#linearGradient30571" id="linearGradient30573" x1="37.801" x2="83.627" y1="38.577" y2="38.577" gradientTransform="translate(-39.858 -28.02) scale(2.70567)" gradientUnits="userSpaceOnUse"/>
     <linearGradient id="linearGradient30571">
       <stop id="stop30567" offset="0" style="stop-color:#fff;stop-opacity:1"/>
@@ -86,9 +62,6 @@
       <stop id="stop67246" offset=".8" style="stop-color:#d20000;stop-opacity:1"/>
       <stop id="stop67248" offset="1" style="stop-color:#b40000;stop-opacity:1"/>
     </linearGradient>
-    <linearGradient xlink:href="#linearGradient17339" id="linearGradient17341-0" x1="24.228" x2="55.556" y1="86.866" y2="86.866" gradientTransform="translate(-39.225 -28.9) scale(2.70567)" gradientUnits="userSpaceOnUse"/>
-    <linearGradient xlink:href="#linearGradient23891" id="linearGradient23893-4" x1="29.39" x2="48.031" y1="87.342" y2="87.342" gradientTransform="translate(-38.961 -29.255) scale(2.70567)" gradientUnits="userSpaceOnUse"/>
-    <linearGradient xlink:href="#linearGradient26823" id="linearGradient26083-8" x1="24.228" x2="55.556" y1="86.866" y2="86.866" gradientTransform="matrix(.9621 0 0 .90646 28.639 127.624)" gradientUnits="userSpaceOnUse"/>
     <path id="rect35313" d="M194.732 140.911H311.18v40.121H194.732z"/>
     <path id="rect41333" d="M168.311 138.954h120.362v45.013H168.311z"/>
   </defs>
@@ -98,9 +71,9 @@
     <ellipse id="path9282-8" cx="138.425" cy="12.96" rx="40.981" ry="12.96" style="fill:url(#linearGradient10016-7);fill-opacity:1;stroke-width:13.7846;stroke-linecap:square;paint-order:markers stroke fill"/>
     <path id="rect4995-9" d="M139.825 11.208A77.408 20.665 0 0 0 62.463 31.51h-.465v266.388h155.536V31.51h-.314a77.408 20.665 0 0 0-77.395-20.302Z" style="fill:url(#linearGradient5174-5);fill-opacity:1;stroke-width:19.1554;stroke-linecap:square;paint-order:markers stroke fill"/>
     <path id="path5000-7" d="M139.828 275.305a80.894 1.78 0 0 0-80.846 1.749h-.487V300h162.542v-22.946h-.329a80.894 1.78 0 0 0-80.88-1.75z" style="fill:url(#linearGradient7094-6);fill-opacity:1;stroke-width:5.7472;stroke-linecap:square;paint-order:markers stroke fill"/>
-    <ellipse id="path12977-7" cx="68.709" cy="206.131" rx="42.382" ry="65.849" style="fill:url(#linearGradient17341-0);fill-opacity:1;stroke-width:18.3877;stroke-linecap:square;paint-order:markers stroke fill" transform="rotate(-1.274)"/>
-    <ellipse id="path21707-9" cx="65.776" cy="207.063" rx="25.219" ry="41.681" style="fill:url(#linearGradient23893-4);fill-opacity:1;stroke-width:22.6585;stroke-linecap:square;paint-order:markers stroke fill" transform="rotate(-1.794)"/>
-    <ellipse id="ellipse26081-1" cx="67.019" cy="206.364" rx="15.07" ry="22.061" style="fill:url(#linearGradient26083-8);fill-opacity:1;stroke-width:6.34651;stroke-linecap:square;paint-order:markers stroke fill" transform="rotate(-1.201) skewX(.152)"/>
+    <ellipse id="path12977-7" cx="68.709" cy="206.131" rx="42.382" ry="65.849" style="fill:#e7a600;fill-opacity:1;stroke-width:18.3877;stroke-linecap:square;paint-order:markers stroke fill" transform="rotate(-1.274)"/>
+    <ellipse id="path21707-9" cx="65.776" cy="207.063" rx="25.219" ry="41.681" style="fill:#fff;fill-opacity:1;stroke-width:22.6585;stroke-linecap:square;paint-order:markers stroke fill" transform="rotate(-1.794)"/>
+    <ellipse id="ellipse26081-1" cx="67.019" cy="206.364" rx="15.07" ry="22.061" style="fill:#e7a600;fill-opacity:1;stroke-width:6.34651;stroke-linecap:square;paint-order:markers stroke fill" transform="rotate(-1.201) skewX(.152)"/>
     <path id="rect28387" d="M62.418 36.427H186.41v79.859H62.418z" style="fill:url(#linearGradient30573);fill-opacity:1;stroke-width:16.123;stroke-linecap:square;paint-order:markers stroke fill"/>
     <g id="text32821" aria-label="TECHNOLOGIES" style="font-size:8.73245px;stroke-width:14.0929;stroke-linecap:square;paint-order:markers stroke fill" transform="scale(1.01305 .98712)">
       <path id="path966" d="M116.092 98.736h-2.269v5.598h-.844v-5.598h-2.268v-.75h5.38z"/>

@@ -376,12 +376,12 @@ export function distanceInteractivity(progress, distance) {
 }
 
 /**
- * Function that changes the visibility and animates "air" molecules in the sample cell
+ * Function that changes the visibility and animates molecules in the sample cell
  *
- * @param {boolean} isAir - The value used to determine if the user has selected air.
+ * @param {boolean} lectureBottleInUse - The value used to determine if the user has selected sample spectrum generation.
  * @param {number} time - The number of milliseconds it takes for an animation to loop.
  */
-export function bubblesAnimation(isAir, time) {
+export function bubblesAnimation(lectureBottleInUse, time) {
   // DOM elements
   const bubbleOne = document.getElementById("bubble-1");
   const bubbleTwo = document.getElementById("bubble-2");
@@ -389,12 +389,12 @@ export function bubblesAnimation(isAir, time) {
   const bubbleFour = document.getElementById("bubble-4");
 
   // ternary used to show/hide "air" bubbles
-  bubbleOne.style.display = isAir ? "inline" : "none";
-  bubbleTwo.style.display = isAir ? "inline" : "none";
-  bubbleThree.style.display = isAir ? "inline" : "none";
-  bubbleFour.style.display = isAir ? "inline" : "none";
+  bubbleOne.style.display = lectureBottleInUse ? "inline" : "none";
+  bubbleTwo.style.display = lectureBottleInUse ? "inline" : "none";
+  bubbleThree.style.display = lectureBottleInUse ? "inline" : "none";
+  bubbleFour.style.display = lectureBottleInUse ? "inline" : "none";
 
-  if (isAir) {
+  if (lectureBottleInUse) {
     bubbleOne.animate(
       [
         // keyframes
