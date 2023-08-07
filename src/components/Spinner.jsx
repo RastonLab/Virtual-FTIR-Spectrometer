@@ -32,14 +32,14 @@ export default function Spinner(props) {
 
         // Increment Spinner/timer
         setDelay((prevProgress) =>
-          prevProgress >= 100 ? 0 : prevProgress + 0.125
+          prevProgress >= 100 ? 0 : prevProgress + 1
         );
-      }, props.timer / 800);
+      }, props.timer / 100);
 
       dispatch(setTimer(delay));
 
       // Keeps track of the number of scans done
-      if (scansDone < props.scans && delay >= props.oneScan * scansDone) {
+      if (delay >= (props.oneScan * scansDone * 100) / (props.oneScan * props.scans)) {
         setScansDone(scansDone + 1);
       }
 
