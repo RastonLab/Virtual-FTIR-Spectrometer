@@ -86,10 +86,10 @@ export default function Save() {
     const specType = ["Spectrum Type: Transmittance Spectrum"];
     newData.push(specType);
     
-    const {transX, transY} = generateTransmittance(backgroundData, sampleData);
+    const transData = generateTransmittance(backgroundData, sampleData);
 
-    for (let i = 0; i < transX.length; i++) {
-      newData.push([transX[i], transY[i]]);
+    for (let i = 0; i < transData.x.length; i++) {
+      newData.push([transData.x[i], transData.y[i]]);
     }
 
     setData(newData);
