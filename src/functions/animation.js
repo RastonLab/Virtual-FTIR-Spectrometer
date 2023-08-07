@@ -376,9 +376,9 @@ export function distanceInteractivity(progress, distance) {
 }
 
 /**
- * Function that changes the visibility and animates "air" molecules in the sample cell
+ * Function that changes the visibility and animates molecules in the sample cell
  *
- * @param {boolean} lectureBottleInUse - The value used to determine if the user has selected air.
+ * @param {boolean} lectureBottleInUse - The value used to determine if the user has selected sample spectrum generation.
  * @param {number} time - The number of milliseconds it takes for an animation to loop.
  */
 export function bubblesAnimation(lectureBottleInUse, time) {
