@@ -1,8 +1,5 @@
 import React, { useState } from "react";
 
-// functions
-import { animateCornerCube } from "../functions/animation";
-
 // mui
 import { Box, CircularProgress } from "@mui/material";
 import Typography from "@mui/material/Typography";
@@ -29,7 +26,7 @@ export default function Spinner(props) {
     if (props.timer) {
       const timer_interval = setInterval(() => {
         // If the scans are complete, turn off spinner
-        if (delay === 100) {
+        if (delay >= 100) {
           dispatch(setProgress(false));
         }
 
@@ -42,12 +39,7 @@ export default function Spinner(props) {
       dispatch(setTimer(delay));
 
       // Keeps track of the number of scans done
-      if (scansDone < props.scans && delay >= (100 / props.scans) * scansDone) {
-        // Triggers the animation on even numbered scans
-        if (scansDone % 2 === 0) {
-          animateCornerCube(props.scans / 2, props.opd);
-          console.log(scansDone);
-        }
+      if (scansDone < props.scans && delay >= props.oneScan * scansDone) {
         setScansDone(scansDone + 1);
       }
 
@@ -62,7 +54,7 @@ export default function Spinner(props) {
     scansDone,
     setScansDone,
     props.scans,
-    props.opd,
+    props.oneScan,
   ]);
 
   return (

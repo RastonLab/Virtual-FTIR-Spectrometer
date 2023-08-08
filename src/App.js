@@ -3,9 +3,8 @@ import React, { useState } from "react";
 // components
 import { ReactComponent as RLLogo } from "./images/RastonLabLogo.svg";
 import DevMode from "./components/DevMode";
+import LandingPage from "./components/LandingPage";
 import Popup from "./components/Popup";
-import LandingPage from "./routes/LandingPage";
-import CloseButton from "./components/CloseButton";
 
 // dictionary
 import { menuItems } from "./dictionaries/menuItems";
@@ -20,14 +19,13 @@ import {
   Accordion,
   AccordionDetails,
   AccordionSummary,
-  Dialog,
   Drawer,
   Popover,
 } from "@mui/material";
 
 // mui icons
-import InfoIcon from "@mui/icons-material/Info";
 import { GitHub } from "@mui/icons-material";
+import InfoIcon from "@mui/icons-material/Info";
 import MenuIcon from "@mui/icons-material/Menu";
 
 // router
@@ -44,10 +42,6 @@ export default function App() {
   const [drawer, setDrawer] = useState(false);
   const [gitHubPopover, setGutHubPopover] = useState(false);
   const [infoPopover, setInfoPopover] = useState(false);
-
-  const [welcomeOpen, setWelcomeOpen] = useState(
-    localStorage.getItem("checked") === "true" ? false : true
-  );
 
   const handleChange = (panel) => (newExpanded) => {
     setExpanded(newExpanded ? panel : false);
@@ -77,23 +71,9 @@ export default function App() {
     setInfoPopover(null);
   };
 
-  const handleWelcomeClose = () => {
-    setWelcomeOpen(false);
-  };
-
   return (
     <div>
-      <Dialog
-        className="welcome popup"
-        open={welcomeOpen}
-        onClose={handleWelcomeClose}
-      >
-        <CloseButton
-          id="customized-dialog-title"
-          onClose={handleWelcomeClose}
-        />
-        <LandingPage />
-      </Dialog>
+      <LandingPage />
 
       <AppBar className="nav-area" position="static">
         <Container maxWidth="xl" sx={{ paddingLeft: { xs: 0 } }}>

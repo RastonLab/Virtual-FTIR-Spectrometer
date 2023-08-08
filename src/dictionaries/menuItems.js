@@ -2,13 +2,14 @@
 import { Open } from "../components/Open";
 import CancelScan from "../components/CancelScan";
 import Fetch from "../components/Fetch";
+import FindPeaks from "../components/FindPeaks";
 import Save from "../components/Save";
-
-import { Link } from "react-router-dom";
 
 // constants
 import { BACKGROUND, SAMPLE } from "../dictionaries/constants";
-import FindPeaks from "../components/FindPeaks";
+
+// router
+import { Link } from "react-router-dom";
 
 /**
  * Controls what appears in the MenuBar. To remove something, either remove the code or comment it out
@@ -38,31 +39,25 @@ export const menuItems = [
         label: "Experimental Setup",
         component: (
           <Link to="/experimental-setup">
-            <div>
-              Experimental Setup
-            </div>
+            <div>Experimental Setup</div>
           </Link>
-        )
+        ),
       },
       {
         label: "Instrument",
         component: (
           <Link to="/instrument">
-            <div>
-              Instrument
-            </div>
+            <div>Instrument</div>
           </Link>
-        )
+        ),
       },
       {
         label: "Spectrum",
         component: (
           <Link to="/spectrum">
-            <div>
-              Spectrum
-            </div>
+            <div>Spectrum</div>
           </Link>
-        )
+        ),
       },
     ],
   },

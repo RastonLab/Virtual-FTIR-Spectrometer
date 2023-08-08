@@ -37,5 +37,5 @@ export function generateTransmittance(backgroundData, sampleData) {
   return {
     x: sampleData.x,
     y: newY
-  }
+  };
 }

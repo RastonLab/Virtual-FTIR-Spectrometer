@@ -22,7 +22,7 @@ export const TransmittancePlotly = forwardRef((props, ref) => {
     (store) => store.parameter
   );
 
-  const {transX, transY} = generateTransmittance(backgroundData, sampleData);
+  const transData = generateTransmittance(backgroundData, sampleData);
 
   if (sampleData) {
     return (
@@ -33,8 +33,8 @@ export const TransmittancePlotly = forwardRef((props, ref) => {
             className="plotly"
             data={[
               {
-                x: transX,
-                y: transY,
+                x: transData.x,
+                y: transData.y,
                 type: "scatter",
                 marker: { color: "#f50057" },
               },
