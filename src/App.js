@@ -2,10 +2,10 @@ import React, { useState } from "react";
 
 // components
 import { ReactComponent as RLLogo } from "./images/RastonLabLogo.svg";
-import DevMode from "./components/DevMode";
-import Popup from "./components/Popup";
-import LandingPage from "./routes/LandingPage";
 import CloseButton from "./components/CloseButton";
+import DevMode from "./components/DevMode";
+import LandingPage from "./routes/LandingPage";
+import Popup from "./components/Popup";
 
 // dictionary
 import { menuItems } from "./dictionaries/menuItems";
@@ -26,8 +26,8 @@ import {
 } from "@mui/material";
 
 // mui icons
-import InfoIcon from "@mui/icons-material/Info";
 import { GitHub } from "@mui/icons-material";
+import InfoIcon from "@mui/icons-material/Info";
 import MenuIcon from "@mui/icons-material/Menu";
 
 // router
