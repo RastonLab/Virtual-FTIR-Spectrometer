@@ -10,6 +10,7 @@ import { BACKGROUND, SAMPLE } from "../dictionaries/constants";
 
 // router
 import { Link } from "react-router-dom";
+import LandingPage from "../components/LandingPage";
 
 /**
  * Controls what appears in the MenuBar. To remove something, either remove the code or comment it out
@@ -181,11 +182,17 @@ export const menuItems = [
           </div>
         ),
       },
+      {
+        label: "Landing Page",
+        button: true,
+        title: "",
+        text: <LandingPage isMenu={true} />,
+      },
       // {
       //   label: "Usage",
       //   button: true,
       //   title: "Components of the FITR-SIS",
-      //   text: ""
+      //   text: "",
       // },
       // {
       //   label: "About",
