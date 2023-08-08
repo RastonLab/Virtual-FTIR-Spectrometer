@@ -77,20 +77,16 @@ export default function App() {
     setInfoPopover(null);
   };
 
-  const handleWelcomeClose = () => {
-    setWelcomeOpen(false);
-  };
-
   return (
     <div>
       <Dialog
         className="welcome popup"
         open={welcomeOpen}
-        onClose={handleWelcomeClose}
+        onClose={() => setWelcomeOpen(false)}
       >
         <CloseButton
           id="customized-dialog-title"
-          onClose={handleWelcomeClose}
+          onClose={() => setWelcomeOpen(false)}
         />
         <LandingPage />
       </Dialog>
