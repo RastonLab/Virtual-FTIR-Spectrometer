@@ -1,0 +1,61 @@
+#landing-page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  padding: 20px;
+}
+
+/* ---------- welcome ---------- */
+.welcome .MuiDialog-paper {
+  height: auto;
+}
+
+.welcome h1 {
+  font-family: "Montserrat";
+  text-align: center;
+  padding: 20px 0;
+  text-decoration: underline;
+}
+
+.welcome h2 {
+  font-family: "Montserrat";
+  text-align: center;
+  text-decoration: underline;
+}
+
+.welcome p {
+  font-family: "Roboto";
+  pointer-events: none;
+  padding: 3% 3%;
+}
+
+.welcome ol {
+  font-family: "Roboto";
+  padding: 0 6%;
+}
+
+.welcome li {
+  padding: 1.5% 0;
+}
+
+@media screen and (max-width: 700px) {
+  .welcome .MuiDialog-paper {
+    width: 100%;
+    padding: 0 4px;
+  }
+
+  /* .welcome h1, */
+  .welcome h2 {
+    font-size: 20px;
+  }
+
+  .welcome p {
+    font-size: 14px;
+  }
+
+  .welcome li {
+    font-size: 14px;
+  }
+}
