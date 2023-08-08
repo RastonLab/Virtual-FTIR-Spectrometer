@@ -73,7 +73,7 @@ export default function InstrumentWindow() {
     setDrawerOpen(!drawerOpen);
   };
 
-  const delay = OPD[resolution].value * scan * 1000; // 1000 is to convert to milliseconds
+  const delay = OPD[resolution].time * scan * 1000; // 1000 is to convert to milliseconds
 
   // find group id when SVG is clicked
   const handleClick = (event) => {
@@ -131,8 +131,9 @@ export default function InstrumentWindow() {
               timer={delay}
               scans={scan}
               size={100}
-              opd={OPD[resolution].value}
+              oneScan={OPD[resolution].time}
             />
+            {animateCornerCube(scan / 2, OPD[resolution].time * 2)}
           </>
         )}
       </div>
