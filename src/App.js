@@ -2,7 +2,6 @@ import React, { useState } from "react";
 
 // components
 import { ReactComponent as RLLogo } from "./images/RastonLabLogo.svg";
-import CloseButton from "./components/CloseButton";
 import DevMode from "./components/DevMode";
 import LandingPage from "./routes/LandingPage";
 import Popup from "./components/Popup";
@@ -20,7 +19,6 @@ import {
   Accordion,
   AccordionDetails,
   AccordionSummary,
-  Dialog,
   Drawer,
   Popover,
 } from "@mui/material";
@@ -44,10 +42,6 @@ export default function App() {
   const [drawer, setDrawer] = useState(false);
   const [gitHubPopover, setGutHubPopover] = useState(false);
   const [infoPopover, setInfoPopover] = useState(false);
-
-  const [welcomeOpen, setWelcomeOpen] = useState(
-    localStorage.getItem("checked") === "true" ? false : true
-  );
 
   const handleChange = (panel) => (newExpanded) => {
     setExpanded(newExpanded ? panel : false);
@@ -79,17 +73,7 @@ export default function App() {
 
   return (
     <div>
-      <Dialog
-        className="welcome popup"
-        open={welcomeOpen}
-        onClose={() => setWelcomeOpen(false)}
-      >
-        <CloseButton
-          id="customized-dialog-title"
-          onClose={() => setWelcomeOpen(false)}
-        />
-        <LandingPage />
-      </Dialog>
+      <LandingPage />
 
       <AppBar className="nav-area" position="static">
         <Container maxWidth="xl" sx={{ paddingLeft: { xs: 0 } }}>

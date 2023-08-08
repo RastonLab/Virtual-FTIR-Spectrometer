@@ -1,6 +1,10 @@
 import React, { useState } from "react";
 
 // components
+import CloseButton from "../components/CloseButton";
+
+// mui
+import { Dialog } from "@mui/material";
 import { Switch } from "@mui/material";
 
 // style
@@ -16,6 +20,10 @@ export default function LandingPage() {
     localStorage.getItem("checked") === "true" ? true : false
   );
 
+  const [welcomeOpen, setWelcomeOpen] = useState(
+    localStorage.getItem("checked") === "true" ? false : true
+  );
+
   const handleChange = (event) => {
     if (event.target.checked) {
       localStorage.setItem("checked", "true");
@@ -27,35 +35,46 @@ export default function LandingPage() {
   };
 
   return (
-    <div id="landing-page">
-      <h1>
-        Welcome to
-        <span className="red"> F</span>
-        <span className="orange">T</span>
-        <span className="yellow">I</span>
-        <span className="green">R</span>
-        <span className="teal">-</span>
-        <span className="blue">S</span>
-        <span className="indigo">I</span>
-        <span className="purple">S</span>!
-      </h1>
+    <Dialog
+      className="welcome"
+      open={welcomeOpen}
+      onClose={() => setWelcomeOpen(false)}
+    >
+      <CloseButton
+        id="customized-dialog-title"
+        onClose={() => setWelcomeOpen(false)}
+      />
 
-      <h2>
-        <u className="red">F</u>ourier <u className="orange">T</u>ransform{" "}
-        <u className="yellow">I</u>nfra<u className="green">R</u>ed
-        <span className="teal">-</span>
-        <u className="blue">S</u>cientific <u className="indigo">I</u>nstrument{" "}
-        <u className="purple">S</u>imulator
-      </h2>
+      <div id="landing-page">
+        <h1>
+          Welcome to
+          <span className="red"> F</span>
+          <span className="orange">T</span>
+          <span className="yellow">I</span>
+          <span className="green">R</span>
+          <span className="teal">-</span>
+          <span className="blue">S</span>
+          <span className="indigo">I</span>
+          <span className="purple">S</span>!
+        </h1>
 
-      <br />
+        <h2>
+          <u className="red">F</u>ourier <u className="orange">T</u>ransform{" "}
+          <u className="yellow">I</u>nfra<u className="green">R</u>ed
+          <span className="teal">-</span>
+          <u className="blue">S</u>cientific <u className="indigo">I</u>
+          nstrument <u className="purple">S</u>imulator
+        </h2>
 
-      <p>Please use the navigation bar above to explore the application!</p>
+        <br />
 
-      <br />
+        <p>Please use the navigation bar above to explore the application!</p>
 
-      <Switch checked={checked} onChange={handleChange} />
-      <p>Hide this popup when opened?</p>
-    </div>
+        <br />
+
+        <Switch checked={checked} onChange={handleChange} />
+        <p>Hide this popup when opened?</p>
+      </div>
+    </Dialog>
   );
 }
