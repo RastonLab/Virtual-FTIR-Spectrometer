@@ -73,7 +73,7 @@ export default function App() {
 
   return (
     <div>
-      <LandingPage />
+      <LandingPage isMenu={false} />
 
       <AppBar className="nav-area" position="static">
         <Container maxWidth="xl" sx={{ paddingLeft: { xs: 0 } }}>

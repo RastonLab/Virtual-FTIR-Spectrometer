@@ -7,7 +7,7 @@ import { PARAMETER_VALUE } from "../dictionaries/constants";
  * Examples used and information from: https://developer.mozilla.org/en-US/docs/Web/API/Element/animate
  *
  * @param {number} cycles - The number of times the mirror moves out and back. One cycle is equivalent to two scans.
- * @param {number} time - The time (in seconds) that it takes for the animation to move in one direction.
+ * @param {number} time - The time (in seconds) that it takes for the animation to complete one cycle. One cycle is equivalent to two scans.
  */
 export function animateCornerCube(cycles, time) {
   const mcc = document.getElementById("movable-corner-cube");
@@ -16,7 +16,7 @@ export function animateCornerCube(cycles, time) {
   const rayBottom = document.getElementById("ray-bottom");
   const laser = document.getElementById("rect6675");
 
-  const easing = "ease";
+  const easing = "linear";
 
   mcc.animate(
     [
