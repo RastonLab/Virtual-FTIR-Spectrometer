@@ -22,6 +22,7 @@ import { setTimer } from "../redux/timerSlice";
 
 // router
 import { useNavigate } from "react-router-dom";
+import { animateCornerCube } from "../functions/animation";
 
 export let sleepID = 0;
 
@@ -109,7 +110,7 @@ export default function Fetch({
       // Leaves delay as Immediate if in devMode
       if (!devMode) {
         // Calculate time the scan would take
-        delay = OPD[resolution].value * scan * 1000; // 1000 is to convert to milliseconds
+        delay = OPD[resolution].time * scan * 1000; // 1000 is to convert to milliseconds
       }
 
       // Controls the Label and valve on the Lecture Bottle
@@ -203,6 +204,7 @@ export default function Fetch({
 
               // Only navigate to Instrument Window when !devMode
               devMode ? console.log("devMode") : nav("/instrument", -1);
+              devMode ? console.log("no amination") : animateCornerCube(scan / 2, OPD[resolution].time * 2);
 
               // Turns off "waiting" spinner
               dispatch(setSpinner(false));
@@ -221,7 +223,7 @@ export default function Fetch({
 
               // Only navigate to Instrument Window when !devMode
               devMode ? console.log("devMode") : nav("/instrument", -1);
-
+              devMode ? console.log("no amination") : animateCornerCube(scan / 2, OPD[resolution].time * 2);
               // Turns off "waiting" spinner
               dispatch(setSpinner(false));
 
