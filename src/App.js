@@ -3,7 +3,7 @@ import React, { useState } from "react";
 // components
 import { ReactComponent as RLLogo } from "./images/RastonLabLogo.svg";
 import DevMode from "./components/DevMode";
-import LandingPage from "./routes/LandingPage";
+import LandingPage from "./components/LandingPage";
 import Popup from "./components/Popup";
 
 // dictionary

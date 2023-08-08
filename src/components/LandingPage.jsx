@@ -1,14 +1,14 @@
 import React, { useState } from "react";
 
 // components
-import CloseButton from "../components/CloseButton";
+import CloseButton from "./CloseButton";
 
 // mui
 import { Dialog } from "@mui/material";
 import { Switch } from "@mui/material";
 
 // style
-import "../style/routes/LandingPage.css";
+import "../style/components/LandingPage.css";
 
 /**
  * React Router "Landing Page" for the project. Currently used as a splash page
