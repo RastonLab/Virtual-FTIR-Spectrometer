@@ -133,7 +133,6 @@ export default function InstrumentWindow() {
               size={100}
               oneScan={OPD[resolution].time}
             />
-            {animateCornerCube(scan / 2, OPD[resolution].time * 2)}
           </>
         )}
       </div>
