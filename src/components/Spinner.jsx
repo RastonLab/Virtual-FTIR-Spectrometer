@@ -27,7 +27,7 @@ export default function Spinner(props) {
       const timer_interval = setInterval(() => {
         // If the scans are complete, turn off spinner
         if (delay >= 100) {
-          dispatch(setProgress(false));
+          dispatch(setProgress(false, false, false));
         }
 
         // Increment Spinner/timer

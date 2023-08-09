@@ -31,7 +31,7 @@ export default function FindPeaks() {
 
   const dispatch = useDispatch();
 
-  const { progress } = useSelector((store) => store.progress);
+  const { fetching } = useSelector((store) => store.progress);
   const { error, errorText } = useSelector((store) => store.error);
 
   const [threshold, setThreshold] = useState(0);
@@ -163,8 +163,8 @@ export default function FindPeaks() {
         {/* Displays data from the server if there were no errors */}
         <div className="absorb-col">
           {/* Data Display */}
-          {progress && <Spinner variant="indeterminate" size={100} />}
-          {peaksData && !progress && !error && (
+          {fetching && <Spinner variant="indeterminate" size={100} />}
+          {peaksData && !fetching && !error && (
             <div id="data">
               <h1>Absorbance Peaks</h1>
               <div className="display">

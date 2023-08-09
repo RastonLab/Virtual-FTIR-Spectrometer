@@ -10,7 +10,6 @@ import parameterReducer from "../redux/parameterSlice";
 import peaksDataReducer from "../redux/peaksDataSlice";
 import progressReducer from "../redux/progressSlice";
 import sampleDataReducer from "../redux/sampleDataSlice";
-import spinnerReducer from "../redux/spinnerSlice";
 import timerReducer from "../redux/timerSlice";
 
 /**
@@ -24,9 +23,8 @@ export const store = configureStore({
     lectureBottle: lectureBottleReducer,
     parameter: parameterReducer,
     peaksData: peaksDataReducer,
-    progress: progressReducer, // For when we are simulating scans
+    progress: progressReducer,
     sampleData: sampleDataReducer,
-    spinner: spinnerReducer, // For when we are reaching out to the server
     timer: timerReducer, // For keeping track of how long the instrument window spiner has been running
     devMode: devModeReducer,
   },
