@@ -69,7 +69,7 @@ export default function Fetch({
   const fetchLinode = async () => {
     // remove any errors (if existing) and start a progress spinner
     dispatch(setError([false, null]));
-    dispatch(setProgress(true));
+    dispatch(setProgress([true, true, false]));
 
     let body = "";
     let delay = 0; // Default value => immediate
@@ -101,7 +101,7 @@ export default function Fetch({
 
       // error occurred in checkParams, display error message to user
       if (errorMessage) {
-        dispatch(setProgress(false));
+        dispatch(setProgress([false, false, false]));
         dispatch(setSpinner(false));
         dispatch(setError([true, String(errorMessage)]));
         return;
@@ -171,7 +171,7 @@ export default function Fetch({
         threshold: params.threshold,
       });
     } else {
-      dispatch(setProgress(false));
+      dispatch(setProgress([false, false, false]));
       dispatch(setSpinner(false));
       dispatch(
         setError([
@@ -193,6 +193,7 @@ export default function Fetch({
       });
 
       const data = await response.json();
+      dispatch(setProgress([true, false, true]));
       // connection was successful
       if (response.ok) {
         // determine where to store received data
@@ -212,7 +213,7 @@ export default function Fetch({
               // Delays the appearance of generated data
               sleepID = setTimeout(() => {
                 devMode
-                  ? dispatch(setProgress(false))
+                  ? dispatch(setProgress(false, false, false))
                   : console.log("userMode");
                 dispatch(setSampleData([data, waveMin, waveMax]));
               }, delay);
@@ -230,13 +231,13 @@ export default function Fetch({
               // Delays the appearance of generated data
               sleepID = setTimeout(() => {
                 devMode
-                  ? dispatch(setProgress(false))
+                  ? dispatch(setProgress(false, false, false))
                   : console.log("userMode");
                 dispatch(setBackgroundData([data, waveMin, waveMax]));
               }, delay);
               break;
             case "find_peaks":
-              dispatch(setProgress(false));
+              dispatch(setProgress(false, false, false));
               dispatch(setPeaksData(data));
               break;
             default:
@@ -249,14 +250,14 @@ export default function Fetch({
         // display error message
         else {
           console.log("not success");
-          dispatch(setProgress(false));
+          dispatch(setProgress(false, false, false));
           dispatch(setSpinner(false));
           dispatch(setError([true, String(data.text)]));
         }
       }
       // connection was unsuccessful
       else {
-        dispatch(setProgress(false));
+        dispatch(setProgress(false, false, false));
         dispatch(setSpinner(false));
         dispatch(setError([true, String(data.text)]));
       }
@@ -274,7 +275,7 @@ export default function Fetch({
       //     errorMessage = "unhandled error";
       //     break;
       // }
-      dispatch(setProgress(false));
+      dispatch(setProgress(false, false, false));
       dispatch(setSpinner(false));
       dispatch(setError([true, errorMessage]));
     }

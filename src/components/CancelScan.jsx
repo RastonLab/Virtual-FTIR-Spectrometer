@@ -23,7 +23,7 @@ export default function CancelScan() {
   const handleClick = () => {
     clearTimeout(sleepID);
     stopCornerCube();
-    dispatch(setProgress(false));
+    dispatch(setProgress(false, false, false));
     dispatch(setSpinner(false));
     dispatch(setTimer(0));
   };
