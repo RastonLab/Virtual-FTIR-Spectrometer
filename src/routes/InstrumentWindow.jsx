@@ -102,7 +102,10 @@ export default function InstrumentWindow() {
     lectureValveInteractivity(lectureBottleInUse);
     displayInteractivity(backgroundData, sampleData);
     distanceInteractivity(postfetch, OPD[resolution].distance);
-    bubblesAnimation(lectureBottleInUse, 2000);
+    bubblesAnimation(
+      medium === PARAMETER_VALUE.mediumAir ? true : false,
+      lectureBottleInUse
+    );
   });
 
   return (

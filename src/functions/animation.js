@@ -378,106 +378,317 @@ export function distanceInteractivity(progress, distance) {
 /**
  * Function that changes the visibility and animates molecules in the sample cell
  *
- * @param {boolean} lectureBottleInUse - The value used to determine if the user has selected sample spectrum generation.
- * @param {number} time - The number of milliseconds it takes for an animation to loop.
+ * @param {boolean} isAir - The value used to determine if the user has selected air as the medium.
+ * @param {boolean} isMolecule - The value used to determine if the user has selected a sample spectrum.
  */
-export function bubblesAnimation(lectureBottleInUse, time) {
+export function bubblesAnimation(isAir, isMolecule) {
   // DOM elements
-  const bubbleOne = document.getElementById("bubble-1");
-  const bubbleTwo = document.getElementById("bubble-2");
-  const bubbleThree = document.getElementById("bubble-3");
-  const bubbleFour = document.getElementById("bubble-4");
+  const blueOne = document.getElementById("blue-bubble-1");
+  const blueTwo = document.getElementById("blue-bubble-2");
+  const blueThree = document.getElementById("blue-bubble-3");
+  const blueFour = document.getElementById("blue-bubble-4");
+  const blueFive = document.getElementById("blue-bubble-5");
+  const redOne = document.getElementById("red-bubble-1");
+  const redTwo = document.getElementById("red-bubble-2");
+  const redThree = document.getElementById("red-bubble-3");
+  const redFour = document.getElementById("red-bubble-4");
+  const redFive = document.getElementById("red-bubble-5");
 
   // ternary used to show/hide "air" bubbles
-  bubbleOne.style.display = lectureBottleInUse ? "inline" : "none";
-  bubbleTwo.style.display = lectureBottleInUse ? "inline" : "none";
-  bubbleThree.style.display = lectureBottleInUse ? "inline" : "none";
-  bubbleFour.style.display = lectureBottleInUse ? "inline" : "none";
+  blueOne.style.display = isAir ? "inline" : "none";
+  blueTwo.style.display = isAir ? "inline" : "none";
+  blueThree.style.display = isAir ? "inline" : "none";
+  blueFour.style.display = isAir ? "inline" : "none";
+  blueFive.style.display = isAir ? "inline" : "none";
 
-  if (lectureBottleInUse) {
-    bubbleOne.animate(
-      [
-        // keyframes
-        { transform: "translate(0px, 0px)" },
-        { transform: "translate(200px, -140px)" },
-        { transform: "translate(400px, 0px)" },
-        { transform: "translate(600px, -140px)" },
-        { transform: "translate(800px, 0px)" },
-        { transform: "translate(860px, -50px)" },
-        { transform: "translate(800px, -140px)" },
-        { transform: "translate(600px, 0px)" },
-        { transform: "translate(400px, -140px)" },
-        { transform: "translate(200px, 0px)" },
-        { transform: "translate(0px, -140px)" },
-        { transform: "translate(0px, 0px)" },
-      ],
-      {
-        // timing options
-        duration: time,
-        iterations: Infinity,
-      }
-    );
+  // ternary used to show/hide "molecule" bubbles
+  redOne.style.display = isMolecule ? "inline" : "none";
+  redTwo.style.display = isMolecule ? "inline" : "none";
+  redThree.style.display = isMolecule ? "inline" : "none";
+  redFour.style.display = isMolecule ? "inline" : "none";
+  redFive.style.display = isMolecule ? "inline" : "none";
 
-    bubbleTwo.animate(
-      [
-        // keyframes
-        { transform: "translate(0px, 0px)" },
-        { transform: "translate(-200px, 140px)" },
-        { transform: "translate(-400px, 0px)" },
-        { transform: "translate(-600px, 140px)" },
-        { transform: "translate(-800px, 0px)" },
-        { transform: "translate(-860px, 50px)" },
-        { transform: "translate(-800px, 140px)" },
-        { transform: "translate(-600px, 0px)" },
-        { transform: "translate(-400px, 140px)" },
-        { transform: "translate(-200px, 0px)" },
-        { transform: "translate(0px, 140px)" },
-        { transform: "translate(0px, 0px)" },
-      ],
-      {
-        // timing options
-        duration: time,
-        iterations: Infinity,
-      }
-    );
+  blueOne.animate(
+    [
+      // keyframes
+      { transform: "translate(0px, 0px)" },
+      { transform: "translate(100px, -140px)" },
+      { transform: "translate(200px, 0px)" },
+      { transform: "translate(300px, -140px)" },
+      { transform: "translate(400px, 0px)" },
+      { transform: "translate(500px, -140px)" },
+      { transform: "translate(600px, 0px)" },
+      { transform: "translate(700px, -140px)" },
+      { transform: "translate(800px, 0px)" },
+      { transform: "translate(850px, -140px)" },
+      { transform: "translate(800px, 0px)" },
+      { transform: "translate(700px, -140px)" },
+      { transform: "translate(600px, 0px)" },
+      { transform: "translate(500px, -140px)" },
+      { transform: "translate(400px, 0px)" },
+      { transform: "translate(300px, -140px)" },
+      { transform: "translate(200px, 0px)" },
+      { transform: "translate(100px, -140px)" },
+      { transform: "translate(0px, 0px)" },
+    ],
+    {
+      // timing options
+      duration: 3500,
+      iterations: Infinity,
+    }
+  );
 
-    bubbleThree.animate(
-      [
-        // keyframes
-        { transform: "translate(0px, 0px)" },
-        { transform: "translate(-100px, -140px)" },
-        { transform: "translate(-200px, 0px)" },
-        { transform: "translate(-300px, -50px)" },
-        { transform: "translate(-400px, -140px)" },
-        { transform: "translate(-500px, 0px)" },
-        { transform: "translate(-600px, -140px)" },
-        { transform: "translate(-700px, 0px)" },
-        { transform: "translate(-800px, -140px)" },
-        { transform: "translate(0px, 0px)" },
-      ],
-      {
-        // timing options
-        duration: time,
-        iterations: Infinity,
-      }
-    );
+  blueTwo.animate(
+    [
+      // keyframes
+      { transform: "translate(0px, 0px)" },
+      { transform: "translate(-100px, -140px)" },
+      { transform: "translate(-200px, 0px)" },
+      { transform: "translate(-300px, -140px)" },
+      { transform: "translate(-400px, 0px)" },
+      { transform: "translate(-500px, -140px)" },
+      { transform: "translate(-600px, 0px)" },
+      { transform: "translate(-700px, -140px)" },
+      { transform: "translate(-800px, 0px)" },
+      { transform: "translate(-850px, -140px)" },
+      { transform: "translate(-800px, 0px)" },
+      { transform: "translate(-700px, -140px)" },
+      { transform: "translate(-600px, 0px)" },
+      { transform: "translate(-500px, -140px)" },
+      { transform: "translate(-400px, 0px)" },
+      { transform: "translate(-300px, -140px)" },
+      { transform: "translate(-200px, 0px)" },
+      { transform: "translate(-100px, -140px)" },
+      { transform: "translate(0px, 0px)" },
+    ],
+    {
+      // timing options
+      duration: 4500,
+      iterations: Infinity,
+    }
+  );
 
-    bubbleFour.animate(
-      [
-        // keyframes
-        { transform: "translate(0px, 0px)" },
-        { transform: "translate(850px, 30px)" },
-        { transform: "translate(0px, 60px)" },
-        { transform: "translate(850px, 90px)" },
-        { transform: "translate(0px, 120px)" },
-        { transform: "translate(850px, 75px)" },
-        { transform: "translate(0px, 0px)" },
-      ],
-      {
-        // timing options
-        duration: time,
-        iterations: Infinity,
-      }
-    );
-  }
+  blueThree.animate(
+    [
+      // keyframes
+      { transform: "translate(0px, 0px)" },
+      { transform: "translate(-100px, -140px)" },
+      { transform: "translate(-200px, 0px)" },
+      { transform: "translate(-300px, -140px)" },
+      { transform: "translate(-400px, 0px)" },
+      { transform: "translate(-300px, -140px)" },
+      { transform: "translate(-200px, 0px)" },
+      { transform: "translate(-100px, -140px)" },
+      { transform: "translate(0px, 0px)" },
+      { transform: "translate(100px, -140px)" },
+      { transform: "translate(200px, 0px)" },
+      { transform: "translate(300px, -140px)" },
+      { transform: "translate(400px, 0px)" },
+      { transform: "translate(300px, -140px)" },
+      { transform: "translate(200px, 0px)" },
+      { transform: "translate(100px, -140px)" },
+      { transform: "translate(0px, 0px)" },
+    ],
+    {
+      // timing options
+      duration: 3000,
+      iterations: Infinity,
+    }
+  );
+
+  blueFour.animate(
+    [
+      // keyframes
+      { transform: "translate(0px, 0px)" },
+      { transform: "translate(-100px, -140px)" },
+      { transform: "translate(-200px, 0px)" },
+      { transform: "translate(-100px, -140px)" },
+      { transform: "translate(0px, 0px)" },
+      { transform: "translate(100px, -140px)" },
+      { transform: "translate(200px, 0px)" },
+      { transform: "translate(300px, -140px)" },
+      { transform: "translate(400px, 0px)" },
+      { transform: "translate(500px, -140px)" },
+      { transform: "translate(650px, 0px)" },
+      { transform: "translate(500px, -140px)" },
+      { transform: "translate(400px, 0px)" },
+      { transform: "translate(300px, -140px)" },
+      { transform: "translate(200px, 0px)" },
+      { transform: "translate(100px, -140px)" },
+      { transform: "translate(0px, 0px)" },
+    ],
+    {
+      // timing options
+      duration: 4000,
+      iterations: Infinity,
+    }
+  );
+
+  blueFive.animate(
+    [
+      // keyframes
+      { transform: "translate(0px, 0px)" },
+      { transform: "translate(100px, -140px)" },
+      { transform: "translate(200px, 0px)" },
+      { transform: "translate(100px, -140px)" },
+      { transform: "translate(0px, 0px)" },
+      { transform: "translate(-100px, -140px)" },
+      { transform: "translate(-200px, 0px)" },
+      { transform: "translate(-300px, -140px)" },
+      { transform: "translate(-400px, 0px)" },
+      { transform: "translate(-500px, -140px)" },
+      { transform: "translate(-650px, 0px)" },
+      { transform: "translate(-500px, -140px)" },
+      { transform: "translate(-400px, 0px)" },
+      { transform: "translate(-300px, -140px)" },
+      { transform: "translate(-200px, 0px)" },
+      { transform: "translate(-100px, -140px)" },
+      { transform: "translate(0px, 0px)" },
+    ],
+    {
+      // timing options
+      duration: 2500,
+      iterations: Infinity,
+    }
+  );
+
+  redOne.animate(
+    [
+      // keyframes
+      { transform: "translate(0px, 0px)" },
+      { transform: "translate(100px, 140px)" },
+      { transform: "translate(200px, 0px)" },
+      { transform: "translate(300px, 140px)" },
+      { transform: "translate(400px, 0px)" },
+      { transform: "translate(500px, 140px)" },
+      { transform: "translate(600px, 0px)" },
+      { transform: "translate(700px, 140px)" },
+      { transform: "translate(850px, 0px)" },
+      { transform: "translate(700px, 140px)" },
+      { transform: "translate(600px, 0px)" },
+      { transform: "translate(500px, 140px)" },
+      { transform: "translate(400px, 0px)" },
+      { transform: "translate(300px, 140px)" },
+      { transform: "translate(200px, 0px)" },
+      { transform: "translate(100px, 140px)" },
+      { transform: "translate(0px, 0px)" },
+    ],
+    {
+      // timing options
+      duration: 4000,
+      iterations: Infinity,
+    }
+  );
+
+  redTwo.animate(
+    [
+      // keyframes
+      { transform: "translate(0px, 0px)" },
+      { transform: "translate(-100px, 140px)" },
+      { transform: "translate(-200px, 0px)" },
+      { transform: "translate(-300px, 140px)" },
+      { transform: "translate(-400px, 0px)" },
+      { transform: "translate(-500px, 140px)" },
+      { transform: "translate(-600px, 0px)" },
+      { transform: "translate(-700px, 140px)" },
+      { transform: "translate(-850px, 0px)" },
+      { transform: "translate(-700px, 140px)" },
+      { transform: "translate(-600px, 0px)" },
+      { transform: "translate(-500px, 140px)" },
+      { transform: "translate(-400px, 0px)" },
+      { transform: "translate(-300px, 140px)" },
+      { transform: "translate(-200px, 0px)" },
+      { transform: "translate(-100px, 140px)" },
+      { transform: "translate(0px, 0px)" },
+    ],
+    {
+      // timing options
+      duration: 4500,
+      iterations: Infinity,
+    }
+  );
+
+  redThree.animate(
+    [
+      // keyframes
+      { transform: "translate(0px, 0px)" },
+      { transform: "translate(-100px, 140px)" },
+      { transform: "translate(-200px, 0px)" },
+      { transform: "translate(-300px, 140px)" },
+      { transform: "translate(-400px, 0px)" },
+      { transform: "translate(-300px, 140px)" },
+      { transform: "translate(-200px, 0px)" },
+      { transform: "translate(-100px, 140px)" },
+      { transform: "translate(0px, 0px)" },
+      { transform: "translate(100px, 140px)" },
+      { transform: "translate(200px, 0px)" },
+      { transform: "translate(300px, 140px)" },
+      { transform: "translate(400px, 0px)" },
+      { transform: "translate(300px, 140px)" },
+      { transform: "translate(200px, 0px)" },
+      { transform: "translate(100px, 140px)" },
+      { transform: "translate(0px, 0px)" },
+    ],
+    {
+      // timing options
+      duration: 3500,
+      iterations: Infinity,
+    }
+  );
+
+  redFour.animate(
+    [
+      // keyframes
+      { transform: "translate(0px, 0px)" },
+      { transform: "translate(-100px, 140px)" },
+      { transform: "translate(-200px, 0px)" },
+      { transform: "translate(-100px, 140px)" },
+      { transform: "translate(0px, 0px)" },
+      { transform: "translate(100px, 140px)" },
+      { transform: "translate(200px, 0px)" },
+      { transform: "translate(300px, 140px)" },
+      { transform: "translate(400px, 0px)" },
+      { transform: "translate(500px, 140px)" },
+      { transform: "translate(650px, 0px)" },
+      { transform: "translate(500px, 140px)" },
+      { transform: "translate(400px, 0px)" },
+      { transform: "translate(300px, 140px)" },
+      { transform: "translate(200px, 0px)" },
+      { transform: "translate(100px, 140px)" },
+      { transform: "translate(0px, 0px)" },
+    ],
+    {
+      // timing options
+      duration: 2500,
+      iterations: Infinity,
+    }
+  );
+
+  redFive.animate(
+    [
+      // keyframes
+      { transform: "translate(0px, 0px)" },
+      { transform: "translate(100px, 140px)" },
+      { transform: "translate(200px, 0px)" },
+      { transform: "translate(100px, 140px)" },
+      { transform: "translate(0px, 0px)" },
+      { transform: "translate(-100px, 140px)" },
+      { transform: "translate(-200px, 0px)" },
+      { transform: "translate(-300px, 140px)" },
+      { transform: "translate(-400px, 0px)" },
+      { transform: "translate(-500px, 140px)" },
+      { transform: "translate(-650px, 0px)" },
+      { transform: "translate(-500px, 140px)" },
+      { transform: "translate(-400px, 0px)" },
+      { transform: "translate(-300px, 140px)" },
+      { transform: "translate(-200px, 0px)" },
+      { transform: "translate(-100px, 140px)" },
+      { transform: "translate(0px, 0px)" },
+    ],
+    {
+      // timing options
+      duration: 3000,
+      iterations: Infinity,
+    }
+  );
 }
