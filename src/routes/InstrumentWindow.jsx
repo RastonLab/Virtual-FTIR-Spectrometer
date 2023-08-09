@@ -58,8 +58,7 @@ export default function InstrumentWindow() {
     waveMin,
     window,
   } = useSelector((store) => store.parameter);
-  const { progress } = useSelector((store) => store.progress);
-  const { spinner } = useSelector((store) => store.spinner);
+  const { prefetch, postfetch } = useSelector((store) => store.progress);
   const { devMode } = useSelector((store) => store.devMode);
   const { lectureBottleInUse } = useSelector((store) => store.lectureBottle);
   const { backgroundData } = useSelector((store) => store.backgroundData);
@@ -102,8 +101,11 @@ export default function InstrumentWindow() {
     pumpValveInteractivity(medium === PARAMETER_VALUE.mediumAir ? true : false);
     lectureValveInteractivity(lectureBottleInUse);
     displayInteractivity(backgroundData, sampleData);
-    distanceInteractivity(progress, OPD[resolution].distance);
-    bubblesAnimation(lectureBottleInUse, 2000);
+    distanceInteractivity(postfetch, OPD[resolution].distance);
+    bubblesAnimation(
+      medium === PARAMETER_VALUE.mediumAir ? true : false,
+      lectureBottleInUse
+    );
   });
 
   return (
@@ -122,8 +124,8 @@ export default function InstrumentWindow() {
             Animate MCC
           </button>
         )}
-        {spinner && <Spinner variant="indeterminate" size={100} />}
-        {progress && !spinner && !devMode && (
+        {prefetch && <Spinner variant="indeterminate" size={100} />}
+        {postfetch && !devMode && (
           <>
             <h2>Processing Sample...</h2>
             <Spinner

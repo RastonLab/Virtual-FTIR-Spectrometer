@@ -1,7 +1,9 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
-  progress: false,
+  fetching: false,
+  prefetch: false,
+  postfetch: false,
 };
 
 /**
@@ -13,7 +15,9 @@ const progressSlice = createSlice({
   reducers: {
     // payload is a boolean to activate or deactivate the spinner
     setProgress: (state, { payload }) => {
-      state.progress = payload;
+      state.fetching = payload[0];
+      state.prefetch = payload[1];
+      state.postfetch = payload[2];
     },
   },
 });

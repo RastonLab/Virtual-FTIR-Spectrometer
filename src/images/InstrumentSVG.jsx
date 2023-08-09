@@ -3987,29 +3987,30 @@ const SvgInstrumentWindow = (props) => (
         <text
           xmlSpace="preserve"
           id="pressure-value"
-          x={129.456}
-          y={110.198}
+          x={130.108}
+          y={110.176}
           style={{
-            fontStyle: "normal",
-            fontVariant: "normal",
-            fontWeight: 400,
-            fontStretch: "normal",
             fontSize: "45.2174px",
             fontFamily: "sans-serif",
             InkscapeFontSpecification: "&quot",
-            fontVariantLigatures: "normal",
-            fontVariantCaps: "normal",
-            fontVariantNumeric: "normal",
-            fontVariantEastAsian: "normal",
             dominantBaseline: "central",
             textAnchor: "middle",
             fill: "#000",
-            fillOpacity: 1,
+            stroke: "none",
+            strokeWidth: 6.52174,
             strokeLinecap: "square",
           }}
         >
-          <tspan id="tspan1" x={129.456} y={110.198}>
-            {"pressure"}
+          <tspan
+            id="tspan1"
+            x={130.108}
+            y={110.176}
+            style={{
+              stroke: "none",
+              strokeWidth: 6.52174,
+            }}
+          >
+            {"0.0001"}
           </tspan>
         </text>
       </g>
@@ -4522,9 +4523,74 @@ const SvgInstrumentWindow = (props) => (
         />
       </g>
       <circle
-        id="bubble-4"
-        cx={1810.18}
-        cy={2044.462}
+        id="red-bubble-5"
+        cx={2486.542}
+        cy={2043.051}
+        r={12.5}
+        style={{
+          fill: "red",
+          fillOpacity: 0.5,
+          strokeWidth: 0.362417,
+          strokeLinecap: "square",
+          opacity: 1,
+        }}
+      />
+      <circle
+        id="red-bubble-4"
+        cx={2032.739}
+        cy={2043.639}
+        r={12.5}
+        style={{
+          fill: "red",
+          fillOpacity: 0.5,
+          strokeWidth: 0.362417,
+          strokeLinecap: "square",
+          opacity: 1,
+        }}
+      />
+      <circle
+        id="red-bubble-3"
+        cx={2242.056}
+        cy={2043.574}
+        r={12.5}
+        style={{
+          fill: "red",
+          fillOpacity: 0.5,
+          strokeWidth: 0.362417,
+          strokeLinecap: "square",
+          opacity: 1,
+        }}
+      />
+      <circle
+        id="red-bubble-2"
+        cx={2672.794}
+        cy={2043.959}
+        r={12.5}
+        style={{
+          fill: "red",
+          fillOpacity: 0.5,
+          strokeWidth: 0.362417,
+          strokeLinecap: "square",
+          opacity: 1,
+        }}
+      />
+      <circle
+        id="red-bubble-1"
+        cx={1811.172}
+        cy={2043.963}
+        r={12.5}
+        style={{
+          fill: "red",
+          fillOpacity: 0.5,
+          strokeWidth: 0.362417,
+          strokeLinecap: "square",
+          opacity: 1,
+        }}
+      />
+      <circle
+        id="blue-bubble-5"
+        cx={2486.732}
+        cy={2185.181}
         r={12.5}
         style={{
           fill: "#00f",
@@ -4534,9 +4600,9 @@ const SvgInstrumentWindow = (props) => (
         }}
       />
       <circle
-        id="bubble-3"
-        cx={2673.576}
-        cy={2185.016}
+        id="blue-bubble-4"
+        cx={2032.929}
+        cy={2185.77}
         r={12.5}
         style={{
           fill: "#00f",
@@ -4546,9 +4612,9 @@ const SvgInstrumentWindow = (props) => (
         }}
       />
       <circle
-        id="bubble-2"
-        cx={2673.511}
-        cy={2043.705}
+        id="blue-bubble-3"
+        cx={2242.246}
+        cy={2185.705}
         r={12.5}
         style={{
           fill: "#00f",
@@ -4558,7 +4624,19 @@ const SvgInstrumentWindow = (props) => (
         }}
       />
       <circle
-        id="bubble-1"
+        id="blue-bubble-2"
+        cx={2672.984}
+        cy={2186.089}
+        r={12.5}
+        style={{
+          fill: "#00f",
+          fillOpacity: 0.5,
+          strokeWidth: 0.362417,
+          strokeLinecap: "square",
+        }}
+      />
+      <circle
+        id="blue-bubble-1"
         cx={1811.362}
         cy={2186.093}
         r={12.5}
