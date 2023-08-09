@@ -17,7 +17,6 @@ import { setLectureBottle } from "../redux/lectureBottleSlice";
 import { setPeaksData } from "../redux/peaksDataSlice";
 import { setProgress } from "../redux/progressSlice";
 import { setSampleData } from "../redux/sampleDataSlice";
-import { setSpinner } from "../redux/spinnerSlice";
 import { setTimer } from "../redux/timerSlice";
 
 // router
@@ -44,7 +43,7 @@ export default function Fetch({
 }) {
   const dispatch = useDispatch();
 
-  const { progress } = useSelector((store) => store.progress);
+  const { fetching } = useSelector((store) => store.progress);
   const { devMode } = useSelector((store) => store.devMode);
   let {
     beamsplitter,
@@ -69,7 +68,7 @@ export default function Fetch({
   const fetchLinode = async () => {
     // remove any errors (if existing) and start a progress spinner
     dispatch(setError([false, null]));
-    dispatch(setProgress(true));
+    dispatch(setProgress([true, true, false]));
 
     let body = "";
     let delay = 0; // Default value => immediate
@@ -80,7 +79,6 @@ export default function Fetch({
     ) {
       // Allows the user to generate new absorbance data (there was a recursive issue in the Absorbance Plotly)
       dispatch(setAbsorbanceData([null, null, null]));
-      dispatch(setSpinner(true)); // Turns on the "waiting" spinner
       dispatch(setTimer(0));
 
       // validate the user parameters
@@ -101,8 +99,7 @@ export default function Fetch({
 
       // error occurred in checkParams, display error message to user
       if (errorMessage) {
-        dispatch(setProgress(false));
-        dispatch(setSpinner(false));
+        dispatch(setProgress([false, false, false]));
         dispatch(setError([true, String(errorMessage)]));
         return;
       }
@@ -171,8 +168,7 @@ export default function Fetch({
         threshold: params.threshold,
       });
     } else {
-      dispatch(setProgress(false));
-      dispatch(setSpinner(false));
+      dispatch(setProgress([false, false, false]));
       dispatch(
         setError([
           true,
@@ -193,6 +189,7 @@ export default function Fetch({
       });
 
       const data = await response.json();
+      dispatch(setProgress([true, false, true]));
       // connection was successful
       if (response.ok) {
         // determine where to store received data
@@ -206,14 +203,9 @@ export default function Fetch({
               devMode ? console.log("devMode") : nav("/instrument", -1);
               devMode ? console.log("no amination") : animateCornerCube(scan / 2, OPD[resolution].time * 2);
 
-              // Turns off "waiting" spinner
-              dispatch(setSpinner(false));
-
               // Delays the appearance of generated data
               sleepID = setTimeout(() => {
-                devMode
-                  ? dispatch(setProgress(false))
-                  : console.log("userMode");
+                dispatch(setProgress(false, false, false));
                 dispatch(setSampleData([data, waveMin, waveMax]));
               }, delay);
               break;
@@ -224,19 +216,15 @@ export default function Fetch({
               // Only navigate to Instrument Window when !devMode
               devMode ? console.log("devMode") : nav("/instrument", -1);
               devMode ? console.log("no amination") : animateCornerCube(scan / 2, OPD[resolution].time * 2);
-              // Turns off "waiting" spinner
-              dispatch(setSpinner(false));
 
               // Delays the appearance of generated data
               sleepID = setTimeout(() => {
-                devMode
-                  ? dispatch(setProgress(false))
-                  : console.log("userMode");
+                dispatch(setProgress(false, false, false));
                 dispatch(setBackgroundData([data, waveMin, waveMax]));
               }, delay);
               break;
             case "find_peaks":
-              dispatch(setProgress(false));
+              dispatch(setProgress(false, false, false));
               dispatch(setPeaksData(data));
               break;
             default:
@@ -249,15 +237,13 @@ export default function Fetch({
         // display error message
         else {
           console.log("not success");
-          dispatch(setProgress(false));
-          dispatch(setSpinner(false));
+          dispatch(setProgress(false, false, false));
           dispatch(setError([true, String(data.text)]));
         }
       }
       // connection was unsuccessful
       else {
-        dispatch(setProgress(false));
-        dispatch(setSpinner(false));
+        dispatch(setProgress(false, false, false));
         dispatch(setError([true, String(data.text)]));
       }
     } catch (error) {
@@ -274,14 +260,13 @@ export default function Fetch({
       //     errorMessage = "unhandled error";
       //     break;
       // }
-      dispatch(setProgress(false));
-      dispatch(setSpinner(false));
+      dispatch(setProgress(false, false, false));
       dispatch(setError([true, errorMessage]));
     }
   };
 
   return (
-    <button className={buttonStyle} disabled={progress} onClick={fetchLinode}>
+    <button className={buttonStyle} disabled={fetching} onClick={fetchLinode}>
       {buttonText}
     </button>
   );
