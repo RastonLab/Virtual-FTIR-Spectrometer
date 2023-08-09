@@ -58,8 +58,7 @@ export default function ExperimentalSetup() {
   } = useSelector((store) => store.parameter);
 
   const { error, errorText } = useSelector((store) => store.error);
-  const { progress } = useSelector((store) => store.progress);
-  const { spinner } = useSelector((store) => store.spinner);
+  const { fetching, prefetch } = useSelector((store) => store.progress);
   const { devMode } = useSelector((store) => store.devMode);
 
   return (
@@ -158,14 +157,14 @@ export default function ExperimentalSetup() {
 
       {/* error message, spinner, and graphs */}
       <div id="graph-and-error" className="exp-col">
-        {spinner && <Spinner variant="indeterminate" size={200} />}
+        {prefetch && <Spinner variant="indeterminate" size={200} />}
         {error && devMode && (
           <div id="error">
             <p style={{ fontSize: 30 }}>{errorText}</p>
           </div>
         )}
-        {!progress && !error && devMode && <BackgroundPlotly />}
-        {!progress && !error && devMode && <SamplePlotly />}
+        {!fetching && !error && devMode && <BackgroundPlotly />}
+        {!fetching && !error && devMode && <SamplePlotly />}
       </div>
     </div>
   );

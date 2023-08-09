@@ -17,7 +17,6 @@ import { setLectureBottle } from "../redux/lectureBottleSlice";
 import { setPeaksData } from "../redux/peaksDataSlice";
 import { setProgress } from "../redux/progressSlice";
 import { setSampleData } from "../redux/sampleDataSlice";
-import { setSpinner } from "../redux/spinnerSlice";
 import { setTimer } from "../redux/timerSlice";
 
 // router
@@ -44,7 +43,7 @@ export default function Fetch({
 }) {
   const dispatch = useDispatch();
 
-  const { progress } = useSelector((store) => store.progress);
+  const { fetching } = useSelector((store) => store.progress);
   const { devMode } = useSelector((store) => store.devMode);
   let {
     beamsplitter,
@@ -80,7 +79,6 @@ export default function Fetch({
     ) {
       // Allows the user to generate new absorbance data (there was a recursive issue in the Absorbance Plotly)
       dispatch(setAbsorbanceData([null, null, null]));
-      dispatch(setSpinner(true)); // Turns on the "waiting" spinner
       dispatch(setTimer(0));
 
       // validate the user parameters
@@ -102,7 +100,6 @@ export default function Fetch({
       // error occurred in checkParams, display error message to user
       if (errorMessage) {
         dispatch(setProgress([false, false, false]));
-        dispatch(setSpinner(false));
         dispatch(setError([true, String(errorMessage)]));
         return;
       }
@@ -172,7 +169,6 @@ export default function Fetch({
       });
     } else {
       dispatch(setProgress([false, false, false]));
-      dispatch(setSpinner(false));
       dispatch(
         setError([
           true,
@@ -207,14 +203,9 @@ export default function Fetch({
               devMode ? console.log("devMode") : nav("/instrument", -1);
               devMode ? console.log("no amination") : animateCornerCube(scan / 2, OPD[resolution].time * 2);
 
-              // Turns off "waiting" spinner
-              dispatch(setSpinner(false));
-
               // Delays the appearance of generated data
               sleepID = setTimeout(() => {
-                devMode
-                  ? dispatch(setProgress(false, false, false))
-                  : console.log("userMode");
+                dispatch(setProgress(false, false, false));
                 dispatch(setSampleData([data, waveMin, waveMax]));
               }, delay);
               break;
@@ -225,14 +216,10 @@ export default function Fetch({
               // Only navigate to Instrument Window when !devMode
               devMode ? console.log("devMode") : nav("/instrument", -1);
               devMode ? console.log("no amination") : animateCornerCube(scan / 2, OPD[resolution].time * 2);
-              // Turns off "waiting" spinner
-              dispatch(setSpinner(false));
 
               // Delays the appearance of generated data
               sleepID = setTimeout(() => {
-                devMode
-                  ? dispatch(setProgress(false, false, false))
-                  : console.log("userMode");
+                dispatch(setProgress(false, false, false));
                 dispatch(setBackgroundData([data, waveMin, waveMax]));
               }, delay);
               break;
@@ -251,14 +238,12 @@ export default function Fetch({
         else {
           console.log("not success");
           dispatch(setProgress(false, false, false));
-          dispatch(setSpinner(false));
           dispatch(setError([true, String(data.text)]));
         }
       }
       // connection was unsuccessful
       else {
         dispatch(setProgress(false, false, false));
-        dispatch(setSpinner(false));
         dispatch(setError([true, String(data.text)]));
       }
     } catch (error) {
@@ -276,13 +261,12 @@ export default function Fetch({
       //     break;
       // }
       dispatch(setProgress(false, false, false));
-      dispatch(setSpinner(false));
       dispatch(setError([true, errorMessage]));
     }
   };
 
   return (
-    <button className={buttonStyle} disabled={progress} onClick={fetchLinode}>
+    <button className={buttonStyle} disabled={fetching} onClick={fetchLinode}>
       {buttonText}
     </button>
   );
