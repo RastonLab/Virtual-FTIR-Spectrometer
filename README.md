@@ -70,14 +70,14 @@ We have implemented a solution that automates the optimization and/ or translati
 
 #### SVG Interactivity and Animation
 
-To center text:
+To center text in the SVG, add the following style to the text element you want centered. This was completed by using Inkscape's XML Editor:
 
 ```css
 text-anchor: middle;
 dominant-baseline: central;
 ```
 
-**_TODO_**
+Then using Inkscape's Align and Distribute tool, center the text in the "parent" element.
 
 #### SVG Tooltips
 
