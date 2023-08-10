@@ -109,6 +109,10 @@
   color: rgb(246, 176, 106) !important;
 }
 
+.dropdown-items button:hover:disabled {
+  cursor: not-allowed;
+}
+
 .left-cluster {
   display: flex;
   flex-grow: 1;
