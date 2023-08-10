@@ -23,7 +23,7 @@ export default function LandingPage({ isMenu }) {
   );
 
   const [welcomeOpen, setWelcomeOpen] = useState(
-    localStorage.getItem("checked") === "true" ? false : true
+    localStorage.getItem("checked") === "true" || isMenu ? false : true
   );
 
   const handleChange = (event) => {
@@ -34,6 +34,11 @@ export default function LandingPage({ isMenu }) {
       localStorage.setItem("checked", "false");
       setChecked(false);
     }
+  };
+
+  // In the menubar button this was causing a recursion error
+  const handleClickOpen = () => {
+    setWelcomeOpen(true);
   };
 
   const pageContents = (
@@ -69,10 +74,13 @@ export default function LandingPage({ isMenu }) {
     </div>
   );
 
-  if (isMenu) {
-    return pageContents;
-  } else {
-    return (
+  return (
+    <div>
+      { isMenu &&
+        <button className="popup-button dropdown-items" onClick={handleClickOpen}>
+          Landing Page
+        </button>
+      }
       <Dialog
         className="welcome"
         open={welcomeOpen}
@@ -84,6 +92,6 @@ export default function LandingPage({ isMenu }) {
         />
         {pageContents}
       </Dialog>
-    );
-  }
+    </div>
+  );
 }
