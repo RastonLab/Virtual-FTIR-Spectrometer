@@ -22,6 +22,12 @@ import {
   setZeroFill,
 } from "../redux/parameterSlice";
 
+// components
+import CloseButton from "./CloseButton.jsx";
+
+// mui
+import { Dialog } from "@mui/material";
+
 // style
 import "../style/components/Open.css";
 import "../style/components/Button.css";
@@ -40,6 +46,16 @@ export const Open = () => {
   const [data, setData] = useState();
   const [success, toggleSuccess] = useState(false);
   const [badFile, toggleBadFile] = useState(false);
+
+  const [open, setOpen] = useState(false);
+
+  const handleClickOpen = () => {
+    setOpen(true);
+  };
+
+  const handleClose = () => {
+    setOpen(false);
+  };
 
   const changeHandler = (event) => {
     if (event.target.files[0]) {
@@ -138,20 +154,28 @@ export const Open = () => {
 
   return (
     <div id="open">
-      <div className="open-row">
-        <label className=".custom-file-upload button">
-          Select a File
-          <input type="file" name="file" onChange={changeHandler} />
-        </label>
-        <h2>{success && "Upload Successful!"}</h2>
-        <h2>{badFile && "Cannot Upload File"}</h2>
-        <button className="button" onClick={handleSubmission}>
-          Upload
-        </button>
-      </div>
-      <div className="open-row file">
-        <p className="content">{data}</p>
-      </div>
+      <button className="popup-button dropdown-items" onClick={handleClickOpen}>
+        Open
+      </button>
+      <Dialog className="popup" onClose={handleClose} open={open}>
+        <CloseButton id="customized-dialog-title" onClose={handleClose}>
+          <h2>Please Select Sample or Background File</h2>
+        </CloseButton>
+        <div className="open-row">
+          <label className=".custom-file-upload button">
+            Select a File
+            <input type="file" name="file" onChange={changeHandler} />
+          </label>
+          <h2>{success && "Upload Successful!"}</h2>
+          <h2>{badFile && "Cannot Upload File"}</h2>
+          <button className="button" onClick={handleSubmission}>
+            Upload
+          </button>
+        </div>
+        <div className="open-row file">
+          <p className="content">{data}</p>
+        </div>
+      </Dialog>
     </div>
   );
 };
