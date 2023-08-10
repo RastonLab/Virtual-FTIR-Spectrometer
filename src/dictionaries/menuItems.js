@@ -103,9 +103,7 @@ export const menuItems = [
       },
       {
         label: "Landing Page",
-        button: true,
-        title: "",
-        text: <LandingPage isMenu={true} />,
+        component: <LandingPage isMenu={true} />,
       },
       // {
       //   label: "Usage",
