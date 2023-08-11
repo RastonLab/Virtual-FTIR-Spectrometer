@@ -12,7 +12,14 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  min-width: 36%;
+  width: 36%;
+  padding-bottom: 25px;
+}
+#instrument-error p {
+  font-size: 30px;
+  width: 50%;
+  justify-self: center;
+  text-align: center;
 }
 
 @media only screen and (max-width: 1200px) {
@@ -22,6 +29,14 @@
 
   #instrument {
     width: 100%;
+  }
+
+  #instrument-spinner {
+    width: auto;
+  }
+  
+  #instrument-error p {
+    font-size: 20px;
   }
 }
 
