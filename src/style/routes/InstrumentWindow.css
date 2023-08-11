@@ -63,7 +63,8 @@ g {
 #molecule-value,
 #range-value,
 #resolution-value,
-#scan-value {
+#scan-value,
+#pressure-value {
   pointer-events: none;
 }
 
