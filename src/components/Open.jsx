@@ -54,6 +54,9 @@ export const Open = () => {
   };
 
   const handleClose = () => {
+    setData(null);
+    toggleSuccess(false);
+    toggleBadFile(false);
     setOpen(false);
   };
 
@@ -64,6 +67,8 @@ export const Open = () => {
       };
       fileReader.readAsText(event.target.files[0]);
     }
+    toggleSuccess(false);
+    toggleBadFile(false);
   };
 
   const handleSubmission = () => {
@@ -118,8 +123,8 @@ export const Open = () => {
         let comma = line.indexOf(",");
 
         // also removes " character from the beginning of both strings to allow for number parsing
-        let x = line.substring(1, comma);
-        let y = line.substring(comma + 2);
+        let x = line.substring(0, comma);
+        let y = line.substring(comma + 1);
 
         xData.push(parseFloat(x));
         yData.push(parseFloat(y));
