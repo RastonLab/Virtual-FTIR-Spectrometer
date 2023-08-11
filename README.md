@@ -70,6 +70,8 @@ We have implemented a solution that automates the optimization and/ or translati
 
 #### SVG Interactivity and Animation
 
+##### Text Interactivity
+
 To center text in the SVG, add the following style to the text element you want centered. This was completed by using Inkscape's XML Editor:
 
 ```css
@@ -77,7 +79,84 @@ text-anchor: middle;
 dominant-baseline: central;
 ```
 
-Then using Inkscape's Align and Distribute tool, center the text in the "parent" element.
+Then using Inkscape's Align and Distribute tool, center the text in the "parent" element. To edit text in JavaScript, use the [`textContent`](https://developer.mozilla.org/en-US/docs/Web/API/Node/textContent) interface:
+
+```js
+export function textInteractivity(text) {
+  // DOM elements
+  const textElement = document.getElementById("text");
+
+  // set text
+  textElement.textContent = text;
+}
+```
+
+##### SVG Interactivity
+
+SVG interactivity is similar to text. The major difference is the use of the [`setAttribute()`](https://developer.mozilla.org/en-US/docs/Web/API/Element/setAttribute) element or setting the `style` of a particular CSS property. For example:
+
+```js
+// this is good for moving a group or rectangle
+document.getElementById("id-1").style.transform = "translate(0px, 0px)";
+
+// this is good for moving a path
+document.getElementById("id-2").setAttribute(
+  "d",
+  "M20,230 Q40,205 50,230 T90,230"
+);
+```
+
+You may need to change the location of a group/element depending on a boolean:
+
+```js
+export function componentLocation(isVisible) {
+  // DOM elements
+  const componentID = document.getElementById("component-1");
+
+  lectureBottleInUse
+    ? componentID.setAttribute("d","")
+    : componentID.setAttribute("d","");
+}
+```
+
+You may need to change the visibility of a group/element depending on a user parameter:
+
+```js
+export function componentVisibility(parameter) {
+  // DOM element
+  const componentID = document.getElementById("component-1");
+
+  // constant parameter values
+  const componentValue = PARAMETER_VALUE.constantValue;
+
+  // ternary used to show/hide cell window in the Main SVG
+  componentID.style.display = parameter === componentValue ? "inline" : "none";
+}
+```
+
+##### Animation
+
+SVG animation is set in JavaScript using the [`animate()`](https://developer.mozilla.org/en-US/docs/Web/API/Element/animate) method. Animations are set using keyframes around the starting and ending position of the object you want to move. A simplified version of this code is shown below:
+
+```js
+export function squareAnimation() {
+  // DOM element
+  const square = document.getElementById("square");
+
+  square.animate(
+    [
+      // keyframes
+      { transform: "translate(0px, 0px)" },   // starting position
+      { transform: "translate(100px, 0px)" }, // move square to the right 100 pixels
+      { transform: "translate(0px, 0px)" },   // ending position
+    ],
+    {
+      // timing options
+      duration: 1000,       // duration of total animation in milliseconds
+      iterations: Infinity, // how many times the animation occurs
+    }
+  );
+```
 
 #### SVG Tooltips
 
