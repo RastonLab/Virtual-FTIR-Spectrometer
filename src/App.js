@@ -4,7 +4,6 @@ import React, { useState } from "react";
 import { ReactComponent as RLLogo } from "./images/RastonLabLogo.svg";
 import DevMode from "./components/DevMode";
 import LandingPage from "./components/LandingPage";
-import Popup from "./components/Popup";
 
 // dictionary
 import { menuItems } from "./dictionaries/menuItems";
@@ -118,16 +117,6 @@ export default function App() {
                       </AccordionSummary>
                       <AccordionDetails className="dropdown">
                         {page.submenu.map((submenu) => {
-                          if (submenu.button) {
-                            return (
-                              <Popup
-                                key={submenu.label}
-                                label={submenu.label}
-                                title={submenu.title}
-                                text={submenu.text}
-                              />
-                            );
-                          } else {
                             return (
                               <ul
                                 key={submenu.label}
@@ -136,8 +125,8 @@ export default function App() {
                                 {submenu.component}
                               </ul>
                             );
-                          }
-                        })}
+                          })
+                        }
                       </AccordionDetails>
                     </Accordion>
                   ))}
@@ -186,22 +175,11 @@ export default function App() {
                 </AccordionSummary>
                 <AccordionDetails className="dropdown">
                   {page.submenu.map((submenu) => {
-                    if (submenu.button) {
-                      return (
-                        <Popup
-                          key={submenu.label}
-                          label={submenu.label}
-                          title={submenu.title}
-                          text={submenu.text}
-                        />
-                      );
-                    } else {
                       return (
                         <ul key={submenu.label} className={"dropdown-items"}>
                           {submenu.component}
                         </ul>
                       );
-                    }
                   })}
                 </AccordionDetails>
               </Accordion>

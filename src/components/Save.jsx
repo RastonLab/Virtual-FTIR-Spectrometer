@@ -2,6 +2,10 @@ import { useRef, useState } from "react";
 
 // components
 import { CSVLink } from "react-csv";
+import CloseButton from "./CloseButton.jsx";
+
+// mui
+import { Dialog } from "@mui/material";
 
 // redux
 import { useSelector } from "react-redux";
@@ -36,6 +40,16 @@ export default function Save() {
   const { backgroundData } = useSelector((store) => store.backgroundData);
   const { peaksData } = useSelector((store) => store.peaksData);
   const { sampleData } = useSelector((store) => store.sampleData);
+
+  const [open, setOpen] = useState(false);
+
+  const handleClickOpen = () => {
+    setOpen(true);
+  };
+
+  const handleClose = () => {
+    setOpen(false);
+  };
 
   const [data, setData] = useState("");
   const [filename, setFilename] = useState("");
@@ -133,58 +147,65 @@ export default function Save() {
 
   return (
     <div>
-      <h1>Save Data</h1>
+      <button className="popup-button dropdown-items" onClick={handleClickOpen}>
+        Save
+      </button>
+      <Dialog className="popup" onClose={handleClose} open={open}>
+        <CloseButton id="customized-dialog-title" onClose={handleClose}>
+          <h2>Save Data</h2>
+        </CloseButton>
 
-      {(sampleData || backgroundData) && (
-        <h3>What data would you like to save?</h3>
-      )}
+        {(sampleData || backgroundData) && (
+          <h3>What data would you like to save?</h3>
+        )}
 
-      {!sampleData && !backgroundData && (
-        <h3>There is currently no data to save</h3>
-      )}
+        {!sampleData && !backgroundData && (
+          <h3>There is currently no data to save</h3>
+        )}
 
-      <div className="save-col">
-        {sampleData && (
-          <>
-            <button className="button" onClick={sampleCSV}>
-              Sample Spectrum Data
+        <div className="save-col">
+          {sampleData && (
+            <>
+              <button className="button" onClick={sampleCSV}>
+                Sample Spectrum Data
+              </button>
+            </>
+          )}
+
+          {backgroundData && (
+            <button className="button" onClick={backCSV}>
+              Background Spectrum Data
             </button>
-          </>
-        )}
+          )}
 
-        {backgroundData && (
-          <button className="button" onClick={backCSV}>
-            Background Spectrum Data
-          </button>
-        )}
+          {sampleData && backgroundData && (
+            <button className="button" onClick={transCSV}>
+              Transmittance Spectrum Data
+            </button>
+          )}
 
-        {sampleData && backgroundData && (
-          <button className="button" onClick={transCSV}>
-            Transmittance Spectrum Data
-          </button>
-        )}
+          {absorbanceData && (
+            <button className="button" onClick={absorbCSV}>
+              Absorbance Spectrum Data
+            </button>
+          )}
 
-        {absorbanceData && (
-          <button className="button" onClick={absorbCSV}>
-            Absorbance Spectrum Data
-          </button>
-        )}
+          {peaksData && (
+            <button className="button" onClick={peaksCSV}>
+              Peaks Data
+            </button>
+          )}
 
-        {peaksData && (
-          <button className="button" onClick={peaksCSV}>
-            Peaks Data
-          </button>
-        )}
-
-        <CSVLink
-          data={data}
-          headers={header}
-          filename={filename}
-          className="hidden"
-          ref={csvLink}
-          target="_blank"
-        />
-      </div>
+          <CSVLink
+            data={data}
+            headers={header}
+            filename={filename}
+            className="hidden"
+            ref={csvLink}
+            target="_blank"
+          />
+        </div>
+      </Dialog>
     </div>
   );
 }
