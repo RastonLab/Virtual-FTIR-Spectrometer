@@ -117,7 +117,7 @@ export default function InstrumentWindow() {
       <div id="instrument-spinner">
         <h1>Scan Progress</h1>
         <button className="button" onClick={toggleDrawer}>
-          Experiment Settings
+          Experimental Setup
         </button>
         {devMode && (
           <button className="button" onClick={() => animateCornerCube(1, 5)}>
