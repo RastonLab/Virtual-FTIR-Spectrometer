@@ -58,11 +58,12 @@ export default function InstrumentWindow() {
     waveMin,
     window,
   } = useSelector((store) => store.parameter);
-  const { prefetch, postfetch } = useSelector((store) => store.progress);
+  const { fetching, prefetch, postfetch } = useSelector((store) => store.progress);
   const { devMode } = useSelector((store) => store.devMode);
   const { lectureBottleInUse } = useSelector((store) => store.lectureBottle);
   const { backgroundData } = useSelector((store) => store.backgroundData);
   const { sampleData } = useSelector((store) => store.sampleData);
+  const { error, errorText } = useSelector((store) => store.error);
 
   const [toggled, setToggled] = useState(false);
   const [element, setElement] = useState();
@@ -117,7 +118,7 @@ export default function InstrumentWindow() {
       <div id="instrument-spinner">
         <h1>Scan Progress</h1>
         <button className="button" onClick={toggleDrawer}>
-          Experiment Settings
+          Experimental Setup
         </button>
         {devMode && (
           <button className="button" onClick={() => animateCornerCube(1, 5)}>
@@ -137,6 +138,11 @@ export default function InstrumentWindow() {
             />
           </>
         )}
+        {!fetching && error && 
+          <div id="instrument-error" style={{display :"grid"}} >
+            <p>{errorText}</p>
+          </div>
+        }
       </div>
 
       {/* MUI drawer that holds experimental setup */}

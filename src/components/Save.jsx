@@ -1,7 +1,6 @@
-import { useRef, useState } from "react";
+import { useState } from "react";
 
 // components
-import { CSVLink } from "react-csv";
 import CloseButton from "./CloseButton.jsx";
 
 // mui
@@ -38,7 +37,7 @@ export default function Save() {
 
   const { absorbanceData } = useSelector((store) => store.absorbanceData);
   const { backgroundData } = useSelector((store) => store.backgroundData);
-  const { peaksData } = useSelector((store) => store.peaksData);
+  // const { peaksData } = useSelector((store) => store.peaksData);
   const { sampleData } = useSelector((store) => store.sampleData);
 
   const [open, setOpen] = useState(false);
@@ -51,99 +50,57 @@ export default function Save() {
     setOpen(false);
   };
 
-  const [data, setData] = useState("");
-  const [filename, setFilename] = useState("");
-  const header = [
-    `Spectrum details | Min Wavenumber: ${waveMin} Max Wavenumber: ${waveMax} Molecule: ${molecule} Pressure: ${pressure} Resolution: ${resolution} Number of Scans: ${scan} Zero Fill: ${zeroFill} Source: ${source} Beamsplitter: ${beamsplitter} Cell Window: ${window} Detector: ${detector} Medium: ${medium} `,
-  ];
-  // ^^ extra space at the end allows for uniform file reading
+  const print = (spectrumType) => {
 
-  const csvLink = useRef();
+    let spectrumData = "";
 
-  const sampleCSV = () => {
-    let newData = [];
-
-    const specType = ["Spectrum Type: Sample Spectrum"];
-    newData.push(specType);
-
-    for (let i = 0; i < sampleData.x.length; i++) {
-      newData.push([sampleData.x[i], sampleData.y[i]]);
+    if (spectrumType.localeCompare("sample") === 0) {
+      spectrumData = sampleData;
+    } else if (spectrumType.localeCompare("background") === 0) {
+      spectrumData = backgroundData;
+    } else if (spectrumType.localeCompare("absorbance") === 0) {
+      spectrumData = absorbanceData;
+    } else if (spectrumType.localeCompare("transmittance") === 0) {
+      spectrumData = generateTransmittance(backgroundData, sampleData);
+    } else {
+      return;
     }
 
-    setData(newData);
-    setFilename("sample data.csv");
-    setTimeout(() => {
-      csvLink.current.link.click();
-    }, 500);
-  };
+    if (spectrumType.localeCompare("peaks") === 0) {
 
-  const backCSV = () => {
-    let newData = [];
+    } else {
 
-    const specType = ["Spectrum Type: Background Spectrum"];
-    newData.push(specType);
-
-    for (let i = 0; i < backgroundData.x.length; i++) {
-      newData.push([backgroundData.x[i], backgroundData.y[i]]);
     }
 
-    setData(newData);
-    setFilename("background data.csv");
-    setTimeout(() => {
-      csvLink.current.link.click();
-    }, 500);
-  };
+    let printData = `Spectrum details | Min Wavenumber: ${waveMin} Max Wavenumber: ${waveMax} Molecule: ${molecule} Pressure: ${pressure} Resolution: ${resolution} Number of Scans: ${scan} Zero Fill: ${zeroFill} Source: ${source} Beamsplitter: ${beamsplitter} Cell Window: ${window} Detector: ${detector} Medium: ${medium} \n`
+    printData += `${spectrumType.charAt(0).toUpperCase() + spectrumType.slice(1)} Spectrum\n`;
 
-  const transCSV = () => {
-    let newData = [];
-
-    const specType = ["Spectrum Type: Transmittance Spectrum"];
-    newData.push(specType);
-    
-    const transData = generateTransmittance(backgroundData, sampleData);
-
-    for (let i = 0; i < transData.x.length; i++) {
-      newData.push([transData.x[i], transData.y[i]]);
+    for  (let i = 0; i < spectrumData.x.length; i++) {
+      printData += `${spectrumData.x[i]}, ${spectrumData.y[i]}\n`;
     }
 
-    setData(newData);
-    setFilename("transmittance data.csv");
-    setTimeout(() => {
-      csvLink.current.link.click();
-    }, 500);
-  };
+    const element = document.createElement("a");
+    const file = new Blob([printData], {type: 'text/plain'});
+    element.href = URL.createObjectURL(file);
+    element.download = `${spectrumType} data.csv`;
+    document.body.appendChild(element);
+    element.click();
 
-  const absorbCSV = () => {
-    let newData = [];
+  }
 
-    const specType = ["Spectrum Type: Absorbance Spectrum"];
-    newData.push(specType);
+  // const peaksCSV = () => {
+  //   let newData = [];
 
-    // easier to save in store and pull from there instead of repeating all the checks for Absorbance Data
-    for (let i = 0; i < absorbanceData.x.length; i++) {
-      newData.push([absorbanceData.x[i], absorbanceData.y[i]]);
-    }
+  //   for (const [peak, intensity] of Object.entries(peaksData.peaks)) {
+  //     newData.push([peak, intensity]);
+  //   }
 
-    setData(newData);
-    setFilename("absorbance data.csv");
-    setTimeout(() => {
-      csvLink.current.link.click();
-    }, 500);
-  };
-
-  const peaksCSV = () => {
-    let newData = [];
-
-    for (const [peak, intensity] of Object.entries(peaksData.peaks)) {
-      newData.push([peak, intensity]);
-    }
-
-    setData(newData);
-    setFilename("peaks data.csv");
-    setTimeout(() => {
-      csvLink.current.link.click();
-    }, 500);
-  };
+  //   setData(newData);
+  //   setFilename("peaks data.csv");
+  //   setTimeout(() => {
+  //     csvLink.current.link.click();
+  //   }, 500);
+  // };
 
   return (
     <div>
@@ -166,44 +123,35 @@ export default function Save() {
         <div className="save-col">
           {sampleData && (
             <>
-              <button className="button" onClick={sampleCSV}>
+              <button className="button" onClick={() => {print("sample")}}>
                 Sample Spectrum Data
               </button>
             </>
           )}
 
           {backgroundData && (
-            <button className="button" onClick={backCSV}>
+            <button className="button" onClick={() => {print("background")}}>
               Background Spectrum Data
             </button>
           )}
 
           {sampleData && backgroundData && (
-            <button className="button" onClick={transCSV}>
+            <button className="button" onClick={() => {print("transmittance")}}>
               Transmittance Spectrum Data
             </button>
           )}
 
           {absorbanceData && (
-            <button className="button" onClick={absorbCSV}>
+            <button className="button" onClick={() => {print("absorbance")}}>
               Absorbance Spectrum Data
             </button>
           )}
 
-          {peaksData && (
+          {/* {peaksData && (
             <button className="button" onClick={peaksCSV}>
               Peaks Data
             </button>
-          )}
-
-          <CSVLink
-            data={data}
-            headers={header}
-            filename={filename}
-            className="hidden"
-            ref={csvLink}
-            target="_blank"
-          />
+          )} */}
         </div>
       </Dialog>
     </div>

@@ -4,8 +4,7 @@ import React, { useState } from "react";
 import CloseButton from "./CloseButton";
 
 // mui
-import { Dialog } from "@mui/material";
-import { Switch } from "@mui/material";
+import { Dialog, Checkbox } from "@mui/material";
 
 // style
 import "../style/components/LandingPage.css";
@@ -42,45 +41,49 @@ export default function LandingPage({ isMenu }) {
   };
 
   const pageContents = (
-    <div id="landing-page">
-      <h1>
-        Welcome to
-        <span className="red"> F</span>
-        <span className="orange">T</span>
-        <span className="yellow">I</span>
-        <span className="green">R</span>
-        <span className="teal">-</span>
-        <span className="blue">S</span>
-        <span className="indigo">I</span>
-        <span className="purple">S</span>!
-      </h1>
+    <div id="landing">
+      <div id="landing-header">
+        <h1>
+          Welcome to
+          <span className="red"> F</span>
+          <span className="orange">T</span>
+          <span className="yellow">I</span>
+          <span className="green">R</span>
+          <span className="teal">-</span>
+          <span className="blue">S</span>
+          <span className="indigo">I</span>
+          <span className="purple">S</span>!
+        </h1>
 
-      <h2>
-        <u className="red">F</u>ourier <u className="orange">T</u>ransform{" "}
-        <u className="yellow">I</u>nfra<u className="green">R</u>ed
-        <span className="teal">-</span>
-        <u className="blue">S</u>cientific <u className="indigo">I</u>nstrument
-        <u className="purple">S</u>imulator
-      </h2>
+        <h2>
+          <u className="red">F</u>ourier <u className="orange">T</u>ransform{" "}
+          <u className="yellow">I</u>nfra<u className="green">R</u>ed
+          <span className="teal">-</span>
+          <u className="blue">S</u>cientific <u className="indigo">I</u>
+          nstrument
+          <u className="purple">S</u>imulator
+        </h2>
 
-      <br />
+        <p>Please use the navigation bar above to explore the application!</p>
+      </div>
 
-      <p>Please use the navigation bar above to explore the application!</p>
-
-      <br />
-
-      <Switch checked={checked} onChange={handleChange} />
-      <p>Hide this popup when opened?</p>
+      <div id="landing-checkbox">
+        <Checkbox checked={checked} onChange={handleChange} size="small" />
+        <p>Hide popup on refresh?</p>
+      </div>
     </div>
   );
 
   return (
     <div>
-      { isMenu &&
-        <button className="popup-button dropdown-items" onClick={handleClickOpen}>
+      {isMenu && (
+        <button
+          className="popup-button dropdown-items"
+          onClick={handleClickOpen}
+        >
           Landing Page
         </button>
-      }
+      )}
       <Dialog
         className="welcome"
         open={welcomeOpen}
