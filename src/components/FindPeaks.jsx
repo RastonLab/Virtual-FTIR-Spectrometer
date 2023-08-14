@@ -20,6 +20,8 @@ import { generateAbsorbance } from "../dictionaries/dataFunctions";
 // mui
 import Box from "@mui/material/Box";
 import TextField from "@mui/material/TextField";
+import Slider from "@mui/material/Slider";
+
 
 import { useDispatch, useSelector } from "react-redux";
 
@@ -33,6 +35,11 @@ export default function FindPeaks() {
 
   const handleClose = () => {
     setOpen(false);
+  };
+
+  const handleSliderChange = (event, newValue) => {
+    setLowerBound(newValue[0]);
+    setUpperBound(newValue[1]);
   };
 
   const { backgroundData } = useSelector((store) => store.backgroundData);
@@ -63,6 +70,32 @@ export default function FindPeaks() {
         sampleWaveMax,
       ])
     );
+  }
+
+  const checkThresholdRange = () => {
+    if (threshold < 0.0001) {
+      setThreshold(0.0001);
+    } else if (threshold > 5) {
+      setThreshold(5);
+    }
+  }
+
+  const checkWaveNumRange = () => {
+    
+    if (lowerBound > upperBound) {
+      const temp = lowerBound;
+      setLowerBound(upperBound);
+      setUpperBound(temp);
+    }
+
+    if (lowerBound < sampleWaveMin) {
+      setLowerBound(sampleWaveMin);
+    }
+
+    if (upperBound > sampleWaveMax) {
+      setUpperBound(sampleWaveMax);
+    }
+
   }
 
   React.useEffect(() => {
@@ -120,11 +153,12 @@ export default function FindPeaks() {
                 Too Many Data Points Selected, Please Narrow Your Range to Less Than 25000 Data Points
               </h3>
             }
+
             <div className="absorb-row">
               {/* Lower Bound Box */}
               <Box
                 sx={{
-                  "& .MuiTextField-root": { m: 1, width: "25ch" },
+                  "& .MuiTextField-root": { m: 1, width: "20ch" },
                 }}
                 noValidate
                 autoComplete="off"
@@ -138,6 +172,7 @@ export default function FindPeaks() {
                   onChange={(e) => {
                     setLowerBound(e.target.value);
                   }}
+                  onBlur={checkWaveNumRange}
                   InputProps={{
                     inputProps: {
                       min: absorbWaveMin,
@@ -148,11 +183,25 @@ export default function FindPeaks() {
                 />
               </Box>
               {/* End Lower Bound Box */}
+
+              <Box>
+              <Slider
+                sx={{ minWidth: "150px" }}
+                value={[
+                  lowerBound === "" ? sampleWaveMin : lowerBound,
+                  upperBound === "" ? sampleWaveMax : upperBound,
+                ]}
+                min={sampleWaveMin}
+                max={sampleWaveMax}
+                onChange={handleSliderChange}
+                aria-labelledby="input-slider"
+              />
+              </Box>
       
               {/* Lower Upper Box */}
               <Box
                 sx={{
-                  "& .MuiTextField-root": { m: 1, width: "25ch" },
+                  "& .MuiTextField-root": { m: 1, width: "20ch" },
                 }}
                 noValidate
                 autoComplete="off"
@@ -166,6 +215,7 @@ export default function FindPeaks() {
                   onChange={(e) => {
                     setUpperBound(e.target.value);
                   }}
+                  onBlur={checkWaveNumRange}
                   InputProps={{
                     inputProps: {
                       min: absorbWaveMin,
@@ -179,7 +229,7 @@ export default function FindPeaks() {
             {/* Threshold Input */}
             <Box
               sx={{
-                "& .MuiTextField-root": { m: 1, width: "25ch" },
+                "& .MuiTextField-root": { m: 1, width: "15ch" },
               }}
               noValidate
               autoComplete="off"
@@ -194,10 +244,11 @@ export default function FindPeaks() {
                 onChange={(e) => {
                   setThreshold(e.target.value);
                 }}
+                onBlur={checkThresholdRange}
                 InputProps={{
                   inputProps: {
                     min: 0.0001,
-                    max: 10,
+                    max: 5,
                     step: 0.0001,
                   },
                 }}
