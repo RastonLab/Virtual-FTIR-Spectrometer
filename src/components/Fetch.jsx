@@ -183,7 +183,7 @@ export default function Fetch({
       const response = await fetch(fetchURL, {
         method: "POST",
         headers: {
-          "content-type": "application/json",
+          "Content-Type": "application/json",
         },
         body: body,
       });
@@ -201,7 +201,9 @@ export default function Fetch({
 
               // Only navigate to Instrument Window when !devMode
               devMode ? console.log("devMode") : nav("/instrument", -1);
-              devMode ? console.log("no amination") : animateCornerCube(scan / 2, OPD[resolution].time * 2);
+              devMode
+                ? console.log("no amination")
+                : animateCornerCube(scan / 2, OPD[resolution].time * 2);
 
               // Delays the appearance of generated data
               sleepID = setTimeout(() => {
@@ -215,7 +217,9 @@ export default function Fetch({
 
               // Only navigate to Instrument Window when !devMode
               devMode ? console.log("devMode") : nav("/instrument", -1);
-              devMode ? console.log("no amination") : animateCornerCube(scan / 2, OPD[resolution].time * 2);
+              devMode
+                ? console.log("no amination")
+                : animateCornerCube(scan / 2, OPD[resolution].time * 2);
 
               // Delays the appearance of generated data
               sleepID = setTimeout(() => {
