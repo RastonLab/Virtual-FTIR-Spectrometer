@@ -22,7 +22,6 @@ import Box from "@mui/material/Box";
 import TextField from "@mui/material/TextField";
 import Slider from "@mui/material/Slider";
 
-
 import { useDispatch, useSelector } from "react-redux";
 
 export default function FindPeaks() {
@@ -41,24 +40,17 @@ export default function FindPeaks() {
     setLowerBound(newValue[0]);
     setUpperBound(newValue[1]);
   };
-
+  
+  const { peaksData } = useSelector((store) => store.peaksData);
   const { backgroundData } = useSelector((store) => store.backgroundData);
   const { sampleData, sampleWaveMin, sampleWaveMax } = useSelector(
     (store) => store.sampleData
   );
-  const { absorbanceData, absorbWaveMin, absorbWaveMax } = useSelector((store) => store.absorbanceData);
-  const { peaksData } = useSelector((store) => store.peaksData);
+  const { absorbanceData, absorbWaveMin, absorbWaveMax } = useSelector(
+    (store) => store.absorbanceData
+  );
 
   const dispatch = useDispatch();
-
-  const { fetching } = useSelector((store) => store.progress);
-  const { error, errorText } = useSelector((store) => store.error);
-
-  const [threshold, setThreshold] = useState(0);
-  const [lowerBound, setLowerBound] = useState(sampleWaveMin);
-  const [upperBound, setUpperBound] = useState(sampleWaveMax);
-  const [dataPoints, setDataPoints]  = useState();
-  const [tooManyPoints, setTooManyPoints] = useState(true);
 
   // if the correct data exists, calculate the absorbance data
   if (sampleData && backgroundData && !absorbanceData) {
@@ -71,6 +63,15 @@ export default function FindPeaks() {
       ])
     );
   }
+
+  const { fetching } = useSelector((store) => store.progress);
+  const { error, errorText } = useSelector((store) => store.error);
+
+  const [threshold, setThreshold] = useState(0);
+  const [lowerBound, setLowerBound] = useState(sampleWaveMin);
+  const [upperBound, setUpperBound] = useState(sampleWaveMax);
+  const [dataPoints, setDataPoints]  = useState();
+  const [tooManyPoints, setTooManyPoints] = useState(true);
 
   const checkThresholdRange = () => {
     if (threshold < 0.0001) {
@@ -100,8 +101,6 @@ export default function FindPeaks() {
 
   React.useEffect(() => {
     if (absorbanceData) {
-      console.log(lowerBound);
-      console.log(upperBound);
 
       let startIndex = absorbanceData.x.findIndex((element) => {
         return element >= lowerBound;
@@ -168,7 +167,7 @@ export default function FindPeaks() {
                   label="Lower Domain Bound"
                   placeholder="Enter Lower Bound"
                   type="number"
-                  value={lowerBound}
+                  value={lowerBound ? lowerBound : sampleWaveMin}
                   onChange={(e) => {
                     setLowerBound(e.target.value);
                   }}
@@ -188,8 +187,8 @@ export default function FindPeaks() {
               <Slider
                 sx={{ minWidth: "150px" }}
                 value={[
-                  lowerBound === "" ? sampleWaveMin : lowerBound,
-                  upperBound === "" ? sampleWaveMax : upperBound,
+                  lowerBound ? lowerBound : sampleWaveMin,
+                  upperBound ? upperBound : sampleWaveMax,
                 ]}
                 min={sampleWaveMin}
                 max={sampleWaveMax}
@@ -211,7 +210,7 @@ export default function FindPeaks() {
                   label="Upper Domain Bound"
                   placeholder="Enter Upper Bound"
                   type="number"
-                  value={upperBound}
+                  value={upperBound ? upperBound : sampleWaveMax}
                   onChange={(e) => {
                     setUpperBound(e.target.value);
                   }}
