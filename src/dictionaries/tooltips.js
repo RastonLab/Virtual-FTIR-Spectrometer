@@ -7,6 +7,7 @@ import AR_ZnSe_graph from "../images/graphs/AR_ZnSe_py.png";
 import blackbody_graph from "../images/graphs/Blackbody.png";
 import CaF2_graph from "../images/graphs/CaF2_py.png";
 import InSb_graph from "../images/graphs/InSb_py.png";
+import interferometer_graph from "../images/graphs/Interferometer.png";
 import MCT_graph from "../images/graphs/MCT_py.png";
 import source_formula from "../images/other/Source_Formula.png";
 import ZnSe_graph from "../images/graphs/ZnSe_py.png";
@@ -308,16 +309,27 @@ export const tooltips = {
         </p>
 
         <p>
-          The Fourier transform of an interferogram gives rise to a frequency
-          domain spectrum. For the laser beam, the spectrum is a single peak at
-          the resonant frequency of the laser (632.82 nm or 15802 cm
-          <sup>-1</sup>). For the infrared beam, the spectrum typically consists
-          of many peaks at the resonance frequency of the molecule. In this gas
-          phase FTIR SIS, the resonance frequencies correspond to the spacing
-          between quantized rotational-vibrational energy levels. Note that the
-          HeNe laser allows for a very accurate and precise determination of the
-          OPD, which results in precise determination of rotational-vibrational
-          energy level spacings.
+          The Fourier transform (FT) of an interferogram gives rise to a
+          frequency domain spectrum. For the laser beam, the spectrum is a
+          single peak at the resonant frequency of the laser (632.82 nm or 15802
+          cm<sup>-1</sup>). For the infrared beam, the sample spectrum consists
+          of many peaks at the resonance frequencies of the molecule, whose
+          corresponding energy equals the spacing between quantized
+          rotational-vibrational energy levels. The following plot shows an
+          interferogram (left) of a 0.01 bar H<sub>2</sub>O sample in the gas
+          cell, along with its associated frequency domain spectrum (right).
+        </p>
+
+        <img
+          className="tooltip-graph"
+          src={interferometer_graph}
+          alt="a graph showing the results of the interferometer"
+        />
+
+        <p>
+          Note that the HeNe laser allows for a very accurate and precise
+          determination of the OPD, which results in precise determination of
+          rotational-vibrational energy level spacings.
         </p>
       </div>
     ),
