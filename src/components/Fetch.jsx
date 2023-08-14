@@ -60,12 +60,25 @@ export default function Fetch({
     zeroFill,
   } = useSelector((store) => store.parameter);
 
+  // cancel fetch
+  // https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch#aborting_a_fetch
+  const controller = new AbortController();
+  const signal = controller.signal;
+  const cancelButton = document.querySelector("#cancel-scan-button");
+
+  if (cancelButton) {
+    cancelButton.addEventListener("click", () => {
+      controller.abort();
+      console.log("Fetch aborted");
+    });
+  }
+
   let nav = useNavigate();
   if (devMode) {
     nav = (route, num) => {};
   }
 
-  const fetchLinode = async () => {
+  const fetchServer = async () => {
     // remove any errors (if existing) and start a progress spinner
     dispatch(setError([false, null]));
     dispatch(setProgress([true, true, false]));
@@ -181,6 +194,7 @@ export default function Fetch({
     // checkParam succeeded and build message body, send request to api
     try {
       const response = await fetch(fetchURL, {
+        signal,
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -254,23 +268,16 @@ export default function Fetch({
       // error occurred when reaching out to server
       let errorMessage =
         "We could not collect your data at this time. Please wait a few moments and try again.";
-      console.log(error);
 
-      // switch (error.message) {
-      //   case "Failed to fetch":
-      //     errorMessage = "We could not collect your data at this time. Please wait a few moments and try again.";
-      //     break;
-      //   default:
-      //     errorMessage = "unhandled error";
-      //     break;
-      // }
       dispatch(setProgress(false, false, false));
       dispatch(setError([true, errorMessage]));
+
+      console.error(`Fetch error: ${error.message}`);
     }
   };
 
   return (
-    <button className={buttonStyle} disabled={fetching} onClick={fetchLinode}>
+    <button className={buttonStyle} disabled={fetching} onClick={fetchServer}>
       {buttonText}
     </button>
   );
