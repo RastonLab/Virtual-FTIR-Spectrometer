@@ -4,6 +4,9 @@ import React, { useState } from "react";
 import Fetch from "./Fetch";
 import Spinner from "./Spinner";
 import { AbsorbancePlotly } from "./AbsorbancePlotly";
+import CloseButton from "./CloseButton";
+
+import { Dialog } from "@mui/material";
 
 // constants
 import { FIND_PEAKS } from "../dictionaries/constants";
@@ -22,6 +25,16 @@ import { useDispatch, useSelector } from "react-redux";
 
 export default function FindPeaks() {
 
+  const [open, setOpen] = useState(false);
+
+  const handleClickOpen = () => {
+    setOpen(true);
+  };
+
+  const handleClose = () => {
+    setOpen(false);
+  };
+
   const { backgroundData } = useSelector((store) => store.backgroundData);
   const { sampleData, sampleWaveMin, sampleWaveMax } = useSelector(
     (store) => store.sampleData
@@ -37,6 +50,8 @@ export default function FindPeaks() {
   const [threshold, setThreshold] = useState(0);
   const [lowerBound, setLowerBound] = useState(sampleWaveMin);
   const [upperBound, setUpperBound] = useState(sampleWaveMax);
+  const [dataPoints, setDataPoints]  = useState();
+  const [tooManyPoints, setTooManyPoints] = useState(true);
 
   // if the correct data exists, calculate the absorbance data
   if (sampleData && backgroundData && !absorbanceData) {
@@ -50,152 +65,208 @@ export default function FindPeaks() {
     );
   }
 
+  React.useEffect(() => {
+    if (absorbanceData) {
+      console.log(lowerBound);
+      console.log(upperBound);
+
+      let startIndex = absorbanceData.x.findIndex((element) => {
+        return element >= lowerBound;
+      });
+  
+      if (startIndex === -1) {
+        startIndex = 0;
+      }
+  
+      let endIndex = absorbanceData.x.findIndex((element) => {
+        return element >= upperBound;
+      });
+  
+      if (endIndex === -1) {
+        endIndex = absorbanceData.x.length - 1;
+      }
+  
+      setDataPoints(absorbanceData.x.slice(startIndex, endIndex + 1).length);
+      console.log(dataPoints);
+  
+      if (dataPoints > 25000) {
+        setTooManyPoints(true);
+      } else {
+        setTooManyPoints(false);
+      }
+    }
+      
+  }, [lowerBound, upperBound, absorbanceData, dataPoints])
+
   if (absorbanceData) {
     return (
       <div>
-        <h1>Find Peaks</h1>
-        <div className="absorb-row">
-          <AbsorbancePlotly />
-        </div>
-        <div className="absorb-col">
+        <button className="popup-button dropdown-items" onClick={handleClickOpen}>
+          Find Peaks
+        </button>
+        <Dialog className="popup" onClose={handleClose} open={open}>
+          <CloseButton id="customized-dialog-title" onClose={handleClose}>
+            <h1>Find Peaks</h1>
+          </CloseButton>
           <div className="absorb-row">
-            {/* Lower Bound Box */}
-            <Box
-              sx={{
-                "& .MuiTextField-root": { m: 1, width: "25ch" },
-              }}
-              noValidate
-              autoComplete="off"
-            >
-              <TextField
-                id="standard-number"
-                label="Lower Domain Bound"
-                placeholder="Enter Lower Bound"
-                type="number"
-                value={lowerBound}
-                onChange={(e) => {
-                  setLowerBound(e.target.value);
-                }}
-                InputProps={{
-                  inputProps: {
-                    min: absorbWaveMin,
-                    max: absorbWaveMax,
-                    // step: 0.0001,
-                  },
-                }}
-              />
-            </Box>
-            {/* End Lower Bound Box */}
-    
-            {/* Lower Upper Box */}
-            <Box
-              sx={{
-                "& .MuiTextField-root": { m: 1, width: "25ch" },
-              }}
-              noValidate
-              autoComplete="off"
-            >
-              <TextField
-                id="standard-number"
-                label="Upper Domain Bound"
-                placeholder="Enter Upper Bound"
-                type="number"
-                value={upperBound}
-                onChange={(e) => {
-                  setUpperBound(e.target.value);
-                }}
-                InputProps={{
-                  inputProps: {
-                    min: absorbWaveMin,
-                    max: absorbWaveMax,
-                  },
-                }}
-              />
-            </Box>
-            {/* End Upper Bound Box */}
+            <AbsorbancePlotly />
           </div>
-          {/* Threshold Input */}
-          <Box
-            sx={{
-              "& .MuiTextField-root": { m: 1, width: "25ch" },
-            }}
-            noValidate
-            autoComplete="off"
-            className="absorb-row"
-          >
-            <TextField
-              id="standard-number"
-              label="Threshold"
-              placeholder="Enter threshold "
-              type="number"
-              value={threshold}
-              onChange={(e) => {
-                setThreshold(e.target.value);
+          <div className="absorb-col">
+            <h3>
+              Current Number of Data Points Selected: {dataPoints}
+            </h3>
+            { tooManyPoints && 
+              <h3>
+                Too Many Data Points Selected, Please Narrow Your Range to Less Than 25000 Data Points
+              </h3>
+            }
+            <div className="absorb-row">
+              {/* Lower Bound Box */}
+              <Box
+                sx={{
+                  "& .MuiTextField-root": { m: 1, width: "25ch" },
+                }}
+                noValidate
+                autoComplete="off"
+              >
+                <TextField
+                  id="standard-number"
+                  label="Lower Domain Bound"
+                  placeholder="Enter Lower Bound"
+                  type="number"
+                  value={lowerBound}
+                  onChange={(e) => {
+                    setLowerBound(e.target.value);
+                  }}
+                  InputProps={{
+                    inputProps: {
+                      min: absorbWaveMin,
+                      max: absorbWaveMax,
+                      // step: 0.0001,
+                    },
+                  }}
+                />
+              </Box>
+              {/* End Lower Bound Box */}
+      
+              {/* Lower Upper Box */}
+              <Box
+                sx={{
+                  "& .MuiTextField-root": { m: 1, width: "25ch" },
+                }}
+                noValidate
+                autoComplete="off"
+              >
+                <TextField
+                  id="standard-number"
+                  label="Upper Domain Bound"
+                  placeholder="Enter Upper Bound"
+                  type="number"
+                  value={upperBound}
+                  onChange={(e) => {
+                    setUpperBound(e.target.value);
+                  }}
+                  InputProps={{
+                    inputProps: {
+                      min: absorbWaveMin,
+                      max: absorbWaveMax,
+                    },
+                  }}
+                />
+              </Box>
+              {/* End Upper Bound Box */}
+            </div>
+            {/* Threshold Input */}
+            <Box
+              sx={{
+                "& .MuiTextField-root": { m: 1, width: "25ch" },
               }}
-              InputProps={{
-                inputProps: {
-                  min: 0.0001,
-                  max: 10,
-                  step: 0.0001,
-                },
+              noValidate
+              autoComplete="off"
+              className="absorb-row"
+            >
+              <TextField
+                id="standard-number"
+                label="Threshold"
+                placeholder="Enter threshold "
+                type="number"
+                value={threshold}
+                onChange={(e) => {
+                  setThreshold(e.target.value);
+                }}
+                InputProps={{
+                  inputProps: {
+                    min: 0.0001,
+                    max: 10,
+                    step: 0.0001,
+                  },
+                }}
+              />
+            </Box>
+            {/* End Threshold Input */}
+      
+            {/* Fetch Peaks */}
+            <Fetch
+              type="find_peaks"
+              params={{
+                x: absorbanceData.x,
+                y: absorbanceData.y,
+                lowerBound: lowerBound,
+                upperBound: upperBound,
+                threshold: threshold,
               }}
+              fetchURL={FIND_PEAKS}
+              buttonText={"Find Peaks"}
+              buttonStyle={"button"}
+              tooManyPoints = {tooManyPoints}
             />
-          </Box>
-          {/* End Threshold Input */}
-    
-          {/* Fetch Peaks */}
-          <Fetch
-            type="find_peaks"
-            params={{
-              x: absorbanceData.x,
-              y: absorbanceData.y,
-              lowerBound: lowerBound,
-              upperBound: upperBound,
-              threshold: threshold,
-            }}
-            fetchURL={FIND_PEAKS}
-            buttonText={"Find Peaks"}
-            buttonStyle={"button"}
-          />
-          {/* End Fetch Peaks */}
-        </div>
-    
-        {/* Displays data from the server if there were no errors */}
-        <div className="absorb-col">
-          {/* Data Display */}
-          {fetching && <Spinner variant="indeterminate" size={100} />}
-          {peaksData && !fetching && !error && (
-            <div id="data">
-              <h1>Absorbance Peaks</h1>
-              <div className="display">
-                {Object.keys(peaksData.peaks).map((key) => {
-                  return (
-                    <p
-                      id="peaks"
-                      key={key}
-                    >{`Peak: ${key} Intensity: ${peaksData.peaks[key]}`}</p>
-                  );
-                })}
+            {/* End Fetch Peaks */}
+          </div>
+      
+          {/* Displays data from the server if there were no errors */}
+          <div className="absorb-col">
+            {/* Data Display */}
+            {fetching && <Spinner variant="indeterminate" size={100} />}
+            {peaksData && !fetching && !error && (
+              <div id="data">
+                <h1>Absorbance Peaks</h1>
+                <div className="display">
+                  {Object.keys(peaksData.peaks).map((key) => {
+                    return (
+                      <p
+                        id="peaks"
+                        key={key}
+                      >{`Peak: ${key} Intensity: ${peaksData.peaks[key]}`}</p>
+                    );
+                  })}
+                </div>
               </div>
+            )}
+          </div>
+          {/* End Data Display */}
+      
+          {/* Error Display */}
+          {error && (
+            <div id="error">
+              <p style={{ fontSize: 30 }}>{errorText}</p>
             </div>
           )}
-        </div>
-        {/* End Data Display */}
-    
-        {/* Error Display */}
-        {error && (
-          <div id="error">
-            <p style={{ fontSize: 30 }}>{errorText}</p>
-          </div>
-        )}
-        {/* End Error Display */}
+          {/* End Error Display */}
+        </Dialog>
       </div>
     )
   } else {
     return (
       <div>
-        <h1>Find Peaks</h1>
-        <h2>Please generate both a sample and background sample and return here</h2>
+        <button className="popup-button dropdown-items" onClick={handleClickOpen}>
+          Find Peaks
+        </button>
+        <Dialog className="popup" onClose={handleClose} open={open}>
+          <CloseButton id="customized-dialog-title" onClose={handleClose}>
+            <h1>Find Peaks</h1>
+          </CloseButton>
+          <h2>Please generate both a sample and background sample and return here</h2>
+        </Dialog>
       </div>
     )
   }

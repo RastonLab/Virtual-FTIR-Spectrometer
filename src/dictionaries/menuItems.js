@@ -88,9 +88,7 @@ export const menuItems = [
       },
       {
         label: "Find Peaks",
-        button: true,
-        title: "",
-        text: <FindPeaks />,
+        component: <FindPeaks />,
       },
     ],
   },
