@@ -216,10 +216,10 @@ export default function Fetch({
               dispatch(setSampleData([null, null, null]));
 
               // Only navigate to Instrument Window when !devMode
-              devMode ? console.log("devMode") : nav("/instrument", -1);
-              devMode
-                ? console.log("no animation")
-                : animateCornerCube(scan / 2, OPD[resolution].time * 2);
+              if (!devMode) {
+                nav("/instrument", -1);
+                animateCornerCube(scan / 2, OPD[resolution].time * 2);
+              }
 
               // Delays the appearance of generated data
               sleepID = setTimeout(() => {
@@ -232,10 +232,10 @@ export default function Fetch({
               dispatch(setBackgroundData([null, null, null]));
 
               // Only navigate to Instrument Window when !devMode
-              devMode ? console.log("devMode") : nav("/instrument", -1);
-              devMode
-                ? console.log("no animation")
-                : animateCornerCube(scan / 2, OPD[resolution].time * 2);
+              if (!devMode) {
+                nav("/instrument", -1);
+                animateCornerCube(scan / 2, OPD[resolution].time * 2);
+              }
 
               // Delays the appearance of generated data
               sleepID = setTimeout(() => {
@@ -248,7 +248,7 @@ export default function Fetch({
               dispatch(setPeaksData(data));
               break;
             default:
-              console.log(
+              console.error(
                 `Invalid Request Type. Received: "${type}" expected sample, background, or find_peaks`
               );
               break;
@@ -256,7 +256,6 @@ export default function Fetch({
         }
         // display error message
         else {
-          console.log("not success");
           dispatch(setProgress(false, false, false));
           dispatch(setError([true, String(data.text)]));
         }

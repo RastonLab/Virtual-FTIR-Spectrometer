@@ -111,7 +111,6 @@ export default function FindPeaks() {
       }
 
       setDataPoints(absorbanceData.x.slice(startIndex, endIndex + 1).length);
-      console.log(dataPoints);
 
       if (dataPoints > 25000) {
         setTooManyPoints(true);
