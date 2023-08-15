@@ -239,7 +239,7 @@ export default function FindPeaks() {
                 onBlur={checkThresholdRange}
                 InputProps={{
                   inputProps: {
-                    min: 0.0001,
+                    min: 0,
                     max: 5,
                     step: 0.0001,
                   },
