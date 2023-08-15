@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 
 // constants
 import { OPD } from "../dictionaries/constants";
@@ -40,7 +40,7 @@ export default function Fetch({
   fetchURL,
   buttonText,
   buttonStyle,
-  tooManyPoints = false
+  tooManyPoints = false,
 }) {
   const dispatch = useDispatch();
 
@@ -71,13 +71,16 @@ export default function Fetch({
   const controller = new AbortController();
   const signal = controller.signal;
 
-  if (document.querySelector("#cancel-scan-button")) {
-    document
-      .querySelector("#cancel-scan-button")
-      .addEventListener("click", () => {
-        controller.abort();
-      });
-  }
+  // waiting for entire page to render to fix issue where first cancel on load did not work
+  useEffect(() => {
+    if (document.querySelector("#cancel-scan-button")) {
+      document
+        .querySelector("#cancel-scan-button")
+        .addEventListener("click", () => {
+          controller.abort();
+        });
+    }
+  });
 
   const fetchServer = async () => {
     // remove any errors (if existing) and start a progress spinner
@@ -286,7 +289,11 @@ export default function Fetch({
   };
 
   return (
-    <button className={buttonStyle} disabled={fetching || tooManyPoints} onClick={fetchServer}>
+    <button
+      className={buttonStyle}
+      disabled={fetching || tooManyPoints}
+      onClick={fetchServer}
+    >
       {buttonText}
     </button>
   );
