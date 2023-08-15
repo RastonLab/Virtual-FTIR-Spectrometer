@@ -1,33 +1,27 @@
 import React, { useState } from "react";
 
 // components
-import Fetch from "./Fetch";
-import Spinner from "./Spinner";
 import { AbsorbancePlotly } from "./AbsorbancePlotly";
 import CloseButton from "./CloseButton";
-
-import { Dialog } from "@mui/material";
+import Fetch from "./Fetch";
+import Spinner from "./Spinner";
 
 // constants
 import { FIND_PEAKS } from "../dictionaries/constants";
 
+// dictionaries
+import { generateAbsorbance } from "../dictionaries/dataFunctions";
+
+// redux
+import { useDispatch, useSelector } from "react-redux";
+
 // redux slice
 import { setAbsorbanceData } from "../redux/absorbanceDataSlice";
 
-// helper function
-import { generateAbsorbance } from "../dictionaries/dataFunctions";
-
 // mui
-import Box from "@mui/material/Box";
-import TextField from "@mui/material/TextField";
-import Slider from "@mui/material/Slider";
-
-import { useDispatch, useSelector } from "react-redux";
-import { Dialog } from "@mui/material";
-import CloseButton from "./CloseButton";
+import { Box, Dialog, Slider, TextField } from "@mui/material";
 
 export default function FindPeaks() {
-
   const [open, setOpen] = useState(false);
 
   const handleClickOpen = () => {
@@ -42,7 +36,7 @@ export default function FindPeaks() {
     setLowerBound(newValue[0]);
     setUpperBound(newValue[1]);
   };
-  
+
   const { peaksData } = useSelector((store) => store.peaksData);
   const { backgroundData } = useSelector((store) => store.backgroundData);
   const { sampleData, sampleWaveMin, sampleWaveMax } = useSelector(
@@ -71,7 +65,7 @@ export default function FindPeaks() {
   const [threshold, setThreshold] = useState(0);
   const [lowerBound, setLowerBound] = useState(sampleWaveMin);
   const [upperBound, setUpperBound] = useState(sampleWaveMax);
-  const [dataPoints, setDataPoints]  = useState();
+  const [dataPoints, setDataPoints] = useState();
   const [tooManyPoints, setTooManyPoints] = useState(true);
 
   const checkThresholdRange = () => {
@@ -80,10 +74,9 @@ export default function FindPeaks() {
     } else if (threshold > 5) {
       setThreshold(5);
     }
-  }
+  };
 
   const checkWaveNumRange = () => {
-    
     if (lowerBound > upperBound) {
       const temp = lowerBound;
       setLowerBound(upperBound);
@@ -97,44 +90,44 @@ export default function FindPeaks() {
     if (upperBound > sampleWaveMax) {
       setUpperBound(sampleWaveMax);
     }
-
-  }
+  };
 
   React.useEffect(() => {
     if (absorbanceData) {
-
       let startIndex = absorbanceData.x.findIndex((element) => {
         return element >= lowerBound;
       });
-  
+
       if (startIndex === -1) {
         startIndex = 0;
       }
-  
+
       let endIndex = absorbanceData.x.findIndex((element) => {
         return element >= upperBound;
       });
-  
+
       if (endIndex === -1) {
         endIndex = absorbanceData.x.length - 1;
       }
-  
+
       setDataPoints(absorbanceData.x.slice(startIndex, endIndex + 1).length);
       console.log(dataPoints);
-  
+
       if (dataPoints > 25000) {
         setTooManyPoints(true);
       } else {
         setTooManyPoints(false);
       }
     }
-      
-  }, [lowerBound, upperBound, absorbanceData, dataPoints])
+  }, [lowerBound, upperBound, absorbanceData, dataPoints]);
 
   if (absorbanceData) {
     return (
       <div>
-        <button className="popup-button dropdown-items" onClick={handleClickOpen}>
+        <button
+          className="popup-button dropdown-items"
+          onClick={handleClickOpen}
+        >
           Find Peaks
         </button>
         <Dialog className="popup" onClose={handleClose} open={open}>
@@ -145,14 +138,13 @@ export default function FindPeaks() {
             <AbsorbancePlotly />
           </div>
           <div className="absorb-col">
-            <h3>
-              Current Number of Data Points Selected: {dataPoints}
-            </h3>
-            { tooManyPoints && 
+            <h3>Current Number of Data Points Selected: {dataPoints}</h3>
+            {tooManyPoints && (
               <h3>
-                Too Many Data Points Selected, Please Narrow Your Range to Less Than 25000 Data Points
+                Too Many Data Points Selected, Please Narrow Your Range to Less
+                Than 25000 Data Points
               </h3>
-            }
+            )}
 
             <div className="absorb-row">
               {/* Lower Bound Box */}
@@ -185,19 +177,19 @@ export default function FindPeaks() {
               {/* End Lower Bound Box */}
 
               <Box>
-              <Slider
-                sx={{ minWidth: "150px" }}
-                value={[
-                  lowerBound ? lowerBound : sampleWaveMin,
-                  upperBound ? upperBound : sampleWaveMax,
-                ]}
-                min={sampleWaveMin}
-                max={sampleWaveMax}
-                onChange={handleSliderChange}
-                aria-labelledby="input-slider"
-              />
+                <Slider
+                  sx={{ minWidth: "150px" }}
+                  value={[
+                    lowerBound ? lowerBound : sampleWaveMin,
+                    upperBound ? upperBound : sampleWaveMax,
+                  ]}
+                  min={sampleWaveMin}
+                  max={sampleWaveMax}
+                  onChange={handleSliderChange}
+                  aria-labelledby="input-slider"
+                />
               </Box>
-      
+
               {/* Lower Upper Box */}
               <Box
                 sx={{
@@ -255,7 +247,7 @@ export default function FindPeaks() {
               />
             </Box>
             {/* End Threshold Input */}
-      
+
             {/* Fetch Peaks */}
             <Fetch
               type="find_peaks"
@@ -269,11 +261,11 @@ export default function FindPeaks() {
               fetchURL={FIND_PEAKS}
               buttonText={"Find Peaks"}
               buttonStyle={"button"}
-              tooManyPoints = {tooManyPoints}
+              tooManyPoints={tooManyPoints}
             />
             {/* End Fetch Peaks */}
           </div>
-      
+
           {/* Displays data from the server if there were no errors */}
           <div className="absorb-col">
             {/* Data Display */}
@@ -295,7 +287,7 @@ export default function FindPeaks() {
             )}
           </div>
           {/* End Data Display */}
-      
+
           {/* Error Display */}
           {error && (
             <div id="error">
@@ -309,14 +301,19 @@ export default function FindPeaks() {
   } else {
     return (
       <div>
-        <button className="popup-button dropdown-items" onClick={handleClickOpen}>
+        <button
+          className="popup-button dropdown-items"
+          onClick={handleClickOpen}
+        >
           Find Peaks
         </button>
         <Dialog className="popup" onClose={handleClose} open={open}>
           <CloseButton id="customized-dialog-title" onClose={handleClose}>
             <h1>Find Peaks</h1>
           </CloseButton>
-          <h2>Please generate both a sample and background sample and return here</h2>
+          <h2>
+            Please generate both a sample and background sample and return here
+          </h2>
         </Dialog>
       </div>
     );
