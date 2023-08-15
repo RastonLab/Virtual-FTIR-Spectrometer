@@ -3,11 +3,10 @@ import React from "react";
 // components
 import { SamplePlotly } from "../components/SamplePlotly";
 import BackgroundPlotly from "../components/BackgroundPlotly";
-import Fetch from "../components/Fetch";
 import Spinner from "../components/Spinner";
 
 // constants
-import { BACKGROUND, PARAMETER_VALUE, SAMPLE } from "../dictionaries/constants";
+import { PARAMETER_VALUE } from "../dictionaries/constants";
 
 // dictionaries
 import { molecules } from "../dictionaries/molecule";
@@ -134,22 +133,6 @@ export default function ExperimentalSetup() {
               optionOneData={PARAMETER_VALUE.mediumVacuum}
               optionTwoData={PARAMETER_VALUE.mediumAir}
               store={medium}
-            />
-          </div>
-
-          {/* buttons to collect spectrum */}
-          <div className="fetch-zone">
-            <Fetch
-              type="background"
-              fetchURL={BACKGROUND}
-              buttonText={"Collect Background Spectrum"}
-              buttonStyle={"button"}
-            />
-            <Fetch
-              type="sample"
-              fetchURL={SAMPLE}
-              buttonText="Collect Sample Spectrum"
-              buttonStyle={"button"}
             />
           </div>
         </div>

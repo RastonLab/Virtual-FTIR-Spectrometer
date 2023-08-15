@@ -25,7 +25,6 @@ export default function Scan({ min, max, step, store }) {
   const dispatch = useDispatch();
 
   const makeEven = () => {
-    console.log(store);
     if (store % 2 !== 0) {
       if (store < max) {
         store++;
