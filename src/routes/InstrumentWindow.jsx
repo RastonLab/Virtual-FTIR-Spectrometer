@@ -58,7 +58,9 @@ export default function InstrumentWindow() {
     waveMin,
     window,
   } = useSelector((store) => store.parameter);
-  const { fetching, prefetch, postfetch } = useSelector((store) => store.progress);
+  const { fetching, prefetch, postfetch } = useSelector(
+    (store) => store.progress
+  );
   const { devMode } = useSelector((store) => store.devMode);
   const { lectureBottleInUse } = useSelector((store) => store.lectureBottle);
   const { backgroundData } = useSelector((store) => store.backgroundData);
@@ -77,7 +79,6 @@ export default function InstrumentWindow() {
 
   // find group id when SVG is clicked
   const handleClick = (event) => {
-    console.log(event.target.parentElement.id);
     if (!BAD_ID.includes(event.target.parentElement.id)) {
       setElement(event.target.parentElement.id);
       setToggled(!toggled);
@@ -138,11 +139,11 @@ export default function InstrumentWindow() {
             />
           </>
         )}
-        {!fetching && error && 
-          <div id="instrument-error" style={{display :"grid"}} >
+        {!fetching && error && (
+          <div id="instrument-error" style={{ display: "grid" }}>
             <p>{errorText}</p>
           </div>
-        }
+        )}
       </div>
 
       {/* MUI drawer that holds experimental setup */}

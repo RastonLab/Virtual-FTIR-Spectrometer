@@ -27,7 +27,11 @@ export default function CancelScan() {
   };
 
   return (
-    <button onClick={handleClick} disabled={!fetching}>
+    <button
+      id={"cancel-scan-button"}
+      onClick={handleClick}
+      disabled={!fetching}
+    >
       Cancel Scan
     </button>
   );

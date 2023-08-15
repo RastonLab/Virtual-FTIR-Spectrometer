@@ -4,6 +4,7 @@ import React from "react";
 import { OPD } from "../dictionaries/constants";
 
 // functions
+import { animateCornerCube } from "../functions/animation";
 import checkParams from "../functions/checkParams";
 
 // redux
@@ -21,7 +22,6 @@ import { setTimer } from "../redux/timerSlice";
 
 // router
 import { useNavigate } from "react-router-dom";
-import { animateCornerCube } from "../functions/animation";
 
 export let sleepID = 0;
 
@@ -40,6 +40,7 @@ export default function Fetch({
   fetchURL,
   buttonText,
   buttonStyle,
+  tooManyPoints = false
 }) {
   const dispatch = useDispatch();
 
@@ -65,7 +66,20 @@ export default function Fetch({
     nav = (route, num) => {};
   }
 
-  const fetchLinode = async () => {
+  // cancel fetch
+  // https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch#aborting_a_fetch
+  const controller = new AbortController();
+  const signal = controller.signal;
+
+  if (document.querySelector("#cancel-scan-button")) {
+    document
+      .querySelector("#cancel-scan-button")
+      .addEventListener("click", () => {
+        controller.abort();
+      });
+  }
+
+  const fetchServer = async () => {
     // remove any errors (if existing) and start a progress spinner
     dispatch(setError([false, null]));
     dispatch(setProgress([true, true, false]));
@@ -182,6 +196,7 @@ export default function Fetch({
     try {
       const response = await fetch(fetchURL, {
         method: "POST",
+        signal: signal,
         headers: {
           "Content-Type": "application/json",
         },
@@ -202,7 +217,7 @@ export default function Fetch({
               // Only navigate to Instrument Window when !devMode
               devMode ? console.log("devMode") : nav("/instrument", -1);
               devMode
-                ? console.log("no amination")
+                ? console.log("no animation")
                 : animateCornerCube(scan / 2, OPD[resolution].time * 2);
 
               // Delays the appearance of generated data
@@ -218,7 +233,7 @@ export default function Fetch({
               // Only navigate to Instrument Window when !devMode
               devMode ? console.log("devMode") : nav("/instrument", -1);
               devMode
-                ? console.log("no amination")
+                ? console.log("no animation")
                 : animateCornerCube(scan / 2, OPD[resolution].time * 2);
 
               // Delays the appearance of generated data
@@ -251,26 +266,27 @@ export default function Fetch({
         dispatch(setError([true, String(data.text)]));
       }
     } catch (error) {
-      // error occurred when reaching out to server
-      let errorMessage =
-        "We could not collect your data at this time. Please wait a few moments and try again.";
-      console.log(error);
-
-      // switch (error.message) {
-      //   case "Failed to fetch":
-      //     errorMessage = "We could not collect your data at this time. Please wait a few moments and try again.";
-      //     break;
-      //   default:
-      //     errorMessage = "unhandled error";
-      //     break;
-      // }
       dispatch(setProgress(false, false, false));
-      dispatch(setError([true, errorMessage]));
+
+      switch (error.name) {
+        case "AbortError":
+          dispatch(setError([true, "Scan canceled"]));
+          break;
+        default:
+          console.error(`Fetch error: ${error.message}`);
+
+          dispatch(
+            setError([
+              true,
+              "We could not collect your data at this time. Please wait a few moments and try again.",
+            ])
+          );
+      }
     }
   };
 
   return (
-    <button className={buttonStyle} disabled={fetching} onClick={fetchLinode}>
+    <button className={buttonStyle} disabled={fetching || tooManyPoints} onClick={fetchServer}>
       {buttonText}
     </button>
   );
