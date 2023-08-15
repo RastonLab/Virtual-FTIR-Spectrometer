@@ -40,6 +40,7 @@ export default function Fetch({
   fetchURL,
   buttonText,
   buttonStyle,
+  tooManyPoints = false
 }) {
   const dispatch = useDispatch();
 
@@ -285,7 +286,7 @@ export default function Fetch({
   };
 
   return (
-    <button className={buttonStyle} disabled={fetching} onClick={fetchServer}>
+    <button className={buttonStyle} disabled={fetching || tooManyPoints} onClick={fetchServer}>
       {buttonText}
     </button>
   );
