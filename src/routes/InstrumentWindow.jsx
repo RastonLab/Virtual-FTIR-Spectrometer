@@ -1,9 +1,8 @@
 import React, { useState, useEffect } from "react";
 
 // components
-import { Dialog, Drawer } from "@mui/material";
+import { Dialog } from "@mui/material";
 import CloseButton from "../components/CloseButton";
-import ExperimentalSetup from "../routes/ExperimentalSetup";
 import Main from "../images/InstrumentSVG";
 import Spinner from "../components/Spinner";
 
@@ -69,11 +68,6 @@ export default function InstrumentWindow() {
 
   const [toggled, setToggled] = useState(false);
   const [element, setElement] = useState();
-  const [drawerOpen, setDrawerOpen] = useState(false);
-
-  const toggleDrawer = () => {
-    setDrawerOpen(!drawerOpen);
-  };
 
   const delay = OPD[resolution].time * scan * 1000; // 1000 is to convert to milliseconds
 
@@ -118,9 +112,6 @@ export default function InstrumentWindow() {
       {/* button for settings, progress spinner */}
       <div id="instrument-spinner">
         <h1>Scan Progress</h1>
-        <button className="button" onClick={toggleDrawer}>
-          Experimental Setup
-        </button>
         {devMode && (
           <button className="button" onClick={() => animateCornerCube(1, 5)}>
             Animate MCC
@@ -145,18 +136,6 @@ export default function InstrumentWindow() {
           </div>
         )}
       </div>
-
-      {/* MUI drawer that holds experimental setup */}
-      <Drawer
-        anchor="right"
-        open={drawerOpen}
-        onClose={toggleDrawer}
-        className="settings"
-      >
-        <CloseButton onClose={toggleDrawer}>
-          <ExperimentalSetup />
-        </CloseButton>
-      </Drawer>
 
       {/* MUI Dialog popup that holds tooltip information */}
       {element && (
