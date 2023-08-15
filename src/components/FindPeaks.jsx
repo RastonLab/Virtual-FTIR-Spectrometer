@@ -62,7 +62,7 @@ export default function FindPeaks() {
   const { fetching } = useSelector((store) => store.progress);
   const { error, errorText } = useSelector((store) => store.error);
 
-  const [threshold, setThreshold] = useState(0);
+  const [threshold, setThreshold] = useState(0.01);
   const [lowerBound, setLowerBound] = useState(sampleWaveMin);
   const [upperBound, setUpperBound] = useState(sampleWaveMax);
   const [dataPoints, setDataPoints] = useState();
@@ -239,7 +239,7 @@ export default function FindPeaks() {
                 onBlur={checkThresholdRange}
                 InputProps={{
                   inputProps: {
-                    min: 0,
+                    min: 0.01,
                     max: 5,
                     step: 0.0001,
                   },
