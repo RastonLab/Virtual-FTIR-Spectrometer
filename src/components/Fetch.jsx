@@ -180,8 +180,6 @@ export default function Fetch({
       body = JSON.stringify({
         x: params.x.slice(startIndex, endIndex + 1),
         y: params.y.slice(startIndex, endIndex + 1),
-        lowerbound: params.lowerBound,
-        upperbound: params.upperBound,
         threshold: params.threshold,
       });
     } else {
