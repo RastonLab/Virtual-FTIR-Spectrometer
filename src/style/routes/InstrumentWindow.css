@@ -118,11 +118,6 @@ g {
   margin: 0;
 }
 
-/* size of SVG display popup */
-.MuiBox-root {
-  width: 100vw;
-}
-
 @media screen and (max-width: 700px) {
   .popup-tooltip h1 {
     font-size: 20px;

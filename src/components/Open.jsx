@@ -89,7 +89,6 @@ export const Open = () => {
     rawData = rawData.substring(index + 1);
 
     if (specType.includes("Sample") || specType.includes("Background")) {
-
       // Clears old Absorbance Data
       dispatch(setAbsorbanceData([null, null, null]));
 
@@ -169,9 +168,10 @@ export const Open = () => {
         Open
       </button>
       <Dialog className="popup" onClose={handleClose} open={open}>
-        <CloseButton id="customized-dialog-title" onClose={handleClose}>
-          <h2>Please Select Sample or Background File</h2>
-        </CloseButton>
+        <CloseButton id="customized-dialog-title" onClose={handleClose} />
+
+        <h2>Please Select Sample or Background File</h2>
+
         <div className="open-row">
           <label className=".custom-file-upload button">
             Select a File

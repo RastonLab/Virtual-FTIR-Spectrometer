@@ -15,7 +15,7 @@ import { styled } from "@mui/material/styles";
 import { useSelector } from "react-redux";
 
 //style
-import "../style/routes/SpectrumWindow.css";
+import "../style/routes/SpectraWindow.css";
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -66,7 +66,7 @@ const StyledTab = styled((props) => <Tab disableRipple {...props} />)(
  *   - Transmittance
  *   - Absorbance
  */
-export default function SpectrumWindow() {
+export default function SpectraWindow() {
   const { backgroundData } = useSelector((store) => store.backgroundData);
   const { sampleData } = useSelector((store) => store.sampleData);
   const [tabValue, setValue] = React.useState(0);
@@ -85,7 +85,7 @@ export default function SpectrumWindow() {
           variant="scrollable"
           scrollButtons
           allowScrollButtonsMobile
-          aria-label="Spectrum Window Selection"
+          aria-label="Spectra Window Selection"
         >
           <StyledTab label="Background Spectrum" />
           <StyledTab label="Sample Spectrum" />

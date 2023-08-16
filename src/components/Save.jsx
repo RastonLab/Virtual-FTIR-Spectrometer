@@ -104,13 +104,12 @@ export default function Save() {
 
     
     const element = document.createElement("a");
-    const file = new Blob([printData], {type: 'text/plain'});
+    const file = new Blob([printData], { type: "text/plain" });
     element.href = URL.createObjectURL(file);
     element.download = `${spectrumType} data.csv`;
     document.body.appendChild(element);
     element.click();
-
-  }
+  };
 
   return (
     <div>
@@ -118,9 +117,9 @@ export default function Save() {
         Save
       </button>
       <Dialog className="popup" onClose={handleClose} open={open}>
-        <CloseButton id="customized-dialog-title" onClose={handleClose}>
-          <h2>Save Data</h2>
-        </CloseButton>
+        <CloseButton id="customized-dialog-title" onClose={handleClose} />
+
+        <h2>Save Data</h2>
 
         {(sampleData || backgroundData) && (
           <h3>What data would you like to save?</h3>
@@ -133,26 +132,46 @@ export default function Save() {
         <div className="save-col">
           {sampleData && (
             <>
-              <button className="button" onClick={() => {print("sample")}}>
+              <button
+                className="button"
+                onClick={() => {
+                  print("sample");
+                }}
+              >
                 Sample Spectrum Data
               </button>
             </>
           )}
 
           {backgroundData && (
-            <button className="button" onClick={() => {print("background")}}>
+            <button
+              className="button"
+              onClick={() => {
+                print("background");
+              }}
+            >
               Background Spectrum Data
             </button>
           )}
 
           {sampleData && backgroundData && (
-            <button className="button" onClick={() => {print("transmittance")}}>
+            <button
+              className="button"
+              onClick={() => {
+                print("transmittance");
+              }}
+            >
               Transmittance Spectrum Data
             </button>
           )}
 
           {absorbanceData && (
-            <button className="button" onClick={() => {print("absorbance")}}>
+            <button
+              className="button"
+              onClick={() => {
+                print("absorbance");
+              }}
+            >
               Absorbance Spectrum Data
             </button>
           )}
