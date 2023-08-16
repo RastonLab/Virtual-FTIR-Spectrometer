@@ -184,7 +184,8 @@ export const Open = () => {
           </button>
         </div>
         <div className="open-row file">
-          <p className="content">{data}</p>
+          {/* The style allows for proper text formatting */}
+          <p className="content" style={{whiteSpace: "pre-wrap"}}>{data}</p> 
         </div>
       </Dialog>
     </div>
