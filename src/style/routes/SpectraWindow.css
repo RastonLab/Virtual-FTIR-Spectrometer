@@ -1,5 +1,4 @@
-/* ---------- spectrum-window ---------- */
-#spectrum {
+spectrum {
   display: flex;
   justify-content: center;
   align-items: center;
