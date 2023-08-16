@@ -1,5 +1,5 @@
 // components
-import SpectrumWindow from "../routes/SpectrumWindow";
+import SpectraWindow from "../routes/SpectraWindow";
 
 // graph imports
 import AR_CaF2_graph from "../images/graphs/AR_CaF2_py.png";
@@ -195,8 +195,8 @@ export const tooltips = {
   display: {
     text: (
       <div className="popup-tooltip popup-spectra">
-        <h1>Spectrum Display</h1>
-        <SpectrumWindow />
+        <h1>Spectra Display</h1>
+        <SpectraWindow />
       </div>
     ),
   },

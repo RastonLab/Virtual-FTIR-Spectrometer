@@ -40,7 +40,7 @@ The intended audience for this application is undergraduate chemistry students s
 
 **_TODO_**
 
-- Spectrum Window (plotted spectra)
+- Spectra Window (plotted spectra)
 
 **_TODO_**
 
@@ -100,10 +100,9 @@ SVG interactivity is similar to text. The major difference is the use of the [`s
 document.getElementById("id-1").style.transform = "translate(0px, 0px)";
 
 // this is good for moving a path
-document.getElementById("id-2").setAttribute(
-  "d",
-  "M20,230 Q40,205 50,230 T90,230"
-);
+document
+  .getElementById("id-2")
+  .setAttribute("d", "M20,230 Q40,205 50,230 T90,230");
 ```
 
 You may need to change the location of a group/element depending on a boolean:
@@ -114,8 +113,8 @@ export function componentLocation(isVisible) {
   const componentID = document.getElementById("component-1");
 
   lectureBottleInUse
-    ? componentID.setAttribute("d","")
-    : componentID.setAttribute("d","");
+    ? componentID.setAttribute("d", "")
+    : componentID.setAttribute("d", "");
 }
 ```
 
