@@ -50,10 +50,10 @@ export const menuItems = [
         ),
       },
       {
-        label: "Spectrum",
+        label: "Spectra",
         component: (
-          <Link to="/spectrum">
-            <div>Spectrum</div>
+          <Link to="/spectra">
+            <div>Spectra</div>
           </Link>
         ),
       },
@@ -72,7 +72,7 @@ export const menuItems = [
           <Fetch
             type="background"
             fetchURL={BACKGROUND}
-            buttonText={"Collect Background Spectra"}
+            buttonText={"Collect Background Spectrum"}
           />
         ),
       },
@@ -82,7 +82,7 @@ export const menuItems = [
           <Fetch
             type="sample"
             fetchURL={SAMPLE}
-            buttonText={"Collect Sample Spectra"}
+            buttonText={"Collect Sample Spectrum"}
           />
         ),
       },
