@@ -305,9 +305,10 @@ export default function FindPeaks() {
           Find Peaks
         </button>
         <Dialog className="popup" onClose={handleClose} open={open}>
-          <CloseButton id="customized-dialog-title" onClose={handleClose}>
-            <h1>Find Peaks</h1>
-          </CloseButton>
+          <CloseButton id="customized-dialog-title" onClose={handleClose} />
+
+          <h1>Find Peaks</h1>
+
           <h2>
             Please generate both a sample and background sample and return here
           </h2>
