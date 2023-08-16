@@ -67,22 +67,22 @@ export const menuItems = [
     label: "Measure",
     submenu: [
       {
-        label: "Collect Background Sample",
+        label: "Collect Background",
         component: (
           <Fetch
             type="background"
             fetchURL={BACKGROUND}
-            buttonText={"Collect Background Spectrum"}
+            buttonText={"Collect Background Spectra"}
           />
         ),
       },
       {
-        label: "Collect Processed",
+        label: "Collect Sample",
         component: (
           <Fetch
             type="sample"
             fetchURL={SAMPLE}
-            buttonText={"Collect Sample Spectrum"}
+            buttonText={"Collect Sample Spectra"}
           />
         ),
       },
