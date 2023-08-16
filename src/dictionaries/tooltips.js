@@ -545,10 +545,7 @@ export const tooltips = {
         <h1>Sample Compartment</h1>
 
         <p>
-          This compartment houses the sample cell within which the infrared
-          radiation is focused. In a typical FTIR spectrometer, this gas cell
-          can be switched out so that other sample types can be analyzed, such
-          as KBr pellets.
+          This compartment houses a 10 cm long sample cell within which the infrared radiation is focused. In a typical FTIR spectrometer, this gas cell can be switched out so that other sample types can be analyzed, such as KBr pellets.
         </p>
       </div>
     ),
