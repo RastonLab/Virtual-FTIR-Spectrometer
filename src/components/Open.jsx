@@ -22,6 +22,8 @@ import {
   setZeroFill,
 } from "../redux/parameterSlice";
 
+import { setAbsorbanceData } from "../redux/absorbanceDataSlice";
+
 // components
 import CloseButton from "./CloseButton.jsx";
 
@@ -87,6 +89,10 @@ export const Open = () => {
     rawData = rawData.substring(index + 1);
 
     if (specType.includes("Sample") || specType.includes("Background")) {
+
+      // Clears old Absorbance Data
+      dispatch(setAbsorbanceData([null, null, null]));
+
       // Gathers Parameters
       const parameters = [];
       while (parmLine.indexOf(":") > 0) {

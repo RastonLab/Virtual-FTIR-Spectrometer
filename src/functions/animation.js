@@ -279,68 +279,6 @@ export function textInteractivity(
 }
 
 /**
- * Function that changes the orientation of the valve directed to the pump
- *
- * @param {boolean} isAir - The value used to determine if the user has selected air.
- */
-export function pumpValveInteractivity(isAir) {
-  // DOM elements
-  const caf2ValveLeft = document.getElementById("caf2-valve-left");
-  const znseValveLeft = document.getElementById("znse-valve-left");
-
-  isAir
-    ? caf2ValveLeft.setAttribute(
-      "d",
-      "M548.806 430.577a1.089 1.088 0 0 0-.643 1.056l-2.119.946a.256.256 0 0 0-.13.339l.105.234c.058.13.21.188.34.13l2.118-.945a1.089 1.088 0 0 0 1.216.227 1.089 1.088 0 0 0 .643-1.057l2.119-.945a.256.256 0 0 0 .13-.34l-.105-.234a.256.256 0 0 0-.34-.13l-2.118.946a1.089 1.088 0 0 0-1.216-.227z"
-    )
-    : caf2ValveLeft.setAttribute(
-      "d",
-      "M548.161 431.567a1.088 1.089 24.24 0 0 .7 1.02l-.008 2.32c0 .142.114.257.256.257l.257.001a.256.256 0 0 0 .257-.256l.008-2.32a1.088 1.089 24.24 0 0 .707-1.015 1.088 1.089 24.24 0 0-.7-1.02l.008-2.32a.256.256 0 0 0-.256-.258h-.256a.256.256 0 0 0-.258.255l-.008 2.32a1.088 1.089 24.24 0 0-.707 1.016z"
-    );
-
-  isAir
-    ? znseValveLeft.setAttribute(
-      "d",
-      "M548.806 430.577a1.089 1.088 0 0 0-.643 1.056l-2.119.946a.256.256 0 0 0-.13.339l.105.234c.058.13.21.188.34.13l2.118-.945a1.089 1.088 0 0 0 1.216.227 1.089 1.088 0 0 0 .643-1.057l2.119-.945a.256.256 0 0 0 .13-.34l-.105-.234a.256.256 0 0 0-.34-.13l-2.118.946a1.089 1.088 0 0 0-1.216-.227z"
-    )
-    : znseValveLeft.setAttribute(
-      "d",
-      "M548.161 431.567a1.088 1.089 24.24 0 0 .7 1.02l-.008 2.32c0 .142.114.257.256.257l.257.001a.256.256 0 0 0 .257-.256l.008-2.32a1.088 1.089 24.24 0 0 .707-1.015 1.088 1.089 24.24 0 0-.7-1.02l.008-2.32a.256.256 0 0 0-.256-.258h-.256a.256.256 0 0 0-.258.255l-.008 2.32a1.088 1.089 24.24 0 0-.707 1.016z"
-    );
-}
-
-/**
- * Function that changes the orientation of the valve directed to the lecture bottle
- *
- * @param {boolean} lectureBottleInUse - The boolean value of if the spectrum collection is sample
- */
-export function lectureValveInteractivity(lectureBottleInUse) {
-  // DOM elements
-  const caf2ValveRight = document.getElementById("caf2-valve-right");
-  const znseValveRight = document.getElementById("znse-valve-right");
-
-  lectureBottleInUse
-    ? caf2ValveRight.setAttribute(
-      "d",
-      "M571.026 430.577a1.089 1.088 0 0 0-.643 1.056l-2.119.946a.256.256 0 0 0-.13.339l.105.234c.058.13.21.188.34.13l2.118-.945a1.089 1.088 0 0 0 1.216.227 1.089 1.088 0 0 0 .643-1.057l2.119-.945a.256.256 0 0 0 .13-.34l-.105-.234a.256.256 0 0 0-.34-.13l-2.118.946a1.089 1.088 0 0 0-1.216-.227z"
-    )
-    : caf2ValveRight.setAttribute(
-      "d",
-      "M570.381 431.571a1.088 1.089 24 0 0 .704 1.017l.002 2.32c0 .143.115.257.257.257h.257a.256.256 0 0 0 .256-.257l-.002-2.32a1.088 1.089 24 0 0 .703-1.019 1.088 1.089 24 0 0-.704-1.017l-.002-2.32a.256.256 0 0 0-.257-.256h-.257a.256.256 0 0 0-.256.257l.002 2.32a1.088 1.089 24 0 0-.703 1.018z"
-    );
-
-  lectureBottleInUse
-    ? znseValveRight.setAttribute(
-      "d",
-      "M571.026 430.577a1.089 1.088 0 0 0-.643 1.056l-2.119.946a.256.256 0 0 0-.13.339l.105.234c.058.13.21.188.34.13l2.118-.945a1.089 1.088 0 0 0 1.216.227 1.089 1.088 0 0 0 .643-1.057l2.119-.945a.256.256 0 0 0 .13-.34l-.105-.234a.256.256 0 0 0-.34-.13l-2.118.946a1.089 1.088 0 0 0-1.216-.227z"
-    )
-    : znseValveRight.setAttribute(
-      "d",
-      "M570.381 431.571a1.088 1.089 24 0 0 .704 1.017l.002 2.32c0 .143.115.257.257.257h.257a.256.256 0 0 0 .256-.257l-.002-2.32a1.088 1.089 24 0 0 .703-1.019 1.088 1.089 24 0 0-.704-1.017l-.002-2.32a.256.256 0 0 0-.257-.256h-.257a.256.256 0 0 0-.256.257l.002 2.32a1.088 1.089 24 0 0-.703 1.018z"
-    );
-}
-
-/**
  * Function that changes the visibility of the text on the display based on when the user generates data
  *
  * @param {object} background - Holds the X and Y coordinates for the background.
