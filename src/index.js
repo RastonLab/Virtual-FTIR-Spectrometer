@@ -7,7 +7,7 @@ import ExperimentalSetup from "./routes/ExperimentalSetup";
 import InstrumentWindow from "./routes/InstrumentWindow";
 // import LandingPage from "./routes/LandingPage";
 import NotFound from "./components/NotFound";
-import SpectrumWindow from "./routes/SpectrumWindow";
+import SpectraWindow from "./routes/SpectraWindow";
 
 // redux
 import { Provider } from "react-redux";
@@ -29,7 +29,7 @@ root.render(
             <Route index element={<InstrumentWindow />} />
             <Route path="instrument" element={<InstrumentWindow />} />
             <Route path="experimental-setup" element={<ExperimentalSetup />} />
-            <Route path="spectrum" element={<SpectrumWindow />} />
+            <Route path="spectra" element={<SpectraWindow />} />
             <Route path="*" element={<NotFound />} />
           </Route>
         </Routes>
