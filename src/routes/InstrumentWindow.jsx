@@ -22,8 +22,6 @@ import {
   detectorInteractivity,
   displayInteractivity,
   distanceInteractivity,
-  lectureValveInteractivity,
-  pumpValveInteractivity,
   sourceInteractivity,
   textInteractivity,
 } from "../functions/animation";
@@ -94,8 +92,6 @@ export default function InstrumentWindow() {
       waveMax,
       waveMin
     );
-    pumpValveInteractivity(medium === PARAMETER_VALUE.mediumAir ? true : false);
-    lectureValveInteractivity(lectureBottleInUse);
     displayInteractivity(backgroundData, sampleData);
     distanceInteractivity(postfetch, OPD[resolution].distance);
     bubblesAnimation(
