@@ -69,8 +69,8 @@ export default function FindPeaks() {
   const [tooManyPoints, setTooManyPoints] = useState(true);
 
   const checkThresholdRange = () => {
-    if (threshold < 0.0001) {
-      setThreshold(0.0001);
+    if (threshold < 0.01) {
+      setThreshold(0.01);
     } else if (threshold > 5) {
       setThreshold(5);
     }
@@ -168,7 +168,6 @@ export default function FindPeaks() {
                     inputProps: {
                       min: absorbWaveMin,
                       max: absorbWaveMax,
-                      // step: 0.0001,
                     },
                   }}
                 />
@@ -240,7 +239,6 @@ export default function FindPeaks() {
                   inputProps: {
                     min: 0.01,
                     max: 5,
-                    step: 0.0001,
                   },
                 }}
               />

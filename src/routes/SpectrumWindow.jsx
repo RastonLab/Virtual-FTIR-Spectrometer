@@ -8,10 +8,8 @@ import { TransmittancePlotly } from "../components/TransmittancePlotly";
 import BackgroundPlotly from "../components/BackgroundPlotly";
 
 // mui components
+import { Box, Tab, Tabs } from "@mui/material";
 import { styled } from "@mui/material/styles";
-import Box from "@mui/material/Box";
-import Tab from "@mui/material/Tab";
-import Tabs from "@mui/material/Tabs";
 
 // redux
 import { useSelector } from "react-redux";
@@ -45,33 +43,18 @@ const StyledTabs = styled((props) => (
     TabIndicatorProps={{ children: <span className="MuiTabs-indicatorSpan" /> }}
   />
 ))({
-  // '& .MuiTabs-indicator ': {
-  //     // display: 'flex',
-  //     // justifyContent: 'center',
-  //     // backgroundColor: 'transparent',
-  //     color: '#f6b06a'
-  //   },
   "& .css-ttwr4n": {
     backgroundColor: "#f6b06a",
   },
-  // "& .css-k008qs": {
-  //   justifyContent: "center",
-  // }
 });
 
 const StyledTab = styled((props) => <Tab disableRipple {...props} />)(
   ({ theme }) => ({
-    // textTransform: 'none',
     fontWeight: "700",
     fontSize: "2 rem",
-    // marginRight: theme.spacing(1),
-    // color: 'rgba(255, 255, 255, 0.7)',
     "&.Mui-selected": {
       color: "#f6b06a",
     },
-    // '&.Mui-focusVisible': {
-    //   backgroundColor: '#f6b06a',
-    // },
   })
 );
 
@@ -108,7 +91,6 @@ export default function SpectrumWindow() {
           <StyledTab label="Sample Spectrum" />
           <StyledTab label="Transmittance Spectrum" />
           <StyledTab label="Absorbance Spectrum" />
-          {/* <StyledTab label="All Spectra" /> */}
         </StyledTabs>
       </Box>
 
@@ -161,47 +143,6 @@ export default function SpectrumWindow() {
           )}
         </div>
       </TabPanel>
-
-      {/* All Spectra */}
-      {/* <TabPanel value={tabValue} index={4}>
-        <div id="spectrum">
-          {sampleData ? (
-            <SamplePlotly />
-          ) : (
-            <p>Please generate a Sample Spectrum and return here</p>
-          )}
-        </div>
-
-        <div id="spectrum">
-          {backgroundData ? (
-            <BackgroundPlotly />
-          ) : (
-            <p>Please generate a Background Spectrum and return here</p>
-          )}
-        </div>
-
-        <div id="spectrum">
-          {backgroundData && sampleData ? (
-            <TransmittancePlotly />
-          ) : (
-            <p>
-              Please generate both a Sample Spectrum and a Background Spectrum
-              and return here
-            </p>
-          )}
-        </div>
-
-        <div id="spectrum">
-          {backgroundData && sampleData ? (
-            <AbsorbancePlotly />
-          ) : (
-            <p>
-              Please generate both a Sample Spectrum and a Background Spectrum
-              and return here
-            </p>
-          )}
-        </div>
-      </TabPanel> */}
       <Outlet />
     </Box>
   );
