@@ -37,7 +37,7 @@ export default function Save() {
 
   const { absorbanceData } = useSelector((store) => store.absorbanceData);
   const { backgroundData } = useSelector((store) => store.backgroundData);
-  // const { peaksData } = useSelector((store) => store.peaksData);
+  const { peaksData } = useSelector((store) => store.peaksData);
   const { sampleData } = useSelector((store) => store.sampleData);
 
   const [open, setOpen] = useState(false);
@@ -50,35 +50,59 @@ export default function Save() {
     setOpen(false);
   };
 
-  const print = (spectrumType) => {
+  const formatSpectrumData = (spectrumType, spectrumData) => {
 
-    let spectrumData = "";
-
-    if (spectrumType.localeCompare("sample") === 0) {
-      spectrumData = sampleData;
-    } else if (spectrumType.localeCompare("background") === 0) {
-      spectrumData = backgroundData;
-    } else if (spectrumType.localeCompare("absorbance") === 0) {
-      spectrumData = absorbanceData;
-    } else if (spectrumType.localeCompare("transmittance") === 0) {
-      spectrumData = generateTransmittance(backgroundData, sampleData);
-    } else {
-      return;
-    }
-
-    if (spectrumType.localeCompare("peaks") === 0) {
-
-    } else {
-
-    }
-
-    let printData = `Spectrum details | Min Wavenumber: ${waveMin} Max Wavenumber: ${waveMax} Molecule: ${molecule} Pressure: ${pressure} Resolution: ${resolution} Number of Scans: ${scan} Zero Fill: ${zeroFill} Source: ${source} Beamsplitter: ${beamsplitter} Cell Window: ${window} Detector: ${detector} Medium: ${medium} \n`
-    printData += `${spectrumType.charAt(0).toUpperCase() + spectrumType.slice(1)} Spectrum\n`;
+    let printData = `${spectrumType.charAt(0).toUpperCase() + spectrumType.slice(1)} Spectrum\n`;
 
     for  (let i = 0; i < spectrumData.x.length; i++) {
       printData += `${spectrumData.x[i]}, ${spectrumData.y[i]}\n`;
     }
 
+    return printData;
+  }
+
+  const formatPeaksData = () => {
+
+    let printData = "Peaks Data\n"
+
+    Object.keys(peaksData.peaks).map((key) => {
+      return (
+        printData += `${key}, ${peaksData.peaks[key]}\n`
+      );
+    })
+
+    return printData;
+  }
+
+  const print = (spectrumType) => {
+
+    let printData = `Spectrum details | Min Wavenumber: ${waveMin} Max Wavenumber: ${waveMax} Molecule: ${molecule} Pressure: ${pressure} Resolution: ${resolution} Number of Scans: ${scan} Zero Fill: ${zeroFill} Source: ${source} Beamsplitter: ${beamsplitter} Cell Window: ${window} Detector: ${detector} Medium: ${medium} \n`
+
+    if (spectrumType.localeCompare("sample") === 0) {
+
+      printData += formatSpectrumData(spectrumType, sampleData);
+
+    } else if (spectrumType.localeCompare("background") === 0) {
+
+      printData += formatSpectrumData(spectrumType, backgroundData);
+    
+    } else if (spectrumType.localeCompare("absorbance") === 0) {
+
+      printData += formatSpectrumData(spectrumType, absorbanceData);
+    
+    } else if (spectrumType.localeCompare("transmittance") === 0) {
+
+      printData += formatSpectrumData(spectrumType, generateTransmittance(backgroundData, sampleData));
+    
+    } else if (spectrumType.localeCompare("peaks") === 0) {
+
+      printData += formatPeaksData();
+
+    } else {
+      return;
+    }
+
+    
     const element = document.createElement("a");
     const file = new Blob([printData], {type: 'text/plain'});
     element.href = URL.createObjectURL(file);
@@ -87,20 +111,6 @@ export default function Save() {
     element.click();
 
   }
-
-  // const peaksCSV = () => {
-  //   let newData = [];
-
-  //   for (const [peak, intensity] of Object.entries(peaksData.peaks)) {
-  //     newData.push([peak, intensity]);
-  //   }
-
-  //   setData(newData);
-  //   setFilename("peaks data.csv");
-  //   setTimeout(() => {
-  //     csvLink.current.link.click();
-  //   }, 500);
-  // };
 
   return (
     <div>
@@ -147,11 +157,11 @@ export default function Save() {
             </button>
           )}
 
-          {/* {peaksData && (
-            <button className="button" onClick={peaksCSV}>
+          {peaksData && (
+            <button className="button" onClick={() => {print("peaks")}}>
               Peaks Data
             </button>
-          )} */}
+          )}
         </div>
       </Dialog>
     </div>
