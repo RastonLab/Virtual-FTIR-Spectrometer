@@ -57,6 +57,10 @@ export const menuItems = [
           </Link>
         ),
       },
+      {
+        label: "Find Peaks",
+        component: <FindPeaks />,
+      },
     ],
   },
   {
@@ -85,10 +89,6 @@ export const menuItems = [
       {
         label: "Cancel Scan",
         component: <CancelScan />,
-      },
-      {
-        label: "Find Peaks",
-        component: <FindPeaks />,
       },
     ],
   },
