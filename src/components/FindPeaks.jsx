@@ -130,9 +130,10 @@ export default function FindPeaks() {
           Find Peaks
         </button>
         <Dialog className="popup" onClose={handleClose} open={open}>
-          <CloseButton id="customized-dialog-title" onClose={handleClose}>
-            <h1>Find Peaks</h1>
-          </CloseButton>
+          <CloseButton id="customized-dialog-title" onClose={handleClose} />
+
+          <h1>Find Peaks</h1>
+
           <div className="absorb-row">
             <AbsorbancePlotly />
           </div>
@@ -155,7 +156,7 @@ export default function FindPeaks() {
                 autoComplete="off"
               >
                 <TextField
-                  id="standard-number"
+                  id="peak-lowerbound"
                   label="Lower Domain Bound"
                   placeholder="Enter Lower Bound"
                   type="number"
@@ -197,7 +198,7 @@ export default function FindPeaks() {
                 autoComplete="off"
               >
                 <TextField
-                  id="standard-number"
+                  id="peak-upperbound"
                   label="Upper Domain Bound"
                   placeholder="Enter Upper Bound"
                   type="number"
@@ -226,7 +227,7 @@ export default function FindPeaks() {
               className="absorb-row"
             >
               <TextField
-                id="standard-number"
+                id="peak-threshold"
                 label="Threshold"
                 placeholder="Enter threshold "
                 type="number"
