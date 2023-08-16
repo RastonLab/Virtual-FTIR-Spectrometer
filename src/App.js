@@ -32,6 +32,7 @@ import { Outlet, Link } from "react-router-dom";
 
 // style
 import "./style/App.css";
+import { SHOW_DEVMODE } from "./dictionaries/constants";
 
 /**
  * "Base" of this project. Contains the MenuBar with room for other "routes" to exist on the rest of the page
@@ -186,7 +187,7 @@ export default function App() {
             ))}
             {/* End Full Sized Menu */}
             <div className="left-cluster">
-              <DevMode />
+              {SHOW_DEVMODE && <DevMode />}
               {/* Icons */}
               <a
                 href="https://github.com/RastonLab/Virtual-FTIR-Spectrometer#readme"

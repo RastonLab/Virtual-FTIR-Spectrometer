@@ -1,3 +1,7 @@
+
+// Controls whether or not the Toggle Dev Mode Button is visible
+export const SHOW_DEVMODE = true;
+
 // URLs used to react the API either running locally or hosted online
 
 export const FIND_PEAKS = "https://cloud.rastonlab.org/ftir/find_peaks"; // main

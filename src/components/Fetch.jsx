@@ -44,7 +44,7 @@ export default function Fetch({
 }) {
   const dispatch = useDispatch();
 
-  const { fetching } = useSelector((store) => store.progress);
+  const { fetching, postfetch } = useSelector((store) => store.progress);
   const { devMode } = useSelector((store) => store.devMode);
   let {
     beamsplitter,
@@ -79,6 +79,10 @@ export default function Fetch({
         .addEventListener("click", () => {
           controller.abort();
         });
+    }
+
+    if (document.getElementById("instrument") !== null && postfetch) {
+      animateCornerCube(scan / 2, OPD[resolution].time * 2);
     }
   });
 
@@ -218,7 +222,7 @@ export default function Fetch({
               // Only navigate to Instrument Window when !devMode
               if (!devMode) {
                 nav("/instrument", -1);
-                animateCornerCube(scan / 2, OPD[resolution].time * 2);
+                // animateCornerCube(scan / 2, OPD[resolution].time * 2);
               }
 
               // Delays the appearance of generated data
@@ -234,7 +238,7 @@ export default function Fetch({
               // Only navigate to Instrument Window when !devMode
               if (!devMode) {
                 nav("/instrument", -1);
-                animateCornerCube(scan / 2, OPD[resolution].time * 2);
+                // animateCornerCube(scan / 2, OPD[resolution].time * 2);
               }
 
               // Delays the appearance of generated data
