@@ -273,14 +273,15 @@ export default function FindPeaks() {
               <div id="data">
                 <h1>Absorbance Peaks</h1>
                 <div className="display">
+                  <p id="peaks">
                   {Object.keys(peaksData.peaks).map((key) => {
                     return (
-                      <p
-                        id="peaks"
-                        key={key}
-                      >{`Peak: ${key} Intensity: ${peaksData.peaks[key]}`}</p>
+                      <>
+                        {`Peak: ${key} Intensity: ${peaksData.peaks[key]}`} <br/>
+                      </>
                     );
                   })}
+                  </p>
                 </div>
               </div>
             )}
