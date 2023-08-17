@@ -4,6 +4,7 @@ import React, { useState, useEffect } from "react";
 import CloseButton from "./CloseButton";
 import Fetch from "./Fetch";
 import Spinner from "./Spinner";
+import { AbsorbancePlotly } from "./AbsorbancePlotly";
 
 // constants
 import { FIND_PEAKS } from "../dictionaries/constants";
@@ -111,7 +112,7 @@ export default function FindPeaks() {
     sampleWaveMax,
   ]);
 
-  if (absorbanceData !== null && absorbanceData.error === false) {
+  if (absorbanceData) {
     return (
       <div>
         <button
@@ -126,6 +127,7 @@ export default function FindPeaks() {
           <h1>Find Peaks</h1>
 
           <div className="absorb-col">
+            <AbsorbancePlotly />
             <h3>Current Number of Data Points Selected: {dataPoints}</h3>
             {tooManyPoints && (
               <h3>
@@ -247,7 +249,7 @@ export default function FindPeaks() {
               fetchURL={FIND_PEAKS}
               buttonText={"Find Peaks"}
               buttonStyle={"button"}
-              tooManyPoints={tooManyPoints}
+              tooManyPoints={tooManyPoints || absorbanceData.error}
             />
             {/* End Fetch Peaks */}
           </div>
@@ -286,28 +288,6 @@ export default function FindPeaks() {
         </Dialog>
       </div>
     );
-  } else if (absorbanceData !== null && absorbanceData.error === true) {
-    return (
-      <div>
-        <button
-          className="popup-button dropdown-items"
-          onClick={handleClickOpen}
-        >
-          Find Peaks
-        </button>
-        <Dialog className="popup" onClose={handleClose} open={open}>
-          <CloseButton id="customized-dialog-title" onClose={handleClose} />
-
-          <h1>Find Peaks</h1>
-
-          <h2>
-            The parameters used to generate Background and Sample spectra do not
-            match. To find peaks from the Absorbance spectrum, please generate
-            both with the same parameters.
-          </h2>
-        </Dialog>
-      </div>
-    );
   } else {
     return (
       <div>
@@ -321,7 +301,7 @@ export default function FindPeaks() {
           <CloseButton id="customized-dialog-title" onClose={handleClose} />
 
           <h1>Find Peaks</h1>
-
+          <AbsorbancePlotly />
           <h2>
             Please generate both a sample and background sample and return here
           </h2>
