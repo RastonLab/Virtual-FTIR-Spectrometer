@@ -1,7 +1,6 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 // components
-import { AbsorbancePlotly } from "./AbsorbancePlotly";
 import CloseButton from "./CloseButton";
 import Fetch from "./Fetch";
 import Spinner from "./Spinner";
@@ -9,14 +8,8 @@ import Spinner from "./Spinner";
 // constants
 import { FIND_PEAKS } from "../dictionaries/constants";
 
-// dictionaries
-import { generateAbsorbance } from "../dictionaries/dataFunctions";
-
 // redux
-import { useDispatch, useSelector } from "react-redux";
-
-// redux slice
-import { setAbsorbanceData } from "../redux/absorbanceDataSlice";
+import { useSelector } from "react-redux";
 
 // mui
 import { Box, Dialog, Slider, TextField } from "@mui/material";
@@ -38,27 +31,14 @@ export default function FindPeaks() {
   };
 
   const { peaksData } = useSelector((store) => store.peaksData);
-  const { backgroundData } = useSelector((store) => store.backgroundData);
-  const { sampleData, sampleWaveMin, sampleWaveMax } = useSelector(
-    (store) => store.sampleData
+  const { backgroundData, backgroundParameters } = useSelector(
+    (store) => store.backgroundData
   );
+  const { sampleWaveMin, sampleWaveMax, sampleData, sampleParameters } =
+    useSelector((store) => store.sampleData);
   const { absorbanceData, absorbWaveMin, absorbWaveMax } = useSelector(
     (store) => store.absorbanceData
   );
-
-  const dispatch = useDispatch();
-
-  // if the correct data exists, calculate the absorbance data
-  if (sampleData && backgroundData && !absorbanceData) {
-    dispatch(
-      setAbsorbanceData([
-        generateAbsorbance(backgroundData, sampleData),
-        sampleWaveMin,
-        sampleWaveMax,
-      ])
-    );
-  }
-
   const { fetching } = useSelector((store) => store.progress);
   const { error, errorText } = useSelector((store) => store.error);
 
@@ -92,8 +72,8 @@ export default function FindPeaks() {
     }
   };
 
-  React.useEffect(() => {
-    if (absorbanceData) {
+  useEffect(() => {
+    if (absorbanceData !== null && absorbanceData.error === false) {
       let startIndex = absorbanceData.x.findIndex((element) => {
         return element >= lowerBound;
       });
@@ -118,9 +98,20 @@ export default function FindPeaks() {
         setTooManyPoints(false);
       }
     }
-  }, [lowerBound, upperBound, absorbanceData, dataPoints]);
+  }, [
+    backgroundData,
+    sampleData,
+    absorbanceData,
+    backgroundParameters,
+    sampleParameters,
+    dataPoints,
+    lowerBound,
+    upperBound,
+    sampleWaveMin,
+    sampleWaveMax,
+  ]);
 
-  if (absorbanceData) {
+  if (absorbanceData !== null && absorbanceData.error === false) {
     return (
       <div>
         <button
@@ -134,9 +125,6 @@ export default function FindPeaks() {
 
           <h1>Find Peaks</h1>
 
-          <div className="absorb-row">
-            <AbsorbancePlotly />
-          </div>
           <div className="absorb-col">
             <h3>Current Number of Data Points Selected: {dataPoints}</h3>
             {tooManyPoints && (
@@ -273,13 +261,14 @@ export default function FindPeaks() {
                 <h1>Absorbance Peaks</h1>
                 <div className="display">
                   <p id="peaks">
-                  {Object.keys(peaksData.peaks).map((key) => {
-                    return (
-                      <>
-                        {`Peak: ${key} Intensity: ${peaksData.peaks[key]}`} <br/>
-                      </>
-                    );
-                  })}
+                    {Object.keys(peaksData.peaks).map((key) => {
+                      return (
+                        <>
+                          {`Peak: ${key} Intensity: ${peaksData.peaks[key]}`}{" "}
+                          <br />
+                        </>
+                      );
+                    })}
                   </p>
                 </div>
               </div>
@@ -294,6 +283,28 @@ export default function FindPeaks() {
             </div>
           )}
           {/* End Error Display */}
+        </Dialog>
+      </div>
+    );
+  } else if (absorbanceData !== null && absorbanceData.error === true) {
+    return (
+      <div>
+        <button
+          className="popup-button dropdown-items"
+          onClick={handleClickOpen}
+        >
+          Find Peaks
+        </button>
+        <Dialog className="popup" onClose={handleClose} open={open}>
+          <CloseButton id="customized-dialog-title" onClose={handleClose} />
+
+          <h1>Find Peaks</h1>
+
+          <h2>
+            The parameters used to generate Background and Sample spectra do not
+            match. To find peaks from the Absorbance spectrum, please generate
+            both with the same parameters.
+          </h2>
         </Dialog>
       </div>
     );

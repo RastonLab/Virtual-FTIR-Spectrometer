@@ -12,12 +12,15 @@ import { useDispatch, useSelector } from "react-redux";
 
 // redux slices
 import { setAbsorbanceData } from "../redux/absorbanceDataSlice";
-import { setBackgroundData } from "../redux/backgroundDataSlice";
+import {
+  setBackgroundData,
+  setBackgroundParameters,
+} from "../redux/backgroundDataSlice";
 import { setError } from "../redux/errorSlice";
 import { setLectureBottle } from "../redux/lectureBottleSlice";
 import { setPeaksData } from "../redux/peaksDataSlice";
 import { setProgress } from "../redux/progressSlice";
-import { setSampleData } from "../redux/sampleDataSlice";
+import { setSampleData, setSampleParameters } from "../redux/sampleDataSlice";
 import { setTimer } from "../redux/timerSlice";
 
 // router
@@ -225,6 +228,24 @@ export default function Fetch({
               sleepID = setTimeout(() => {
                 dispatch(setProgress(false, false, false));
                 dispatch(setSampleData([data, waveMin, waveMax]));
+                dispatch(
+                  setSampleParameters(
+                    JSON.stringify({
+                      beamsplitter: beamsplitter,
+                      detector: detector,
+                      medium: medium,
+                      molecule: molecule,
+                      pressure: pressure,
+                      resolution: resolution,
+                      scan: scan,
+                      source: source,
+                      waveMax: waveMax,
+                      waveMin: waveMin,
+                      window: window,
+                      zeroFill: zeroFill,
+                    })
+                  )
+                );
               }, delay);
               break;
             case "background":
@@ -241,6 +262,24 @@ export default function Fetch({
               sleepID = setTimeout(() => {
                 dispatch(setProgress(false, false, false));
                 dispatch(setBackgroundData([data, waveMin, waveMax]));
+                dispatch(
+                  setBackgroundParameters(
+                    JSON.stringify({
+                      beamsplitter: beamsplitter,
+                      detector: detector,
+                      medium: medium,
+                      molecule: molecule,
+                      pressure: pressure,
+                      resolution: resolution,
+                      scan: scan,
+                      source: source,
+                      waveMax: waveMax,
+                      waveMin: waveMin,
+                      window: window,
+                      zeroFill: zeroFill,
+                    })
+                  )
+                );
               }, delay);
               break;
             case "find_peaks":

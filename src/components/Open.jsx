@@ -5,8 +5,11 @@ import { useDispatch } from "react-redux";
 
 // redux slices
 import { setError } from "../redux/errorSlice";
-import { setBackgroundData } from "../redux/backgroundDataSlice";
-import { setSampleData } from "../redux/sampleDataSlice";
+import {
+  setBackgroundData,
+  setBackgroundParameters,
+} from "../redux/backgroundDataSlice";
+import { setSampleData, setSampleParameters } from "../redux/sampleDataSlice";
 import {
   setBeamsplitter,
   setDetector,
@@ -145,6 +148,24 @@ export const Open = () => {
             parseFloat(parameters[1]),
           ])
         );
+        dispatch(
+          setBackgroundParameters(
+            JSON.stringify({
+              beamsplitter: parameters[8],
+              detector: parameters[10],
+              medium: parameters[11],
+              molecule: parameters[2],
+              pressure: parseFloat(parameters[3]),
+              resolution: parseFloat(parameters[4]),
+              scan: parseFloat(parameters[5]),
+              source: parseFloat(parameters[7]),
+              waveMax: parseFloat(parameters[1]),
+              waveMin: parseFloat(parameters[0]),
+              window: parameters[9],
+              zeroFill: parseFloat(parameters[6]),
+            })
+          )
+        );
       } else if (specType.includes("Sample")) {
         dispatch(
           setSampleData([
@@ -152,6 +173,24 @@ export const Open = () => {
             parseFloat(parameters[0]),
             parseFloat(parameters[1]),
           ])
+        );
+        dispatch(
+          setSampleParameters(
+            JSON.stringify({
+              beamsplitter: parameters[8],
+              detector: parameters[10],
+              medium: parameters[11],
+              molecule: parameters[2],
+              pressure: parseFloat(parameters[3]),
+              resolution: parseFloat(parameters[4]),
+              scan: parseFloat(parameters[5]),
+              source: parseFloat(parameters[7]),
+              waveMax: parseFloat(parameters[1]),
+              waveMin: parseFloat(parameters[0]),
+              window: parameters[9],
+              zeroFill: parseFloat(parameters[6]),
+            })
+          )
         );
       }
 

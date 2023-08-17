@@ -20,27 +20,24 @@ import "../style/components/Absorbance.css";
  * A component that uses Plotly.js to graph absorbance spectrum data
  */
 export const AbsorbancePlotly = forwardRef((props, ref) => {
-  const { absorbanceData } = useSelector((store) => store.absorbanceData);
-  const { backgroundData } = useSelector((store) => store.backgroundData);
-  const { sampleData, sampleWaveMin, sampleWaveMax } = useSelector(
-    (store) => store.sampleData
+  const { backgroundData, backgroundParameters } = useSelector(
+    (store) => store.backgroundData
   );
-  
+  const { sampleData, sampleWaveMin, sampleWaveMax, sampleParameters } =
+    useSelector((store) => store.sampleData);
+
   const dispatch = useDispatch();
 
-  // if the correct data exists, calculate the absorbance data
-  if (sampleData && backgroundData && !absorbanceData) {
+  const absorbanceData = generateAbsorbance(
+    backgroundData,
+    sampleData,
+    backgroundParameters,
+    sampleParameters
+  );
 
-    dispatch(
-      setAbsorbanceData([
-        generateAbsorbance(backgroundData, sampleData),
-        sampleWaveMin,
-        sampleWaveMax,
-      ])
-    );
-  }
+  dispatch(setAbsorbanceData([absorbanceData, sampleWaveMin, sampleWaveMax]));
 
-  if (absorbanceData) {
+  if (absorbanceData.error === false) {
     return (
       <div className="absorbance">
         {/* Graph */}
@@ -82,6 +79,16 @@ export const AbsorbancePlotly = forwardRef((props, ref) => {
           useResizeHandler={true}
         />
         {/* End Graph */}
+      </div>
+    );
+  } else if (absorbanceData.error === true) {
+    return (
+      <div>
+        <p>
+          The parameters used to generate Background and Sample spectra do not
+          match. To view the Absorbance spectrum, please generate both with the
+          same parameters.
+        </p>
       </div>
     );
   } else {
