@@ -5,10 +5,7 @@ import { SwitchStyle } from "./SwitchStyle";
 import { PARAMETER_LABEL } from "../../dictionaries/constants";
 
 // mui
-import FormControl from "@mui/material/FormControl";
-import FormLabel from "@mui/material/FormLabel";
-import Stack from "@mui/material/Stack";
-import Typography from "@mui/material/Typography";
+import { FormControl, FormLabel, Stack, Typography } from "@mui/material";
 
 // redux
 import { useDispatch } from "react-redux";

@@ -13,8 +13,8 @@ import { setAbsorbanceData } from "../redux/absorbanceDataSlice";
 import { generateAbsorbance } from "../dictionaries/dataFunctions";
 
 // style
-import "../style/components/Plotly.css";
 import "../style/components/Absorbance.css";
+import "../style/components/Plotly.css";
 
 /**
  * A component that uses Plotly.js to graph absorbance spectrum data

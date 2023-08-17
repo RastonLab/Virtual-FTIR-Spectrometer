@@ -1,5 +1,11 @@
 import { useState } from "react";
 
+// components
+import CloseButton from "./CloseButton.jsx";
+
+// mui
+import { Dialog } from "@mui/material";
+
 // redux
 import { useDispatch } from "react-redux";
 
@@ -24,14 +30,7 @@ import {
   setWindow,
   setZeroFill,
 } from "../redux/parameterSlice";
-
 import { setAbsorbanceData } from "../redux/absorbanceDataSlice";
-
-// components
-import CloseButton from "./CloseButton.jsx";
-
-// mui
-import { Dialog } from "@mui/material";
 
 // style
 import "../style/components/Open.css";
