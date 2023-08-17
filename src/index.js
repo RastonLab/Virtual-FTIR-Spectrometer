@@ -4,8 +4,8 @@ import ReactDOM from "react-dom/client";
 // components
 import App from "./App";
 import ExperimentalSetup from "./routes/ExperimentalSetup";
+import FindPeaks from "./routes/FindPeaks";
 import InstrumentWindow from "./routes/InstrumentWindow";
-// import LandingPage from "./routes/LandingPage";
 import NotFound from "./components/NotFound";
 import SpectraWindow from "./routes/SpectraWindow";
 
@@ -30,6 +30,7 @@ root.render(
             <Route path="instrument" element={<InstrumentWindow />} />
             <Route path="experimental-setup" element={<ExperimentalSetup />} />
             <Route path="spectra" element={<SpectraWindow />} />
+            <Route path="peaks" element={<FindPeaks />} />
             <Route path="*" element={<NotFound />} />
           </Route>
         </Routes>

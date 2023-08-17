@@ -1,8 +1,8 @@
 // components
 import { Open } from "../components/Open";
 import CancelScan from "../components/CancelScan";
-import Fetch from "../components/Fetch";
-import FindPeaks from "../components/FindPeaks";
+import Fetch from "../routes/FindPeaks";
+import LandingPage from "../components/LandingPage";
 import Save from "../components/Save";
 import Tutorial from "../components/Tutorial";
 
@@ -11,7 +11,6 @@ import { BACKGROUND, SAMPLE } from "../dictionaries/constants";
 
 // router
 import { Link } from "react-router-dom";
-import LandingPage from "../components/LandingPage";
 
 /**
  * Controls what appears in the MenuBar. To remove something, either remove the code or comment it out
@@ -59,7 +58,11 @@ export const menuItems = [
       },
       {
         label: "Find Peaks",
-        component: <FindPeaks />,
+        component: (
+          <Link to="/peaks">
+            <div>Find Peaks</div>
+          </Link>
+        ),
       },
     ],
   },
