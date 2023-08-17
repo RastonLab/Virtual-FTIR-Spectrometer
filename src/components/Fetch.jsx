@@ -84,9 +84,10 @@ export default function Fetch({
         });
     }
 
-    if (document.getElementById("instrument") !== null && postfetch) {
+    if (document.getElementById("instrument") !== null && postfetch && !devMode) {
       animateCornerCube(scan / 2, OPD[resolution].time * 2);
     }
+
   });
 
   const fetchServer = async () => {

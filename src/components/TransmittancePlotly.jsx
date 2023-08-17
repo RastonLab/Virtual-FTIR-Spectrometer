@@ -80,11 +80,11 @@ export const TransmittancePlotly = forwardRef((props, ref) => {
   } else if (transmittanceData.error === true) {
     return (
       <div>
-        <p>
+        <h3>
           The parameters used to generate Background and Sample spectra do not
           match. To view the Transmittance spectrum, please generate both with
           the same parameters.
-        </p>
+        </h3>
       </div>
     );
   } else {
