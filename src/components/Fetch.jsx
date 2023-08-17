@@ -88,7 +88,7 @@ export default function Fetch({
       animateCornerCube(scan / 2, OPD[resolution].time * 2);
     }
 
-  }, [dispatch, postfetch, resolution, scan, devMode]);
+  });
 
   const fetchServer = async () => {
     // remove any errors (if existing) and start a progress spinner
