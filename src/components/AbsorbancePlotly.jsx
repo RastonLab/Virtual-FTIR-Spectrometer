@@ -1,4 +1,4 @@
-import React, { forwardRef, useEffect } from "react";
+import React, { forwardRef } from "react";
 
 // components
 import Plot from "react-plotly.js";
@@ -26,27 +26,18 @@ export const AbsorbancePlotly = forwardRef((props, ref) => {
   const { sampleData, sampleWaveMin, sampleWaveMax, sampleParameters } =
     useSelector((store) => store.sampleData);
 
-  const { absorbanceData } = useSelector((store) => store.absorbanceData);
-
   const dispatch = useDispatch();
 
+  const absorbanceData = generateAbsorbance(
+    backgroundData,
+    sampleData,
+    backgroundParameters,
+    sampleParameters
+  );
 
-    useEffect(() => {
+  dispatch(setAbsorbanceData([absorbanceData, sampleWaveMin, sampleWaveMax]));
 
-      if (!absorbanceData && (sampleData && backgroundData)) {
-        const absorbanceData = generateAbsorbance(
-          backgroundData,
-          sampleData,
-          backgroundParameters,
-          sampleParameters
-        );
-
-        dispatch(setAbsorbanceData([absorbanceData, sampleWaveMin, sampleWaveMax]));
-      }
-
-    });
-
-  if (absorbanceData && !absorbanceData.error) {
+  if (absorbanceData.error === false) {
     return (
       <div className="absorbance">
         {/* Graph */}
@@ -90,14 +81,14 @@ export const AbsorbancePlotly = forwardRef((props, ref) => {
         {/* End Graph */}
       </div>
     );
-  } else if (absorbanceData && absorbanceData.error) {
+  } else if (absorbanceData.error === true) {
     return (
       <div>
-        <h3>
+        <p>
           The parameters used to generate Background and Sample spectra do not
           match. To view the Absorbance spectrum, please generate both with the
           same parameters.
-        </h3>
+        </p>
       </div>
     );
   } else {
