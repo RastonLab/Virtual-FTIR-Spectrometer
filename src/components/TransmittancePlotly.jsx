@@ -16,15 +16,24 @@ import "../style/components/Plotly.css";
  * A component that uses Plotly.js to graph transmittance spectrum data
  */
 export const TransmittancePlotly = forwardRef((props, ref) => {
-  const { backgroundData } = useSelector((store) => store.backgroundData);
-  const { sampleData } = useSelector((store) => store.sampleData);
+  const { backgroundData, backgroundParameters } = useSelector(
+    (store) => store.backgroundData
+  );
+  const { sampleData, sampleParameters } = useSelector(
+    (store) => store.sampleData
+  );
   const { waveMaxSaved, waveMinSaved } = useSelector(
     (store) => store.parameter
   );
 
-  const transData = generateTransmittance(backgroundData, sampleData);
+  const transmittanceData = generateTransmittance(
+    backgroundData,
+    sampleData,
+    backgroundParameters,
+    sampleParameters
+  );
 
-  if (sampleData) {
+  if (transmittanceData.error === false) {
     return (
       <>
         {
@@ -33,8 +42,8 @@ export const TransmittancePlotly = forwardRef((props, ref) => {
             className="plotly"
             data={[
               {
-                x: transData.x,
-                y: transData.y,
+                x: transmittanceData.x,
+                y: transmittanceData.y,
                 type: "scatter",
                 marker: { color: "#f50057" },
               },
@@ -67,6 +76,16 @@ export const TransmittancePlotly = forwardRef((props, ref) => {
           />
         }
       </>
+    );
+  } else if (transmittanceData.error === true) {
+    return (
+      <div>
+        <p>
+          The parameters used to generate Background and Sample spectra do not
+          match. To view the Transmittance spectrum, please generate both with
+          the same parameters.
+        </p>
+      </div>
     );
   } else {
     return <div></div>;

@@ -1,6 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
+  backgroundParameters: null,
   backgroundData: null,
   backgroundWaveMin: null,
   backgroundWaveMax: null,
@@ -22,9 +23,13 @@ const backgroundDataSlice = createSlice({
       state.backgroundWaveMin = payload[1];
       state.backgroundWaveMax = payload[2];
     },
+
+    setBackgroundParameters: (state, { payload }) => {
+      state.backgroundParameters = payload
+    },
   },
 });
 
-export const { setBackgroundData } = backgroundDataSlice.actions;
+export const { setBackgroundData, setBackgroundParameters } = backgroundDataSlice.actions;
 
 export default backgroundDataSlice.reducer;
