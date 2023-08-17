@@ -1,6 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
+  sampleParameters: null,
   sampleData: null,
   sampleWaveMin: null,
   sampleWaveMax: null,
@@ -22,9 +23,13 @@ const sampleDataSlice = createSlice({
       state.sampleWaveMin = payload[1];
       state.sampleWaveMax = payload[2];
     },
+
+    setSampleParameters: (state, { payload }) => {
+      state.sampleParameters = payload
+    },
   },
 });
 
-export const { setSampleData } = sampleDataSlice.actions;
+export const { setSampleData, setSampleParameters } = sampleDataSlice.actions;
 
 export default sampleDataSlice.reducer;

@@ -1,8 +1,5 @@
 // mui
-import Grid from "@mui/material/Grid";
-import Input from "@mui/material/Input";
-import Slider from "@mui/material/Slider";
-import Typography from "@mui/material/Typography";
+import { Grid, Input, Slider, Typography } from "@mui/material";
 
 // redux
 import { useDispatch } from "react-redux";
@@ -10,6 +7,7 @@ import { useDispatch } from "react-redux";
 // redux slice
 import { setWaveMin, setWaveMax } from "../../redux/parameterSlice";
 
+// style
 import "../../style/components/NumberInputs.css"
 
 /**

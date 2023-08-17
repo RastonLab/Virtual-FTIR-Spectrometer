@@ -1,6 +1,5 @@
 // mui
-import InputAdornment from "@mui/material/InputAdornment";
-import TextField from "@mui/material/TextField";
+import { InputAdornment, TextField } from "@mui/material";
 
 // redux
 import { useDispatch } from "react-redux";
@@ -8,6 +7,7 @@ import { useDispatch } from "react-redux";
 // redux store
 import { setPressure } from "../../redux/parameterSlice";
 
+// style
 import "../../style/components/NumberInputs.css"
 
 /**

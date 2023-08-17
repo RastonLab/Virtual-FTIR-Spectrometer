@@ -1,9 +1,6 @@
 // mui
-import Grid from "@mui/material/Grid";
-import Input from "@mui/material/Input";
+import { Grid, Input, Slider, Typography } from "@mui/material";
 import ShowChartIcon from "@mui/icons-material/ShowChart";
-import Slider from "@mui/material/Slider";
-import Typography from "@mui/material/Typography";
 
 // redux
 import { useDispatch } from "react-redux";
@@ -11,6 +8,7 @@ import { useDispatch } from "react-redux";
 // redux slice
 import { setScan } from "../../redux/parameterSlice";
 
+// style
 import "../../style/components/NumberInputs.css"
 
 /**
