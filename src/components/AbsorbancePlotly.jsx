@@ -33,7 +33,7 @@ export const AbsorbancePlotly = forwardRef((props, ref) => {
 
     useEffect(() => {
 
-      if (!absorbanceData) {
+      if (!absorbanceData && (sampleData && backgroundData)) {
         const absorbanceData = generateAbsorbance(
           backgroundData,
           sampleData,
@@ -93,11 +93,11 @@ export const AbsorbancePlotly = forwardRef((props, ref) => {
   } else if (absorbanceData && absorbanceData.error) {
     return (
       <div>
-        <p>
+        <h3>
           The parameters used to generate Background and Sample spectra do not
           match. To view the Absorbance spectrum, please generate both with the
           same parameters.
-        </p>
+        </h3>
       </div>
     );
   } else {
