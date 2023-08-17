@@ -122,7 +122,7 @@ export default function InstrumentWindow() {
               timer={delay}
               scans={scan}
               size={100}
-              oneScan={OPD[resolution].time} // this is causing a runtime warning; dev tools is trying to read it as an event handler
+              oneScan={OPD[resolution].time}
             />
           </>
         )}
