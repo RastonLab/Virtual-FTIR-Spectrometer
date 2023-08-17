@@ -41,8 +41,8 @@ export default function Pressure({ min, max, step, store }) {
     <div>
       <TextField
         sx={{ maxWidth: "175px" }}
-        label="Pressure"
-        placeholder="Enter pressure"
+        label="Partial Pressure"
+        placeholder="Enter partial pressure"
         type="number"
         value={store}
         onChange={handleTextChange}

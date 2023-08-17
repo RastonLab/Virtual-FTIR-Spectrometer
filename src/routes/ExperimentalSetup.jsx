@@ -66,6 +66,14 @@ export default function ExperimentalSetup() {
       <div id="form">
         <div className="exp-col">
           <div className="parameter">
+            <div className="parameter">
+              <Molecule dictionary={molecules} store={molecule} />
+            </div>
+
+            <div className="parameter">
+              <Pressure store={pressure} min={0.0001} max={10} step={0.0001} />
+            </div>
+
             <Wavenumber
               storeMin={waveMin}
               storeMax={waveMax}
@@ -76,15 +84,7 @@ export default function ExperimentalSetup() {
           </div>
 
           <div className="parameter">
-            <Pressure store={pressure} min={0.0001} max={10} step={0.0001} />
-          </div>
-
-          <div className="parameter">
             <Scan store={scan} min={2} max={256} step={2} />
-          </div>
-
-          <div className="parameter">
-            <Molecule dictionary={molecules} store={molecule} />
           </div>
 
           <div className="parameter">

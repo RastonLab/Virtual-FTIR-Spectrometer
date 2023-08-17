@@ -484,11 +484,12 @@ export const tooltips = {
         <p>
           Pyrex sample cell that has two valves for controlling gas flow in
           (right) and out (left) from it. The medium (space inside) can either
-          be “vacuum” or “air”. When vacuum is selected, the pressure of the
-          selected molecule is equal to the <i>total</i> pressure inside the
-          cell. When air is selected, the pressure of the selected molecule is
-          equal to the partial pressure inside the cell (the rest is filled with
-          air to a total pressure of 1 atm or 1.01325 bar). The uncoated salt
+          be “vacuum” or “air”. When acquiring the spectrum of a molecule in vacuum,
+          the partial pressure of the selected molecule (red balls) is equal to
+          the total pressure inside the cell. When acquiring the spectrum of a
+          molecule in air (blue balls), the total pressure is equal to 1.01325 bar
+          (so the partial pressure of air is equal to the difference between this
+          value and the partial pressure of the selected molecule). The uncoated salt
           windows on either end of the cell are calcium fluoride (CaF
           <sub>2</sub>), which has good transmittance in the
           mid-to-near-infrared region. The following plot shows the
@@ -519,15 +520,17 @@ export const tooltips = {
         <p>
           Pyrex sample cell that has two valves for controlling gas flow in
           (right) and out (left) from it. The medium (space inside) can either
-          be “vacuum” or “air”. When vacuum is selected, the pressure of the
-          selected molecule is equal to the <i>total</i> pressure inside the
-          cell. When air is selected, the pressure of the selected molecule is
-          equal to the partial pressure inside the cell (the rest is filled with
-          air to a total pressure of 1 atm or 1.01325 bar). The uncoated salt
-          windows on either end of the cell are zinc selenide (ZnSe), which has
-          good transmittance in the mid-infrared region (above 500 cm
-          <sup>-1</sup>). The following plot shows the transmittance spectrum of
-          one of the 2 mm thick ZnSe windows that this cell is equipped with.
+          be “vacuum” or “air”. When acquiring the spectrum of a molecule in
+          vacuum, the partial pressure of the selected molecule (red balls)
+          is equal to the total pressure inside the cell. When acquiring the
+          spectrum of a molecule in air (blue balls), the total pressure is
+          equal to 1.01325 bar (so the partial pressure of air is equal to
+          the difference between this value and the partial pressure of the
+          selected molecule). The uncoated salt windows on either end of the
+          cell are zinc selenide (ZnSe), which has good transmittance in the
+          mid-infrared region (above 500 cm <sup>-1</sup>). The following plot
+          shows the transmittance spectrum of one of the 2 mm thick ZnSe windows
+          that this cell is equipped with.
         </p>
 
         <img
