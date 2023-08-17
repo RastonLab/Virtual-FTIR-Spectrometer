@@ -373,7 +373,7 @@ export const tooltips = {
 
         <img className="tooltip-svg" src={manometer} alt="Manometer SVG" />
 
-        <p>Pressure gauge (0-2 bar) with digital display.</p>
+        <p>The pressure displayed (0-2 bar) is the partial pressure of the selected molecule.</p>
       </div>
     ),
   },

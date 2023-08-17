@@ -4,19 +4,19 @@ import { createSlice } from "@reduxjs/toolkit";
 import { PARAMETER_VALUE } from "../dictionaries/constants";
 
 const initialState = {
-  beamsplitter: PARAMETER_VALUE.beamsplitterZnSe,
-  detector: PARAMETER_VALUE.detectorMCT,
-  medium: PARAMETER_VALUE.mediumAir,
+  beamsplitter: PARAMETER_VALUE.beamsplitterCaF2,
+  detector: PARAMETER_VALUE.detectorInSb,
+  medium: PARAMETER_VALUE.mediumVacuum,
   molecule: "HCN",
-  pressure: 0.1,
+  pressure: 1,
   resolution: 0.125,
-  scan: 16,
+  scan: 64,
   source: PARAMETER_VALUE.sourceGlobar,
-  waveMin: 400,
+  waveMin: 1700,
   waveMinSaved: null,
-  waveMax: 4000,
+  waveMax: 7000,
   waveMaxSaved: null,
-  window: PARAMETER_VALUE.cellWindowZnSe,
+  window: PARAMETER_VALUE.cellWindowCaF2,
   zeroFill: 1,
 };
 
