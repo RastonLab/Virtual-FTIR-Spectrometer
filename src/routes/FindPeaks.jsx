@@ -267,7 +267,7 @@ export default function FindPeaks() {
 
         {/* Error Display */}
         {error && (
-          <div id="error">
+          <div id="find-peaks-error">
             <p style={{ fontSize: 30 }}>{errorText}</p>
           </div>
         )}
