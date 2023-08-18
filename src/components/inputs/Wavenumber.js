@@ -83,7 +83,7 @@ export default function Wavenumber({ min, max, step, storeMin, storeMax }) {
 
         <Grid item>
           <Slider
-            sx={{ minWidth: "150px" }}
+            sx={{ minWidth: "250px" }}
             value={[
               storeMin === "" ? min : storeMin,
               storeMax === "" ? max : storeMax,
