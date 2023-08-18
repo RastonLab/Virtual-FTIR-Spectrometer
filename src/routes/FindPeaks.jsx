@@ -3,6 +3,7 @@ import React, { useState, useEffect } from "react";
 // components
 import Fetch from "../components/Fetch";
 import Spinner from "../components/Spinner";
+import { AbsorbancePlotly } from "../components/AbsorbancePlotly";
 
 // constants
 import { FIND_PEAKS } from "../dictionaries/constants";
@@ -111,10 +112,11 @@ export default function FindPeaks() {
     sampleWaveMax,
   ]);
 
-  if (absorbanceData !== null && absorbanceData.error === false) {
+  if (absorbanceData) {
     return (
       <div className="find-peaks-container">
         <div className="find-peaks-row-left">
+          <AbsorbancePlotly />
           <form id="find-peaks-bounds" name="bounds">
             {/* Lower Bound Box */}
             <Box
@@ -285,19 +287,10 @@ export default function FindPeaks() {
         )}
       </div>
     );
-  } else if (absorbanceData !== null && absorbanceData.error === true) {
-    return (
-      <div className="find-peaks-container" id="find-peaks-text">
-        <h2>
-          The parameters used to generate Background and Sample spectra do not
-          match. To find peaks from the Absorbance spectrum, please generate
-          both with the same parameters.
-        </h2>
-      </div>
-    );
   } else {
     return (
       <div className="find-peaks-container" id="find-peaks-text">
+        <AbsorbancePlotly />
         <h2>
           Please generate both a sample and background sample and return here
         </h2>
