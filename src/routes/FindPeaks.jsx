@@ -3,6 +3,7 @@ import React, { useState, useEffect } from "react";
 // components
 import Fetch from "../components/Fetch";
 import Spinner from "../components/Spinner";
+import { AbsorbancePlotly } from "../components/AbsorbancePlotly";
 
 // constants
 import { FIND_PEAKS } from "../dictionaries/constants";
@@ -49,10 +50,12 @@ export default function FindPeaks() {
   };
 
   const checkWaveNumRange = () => {
-    if (lowerBound > upperBound) {
-      const temp = lowerBound;
-      setLowerBound(upperBound);
-      setUpperBound(temp);
+    if (!lowerBound) {
+      setLowerBound(sampleWaveMin);
+    }
+
+    if (!upperBound) {
+      setUpperBound(sampleWaveMax);
     }
 
     if (lowerBound < sampleWaveMin) {
@@ -61,6 +64,12 @@ export default function FindPeaks() {
 
     if (upperBound > sampleWaveMax) {
       setUpperBound(sampleWaveMax);
+    }
+
+    if (lowerBound > upperBound && upperBound) {
+      const temp = lowerBound;
+      setLowerBound(upperBound);
+      setUpperBound(temp);
     }
   };
 
@@ -103,11 +112,12 @@ export default function FindPeaks() {
     sampleWaveMax,
   ]);
 
-  if (absorbanceData !== null && absorbanceData.error === false) {
+  if (absorbanceData) {
     return (
       <div className="find-peaks-container">
         <div className="find-peaks-row-left">
-          <form id="find-peaks-bounds">
+          <AbsorbancePlotly />
+          <form id="find-peaks-bounds" name="bounds">
             {/* Lower Bound Box */}
             <Box
               className="find-peaks-box"
@@ -122,9 +132,11 @@ export default function FindPeaks() {
                 label="Lower Domain Bound"
                 placeholder="Enter Lower Bound"
                 type="number"
-                value={lowerBound ? lowerBound : sampleWaveMin}
+                value={lowerBound}
                 onChange={(e) => {
-                  setLowerBound(e.target.value);
+                  setLowerBound(
+                    e.target.value === "" ? "" : Number(e.target.value)
+                  );
                 }}
                 onBlur={checkWaveNumRange}
                 InputProps={{
@@ -165,9 +177,11 @@ export default function FindPeaks() {
                 label="Upper Domain Bound"
                 placeholder="Enter Upper Bound"
                 type="number"
-                value={upperBound ? upperBound : sampleWaveMax}
+                value={upperBound}
                 onChange={(e) => {
-                  setUpperBound(e.target.value);
+                  setUpperBound(
+                    e.target.value === "" ? "" : Number(e.target.value)
+                  );
                 }}
                 onBlur={checkWaveNumRange}
                 InputProps={{
@@ -180,7 +194,7 @@ export default function FindPeaks() {
             </Box>
           </form>
 
-          <form id="find-peaks-threshold">
+          <form id="find-peaks-threshold" name="threshold">
             {/* Threshold Input */}
             <Box
               sx={{
@@ -267,25 +281,16 @@ export default function FindPeaks() {
 
         {/* Error Display */}
         {error && (
-          <div id="error">
+          <div id="find-peaks-error">
             <p style={{ fontSize: 30 }}>{errorText}</p>
           </div>
         )}
       </div>
     );
-  } else if (absorbanceData !== null && absorbanceData.error === true) {
-    return (
-      <div className="find-peaks-container" id="find-peaks-text">
-        <h2>
-          The parameters used to generate Background and Sample spectra do not
-          match. To find peaks from the Absorbance spectrum, please generate
-          both with the same parameters.
-        </h2>
-      </div>
-    );
   } else {
     return (
       <div className="find-peaks-container" id="find-peaks-text">
+        <AbsorbancePlotly />
         <h2>
           Please generate both a sample and background sample and return here
         </h2>
