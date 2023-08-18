@@ -12,9 +12,9 @@ export const BACKGROUND = "https://cloud.rastonlab.org/ftir/background"; // main
 // export const BACKGROUND = "https://cloud.rastonlab.org/dev/ftir/background"; // dev
 // export const BACKGROUND = "http://localhost:5000/background"; // local
 
-export const SAMPLE = "https://cloud.rastonlab.org/ftir/spectrum"; // main
-// export const SAMPLE = "https://cloud.rastonlab.org/dev/ftir/spectrum"; // dev
-// export const SAMPLE = "http://localhost:5000/spectrum"; // local
+export const SAMPLE = "https://cloud.rastonlab.org/ftir/sample"; // main
+// export const SAMPLE = "https://cloud.rastonlab.org/dev/ftir/sample"; // dev
+// export const SAMPLE = "http://localhost:5000/sample"; // local
 
 // svg ids that are not associated with tooltips but can be selected
 export const BAD_ID = [
