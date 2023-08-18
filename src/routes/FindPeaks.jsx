@@ -112,184 +112,195 @@ export default function FindPeaks() {
     sampleWaveMax,
   ]);
 
+  console.log(absorbanceData);
+
   if (absorbanceData) {
     return (
       <div className="find-peaks-container">
         <div className="find-peaks-row-left">
           <AbsorbancePlotly />
-          <form id="find-peaks-bounds" name="bounds">
-            {/* Lower Bound Box */}
-            <Box
-              className="find-peaks-box"
-              sx={{
-                "& .MuiTextField-root": { m: 1, width: "20ch" },
-              }}
-              noValidate
-              autoComplete="off"
-            >
-              <TextField
-                id="peak-lowerbound"
-                label="Lower Domain Bound"
-                placeholder="Enter Lower Bound"
-                type="number"
-                value={lowerBound}
-                onChange={(e) => {
-                  setLowerBound(
-                    e.target.value === "" ? "" : Number(e.target.value)
-                  );
-                }}
-                onBlur={checkWaveNumRange}
-                InputProps={{
-                  inputProps: {
-                    min: absorbWaveMin,
-                    max: absorbWaveMax,
-                  },
-                }}
-              />
-            </Box>
 
-            {/* Slider Box */}
-            <Box className="find-peaks-box">
-              <Slider
-                sx={{ minWidth: "150px" }}
-                value={[
-                  lowerBound ? lowerBound : sampleWaveMin,
-                  upperBound ? upperBound : sampleWaveMax,
-                ]}
-                min={sampleWaveMin}
-                max={sampleWaveMax}
-                onChange={handleSliderChange}
-                aria-labelledby="input-slider"
-              />
-            </Box>
+          {absorbanceData.error === false && (
+            <div>
+              <form id="find-peaks-bounds" name="bounds">
+                {/* Lower Bound Box */}
+                <Box
+                  className="find-peaks-box"
+                  sx={{
+                    "& .MuiTextField-root": { m: 1, width: "20ch" },
+                  }}
+                  noValidate
+                  autoComplete="off"
+                >
+                  <TextField
+                    id="peak-lowerbound"
+                    label="Lower Domain Bound"
+                    placeholder="Enter Lower Bound"
+                    type="number"
+                    value={lowerBound}
+                    onChange={(e) => {
+                      setLowerBound(
+                        e.target.value === "" ? "" : Number(e.target.value)
+                      );
+                    }}
+                    onBlur={checkWaveNumRange}
+                    InputProps={{
+                      inputProps: {
+                        min: absorbWaveMin,
+                        max: absorbWaveMax,
+                      },
+                    }}
+                  />
+                </Box>
 
-            {/* Upper Bound Box */}
-            <Box
-              className="find-peaks-box"
-              sx={{
-                "& .MuiTextField-root": { m: 1, width: "20ch" },
-              }}
-              noValidate
-              autoComplete="off"
-            >
-              <TextField
-                id="peak-upperbound"
-                label="Upper Domain Bound"
-                placeholder="Enter Upper Bound"
-                type="number"
-                value={upperBound}
-                onChange={(e) => {
-                  setUpperBound(
-                    e.target.value === "" ? "" : Number(e.target.value)
-                  );
-                }}
-                onBlur={checkWaveNumRange}
-                InputProps={{
-                  inputProps: {
-                    min: absorbWaveMin,
-                    max: absorbWaveMax,
-                  },
-                }}
-              />
-            </Box>
-          </form>
+                {/* Slider Box */}
+                <Box className="find-peaks-box">
+                  <Slider
+                    sx={{ minWidth: "150px" }}
+                    value={[
+                      lowerBound ? lowerBound : sampleWaveMin,
+                      upperBound ? upperBound : sampleWaveMax,
+                    ]}
+                    min={sampleWaveMin}
+                    max={sampleWaveMax}
+                    onChange={handleSliderChange}
+                    aria-labelledby="input-slider"
+                  />
+                </Box>
 
-          <form id="find-peaks-threshold" name="threshold">
-            {/* Threshold Input */}
-            <Box
-              sx={{
-                "& .MuiTextField-root": { m: 1, width: "15ch" },
-              }}
-              noValidate
-              autoComplete="off"
-              className="absorb-row"
-            >
-              <TextField
-                id="peak-threshold"
-                label="Threshold"
-                placeholder="Enter threshold "
-                type="number"
-                value={threshold}
-                onChange={(e) => {
-                  setThreshold(e.target.value);
-                }}
-                onBlur={checkThresholdRange}
-                InputProps={{
-                  inputProps: {
-                    min: 0.01,
-                    max: 5,
-                  },
-                }}
-              />
-            </Box>
-          </form>
+                {/* Upper Bound Box */}
+                <Box
+                  className="find-peaks-box"
+                  sx={{
+                    "& .MuiTextField-root": { m: 1, width: "20ch" },
+                  }}
+                  noValidate
+                  autoComplete="off"
+                >
+                  <TextField
+                    id="peak-upperbound"
+                    label="Upper Domain Bound"
+                    placeholder="Enter Upper Bound"
+                    type="number"
+                    value={upperBound}
+                    onChange={(e) => {
+                      setUpperBound(
+                        e.target.value === "" ? "" : Number(e.target.value)
+                      );
+                    }}
+                    onBlur={checkWaveNumRange}
+                    InputProps={{
+                      inputProps: {
+                        min: absorbWaveMin,
+                        max: absorbWaveMax,
+                      },
+                    }}
+                  />
+                </Box>
+              </form>
 
-          <div id="find-peaks-points">
-            <p>
-              Current Number of Data Points Selected: <b>{dataPoints}</b>
-            </p>
+              <form id="find-peaks-threshold" name="threshold">
+                {/* Threshold Input */}
+                <Box
+                  sx={{
+                    "& .MuiTextField-root": { m: 1, width: "15ch" },
+                  }}
+                  noValidate
+                  autoComplete="off"
+                  className="absorb-row"
+                >
+                  <TextField
+                    id="peak-threshold"
+                    label="Threshold"
+                    placeholder="Enter threshold "
+                    type="number"
+                    value={threshold}
+                    onChange={(e) => {
+                      setThreshold(e.target.value);
+                    }}
+                    onBlur={checkThresholdRange}
+                    InputProps={{
+                      inputProps: {
+                        min: 0.01,
+                        max: 5,
+                      },
+                    }}
+                  />
+                </Box>
+              </form>
 
-            {tooManyPoints && (
-              <p>
-                <b>
-                  Too Many Data Points Selected, Please Narrow Your Range to
-                  Less Than <u>25000</u> Data Points
-                </b>
-              </p>
-            )}
-
-            {/* Fetch Peaks */}
-            <Fetch
-              type="find_peaks"
-              params={{
-                x: absorbanceData.x,
-                y: absorbanceData.y,
-                lowerBound: lowerBound,
-                upperBound: upperBound,
-                threshold: threshold,
-              }}
-              fetchURL={FIND_PEAKS}
-              buttonText={"Find Peaks"}
-              buttonStyle={"button"}
-              tooManyPoints={tooManyPoints}
-            />
-          </div>
-        </div>
-
-        {/* Displays data from the server if there were no errors */}
-        <div className="find-peaks-row-right">
-          {/* Data Display */}
-          {fetching && <Spinner variant="indeterminate" size={100} />}
-          {peaksData && !fetching && !error && (
-            <div id="find-peaks-data-container">
-              <h1>Absorbance Peaks</h1>
-              <div id="find-peaks-results">
-                <p id="find-peaks-text">
-                  {Object.keys(peaksData.peaks).map((key) => {
-                    return (
-                      <>
-                        {`Peak: ${key} Intensity: ${peaksData.peaks[key]}`}{" "}
-                        <br />
-                      </>
-                    );
-                  })}
+              <div id="find-peaks-points">
+                <p>
+                  Current Number of Data Points Selected: <b>{dataPoints}</b>
                 </p>
+
+                {tooManyPoints && (
+                  <p>
+                    <b>
+                      Too Many Data Points Selected, Please Narrow Your Range to
+                      Less Than <u>25000</u> Data Points
+                    </b>
+                  </p>
+                )}
+
+                {/* Fetch Peaks */}
+                <Fetch
+                  type="find_peaks"
+                  params={{
+                    x: absorbanceData.x,
+                    y: absorbanceData.y,
+                    lowerBound: lowerBound,
+                    upperBound: upperBound,
+                    threshold: threshold,
+                  }}
+                  fetchURL={FIND_PEAKS}
+                  buttonText={"Find Peaks"}
+                  buttonStyle={"button"}
+                  tooManyPoints={tooManyPoints}
+                />
               </div>
             </div>
           )}
         </div>
 
-        {/* Error Display */}
-        {error && (
-          <div id="find-peaks-error">
-            <p style={{ fontSize: 30 }}>{errorText}</p>
-          </div>
-        )}
+        {/* {absorbanceData.error === false && ( */}
+        <div className="find-peaks-row-right">
+          {/* Data Display */}
+          {fetching && <Spinner variant="indeterminate" size={100} />}
+          {peaksData &&
+            absorbanceData.error === false &&
+            !fetching &&
+            !error && (
+              <div id="find-peaks-data-container">
+                <h1>Absorbance Peaks</h1>
+                <div id="find-peaks-results">
+                  <p id="find-peaks-text">
+                    {Object.keys(peaksData.peaks).map((key) => {
+                      return (
+                        <>
+                          {`Peak: ${key} Intensity: ${peaksData.peaks[key]}`}
+                          <br />
+                        </>
+                      );
+                    })}
+                  </p>
+                </div>
+              </div>
+            )}
+
+          {/* Error Display */}
+          {error && (
+            <div id="find-peaks-error">
+              <p style={{ fontSize: 30 }}>{errorText}</p>
+            </div>
+          )}
+        </div>
+        {/* )} */}
       </div>
     );
   } else {
     return (
-      <div className="find-peaks-container" id="find-peaks-text">
+      <div className="find-peaks-container-no-data" id="find-peaks-text">
         <AbsorbancePlotly />
         <h2>
           Please generate both a sample and background sample and return here
