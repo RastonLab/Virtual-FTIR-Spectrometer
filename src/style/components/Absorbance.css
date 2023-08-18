@@ -4,29 +4,3 @@
   height: inherit;
   width: 100%;
 }
-
-.absorb-row {
-  display: flex;
-  flex-direction: row;
-  /* width: 90%; */
-}
-
-.absorb-col {
-  display: flex;
-  flex-direction: column;
-  /* width: 90%; */
-  margin: 3% 5%;
-}
-
-.display {
-  height: 100%;
-  max-height: 18rem;
-  overflow-y: scroll;
-  overflow-wrap: normal;
-  background-color: rgb(232, 232, 232);
-  border-radius: 1.5em;
-}
-
-#peaks {
-  padding: 0.5rem 1rem;
-}
