@@ -1,7 +1,7 @@
 // components
 import { Open } from "../components/Open";
 import CancelScan from "../components/CancelScan";
-import Fetch from "../routes/FindPeaks";
+import Fetch from "../components/Fetch";
 import LandingPage from "../components/LandingPage";
 import Save from "../components/Save";
 import Tutorial from "../components/Tutorial";
