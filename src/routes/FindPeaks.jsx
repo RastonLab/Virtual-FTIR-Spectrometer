@@ -50,10 +50,12 @@ export default function FindPeaks() {
   };
 
   const checkWaveNumRange = () => {
-    if (lowerBound > upperBound) {
-      const temp = lowerBound;
-      setLowerBound(upperBound);
-      setUpperBound(temp);
+    if (!lowerBound) {
+      setLowerBound(sampleWaveMin);
+    }
+
+    if (!upperBound) {
+      setUpperBound(sampleWaveMax);
     }
 
     if (lowerBound < sampleWaveMin) {
@@ -62,6 +64,12 @@ export default function FindPeaks() {
 
     if (upperBound > sampleWaveMax) {
       setUpperBound(sampleWaveMax);
+    }
+
+    if (lowerBound > upperBound && upperBound) {
+      const temp = lowerBound;
+      setLowerBound(upperBound);
+      setUpperBound(temp);
     }
   };
 
@@ -109,7 +117,7 @@ export default function FindPeaks() {
       <div className="find-peaks-container">
         <div className="find-peaks-row-left">
           <AbsorbancePlotly />
-          <form id="find-peaks-bounds">
+          <form id="find-peaks-bounds" name="bounds">
             {/* Lower Bound Box */}
             <Box
               className="find-peaks-box"
@@ -124,9 +132,11 @@ export default function FindPeaks() {
                 label="Lower Domain Bound"
                 placeholder="Enter Lower Bound"
                 type="number"
-                value={lowerBound ? lowerBound : sampleWaveMin}
+                value={lowerBound}
                 onChange={(e) => {
-                  setLowerBound(e.target.value);
+                  setLowerBound(
+                    e.target.value === "" ? "" : Number(e.target.value)
+                  );
                 }}
                 onBlur={checkWaveNumRange}
                 InputProps={{
@@ -167,9 +177,11 @@ export default function FindPeaks() {
                 label="Upper Domain Bound"
                 placeholder="Enter Upper Bound"
                 type="number"
-                value={upperBound ? upperBound : sampleWaveMax}
+                value={upperBound}
                 onChange={(e) => {
-                  setUpperBound(e.target.value);
+                  setUpperBound(
+                    e.target.value === "" ? "" : Number(e.target.value)
+                  );
                 }}
                 onBlur={checkWaveNumRange}
                 InputProps={{
@@ -182,7 +194,7 @@ export default function FindPeaks() {
             </Box>
           </form>
 
-          <form id="find-peaks-threshold">
+          <form id="find-peaks-threshold" name="threshold">
             {/* Threshold Input */}
             <Box
               sx={{
@@ -269,7 +281,7 @@ export default function FindPeaks() {
 
         {/* Error Display */}
         {error && (
-          <div id="error">
+          <div id="find-peaks-error">
             <p style={{ fontSize: 30 }}>{errorText}</p>
           </div>
         )}
