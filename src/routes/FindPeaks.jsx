@@ -27,19 +27,25 @@ export default function FindPeaks() {
   const { backgroundData, backgroundParameters } = useSelector(
     (store) => store.backgroundData
   );
-  const { sampleWaveMin, sampleWaveMax, sampleData, sampleParameters } =
-    useSelector((store) => store.sampleData);
-  const { absorbanceData, absorbWaveMin, absorbWaveMax } = useSelector(
+  const { sampleData, sampleParameters } = useSelector(
+    (store) => store.sampleData
+  );
+  const { absorbanceData, absorbanceWaveMin, absorbanceWaveMax } = useSelector(
     (store) => store.absorbanceData
   );
   const { fetching } = useSelector((store) => store.progress);
   const { error, errorText } = useSelector((store) => store.error);
 
   const [threshold, setThreshold] = useState(0.01);
-  const [lowerBound, setLowerBound] = useState(sampleWaveMin);
-  const [upperBound, setUpperBound] = useState(sampleWaveMax);
+  const [lowerBound, setLowerBound] = useState(
+    absorbanceWaveMin ? absorbanceWaveMin : ""
+  );
+  const [upperBound, setUpperBound] = useState(
+    absorbanceWaveMax ? absorbanceWaveMax : ""
+  );
   const [dataPoints, setDataPoints] = useState();
   const [tooManyPoints, setTooManyPoints] = useState(true);
+  const [emptyInput, setEmptyInput] = useState(true);
 
   const checkThresholdRange = () => {
     if (threshold < 0.01) {
@@ -51,19 +57,19 @@ export default function FindPeaks() {
 
   const checkWaveNumRange = () => {
     if (!lowerBound) {
-      setLowerBound(sampleWaveMin);
+      setLowerBound(absorbanceWaveMin);
     }
 
     if (!upperBound) {
-      setUpperBound(sampleWaveMax);
+      setUpperBound(absorbanceWaveMax);
     }
 
-    if (lowerBound < sampleWaveMin) {
-      setLowerBound(sampleWaveMin);
+    if (lowerBound < absorbanceWaveMin) {
+      setLowerBound(absorbanceWaveMin);
     }
 
-    if (upperBound > sampleWaveMax) {
-      setUpperBound(sampleWaveMax);
+    if (upperBound > absorbanceWaveMax) {
+      setUpperBound(absorbanceWaveMax);
     }
 
     if (lowerBound > upperBound && upperBound) {
@@ -93,6 +99,12 @@ export default function FindPeaks() {
 
       setDataPoints(absorbanceData.x.slice(startIndex, endIndex + 1).length);
 
+      if (!lowerBound || !upperBound) {
+        setEmptyInput(true);
+      } else {
+        setEmptyInput(false);
+      }
+
       if (dataPoints > 25000) {
         setTooManyPoints(true);
       } else {
@@ -108,11 +120,7 @@ export default function FindPeaks() {
     dataPoints,
     lowerBound,
     upperBound,
-    sampleWaveMin,
-    sampleWaveMax,
   ]);
-
-  console.log(absorbanceData);
 
   if (absorbanceData) {
     return (
@@ -146,8 +154,8 @@ export default function FindPeaks() {
                     onBlur={checkWaveNumRange}
                     InputProps={{
                       inputProps: {
-                        min: absorbWaveMin,
-                        max: absorbWaveMax,
+                        min: absorbanceWaveMin,
+                        max: absorbanceWaveMax,
                       },
                     }}
                   />
@@ -158,11 +166,11 @@ export default function FindPeaks() {
                   <Slider
                     sx={{ minWidth: "150px" }}
                     value={[
-                      lowerBound ? lowerBound : sampleWaveMin,
-                      upperBound ? upperBound : sampleWaveMax,
+                      lowerBound ? lowerBound : absorbanceWaveMin,
+                      upperBound ? upperBound : absorbanceWaveMax,
                     ]}
-                    min={sampleWaveMin}
-                    max={sampleWaveMax}
+                    min={absorbanceWaveMin}
+                    max={absorbanceWaveMax}
                     onChange={handleSliderChange}
                     aria-labelledby="input-slider"
                   />
@@ -191,8 +199,8 @@ export default function FindPeaks() {
                     onBlur={checkWaveNumRange}
                     InputProps={{
                       inputProps: {
-                        min: absorbWaveMin,
-                        max: absorbWaveMax,
+                        min: absorbanceWaveMin,
+                        max: absorbanceWaveMax,
                       },
                     }}
                   />
@@ -234,6 +242,12 @@ export default function FindPeaks() {
                   Current Number of Data Points Selected: <b>{dataPoints}</b>
                 </p>
 
+                {emptyInput && (
+                  <p>
+                    <b>Please enter data into the empty input field(s)!</b>
+                  </p>
+                )}
+
                 {tooManyPoints && (
                   <p>
                     <b>
@@ -256,7 +270,7 @@ export default function FindPeaks() {
                   fetchURL={FIND_PEAKS}
                   buttonText={"Find Peaks"}
                   buttonStyle={"button"}
-                  tooManyPoints={tooManyPoints}
+                  tooManyPoints={tooManyPoints || emptyInput}
                 />
               </div>
             </div>
@@ -274,16 +288,14 @@ export default function FindPeaks() {
               <div id="find-peaks-data-container">
                 <h1>Absorbance Peaks</h1>
                 <div id="find-peaks-results">
-                  <p id="find-peaks-text">
-                    {Object.keys(peaksData.peaks).map((key) => {
-                      return (
-                        <>
-                          {`Peak: ${key} Intensity: ${peaksData.peaks[key]}`}
-                          <br />
-                        </>
-                      );
-                    })}
-                  </p>
+                  {Object.keys(peaksData.peaks).map((key) => {
+                    return (
+                      <p id="find-peaks-text" key={key}>
+                        {`Peak: ${key} Intensity: ${peaksData.peaks[key]}`}
+                        <br />
+                      </p>
+                    );
+                  })}
                 </div>
               </div>
             )}
