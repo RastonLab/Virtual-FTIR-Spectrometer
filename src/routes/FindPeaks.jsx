@@ -36,10 +36,15 @@ export default function FindPeaks() {
   const { error, errorText } = useSelector((store) => store.error);
 
   const [threshold, setThreshold] = useState(0.01);
-  const [lowerBound, setLowerBound] = useState(sampleWaveMin);
-  const [upperBound, setUpperBound] = useState(sampleWaveMax);
+  const [lowerBound, setLowerBound] = useState(
+    sampleWaveMin ? sampleWaveMin : ""
+  );
+  const [upperBound, setUpperBound] = useState(
+    sampleWaveMax ? sampleWaveMax : ""
+  );
   const [dataPoints, setDataPoints] = useState();
   const [tooManyPoints, setTooManyPoints] = useState(true);
+  const [emptyInput, setEmptyInput] = useState(true);
 
   const checkThresholdRange = () => {
     if (threshold < 0.01) {
@@ -93,6 +98,12 @@ export default function FindPeaks() {
 
       setDataPoints(absorbanceData.x.slice(startIndex, endIndex + 1).length);
 
+      if (!lowerBound || !upperBound) {
+        setEmptyInput(true);
+      } else {
+        setEmptyInput(false);
+      }
+
       if (dataPoints > 25000) {
         setTooManyPoints(true);
       } else {
@@ -111,8 +122,6 @@ export default function FindPeaks() {
     sampleWaveMin,
     sampleWaveMax,
   ]);
-
-  console.log(absorbanceData);
 
   if (absorbanceData) {
     return (
@@ -234,6 +243,12 @@ export default function FindPeaks() {
                   Current Number of Data Points Selected: <b>{dataPoints}</b>
                 </p>
 
+                {emptyInput && (
+                  <p>
+                    <b>Please enter data into the empty input field(s)!</b>
+                  </p>
+                )}
+
                 {tooManyPoints && (
                   <p>
                     <b>
@@ -256,7 +271,7 @@ export default function FindPeaks() {
                   fetchURL={FIND_PEAKS}
                   buttonText={"Find Peaks"}
                   buttonStyle={"button"}
-                  tooManyPoints={tooManyPoints}
+                  tooManyPoints={tooManyPoints || emptyInput}
                 />
               </div>
             </div>
