@@ -25,25 +25,23 @@ export const AbsorbancePlotly = forwardRef((props, ref) => {
   );
   const { sampleData, sampleWaveMin, sampleWaveMax, sampleParameters } =
     useSelector((store) => store.sampleData);
-  const { absorbanceData } = useSelector(
-    (store) => store.absorbanceData
-    );
+  const { absorbanceData } = useSelector((store) => store.absorbanceData);
   const dispatch = useDispatch();
 
-    useEffect(() => {
-      if (!absorbanceData && (sampleData && backgroundData)) {
-        const absorbanceData = generateAbsorbance(
-          backgroundData,
-          sampleData,
-          backgroundParameters,
-          sampleParameters
-        );
-      
-        dispatch(setAbsorbanceData([absorbanceData, sampleWaveMin, sampleWaveMax]));
-      }
-    });
+  useEffect(() => {
+    if (!absorbanceData && sampleData && backgroundData) {
+      const absorbanceData = generateAbsorbance(
+        backgroundData,
+        sampleData,
+        backgroundParameters,
+        sampleParameters
+      );
 
-  
+      dispatch(
+        setAbsorbanceData([absorbanceData, sampleWaveMin, sampleWaveMax])
+      );
+    }
+  });
 
   if (absorbanceData && !absorbanceData.error) {
     return (

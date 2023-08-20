@@ -4523,128 +4523,555 @@ const SvgInstrumentWindow = (props) => (
         />
       </g>
       <circle
-        id="red-bubble-5"
-        cx={2486.542}
-        cy={2043.051}
-        r={12.5}
+        id="blue-bubble-15"
+        cx={2654.76}
+        cy={2188.581}
+        r={10}
         style={{
-          fill: "red",
+          fill: "#00f",
           fillOpacity: 0.5,
-          strokeWidth: 0.362417,
+          strokeWidth: 0.289934,
           strokeLinecap: "square",
-          opacity: 1,
         }}
       />
       <circle
-        id="red-bubble-4"
-        cx={2032.739}
-        cy={2043.639}
-        r={12.5}
+        id="blue-bubble-14"
+        cx={2596.479}
+        cy={2188.439}
+        r={10}
         style={{
-          fill: "red",
+          fill: "#00f",
           fillOpacity: 0.5,
-          strokeWidth: 0.362417,
+          strokeWidth: 0.289934,
           strokeLinecap: "square",
-          opacity: 1,
         }}
       />
       <circle
-        id="red-bubble-3"
-        cx={2242.056}
-        cy={2043.574}
-        r={12.5}
+        id="blue-bubble-13"
+        cx={2536.477}
+        cy={2188.593}
+        r={10}
         style={{
-          fill: "red",
+          fill: "#00f",
           fillOpacity: 0.5,
-          strokeWidth: 0.362417,
+          strokeWidth: 0.289934,
           strokeLinecap: "square",
-          opacity: 1,
         }}
       />
       <circle
-        id="red-bubble-2"
-        cx={2672.794}
-        cy={2043.959}
-        r={12.5}
+        id="blue-bubble-12"
+        cx={2477.185}
+        cy={2188.595}
+        r={10}
         style={{
-          fill: "red",
+          fill: "#00f",
           fillOpacity: 0.5,
-          strokeWidth: 0.362417,
+          strokeWidth: 0.289934,
           strokeLinecap: "square",
-          opacity: 1,
         }}
       />
       <circle
-        id="red-bubble-1"
-        cx={1811.172}
-        cy={2043.963}
-        r={12.5}
+        id="blue-bubble-11"
+        cx={2417.611}
+        cy={2188.595}
+        r={10}
         style={{
-          fill: "red",
+          fill: "#00f",
           fillOpacity: 0.5,
-          strokeWidth: 0.362417,
+          strokeWidth: 0.289934,
           strokeLinecap: "square",
-          opacity: 1,
+        }}
+      />
+      <circle
+        id="blue-bubble-10"
+        cx={2358.045}
+        cy={2188.595}
+        r={10}
+        style={{
+          fill: "#00f",
+          fillOpacity: 0.5,
+          strokeWidth: 0.289934,
+          strokeLinecap: "square",
+        }}
+      />
+      <circle
+        id="blue-bubble-9"
+        cx={2299.688}
+        cy={2188.453}
+        r={10}
+        style={{
+          fill: "#00f",
+          fillOpacity: 0.5,
+          strokeWidth: 0.289934,
+          strokeLinecap: "square",
+        }}
+      />
+      <circle
+        id="blue-bubble-8"
+        cx={2238.181}
+        cy={2188.453}
+        r={10}
+        style={{
+          fill: "#00f",
+          fillOpacity: 0.5,
+          strokeWidth: 0.289934,
+          strokeLinecap: "square",
+        }}
+      />
+      <circle
+        id="blue-bubble-7"
+        cx={2176.698}
+        cy={2188.448}
+        r={10}
+        style={{
+          fill: "#00f",
+          fillOpacity: 0.5,
+          strokeWidth: 0.289934,
+          strokeLinecap: "square",
+        }}
+      />
+      <circle
+        id="blue-bubble-6"
+        cx={2117.238}
+        cy={2188.453}
+        r={10}
+        style={{
+          fill: "#00f",
+          fillOpacity: 0.5,
+          strokeWidth: 0.289934,
+          strokeLinecap: "square",
         }}
       />
       <circle
         id="blue-bubble-5"
-        cx={2486.732}
-        cy={2185.181}
-        r={12.5}
+        cx={2057.221}
+        cy={2188.431}
+        r={10}
         style={{
           fill: "#00f",
           fillOpacity: 0.5,
-          strokeWidth: 0.362417,
+          strokeWidth: 0.289934,
           strokeLinecap: "square",
         }}
       />
       <circle
         id="blue-bubble-4"
-        cx={2032.929}
-        cy={2185.77}
-        r={12.5}
+        cx={1998.218}
+        cy={2188.401}
+        r={10}
         style={{
           fill: "#00f",
           fillOpacity: 0.5,
-          strokeWidth: 0.362417,
+          strokeWidth: 0.289934,
           strokeLinecap: "square",
         }}
       />
       <circle
         id="blue-bubble-3"
-        cx={2242.246}
-        cy={2185.705}
-        r={12.5}
+        cx={1938.149}
+        cy={2188.364}
+        r={10}
         style={{
           fill: "#00f",
           fillOpacity: 0.5,
-          strokeWidth: 0.362417,
+          strokeWidth: 0.289934,
           strokeLinecap: "square",
         }}
       />
       <circle
         id="blue-bubble-2"
-        cx={2672.984}
-        cy={2186.089}
-        r={12.5}
+        cx={1880.548}
+        cy={2188.42}
+        r={10}
         style={{
           fill: "#00f",
           fillOpacity: 0.5,
-          strokeWidth: 0.362417,
+          strokeWidth: 0.289934,
           strokeLinecap: "square",
         }}
       />
       <circle
         id="blue-bubble-1"
-        cx={1811.362}
-        cy={2186.093}
-        r={12.5}
+        cx={1825.989}
+        cy={2188.477}
+        r={10}
         style={{
           fill: "#00f",
-          strokeWidth: 0.362417,
-          strokeLinecap: "square",
           fillOpacity: 0.5,
+          strokeWidth: 0.289934,
+          strokeLinecap: "square",
+        }}
+      />
+      <circle
+        id="red-bubble-31"
+        cx={2675.846}
+        cy={2041.18}
+        r={10}
+        style={{
+          fill: "red",
+          fillOpacity: 0.5,
+          strokeWidth: 0.289934,
+          strokeLinecap: "square",
+        }}
+      />
+      <circle
+        id="red-bubble-30"
+        cx={2649.426}
+        cy={2041.18}
+        r={10}
+        style={{
+          fill: "red",
+          fillOpacity: 0.5,
+          strokeWidth: 0.289934,
+          strokeLinecap: "square",
+        }}
+      />
+      <circle
+        id="red-bubble-29"
+        cx={2621.286}
+        cy={2041.18}
+        r={10}
+        style={{
+          fill: "red",
+          fillOpacity: 0.5,
+          strokeWidth: 0.289934,
+          strokeLinecap: "square",
+        }}
+      />
+      <circle
+        id="red-bubble-28"
+        cx={2594.046}
+        cy={2041.18}
+        r={10}
+        style={{
+          fill: "red",
+          fillOpacity: 0.5,
+          strokeWidth: 0.289934,
+          strokeLinecap: "square",
+        }}
+      />
+      <circle
+        id="red-bubble-27"
+        cx={2566.206}
+        cy={2041.18}
+        r={10}
+        style={{
+          fill: "red",
+          fillOpacity: 0.5,
+          strokeWidth: 0.289934,
+          strokeLinecap: "square",
+        }}
+      />
+      <circle
+        id="red-bubble-26"
+        cx={2538.559}
+        cy={2041.18}
+        r={10}
+        style={{
+          fill: "red",
+          fillOpacity: 0.5,
+          strokeWidth: 0.289934,
+          strokeLinecap: "square",
+        }}
+      />
+      <circle
+        id="red-bubble-25"
+        cx={2511.124}
+        cy={2041.18}
+        r={10}
+        style={{
+          fill: "red",
+          fillOpacity: 0.5,
+          strokeWidth: 0.289934,
+          strokeLinecap: "square",
+        }}
+      />
+      <circle
+        id="red-bubble-24"
+        cx={2483.873}
+        cy={2041.18}
+        r={10}
+        style={{
+          fill: "red",
+          fillOpacity: 0.5,
+          strokeWidth: 0.289934,
+          strokeLinecap: "square",
+        }}
+      />
+      <circle
+        id="red-bubble-23"
+        cx={2456.564}
+        cy={2041.18}
+        r={10}
+        style={{
+          fill: "red",
+          fillOpacity: 0.5,
+          strokeWidth: 0.289934,
+          strokeLinecap: "square",
+        }}
+      />
+      <circle
+        id="red-bubble-22"
+        cx={2427.956}
+        cy={2041.18}
+        r={10}
+        style={{
+          fill: "red",
+          fillOpacity: 0.5,
+          strokeWidth: 0.289934,
+          strokeLinecap: "square",
+        }}
+      />
+      <circle
+        id="red-bubble-21"
+        cx={2401.485}
+        cy={2041.18}
+        r={10}
+        style={{
+          fill: "red",
+          fillOpacity: 0.5,
+          strokeWidth: 0.289934,
+          strokeLinecap: "square",
+        }}
+      />
+      <circle
+        id="red-bubble-20"
+        cx={2374.673}
+        cy={2041.18}
+        r={10}
+        style={{
+          fill: "red",
+          fillOpacity: 0.5,
+          strokeWidth: 0.289934,
+          strokeLinecap: "square",
+        }}
+      />
+      <circle
+        id="red-bubble-19"
+        cx={2346.444}
+        cy={2041.18}
+        r={10}
+        style={{
+          fill: "red",
+          fillOpacity: 0.5,
+          strokeWidth: 0.289934,
+          strokeLinecap: "square",
+        }}
+      />
+      <circle
+        id="red-bubble-18"
+        cx={2317.304}
+        cy={2041.18}
+        r={10}
+        style={{
+          fill: "red",
+          fillOpacity: 0.5,
+          strokeWidth: 0.289934,
+          strokeLinecap: "square",
+        }}
+      />
+      <circle
+        id="red-bubble-17"
+        cx={2281.605}
+        cy={2041.18}
+        r={10}
+        style={{
+          fill: "red",
+          fillOpacity: 0.5,
+          strokeWidth: 0.289934,
+          strokeLinecap: "square",
+        }}
+      />
+      <circle
+        id="red-bubble-16"
+        cx={2241.239}
+        cy={2041.18}
+        r={10}
+        style={{
+          fill: "red",
+          fillOpacity: 0.5,
+          strokeWidth: 0.289934,
+          strokeLinecap: "square",
+        }}
+      />
+      <circle
+        id="red-bubble-15"
+        cx={2202.024}
+        cy={2041.18}
+        r={10}
+        style={{
+          fill: "red",
+          fillOpacity: 0.5,
+          strokeWidth: 0.289934,
+          strokeLinecap: "square",
+        }}
+      />
+      <circle
+        id="red-bubble-14"
+        cx={2165.689}
+        cy={2041.18}
+        r={10}
+        style={{
+          fill: "red",
+          fillOpacity: 0.5,
+          strokeWidth: 0.289934,
+          strokeLinecap: "square",
+        }}
+      />
+      <circle
+        id="red-bubble-13"
+        cx={2138.627}
+        cy={2041.18}
+        r={10}
+        style={{
+          fill: "red",
+          fillOpacity: 0.5,
+          strokeWidth: 0.289934,
+          strokeLinecap: "square",
+        }}
+      />
+      <circle
+        id="red-bubble-12"
+        cx={2110.369}
+        cy={2041.18}
+        r={10}
+        style={{
+          fill: "red",
+          fillOpacity: 0.5,
+          strokeWidth: 0.289934,
+          strokeLinecap: "square",
+        }}
+      />
+      <circle
+        id="red-bubble-11"
+        cx={2083.548}
+        cy={2041.18}
+        r={10}
+        style={{
+          fill: "red",
+          fillOpacity: 0.5,
+          strokeWidth: 0.289934,
+          strokeLinecap: "square",
+        }}
+      />
+      <circle
+        id="red-bubble-10"
+        cx={2055.026}
+        cy={2041.18}
+        r={10}
+        style={{
+          fill: "red",
+          fillOpacity: 0.5,
+          strokeWidth: 0.289934,
+          strokeLinecap: "square",
+        }}
+      />
+      <circle
+        id="red-bubble-9"
+        cx={2028.466}
+        cy={2041.18}
+        r={10}
+        style={{
+          fill: "red",
+          fillOpacity: 0.5,
+          strokeWidth: 0.289934,
+          strokeLinecap: "square",
+        }}
+      />
+      <circle
+        id="red-bubble-8"
+        cx={2000.413}
+        cy={2041.18}
+        r={10}
+        style={{
+          fill: "red",
+          fillOpacity: 0.5,
+          strokeWidth: 0.289934,
+          strokeLinecap: "square",
+        }}
+      />
+      <circle
+        id="red-bubble-7"
+        cx={1973.906}
+        cy={2041.18}
+        r={10}
+        style={{
+          fill: "red",
+          fillOpacity: 0.5,
+          strokeWidth: 0.289934,
+          strokeLinecap: "square",
+        }}
+      />
+      <circle
+        id="red-bubble-6"
+        cx={1946.309}
+        cy={2041.18}
+        r={10}
+        style={{
+          fill: "red",
+          fillOpacity: 0.5,
+          strokeWidth: 0.289934,
+          strokeLinecap: "square",
+        }}
+      />
+      <circle
+        id="red-bubble-5"
+        cx={1918.826}
+        cy={2041.18}
+        r={10}
+        style={{
+          fill: "red",
+          fillOpacity: 0.5,
+          strokeWidth: 0.289934,
+          strokeLinecap: "square",
+        }}
+      />
+      <circle
+        id="red-bubble-4"
+        cx={1891.435}
+        cy={2041.18}
+        r={10}
+        style={{
+          fill: "red",
+          fillOpacity: 0.5,
+          strokeWidth: 0.289934,
+          strokeLinecap: "square",
+        }}
+      />
+      <circle
+        id="red-bubble-3"
+        cx={1863.786}
+        cy={2041.18}
+        r={10}
+        style={{
+          fill: "red",
+          fillOpacity: 0.5,
+          strokeWidth: 0.289934,
+          strokeLinecap: "square",
+        }}
+      />
+      <circle
+        id="red-bubble-2"
+        cx={1836.282}
+        cy={2041.18}
+        r={10}
+        style={{
+          fill: "red",
+          fillOpacity: 0.5,
+          strokeWidth: 0.289934,
+          strokeLinecap: "square",
+        }}
+      />
+      <circle
+        id="red-bubble-1"
+        cx={1809.226}
+        cy={2041.18}
+        r={10}
+        style={{
+          fill: "red",
+          fillOpacity: 0.5,
+          strokeWidth: 0.289934,
+          strokeLinecap: "square",
         }}
       />
       <g

@@ -1,5 +1,8 @@
 // dictionaries
-import { PARAMETER_VALUE } from "../dictionaries/constants";
+import { PARAMETER_VALUE, RED_BALL_KEYFRAMES, BLUE_BALL_KEYFRAMES } from "../dictionaries/constants";
+
+// functions
+import calculateBalls from "../functions/calculateBalls";
 
 /**
  * Function that moves the moveable corner cube and associated rays/lasers
@@ -318,315 +321,40 @@ export function distanceInteractivity(progress, distance) {
  *
  * @param {boolean} isAir - The value used to determine if the user has selected air as the medium.
  * @param {boolean} isMolecule - The value used to determine if the user has selected a sample spectrum.
+ * @param {number} pressure - The value entered by the user. 
  */
-export function bubblesAnimation(isAir, isMolecule) {
-  // DOM elements
-  const blueOne = document.getElementById("blue-bubble-1");
-  const blueTwo = document.getElementById("blue-bubble-2");
-  const blueThree = document.getElementById("blue-bubble-3");
-  const blueFour = document.getElementById("blue-bubble-4");
-  const blueFive = document.getElementById("blue-bubble-5");
-  const redOne = document.getElementById("red-bubble-1");
-  const redTwo = document.getElementById("red-bubble-2");
-  const redThree = document.getElementById("red-bubble-3");
-  const redFour = document.getElementById("red-bubble-4");
-  const redFive = document.getElementById("red-bubble-5");
+export function bubblesAnimation(isAir, isMolecule, pressure) {
+  // loop through each blue ball
+  for (let i = 1; i <= 15; i++) {
+    const element = document.getElementById(`blue-bubble-${i}`);
 
-  // ternary used to show/hide "air" bubbles
-  blueOne.style.display = isAir ? "inline" : "none";
-  blueTwo.style.display = isAir ? "inline" : "none";
-  blueThree.style.display = isAir ? "inline" : "none";
-  blueFour.style.display = isAir ? "inline" : "none";
-  blueFive.style.display = isAir ? "inline" : "none";
+    if (i < calculateBalls(pressure) && isAir) {
+      element.style.display = "inline";
 
-  // ternary used to show/hide "molecule" bubbles
-  redOne.style.display = isMolecule ? "inline" : "none";
-  redTwo.style.display = isMolecule ? "inline" : "none";
-  redThree.style.display = isMolecule ? "inline" : "none";
-  redFour.style.display = isMolecule ? "inline" : "none";
-  redFive.style.display = isMolecule ? "inline" : "none";
+      element.animate(BLUE_BALL_KEYFRAMES[i], {
+        duration: Math.random() * (7000 - 2000) + 2000,
+        iterations: Infinity,
+      });
 
-  blueOne.animate(
-    [
-      // keyframes
-      { transform: "translate(0px, 0px)" },
-      { transform: "translate(100px, -140px)" },
-      { transform: "translate(200px, 0px)" },
-      { transform: "translate(300px, -140px)" },
-      { transform: "translate(400px, 0px)" },
-      { transform: "translate(500px, -140px)" },
-      { transform: "translate(600px, 0px)" },
-      { transform: "translate(700px, -140px)" },
-      { transform: "translate(800px, 0px)" },
-      { transform: "translate(850px, -140px)" },
-      { transform: "translate(800px, 0px)" },
-      { transform: "translate(700px, -140px)" },
-      { transform: "translate(600px, 0px)" },
-      { transform: "translate(500px, -140px)" },
-      { transform: "translate(400px, 0px)" },
-      { transform: "translate(300px, -140px)" },
-      { transform: "translate(200px, 0px)" },
-      { transform: "translate(100px, -140px)" },
-      { transform: "translate(0px, 0px)" },
-    ],
-    {
-      // timing options
-      duration: 3500,
-      iterations: Infinity,
+    } else {
+      element.style.display = "none"
     }
-  );
+  }
 
-  blueTwo.animate(
-    [
-      // keyframes
-      { transform: "translate(0px, 0px)" },
-      { transform: "translate(-100px, -140px)" },
-      { transform: "translate(-200px, 0px)" },
-      { transform: "translate(-300px, -140px)" },
-      { transform: "translate(-400px, 0px)" },
-      { transform: "translate(-500px, -140px)" },
-      { transform: "translate(-600px, 0px)" },
-      { transform: "translate(-700px, -140px)" },
-      { transform: "translate(-800px, 0px)" },
-      { transform: "translate(-850px, -140px)" },
-      { transform: "translate(-800px, 0px)" },
-      { transform: "translate(-700px, -140px)" },
-      { transform: "translate(-600px, 0px)" },
-      { transform: "translate(-500px, -140px)" },
-      { transform: "translate(-400px, 0px)" },
-      { transform: "translate(-300px, -140px)" },
-      { transform: "translate(-200px, 0px)" },
-      { transform: "translate(-100px, -140px)" },
-      { transform: "translate(0px, 0px)" },
-    ],
-    {
-      // timing options
-      duration: 4500,
-      iterations: Infinity,
-    }
-  );
+  // loop through each red ball
+  for (let i = 1; i <= 31; i++) {
+    const element = document.getElementById(`red-bubble-${i}`);
 
-  blueThree.animate(
-    [
-      // keyframes
-      { transform: "translate(0px, 0px)" },
-      { transform: "translate(-100px, -140px)" },
-      { transform: "translate(-200px, 0px)" },
-      { transform: "translate(-300px, -140px)" },
-      { transform: "translate(-400px, 0px)" },
-      { transform: "translate(-300px, -140px)" },
-      { transform: "translate(-200px, 0px)" },
-      { transform: "translate(-100px, -140px)" },
-      { transform: "translate(0px, 0px)" },
-      { transform: "translate(100px, -140px)" },
-      { transform: "translate(200px, 0px)" },
-      { transform: "translate(300px, -140px)" },
-      { transform: "translate(400px, 0px)" },
-      { transform: "translate(300px, -140px)" },
-      { transform: "translate(200px, 0px)" },
-      { transform: "translate(100px, -140px)" },
-      { transform: "translate(0px, 0px)" },
-    ],
-    {
-      // timing options
-      duration: 3000,
-      iterations: Infinity,
-    }
-  );
+    if (i < calculateBalls(pressure) && isMolecule) {
+      element.style.display = "inline";
 
-  blueFour.animate(
-    [
-      // keyframes
-      { transform: "translate(0px, 0px)" },
-      { transform: "translate(-100px, -140px)" },
-      { transform: "translate(-200px, 0px)" },
-      { transform: "translate(-100px, -140px)" },
-      { transform: "translate(0px, 0px)" },
-      { transform: "translate(100px, -140px)" },
-      { transform: "translate(200px, 0px)" },
-      { transform: "translate(300px, -140px)" },
-      { transform: "translate(400px, 0px)" },
-      { transform: "translate(500px, -140px)" },
-      { transform: "translate(650px, 0px)" },
-      { transform: "translate(500px, -140px)" },
-      { transform: "translate(400px, 0px)" },
-      { transform: "translate(300px, -140px)" },
-      { transform: "translate(200px, 0px)" },
-      { transform: "translate(100px, -140px)" },
-      { transform: "translate(0px, 0px)" },
-    ],
-    {
-      // timing options
-      duration: 4000,
-      iterations: Infinity,
-    }
-  );
+      element.animate(RED_BALL_KEYFRAMES[i], {
+        duration: Math.random() * (7000 - 2000) + 2000,
+        iterations: Infinity,
+      });
 
-  blueFive.animate(
-    [
-      // keyframes
-      { transform: "translate(0px, 0px)" },
-      { transform: "translate(100px, -140px)" },
-      { transform: "translate(200px, 0px)" },
-      { transform: "translate(100px, -140px)" },
-      { transform: "translate(0px, 0px)" },
-      { transform: "translate(-100px, -140px)" },
-      { transform: "translate(-200px, 0px)" },
-      { transform: "translate(-300px, -140px)" },
-      { transform: "translate(-400px, 0px)" },
-      { transform: "translate(-500px, -140px)" },
-      { transform: "translate(-650px, 0px)" },
-      { transform: "translate(-500px, -140px)" },
-      { transform: "translate(-400px, 0px)" },
-      { transform: "translate(-300px, -140px)" },
-      { transform: "translate(-200px, 0px)" },
-      { transform: "translate(-100px, -140px)" },
-      { transform: "translate(0px, 0px)" },
-    ],
-    {
-      // timing options
-      duration: 2500,
-      iterations: Infinity,
+    } else {
+      element.style.display = "none"
     }
-  );
-
-  redOne.animate(
-    [
-      // keyframes
-      { transform: "translate(0px, 0px)" },
-      { transform: "translate(100px, 140px)" },
-      { transform: "translate(200px, 0px)" },
-      { transform: "translate(300px, 140px)" },
-      { transform: "translate(400px, 0px)" },
-      { transform: "translate(500px, 140px)" },
-      { transform: "translate(600px, 0px)" },
-      { transform: "translate(700px, 140px)" },
-      { transform: "translate(850px, 0px)" },
-      { transform: "translate(700px, 140px)" },
-      { transform: "translate(600px, 0px)" },
-      { transform: "translate(500px, 140px)" },
-      { transform: "translate(400px, 0px)" },
-      { transform: "translate(300px, 140px)" },
-      { transform: "translate(200px, 0px)" },
-      { transform: "translate(100px, 140px)" },
-      { transform: "translate(0px, 0px)" },
-    ],
-    {
-      // timing options
-      duration: 4000,
-      iterations: Infinity,
-    }
-  );
-
-  redTwo.animate(
-    [
-      // keyframes
-      { transform: "translate(0px, 0px)" },
-      { transform: "translate(-100px, 140px)" },
-      { transform: "translate(-200px, 0px)" },
-      { transform: "translate(-300px, 140px)" },
-      { transform: "translate(-400px, 0px)" },
-      { transform: "translate(-500px, 140px)" },
-      { transform: "translate(-600px, 0px)" },
-      { transform: "translate(-700px, 140px)" },
-      { transform: "translate(-850px, 0px)" },
-      { transform: "translate(-700px, 140px)" },
-      { transform: "translate(-600px, 0px)" },
-      { transform: "translate(-500px, 140px)" },
-      { transform: "translate(-400px, 0px)" },
-      { transform: "translate(-300px, 140px)" },
-      { transform: "translate(-200px, 0px)" },
-      { transform: "translate(-100px, 140px)" },
-      { transform: "translate(0px, 0px)" },
-    ],
-    {
-      // timing options
-      duration: 4500,
-      iterations: Infinity,
-    }
-  );
-
-  redThree.animate(
-    [
-      // keyframes
-      { transform: "translate(0px, 0px)" },
-      { transform: "translate(-100px, 140px)" },
-      { transform: "translate(-200px, 0px)" },
-      { transform: "translate(-300px, 140px)" },
-      { transform: "translate(-400px, 0px)" },
-      { transform: "translate(-300px, 140px)" },
-      { transform: "translate(-200px, 0px)" },
-      { transform: "translate(-100px, 140px)" },
-      { transform: "translate(0px, 0px)" },
-      { transform: "translate(100px, 140px)" },
-      { transform: "translate(200px, 0px)" },
-      { transform: "translate(300px, 140px)" },
-      { transform: "translate(400px, 0px)" },
-      { transform: "translate(300px, 140px)" },
-      { transform: "translate(200px, 0px)" },
-      { transform: "translate(100px, 140px)" },
-      { transform: "translate(0px, 0px)" },
-    ],
-    {
-      // timing options
-      duration: 3500,
-      iterations: Infinity,
-    }
-  );
-
-  redFour.animate(
-    [
-      // keyframes
-      { transform: "translate(0px, 0px)" },
-      { transform: "translate(-100px, 140px)" },
-      { transform: "translate(-200px, 0px)" },
-      { transform: "translate(-100px, 140px)" },
-      { transform: "translate(0px, 0px)" },
-      { transform: "translate(100px, 140px)" },
-      { transform: "translate(200px, 0px)" },
-      { transform: "translate(300px, 140px)" },
-      { transform: "translate(400px, 0px)" },
-      { transform: "translate(500px, 140px)" },
-      { transform: "translate(650px, 0px)" },
-      { transform: "translate(500px, 140px)" },
-      { transform: "translate(400px, 0px)" },
-      { transform: "translate(300px, 140px)" },
-      { transform: "translate(200px, 0px)" },
-      { transform: "translate(100px, 140px)" },
-      { transform: "translate(0px, 0px)" },
-    ],
-    {
-      // timing options
-      duration: 2500,
-      iterations: Infinity,
-    }
-  );
-
-  redFive.animate(
-    [
-      // keyframes
-      { transform: "translate(0px, 0px)" },
-      { transform: "translate(100px, 140px)" },
-      { transform: "translate(200px, 0px)" },
-      { transform: "translate(100px, 140px)" },
-      { transform: "translate(0px, 0px)" },
-      { transform: "translate(-100px, 140px)" },
-      { transform: "translate(-200px, 0px)" },
-      { transform: "translate(-300px, 140px)" },
-      { transform: "translate(-400px, 0px)" },
-      { transform: "translate(-500px, 140px)" },
-      { transform: "translate(-650px, 0px)" },
-      { transform: "translate(-500px, 140px)" },
-      { transform: "translate(-400px, 0px)" },
-      { transform: "translate(-300px, 140px)" },
-      { transform: "translate(-200px, 0px)" },
-      { transform: "translate(-100px, 140px)" },
-      { transform: "translate(0px, 0px)" },
-    ],
-    {
-      // timing options
-      duration: 3000,
-      iterations: Infinity,
-    }
-  );
+  }
 }

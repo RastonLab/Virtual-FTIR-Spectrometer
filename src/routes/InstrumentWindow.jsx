@@ -96,7 +96,8 @@ export default function InstrumentWindow() {
     distanceInteractivity(postfetch, OPD[resolution].distance);
     bubblesAnimation(
       medium === PARAMETER_VALUE.mediumAir ? true : false,
-      lectureBottleInUse
+      lectureBottleInUse,
+      pressure
     );
   });
 
