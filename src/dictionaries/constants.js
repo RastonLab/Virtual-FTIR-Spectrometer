@@ -309,8 +309,6 @@ export const BLUE_BALL_KEYFRAMES = {
     { transform: "translate(0px, 0px)" },
     { transform: "translate(100px, -150px)" },
     { transform: "translate(200px, 0px)" },
-    { transform: "translate(300px, -150px)" },
-    { transform: "translate(200px, 0px)" },
     { transform: "translate(100px, -150px)" },
     { transform: "translate(0px, 0px)" },
     { transform: "translate(-100px, -150px)" },

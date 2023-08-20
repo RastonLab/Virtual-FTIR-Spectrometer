@@ -332,7 +332,7 @@ export function bubblesAnimation(isAir, isMolecule, pressure) {
       element.style.display = "inline";
 
       element.animate(BLUE_BALL_KEYFRAMES[i], {
-        duration: Math.random() * (7000 - 2000) + 2000,
+        duration: Math.random() * (8000 - 4000) + 4000,
         iterations: Infinity,
       });
 
@@ -349,7 +349,7 @@ export function bubblesAnimation(isAir, isMolecule, pressure) {
       element.style.display = "inline";
 
       element.animate(RED_BALL_KEYFRAMES[i], {
-        duration: Math.random() * (7000 - 2000) + 2000,
+        duration: Math.random() * (8000 - 4000) + 4000,
         iterations: Infinity,
       });
 
