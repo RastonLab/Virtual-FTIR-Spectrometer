@@ -328,7 +328,7 @@ export function bubblesAnimation(isAir, isMolecule, pressure) {
   for (let i = 1; i <= 15; i++) {
     const element = document.getElementById(`blue-bubble-${i}`);
 
-    if (i < calculateBalls(pressure) && isAir) {
+    if (isAir) {
       element.style.display = "inline";
 
       element.animate(BLUE_BALL_KEYFRAMES[i], {
@@ -345,7 +345,7 @@ export function bubblesAnimation(isAir, isMolecule, pressure) {
   for (let i = 1; i <= 31; i++) {
     const element = document.getElementById(`red-bubble-${i}`);
 
-    if (i < calculateBalls(pressure) && isMolecule) {
+    if (i <= calculateBalls(pressure) && isMolecule) {
       element.style.display = "inline";
 
       element.animate(RED_BALL_KEYFRAMES[i], {
