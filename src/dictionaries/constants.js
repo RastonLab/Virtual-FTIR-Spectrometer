@@ -1,6 +1,6 @@
 
 // Controls whether or not the Toggle Dev Mode Button is visible
-export const SHOW_DEVMODE = true;
+export const SHOW_DEVMODE = false;
 
 // URLs used to react the API either running locally or hosted online
 
