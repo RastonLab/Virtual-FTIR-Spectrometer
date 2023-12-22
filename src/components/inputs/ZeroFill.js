@@ -23,10 +23,10 @@ export default function ZeroFill({ dictionary, store }) {
   return (
     <div>
       <FormControl fullWidth>
-        <InputLabel>Zero Fill</InputLabel>
+        <InputLabel>Zero Fill Factor</InputLabel>
         <Select
           value={store}
-          label="Zero Fill"
+          label="Zero Fill Factor"
           onChange={handleChange}
           sx={{ maxWidth: "120px" }}
         >
