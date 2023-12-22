@@ -242,7 +242,7 @@ export const tooltips = {
 
         <p>
           Globar heating element which emits radiation corresponding to a 
-          blackbody at 1200 K. The word “globar” is a portmanteau word which 
+          blackbody at 1200 K. The word "globar" is a portmanteau word which 
           blends together "glow" and "bar". Radiation is produced by passing 
           a relatively large current through the material, which is silicon 
           carbide (SiC).
@@ -486,7 +486,7 @@ export const tooltips = {
         <p>
           Pyrex sample cell that has two valves for controlling gas flow in
           (right) and out (left) from it. The medium (space inside) can either
-          be “vacuum” or “air”. When acquiring the spectrum of a molecule in vacuum,
+          be "vacuum" or "air". When acquiring the spectrum of a molecule in vacuum,
           the partial pressure of the selected molecule (red balls) is equal to
           the total pressure inside the cell. When acquiring the spectrum of a
           molecule in air (blue balls), the total pressure is equal to 1.01325 bar
@@ -522,7 +522,7 @@ export const tooltips = {
         <p>
           Pyrex sample cell that has two valves for controlling gas flow in
           (right) and out (left) from it. The medium (space inside) can either
-          be “vacuum” or “air”. When acquiring the spectrum of a molecule in
+          be "vacuum" or "air". When acquiring the spectrum of a molecule in
           vacuum, the partial pressure of the selected molecule (red balls)
           is equal to the total pressure inside the cell. When acquiring the
           spectrum of a molecule in air (blue balls), the total pressure is
