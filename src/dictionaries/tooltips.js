@@ -391,8 +391,9 @@ export const tooltips = {
           utilizes a photoelectric-like effect in order to convert light into
           electricity. The output current is proportional to the infrared
           intensity. It is more sensitive than the InSb detector below ~1800 cm
-          <sup>-1</sup>. The following plot shows the MCT detector response
-          spectrum.
+          <sup>-1</sup>, which is in part due to the sensitivity of the InSb
+          detector rapidly dropping to zero below this value. The following plot
+          shows the MCT detector response spectrum.
         </p>
 
         <img
