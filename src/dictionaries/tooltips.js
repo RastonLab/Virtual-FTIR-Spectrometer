@@ -602,10 +602,11 @@ export const tooltips = {
         <img className="tooltip-svg" src={tungsten} alt="Tungsten SVG" />
 
         <p>
-          Tungsten lamp which produces radiation at a temperature of 3400 K.
-          Radiation is produced by passing a current through a tungsten (W)
-          filament which is in an evacuated quartz bulb. The bulb contains trace
-          amounts of bromine to keep the inner quartz surface clean.
+          Tungsten lamp which emits radiation corresponding to a blackbody
+          at 3400 K. Radiation is produced by passing a current through a 
+          tungsten (W) filament which is in an evacuated quartz bulb. The 
+          bulb contains trace amounts of bromine to keep the inner quartz 
+          surface clean.
         </p>
       </div>
     ),
