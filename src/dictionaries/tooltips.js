@@ -473,13 +473,13 @@ export const tooltips = {
     text: (
       <div className="popup-tooltip">
         <h1>
-          Sample Cell (CaF<sub>2</sub>)
+          Sample Cell
         </h1>
 
         <img
           className="tooltip-svg"
           src={samplecaf2}
-          alt="Sample Cell (CaF2) SVG"
+          alt="Sample Cell SVG"
         />
 
         <p>
@@ -510,12 +510,12 @@ export const tooltips = {
   "sample-cell-znse": {
     text: (
       <div className="popup-tooltip">
-        <h1>Sample Cell (ZnSe)</h1>
+        <h1>Sample Cell</h1>
 
         <img
           className="tooltip-svg"
           src={sampleznse}
-          alt="Sample Cell (ZnSe) SVG"
+          alt="Sample Cell SVG"
         />
 
         <p>
