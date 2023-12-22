@@ -241,10 +241,11 @@ export const tooltips = {
         <img className="tooltip-svg" src={globar} alt="Globar SVG" />
 
         <p>
-          Globar heating element which produces radiation at a temperature of
-          1200 K. The word “globar” is a portmanteau word which blends together
-          "glow" and "bar". Radiation is produced by passing a relatively large
-          current through the material, which is silicon carbide (SiC).
+          Globar heating element which emits radiation corresponding to a 
+          blackbody at 1200 K. The word “globar” is a portmanteau word which 
+          blends together "glow" and "bar". Radiation is produced by passing 
+          a relatively large current through the material, which is silicon 
+          carbide (SiC).
         </p>
       </div>
     ),
