@@ -241,10 +241,11 @@ export const tooltips = {
         <img className="tooltip-svg" src={globar} alt="Globar SVG" />
 
         <p>
-          Globar heating element which produces radiation at a temperature of
-          1200 K. The word “globar” is a portmanteau word which blends together
-          "glow" and "bar". Radiation is produced by passing a relatively large
-          current through the material, which is silicon carbide (SiC).
+          Globar heating element which emits radiation corresponding to a 
+          blackbody at 1200 K. The word "globar" is a portmanteau word which 
+          blends together "glow" and "bar". Radiation is produced by passing 
+          a relatively large current through the material, which is silicon 
+          carbide (SiC).
         </p>
       </div>
     ),
@@ -391,8 +392,9 @@ export const tooltips = {
           utilizes a photoelectric-like effect in order to convert light into
           electricity. The output current is proportional to the infrared
           intensity. It is more sensitive than the InSb detector below ~1800 cm
-          <sup>-1</sup>. The following plot shows the MCT detector response
-          spectrum.
+          <sup>-1</sup>, which is in part due to the sensitivity of the InSb
+          detector rapidly dropping to zero below this value. The following plot
+          shows the MCT detector response spectrum.
         </p>
 
         <img
@@ -472,19 +474,19 @@ export const tooltips = {
     text: (
       <div className="popup-tooltip">
         <h1>
-          Sample Cell (CaF<sub>2</sub>)
+          Sample Cell
         </h1>
 
         <img
           className="tooltip-svg"
           src={samplecaf2}
-          alt="Sample Cell (CaF2) SVG"
+          alt="Sample Cell SVG"
         />
 
         <p>
           Pyrex sample cell that has two valves for controlling gas flow in
           (right) and out (left) from it. The medium (space inside) can either
-          be “vacuum” or “air”. When acquiring the spectrum of a molecule in vacuum,
+          be "vacuum" or "air". When acquiring the spectrum of a molecule in vacuum,
           the partial pressure of the selected molecule (red balls) is equal to
           the total pressure inside the cell. When acquiring the spectrum of a
           molecule in air (blue balls), the total pressure is equal to 1.01325 bar
@@ -509,18 +511,18 @@ export const tooltips = {
   "sample-cell-znse": {
     text: (
       <div className="popup-tooltip">
-        <h1>Sample Cell (ZnSe)</h1>
+        <h1>Sample Cell</h1>
 
         <img
           className="tooltip-svg"
           src={sampleznse}
-          alt="Sample Cell (ZnSe) SVG"
+          alt="Sample Cell SVG"
         />
 
         <p>
           Pyrex sample cell that has two valves for controlling gas flow in
           (right) and out (left) from it. The medium (space inside) can either
-          be “vacuum” or “air”. When acquiring the spectrum of a molecule in
+          be "vacuum" or "air". When acquiring the spectrum of a molecule in
           vacuum, the partial pressure of the selected molecule (red balls)
           is equal to the total pressure inside the cell. When acquiring the
           spectrum of a molecule in air (blue balls), the total pressure is
@@ -600,10 +602,11 @@ export const tooltips = {
         <img className="tooltip-svg" src={tungsten} alt="Tungsten SVG" />
 
         <p>
-          Tungsten lamp which produces radiation at a temperature of 3400 K.
-          Radiation is produced by passing a current through a tungsten (W)
-          filament which is in an evacuated quartz bulb. The bulb contains trace
-          amounts of bromine to keep the inner quartz surface clean.
+          Tungsten lamp which emits radiation corresponding to a blackbody
+          at 3400 K. Radiation is produced by passing a current through a 
+          tungsten (W) filament which is in an evacuated quartz bulb. The 
+          bulb contains trace amounts of bromine to keep the inner quartz 
+          surface clean.
         </p>
       </div>
     ),
