@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" id="svg17772" version="1.1" viewBox="0 0 293.477 300">
+  <defs id="defs17769">
+    <linearGradient id="linearGradient20307">
+      <stop id="stop20303" offset="0" style="stop-color:#e37777;stop-opacity:1"/>
+      <stop id="stop20311" offset=".352" style="stop-color:#ea3000;stop-opacity:1"/>
+      <stop id="stop20305" offset=".566" style="stop-color:#000;stop-opacity:1"/>
+    </linearGradient>
+    <linearGradient id="linearGradient19540">
+      <stop id="stop19536" offset="0" style="stop-color:#000030;stop-opacity:1"/>
+      <stop id="stop19544" offset=".25" style="stop-color:#00007a;stop-opacity:1"/>
+      <stop id="stop19546" offset=".5" style="stop-color:#0000b0;stop-opacity:1"/>
+      <stop id="stop19548" offset=".75" style="stop-color:#000073;stop-opacity:1"/>
+      <stop id="stop19538" offset="1" style="stop-color:#000043;stop-opacity:1"/>
+    </linearGradient>
+    <linearGradient xlink:href="#linearGradient19540" id="linearGradient19542" x1="28.709" x2="104.981" y1="120.733" y2="120.733" gradientTransform="translate(-78.494 -232.8) scale(3.84774)" gradientUnits="userSpaceOnUse"/>
+    <radialGradient xlink:href="#linearGradient20307" id="radialGradient20309" cx="67.146" cy="149.334" r="5.601" fx="67.146" fy="149.334" gradientTransform="matrix(3.84774 0 0 3.85008 -78.494 -233.15)" gradientUnits="userSpaceOnUse"/>
+  </defs>
+  <g id="aperture-wheel" transform="translate(-31.97 -81.75)">
+    <ellipse id="path21753" cx="178.709" cy="231.749" rx="141.648" ry="144.91" style="fill:url(#linearGradient19542);fill-opacity:1;stroke:#000;stroke-width:10.1805;stroke-linecap:square;stroke-dasharray:none;stroke-opacity:1;paint-order:markers stroke fill"/>
+    <ellipse id="path23259" cx="181.157" cy="137.798" rx="40.655" ry="41.64" style="fill:#000;stroke:none;stroke-width:66.1943;stroke-linecap:square;paint-order:markers stroke fill"/>
+    <ellipse id="path24039" cx="256.614" cy="196.278" rx="36.048" ry="36.593" style="fill:#000;stroke:none;stroke-width:84.8993;stroke-linecap:square;paint-order:markers stroke fill"/>
+    <ellipse id="path24767" cx="253.668" cy="290.871" rx="27.156" ry="27.195" style="fill:#000;stroke:none;stroke-width:92.2335;stroke-linecap:square;paint-order:markers stroke fill"/>
+    <ellipse id="path25495" cx="179.866" cy="341.798" rx="21.552" ry="21.565" style="fill:url(#radialGradient20309);fill-opacity:1;stroke:none;stroke-width:73.1679;stroke-linecap:square;paint-order:markers stroke fill"/>
+    <ellipse id="path27675" cx="92.957" cy="170.879" rx="5.992" ry="6.937" style="fill:#000;stroke:none;stroke-width:43.1821;stroke-linecap:square;paint-order:markers stroke fill"/>
+    <ellipse id="ellipse16939" cx="109.95" cy="299.015" rx="15.659" ry="16.177" style="fill:#000;stroke:none;stroke-width:54.0173;stroke-linecap:square;paint-order:markers stroke fill"/>
+    <ellipse id="ellipse16941" cx="76.895" cy="235.779" rx="12.305" ry="14.261" style="fill:#000;stroke:none;stroke-width:44.9597;stroke-linecap:square;paint-order:markers stroke fill"/>
+  </g>
+</svg>

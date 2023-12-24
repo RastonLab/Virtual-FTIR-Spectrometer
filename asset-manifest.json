@@ -1,0 +1,43 @@
+{
+  "files": {
+    "main.css": "/static/css/main.2b74fa75.css",
+    "main.js": "/static/js/main.8202054d.js",
+    "static/media/Montserrat-VariableFont_wght.ttf": "/static/media/Montserrat-VariableFont_wght.3068cdb43142f5625baf.ttf",
+    "static/media/Interferometer.png": "/static/media/Interferometer.3f79a61bb194fd8328da.png",
+    "static/media/Roboto-Regular.ttf": "/static/media/Roboto-Regular.fc2b5060f7accec5cf74.ttf",
+    "static/media/Blackbody.png": "/static/media/Blackbody.92a7610e65ea6b27f3d2.png",
+    "static/media/AR_ZnSe_py.png": "/static/media/AR_ZnSe_py.75d959dd71656aca5d99.png",
+    "static/media/AR_CaF2_py.png": "/static/media/AR_CaF2_py.03e685c1a9ce1bd0b198.png",
+    "static/media/InSb_py.png": "/static/media/InSb_py.49879af2defd6bd4dd94.png",
+    "static/media/MCT_py.png": "/static/media/MCT_py.11a763644125a748e3a2.png",
+    "static/media/CaF2_py.png": "/static/media/CaF2_py.5aba29f2d4937542911f.png",
+    "static/media/ZnSe_py.png": "/static/media/ZnSe_py.b1158511bc8b5004c681.png",
+    "static/media/parabolic-mirror.webp": "/static/media/parabolic-mirror.a81ab2da05ce13d21cdd.webp",
+    "static/media/parabolic-mirror-hole.webp": "/static/media/parabolic-mirror-hole.8d6ae257da65ba7e2ca0.webp",
+    "static/media/mct.svg": "/static/media/mct.f589081a18aa341e8f4ec1ee19e435f9.svg",
+    "static/media/insb.svg": "/static/media/insb.bc1420989c53e6f5addaf2c09215c007.svg",
+    "static/media/Source_Formula.png": "/static/media/Source_Formula.3dd591083725df7a1eab.png",
+    "static/media/manometer.svg": "/static/media/manometer.97b60b5c4f101651186cbb61d994c9b4.svg",
+    "static/media/pump.svg": "/static/media/pump.77569ebd90463e54121a293c13be50d6.svg",
+    "static/media/sample-cell-caf2.svg": "/static/media/sample-cell-caf2.c11be58958d697d525083acda1599f53.svg",
+    "static/media/sample-cell-znse.svg": "/static/media/sample-cell-znse.583c767edafcc0535799b2dcbadcc501.svg",
+    "static/media/tungsten.svg": "/static/media/tungsten.59d16c3360aa5cc5f36ee696619a011a.svg",
+    "static/media/laser.svg": "/static/media/laser.ba8469cecc9224a9ce7f4a5bec2a97a7.svg",
+    "static/media/lecture.svg": "/static/media/lecture.8b4fefd880040cb2856fbf909288ffd3.svg",
+    "static/media/apd.svg": "/static/media/apd.074541c373f3d2a3e3563593ce25b9f1.svg",
+    "static/media/aperture-wheel.svg": "/static/media/aperture-wheel.e786dd504f434279d40003605dacaa6d.svg",
+    "static/media/corner-cube.svg": "/static/media/corner-cube.d85951592dc2424048a05b60c12329e2.svg",
+    "static/media/globar.svg": "/static/media/globar.50a52828e6b564fdb037d07f36dfeaff.svg",
+    "static/media/flat-mirror.svg": "/static/media/flat-mirror.7ad0e3936d8238248e9b473f78d265f3.svg",
+    "static/media/beamsplitter-caf2.svg": "/static/media/beamsplitter-caf2.a3dc4f47a83f58f2cbec73817728efe3.svg",
+    "static/media/beamsplitter-znse.svg": "/static/media/beamsplitter-znse.0fc38e394c264fb5e1adbe5a3f476266.svg",
+    "static/media/RastonLabLogo.svg": "/static/media/RastonLabLogo.3cc9a8752b1e917094df811ea690fd6f.svg",
+    "index.html": "/index.html",
+    "main.2b74fa75.css.map": "/static/css/main.2b74fa75.css.map",
+    "main.8202054d.js.map": "/static/js/main.8202054d.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.2b74fa75.css",
+    "static/js/main.8202054d.js"
+  ]
+}

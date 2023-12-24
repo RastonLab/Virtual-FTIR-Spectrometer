@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" id="svg5" version="1.1" viewBox="0 0 300 99.448">
+  <defs id="defs2">
+    <linearGradient xlink:href="#linearGradient11659" id="linearGradient11661" x1="14.063" x2="21.063" y1="-4.875" y2="-4.875" gradientTransform="translate(-164.849 174.507) scale(7.59226)" gradientUnits="userSpaceOnUse"/>
+    <linearGradient id="linearGradient11659">
+      <stop id="stop11655" offset=".05" style="stop-color:#959595;stop-opacity:1"/>
+      <stop id="stop11663" offset=".25" style="stop-color:#b4b4b4;stop-opacity:1"/>
+      <stop id="stop11665" offset=".5" style="stop-color:#7e7e7e;stop-opacity:1"/>
+      <stop id="stop11667" offset=".75" style="stop-color:#919191;stop-opacity:1"/>
+      <stop id="stop11657" offset=".95" style="stop-color:#b2b2b2;stop-opacity:1"/>
+    </linearGradient>
+    <linearGradient xlink:href="#linearGradient11659" id="linearGradient10403" x1="12.563" x2="22.563" y1="2.375" y2="2.375" gradientTransform="translate(-164.849 174.507) scale(7.59226)" gradientUnits="userSpaceOnUse"/>
+    <linearGradient xlink:href="#linearGradient11673" id="linearGradient11675" x1="21" x2="24" y1="-4.625" y2="-4.625" gradientTransform="translate(-164.849 174.507) scale(7.59226)" gradientUnits="userSpaceOnUse"/>
+    <linearGradient id="linearGradient11673">
+      <stop id="stop11671" offset=".05" style="stop-color:#959595;stop-opacity:1"/>
+      <stop id="stop11681" offset=".25" style="stop-color:#b4b4b4;stop-opacity:1"/>
+      <stop id="stop11679" offset=".5" style="stop-color:#7e7e7e;stop-opacity:1"/>
+      <stop id="stop11677" offset=".75" style="stop-color:#919191;stop-opacity:1"/>
+      <stop id="stop11688" offset=".95" style="stop-color:#b2b2b2;stop-opacity:1"/>
+    </linearGradient>
+    <linearGradient xlink:href="#linearGradient11659" id="linearGradient11706" x1="15.563" x2="19.563" y1="-10.125" y2="-10.125" gradientTransform="translate(-164.849 174.507) scale(7.59226)" gradientUnits="userSpaceOnUse"/>
+    <linearGradient xlink:href="#linearGradient11659" id="linearGradient12498" x1="12.563" x2="22.563" y1="-11.375" y2="-11.375" gradientTransform="matrix(10.62916 0 0 7.59226 -218.184 174.507)" gradientUnits="userSpaceOnUse"/>
+    <linearGradient xlink:href="#linearGradient12517" id="linearGradient12519" x1="3" x2="33" y1="40.375" y2="40.375" gradientTransform="translate(-162.713 178.302) scale(7.59226)" gradientUnits="userSpaceOnUse"/>
+    <linearGradient id="linearGradient12517">
+      <stop id="stop12513" offset=".05" style="stop-color:#644896;stop-opacity:1"/>
+      <stop id="stop12521" offset=".25" style="stop-color:#8e68cc;stop-opacity:1"/>
+      <stop id="stop12523" offset=".5" style="stop-color:#734f96;stop-opacity:1"/>
+      <stop id="stop12525" offset=".75" style="stop-color:#732a96;stop-opacity:1"/>
+      <stop id="stop12515" offset=".95" style="stop-color:#731e96;stop-opacity:1"/>
+    </linearGradient>
+    <linearGradient xlink:href="#linearGradient15520" id="linearGradient15522" x1="5.65" x2="30.547" y1="48.21" y2="48.21" gradientTransform="translate(-162.349 178.663) scale(7.59226)" gradientUnits="userSpaceOnUse"/>
+    <linearGradient id="linearGradient15520">
+      <stop id="stop15516" offset="0" style="stop-color:#8c8c8c;stop-opacity:1"/>
+      <stop id="stop15526" offset=".203" style="stop-color:#a0a0a0;stop-opacity:1"/>
+      <stop id="stop15528" offset=".601" style="stop-color:#8c8c8c;stop-opacity:1"/>
+      <stop id="stop15518" offset="1" style="stop-color:#787878;stop-opacity:1"/>
+    </linearGradient>
+  </defs>
+  <g id="lecture" transform="matrix(0 -.43662 .43662 0 -36 38.349)">
+    <path id="rect5963" d="M-58.082 101.431h53.146v72.126h-53.146z" style="fill:url(#linearGradient11661);fill-opacity:1;stroke-width:.325061"/>
+    <path id="rect4162" d="M-69.47 173.557H6.453v37.961H-69.47z" style="fill:url(#linearGradient10403);fill-opacity:1;stroke-width:.195918"/>
+    <rect id="rect5181" width="75.923" height=".759" x="-69.47" y="183.746" ry="0" style="fill:#a0a0a0;fill-opacity:1;stroke-width:.0833591"/>
+    <path id="rect8157" d="M-5.411 120.412h22.777v37.961H-5.411z" style="fill:url(#linearGradient11675);fill-opacity:1;stroke-width:.284551"/>
+    <path id="rect8161" d="M-46.694 93.838h30.369v7.592h-30.369z" style="fill:url(#linearGradient11706);fill-opacity:1;stroke-width:.604537"/>
+    <rect id="rect9017" width="106.292" height="11.388" x="-84.655" y="82.451" ry="3.796" style="fill:url(#linearGradient12498);fill-opacity:1;stroke-width:.398371"/>
+    <path id="rect234" d="M87.831 313.33a113.884 113.2 0 0 0-113.883-113.2 113.884 113.2 0 0 0-113.884 113.2 113.884 113.2 0 0 0 .133 1.844c-.037.435-.133.853-.133 1.298V754.44c0 8.37 6.772 15.11 15.184 15.11H72.647c8.412 0 15.184-6.74 15.184-15.11V316.472c0-.206-.05-.4-.06-.605a113.884 113.2 0 0 0 .06-2.538z" style="fill:url(#linearGradient12519);fill-opacity:1;stroke-width:.387489"/>
+    <rect id="rect1697-1" width="189.028" height="392.5" x="-119.454" y="348.434" ry="5.607" style="fill:url(#linearGradient15522);fill-opacity:1;stroke-width:7.10926" transform="rotate(.127) skewX(.01)"/>
+    <text xml:space="preserve" id="molecule-value" x="545.296" y="34.357" style="font-size:97.7207px;line-height:0;font-family:sans-serif;-inkscape-font-specification:&quot;sans-serif, Normal&quot;;text-align:center;dominant-baseline:central;text-anchor:middle;display:none;fill:#000;stroke-width:34.3549;stroke-linecap:square;stroke-linejoin:round;paint-order:fill markers stroke" transform="rotate(90)"><tspan id="tspan877" x="545.296" y="34.357" style="font-size:97.7207px;stroke-width:34.3549">props.molecule</tspan></text>
+  </g>
+</svg>

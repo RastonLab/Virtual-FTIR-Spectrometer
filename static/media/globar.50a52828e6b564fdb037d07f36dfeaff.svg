@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" id="svg46278" version="1.1" viewBox="0 0 300 91.401">
+  <defs id="defs46275">
+    <linearGradient id="linearGradient68194">
+      <stop id="stop68190" offset="0" style="stop-color:#ffb24f;stop-opacity:1"/>
+      <stop id="stop68198" offset=".246" style="stop-color:#ffe2cc;stop-opacity:1"/>
+      <stop id="stop68200" offset=".499" style="stop-color:#fff;stop-opacity:1"/>
+      <stop id="stop68202" offset=".75" style="stop-color:#ffe7c8;stop-opacity:1"/>
+      <stop id="stop68192" offset="1" style="stop-color:#ffdac5;stop-opacity:1"/>
+    </linearGradient>
+    <linearGradient id="linearGradient63826">
+      <stop id="stop63822" offset="0" style="stop-color:#9b0f0f;stop-opacity:1"/>
+      <stop id="stop63830" offset=".134" style="stop-color:#ff0;stop-opacity:1"/>
+      <stop id="stop63832" offset=".277" style="stop-color:#000;stop-opacity:1"/>
+      <stop id="stop63824" offset="1" style="stop-color:#000;stop-opacity:1"/>
+    </linearGradient>
+    <linearGradient xlink:href="#linearGradient63826" id="linearGradient63828" x1="4.193" x2="126.097" y1="59.304" y2="59.304" gradientTransform="translate(-6.126 -58.636) scale(2.46096)" gradientUnits="userSpaceOnUse"/>
+    <linearGradient xlink:href="#linearGradient68194" id="linearGradient1006" x1="79.097" x2="78.719" y1="-2.995" y2="33.845" gradientTransform="matrix(1.95003 0 0 2.46096 29.066 47.506)" gradientUnits="userSpaceOnUse"/>
+  </defs>
+  <g id="globar" transform="translate(-4.193 -40.135)">
+    <path id="rect50311" d="M8.766 59.3a4.564 4.564 0 0 0-4.573 4.573v46.873a4.564 4.564 0 0 0 4.573 4.574h290.855a4.563 4.563 0 0 0 4.572-4.574V97.63H24.246a4.563 4.563 0 0 1-4.573-4.572V78.615a4.564 4.564 0 0 1 4.573-4.573h279.947v-10.17a4.563 4.563 0 0 0-4.572-4.572z" style="fill:url(#linearGradient63828);fill-opacity:1;stroke:none;stroke-width:10.4285;paint-order:markers stroke fill"/>
+    <path id="rect53588" d="M113.464 40.135a11.973 45.7 0 0 0-11.973 45.7 11.973 45.7 0 0 0 11.973 45.701 11.973 45.7 0 0 0 2.396-.932 5.002 5.002 0 0 0 2.914.932h146.495a5.007 5.007 0 0 0 5.017-5.018V45.152a5.006 5.006 0 0 0-5.017-5.017H118.774c-1.088 0-2.09.346-2.91.93a11.973 45.7 0 0 0-2.4-.93z" style="fill:url(#linearGradient1006);fill-opacity:1;stroke:none;stroke-width:8.75523;paint-order:markers stroke fill"/>
+  </g>
+</svg>

@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <defs>
+    <linearGradient id="a">
+      <stop offset=".12" style="stop-color:#9705ff;stop-opacity:1"/>
+      <stop offset=".24" style="stop-color:#33f;stop-opacity:1"/>
+      <stop offset=".38" style="stop-color:#1bc4e9;stop-opacity:1"/>
+      <stop offset=".5" style="stop-color:#99f53d;stop-opacity:1"/>
+      <stop offset=".64" style="stop-color:#ff3;stop-opacity:1"/>
+      <stop offset=".78" style="stop-color:#f93;stop-opacity:1"/>
+      <stop offset=".9" style="stop-color:#f33;stop-opacity:1"/>
+    </linearGradient>
+    <linearGradient xlink:href="#a" id="b" x1="50.016" x2="135.016" y1="89.284" y2="89.284" gradientTransform="matrix(1.15607 0 0 1.15607 -242.317 -75.767)" gradientUnits="userSpaceOnUse"/>
+  </defs>
+  <g transform="translate(-49.266 -46.035)">
+    <circle cx="-135.362" cy="27.453" r="49.133" style="display:inline;fill:url(#b);fill-opacity:1;stroke:#000;stroke-width:1.73411;stroke-dasharray:none;stroke-opacity:1" transform="rotate(-124.483)"/>
+    <path d="M124.333 132.877h-23.607l6.572-34.444h7.494l-5.563 29.044h16.142z" style="font-style:italic;font-size:170.845px;font-family:&quot;Franklin Gothic Medium&quot;;-inkscape-font-specification:&quot;Franklin Gothic Medium, Italic&quot;;white-space:pre;stroke-width:.323292"/>
+    <path d="M106.617 93.671q-.092 1.777-1.615 2.842-1.384.948-3.207.948H92.91q-1.822 0-2.768-.995-.623-.64-1.57-2.795l-4.545-10.325q.854-.166 3.946-1.35 3-1.137 3.76-1.563 4.592-2.44 4.592-6.11 0-4.215-5.814-4.215H66.977l3.6-5.968H93.81q12.53 0 12.53 8.194 0 6.939-13.037 12.125l4.153 9.212zM87.305 73.163 78.883 97.46h-8.307l8.353-24.298z" style="font-size:142.433px;font-family:Magneto;-inkscape-font-specification:&quot;Magneto, Normal&quot;;white-space:pre;stroke-width:.336114"/>
+  </g>
+</svg>

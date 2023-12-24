@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" id="svg63856" version="1.1" viewBox="0 0 300 272.259">
+  <defs id="defs63853">
+    <linearGradient id="linearGradient28209">
+      <stop id="stop28205" offset="0" style="stop-color:#c27300;stop-opacity:1"/>
+      <stop id="stop28213" offset=".25" style="stop-color:#dca400;stop-opacity:1"/>
+      <stop id="stop28215" offset=".5" style="stop-color:#ff6c00;stop-opacity:1"/>
+      <stop id="stop28217" offset=".75" style="stop-color:#cc9500;stop-opacity:1"/>
+      <stop id="stop28207" offset="1" style="stop-color:#673300;stop-opacity:1"/>
+    </linearGradient>
+    <linearGradient id="linearGradient28161">
+      <stop id="stop28159" offset="0" style="stop-color:#d2d500;stop-opacity:1"/>
+    </linearGradient>
+    <linearGradient id="linearGradient65554">
+      <stop id="stop65550" offset="0" style="stop-color:#000;stop-opacity:1"/>
+      <stop id="stop65558" offset=".25" style="stop-color:#575757;stop-opacity:1"/>
+      <stop id="stop65560" offset=".5" style="stop-color:#606060;stop-opacity:1"/>
+      <stop id="stop65562" offset=".75" style="stop-color:#383838;stop-opacity:1"/>
+      <stop id="stop65552" offset="1" style="stop-color:#000;stop-opacity:1"/>
+    </linearGradient>
+    <linearGradient id="linearGradient64789">
+      <stop id="stop64785" offset="0" style="stop-color:#e521c5;stop-opacity:1"/>
+      <stop id="stop64793" offset=".2" style="stop-color:#e549c5;stop-opacity:1"/>
+      <stop id="stop64795" offset=".4" style="stop-color:#e571c5;stop-opacity:1"/>
+      <stop id="stop64797" offset=".6" style="stop-color:#e574c5;stop-opacity:1"/>
+      <stop id="stop64799" offset=".799" style="stop-color:#e55dc5;stop-opacity:1"/>
+      <stop id="stop64787" offset="1" style="stop-color:#e505c5;stop-opacity:1"/>
+    </linearGradient>
+    <linearGradient xlink:href="#linearGradient64789" id="linearGradient64791" x1="26.863" x2="110.341" y1="79.185" y2="79.185" gradientTransform="translate(-69.677 -93.267) scale(3.59378)" gradientUnits="userSpaceOnUse"/>
+    <linearGradient xlink:href="#linearGradient65554" id="linearGradient65556" x1="26.863" x2="110.341" y1="79.185" y2="79.185" gradientTransform="translate(-69.677 -93.267) scale(3.59378)" gradientUnits="userSpaceOnUse"/>
+    <linearGradient xlink:href="#linearGradient28209" id="linearGradient28211" x1="40.806" x2="96.149" y1="78.936" y2="78.936" gradientTransform="translate(-69.677 -93.267) scale(3.59378)" gradientUnits="userSpaceOnUse"/>
+    <color-profile xlink:href="file:///Library/ColorSync/Profiles/Lightness%20Decrease.icc" id="color-profile47509" name="Lightness-Decrease"/>
+  </defs>
+  <g id="apd" transform="translate(-26.863 -55.177)">
+    <rect id="rect64392" width="246.093" height="218.352" x="53.817" y="82.13" ry="45.639" style="fill:url(#linearGradient64791);fill-opacity:1;stroke:url(#linearGradient65556);stroke-width:53.9067;stroke-linecap:square;stroke-dasharray:none;paint-order:markers stroke fill"/>
+    <ellipse id="path24340" cx="176.416" cy="190.411" rx="65.392" ry="63.603" style="fill:url(#linearGradient28211);fill-opacity:1;stroke:#000;stroke-width:68.1071;stroke-dasharray:none;stroke-opacity:1;paint-order:markers stroke fill"/>
+    <ellipse id="path29759" cx="81.558" cy="107.634" rx="12.528" ry="11.186" style="fill:#000;fill-opacity:1;stroke:none;stroke-width:62.9715;stroke-dasharray:none;stroke-opacity:1;paint-order:markers stroke fill"/>
+    <ellipse id="ellipse30695" cx="269.484" cy="107.634" rx="12.528" ry="11.186" style="fill:#000;fill-opacity:1;stroke:none;stroke-width:62.9715;stroke-dasharray:none;stroke-opacity:1;paint-order:markers stroke fill"/>
+  </g>
+</svg>
