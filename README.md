@@ -34,15 +34,15 @@ The intended audience for this application is undergraduate chemistry students s
 
 - Experimental Setup (spectrometer parameters)
 
-**_TODO_**
+![experimental-setup](https://github.com/vanfossen/Virtual-FTIR-Spectrometer/assets/35882058/01b19e10-a0b7-407a-85aa-7c5e6a08ac7a)
 
 - Instrument Window (top-down view of simplified spectrometer)
 
-**_TODO_**
+![instrument-window](https://github.com/vanfossen/Virtual-FTIR-Spectrometer/assets/35882058/0bd0ccd8-db93-44e0-bdf0-0207edf9d518)
 
 - Spectra Window (plotted spectra)
 
-**_TODO_**
+![spectra-window](https://github.com/vanfossen/Virtual-FTIR-Spectrometer/assets/35882058/84dafe97-2d27-49aa-a61b-725e26761ae0)
 
 ## Notes
 
@@ -219,7 +219,7 @@ Upkeep of this project is intended for recruited undergraduate students, but pul
 
 ## License
 
-Licensed under **_TODO_**
+See [LICENSE](LICENSE)
 
 **Relevant third-party tools and resources we depend on:**
 
