@@ -1,0 +1,9 @@
+version: "3.8"
+services:
+  front-end:
+    build: .
+    container_name: ftir_sis
+    ports: 
+      - '3000:3000'
+    stdin_open: true
+    tty: true
