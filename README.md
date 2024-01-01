@@ -43,15 +43,15 @@ The intended audience for this application is undergraduate chemistry students s
 
 - Experimental Setup (spectrometer parameters)
 
-![experimental-setup](https://github.com/vanfossen/Virtual-FTIR-Spectrometer/assets/35882058/01b19e10-a0b7-407a-85aa-7c5e6a08ac7a)
+![experimental-setup](https://github.com/RastonLab/Virtual-FTIR-Spectrometer/assets/35882058/03a18ff2-2c05-4ad2-bcc5-eafc54a8e592)
 
 - Instrument Window (top-down view of simplified spectrometer)
 
-![instrument-window](https://github.com/vanfossen/Virtual-FTIR-Spectrometer/assets/35882058/0bd0ccd8-db93-44e0-bdf0-0207edf9d518)
+![instrument-window](https://github.com/RastonLab/Virtual-FTIR-Spectrometer/assets/35882058/a060c1ed-db58-451b-b765-01b75f541aec)
 
 - Spectra Window (plotted spectra)
 
-![spectra-window](https://github.com/vanfossen/Virtual-FTIR-Spectrometer/assets/35882058/84dafe97-2d27-49aa-a61b-725e26761ae0)
+![spectra-window](https://github.com/RastonLab/Virtual-FTIR-Spectrometer/assets/35882058/4d63ea6a-48df-45ef-8c64-c74da499badc)
 
 ## Notes
 
