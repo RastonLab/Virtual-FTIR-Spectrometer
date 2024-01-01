@@ -4,7 +4,7 @@ The Raston Lab's **Fourier Transform InfraRed - Scientific Instrument Simulator*
 
 This project uses [React](https://github.com/facebook/react) for the frontend and [Flask](https://github.com/pallets/flask/) for the backend. The backend is located in a separate [repository](https://github.com/RastonLab/Virtual-FTIR-Functions).
 
-## Installation
+## How to Run Locally
 
 **NOTE:** The following setup steps are for the frontend, not the backend API.
 
@@ -22,11 +22,20 @@ This project uses [React](https://github.com/facebook/react) for the frontend an
    npm install
    ```
 
-4. Run the server locally
+4. Edit `src/dictionaries/constants.js` to use the proper API URLs (local or online)
+
+
+5. Run the server locally
 
    ```bash
    npm start
    ```
+
+6. Go to `localhost:3000`
+
+  ```bash
+  http://localhost:3000/
+  ```
 
 ## Usage
 
