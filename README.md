@@ -6,36 +6,7 @@ This project uses [React](https://github.com/facebook/react) for the frontend an
 
 ## How to Run Locally
 
-**NOTE:** The following setup steps are for the frontend, not the backend API.
-
-1. Clone the repository
-
-2. Move into the cloned repository's directory
-
-   ```bash
-   cd Virtual-FTIR-Spectrometer
-   ```
-
-3. Install all `npm` dependencies
-
-   ```bash
-   npm install
-   ```
-
-4. Edit `src/dictionaries/constants.js` to use the proper API URLs (local or online)
-
-
-5. Run the server locally
-
-   ```bash
-   npm start
-   ```
-
-6. Go to `localhost:3000`
-
-  ```bash
-  http://localhost:3000/
-  ```
+Information on how to run the front-end can be found in the repository's [wiki page](../../wiki).
 
 ## Usage
 
